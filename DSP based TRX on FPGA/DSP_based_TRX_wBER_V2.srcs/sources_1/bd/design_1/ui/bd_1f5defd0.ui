@@ -1,0 +1,145 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.16629",
+   "Default View_TopLeft":"-725,1140",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk104_clk_spi_mux_sel -pg 1 -lvl 12 -x 3240 -y 570 -defaultsOSRD
+preplace port vout00_0 -pg 1 -lvl 12 -x 3240 -y 230 -defaultsOSRD
+preplace port adc2_clk_0 -pg 1 -lvl 0 -x -1390 -y 160 -defaultsOSRD
+preplace port dac0_clk_0 -pg 1 -lvl 0 -x -1390 -y 180 -defaultsOSRD
+preplace port CLK_IN_D_0 -pg 1 -lvl 0 -x -1390 -y 630 -defaultsOSRD
+preplace port vin2_01_0 -pg 1 -lvl 0 -x -1390 -y 570 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 4 -x 80 -y -550 -defaultsOSRD
+preplace inst axi_gpio_spi_mux -pg 1 -lvl 11 -x 3080 -y 780 -defaultsOSRD
+preplace inst ps8_0_axi_periph -pg 1 -lvl 9 -x 2340 -y 300 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 11 -x 3080 -y 90 -defaultsOSRD
+preplace inst usp_rf_data_converter_1 -pg 1 -lvl 10 -x 2730 -y 250 -defaultsOSRD
+preplace inst util_ds_buf_0 -pg 1 -lvl 9 -x 2340 -y 660 -defaultsOSRD
+preplace inst util_ds_buf_1 -pg 1 -lvl 10 -x 2730 -y 770 -defaultsOSRD
+preplace inst vio_0 -pg 1 -lvl 11 -x 3080 -y 600 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 9 -x 2340 -y 780 -defaultsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 4 -x 80 -y -730 -defaultsOSRD
+preplace inst proc_sys_reset_1 -pg 1 -lvl 4 -x 80 -y -370 -defaultsOSRD
+preplace inst proc_sys_reset_2 -pg 1 -lvl 4 -x 80 -y -190 -defaultsOSRD
+preplace inst fifo_generator_0 -pg 1 -lvl 7 -x 1590 -y 680 -defaultsOSRD
+preplace inst rfdc_axis_8x16_src_0 -pg 1 -lvl 8 -x 2000 -y 660 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 4 -x 80 -y 280 -defaultsOSRD -resize 92 88
+preplace inst util_vector_logic_1 -pg 1 -lvl 4 -x 80 -y 390 -defaultsOSRD -resize 85 88
+preplace inst fifo_generator_1 -pg 1 -lvl 7 -x 1590 -y 1560 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 4 -x 80 -y 1810 -defaultsOSRD -resize 83 88
+preplace inst util_vector_logic_3 -pg 1 -lvl 4 -x 80 -y 1700 -defaultsOSRD -resize 83 88
+preplace inst rfdc_axis_8x16_sink_0 -pg 1 -lvl 8 -x 2000 -y 1560 -defaultsOSRD
+preplace inst system_ila_3 -pg 1 -lvl 7 -x 1590 -y 1270 -defaultsOSRD
+preplace inst rx_bd_shim_raw1024_t_0 -pg 1 -lvl 4 -x 80 -y 1560 -defaultsOSRD
+preplace inst system_ila_4 -pg 1 -lvl 6 -x 1150 -y 760 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x -480 -y 940 -defaultsOSRD
+preplace inst fir8_axis_8x16_0 -pg 1 -lvl 8 -x 2000 -y 340 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 1 -x -1180 -y 140 -defaultsOSRD
+preplace inst gpio_hflat_unpack_sy_0 -pg 1 -lvl 2 -x -840 -y 120 -defaultsOSRD
+preplace inst gpio_ctrl_unpack_sync_0 -pg 1 -lvl 4 -x 80 -y 690 -defaultsOSRD
+preplace inst system_ila_5 -pg 1 -lvl 6 -x 1150 -y 1060 -defaultsOSRD
+preplace inst tx_bd_shim_raw64x8_a_0 -pg 1 -lvl 4 -x 80 -y 50 -defaultsOSRD
+preplace inst RX_PRBSCHK_MULTI_TOP_0 -pg 1 -lvl 5 -x 740 -y 910 -defaultsOSRD
+preplace inst axi_gpio_2 -pg 1 -lvl 3 -x -480 -y 1110 -defaultsOSRD
+preplace inst axi_gpio_3 -pg 1 -lvl 3 -x -480 -y 1290 -defaultsOSRD
+preplace inst gpio_thr_unpack_sync_0 -pg 1 -lvl 4 -x 80 -y 1000 -defaultsOSRD
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_best_slip 1 5 1 1040 840n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_bit_cnt_seen_total 1 5 1 980 720n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_bit_cnt_streak 1 5 1 1010 780n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_bit_cnt_total 1 5 1 990 740n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_err_cnt_streak 1 5 1 1020 800n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_err_cnt_total 1 5 1 1000 760n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_err_popcnt 1 5 1 1030 820n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_exp64 1 5 1 1010 940n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_exp128 1 5 1 1000 960n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_exp192 1 5 1 990 980n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_expW_raw128_dbg 1 5 1 940 1080n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_expW_raw192_dbg 1 5 1 930 1100n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_expW_raw64_dbg 1 5 1 950 1060n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_lock 1 5 1 970 700n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_rxW_aligned128_dbg 1 5 1 970 1020n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_rxW_aligned192_dbg 1 5 1 960 1040n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_rxW_aligned64_dbg 1 5 1 980 1000n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_rx_bits128_raw 1 5 1 1030 900n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_rx_bits192_raw 1 5 1 1020 920n
+preplace netloc RX_PRBSCHK_MULTI_TOP_0_rx_bits64_raw 1 5 1 1040 880n
+preplace netloc axi_gpio_0_gpio_io_o 1 3 1 -340 710n
+preplace netloc axi_gpio_1_gpio2_io_o 1 1 1 -1030 150n
+preplace netloc axi_gpio_1_gpio_io_o 1 1 1 N 130
+preplace netloc fifo_generator_0_dout 1 6 2 1380 890 1810J
+preplace netloc fifo_generator_0_empty 1 3 4 -230 570 N 570 N 570 1350
+preplace netloc fifo_generator_0_full 1 3 4 -240 540 N 540 N 540 1370
+preplace netloc fifo_generator_1_dout 1 3 4 -250 1450 N 1450 N 1450 1270
+preplace netloc fifo_generator_1_empty 1 3 4 -230 1470 NJ 1470 N 1470 1260
+preplace netloc fifo_generator_1_full 1 3 4 -240 1460 N 1460 N 1460 1280
+preplace netloc gpio_ctrl_unpack_sync_0_ch_bypass 1 4 4 400 370 NJ 370 NJ 370 NJ
+preplace netloc gpio_ctrl_unpack_sync_0_ffe_en 1 3 2 -230 170 380
+preplace netloc gpio_hflat_unpack_sy_0_h_flat 1 2 2 -690 100 N
+preplace netloc hier_rsts_peripheral_aresetn2 1 0 11 -1350 50 -1020 30 -680 560 -330 550 390 200 N 200 N 200 N 200 2170 580 2580 600 NJ
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 4 7 NJ -330 N -330 N -330 1790 560 2160 600 2530 620 2880
+preplace netloc proc_sys_reset_1_peripheral_reset 1 4 3 N -370 N -370 1330
+preplace netloc proc_sys_reset_2_peripheral_aresetn 1 3 8 -280 180 430 580 N 580 1270 900 1800 580 2150 590 2560 610 2900
+preplace netloc proc_sys_reset_2_peripheral_reset 1 4 3 N -190 N -190 1290
+preplace netloc rfdc_axis_8x16_sink_0_fifo_din 1 6 3 1380 1390 NJ 1390 2140
+preplace netloc rx_bd_shim_raw1024_t_0_out_rx8p_packed 1 4 3 500 1250 N 1250 N
+preplace netloc rx_bd_shim_raw1024_t_0_rx_bits0 1 4 3 510 1270 N 1270 N
+preplace netloc rx_bd_shim_raw1024_t_0_rx_bits1 1 4 3 520 1290 N 1290 N
+preplace netloc rx_bd_shim_raw1024_t_0_rx_bits2 1 4 3 530 1310 N 1310 N
+preplace netloc tx_bd_shim_raw64x8_a_0_out_data_16b 1 4 3 N 50 N 50 1390
+preplace netloc usp_rf_data_converter_1_clk_adc2 1 3 8 -290 780 410 660 1050 620 1250 910 N 910 N 910 N 910 2890
+preplace netloc usp_rf_data_converter_1_clk_dac0 1 3 8 -260 500 N 500 N 500 1340 500 1820 570 N 570 2570 430 2940
+preplace netloc util_ds_buf_0_IBUF_OUT 1 9 1 2550J 660n
+preplace netloc util_ds_buf_1_BUFGCE_O 1 10 1 2930 540n
+preplace netloc util_vector_logic_0_Res 1 4 3 N 280 N 280 1380
+preplace netloc util_vector_logic_1_Res 1 4 3 N 390 N 390 1360
+preplace netloc util_vector_logic_2_Res 1 4 3 550 1590 N 1590 N
+preplace netloc util_vector_logic_3_Res 1 4 3 540 1510 N 1510 N
+preplace netloc vio_0_probe_out0 1 9 3 2550 860 NJ 860 3210
+preplace netloc xlconstant_0_dout 1 9 1 2550J 770n
+preplace netloc xlconstant_3_dout 1 3 2 -250 790 390
+preplace netloc xlconstant_6_dout 1 3 2 -270 800 420
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 11 -1360 40 -1030 20 -660 20 -310 -830 430 -710 N -710 N -710 N -710 2180 560 2560 560 2920
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 3 2 -250 -820 380
+preplace netloc axi_gpio_2_gpio_io_o 1 3 1 -340 990n
+preplace netloc axi_gpio_2_gpio2_io_o 1 3 1 -330 1010n
+preplace netloc axi_gpio_3_gpio_io_o 1 3 1 -320 1030n
+preplace netloc axi_gpio_3_gpio2_io_o 1 3 1 -310 1050n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr_nrz 1 4 1 380 830n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr4_0 1 4 1 390 850n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr4_1 1 4 1 400 870n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr4_2 1 4 1 410 890n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr8_0 1 4 1 420 910n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr8_1 1 4 1 430 930n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr8_2 1 4 1 440 950n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr8_3 1 4 1 450 970n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr8_4 1 4 1 460 990n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr8_5 1 4 1 470 1010n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr8_6 1 4 1 480 1030n
+preplace netloc gpio_thr_unpack_sync_0_cfg_thr_en 1 4 1 490 1050n
+preplace netloc CLK_IN_D_0_1 1 0 9 -1360J 580 N 580 -650 570 -320 560 NJ 560 N 560 1320 880 N 880 2180
+preplace netloc Conn 1 8 3 2150 70 2540 60 N
+preplace netloc adc2_clk_0_1 1 0 10 -1370J 30 -1040 10 N 10 -300 160 NJ 160 N 160 N 160 N 160 2170 80 2530J
+preplace netloc axi_gpio_spi_mux_GPIO 1 11 1 3220J 570n
+preplace netloc dac0_clk_0_1 1 0 10 -1360J 230 N 230 N 230 -340 460 NJ 460 N 460 N 460 N 460 2150 520 2530J
+preplace netloc ps8_0_axi_periph_M00_AXI 1 9 1 2490 140n
+preplace netloc ps8_0_axi_periph_M01_AXI 1 9 2 2550J 420 2910
+preplace netloc ps8_0_axi_periph_M02_AXI 1 2 8 -640 490 N 490 N 490 N 490 N 490 N 490 2160 540 2520
+preplace netloc ps8_0_axi_periph_M03_AXI 1 0 10 -1340 590 N 590 N 590 N 590 N 590 N 590 1310 850 N 850 N 850 2510
+preplace netloc rfdc_axis_8x16_src_0_m_axis 1 7 2 1820 250 2140
+preplace netloc usp_rf_data_converter_1_m20_axis 1 7 4 1830 550 N 550 N 550 2900
+preplace netloc usp_rf_data_converter_1_vout00 1 10 2 NJ 230 NJ
+preplace netloc vin2_01_0_1 1 0 10 NJ 570 N 570 -670 550 -340 510 NJ 510 N 510 N 510 1800 530 N 530 2540J
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 4 5 N -750 N -750 N -750 N -750 2190
+preplace netloc ps8_0_axi_periph_M04_AXI 1 2 8 -630 580 N 580 420 600 N 600 1300 860 N 860 N 860 2500
+preplace netloc ps8_0_axi_periph_M05_AXI 1 2 8 -620 600 N 600 410 610 N 610 1260 870 N 870 N 870 2490
+levelinfo -pg 1 -1390 -1180 -840 -480 80 740 1150 1590 2000 2340 2730 3080 3240
+pagesize -pg 1 -db -bbox -sgen -1530 -1990 3450 21360
+"
+}
+{
+   "da_axi4_cnt":"3",
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"1"
+}

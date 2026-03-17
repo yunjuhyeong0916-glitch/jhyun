@@ -1,0 +1,101 @@
+`timescale 1ns/1ps
+
+// ============================================================================
+// TX_PAM4_FIR_TOP (ARRAY VERSION)
+// - 2x PRBS64 -> PAM4 mapping -> 64 lanes
+// - Optional 8-tap FIR (64 lanes, per-lane state)
+// - All internal & external interfaces are array-based
+// ============================================================================
+
+module TX_PAM4_FIR_TOP (
+    input  wire        rstb,
+    input  wire        i_clk,
+    input  wire        ffe_en,
+
+    // 2x PRBS64 controls (128 bits per cycle)
+    input  wire [1:0]  sel_prbs64_a,
+    input  wire        ext_ptrn_en64_a,
+    input  wire [63:0] ext_ptrn64_a,
+
+    input  wire [1:0]  sel_prbs64_b,
+    input  wire        ext_ptrn_en64_b,
+    input  wire [63:0] ext_ptrn64_b,
+
+    // FIR coefficients (scalar input)
+    input  wire signed [7:0] h0,
+    input  wire signed [7:0] h1,
+    input  wire signed [7:0] h2,
+    input  wire signed [7:0] h3,
+    input  wire signed [7:0] h4,
+    input  wire signed [7:0] h5,
+    input  wire signed [7:0] h6,
+    input  wire signed [7:0] h7,
+
+    // 64-lane TX output (array)
+    output logic signed [7:0] dout [0:63]
+);
+
+    // ------------------------------------------------------------------------
+    // Internal lane arrays
+    // ------------------------------------------------------------------------
+    logic signed [7:0] tx_raw [0:63];
+    logic signed [7:0] tx_fir [0:63];
+
+    // ------------------------------------------------------------------------
+    // PRBS64x2 + PAM4 encoder (array output)
+    // ------------------------------------------------------------------------
+    TX_PRBS_PAM4_TOP_64LANE u_prbs_pam4 (
+        .rstb            (rstb),
+        .i_clk           (i_clk),
+
+        .sel_prbs64_a    (sel_prbs64_a),
+        .ext_ptrn_en64_a (ext_ptrn_en64_a),
+        .ext_ptrn64_a    (ext_ptrn64_a),
+
+        .sel_prbs64_b    (sel_prbs64_b),
+        .ext_ptrn_en64_b (ext_ptrn_en64_b),
+        .ext_ptrn64_b    (ext_ptrn64_b),
+
+        .dout            (tx_raw)
+    );
+
+    // ------------------------------------------------------------------------
+    // FIR coefficient array (shared across lanes)
+    // ------------------------------------------------------------------------
+    logic signed [7:0] h [0:7];
+
+    assign h[0] = h0;
+    assign h[1] = h1;
+    assign h[2] = h2;
+    assign h[3] = h3;
+    assign h[4] = h4;
+    assign h[5] = h5;
+    assign h[6] = h6;
+    assign h[7] = h7;
+
+    // ------------------------------------------------------------------------
+    // 64-lane 8-tap FIR (per-lane state)
+    // ------------------------------------------------------------------------
+    FIR_64LANE_8TAP_8b u_fir (
+        .clk   (i_clk),
+        .rst_n (rstb),
+        .din   (tx_raw),
+        .h     (h),
+        .dout  (tx_fir)
+    );
+
+    // ------------------------------------------------------------------------
+    // FFE enable mux (array-based)
+    // NOTE:
+    // - FIR has internal latency (from FIR_1LANE_8TAP_8b)
+    // - If cycle-accurate switching is required,
+    //   raw path must be delayed accordingly
+    // ------------------------------------------------------------------------
+    genvar i;
+    generate
+        for (i = 0; i < 64; i++) begin : GEN_OUT_MUX
+            assign dout[i] = ffe_en ? tx_fir[i] : tx_raw[i];
+        end
+    endgenerate
+
+endmodule
