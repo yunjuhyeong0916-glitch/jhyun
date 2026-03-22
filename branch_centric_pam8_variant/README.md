@@ -1,7 +1,7 @@
-Branch-centric PAM8 variant of the 4-architecture MLSD comparison folder.
+True branch-level Top-K reduced-state variant of the 4-architecture MLSD comparison folder.
 
 This folder is self-contained for VCS comparison of:
-- unified branch-centric PAM8 variant (separate folder version) built from the committed baseline
+- unified true branch-level Top-K reduced-state variant (4-state/8-state budget preserved) built from the committed baseline
 
 - all-FS
 - hybrid
@@ -36,5 +36,6 @@ Additional realistic channel-based comparison:
 Suggested VCS command for FIR-channel sweep:
   vcs -sverilog -full64 -f D:\rs_mlsd_4arch_compare_adaptive_k_chaware\branch_centric_pam8_variant\mlsd_4way_channel_compare_root.f -top tb_mlsd_4way_channel_compare
   simv
+
 
 

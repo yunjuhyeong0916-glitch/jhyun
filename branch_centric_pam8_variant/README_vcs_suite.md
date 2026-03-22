@@ -1,10 +1,10 @@
-VCS suite for the branch-centric PAM8 variant of the 4-way MLSD architecture comparison.
+VCS suite for the true branch-level Top-K reduced-state variant of the 4-way MLSD architecture comparison.
 
 Architectures under comparison:
 - all-FS
 - hybrid (NRZ=FS, PAM4/PAM8=RS, split cores)
 - all-RS
-- unified (NRZ=FS, PAM4/PAM8=RS, shared core)
+- unified (NRZ=FS, PAM4/PAM8=RS, shared core, true branch-level Top-K pruning)
 
 Files:
 - tb_mlsd_4way_compare.sv : common PR2-domain comparison testbench
@@ -20,5 +20,6 @@ Testbench behavior:
 - Reports per-mode symbol error rate against transmitted symbols.
 - Reports mismatch rate of hybrid/all-RS/unified versus all-FS baseline.
 - Default NOISE_MAG=0 for deterministic baseline comparison.
+
 
 
