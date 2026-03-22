@@ -1,0 +1,7 @@
+-sverilog
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\symbol_lut_mode_8b.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\survivor_mem_flat.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\traceback_flat.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\fir_siso_wide.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\cmp_allfs_mlsd_core_lane_8b.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\tb_mlsd_allfs_debug_1lane.sv
