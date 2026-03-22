@@ -1,0 +1,8 @@
+-sverilog
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\vcs_suite\symbol_lut_mode_8b.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\vcs_suite\survivor_mem_flat.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\vcs_suite\traceback_flat.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\vcs_suite\cmp_unified_mlsd_core_lane_8b.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\vcs_suite\CMP_UNIFIED_MLSD_DSP_64LANE_8B.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\vcs_suite\fir_siso_wide.sv
+D:\rs_mlsd_4arch_compare_adaptive_k_chaware\vcs_suite\tb_unified_channel_compare.sv
