@@ -1,0 +1,40 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.640971",
+   "Default View_TopLeft":"-228,-27",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port ext_reset_in -pg 1 -lvl 0 -x -10 -y 250 -defaultsOSRD
+preplace port slowest_sync_clk -pg 1 -lvl 0 -x -10 -y 220 -defaultsOSRD
+preplace port slowest_sync_clk1 -pg 1 -lvl 0 -x -10 -y 50 -defaultsOSRD
+preplace port slowest_sync_clk2 -pg 1 -lvl 0 -x -10 -y 410 -defaultsOSRD
+preplace port slowest_sync_clk_3 -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
+preplace port slowest_sync_clk_4 -pg 1 -lvl 0 -x -10 -y 200 -defaultsOSRD
+preplace portBus peripheral_aresetn -pg 1 -lvl 2 -x 750 -y 310 -defaultsOSRD
+preplace portBus peripheral_aresetn1 -pg 1 -lvl 2 -x 750 -y 130 -defaultsOSRD
+preplace portBus peripheral_aresetn2 -pg 1 -lvl 2 -x 750 -y 490 -defaultsOSRD
+preplace portBus peripheral_aresetn3 -pg 1 -lvl 2 -x 750 -y 720 -defaultsOSRD
+preplace portBus peripheral_aresetn4 -pg 1 -lvl 2 -x 750 -y 290 -defaultsOSRD
+preplace inst reset_adc_clk -pg 1 -lvl 1 -x 530 -y 1090 -defaultsOSRD
+preplace inst reset_dac_clk -pg 1 -lvl 1 -x 530 -y 270 -defaultsOSRD
+preplace inst rst_ps8_0_322M -pg 1 -lvl 1 -x 530 -y 90 -defaultsOSRD
+preplace inst rst_ps8_0_99M -pg 1 -lvl 1 -x 530 -y 730 -defaultsOSRD
+preplace inst reset_adc_clk_1 -pg 1 -lvl 1 -x 530 -y 550 -defaultsOSRD
+preplace netloc proc_sys_reset_1_peripheral_aresetn 1 1 1 NJ 310
+preplace netloc rst_ps8_0_322M_peripheral_aresetn 1 1 1 NJ 130
+preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 1 1 720J 490n
+preplace netloc slowest_sync_clk1_1 1 0 1 NJ 50
+preplace netloc usp_rf_data_converter_0_clk_dac0 1 0 1 40J 220n
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 1 20J 410n
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 0 1 30 70n
+preplace netloc slowest_sync_clk_0_1 1 0 1 10 640n
+preplace netloc reset_adc_clk_peripheral_aresetn 1 1 1 730 720n
+preplace netloc slowest_sync_clk4 1 0 1 50 200n
+preplace netloc reset_adc_clk_1_peripheral_aresetn 1 1 1 710 290n
+levelinfo -pg 1 -10 530 750
+pagesize -pg 1 -db -bbox -sgen -200 -10 980 1190
+"
+}
+0
