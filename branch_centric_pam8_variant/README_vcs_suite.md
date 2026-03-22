@@ -5,6 +5,7 @@ Architectures under comparison:
 - hybrid (NRZ=FS, PAM4/PAM8=RS, split cores)
 - all-RS
 - unified (NRZ=FS, PAM4/PAM8=RS, shared core, true branch-level Top-K pruning)
+- rare small-gap cases switch to exact reduced-state fallback
 
 Files:
 - tb_mlsd_4way_compare.sv : common PR2-domain comparison testbench

@@ -6,6 +6,8 @@ module cmp_unified_mlsd_core_lane_8b #(
     parameter int PR_SHIFT = 2,
 
     parameter logic [3:0] K_CFG = 4'd2,
+    parameter logic       EXACT_FB_EN = 1'b1,
+    parameter logic [MET_W-1:0] EXACT_FB_GAP_TH = 16'd8,
 
     parameter logic signed [7:0] P0 = 8'sd1,
     parameter logic signed [7:0] P1 = 8'sd2,
@@ -199,6 +201,7 @@ module cmp_unified_mlsd_core_lane_8b #(
         logic [MET_W-1:0]   branch_gap_val;
         logic [MET_W-1:0]   branch_ambig_th;
         logic               branch_need_expand;
+        logic               exact_fb_hit;
 
         pm_finite_mask = '0;
         ps_active_mask = '0;
@@ -213,6 +216,7 @@ module cmp_unified_mlsd_core_lane_8b #(
         branch_gap_val = INF;
         branch_ambig_th = INF;
         branch_need_expand = 1'b0;
+        exact_fb_hit = 1'b0;
 
         for (ps = 0; ps < NS_MAX; ps = ps + 1) begin
             branch_active_mask[ps] = '0;
@@ -312,59 +316,44 @@ module cmp_unified_mlsd_core_lane_8b #(
                     branch_need_expand = 1'b1;
             end
 
-            if (branch_need_expand) begin
-                branch_keep_dyn = branch_keep_base + M_cfg;
-                if (branch_keep_dyn > branch_keep_max)
-                    branch_keep_dyn = branch_keep_max;
-            end
+            if (EXACT_FB_EN && branch_need_expand && (branch_gap_val <= EXACT_FB_GAP_TH))
+                exact_fb_hit = 1'b1;
 
-            for (sel = branch_keep_base; sel < branch_keep_dyn; sel = sel + 1) begin
-                best_val = INF;
-                best_ps_idx = 3'd0;
-                best_ns_idx = 3'd0;
+            if (exact_fb_hit) begin
                 for (ps = 0; ps < NS_cfg; ps = ps + 1) begin
                     if (pm[ps] != INF) begin
-                        for (ns = 0; ns < M_cfg; ns = ns + 1) begin
-                            cand_loc = sat_add(pm[ps], pre_bm[ps][ns]);
-                            if (!branch_mask_loc[ps][ns] && (cand_loc < best_val)) begin
-                                best_val = cand_loc;
-                                best_ps_idx = ps[2:0];
-                                best_ns_idx = ns[2:0];
+                        for (ns = 0; ns < M_cfg; ns = ns + 1)
+                            branch_mask_loc[ps][ns] = 1'b1;
+                    end
+                end
+            end else begin
+                if (branch_need_expand) begin
+                    branch_keep_dyn = branch_keep_base + M_cfg;
+                    if (branch_keep_dyn > branch_keep_max)
+                        branch_keep_dyn = branch_keep_max;
+                end
+
+                for (sel = branch_keep_base; sel < branch_keep_dyn; sel = sel + 1) begin
+                    best_val = INF;
+                    best_ps_idx = 3'd0;
+                    best_ns_idx = 3'd0;
+                    for (ps = 0; ps < NS_cfg; ps = ps + 1) begin
+                        if (pm[ps] != INF) begin
+                            for (ns = 0; ns < M_cfg; ns = ns + 1) begin
+                                cand_loc = sat_add(pm[ps], pre_bm[ps][ns]);
+                                if (!branch_mask_loc[ps][ns] && (cand_loc < best_val)) begin
+                                    best_val = cand_loc;
+                                    best_ps_idx = ps[2:0];
+                                    best_ns_idx = ns[2:0];
+                                end
                             end
                         end
                     end
-                end
-                if (best_val != INF)
-                    branch_mask_loc[best_ps_idx][best_ns_idx] = 1'b1;
-            end
-
-            for (ps = 0; ps < NS_cfg; ps = ps + 1) begin
-                for (ns = 0; ns < M_cfg; ns = ns + 1) begin
-                    if (branch_mask_loc[ps][ns]) begin
-                        branch_active_mask[ps][ns] = 1'b1;
-                        ps_active_mask[ps] = 1'b1;
-                        ns_active_mask[ns] = 1'b1;
-                        branch_active_count = branch_active_count + 8'd1;
-                    end
+                    if (best_val != INF)
+                        branch_mask_loc[best_ps_idx][best_ns_idx] = 1'b1;
                 end
             end
-
-            if (branch_active_count == 0) begin
-                branch_active_count = '0;
-                ns_active_mask = '0;
-                for (ps = 0; ps < NS_cfg; ps = ps + 1) begin
-                    if (pm_finite_mask[ps]) begin
-                        ps_active_mask[ps] = 1'b1;
-                        for (ns = 0; ns < M_cfg; ns = ns + 1) begin
-                            branch_active_mask[ps][ns] = 1'b1;
-                            ns_active_mask[ns] = 1'b1;
-                            branch_active_count = branch_active_count + 8'd1;
-                        end
-                    end
-                end
-            end
-
-            branch_expand_hit_int = (branch_keep_dyn > branch_keep_base);
+            branch_expand_hit_int = exact_fb_hit || (branch_keep_dyn > branch_keep_base);
         end
     end
     always_comb begin

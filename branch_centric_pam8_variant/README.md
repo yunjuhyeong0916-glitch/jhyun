@@ -2,6 +2,7 @@ True branch-level Top-K reduced-state variant of the 4-architecture MLSD compari
 
 This folder is self-contained for VCS comparison of:
 - unified true branch-level Top-K reduced-state variant (4-state/8-state budget preserved) built from the committed baseline
+- ambiguity-triggered exact reduced-state fallback for rare small-gap cases
 
 - all-FS
 - hybrid
