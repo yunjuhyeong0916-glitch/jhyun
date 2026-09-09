@@ -1,0 +1,7 @@
+-sverilog
+symbol_lut_mode_8b.sv
+survivor_mem_flat.sv
+traceback_flat.sv
+fir_siso_wide.sv
+cmp_allfs_mlsd_core_lane_8b.sv
+tb_mlsd_allfs_debug_1lane.sv

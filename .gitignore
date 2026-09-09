@@ -1,0 +1,26 @@
+# Local simulation and scratch output
+work/
+__pycache__/
+*.pyc
+simv
+simv.daidir/
+csrc/
+ucli.key
+xsim.dir/
+*.wdb
+*.vcd
+*.fsdb
+*.log
+*.jou
+
+# Vivado build output; existing tracked snapshots remain in Git.
+.Xil/
+*.cache/
+*.gen/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.dcp
+*.bit
+*.ltx
+*.xsa
