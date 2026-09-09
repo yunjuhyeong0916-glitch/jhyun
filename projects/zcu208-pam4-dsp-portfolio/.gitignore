@@ -1,0 +1,28 @@
+# Local verification output
+work/
+__pycache__/
+*.pyc
+
+# Vivado generated files
+.Xil/
+*.cache/
+*.gen/
+*.runs/
+*.sim/
+*.ip_user_files/
+xsim.dir/
+*.jou
+*.log
+*.pb
+*.wdb
+*.dcp
+*.bit
+*.ltx
+*.xsa
+*.str
+
+# Local backups and captures
+*.bak
+*.backup.*
+ILADATA/
+uart_capture/

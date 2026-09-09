@@ -1,3 +1,21 @@
+# 윤주형 | 고속 인터페이스 RTL·FPGA 포트폴리오
+
+고속 신호의 왜곡 보상과 데이터 복원을 위한 디지털 회로 설계·검증 자료입니다. 아래 대표 프로젝트에서 병렬 DSP 구조, RTL 소스, 테스트벤치와 FPGA 구현 기록을 확인할 수 있습니다.
+
+## 대표 프로젝트
+
+### [ZCU208 기반 32-lane PAM4 송수신 DSP 설계·검증](projects/zcu208-pam4-dsp-portfolio/)
+
+4 GS/s로 설정한 RFSoC ADC·DAC와 32-lane 병렬 DSP를 연결한 프로젝트입니다. TX/RX FIR 필터, PAM4 reduced-state MLSD 검출기, 계수 설정 및 PRBS 검사·디버깅 경로를 다룹니다.
+
+- **설계:** 고정소수점 신호처리의 Verilog/SystemVerilog 구현, 병렬화와 파이프라인 구성
+- **검증:** FIR 테스트벤치 3종 재실행 PASS, 기존 FPGA 배치배선 보고서의 결과와 검증 범위 정리
+- **자료:** [프로젝트 요약](projects/zcu208-pam4-dsp-portfolio/README.md) · [대표 소스 안내](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [검증 근거](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+
+## 기존 MLSD 비교 실험 자료
+
+아래 내용과 기존 디렉터리는 별도 버전의 MLSD 비교 실험 자료입니다. 대표 프로젝트의 구조·성능 결과와 구분해 보실 수 있도록 기존 설명을 유지했습니다.
+
 Top-level 4-architecture MLSD comparison folder.
 
 This folder is self-contained for VCS comparison of:

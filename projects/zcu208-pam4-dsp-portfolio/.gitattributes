@@ -1,0 +1,3 @@
+# Preserve original RTL/testbench bytes for SHA-256 provenance.
+rtl/** -text
+tb/** -text
