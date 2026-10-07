@@ -18,9 +18,9 @@
 
 ### FPGA 구현·보드 구동
 
-RFDC 등 기존 IP와 DSP 데이터 경로를 통합했습니다. 보드 구동 문서에서는 클록·리셋·유효 신호를 확인하는 관점으로 Vivado 빌드, 산출물 준비, JTAG 다운로드와 초기 동작 점검을 설명합니다.
+RFDC 등 기존 IP와 DSP 데이터 경로를 통합했습니다. Vivado 빌드·JTAG 다운로드에서 Vitis의 PS 제어 앱, 클록·RFDC 초기화와 계수 적용까지 보드 구동 과정을 설명합니다.
 
-[FPGA 구현·JTAG 구동](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [프로젝트 전체 보기](projects/zcu208-pam4-dsp-portfolio/)
+[Vivado·JTAG](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [Vitis·PS 제어·초기화](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [프로젝트 전체 보기](projects/zcu208-pam4-dsp-portfolio/)
 
 ## LPDDR·USB 연구
 

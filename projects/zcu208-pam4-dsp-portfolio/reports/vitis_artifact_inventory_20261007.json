@@ -1,0 +1,223 @@
+{
+  "recorded_on": "2026-10-07",
+  "workspace_label": "DSP_TRX_FINAL_PAM4",
+  "scope": "Read-only review of Vitis platform/application settings, C sources, existing binaries and XSCT launch script. No software rebuild, JTAG connection, board programming, RFDC initialization, capture, BER measurement or SD boot was performed.",
+  "project_settings": {
+    "tool_reference": "Vitis 2022.2, referenced by the local XSCT script",
+    "platform": "design_1_wrapper",
+    "application": "DSP_based_TRX",
+    "runtime": "C/C++",
+    "processor": "psu_cortexa53_0",
+    "os": "standalone",
+    "domain": "standalone_domain",
+    "domains": [
+      {
+        "name": "zynqmp_fsbl",
+        "processor": "psu_cortexa53_0",
+        "os": "standalone",
+        "architecture": "64-bit"
+      },
+      {
+        "name": "zynqmp_pmufw",
+        "processor": "psu_pmu_0",
+        "os": "standalone",
+        "architecture": "32-bit"
+      },
+      {
+        "name": "standalone_domain",
+        "processor": "psu_cortexa53_0",
+        "os": "standalone",
+        "architecture": "64-bit"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "source_relative": "design_1_wrapper/platform.spr",
+      "role": "Vitis platform and domain settings",
+      "exists": true,
+      "published": false,
+      "bytes": 3532,
+      "sha256": "a11a4e6f9fa3f0918d36d3611f0b2064277b25c53817e4fe8f0f3635af98ce66"
+    },
+    {
+      "source_relative": "DSP_based_TRX/DSP_based_TRX.prj",
+      "role": "Application platform, runtime and processor settings",
+      "exists": true,
+      "published": false,
+      "bytes": 1136,
+      "sha256": "a541844e38b708882e8d83711c5ac202e77c956b012e513783ce0f55bf10b55f"
+    },
+    {
+      "source_relative": "design_1_wrapper/hw/design_1_wrapper.xsa",
+      "role": "Hardware handoff used by Vitis",
+      "exists": true,
+      "published": false,
+      "bytes": 10677750,
+      "sha256": "76522cdf9204d74cdb77b2bedeb9d89e6e5f5efc7be25329139d674d14fb50f0"
+    },
+    {
+      "source_relative": "design_1_wrapper/hw/design_1_wrapper.bit",
+      "role": "PL bitstream referenced by the local XSCT script",
+      "exists": true,
+      "published": false,
+      "bytes": 34437478,
+      "sha256": "e41f2e1fc92fb108747a8b889721f76c2dc8e1860c609fd9cf82cabdd17be5ce"
+    },
+    {
+      "source_relative": "design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf",
+      "role": "A53 FSBL referenced by the local XSCT script",
+      "exists": true,
+      "published": false,
+      "bytes": 511528,
+      "sha256": "0be1c11998c57107261d712e5ffbd5368876b0dde700017bfe8c50821943aff8"
+    },
+    {
+      "source_relative": "design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/pmufw.elf",
+      "role": "PMU firmware present in platform export; not explicitly downloaded by the inspected XSCT script",
+      "exists": true,
+      "published": false,
+      "bytes": 495568,
+      "sha256": "a723a2b1c1aa1f20c98d1351b98e24869af3a3994f2f0c502c59f67dfb103c80"
+    },
+    {
+      "source_relative": "DSP_based_TRX/Debug/DSP_based_TRX.elf",
+      "role": "Existing application ELF; source-to-binary build equivalence not checked",
+      "exists": true,
+      "published": false,
+      "bytes": 1345208,
+      "sha256": "9815dfb44f9cb8aed82a8813aca4cfb1f70ddc9429a47bf5637b18179065e5cc"
+    },
+    {
+      "source_relative": "DSP_based_TRX/src/main.c",
+      "role": "PS application: GPIO/BRAM control, CLK104/RFDC initialization and debug capture",
+      "exists": true,
+      "published": false,
+      "bytes": 99720,
+      "sha256": "4de59e2393a165eb7d7759dd14059767fd02bfcd5b2590a3e8d52fca69247ec0"
+    },
+    {
+      "source_relative": "DSP_based_TRX/src/main.h",
+      "role": "Project-specific control constants, addresses and startup options",
+      "exists": true,
+      "published": false,
+      "bytes": 30227,
+      "sha256": "d56985006426b0ff9c847602565967cd1afb9661c021c371d4f9dc461ebaf6b2"
+    },
+    {
+      "source_relative": "DSP_based_TRX/src/xrfclk.c",
+      "role": "Existing Xilinx clock-driver source with project integration",
+      "exists": true,
+      "published": false,
+      "bytes": 39264,
+      "sha256": "3244f2cb00c040fda843b72343e7adfea2e17cff0b3fc577180e29026fa92ad6"
+    },
+    {
+      "source_relative": "DSP_based_TRX/src/xrfclk.h",
+      "role": "Clock driver interface",
+      "exists": true,
+      "published": false,
+      "bytes": 5120,
+      "sha256": "650400e3b283a2b62e3e33ffa02a5c8dbdec0c0b68ed1675b0eb21dfd6b31a6b"
+    },
+    {
+      "source_relative": "DSP_based_TRX/src/xrfclk_LMK_conf.h",
+      "role": "LMK clock configuration tables",
+      "exists": true,
+      "published": false,
+      "bytes": 6475,
+      "sha256": "110571ecf829b9885adc60d79a4cb81d9be22f6e5c1568b93ae5b8cda1a44207"
+    },
+    {
+      "source_relative": "DSP_based_TRX/src/xrfclk_LMX_conf.h",
+      "role": "LMX clock configuration tables",
+      "exists": true,
+      "published": false,
+      "bytes": 66891,
+      "sha256": "50878f3701d7f7a8cca8a731433aa0eb946d3bb694186c8cc13b0b206db09ecf"
+    },
+    {
+      "source_relative": "DSP_based_TRX/src/rx_thr_gpio.c",
+      "role": "RX threshold GPIO integration",
+      "exists": true,
+      "published": false,
+      "bytes": 1940,
+      "sha256": "04bb4d2c9f039b56ecda1ab30fefaa512f0eaa224ba3f2eae86e632442939550"
+    },
+    {
+      "source_relative": "DSP_based_TRX/src/lscript.ld",
+      "role": "Application linker memory placement",
+      "exists": true,
+      "published": false,
+      "bytes": 6976,
+      "sha256": "5a6944aaf645bec7c89120a5c200975ec21a385a55ec9791b5bca6818652cf7c"
+    },
+    {
+      "source_relative": "DSP_based_TRX_system/_ide/scripts/debugger_dsp_based_trx-no_loadhw_fsbl_app.tcl",
+      "role": "Local XSCT launch script: reset, PL programming, FSBL, A53 app; inspected but not executed",
+      "exists": true,
+      "published": false,
+      "bytes": 1755,
+      "sha256": "befe9ffa64e9c5c031004c148f8730a75c2b811e27ae755bdaaf8a6a4bc64437"
+    }
+  ],
+  "artifact_comparison": {
+    "vitis_xsa_matches_previously_recorded_vivado_xsa": true,
+    "vitis_hw_bit_matches_bit_embedded_in_xsa": true,
+    "vitis_hw_bit_matches_previously_recorded_vivado_impl_bit": false,
+    "previous_vivado_impl_bit_sha256": "b668aa627d261a5bbc7c23466e5e3b3ca9e366d1a49f8f59f396c122df48de40",
+    "previous_vivado_xsa_sha256": "76522cdf9204d74cdb77b2bedeb9d89e6e5f5efc7be25329139d674d14fb50f0",
+    "embedded_xsa_bitstream": {
+      "member": "design_1_wrapper.bit",
+      "bytes": 34437478,
+      "sha256": "e41f2e1fc92fb108747a8b889721f76c2dc8e1860c609fd9cf82cabdd17be5ce"
+    },
+    "comparison_reference": "fpga_artifact_inventory_20261007.json"
+  },
+  "observed_source_functions": {
+    "control_and_coefficients": [
+      "InitSwControlGpio",
+      "InitFfeCoeffGpio",
+      "InitRxCoeffBram",
+      "PrintRxCoeffBramStatus",
+      "SetRxThresholds"
+    ],
+    "clock_and_rfdc": [
+      "XRFClk_Init",
+      "resetAllClk104",
+      "metal_init",
+      "XRFdc_LookupConfig",
+      "XRFdc_CfgInitialize",
+      "rfdcStartup"
+    ],
+    "debug_capture": "BRAM status/data reads and UART CSV output are present; capture requires matching PL hardware and register layout.",
+    "prbs_counter_ps_readout": "Not identified in the inspected main.c. PL PRBS counter outputs and debug capture CSV are different evidence."
+  },
+  "local_xsct_launch": {
+    "steps": [
+      "system reset",
+      "PL bitstream download",
+      "A53 FSBL download",
+      "run FSBL to XFsbl_Exit",
+      "A53 application ELF download and run"
+    ],
+    "explicit_pmufw_download": false,
+    "executed_in_this_review": false,
+    "diagnostic_context": "Script avoids generated loadhw -regs; existence does not establish current successful board execution."
+  },
+  "separate_boot_bif_review": {
+    "source_relative_to_work_root": "boot/output.bif",
+    "bytes": 194,
+    "sha256": "b4ddb4415a91208a17595f2ed987cee51fc7f1be4f58679aa8f66b718c2f95f2",
+    "partition_count": 1,
+    "identified_contents": "FSBL only; no DSP application or PL bitstream partition",
+    "published": false
+  },
+  "limitations": [
+    "Current C sources were not rebuilt or matched to the existing application ELF.",
+    "Matching XSA and embedded bitstream does not prove correspondence to the complete published RTL snapshot or timing reports.",
+    "The separately recorded Vivado implementation bitstream differs from the Vitis/XSA bitstream. LTX pairing was not validated.",
+    "Existing drivers are not claimed as entirely authored by the portfolio owner.",
+    "No current board-run or SD-boot success, RFDC startup success, PRBS BER or new timing result is claimed."
+  ]
+}

@@ -10,6 +10,7 @@
 | 대표 프로젝트의 FPGA 보고서 | 2026-06-29 기록의 WNS +0.083 ns, TNS 0.000 ns | 기존 구현 기록 검토, 이번 재배치배선 결과가 아님 |
 | FPGA 프로젝트·산출물 | 2026-10-07 로컬 원 프로젝트의 XPR·BD·XDC·BIT·LTX·XSA 존재와 해시, 공개 소스 29개와 원본 해시 일치 | [산출물 목록](../projects/zcu208-pam4-dsp-portfolio/reports/fpga_artifact_inventory_20261007.json), 당시 비트스트림의 빌드 입력과 공개 소스의 일치까지 증명하지 않음 |
 | JTAG 다운로드·보드 초기 동작 | [실행 가이드](../projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) 작성 | 이번 문서 추가에서 하드웨어 연결·다운로드·RFDC 초기화·ILA 캡처 미실행 |
+| Vitis PS 앱·초기화 구성 | 2026-10-07 A53 Standalone 설정·C 소스·FSBL·PMUFW·앱 ELF·XSCT 로드 순서 검토 | [Vitis 안내](../projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md), [파일·해시 비교](../projects/zcu208-pam4-dsp-portfolio/reports/vitis_artifact_inventory_20261007.json); 앱 재빌드·보드/SD 실행 미실행, Vitis와 기존 Vivado 폴더의 `.bit` 해시 차이 확인 |
 | LPDDR TX 회로 | 작성자 제공 자료·관련 논문의 TX 단독 시뮬레이션과 개인 설계·측정 전 검증 범위 | [LPDDR](../projects/high-speed-interface-research/docs/lpddr.md), Combo PHY 공동 실측과 구분 |
 | LPDDR TX Verilog 동작 모델 | 2026-10-07 제공 소스·문서의 TX 구조 검토, 기존 VCS·Questa 파형·코드별 Eye·4-DQ 출력 이미지 확인 | [TX 모델링과 그림](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md); 20 Gb/s는 모델 조건, 새 시뮬레이션·합성·칩 측정 미실행 |
 | LPDDR Combo PHY | A-SSCC 공식 논문 정보의 14 Gb/s/pin·4-DQ 측정 조건과 Eye·RX 마진 | 공동 칩 측정 결과이며, 전체 PHY를 개인 설계했다고 표시하지 않음 |

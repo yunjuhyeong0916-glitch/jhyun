@@ -1,6 +1,6 @@
 # FPGA 구현·JTAG 다운로드와 보드 초기 동작
 
-[프로젝트 요약](../README.md) · [MLSD·RTL 구조](architecture.md) · [검증 근거](validation.md) · [산출물 확인 기록](../reports/fpga_artifact_inventory_20261007.json)
+[프로젝트 요약](../README.md) · [Vitis·PS 제어·초기화](vitis-bringup.md) · [MLSD·RTL 구조](architecture.md) · [검증 근거](validation.md) · [산출물 확인 기록](../reports/fpga_artifact_inventory_20261007.json)
 
 이 문서는 ZCU208에서 PAM4 송수신 DSP를 구동할 때 필요한 빌드 입력, JTAG 다운로드와 초기 동작 확인을 설명합니다. MLSD의 메트릭·경로 복원 구조는 [RTL 문서](architecture.md)에서 다룹니다.
 
@@ -38,7 +38,7 @@ MLSD 입력을 병렬로 처리하려면 샘플의 순서뿐 아니라 클록을
 2. BD를 Validate하고 IP output products와 top wrapper를 준비합니다.
 3. 합성 후 배치배선을 실행하고 timing·route·DRC·methodology 보고서를 검토합니다.
 4. 비트스트림을 생성하고 같은 구현의 ILA probes 파일을 함께 보관합니다.
-5. PS 제어 소프트웨어를 사용하는 경우 해당 하드웨어의 XSA와 소프트웨어 빌드도 연결합니다.
+5. 해당 하드웨어의 XSA를 Vitis 플랫폼에 연결하고 PS 제어 앱을 빌드합니다. [Vitis 플랫폼·앱 준비](vitis-bringup.md#2-xsa에서-앱-빌드jtag-실행까지)
 
 현재 공개 폴더는 선별한 소스와 보고서 묶음입니다. FIR [재현 명령](reproduce.md)은 필터 시뮬레이션만 실행하므로 위 전체 보드 빌드와 구분합니다.
 
@@ -52,9 +52,11 @@ MLSD 입력을 병렬로 처리하려면 샘플의 순서뿐 아니라 클록을
 | `design_1_wrapper.bit` | JTAG를 통한 PL 회로 프로그래밍 | 로컬 존재·해시 기록 |
 | `design_1_wrapper.ltx` | ILA·VIO의 probe 정보 | 로컬 존재·해시 기록 |
 | `design_1_wrapper.xsa` | PS 소프트웨어에서 사용할 하드웨어 정보 | 로컬 존재·해시 기록 |
-| 보드 클록·PS·RFDC 초기화 소프트웨어와 설정 | 필요한 클록과 converter·제어 상태 준비 | 이 공개본에 실행 가능한 절차·바이너리 미포함 |
+| Vitis 플랫폼·PS 앱·FSBL·PMUFW | PS 실행 환경, 보드 클록·RFDC 초기화와 DSP 설정 | [구성·실행 안내](vitis-bringup.md)와 [로컬 파일 확인 기록](../reports/vitis_artifact_inventory_20261007.json); 전체 소스·바이너리 미포함 |
 
 파일의 존재와 해시는 산출물을 식별하기 위한 기록입니다. 과거 비트스트림을 만든 당시의 전체 입력 소스와 공개 스냅샷이 같다는 증거는 별도로 필요합니다. `.bit`와 `.ltx`도 같은 구현에서 생성된 조합인지 확인한 뒤 사용합니다.
+
+추가 Vitis 검토에서는 XSA 내부 bitstream과 Vitis `hw` 폴더의 `.bit`가 일치했지만, 위 Vivado `impl_1`의 `.bit`와는 해시가 달랐습니다. 해당 [파일 조합과 범위](vitis-bringup.md#8-이번에-확인한-파일-조합과-범위)를 확인한 뒤 사용할 구현을 선택합니다.
 
 ## 4. Hardware Manager에서 JTAG 다운로드
 
@@ -89,7 +91,7 @@ program_hw_devices $device
 refresh_hw_device $device
 ```
 
-이 예시는 PL 프로그래밍용입니다. 원 프로젝트의 PS·클록 제어·RFDC 초기화 소프트웨어를 추가로 확보해야 시스템 실행 절차를 완성할 수 있습니다.
+이 예시는 PL 프로그래밍용입니다. 이후 [Vitis 실행 안내](vitis-bringup.md)에 따라 같은 하드웨어의 PS 앱·초기화 파일을 준비하고 CLK104·RFDC와 DSP 제어 상태를 확인합니다. 전체 실행 소프트웨어·바이너리는 이 공개본에 포함되어 있지 않습니다.
 
 ## 5. 다운로드 이후 초기 동작 확인
 

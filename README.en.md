@@ -18,9 +18,9 @@ Fixed-point MLSD RTL uses sequence information, with parallel structures for met
 
 ### FPGA implementation and board bring-up
 
-The DSP datapath integrates existing IP including RFDC. The bring-up guide covers Vivado builds, programming artifacts, JTAG download and initial clock, reset and valid-signal checks.
+The DSP datapath integrates existing IP including RFDC. The guides connect Vivado builds and JTAG programming to the Vitis PS application, clock / RFDC initialization and runtime coefficient updates.
 
-[FPGA build / JTAG guide](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [Full project](projects/zcu208-pam4-dsp-portfolio/)
+[Vivado / JTAG](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [Vitis / PS control / initialization](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [Full project](projects/zcu208-pam4-dsp-portfolio/)
 
 ## LPDDR / USB research
 

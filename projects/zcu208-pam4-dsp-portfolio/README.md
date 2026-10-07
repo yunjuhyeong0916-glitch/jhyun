@@ -20,13 +20,16 @@
 
 ## FPGA 구현·보드 구동
 
-RTL의 출력이 맞더라도 보드에서 데이터를 얻으려면 RFDC와 병렬 데이터 경로의 클록·리셋·유효 신호, 런타임 설정이 함께 맞아야 합니다. [FPGA 구현·JTAG 구동 문서](docs/fpga-bringup.md)는 이 연결을 중심으로 다음 과정을 설명합니다.
+RTL의 출력이 맞더라도 보드에서 데이터를 얻으려면 RFDC와 병렬 데이터 경로의 클록·리셋·유효 신호, 런타임 설정이 함께 맞아야 합니다. [Vivado 구현·JTAG 다운로드](docs/fpga-bringup.md)와 [Vitis·PS 제어·초기화](docs/vitis-bringup.md)는 하드웨어 구현부터 제어 앱 실행까지 연결해 설명합니다.
 
 - Vivado 프로젝트·BD·제약·IP와 합성·배치배선 결과의 관계
 - 비트스트림과 ILA probes 파일의 준비, Hardware Manager의 JTAG 다운로드
+- XSA 기반 Vitis 플랫폼·Standalone 앱, A53 실행과 CLK104·RFDC 초기화
 - RFDC·제어 설정 이후 데이터 유효 신호·계수 반영·PRBS 검사 확인
 
 2026-10-07 원 프로젝트의 `.bit`, `.ltx`, `.xsa` 등 파일 존재와 해시를 기록했습니다. 이 확인에서 합성·배치배선이나 보드 다운로드를 다시 실행하지 않았습니다. [산출물 확인 기록](reports/fpga_artifact_inventory_20261007.json)
+
+Vitis 앱 소스·ELF·FSBL·PMUFW와 로드 순서도 별도로 검토했습니다. Vitis의 bitstream은 XSA 내부 파일과 일치하지만 위 Vivado `impl_1`의 bitstream과는 해시가 달라, 실행 파일 조합과 검증 범위를 [Vitis 확인 기록](reports/vitis_artifact_inventory_20261007.json)에 구분했습니다.
 
 ## 검증 자료
 
