@@ -1,0 +1,399 @@
+{
+  "question": "Can the current 4GS/s project recover roughly 40 dB loss?",
+  "definition": {
+    "40db_amplitude_ratio": 0.01,
+    "required_inverse_gain_x": 100.0,
+    "required_inverse_gain_db": 40.0
+  },
+  "captures": [
+    {
+      "label": "latest ISI",
+      "rfdc": "E:\\ZCU208_work\\vivado\\DSP_based_TRX_32lane_PAM4_4GS\\ILADATA\\ISI\\iladata2.csv",
+      "rows": 1024,
+      "tx_rms_code": 36.71147368064496,
+      "tx_unique": 82,
+      "tx_saturation_pct": 9.47265625,
+      "adc_rms_count": 2584.001267187794,
+      "adc_peak_count": 5776,
+      "adc_peak_fs_pct": 17.626953125,
+      "tx_adc_corr": 0.6829494114794078,
+      "tx_adc_lag": -993,
+      "channel_fit_corr": 0.8647150714947975,
+      "channel_resid_rms_count": 1298.5240345079976,
+      "adc_peak_to_rms_db": 6.986689245231007,
+      "mlsd": {
+        "file": "E:\\ZCU208_work\\vivado\\DSP_based_TRX_32lane_PAM4_4GS\\ILADATA\\ISI\\iladata3.csv",
+        "probe0_rms": 33.90547684170333,
+        "probe0_min": -85.0,
+        "probe0_max": 74.0,
+        "eq8_rms": 33.89935485766101,
+        "eq8_min": -85.0,
+        "eq8_max": 74.0,
+        "accept_valid": {
+          "1": 1024
+        },
+        "dbg_mlsd_valid": {
+          "0": 1024
+        },
+        "decision_valid": {
+          "1": 1024
+        }
+      }
+    },
+    {
+      "label": "latest ISI alt",
+      "rfdc": "E:\\ZCU208_work\\vivado\\DSP_based_TRX_32lane_PAM4_4GS\\ILADATA\\ISI\\PAM4_TXFFE_OFF.csv",
+      "rows": 1024,
+      "tx_rms_code": 36.70112608967196,
+      "tx_unique": 82,
+      "tx_saturation_pct": 9.4482421875,
+      "adc_rms_count": 2655.0050556831575,
+      "adc_peak_count": 6100,
+      "adc_peak_fs_pct": 18.61572265625,
+      "tx_adc_corr": 0.6595848881189713,
+      "tx_adc_lag": 19,
+      "channel_fit_corr": 0.9897951782791944,
+      "channel_resid_rms_count": 385.293187043878,
+      "adc_peak_to_rms_db": 7.225289652105078
+    },
+    {
+      "label": "SBR ISI_V2 true",
+      "rfdc": "E:\\ZCU208_work\\vivado\\DSP_based_TRX_32lane_PAM4_4GS\\ILADATA\\ISI_V2\\iladata2.csv",
+      "rows": 1024,
+      "tx_rms_code": 63.96898662633323,
+      "tx_unique": 2,
+      "tx_saturation_pct": 100.0,
+      "adc_rms_count": 1739.746450748104,
+      "adc_peak_count": 6292,
+      "adc_peak_fs_pct": 19.20166015625,
+      "tx_adc_corr": 0.6462273432096637,
+      "tx_adc_lag": 434,
+      "channel_fit_corr": 0.7927069317038289,
+      "channel_resid_rms_count": 1060.8585247783403,
+      "adc_peak_to_rms_db": 11.166055095725154,
+      "mlsd": {
+        "file": "E:\\ZCU208_work\\vivado\\DSP_based_TRX_32lane_PAM4_4GS\\ILADATA\\ISI_V2\\iladata3.csv",
+        "probe0_rms": 35.77708763999664,
+        "probe0_min": -96.0,
+        "probe0_max": 32.0,
+        "eq8_rms": 12.114011209261983,
+        "eq8_min": -15.0,
+        "eq8_max": 16.0,
+        "accept_valid": {
+          "1": 1024
+        },
+        "dbg_mlsd_valid": {
+          "1": 1024
+        },
+        "decision_valid": {
+          "1": 1024
+        }
+      }
+    }
+  ],
+  "sbr": {
+    "path": "E:\\ZCU208_work\\vivado\\DSP_based_TRX_32lane_PAM4_4GS\\ILADATA\\ISI_V2\\iladata2.csv",
+    "corr": 0.6462273432096637,
+    "lag": 434,
+    "tx_word_reverse": true,
+    "rx_word_reverse": false,
+    "tx_step_code": 127.0,
+    "adc_baseline": -544.0,
+    "main_amp_count": 6781.983333333334,
+    "main_amp_fs_pct": 20.696970621744793,
+    "peak_index": 16,
+    "pulses": 256,
+    "used_windows": 240,
+    "pre_rms_pct": 24.788358764261638,
+    "post_rms_pct": 22.006721027835077,
+    "near_rms_pct": 22.971389966794664,
+    "norm_around_main": [
+      {
+        "rel": -8,
+        "norm": -0.1899739260147597
+      },
+      {
+        "rel": -7,
+        "norm": -0.13172400404011608
+      },
+      {
+        "rel": -6,
+        "norm": 0.0025459612355284464
+      },
+      {
+        "rel": -5,
+        "norm": 0.0028482326949589476
+      },
+      {
+        "rel": -4,
+        "norm": -0.015261022463930168
+      },
+      {
+        "rel": -3,
+        "norm": -0.010365699316080104
+      },
+      {
+        "rel": -2,
+        "norm": 0.35400902882391827
+      },
+      {
+        "rel": -1,
+        "norm": 0.5589736532331987
+      },
+      {
+        "rel": 0,
+        "norm": 1.0
+      },
+      {
+        "rel": 1,
+        "norm": 0.7435705877582516
+      },
+      {
+        "rel": 2,
+        "norm": 0.059240291065298004
+      },
+      {
+        "rel": 3,
+        "norm": 0.010989902167261789
+      },
+      {
+        "rel": 4,
+        "norm": -0.012194073021903623
+      },
+      {
+        "rel": 5,
+        "norm": -0.024127651940558194
+      },
+      {
+        "rel": 6,
+        "norm": 0.012211275462684218
+      },
+      {
+        "rel": 7,
+        "norm": -0.03260108277077256
+      },
+      {
+        "rel": 8,
+        "norm": -0.11723463391977273
+      },
+      {
+        "rel": 9,
+        "norm": -0.04039378844438328
+      },
+      {
+        "rel": 10,
+        "norm": 0.11291927877538283
+      },
+      {
+        "rel": 11,
+        "norm": 0.13326239374420953
+      },
+      {
+        "rel": 12,
+        "norm": 0.22024284931399124
+      },
+      {
+        "rel": 13,
+        "norm": 0.28821460782121255
+      },
+      {
+        "rel": 14,
+        "norm": -0.016435703420090975
+      },
+      {
+        "rel": 15,
+        "norm": -0.07412040234051494
+      },
+      {
+        "rel": 16,
+        "norm": -0.18215173044266794
+      }
+    ]
+  },
+  "equalizer_response": {
+    "tx_current_old_ref_0002ff": {
+      "taps": [
+        -75,
+        112,
+        27,
+        2,
+        0,
+        -1,
+        2,
+        0
+      ],
+      "dc_gain": 67.0,
+      "nyquist_gain": 159.0,
+      "max_gain": 165.10229049560334,
+      "min_gain": 67.0,
+      "median_gain": 150.65521177724784,
+      "nyq_vs_dc_db": 7.506446432317489,
+      "max_vs_median_db": 0.7953787614154385,
+      "max_vs_min_db": 7.83356591300376
+    },
+    "rx_eq_base": {
+      "taps": [
+        -25,
+        64,
+        -41,
+        -22,
+        -15,
+        -10,
+        -7,
+        -3,
+        -5,
+        -4,
+        -3,
+        -3,
+        -2,
+        -2,
+        -2,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "dc_gain": 86.0,
+      "nyquist_gain": 120.0,
+      "max_gain": 120.0,
+      "min_gain": 45.85989306511146,
+      "median_gain": 80.44920069269659,
+      "nyq_vs_dc_db": 2.8936558960525254,
+      "max_vs_median_db": 3.4731902509047448,
+      "max_vs_min_db": 8.354964166461729
+    },
+    "rx_eq_scaled_3_over_2": {
+      "taps": [
+        -38,
+        96,
+        -62,
+        -33,
+        -22,
+        -15,
+        -10,
+        -4,
+        -8,
+        -6,
+        -4,
+        -4,
+        -3,
+        -3,
+        -3,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "dc_gain": 131.0,
+      "nyquist_gain": 181.0,
+      "max_gain": 181.0,
+      "min_gain": 67.5464484261412,
+      "median_gain": 119.3645363640397,
+      "nyq_vs_dc_db": 2.8081455842500898,
+      "max_vs_median_db": 3.6160651874758107,
+      "max_vs_min_db": 8.561521119847054
+    },
+    "combined_tx_rx_scaled": {
+      "taps": [
+        2850,
+        -11456,
+        14376,
+        -1953,
+        -3528,
+        -2316,
+        -1762,
+        -1015,
+        -239,
+        -618,
+        -625,
+        -346,
+        -359,
+        -227,
+        -210,
+        -281,
+        -165,
+        -139,
+        -135,
+        -135,
+        -136,
+        -284,
+        -60,
+        -6,
+        -2,
+        -2,
+        -4,
+        0
+      ],
+      "dc_gain": 8777.0,
+      "nyquist_gain": 28779.0,
+      "max_gain": 28779.0,
+      "min_gain": 5526.4560582838585,
+      "median_gain": 17348.909215173007,
+      "nyq_vs_dc_db": 10.314592016660217,
+      "max_vs_median_db": 4.3960704954601395,
+      "max_vs_min_db": 14.332579559211977
+    }
+  },
+  "uart_bram": [
+    {
+      "name": "fixed_eq8_frontend",
+      "route": 1,
+      "frames": 44,
+      "eq8_rms": 56.11006584059908,
+      "eq8_min": -98,
+      "eq8_max": 127,
+      "selected_rms": 55.84393838677081,
+      "status_route_values": {
+        "0": 44
+      },
+      "mlsd_out_valid_pct": 100.0,
+      "out_rx8p_valid_pct": 100.0
+    },
+    {
+      "name": "fixed_np8_level4",
+      "route": 3,
+      "frames": 55,
+      "eq8_rms": 20.49143390874254,
+      "eq8_min": -44,
+      "eq8_max": 48,
+      "selected_rms": 32.0,
+      "status_route_values": {
+        "7": 55
+      },
+      "mlsd_out_valid_pct": 100.0,
+      "out_rx8p_valid_pct": 100.0
+    },
+    {
+      "name": "fixed_eq8_frontend",
+      "route": 1,
+      "frames": 20,
+      "eq8_rms": 20.28161112929641,
+      "eq8_min": -41,
+      "eq8_max": 46,
+      "selected_rms": 11.179221797602908,
+      "status_route_values": {
+        "3": 20
+      },
+      "mlsd_out_valid_pct": 100.0,
+      "out_rx8p_valid_pct": 100.0
+    },
+    {
+      "name": "fixed_np8_level4",
+      "route": 3,
+      "frames": 26,
+      "eq8_rms": 20.444960118101704,
+      "eq8_min": -41,
+      "eq8_max": 46,
+      "selected_rms": 19.907719801431497,
+      "status_route_values": {
+        "7": 26
+      },
+      "mlsd_out_valid_pct": 0.0,
+      "out_rx8p_valid_pct": 100.0
+    }
+  ]
+}

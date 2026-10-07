@@ -1,0 +1,51 @@
+﻿DSP_based_TRX_32lane_PAM4_4GS_OPT Utilization Summary
+Generated: 2026-06-14 08:54:02 +09:00
+Project:   D:\ZCU208_work\vivado\DSP_based_TRX_32lane_PAM4_4GS_OPT
+Device:    XCZU48DR-FSVG1517-2-E
+Rate:      4GS/s
+
+Source reports:
+- Top placed utilization: D:\ZCU208_work\vivado\DSP_based_TRX_32lane_PAM4_4GS_OPT\DSP_based_TRX_32lane_PAM4_4GS_OPT.runs\impl_1\design_1_wrapper_utilization_placed.rpt
+- RX child OOC utilization: D:\ZCU208_work\vivado\DSP_based_TRX_32lane_PAM4_4GS_OPT\DSP_based_TRX_32lane_PAM4_4GS_OPT.runs\design_1_rx_bd_shim_raw1024_t_0_0_synth_1\design_1_rx_bd_shim_raw1024_t_0_0_utilization_synth.rpt
+- TX child OOC utilization: D:\ZCU208_work\vivado\DSP_based_TRX_32lane_PAM4_4GS_OPT\DSP_based_TRX_32lane_PAM4_4GS_OPT.runs\design_1_tx_bd_shim_raw64x8_a_0_0_synth_1\design_1_tx_bd_shim_raw64x8_a_0_0_utilization_synth.rpt
+
+Notes:
+- Top totals are from impl_1 placed utilization report.
+- RX/TX data path values are from child OOC utilization reports.
+- Others = Top total - RX data path - TX data path.
+- CARRY8 is listed only as a top-level reference because top placed and child OOC CARRY8 counts are not strictly additive.
+- Current RTL was reverted to the pre-pipeline-change FIR structure before this summary was written.
+
+FPGA Specifications
+-------------------
+Platform       : XCZU48DR-FSVG1517-2-E
+Sample Rate    : 4GS/s
+LUT Util.      : 189,108 / 425,280 (44.47%)
+FF Util.       : 188,846 / 850,560 (22.20%)
+DSP Util.      : 950 / 4,272 (22.24%)
+BRAM Util.     : 24.5 / 1,080 tiles (2.27%)
+CARRY8 Util.   : 14,363 / 53,160 (27.02%)
+
+Resource Breakdown
+------------------
+Resource                                  LUT              FF             DSP
+Total                                   189,108 (100.00%)      188,846 (100.00%)      950 (100.00%)
+RX data path                            182,478 ( 96.49%)      186,147 ( 98.57%)      693 ( 72.95%)
+TX data path                              2,339 (  1.24%)        1,125 (  0.60%)      257 ( 27.05%)
+Others: RFDC, AXI/Control, etc.           4,291 (  2.27%)        1,574 (  0.83%)        0 (  0.00%)
+
+Slide Table Values
+------------------
+FPGA Specifications:
+- Platform: XCZU48DR-FSVG1517-2-E
+- Sample Rate: 4GS/s
+- LUT Util.: 189,108 / 425,280 (44.47%)
+- FF Util.: 188,846 / 850,560 (22.20%)
+- DSP Util.: 950 / 4,272 (22.24%)
+- BRAM Util.: 24.5 / 1,080 tiles (2.27%)
+
+Resource Breakdown:
+- Total: LUT 189,108 (100%), FF 188,846 (100%), DSP 950 (100%)
+- RX data path: LUT 182,478 (96.49%), FF 186,147 (98.57%), DSP 693 (72.95%)
+- TX data path: LUT 2,339 (1.24%), FF 1,125 (0.60%), DSP 257 (27.05%)
+- Others: LUT 4,291 (2.27%), FF 1,574 (0.83%), DSP 0 (0.00%)

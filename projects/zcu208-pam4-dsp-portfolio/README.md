@@ -33,6 +33,7 @@ Vitis 앱 소스·ELF·FSBL·PMUFW와 로드 순서도 별도로 검토했습니
 
 ## 검증 자료
 
+- **6월 결과와 논문 수치 대조:** 2026-06-14 저장 요약의 **LUT 189,108·FF 188,846·DSP 950·BRAM 24.5**가 A-SSCC 2026 초록과 일치합니다. BER 컨투어의 원래 계산값과 표시 기준, ADC/ILA·SBR·UART 기록도 [6월 측정·수치 대조](docs/validation.md)에 정리했습니다.
 - **관련 연구 논문:** [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 공식 정보). 논문에 보고한 시스템 검증과 이 공개본의 검증 범위는 [논문과 공개 소스의 관계](docs/architecture.md#관련-논문과-공개-소스의-관계)에 설명합니다.
 - **FIR 테스트 3종 PASS:** 이 폴더에 담긴 RTL과 기존 테스트벤치를 Vivado XSim 2022.2에서 2026-09-09 다시 실행했습니다. [실행 결과](reports/fir_validation_20260909.json)
 - **MLSD 메트릭 모듈 PASS:** 2026-10-07 두 합성 벡터에서 branch 산술·8심볼 min-plus 결합을 확인하고 실제 RTL 행렬의 Python traceback으로 각 512개 레벨을 복원했습니다. 전체 어댑터 테스트는 출력 불일치로 FAIL이며, [결과·실패 재현](examples/mlsd_minimal/)을 함께 제공합니다.

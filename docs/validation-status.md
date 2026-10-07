@@ -4,10 +4,13 @@
 
 | 자료 | 확인한 내용 | 범위 |
 |---|---|---|
+| 6월 결과와 A-SSCC 2026 자원 대조 | 6월 14일 전체 TRX LUT 189,108·FF 188,846·DSP 950·BRAM 24.5가 논문 표기와 모두 일치 | [수치 대조](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#a-sscc-2026과-6월-14일-fpga-자원-수치-대조); 저장된 placed 자원 요약·ZIP 사본 확인 |
+| 6월 PRBS7·PRBS15 21-tap 컨투어 | PRBS7 표시 하한 10⁻⁷, PRBS15 원래 기대 BER 2.244×10⁻⁶·10⁶ 기준 반올림 표시 2×10⁻⁶ | [계산값·원본 CSV](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#6월-ber-컨투어와-논문-표시-수치-대조); 통계 분석, 최종 41-dB 온칩 BER 로그와 직접 대응 미확인 |
+| 6월 ZCU208 보드 캡처·재생 | RFDC ILA·SBR·TX FFE·UART 기록 및 PRBS7 재생 794/64,384비트 오류 | [측정·분석 기록](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#6월-보드-캡처와-분석-기록); 초기 구동·캡처 재생의 조건에 적용 |
 | 대표 프로젝트의 FIR RTL | 2026-09-09 XSim 테스트 3종 PASS | 공개 소스에 대한 기존 FIR 테스트 재실행 |
 | MLSD 메트릭 RTL 최소 예제 | 2026-10-07 두 합성 채널 PASS, 조건별 512심볼의 행렬·Python 복원 확인 | [예제](../projects/zcu208-pam4-dsp-portfolio/examples/mlsd_minimal/); g2=0, RTL traceback 제외 |
 | MLSD 전체 어댑터 회귀 | 2026-10-07 두 조건 FAIL, 첫 검사 word lane 1 출력 불일치 | [실패 기록](../projects/zcu208-pam4-dsp-portfolio/reports/mlsd_adapter_audit_20261007/); 원본 RTL 유지, 데이터·valid·metadata 정렬 추가 확인 필요 |
-| MLSD 논문 시스템 측정 | 논문 버전의 ZCU208 RFSoC 시스템 측정 결과 | [논문 측정 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#관련-논문의-시스템-검증); 상세 측정자료는 추가 예정, 공개 RTL 어댑터 테스트와 구분 |
+| MLSD 논문 시스템 측정 | 논문 버전의 ZCU208 RFSoC 시스템 측정 결과 | [논문 측정 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#관련-논문의-시스템-검증); 6월 자원 요약·후처리 자료 추가, 최종 온칩 BER 로그와 공개 RTL 재현 범위는 구분 |
 | 대표 프로젝트의 FPGA 보고서 | 2026-06-29 기록의 WNS +0.083 ns, TNS 0.000 ns | 기존 구현 기록 검토, 이번 재배치배선 결과가 아님 |
 | FPGA 프로젝트·산출물 | 2026-10-07 로컬 원 프로젝트의 XPR·BD·XDC·BIT·LTX·XSA 존재와 해시, 공개 소스 29개와 원본 해시 일치 | [산출물 목록](../projects/zcu208-pam4-dsp-portfolio/reports/fpga_artifact_inventory_20261007.json), 당시 비트스트림의 빌드 입력과 공개 소스의 일치까지 증명하지 않음 |
 | JTAG 다운로드·보드 초기 동작 | [실행 가이드](../projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) 작성 | 이번 문서 추가에서 하드웨어 연결·다운로드·RFDC 초기화·ILA 캡처 미실행 |
