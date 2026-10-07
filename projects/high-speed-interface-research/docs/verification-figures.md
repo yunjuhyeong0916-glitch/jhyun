@@ -4,6 +4,8 @@
 
 기존 논문과 측정 활동 자료에서 추출한 그림입니다. 시뮬레이션, 공동 칩 실측과 계측기 설정 확인을 각각 표시했습니다. 원본의 축·주석·파형을 유지했으며, 출처 파일과 그림의 해시는 [추출 기록](../../../docs/figure-sources.json)에 있습니다.
 
+LPDDR Combo의 **TX Verilog 모델 검증 파형**은 [TX 모델링 상세 페이지](lpddr-tx-modeling.md)에 모았습니다. VCS·Questa 파형, pre-emphasis 코드별 Eye 4종과 4-DQ 통합 출력을 모델 조건과 함께 볼 수 있습니다.
+
 ## LPDDR TX: FFE 적용 전후의 시뮬레이션
 
 ![저전압 NRZ TX의 FFE 적용 전후 시뮬레이션 Eye](../assets/lpddr_tx_simulated_eye.png)

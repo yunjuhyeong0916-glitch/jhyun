@@ -1,14 +1,18 @@
-# LPDDR: 저전압 TX 설계와 Combo PHY 검증
+# LPDDR: TX 회로 설계·모델링과 Combo PHY 검증
 
 [파트 개요](../README.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·근거](evidence.md)
 
-**개인 담당:** 최종 Combo PHY에 적용된 TX 직접 설계와 해당 TX의 측정 전 Schematic·Post-Layout 검증 전담. 측정용 PCB 설계·HFSS 채널 분석과 공동 실리콘 평가에 참여했습니다.
+**개인 담당:** 최종 Combo PHY에 적용된 TX 회로 직접 설계와 해당 TX의 측정 전 Schematic·Post-Layout 검증 전담, Controller PHY의 TX Verilog 동작 모델링. 측정용 PCB 설계·HFSS 채널 분석과 공동 실리콘 평가에 참여했습니다.
 
 ## 낮은 전압에서도 채널을 통과하는 TX 설계
 
 드라이버 전압을 낮추면 전력 소모를 줄일 수 있지만, 채널 손실 이후의 신호 여유와 임피던스 정합을 함께 확보해야 합니다. 이 조건을 다루기 위해 28-nm CMOS의 0.5-V VDDQ TX에 PI-LVSTL 드라이버, 2-tap de-emphasis FFE와 ZQ 보정을 적용했습니다. FFE를 적용한 출력 파형과 임피던스 보정 동작을 확인하고, 배선 기생성분을 반영한 Post-Layout 검증으로 설계 판단을 점검했습니다.
 
 이 TX 설계와 측정 전 검증은 개인 담당 범위입니다. TX가 포함된 LPDDR4X/5/5X Combo PHY의 클록·RX·전체 통합 및 최종 칩 성능은 공동 연구 범위로 구분합니다.
+
+## TX 동작 모델에서 직렬화와 보상 경로 확인
+
+병렬 데이터가 직렬 출력으로 바뀌는 과정에서는 비트 순서·클록 위상과 보상용 지연 데이터의 관계를 함께 확인해야 합니다. LPDDR Combo Controller PHY에서는 TX 경로의 Verilog 동작 모델링을 맡아, 32:1 직렬화·위상 정렬과 main/1UI 지연 데이터 기반 pre-emphasis를 다뤘습니다. [TX 모델 구조·검증 파형](lpddr-tx-modeling.md)에 기존 VCS·Questa 결과, 레벨 코드별 Eye와 4-DQ 통합 출력을 정리했습니다.
 
 ## 보드 경로를 포함해 파형 해석
 
@@ -19,10 +23,11 @@
 | 검증 단계 | 결과·조건 | 기여·해석 범위 | 관련 논문 |
 |---|---|---|---|
 | TX 단독 시뮬레이션 | 15.6 Gb/s, 0.76 pJ/bit; 내부 전원 1.05 V·드라이버 전원 0.5 V, 채널 손실 8.7 dB 조건 | 개인 TX 설계·검증, 제작 칩 실측과 구분 | [ICEIC 2025: 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746) |
+| TX Verilog 동작 모델 | 20 Gb/s·PRBS7·LPDDR5/5X 모드, 채널 손실 12.5 dB @ 10 GHz | 개인 TX 모델링; 기존 파형·코드별 Eye 관찰, 회로·칩 성능과 구분 | [제공 모델링 자료의 TX 결과](lpddr-tx-modeling.md) |
 | Combo PHY TX Eye | 14 Gb/s/pin·4-DQ 활성 조건에서 0.41 UI·65.3 mV | 개인 설계 TX가 적용된 공동 칩의 실측 | [A-SSCC 2026: Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
 | Combo PHY RX margin | TX–RX 연결·4-DQ 활성 조건에서 0.25 UI·25 mV | 공동 RX Shmoo 평가 결과; 개인 RX 회로 설계나 자동화에 따른 마진 개선량으로 해석하지 않음 | [A-SSCC 2026: Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
 
-결과는 표에 연결한 논문과 작성자 제공 연구자료를 기준으로 정리했습니다. A-SSCC 2026 Combo PHY 논문은 2026-10-07 공식 정보 기준 채택·발표 예정입니다. 두 단계는 소스·통합 구성·검증 조건이 다르므로 15.6 Gb/s와 14 Gb/s/pin을 직접적인 성능 증감으로 비교하지 않습니다. [논문 전체 제목과 근거](evidence.md)
+결과는 표에 연결한 논문과 작성자 제공 연구자료를 기준으로 정리했습니다. A-SSCC 2026 Combo PHY 논문은 2026-10-07 공식 정보 기준 채택·발표 예정입니다. 동작 모델·회로 시뮬레이션·실리콘 측정은 구성과 조건이 다르므로 각 데이터율을 직접적인 성능 증감으로 비교하지 않습니다. [논문 전체 제목과 근거](evidence.md)
 
 ## 측정 장비와 사용 목적
 

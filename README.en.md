@@ -28,7 +28,7 @@ Personal design and verification work is stated separately from joint silicon re
 
 | Research | Direct work | Joint evaluation |
 |---|---|---|
-| [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | TX circuit design and schematic / post-layout verification | Combo PHY TX eye and RX margins |
+| [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | TX circuit design / verification; [TX Verilog modeling](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md) | Combo PHY TX eye and RX margins |
 | [USB PAM-3](projects/high-speed-interface-research/docs/usb4-pam3.md) | TX logical-layer / RX CTLE models; encoder / scrambler RTL | Fabricated TX differential-signal measurements |
 
 The [LPDDR / USB research section](projects/high-speed-interface-research/) also covers PCB / HFSS channel analysis and measurement work.

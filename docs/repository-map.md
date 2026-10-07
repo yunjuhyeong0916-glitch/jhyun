@@ -16,6 +16,8 @@
 
 **성과 논문 확인:** [전체 논문 6편·공식 링크·검증 범위](publications.md) → 해당 프로젝트의 담당 역할과 결과 설명
 
+**LPDDR TX 모델링:** [32:1 직렬화·위상 정렬·pre-emphasis 구조와 기존 검증 파형](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md) → [회로·실리콘 결과와 비교 범위](../projects/high-speed-interface-research/docs/lpddr.md)
+
 **검증 그림 확인:** [LPDDR·USB Eye·Shmoo와 AWG 설정 전후](../projects/high-speed-interface-research/docs/verification-figures.md) → [출처 파일·페이지·해시](figure-sources.json)
 
 **연구 이력 탐색:** [MLSD 비교 실험](../experiments/) → [참고 코어](../reference/mlsd-cores/) → [이전 보드 자료](../archive/)

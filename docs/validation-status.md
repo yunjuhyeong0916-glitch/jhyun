@@ -11,6 +11,7 @@
 | FPGA 프로젝트·산출물 | 2026-10-07 로컬 원 프로젝트의 XPR·BD·XDC·BIT·LTX·XSA 존재와 해시, 공개 소스 29개와 원본 해시 일치 | [산출물 목록](../projects/zcu208-pam4-dsp-portfolio/reports/fpga_artifact_inventory_20261007.json), 당시 비트스트림의 빌드 입력과 공개 소스의 일치까지 증명하지 않음 |
 | JTAG 다운로드·보드 초기 동작 | [실행 가이드](../projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) 작성 | 이번 문서 추가에서 하드웨어 연결·다운로드·RFDC 초기화·ILA 캡처 미실행 |
 | LPDDR TX 회로 | 작성자 제공 자료·관련 논문의 TX 단독 시뮬레이션과 개인 설계·측정 전 검증 범위 | [LPDDR](../projects/high-speed-interface-research/docs/lpddr.md), Combo PHY 공동 실측과 구분 |
+| LPDDR TX Verilog 동작 모델 | 2026-10-07 제공 소스·문서의 TX 구조 검토, 기존 VCS·Questa 파형·코드별 Eye·4-DQ 출력 이미지 확인 | [TX 모델링과 그림](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md); 20 Gb/s는 모델 조건, 새 시뮬레이션·합성·칩 측정 미실행 |
 | LPDDR Combo PHY | A-SSCC 공식 논문 정보의 14 Gb/s/pin·4-DQ 측정 조건과 Eye·RX 마진 | 공동 칩 측정 결과이며, 전체 PHY를 개인 설계했다고 표시하지 않음 |
 | USB4 PAM-3 | TX 40 Gb/s/lane·RX 25.6 GBaud/lane 모델 검증과 제작 TX 32 Gb/s 공동 측정 | [USB PAM-3](../projects/high-speed-interface-research/docs/usb4-pam3.md), 모델·실리콘·개인 기여를 구분 |
 | 측정 장비 사용 | 이력서·측정 활동 자료와 작성자의 2026-10-07 확인: 86100D·86118A, M8195A, E3631A, MP1800A를 LPDDR·USB 모두에 사용 | [장비별 활용](../projects/high-speed-interface-research/docs/measurement-equipment.md), 제조사 사양은 개인 측정 성과와 구분 |

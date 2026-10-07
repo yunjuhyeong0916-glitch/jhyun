@@ -129,6 +129,122 @@
       "generator_sha256": "bd507ad4e1dda7736f17987c6fbd5629cae022b72c62b12b133a7b85670a5103",
       "scope": "Synthetic data, actual XSim metric-tile matrices, Python traceback; not FPGA measurement",
       "reference": "projects/zcu208-pam4-dsp-portfolio/examples/mlsd_minimal/README.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_combo_tx_model_waveform_vcs.png",
+      "asset_sha256": "66c33f0c46051520e63cfa38486386269971304fa5061ec741c12494394305d8",
+      "source_filename": "LP_Combo_Verilog Modeling_광운대(전달).pptx",
+      "source_sha256": "90f21c69b5dab7b4053b90e7c9c4ac74c5bcd291df35ad2ed5f6eb264878159e",
+      "slide_1based": 16,
+      "embedded_media": "ppt/media/image17.png",
+      "pixels": [
+        1877,
+        248
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits or slide overlay annotations",
+      "scope": "Existing VCS TX behavioral-model waveform; main, 1UI-delay, pre-emphasis and channel outputs",
+      "public_scope": "TX verification image explicitly authorized by the author; original presentation and IP source excluded",
+      "reference": "projects/high-speed-interface-research/docs/lpddr-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_combo_tx_model_waveform_questa.png",
+      "asset_sha256": "ce637e9a799805c9a882ff213429c1c0ddd83cdacc473e08a3710f1d47dd55c2",
+      "source_filename": "LP_Combo_Verilog Modeling_광운대(전달).pptx",
+      "source_sha256": "90f21c69b5dab7b4053b90e7c9c4ac74c5bcd291df35ad2ed5f6eb264878159e",
+      "slide_1based": 16,
+      "embedded_media": "ppt/media/image18.png",
+      "pixels": [
+        1877,
+        174
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits or slide overlay annotations",
+      "scope": "Existing Questa TX behavioral-model waveform; not a cross-simulator equivalence test",
+      "public_scope": "TX verification image explicitly authorized by the author; original presentation and IP source excluded",
+      "reference": "projects/high-speed-interface-research/docs/lpddr-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_combo_tx_model_eye_00.png",
+      "asset_sha256": "20d0ab258c6f505dac72647b00917484db9cc14624a08b2410e21ff22149e21b",
+      "source_filename": "LP_Combo_Verilog Modeling_광운대(전달).pptx",
+      "source_sha256": "90f21c69b5dab7b4053b90e7c9c4ac74c5bcd291df35ad2ed5f6eb264878159e",
+      "slide_1based": 17,
+      "embedded_media": "ppt/media/image21.png",
+      "pixels": [
+        1638,
+        788
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits or slide overlay annotations",
+      "scope": "Existing TX behavioral-model eye, pre-emphasis level code 00",
+      "public_scope": "TX verification image explicitly authorized by the author; original presentation and IP source excluded",
+      "reference": "projects/high-speed-interface-research/docs/lpddr-tx-modeling.md",
+      "pre_emphasis_level_code": "00"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_combo_tx_model_eye_01.png",
+      "asset_sha256": "3ab59ebf7dd8e4a5b6ea25c3be7ccc3f7ed5e7a6e8ed2c0994a60d0e0713f11b",
+      "source_filename": "LP_Combo_Verilog Modeling_광운대(전달).pptx",
+      "source_sha256": "90f21c69b5dab7b4053b90e7c9c4ac74c5bcd291df35ad2ed5f6eb264878159e",
+      "slide_1based": 17,
+      "embedded_media": "ppt/media/image20.png",
+      "pixels": [
+        1640,
+        783
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits or slide overlay annotations",
+      "scope": "Existing TX behavioral-model eye, pre-emphasis level code 01",
+      "public_scope": "TX verification image explicitly authorized by the author; original presentation and IP source excluded",
+      "reference": "projects/high-speed-interface-research/docs/lpddr-tx-modeling.md",
+      "pre_emphasis_level_code": "01"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_combo_tx_model_eye_10.png",
+      "asset_sha256": "574be72073af508183810ba3dbcdab420a783f2b99fd6dad558d8306af95e730",
+      "source_filename": "LP_Combo_Verilog Modeling_광운대(전달).pptx",
+      "source_sha256": "90f21c69b5dab7b4053b90e7c9c4ac74c5bcd291df35ad2ed5f6eb264878159e",
+      "slide_1based": 17,
+      "embedded_media": "ppt/media/image19.png",
+      "pixels": [
+        1644,
+        788
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits or slide overlay annotations",
+      "scope": "Existing TX behavioral-model eye, pre-emphasis level code 10",
+      "public_scope": "TX verification image explicitly authorized by the author; original presentation and IP source excluded",
+      "reference": "projects/high-speed-interface-research/docs/lpddr-tx-modeling.md",
+      "pre_emphasis_level_code": "10"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_combo_tx_model_eye_11.png",
+      "asset_sha256": "7084547ada44faf4c2efbfe2c217c4b39179f76ac7e60e4a85d960a09f3c70ea",
+      "source_filename": "LP_Combo_Verilog Modeling_광운대(전달).pptx",
+      "source_sha256": "90f21c69b5dab7b4053b90e7c9c4ac74c5bcd291df35ad2ed5f6eb264878159e",
+      "slide_1based": 17,
+      "embedded_media": "ppt/media/image22.png",
+      "pixels": [
+        1641,
+        788
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits or slide overlay annotations",
+      "scope": "Existing TX behavioral-model eye, pre-emphasis level code 11; slide overlay annotations excluded",
+      "public_scope": "TX verification image explicitly authorized by the author; original presentation and IP source excluded",
+      "reference": "projects/high-speed-interface-research/docs/lpddr-tx-modeling.md",
+      "pre_emphasis_level_code": "11"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_combo_tx_model_dq4_prbs.png",
+      "asset_sha256": "01b7ccf73de190b6bb35ee14a0bb6354f3459e64be898b19b9eb42c8b03e0e44",
+      "source_filename": "LP_Combo_Verilog Modeling_광운대(전달).pptx",
+      "source_sha256": "90f21c69b5dab7b4053b90e7c9c4ac74c5bcd291df35ad2ed5f6eb264878159e",
+      "slide_1based": 79,
+      "embedded_media": "ppt/media/image103.png",
+      "pixels": [
+        728,
+        351
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits or slide overlay annotations",
+      "scope": "Existing shared Combo PHY integration-model write waveforms; top to bottom DQ0, DQ1, DQ2, DQ3; not RX BER evidence",
+      "public_scope": "TX verification image explicitly authorized by the author; original presentation and IP source excluded",
+      "reference": "projects/high-speed-interface-research/docs/lpddr-tx-modeling.md"
     }
   ]
 }
