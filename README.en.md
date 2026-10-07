@@ -1,14 +1,10 @@
 # Juhyeong Yun | Hardware Design & Verification
 
-**High-speed interfaces · DSP · RTL/FPGA**
+I'm Juhyeong Yun, a researcher working on high-speed interface circuits and DSP. My current research compares DS-SBM and DP-SMM PAM4 receivers, focusing on how retaining alternative paths affects detection performance.
 
-Design and verification of PAM4 transceiver DSP, low-voltage LPDDR transmitters and USB PAM-3 interfaces. Work spans circuits, behavioral models and RTL, with FPGA and silicon evaluation.
+I focus on whether the intended behavior of a design is preserved in hardware. I compare model and RTL decisions and evaluate system behavior through FPGA implementation and board measurements.
 
 [DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB](#lpddr--usb-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [GitHub profile](https://github.com/yunjuhyeong0916-glitch) · [한국어](README.md)
-
-[![ZCU208, XM655 and ISI-board PAM4 measurement setup and channel response](projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_isi_measurement_setup.png)](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
-
-PAM4 transceiver measurement setup using the ZCU208 RFSoC and an ISI board. [A-SSCC measurement results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 ## DSP transceiver research
 

@@ -1,14 +1,10 @@
 # 윤주형 | HW 설계·검증
 
-**고속 인터페이스 · DSP · RTL/FPGA**
+안녕하세요. 고속 인터페이스의 회로와 DSP를 설계·검증하는 윤주형입니다. 현재는 PAM4 수신기의 DS-SBM과 DP-SMM을 비교하며, 경로 후보를 보존하는 방식이 검출 성능에 미치는 영향을 연구하고 있습니다.
 
-PAM4 송수신 DSP, LPDDR 저전압 TX와 USB PAM-3 인터페이스를 설계·검증했습니다. 회로·동작 모델·RTL 구현과 FPGA·실리콘 평가를 수행했습니다.
+설계한 구조가 하드웨어에서도 의도대로 동작하는지 확인하는 데 중점을 둡니다. 모델과 RTL의 판정 결과를 대조하고, FPGA 구현과 보드 측정으로 검증을 이어 왔습니다.
 
 [DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB](#lpddrusb-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch) · [English](README.en.md)
-
-[![ZCU208·XM655·ISI 보드의 PAM4 송수신 측정 구성과 채널 응답](projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_isi_measurement_setup.png)](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
-
-ZCU208 RFSoC와 ISI 보드를 연결한 PAM4 송수신 실측 환경. [A-SSCC 측정 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 ## DSP 기반 송수신기 연구
 
