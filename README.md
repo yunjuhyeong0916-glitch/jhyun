@@ -33,7 +33,7 @@ ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를
 | 연구 | 담당 설계·검증 | 제작 칩 측정 결과 |
 |---|---|---|
 | [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX 회로 설계·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델링](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), [PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) | 14 Gb/s/pin Combo PHY, TX Eye 0.41 UI·65.3 mV, RX 마진 0.25 UI·25 mV |
-| [USB PAM-3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX 모델링·RTL 검증](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE 모델링](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), 차동 신호 평가 | 28-nm·32-Gb/s TX, 150-preset 4-tap FFE |
+| [USB PAM-3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX 모델링·RTL 검증](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE 모델링](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [차동 PAM-3 측정·FFE 검증](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | 28-nm·32-Gb/s TX, 150-preset 4-tap FFE |
 
 [PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR·USB 프로젝트](projects/high-speed-interface-research/)
 
@@ -41,7 +41,7 @@ ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를
 
 전압·타이밍에 따른 동작 마진을 확인하기 위해 BERT·전원공급기·I2C 제어를 연동했습니다. 오류 조기 종료와 경계 탐색으로 Shmoo 측정을 자동화하고, Eye 관측과 CSV 수집으로 결과를 정리했습니다.
 
-[장비·자동화](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye·Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)
+[차동 PAM-3 측정·FFE 검증](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) · [장비·자동화](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye·Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)
 
 [A-SSCC 측정·구현](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) · [Journal RTL 검증·구현](projects/dp-smm-journal/docs/validation.md) · [학위논문 비교 결과](projects/pam4-mlsd-thesis/docs/validation.md)
 

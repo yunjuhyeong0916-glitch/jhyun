@@ -24,5 +24,5 @@
 - **Journal · DP-SMM (진행 중):** [검출기 구조](../projects/dp-smm-journal/docs/architecture.md), [RTL 검증·FPGA 구현](../projects/dp-smm-journal/docs/validation.md).
 - **A-SSCC · DS-SBM:** [설계 구조](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md), [측정·구현 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md).
 - **LPDDR:** [TX 설계·회로 검증과 제작 칩 측정](../projects/high-speed-interface-research/docs/lpddr.md#검증-결과와-조건).
-- **USB PAM-3:** [TX·RX 모델과 제작 TX 결과](../projects/high-speed-interface-research/docs/usb4-pam3.md#모델과-실리콘-결과의-구분).
+- **USB PAM-3:** [TX·RX 모델과 제작 TX 결과](../projects/high-speed-interface-research/docs/usb4-pam3.md#모델과-실리콘-결과의-구분), [차동 PAM-3 측정·채널별 FFE 검증](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md).
 - **계측:** [장비별 역할·자동화·PCB·채널 분석](../projects/high-speed-interface-research/docs/measurement-equipment.md), [담당 역할·검증 자료](../projects/high-speed-interface-research/docs/evidence.md).

@@ -19,6 +19,8 @@ LPDDR·USB 평가에서 파형 관측, 입력 공급, 전원 설정과 오류 �
 
 **장비 자료:** [DCA 구성](https://www.keysight.com/mx/en/assets/7018-04520/configuration-guides-archived/5992-0038.pdf) · [M8195A](https://www.keysight.com/us/en/assets/9018-04320/user-manuals/9018-04320.pdf) · [MP1800A](https://www.anritsu.com/en-au/test-measurement/products/mp1800a) · [M8049A](https://www.keysight.com/us/en/product/M8049A/isi-channel-boards.html) · [E3631A](https://www.keysight.com/us/en/support/E3631A/80w-triple-output-power-supply-6v-5a--25v-1a.html?rd=1)
 
+[차동 PAM-3의 측정 구성·FFE 전후 Eye·BER bathtub](pam3-differential-measurement.md)
+
 ## 입력 공급·파형 관측·오류 평가의 관계
 
 ```mermaid

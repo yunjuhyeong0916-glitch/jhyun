@@ -26,6 +26,7 @@ Combo PHY 논문: 채택·발표 예정. [전체 논문](../../../docs/publicati
 | USB 담당 역할 | TX 논리계층·RX CTLE 모델, 11B7S·스크램블러 RTL 합성·P&R·전기 계층 연결 검증, PCB·채널 분석과 차동 PAM-3 측정 |
 | USB TX 모델링 과정 | [TX 논리 RTL·XMODEL 통합·Serializer 검증](usb-tx-modeling.md) 담당. 기대값 계산, 논리 복원·우회 제어와 FFE·채널 연결, 구현 후 VCS·POSIM 비교 |
 | USB RX CTLE 모델링 | [CTLE 동작점·R/C 제어·입출력 Eye](usb-rx-ctle-modeling.md)와 Sampler 연결 조건 확인. CTLE 모델링·RX 통합 검증 |
+| USB 차동 PAM-3 측정 | [측정 구성·채널별 FFE 설정·상하단 Eye·BER bathtub](pam3-differential-measurement.md). 32-Gb/s 제작 TX의 채널별 측정 결과 |
 | 공통 측정 장비 | 86100D·86118A, M8195A, E3631A, MP1800A를 LPDDR·USB 양쪽 평가에 사용 |
 | PCB·HFSS 사진과 해석 | [배치·배선·HFSS 모델·손실·제작·계측 사진](pcb-hfss-verification.md): LPDDR 보드 설계·분석과 USB TX 보드 검토 |
 | RX 자동화 | 2025.03~05 평가의 I2C·전원·BERT 연동, AWG 파일·샘플레이트 수정, 오류 조기 종료·경계 탐색·CSV 기록 |

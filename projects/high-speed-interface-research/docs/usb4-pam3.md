@@ -22,9 +22,13 @@ CTLE의 R·C와 바이어스를 조정해 채널 보상과 PAM-3 중간 레벨 �
 
 11B7S 인코더·스크램블러 RTL을 합성·P&R하고 PAM-3 TX의 전기 계층에 연결했습니다. 구현 블록은 인코더·스크램블러이며, RS-FEC·precoder는 미포함입니다.
 
-## 채널별 FFE 효과를 차동 신호로 확인
+<a id="채널별-ffe-효과를-차동-신호로-확인"></a>
+
+## 차동 PAM-3 측정과 채널별 FFE 효과 검증
 
 제작 TX의 평가는 채널 조건과 FFE 설정을 함께 바꾸며 수행했습니다. Keysight 86100D·86118A로 차동 PAM-3 신호를 측정하고 상단·하단 Eye의 폭과 높이를 확인했습니다. 제작 칩에서 32 Gb/s 동작과 채널별 FFE 효과를 확인했습니다.
+
+CH#3의 손실 17.3 dB @ 10.24 GHz·PRBS15 조건에서, FFE 적용 후 상단 Eye는 11.19 ps·21.16 mV, 하단은 11.67 ps·19.80 mV입니다. [측정 구성·채널별 FFE 설정·Eye 비교표](pam3-differential-measurement.md)
 
 입력·오류·전원 제어에는 M8195A AWG, MP1800A BERT와 E3631A를 활용했습니다. [장비·자동화](measurement-equipment.md)
 

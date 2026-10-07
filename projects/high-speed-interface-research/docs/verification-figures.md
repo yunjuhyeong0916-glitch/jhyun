@@ -30,6 +30,8 @@
 
 **제작 TX 측정 결과:** 왼쪽 FFE off, 오른쪽 FFE on. 동일 CH#3·PRBS15의 상·하단 Eye 비교. [모델링·RTL 검증과 측정 역할](usb4-pam3.md)
 
+FFE 적용 후 상단 Eye는 **11.19 ps·21.16 mV**, 하단 Eye는 **11.67 ps·19.80 mV**입니다. [측정 구성·PRBS15/31 비교·채널별 FFE 설정](pam3-differential-measurement.md)
+
 ## AWG 속도 변경: 설정값과 실제 입력을 맞추기
 
 | 샘플레이트 연동 수정 전 | 샘플레이트 연동 수정 후 |

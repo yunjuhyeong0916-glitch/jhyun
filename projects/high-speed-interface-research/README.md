@@ -9,13 +9,14 @@ LPDDR 저전압 TX를 설계하고 Schematic·Post-Layout 검증을 수행했습
 | 프로젝트 | 담당 설계·검증 | 결과 |
 |---|---|---|
 | [LPDDR](docs/lpddr.md) | [TX 회로](docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델](docs/lpddr-tx-modeling.md), [PCB·HFSS](docs/pcb-hfss-verification.md), 제작 칩 측정 참여 | TX 시뮬레이션 15.6 Gb/s·0.76 pJ/bit, Combo PHY 실측 14 Gb/s/pin |
-| [USB PAM-3](docs/usb4-pam3.md) | [TX 모델·RTL·Serializer](docs/usb-tx-modeling.md), [RX CTLE 모델](docs/usb-rx-ctle-modeling.md), [PCB·채널 분석](docs/pcb-hfss-verification.md)·차동 측정 | TX 모델 40 Gb/s/lane, RX 모델 25.6 GBaud/lane, 제작 TX 실측 32 Gb/s |
+| [USB PAM-3](docs/usb4-pam3.md) | [TX 모델·RTL·Serializer](docs/usb-tx-modeling.md), [RX CTLE 모델](docs/usb-rx-ctle-modeling.md), [PCB·채널 분석](docs/pcb-hfss-verification.md), [차동 PAM-3 측정](docs/pam3-differential-measurement.md) | TX 모델 40 Gb/s/lane, RX 모델 25.6 GBaud/lane, 제작 TX 실측 32 Gb/s |
 
 ## PCB·계측
 
 PCB 배치·배선과 HFSS S-parameter 분석을 수행하고, COB 실장 이후의 출력 Eye를 평가했습니다. 86100D·86118A로 Eye를 관측하고, M8195A·MP1800A·E3631A·I2C를 연동해 입력·전압·타이밍 조건과 오류 집계를 제어했습니다.
 
 - [PCB·HFSS 설계·해석](docs/pcb-hfss-verification.md)
+- [차동 PAM-3 측정·채널별 FFE 효과](docs/pam3-differential-measurement.md)
 - [AWG 샘플레이트 연동·Shmoo 경계 탐색](docs/measurement-equipment.md)
 - [TX Eye·RX Shmoo](docs/verification-figures.md)
 
