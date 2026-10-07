@@ -10,7 +10,7 @@
 
 이 TX 설계와 측정 전 검증은 개인 담당 범위입니다. TX가 포함된 LPDDR4X/5/5X Combo PHY의 클록·RX·전체 통합 및 최종 칩 성능은 공동 연구 범위로 구분합니다.
 
-[TX 회로 설계·검증 과정](lpddr-tx-circuit-verification.md)에서는 과제 보고서와 시험 제출자료를 바탕으로 main/1-UI 지연 경로의 구조, FFE 적용 전후 Eye, LVS·PEX 이후 PRBS 출력 주기와 두 전원 레일의 에너지 계산을 설명합니다. 구조도·검증 그림 6개에 출처와 조건을 붙였으며, 시험자료의 시뮬레이션 시연과 실제 칩 측정을 구분했습니다.
+[TX 회로 설계·검증 과정](lpddr-tx-circuit-verification.md)에서는 main/1-UI 지연 경로의 구조, FFE 적용 전후 Eye, LVS·PEX 이후 PRBS 출력 주기와 두 전원 레일의 에너지 계산을 설명합니다. 각 그림에 시뮬레이션 조건을 표시했습니다.
 
 ## TX 동작 모델에서 직렬화와 보상 경로 확인
 
@@ -31,7 +31,7 @@
 | Combo PHY TX Eye | 14 Gb/s/pin·4-DQ 활성 조건에서 0.41 UI·65.3 mV | 개인 설계 TX가 적용된 공동 칩의 실측 | [A-SSCC 2026: Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
 | Combo PHY RX margin | TX–RX 연결·4-DQ 활성 조건에서 0.25 UI·25 mV | 공동 RX Shmoo 평가 결과; 개인 RX 회로 설계나 자동화에 따른 마진 개선량으로 해석하지 않음 | [A-SSCC 2026: Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
 
-결과는 표에 연결한 논문과 작성자 제공 연구자료를 기준으로 정리했습니다. A-SSCC 2026 Combo PHY 논문은 2026-10-07 공식 정보 기준 채택·발표 예정입니다. 동작 모델·회로 시뮬레이션·실리콘 측정은 구성과 조건이 다르므로 각 데이터율을 직접적인 성능 증감으로 비교하지 않습니다. [논문 전체 제목과 근거](evidence.md)
+A-SSCC 2026 Combo PHY 논문은 2026-10-07 공식 정보 기준 채택·발표 예정입니다. 동작 모델·회로 시뮬레이션·실리콘 측정은 구성과 조건이 다르므로 각 데이터율을 직접적인 성능 증감으로 비교하지 않습니다. [논문 전체 제목과 근거](evidence.md)
 
 ## 측정 장비와 사용 목적
 

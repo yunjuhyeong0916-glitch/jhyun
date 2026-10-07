@@ -30,7 +30,7 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 
 ![A-SSCC 논문의 DS-SBM RS-MLSD 구조](../assets/mlsd_paper_architecture.png)
 
-출처: 작성자 제공 A-SSCC 2026 논문, p. 2 Fig. 4. **논문 구조**의 설명입니다. 공개 RTL 스냅샷의 타일 구성과 구분합니다. [공식 논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+출처: A-SSCC 2026 논문, p. 2 Fig. 4. **논문 구조**의 설명입니다. 공개 RTL 스냅샷의 타일 구성과 구분합니다. [공식 논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 ## 자원·정확도·지연을 함께 판단
 

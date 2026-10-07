@@ -42,4 +42,4 @@
 
 [An FPGA-Verified DAC/ADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)는 DS-SBM RS-MLSD와 ZCU208 RFSoC 기반 시스템 검증을 다룬 관련 연구 논문입니다. A-SSCC 2026 공식 정보에서 채택·발표 예정 상태를 확인했습니다(2026-10-07).
 
-논문의 구조·시스템 측정 결과와 이 폴더의 `DSP_based_TRX_32lane_PAM4_4GS_OPT` 소스 스냅샷은 버전과 검증 근거를 각각 확인해야 합니다. 공개본에서 다시 실행한 항목은 FIR 테스트 3종이며, 논문 전체 검출기·시스템 결과와의 대응은 별도 확인 범위입니다. [공개본 검증 근거](validation.md) · [전체 성과 논문](../../../docs/publications.md)
+논문의 구조·시스템 측정 결과와 이 폴더의 `DSP_based_TRX_32lane_PAM4_4GS_OPT` 소스 스냅샷은 버전과 검증 근거를 각각 확인해야 합니다. 공개본에서는 FIR 테스트 3종, MLSD 메트릭 예제와 전체 어댑터 테스트를 실행했습니다. FIR와 메트릭 검사는 통과했으며, 전체 어댑터에는 출력 불일치가 남아 있습니다. [공개본 검증 근거](validation.md) · [전체 성과 논문](../../../docs/publications.md)

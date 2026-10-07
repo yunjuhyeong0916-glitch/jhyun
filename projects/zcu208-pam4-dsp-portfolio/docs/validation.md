@@ -62,10 +62,12 @@ Windows·Vivado XSim 2022.2에서 새 테스트벤치로 원본 RTL을 실행했
 
 [A-SSCC 2026 관련 논문 공식 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)에는 DS-SBM RS-MLSD를 포함한 PAM4 송수신기의 ZCU208 RFSoC 시스템 검증이 보고되어 있습니다. 논문의 결과는 해당 논문 버전과 측정 조건에 연결됩니다. 이 폴더의 FIR 재실행 결과·기존 구현 보고서와의 관계는 [논문과 공개 소스의 관계](architecture.md#관련-논문과-공개-소스의-관계)에서 확인할 수 있습니다.
 
+논문 버전의 상세 측정자료는 추가할 예정입니다. 아래 그림은 논문에 보고된 시스템 측정 결과입니다.
+
 ![논문에 보고된 RFSoC 시스템의 PRBS7·PRBS15 BER 컨투어](../assets/mlsd_paper_measured_ber_contours.png)
 
-**조건·출처:** 작성자 제공 A-SSCC 2026 논문 p. 2 Fig. 5의 BER contour 영역. 논문에 보고된 41-dB 손실 조건에서 PRBS7 BER < 10⁻⁷, PRBS15 BER < 2 × 10⁻⁶의 결과입니다. 논문 버전의 시스템 측정이며, 위 합성 벡터 검사나 공개 어댑터의 새 보드 실행 결과와 구분합니다. [공식 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [그림 출처·해시](../../../docs/figure-sources.json)
+**조건·관련 논문:** A-SSCC 2026 논문 p. 2 Fig. 5의 BER contour 영역. 논문에 보고된 41-dB 손실 조건에서 PRBS7 BER < 10⁻⁷, PRBS15 BER < 2 × 10⁻⁶의 결과입니다. 논문 버전의 시스템 측정이며, 위 합성 벡터 검사나 공개 어댑터의 새 보드 실행 결과와 구분합니다. [공식 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
-## 이 자료에서 주장하지 않는 결과
+## 공개 RTL의 검증 범위
 
-최종 실측 BER, 무오류 수신 시간, 전체 MLSD의 엄밀한 알고리즘 동등성, ASIC PPA 및 물리설계 signoff는 이 공개 자료로 입증하지 않습니다. 기존 ADC replay 후보별 score도 최종 BER 성과에 포함하지 않았습니다.
+공개 RTL 스냅샷으로 논문의 보드 BER와 무오류 수신 시간을 재현한 결과는 아직 포함하지 않았습니다. 이는 위 논문 버전의 시스템 측정과 별개 항목입니다. 전체 MLSD의 엄밀한 알고리즘 동등성, ASIC PPA와 물리설계 signoff도 공개본의 검증 범위에 포함되지 않습니다. 기존 ADC replay 후보별 score는 최종 BER와 구분합니다.

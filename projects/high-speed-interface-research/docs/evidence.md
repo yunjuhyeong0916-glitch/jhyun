@@ -2,7 +2,7 @@
 
 [파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [전체 성과 논문 6편](../../../docs/publications.md)
 
-정리 기준일: **2026-10-07**. 개인 담당 역할은 작성자 제공 이력서·연구소개서·측정 활동 자료와 작성자 설명을 기준으로 정리했습니다. 논문은 연구 구성과 결과의 근거이며, 공동저자라는 사실만으로 모든 블록을 개인 설계한 것으로 표시하지 않습니다.
+논문 정보 기준일: **2026-10-07**. 각 논문의 연구 결과와 개인 담당 역할을 아래에 정리했습니다. 공동 칩의 성능은 공동 연구 결과로 표시합니다.
 
 ## 논문별 결과의 범위
 
@@ -14,25 +14,25 @@
 | [SystemVerilog-Based Modeling and Verification of 25.6-GBaud/Lane PAM-3 Receiver](https://doi.org/10.1109/SMACD65553.2025.11092233) | RX 모델 구성과 25.6 GBaud/lane 모델·시뮬레이션 |
 | [A 0.0549-pJ/bit/pin/dB PAM-3 Transmitter With Reconfigurable 150-Preset Four-Tap FFE for Various Channel Environments](https://doi.org/10.1109/TVLSI.2026.3701343) | 28-nm 제작 PAM-3 TX의 32 Gb/s·150-preset 4-tap FFE 공동 실리콘 연구 |
 
-DOI 4건의 제목과 저자 정보는 2026-10-07 Crossref DOI 등록정보와 대조했습니다. Combo PHY 논문은 같은 날 A-SSCC 공식 논문 정보에서 제목·측정 조건을 확인했습니다. 모델·회로·실리콘 결과는 작성자 제공 논문 및 연구자료의 해당 범위를 따릅니다.
+DOI 4건의 제목과 저자 정보는 2026-10-07 Crossref DOI 등록정보와 대조했습니다. Combo PHY 논문은 같은 날 A-SSCC 공식 논문 정보에서 제목·측정 조건을 확인했습니다. 각 결과는 해당 논문과 그림에 표시한 모델·회로·실리콘 검증 조건에 따릅니다.
 
 Combo PHY 논문은 공식 정보 기준 채택·발표 예정입니다. DSP·MLSD 관련 A-SSCC 논문을 포함한 전체 목록은 [연구 성과 논문](../../../docs/publications.md)에서 확인할 수 있습니다.
 
-## 담당 역할과 장비 사용의 근거
+## 담당 역할과 검증 자료
 
-| 항목 | 확인한 자료·설명 |
+| 항목 | 담당 역할·확인할 내용 |
 |---|---|
-| LPDDR 개인 기여 | 작성자 제공 자료의 적용 TX 직접 설계, 해당 TX의 Schematic·Post-Layout 검증 전담, 측정용 PCB·HFSS 분석과 공동 칩 평가 |
-| LPDDR TX 회로 검증 자료 | `LPDDR 과제결과 보고서_241004_v3.pptx`·`공인인증관련정리.pptx`·`1104_공인인증서_추가자료.pptx`의 87장 검토. [TX 구조·FFE·PEX 이후 검증](lpddr-tx-circuit-verification.md)에 원본 그림 6개와 PRBS7 속도·두 전원 레일의 에너지 계산·면적 갱신값 수록. 시험자료의 시뮬레이션 시연과 인증서 발급·규격 적합성 판정은 구분; [자료별 선별 기록](../reports/lpddr_tx_circuit_selection_20261007.json) |
-| LPDDR TX 동작 모델 | 2026-10-07 제공된 Controller PHY 모델 소스·파일리스트와 `LP_Combo_Verilog Modeling_광운대(전달)` PDF·PPTX; 작성자가 TX 담당이라고 확인. 구조는 slides 9–14, TX 결과는 15–17·79에 근거해 [별도 정리](lpddr-tx-modeling.md) |
+| LPDDR 개인 기여 | 적용 TX 회로 설계와 Schematic·Post-Layout 검증 전담. 측정용 PCB·HFSS 분석과 공동 칩 평가 참여 |
+| LPDDR TX 회로 검증 | [TX 구조·FFE·PEX 이후 검증](lpddr-tx-circuit-verification.md): FFE off/on Eye, LVS·PEX 기록, PRBS7 출력 주기, 두 전원 레일의 에너지 계산과 버전별 면적. 시험 제출용 시뮬레이션이며, 인증서 발급·규격 적합성 판정과 구분 |
+| LPDDR TX 동작 모델 | [32:1 직렬화·위상 정렬·pre-emphasis](lpddr-tx-modeling.md) 모델링 담당. 20-Gb/s 모델 조건의 VCS·Questa 파형, 코드별 Eye와 4-DQ 통합 출력 |
 | USB 개인 기여 | TX 논리계층·RX CTLE 모델, 11B7S·스크램블러 RTL 합성·P&R·전기 계층 연결 검증, PCB·채널 분석과 차동 PAM-3 측정 |
-| USB TX 모델링 과정 | 세 폴더의 USB 관련 PPTX 126개·1,508장. 논리 복원·우회 제어·Serializer·FFE·채널·VCS/POSIM의 구조도·계산표·기존 파형 12개를 [선별 정리](usb-tx-modeling.md). TX 논리 RTL·XMODEL 통합·Serializer 검증의 직접 수행 범위는 작성자의 2026-10-07 확인을 반영; [자료별 선별 기록](../reports/usb_tx_modeling_selection_20261007.json)에 파일 해시·사용 슬라이드·범위 수록 |
-| USB RX CTLE 모델링 | CTLE 관련 자료 11개·130장 중 DC·AC·회로·Eye 그림 7개를 [선별 정리](usb-rx-ctle-modeling.md). `1129_진행상황.pptx` slide 10의 CTLE 역할 분담과 `250119`·`250203`·`250205` 개발·통합 기록에 근거. 단품 CTLE 결과와 공동 RX·DFE·CDR 결과는 구분; [선별 기록](../reports/usb_rx_ctle_selection_20261007.json)에 파일·슬라이드·해시 수록 |
-| 공통 측정 장비 | 제공 이력서·측정 자료의 86100D·86118A, M8195A, E3631A, MP1800A; 2026-10-07 작성자가 LPDDR·USB 양쪽에서 사용했다고 확인 |
-| PCB·HFSS 사진과 해석 | 작성자의 `윤주형_연구 포트폴리오.pptx` slide 6과 공동 `251002_USB_TX_PCB.pptx` slides 2–3에서 원본 이미지 10개 선별. [배치·배선·HFSS 모델·손실·제작·계측 사진](pcb-hfss-verification.md)에 개인 설계·분석과 공동 USB 보드 검토를 구분해 설명; 공통 작업 절차 자료를 포함해 14개·166장 검토. [선별 기록](../reports/pcb_hfss_selection_20261007.json)에 출처·조건·범위 수록 |
-| RX 자동화 | 2025.03~05 측정 활동 자료의 I2C·전원·BERT 연동, AWG 파일·샘플레이트 수정, 오류 조기 종료·경계 탐색·CSV 기록 |
-| 채널보드·실시간 스코프 | 제공 자료의 M8049A-003, DPO5204B·DSA72004B 등 사용 이력. 실험별 선로·스코프·설정을 하나로 합치지 않음 |
+| USB TX 모델링 과정 | [TX 논리 RTL·XMODEL 통합·Serializer 검증](usb-tx-modeling.md) 담당. 기대값 계산, 논리 복원·우회 제어와 FFE·채널 연결, 구현 후 VCS·POSIM 비교 |
+| USB RX CTLE 모델링 | [CTLE 동작점·R/C 제어·입출력 Eye](usb-rx-ctle-modeling.md)와 Sampler 연결 조건 확인. 단품 CTLE와 공동 RX·DFE·CDR 결과는 구분 |
+| 공통 측정 장비 | 86100D·86118A, M8195A, E3631A, MP1800A를 LPDDR·USB 양쪽 평가에 사용 |
+| PCB·HFSS 사진과 해석 | [배치·배선·HFSS 모델·손실·제작·계측 사진](pcb-hfss-verification.md): 개인 LPDDR 보드 설계·분석과 공동 USB 보드 검토 |
+| RX 자동화 | 2025.03~05 평가의 I2C·전원·BERT 연동, AWG 파일·샘플레이트 수정, 오류 조기 종료·경계 탐색·CSV 기록 |
+| 채널보드·실시간 스코프 | M8049A-003, DPO5204B·DSA72004B 등 사용. 실험별 선로·스코프·설정은 별도로 구분 |
 
 측정 자동화 자료에는 루프백과 실제 칩 적용 단계가 모두 있습니다. 루프백의 오류 미검출을 칩 BER 성과로 바꾸지 않고, Shmoo 미측정 구간도 무오류 결과와 구분했습니다. 제조사 자료는 [장비 문서](measurement-equipment.md)에 연결했으며, 제조사 기능·최대 사양을 작성자의 실제 수행 성과로 사용하지 않습니다.
 
-이 파트는 기존 연구를 설명하는 문서입니다. 이번 정리에서 회로·동작 모델 시뮬레이션, 장비 제어 코드, 실리콘 측정이나 원시 데이터 분석을 재실행하지 않았습니다. LPDDR IP는 작성자가 공개를 허용한 담당 범위·구조 설명과 TX 검증 이미지만 포함했습니다. IP 소스·파일리스트·원본 문서와 개인정보가 포함된 이력서는 이 저장소에 업로드하지 않았습니다. USB TX도 설명·선별 이미지와 출처 기록만 추가했으며, 원본 PPTX·소스 코드·PDK 경로는 업로드하지 않았습니다.
+공개 범위는 담당 역할·구조 설명과 검증 이미지입니다. IP 소스·파일리스트·PDK 경로는 포함하지 않습니다. 문서 검토와 실제 시뮬레이션·측정의 실행 상태는 [검증 상태](../../../docs/validation-status.md)에 정리했습니다.

@@ -18,15 +18,15 @@
 
 **LPDDR TX 모델링:** [32:1 직렬화·위상 정렬·pre-emphasis 구조와 기존 검증 파형](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md) → [회로·실리콘 결과와 비교 범위](../projects/high-speed-interface-research/docs/lpddr.md)
 
-**LPDDR TX 회로 검증:** [회로 구조·FFE 적용 전후 Eye·LVS/PEX·PRBS7 속도·두 전원 레일의 에너지](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) → [과제·시험 제출자료별 선별 기록](../projects/high-speed-interface-research/reports/lpddr_tx_circuit_selection_20261007.json)
+**LPDDR TX 회로 검증:** [회로 구조·FFE 적용 전후 Eye·LVS/PEX·PRBS7 속도·두 전원 레일의 에너지](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
-**USB TX 모델링:** [인코딩·기대값·XMODEL 복원·우회 경로·Serializer·FFE·채널·VCS/POSIM 비교](../projects/high-speed-interface-research/docs/usb-tx-modeling.md) → [자료별 선별 기록](../projects/high-speed-interface-research/reports/usb_tx_modeling_selection_20261007.json)
+**USB TX 모델링:** [인코딩·기대값·XMODEL 복원·우회 경로·Serializer·FFE·채널·VCS/POSIM 비교](../projects/high-speed-interface-research/docs/usb-tx-modeling.md)
 
-**USB RX CTLE:** [동작점·R/C AC 응답·중간 레벨 보상·Sampler 연결](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) → [자료별 선별 기록](../projects/high-speed-interface-research/reports/usb_rx_ctle_selection_20261007.json)
+**USB RX CTLE:** [동작점·R/C AC 응답·중간 레벨 보상·Sampler 연결](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md)
 
-**검증 그림 확인:** [LPDDR·USB Eye·Shmoo와 AWG 설정 전후](../projects/high-speed-interface-research/docs/verification-figures.md) → [출처 파일·페이지·해시](figure-sources.json)
+**검증 그림 확인:** [LPDDR·USB Eye·Shmoo와 AWG 설정 전후](../projects/high-speed-interface-research/docs/verification-figures.md)
 
-**PCB·HFSS 사진과 해석:** [PCB 배치·제작·본딩·HFSS 모델·전달 특성·계측 환경](../projects/high-speed-interface-research/docs/pcb-hfss-verification.md) → [자료별 선별 기록](../projects/high-speed-interface-research/reports/pcb_hfss_selection_20261007.json)
+**PCB·HFSS 사진과 해석:** [PCB 배치·제작·본딩·HFSS 모델·전달 특성·계측 환경](../projects/high-speed-interface-research/docs/pcb-hfss-verification.md)
 
 **연구 이력 탐색:** [MLSD 비교 실험](../experiments/) → [참고 코어](../reference/mlsd-cores/) → [이전 보드 자료](../archive/)
 
