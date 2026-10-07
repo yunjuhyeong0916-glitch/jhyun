@@ -8,19 +8,19 @@ PAM4 송수신 DSP, LPDDR 저전압 TX와 USB PAM-3 인터페이스를 설계·�
 
 ## DSP 기반 송수신기 연구
 
-RFSoC 기반 송수신 시스템의 채널 보상·데이터 복원을 구현했고, 학위논문 연구에서는 MLSD RTL의 단계별 정합성을 추가 검증하고 있습니다.
+A-SSCC 연구에서는 DS-SBM RS-MLSD를 RFSoC 송수신 시스템에 구현했습니다. 학위논문에서는 DP-SMM의 메트릭 계산과 경로 복원을 검증하고 있습니다.
 
-### A-SSCC 2026 | ZCU208 PAM4 송수신 DSP
+### A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP
 
-**32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·reduced-state MLSD를 RFSoC에 통합했습니다. Vivado·Vitis로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 ISI 보드를 거쳐 ADC로 수신 신호를 캡처했습니다.
+ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를 통합했습니다. Vivado·Vitis로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 ISI 보드를 거쳐 ADC로 수신 신호를 캡처했습니다.
 
 [A-SSCC 프로젝트](projects/zcu208-pam4-dsp-portfolio/) · [설계 판단](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
-### 학위논문 연구 | PAM4 MLSD RTL 설계·검증
+### 학위논문 연구 | DP-SMM 설계·검증
 
-잔류 ISI를 처리하는 MLSD의 메트릭 계산과 전체 경로 복원을 나누어 검증하는 진행 중인 연구입니다.
+잔류 ISI를 처리하는 DP-SMM의 메트릭 행렬 계산·결합과 전체 경로 복원을 기준 모델과 비교하는 연구입니다.
 
-[학위논문 프로젝트](projects/pam4-mlsd-thesis/) · [구조·검증 범위](projects/pam4-mlsd-thesis/docs/architecture.md) · [10월 검증 결과](projects/pam4-mlsd-thesis/docs/validation.md)
+[DP-SMM 학위논문 프로젝트](projects/pam4-mlsd-thesis/) · [구조·검증 범위](projects/pam4-mlsd-thesis/docs/architecture.md) · [DP-SMM 검증 결과](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ## LPDDR·USB 연구
 

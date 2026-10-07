@@ -1,4 +1,4 @@
-# MLSD를 병렬 RTL로 구현하기 위한 설계 판단
+# DS-SBM을 병렬 RTL로 구현하기 위한 설계 판단
 
 [프로젝트 요약](../README.md) · [설계 구조](architecture.md) · [검증 결과](validation.md) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
@@ -10,7 +10,7 @@
 
 $$\hat y_k = g_0 a_k + g_1 a_{k-1} + g_2 a_{k-2},\qquad BM_k = d(y_k,\hat y_k).$$
 
-여기서 계수는 검출기 입력에서의 유효 응답을 설명합니다. 물리 채널의 손실 수치와는 다른 값입니다. 거리 함수와 고정소수점 표현도 구현 조건의 일부입니다. L1 메트릭을 사용한 10월 RTL 검사는 [학위논문 검증 결과](../../pam4-mlsd-thesis/docs/validation.md)에 정리했습니다.
+여기서 계수는 검출기 입력에서의 유효 응답을 설명합니다. 물리 채널의 손실 수치와는 다른 값입니다. 거리 함수와 고정소수점 표현도 구현 조건의 일부입니다.
 
 ## 상태 수를 줄이되 유력한 후보를 보존
 
@@ -42,8 +42,8 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 
 **논문 detector 비교:** RS-ACS 대비 LUT 35.7%·FF 22.5% 감소. [시스템 구조](architecture.md)
 
-## 학위논문 프로젝트의 기준 RTL
+## DP-SMM 학위논문 연구
 
-2026-09-09 RTL의 구간·후보 유지 방식과 10월 추가 검증은 [학위논문 프로젝트](../../pam4-mlsd-thesis/)에서 다룹니다. [논문·RTL 구조 비교](../../pam4-mlsd-thesis/docs/architecture.md)
+DP-SMM의 메트릭 행렬 결합과 경로 복원 검증은 [학위논문 프로젝트](../../pam4-mlsd-thesis/)에서 다룹니다. [DP-SMM 구조·검증 범위](../../pam4-mlsd-thesis/docs/architecture.md)
 
 [RTL 구조](architecture.md) · [검증 결과](validation.md)

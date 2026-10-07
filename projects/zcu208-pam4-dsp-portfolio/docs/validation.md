@@ -1,4 +1,4 @@
-# A-SSCC PAM4 DSP 측정·검증 결과
+# A-SSCC DS-SBM PAM4 DSP 측정·검증 결과
 
 [프로젝트](../README.md) · [설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [논문](../../../docs/publications.md)
 
@@ -50,7 +50,7 @@ A-SSCC 2026, p. 3 Fig. 7. 상단은 TX FFE와 RX FFE·MLSD의 배치, 하단은 
 | LUT / FF | 204,436 / 217,999 | Placed utilization |
 | DSP / BRAM tiles | 940 / 24.5 | Placed utilization |
 
-외부 출력 지연 미지정 2개와 CDC·리셋·동기화 경고의 검토가 남아 있습니다. 2026-09-09 RTL과 측정 당시 bitstream의 빌드 대응은 미확인입니다.
+외부 출력 지연 미지정 2개와 CDC·리셋·동기화 경고의 검토가 남아 있습니다.
 
 ## ADC 캡처 파형·채널 응답
 
@@ -103,10 +103,6 @@ A-SSCC 2026, p. 2 Fig. 5의 BER 컨투어. 논문에 보고한 시스템 결과�
 
 10⁷비트는 계산·표시 기준이며 실제 온칩 검사 비트 수를 뜻하지 않습니다. PRBS15의 10⁶비트 기준 표시는 기대 오류를 정수 2로 반올림한 2×10⁻⁶입니다. 최적점은 논문 Fig. 5와 시각적으로 대응하나, 그림과 CSV의 생성 연결은 미확인입니다.
 
-## FIR 출력 정합성
+## 관련 연구
 
-2026-09-09 공통 RTL의 FIR 회귀 기록은 [학위논문 프로젝트의 검증 기준](../../pam4-mlsd-thesis/docs/validation.md#fir-출력-정합성)으로 옮겼습니다.
-
-## MLSD 메트릭·전체 어댑터
-
-2026-10-07의 메트릭 PASS·전체 어댑터 FAIL과 합성 입력 조건은 [학위논문 프로젝트의 10월 검증 결과](../../pam4-mlsd-thesis/docs/validation.md#10월-mlsd-메트릭전체-어댑터)에 정리했습니다.
+[DP-SMM 학위논문 연구·검증 결과](../../pam4-mlsd-thesis/docs/validation.md)

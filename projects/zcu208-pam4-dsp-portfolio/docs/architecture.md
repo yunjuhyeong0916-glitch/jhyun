@@ -1,4 +1,4 @@
-# A-SSCC PAM4 DSP 설계 구조
+# A-SSCC DS-SBM PAM4 DSP 설계 구조
 
 [프로젝트](../README.md) · [MLSD 설계 판단](design-decisions.md) · [측정·검증 결과](validation.md)
 
@@ -8,7 +8,7 @@
 
 A-SSCC 2026, p. 2 Fig. 2. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
-상단은 PS 제어, PL의 TX·RX 데이터 경로, RF Data Converter와 ISI 보드의 연결을 보여줍니다. 하단의 송신 DSP는 PRBS7/15·PAM4 인코더와 8-tap TX FFE로 구성됩니다. 수신 DSP는 21-tap RX FFE → 3-tap partial response → MLSD 순서로 채널 왜곡을 보상하고 심볼을 복원합니다.
+상단은 PS 제어, PL의 TX·RX 데이터 경로, RF Data Converter와 ISI 보드의 연결을 보여줍니다. 하단의 송신 DSP는 PRBS7/15·PAM4 인코더와 8-tap TX FFE로 구성됩니다. 수신 DSP는 21-tap RX FFE → 3-tap partial response → DS-SBM RS-MLSD 순서로 채널 왜곡을 보상하고 심볼을 복원합니다.
 
 ## 병렬 데이터 경로
 
@@ -26,7 +26,7 @@ ZCU208의 XCZU48DR-FSVG1517-2-E에서 ADC·DAC를 각각 4 GS/s로 설정했습�
 | 런타임 제어 | FIR·검출기 설정 적용 | BRAM 계수 로딩·GPIO·PS 제어 |
 | PRBS·ILA | 데이터·오류·내부 상태 관측 | lock 이후 오류 집계·캡처 |
 
-## MLSD 메트릭
+## DS-SBM 메트릭
 
 논문의 DS-SBM RS-MLSD는 네 visible state와 상태별 두 survivor branch를 사용합니다. 구간별 branch metric 행렬을 계층적으로 결합해 심볼 간 ACS 의존성을 다룹니다. [후보 보존·행렬 결합의 설계 판단](design-decisions.md)
 

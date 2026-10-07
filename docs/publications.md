@@ -15,8 +15,8 @@
 
 ## 관련 설계·결과
 
-- **A-SSCC DSP·MLSD:** [설계 구조](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md), [측정·구현 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md).
-- **학위논문 진행 내용:** [별도 프로젝트](../projects/pam4-mlsd-thesis/), [10월 RTL 검증](../projects/pam4-mlsd-thesis/docs/validation.md).
+- **A-SSCC · DS-SBM:** [설계 구조](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md), [측정·구현 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md).
+- **학위논문 · DP-SMM:** [프로젝트](../projects/pam4-mlsd-thesis/), [DP-SMM 검증 결과](../projects/pam4-mlsd-thesis/docs/validation.md).
 - **LPDDR:** [개인 TX 설계·측정 전 검증과 공동 칩 결과](../projects/high-speed-interface-research/docs/lpddr.md#검증-결과와-조건).
 - **USB PAM-3:** [TX·RX 모델과 제작 TX 결과](../projects/high-speed-interface-research/docs/usb4-pam3.md#모델과-실리콘-결과의-구분).
 - **계측:** [장비별 역할·자동화·PCB·채널 분석](../projects/high-speed-interface-research/docs/measurement-equipment.md), [개인 기여·장비 사용의 근거](../projects/high-speed-interface-research/docs/evidence.md).

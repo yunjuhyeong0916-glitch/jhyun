@@ -1,8 +1,8 @@
-# A-SSCC 2026 | ZCU208 기반 PAM4 송수신 DSP 설계·검증
+# A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP 설계·검증
 
-ZCU208 RFSoC의 4-GS/s 설정 ADC·DAC에 **32-lane 병렬 DSP**를 연결했습니다. TX FIR, RX 21-tap FIR와 reduced-state MLSD를 구현하고, 런타임 계수 제어·PRBS 검사·ILA 디버깅 경로를 통합했습니다.
+ZCU208 RFSoC의 4-GS/s 설정 ADC·DAC에 **32-lane 병렬 DSP**를 연결했습니다. TX FIR, RX 21-tap FIR와 DS-SBM RS-MLSD를 구현하고, 런타임 계수 제어·PRBS 검사·ILA 디버깅 경로를 통합했습니다.
 
-이 프로젝트에는 A-SSCC 논문 구조와 RFSoC 시스템 측정, 6월 캡처·구현 기록을 정리했습니다. **10월 MLSD RTL 추가 검증은 [학위논문 프로젝트](../pam4-mlsd-thesis/)에서 다룹니다.**
+DS-SBM 검출기 구조와 RFSoC 시스템의 BER·자원·타이밍 결과를 정리했습니다. **DP-SMM 검증은 [학위논문 프로젝트](../pam4-mlsd-thesis/)에서 다룹니다.**
 
 ## 설계·구현
 
@@ -25,7 +25,7 @@ flowchart LR
     D --> I[ISI 보드]
     I --> A[RFDC ADC]
     A --> R[RX FIR 등화]
-    R --> M[RS4 MLSD 검출]
+    R --> M[DS-SBM RS-MLSD 검출]
     M --> C[PRBS 검사 / ILA 캡처]
     G[런타임 계수 설정] -.-> R
     G -.-> M
@@ -43,12 +43,10 @@ flowchart LR
 
 [상세 결과·검증 조건](docs/validation.md)
 
-6월 캡처·분석 기록은 2026년 10월에 저장소에 추가됐습니다. 업로드 시점과 측정·분석 시점은 구분합니다.
-
 ## 관련 논문
 
 [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 기준).
 
-[학위논문 프로젝트](../pam4-mlsd-thesis/) · [전체 논문](../../docs/publications.md)
+[DP-SMM 학위논문 프로젝트](../pam4-mlsd-thesis/) · [전체 논문](../../docs/publications.md)
 
 **도구:** Verilog / SystemVerilog · Vivado 2022.2 · XSim · ZCU208 RFSoC · Python

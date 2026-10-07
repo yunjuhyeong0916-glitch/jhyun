@@ -8,19 +8,19 @@ Design and verification of PAM4 transceiver DSP, low-voltage LPDDR transmitters 
 
 ## DSP transceiver research
 
-Two projects: the A-SSCC RFSoC transceiver study and ongoing MLSD RTL verification for a master's thesis.
+The A-SSCC study implements DS-SBM RS-MLSD in an RFSoC transceiver. The master's thesis focuses on verifying DP-SMM metric calculation and path recovery.
 
-### A-SSCC 2026 | ZCU208 PAM4 transceiver DSP
+### A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP
 
-Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and reduced-state MLSD with RFSoC. The Vivado / Vitis flow covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an ISI board to ADC capture.
+Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with the ZCU208 RFSoC. The Vivado / Vitis flow covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an ISI board to ADC capture.
 
 [A-SSCC project](projects/zcu208-pam4-dsp-portfolio/) · [Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
-### Master's thesis | PAM4 MLSD RTL design and verification
+### Master's thesis | DP-SMM design and verification
 
-Ongoing research into MLSD under residual ISI, with separate verification of metric calculation and full-path recovery.
+Research on DP-SMM under residual ISI, comparing metric-matrix calculation, composition and full-path recovery against a reference model.
 
-[Thesis project](projects/pam4-mlsd-thesis/) · [Architecture and scope](projects/pam4-mlsd-thesis/docs/architecture.md) · [October verification](projects/pam4-mlsd-thesis/docs/validation.md)
+[DP-SMM thesis project](projects/pam4-mlsd-thesis/) · [Architecture and scope](projects/pam4-mlsd-thesis/docs/architecture.md) · [DP-SMM verification](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ## LPDDR / USB research
 
