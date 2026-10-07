@@ -12,6 +12,20 @@
 | 보드 통합 및 오류 분석 | RFDC 인터페이스, 계수 로더, PRBS 검사, ILA 디버깅 경로 | 인터페이스 통합과 검증 구조 설계 |
 | 구조 변경 후 기능 확인 | 기준 FIR과 변경 FIR의 지연을 맞춘 출력 비교 | 테스트벤치 작성과 정합성 검증 |
 
+## MLSD·RTL 설계
+
+메트릭 계산, 32-lane 변환 결합, 경로 복원을 나누어 구현한 소스를 [설계 구조와 대표 RTL 안내](docs/architecture.md)에서 확인할 수 있습니다. 이 공개본의 branch 후보 유지 방식과 후속 Rank-2 연구의 구분도 해당 문서에 설명합니다.
+
+## FPGA 구현·보드 구동
+
+RTL의 출력이 맞더라도 보드에서 데이터를 얻으려면 RFDC와 병렬 데이터 경로의 클록·리셋·유효 신호, 런타임 설정이 함께 맞아야 합니다. [FPGA 구현·JTAG 구동 문서](docs/fpga-bringup.md)는 이 연결을 중심으로 다음 과정을 설명합니다.
+
+- Vivado 프로젝트·BD·제약·IP와 합성·배치배선 결과의 관계
+- 비트스트림과 ILA probes 파일의 준비, Hardware Manager의 JTAG 다운로드
+- RFDC·제어 설정 이후 데이터 유효 신호·계수 반영·PRBS 검사 확인
+
+2026-10-07 원 프로젝트의 `.bit`, `.ltx`, `.xsa` 등 파일 존재와 해시를 기록했습니다. 이 확인에서 합성·배치배선이나 보드 다운로드를 다시 실행하지 않았습니다. [산출물 확인 기록](reports/fpga_artifact_inventory_20261007.json)
+
 ## 검증 자료
 
 - **FIR 테스트 3종 PASS:** 이 폴더에 담긴 RTL과 기존 테스트벤치를 Vivado XSim 2022.2에서 2026-09-09 다시 실행했습니다. [실행 결과](reports/fir_validation_20260909.json)
@@ -36,6 +50,7 @@ flowchart LR
 ## 자료 보기
 
 - [설계 구조와 대표 소스 안내](docs/architecture.md)
+- [FPGA 구현·JTAG 다운로드·초기 동작 확인](docs/fpga-bringup.md)
 - [검증 결과·환경·해석 범위](docs/validation.md)
 - [RTL 소스 26개](rtl/) · [기존 FIR 테스트벤치 3개](tb/)
 - [FIR 시뮬레이션 재현 방법](docs/reproduce.md)

@@ -8,6 +8,8 @@
 
 **코드 검토:** [대표 RTL 안내](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) → [테스트벤치](../projects/zcu208-pam4-dsp-portfolio/tb/) → [재현 방법](../projects/zcu208-pam4-dsp-portfolio/docs/reproduce.md)
 
+**FPGA 구현·보드 구동:** [Vivado 빌드·JTAG 다운로드·초기 동작 확인](../projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) → [원 프로젝트 산출물 확인 기록](../projects/zcu208-pam4-dsp-portfolio/reports/fpga_artifact_inventory_20261007.json) → [검증 범위](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+
 **연구 이력 탐색:** [MLSD 비교 실험](../experiments/) → [참고 코어](../reference/mlsd-cores/) → [이전 보드 자료](../archive/)
 
 ## 폴더 구조

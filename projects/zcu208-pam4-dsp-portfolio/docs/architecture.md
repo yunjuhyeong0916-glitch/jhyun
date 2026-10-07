@@ -1,5 +1,7 @@
 # 설계 구조와 소스 안내
 
+[프로젝트 요약](../README.md) · [FPGA 구현·JTAG 구동](fpga-bringup.md) · [검증 근거](validation.md)
+
 ## 프로젝트 기준
 
 - 원 프로젝트: `DSP_based_TRX_32lane_PAM4_4GS_OPT`
