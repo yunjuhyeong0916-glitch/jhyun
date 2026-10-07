@@ -1,8 +1,8 @@
-# Juhyeong Yun | High-Speed Interface RTL & FPGA Portfolio
+# Juhyeong Yun | High-Speed Interface Hardware Design & Verification
 
-Digital signal-processing hardware for PAM4 transceivers and MLSD detection.
+Circuit, modeling, RTL/FPGA and measurement work for high-speed interfaces.
 
-[한국어](README.md) · [Featured project](projects/zcu208-pam4-dsp-portfolio/) · [FPGA build & JTAG bring-up](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [Verification evidence](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[한국어](README.md) · [DSP/MLSD project](projects/zcu208-pam4-dsp-portfolio/) · [FPGA build & JTAG bring-up](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [LPDDR & USB research](projects/high-speed-interface-research/) · [Measurement equipment](projects/high-speed-interface-research/docs/measurement-equipment.md)
 
 ## Featured project
 
@@ -15,13 +15,19 @@ Digital signal-processing hardware for PAM4 transceivers and MLSD detection.
 
 [Explore the project](projects/zcu208-pam4-dsp-portfolio/) · [Read the source guide](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [Run the FIR tests](projects/zcu208-pam4-dsp-portfolio/docs/reproduce.md)
 
+## LPDDR and USB: circuit, modeling and silicon evaluation
+
+[This research section](projects/high-speed-interface-research/) covers personally designed LPDDR TX circuitry and pre-measurement verification, USB4 PAM-3 modeling and encoder/scrambler RTL, PCB/HFSS work, and shared silicon measurements. Individual contribution and joint chip results are stated separately.
+
+The [equipment guide](projects/high-speed-interface-research/docs/measurement-equipment.md) records use of Keysight 86100D/86118A, M8195A, E3631A and Anritsu MP1800A in both projects, with channel-board, real-time oscilloscope and measurement-automation experience. The detailed research and equipment pages are in Korean.
+
 ## Repository map
 
-The project has two reading paths: [MLSD/RTL architecture](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) and [FPGA implementation and JTAG board bring-up](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md). The bring-up guide is in Korean and covers build inputs, programming artifacts, Hardware Manager steps, and initial data-path checks. Its local artifact inventory is dated 2026-10-07; it does not establish a new board run or measured BER.
+The DSP project has two reading paths: [MLSD/RTL architecture](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) and [FPGA implementation and JTAG board bring-up](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md). The bring-up guide is in Korean and covers build inputs, programming artifacts, Hardware Manager steps, and initial data-path checks. Its local artifact inventory is dated 2026-10-07; it does not establish a new board run or measured BER. [LPDDR and USB research](projects/high-speed-interface-research/) has a separate path through circuit/model work, measurement equipment and supporting papers.
 
 | Directory | Contents |
 |---|---|
-| [projects/](projects/) | Featured project and its evidence |
+| [projects/](projects/) | DSP/FPGA implementation and LPDDR/USB circuit and measurement research |
 | [experiments/](experiments/) | Separate MLSD architecture-comparison and branch-centric experiments |
 | [reference/](reference/) | Architecture-specific reference RTL |
 | [archive/](archive/) | Earlier Vivado board-project snapshot |

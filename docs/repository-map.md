@@ -10,6 +10,8 @@
 
 **FPGA 구현·보드 구동:** [Vivado 빌드·JTAG 다운로드·초기 동작 확인](../projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) → [원 프로젝트 산출물 확인 기록](../projects/zcu208-pam4-dsp-portfolio/reports/fpga_artifact_inventory_20261007.json) → [검증 범위](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
+**LPDDR·USB 연구:** [회로·모델링·실리콘 평가 개요](../projects/high-speed-interface-research/) → [LPDDR](../projects/high-speed-interface-research/docs/lpddr.md) / [USB PAM-3](../projects/high-speed-interface-research/docs/usb4-pam3.md) → [측정 장비와 활용](../projects/high-speed-interface-research/docs/measurement-equipment.md) → [논문·근거](../projects/high-speed-interface-research/docs/evidence.md)
+
 **연구 이력 탐색:** [MLSD 비교 실험](../experiments/) → [참고 코어](../reference/mlsd-cores/) → [이전 보드 자료](../archive/)
 
 ## 폴더 구조
@@ -19,7 +21,8 @@ jhyun/
 ├── README.md                         한국어 포트폴리오 첫 화면
 ├── README.en.md                      English overview
 ├── projects/
-│   └── zcu208-pam4-dsp-portfolio/     대표 프로젝트 · 소스 · 검증 근거
+│   ├── zcu208-pam4-dsp-portfolio/     DSP·MLSD RTL · FPGA 구현·구동
+│   └── high-speed-interface-research/ LPDDR·USB 회로·모델·계측 연구
 ├── experiments/
 │   ├── mlsd-architecture-comparison/ 네 MLSD 구조의 비교 실험
 │   └── branch-centric-pam8/          별도 branch-centric 변형
