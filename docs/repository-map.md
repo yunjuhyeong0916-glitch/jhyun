@@ -8,11 +8,15 @@
 
 **코드 검토:** [대표 RTL 안내](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) → [테스트벤치](../projects/zcu208-pam4-dsp-portfolio/tb/) → [재현 방법](../projects/zcu208-pam4-dsp-portfolio/docs/reproduce.md)
 
+**MLSD 아이디어와 실행:** [잔류 ISI·ACS 병렬화·후보 보존](../projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) → [입력·기준값·메트릭 RTL 최소 예제](../projects/zcu208-pam4-dsp-portfolio/examples/mlsd_minimal/) → [PASS와 어댑터 불일치의 검증 범위](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+
 **FPGA 구현·보드 구동:** [Vivado 빌드·JTAG 다운로드·초기 동작 확인](../projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) → [원 프로젝트 산출물 확인 기록](../projects/zcu208-pam4-dsp-portfolio/reports/fpga_artifact_inventory_20261007.json) → [검증 범위](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 **LPDDR·USB 연구:** [회로·모델링·실리콘 평가 개요](../projects/high-speed-interface-research/) → [LPDDR](../projects/high-speed-interface-research/docs/lpddr.md) / [USB PAM-3](../projects/high-speed-interface-research/docs/usb4-pam3.md) → [측정 장비와 활용](../projects/high-speed-interface-research/docs/measurement-equipment.md) → [논문·근거](../projects/high-speed-interface-research/docs/evidence.md)
 
 **성과 논문 확인:** [전체 논문 6편·공식 링크·검증 범위](publications.md) → 해당 프로젝트의 담당 역할과 결과 설명
+
+**검증 그림 확인:** [LPDDR·USB Eye·Shmoo와 AWG 설정 전후](../projects/high-speed-interface-research/docs/verification-figures.md) → [출처 파일·페이지·해시](figure-sources.json)
 
 **연구 이력 탐색:** [MLSD 비교 실험](../experiments/) → [참고 코어](../reference/mlsd-cores/) → [이전 보드 자료](../archive/)
 

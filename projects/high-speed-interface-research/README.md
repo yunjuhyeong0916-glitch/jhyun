@@ -1,6 +1,6 @@
 # LPDDR·USB 고속 인터페이스 회로·모델링·실리콘 평가
 
-[저장소 첫 화면](../../README.md) · [측정 장비와 활용](docs/measurement-equipment.md) · [논문·근거](docs/evidence.md)
+[저장소 첫 화면](../../README.md) · [측정 장비와 활용](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문·근거](docs/evidence.md)
 
 **회로와 모델에서 정한 설계 조건을 실제 보드의 파형·오류 평가로 연결한 연구입니다.** LPDDR에서는 저전압 TX의 채널 손실·임피던스 문제를 회로 설계와 측정 전 검증으로 다뤘습니다. USB PAM-3에서는 논리·전기 계층 모델과 RTL의 동작을 확인하고, 제작 TX의 채널별 신호를 측정했습니다. 두 프로젝트의 PCB·채널 분석과 계측 경험을 이 파트에서 함께 살펴볼 수 있습니다.
 
@@ -32,5 +32,6 @@
 2. [USB: PAM-3 모델·RTL과 실리콘 평가](docs/usb4-pam3.md)
 3. [측정 장비·PCB·채널 분석·자동화](docs/measurement-equipment.md)
 4. [관련 논문과 근거 범위](docs/evidence.md)
+5. [실제 Eye·Shmoo와 AWG 수정 전후 화면](docs/verification-figures.md)
 
 설계·평가 개요와 관련 논문을 중심으로 구성했습니다. 기존 [DSP·MLSD RTL](../zcu208-pam4-dsp-portfolio/docs/architecture.md)과 [FPGA 구현·JTAG 구동](../zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md)은 각 문서에서 이어 볼 수 있습니다.

@@ -26,6 +26,8 @@
 
 ## 측정 장비와 사용 목적
 
+[검증 그림: TX 시뮬레이션 Eye·공동 칩 Eye와 Shmoo](verification-figures.md#lpddr-tx-ffe-적용-전후의-시뮬레이션)에서 위 결과의 실제 파형을 확인할 수 있습니다.
+
 LPDDR 평가에는 Keysight 86100D·86118A, M8195A AWG, E3631A 전원공급기와 Anritsu MP1800A BERT를 사용했습니다. 파형·Eye 관측, 입력 신호 공급, 전원·기준전압 변경과 오류 집계를 역할별로 연결했습니다. RX 조건을 반복 변경하는 자동화에서는 칩의 Vref와 BERT의 판정 임계값을 구분하고, 전원 변화가 출력 레벨에 미치는 영향을 측정 설정에 반영했습니다.
 
 장비별 활용과 AWG·Shmoo 자동화의 상세 범위는 [측정 장비와 활용 사례](measurement-equipment.md)에서 확인할 수 있습니다.

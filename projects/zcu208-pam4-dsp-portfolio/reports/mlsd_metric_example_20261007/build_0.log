@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/ds_sbmm_rs4_row_min.sv" into library work
+INFO: [VRFC 10-311] analyzing module codex_pam4_rs4_row_min_ooc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/ds_sbmm_rs4_apply_xform_rowpipe.sv" into library work
+INFO: [VRFC 10-311] analyzing module codex_pam4_rs4_apply_xform_rowpipe_ooc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/ds_sbmm_rs4_metric_tile8_dual_survivor.sv" into library work
+INFO: [VRFC 10-311] analyzing module codex_pam4_rs4_prefix8_nearest2_metric_productflat_trace_ooc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/ds_sbmm_rs4_xform_export32.sv" into library work
+INFO: [VRFC 10-311] analyzing module codex_pam4_rs4_prefix32_xform_export_ooc
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/ds_sbmm_rs4_trace_shell32_rowpipe.sv" into library work
+INFO: [VRFC 10-311] analyzing module codex_pam4_rs4_prefix32_trace_shell_rowpipe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/pam4_fir_ffe_32lane_filters.sv" into library work
+INFO: [VRFC 10-311] analyzing module FIR_8TAP_TRANSPOSED_64LANE
+INFO: [VRFC 10-311] analyzing module FIR_8TAP_DIRECT_32LANE
+INFO: [VRFC 10-311] analyzing module FIR_8TAP_DIRECT_64LANE
+INFO: [VRFC 10-311] analyzing module FIR_Q6_NTAP_DIRECT_32LANE
+INFO: [VRFC 10-311] analyzing module pam4_fresh_eq29_64lane_direct
+INFO: [VRFC 10-311] analyzing module pam4_fresh_tg7_64lane_direct
+INFO: [VRFC 10-311] analyzing module FIR_8TAP_TRANSPOSED_32LANE
+INFO: [VRFC 10-311] analyzing module FIR_Q6_NTAP_TRANSPOSED_32LANE
+INFO: [VRFC 10-311] analyzing module FIR_Q6_NTAP_CHAIN_32LANE
+INFO: [VRFC 10-311] analyzing module FIR_Q6_7TAP_TRANSPOSED_PARTIAL_32LANE
+INFO: [VRFC 10-311] analyzing module FIR_Q6_21TAP_GROUP_PIPE_32LANE
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/ds_sbmm_rs4_trace32_board_adapter.sv" into library work
+INFO: [VRFC 10-311] analyzing module codex_pam4_rs4_trace32_board_adapter_normprefix_contract
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/tb/tb_mlsd_metric_example.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mlsd_metric_example

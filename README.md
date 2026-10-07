@@ -12,12 +12,24 @@ DSP 기반 송수신기 연구의 MLSD·RTL·FPGA 자료와 LPDDR·USB PAM-3 프
 |---|---|
 | 어떤 프로젝트인지 빠르게 이해하기 | [PAM4 송수신 DSP 프로젝트 요약](projects/zcu208-pam4-dsp-portfolio/README.md) |
 | 설계 구조와 구현 코드 확인하기 | [구조 설명과 대표 RTL 안내](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) |
+| MLSD의 핵심 아이디어와 설계 선택 이해하기 | [잔여 ISI·ACS 의존성·분할과 후보 보존](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) |
 | FPGA 구현과 보드 실행 과정 확인하기 | [Vivado 빌드·JTAG 다운로드·초기 동작 확인](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) |
 | LPDDR·USB 프로젝트와 담당 역할 확인하기 | [회로·모델링·실리콘 평가 파트](projects/high-speed-interface-research/) |
 | 사용한 측정 장비와 활용 방법 확인하기 | [장비별 역할·측정 조건·자동화 사례](projects/high-speed-interface-research/docs/measurement-equipment.md) |
+| 실제 파형과 측정 설정 확인하기 | [LPDDR·USB 검증 그림과 AWG 수정 사례](projects/high-speed-interface-research/docs/verification-figures.md) |
 | 연구 성과의 논문과 공식 정보 확인하기 | [프로젝트별 성과 논문 6편](docs/publications.md) |
 | 실제 확인된 검증 결과 살펴보기 | [테스트 결과와 FPGA 구현 근거](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) |
-| 직접 시뮬레이션 실행하기 | [FIR 테스트 3종 재현 방법](projects/zcu208-pam4-dsp-portfolio/docs/reproduce.md) |
+| 직접 시뮬레이션 실행하기 | [MLSD 메트릭 최소 예제](projects/zcu208-pam4-dsp-portfolio/examples/mlsd_minimal/) · [FIR 테스트 3종](projects/zcu208-pam4-dsp-portfolio/docs/reproduce.md) |
+
+## 연구별 개인 기여와 공동 검증
+
+| 연구 | 직접 설계·구현한 범위 | 통합·공동 연구와의 연결 | 확인할 결과 |
+|---|---|---|---|
+| DSP 기반 송수신기 | MLSD 구조·고정소수점 RTL, 기준 모델–RTL 비교와 검증 경로 구성 | RFDC 등 기존 IP를 활용한 RFSoC 데이터 경로 통합 | 논문 버전의 시스템 검증과 공개 RTL의 실행 결과를 구분 |
+| LPDDR | 적용 TX 직접 설계, 해당 TX의 Schematic·Post-Layout 검증 전담 | PCB·HFSS 분석과 공동 Combo PHY 평가 참여 | TX 단독 시뮬레이션, 공동 칩의 TX Eye·RX 마진 |
+| USB PAM-3 | TX 논리계층·RX CTLE 모델링, 11B7S·스크램블러 RTL 합성·P&R·연결 검증 | PCB·채널 분석과 공동 제작 TX의 차동 신호 평가 참여 | TX·RX 모델 결과, 공동 TX 실리콘 측정 |
+
+PCB·채널 분석과 계측은 연구의 설계 조건을 실제 평가로 연결한 공통 역량입니다. [장비 활용](projects/high-speed-interface-research/docs/measurement-equipment.md) · [검증 그림](projects/high-speed-interface-research/docs/verification-figures.md)
 
 ## DSP 기반 송수신기 연구 — ZCU208 PAM4
 
@@ -28,8 +40,9 @@ DSP 기반 송수신기 연구의 MLSD·RTL·FPGA 자료와 LPDDR·USB PAM-3 프
 | 병렬 RTL · 고정소수점 연산 · 파이프라인 | 기준 회로와 출력 비교 · 구현 보고서 분석 | Verilog/SystemVerilog · Vivado/XSim · ZCU208 |
 
 - **FIR 테스트 3종 PASS** — 공개한 RTL과 기존 TB를 2026-09-09 다시 실행했습니다.
+- **MLSD 메트릭 예제** — 2026-10-07 두 합성 채널에서 RTL 행렬 검사와 Python 심볼 복원을 통과했습니다. 전체 어댑터 회귀 테스트의 출력 불일치는 [실행 예제와 검증 범위](projects/zcu208-pam4-dsp-portfolio/examples/mlsd_minimal/)에 공개했습니다.
 - **FPGA 구현 기록** — 2026-06-29의 기존 post-route physopt 보고서에서 WNS +0.083 ns, TNS 0.000 ns를 확인했습니다. 적용된 제약에 대한 과거 구현 결과이며, 현재 소스를 새로 배치배선한 결과는 아닙니다.
-- **공개 자료** — RTL 26개, FIR 테스트벤치 3개, 구조 설명, 재현 스크립트, 구현 보고서와 출처 기록을 제공합니다.
+- **공개 자료** — 원본 RTL 26개·FIR TB 3개에 설계 판단, MLSD 예제·회귀 TB, 실행 스크립트, 검증 그림과 출처 기록을 더했습니다.
 
 **[프로젝트 자세히 보기 →](projects/zcu208-pam4-dsp-portfolio/)**
 

@@ -16,6 +16,8 @@
 
 메트릭 계산, 32-lane 변환 결합, 경로 복원을 나누어 구현한 소스를 [설계 구조와 대표 RTL 안내](docs/architecture.md)에서 확인할 수 있습니다. 이 공개본의 branch 후보 유지 방식과 후속 Rank-2 연구의 구분도 해당 문서에 설명합니다.
 
+[설계 판단](docs/design-decisions.md)은 잔여 ISI를 검출에 활용한 이유와 ACS 의존성을 분할·행렬 결합으로 다룬 과정을 설명합니다. [최소 실행 예제](examples/mlsd_minimal/)에서는 합성 입력·독립 기준값·고정소수점 조건과 실제 메트릭 RTL의 출력으로 심볼을 복원하는 절차를 제공합니다.
+
 ## FPGA 구현·보드 구동
 
 RTL의 출력이 맞더라도 보드에서 데이터를 얻으려면 RFDC와 병렬 데이터 경로의 클록·리셋·유효 신호, 런타임 설정이 함께 맞아야 합니다. [FPGA 구현·JTAG 구동 문서](docs/fpga-bringup.md)는 이 연결을 중심으로 다음 과정을 설명합니다.
@@ -30,6 +32,7 @@ RTL의 출력이 맞더라도 보드에서 데이터를 얻으려면 RFDC와 병
 
 - **관련 연구 논문:** [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 공식 정보). 논문에 보고한 시스템 검증과 이 공개본의 검증 범위는 [논문과 공개 소스의 관계](docs/architecture.md#관련-논문과-공개-소스의-관계)에 설명합니다.
 - **FIR 테스트 3종 PASS:** 이 폴더에 담긴 RTL과 기존 테스트벤치를 Vivado XSim 2022.2에서 2026-09-09 다시 실행했습니다. [실행 결과](reports/fir_validation_20260909.json)
+- **MLSD 메트릭 모듈 PASS:** 2026-10-07 두 합성 벡터에서 branch 산술·8심볼 min-plus 결합을 확인하고 실제 RTL 행렬의 Python traceback으로 각 512개 레벨을 복원했습니다. 전체 어댑터 테스트는 출력 불일치로 FAIL이며, [결과·실패 재현](examples/mlsd_minimal/)을 함께 제공합니다.
 - **FPGA 구현 이력:** 2026-06-29의 기존 post-route physopt 보고서에서 WNS **+0.083 ns**, TNS **0.000 ns**를 확인했습니다. 해당 실행의 적용된 타이밍 제약을 만족한 결과이며, 현재 소스 복사본을 새로 합성·배치배선한 결과는 아닙니다. [검증 범위와 수치](docs/validation.md)
 - **보드 검증 지원:** ADC/ILA 캡처와 재생 시뮬레이션을 위한 원 프로젝트의 인터페이스·디버깅 구조를 소스에서 확인할 수 있습니다. 이 공개 묶음에 최종 실측 BER 성과를 부여하지 않습니다.
 
@@ -51,11 +54,13 @@ flowchart LR
 ## 자료 보기
 
 - [설계 구조와 대표 소스 안내](docs/architecture.md)
+- [잔여 ISI·후보 보존·병렬화의 설계 판단](docs/design-decisions.md)
 - [FPGA 구현·JTAG 다운로드·초기 동작 확인](docs/fpga-bringup.md)
 - [검증 결과·환경·해석 범위](docs/validation.md)
 - [전체 연구 성과 논문](../../docs/publications.md)
-- [RTL 소스 26개](rtl/) · [기존 FIR 테스트벤치 3개](tb/)
+- [원본 RTL 소스 26개](rtl/) · [기존 FIR TB 3개와 추가 MLSD TB 2개](tb/)
 - [FIR 시뮬레이션 재현 방법](docs/reproduce.md)
+- [MLSD 메트릭 예제·전체 어댑터 회귀 테스트](examples/mlsd_minimal/)
 - [원본과의 SHA-256 대조 목록](reports/source_manifest.json)
 
 **공개 범위:** 원 Vivado 프로젝트에서 선별한 RTL·테스트벤치·구현 보고서와 설명입니다. RFDC 등 AMD/Xilinx IP의 생성물, 전체 Vivado 프로젝트, 비트스트림, 원시 측정 데이터는 포함하지 않습니다. 따라서 이 폴더만으로 전체 보드 프로젝트를 재구성하거나 실측을 재현할 수는 없습니다.

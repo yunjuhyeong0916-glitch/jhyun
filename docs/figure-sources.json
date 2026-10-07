@@ -1,0 +1,134 @@
+{
+  "recorded_on": "2026-10-07",
+  "extraction": "Source PDF crops and original embedded slide images, plus an explicitly labeled synthetic-data plot from saved RTL metrics",
+  "figures": [
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_tx_simulated_eye.png",
+      "asset_sha256": "5a1cbf9c1561235d954b8e864730329e729967b4f50eabb0c7abe008634935a4",
+      "source_filename": "A 1.05-V0.5-V 15.6-Gbs NRZ Transmitter Achieving 0.76-pJBit Energy Efficiency for Low-Power Memory Interfaces.pdf",
+      "source_sha256": "99314fad3ad2b353d93dad5f5e4577b4845f4882d8d39d3125e420d3868925d7",
+      "page_1based": 3,
+      "figure": "Fig. 6",
+      "crop_pdf_points": [
+        44,
+        238,
+        291,
+        467
+      ],
+      "pixels": [
+        988,
+        916
+      ],
+      "reference": "https://doi.org/10.1109/ICEIC64972.2025.10879746",
+      "scope": "TX simulation, not silicon measurement"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_combo_measured_eye_shmoo.png",
+      "asset_sha256": "99d286ddf910ddf4c751e661036ab356ae952657b7f08fed8ace338cd79652bf",
+      "source_filename": "A 14-Gbspin LPDDR4X55X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator.pdf",
+      "source_sha256": "9ca6570d1bda1374496b723222c28cf00e4640bfafe80d5ba2aa68c009de3b54",
+      "page_1based": 2,
+      "figure": "Fig. 5, upper-right panel",
+      "crop_pdf_points": [
+        199,
+        508,
+        299,
+        648
+      ],
+      "pixels": [
+        400,
+        560
+      ],
+      "reference": "https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141",
+      "scope": "Joint Combo PHY silicon measurement; four DQ enabled"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pam3_measured_ffe_eye.png",
+      "asset_sha256": "c8195701e6a85d678d838ef9ecbb0bd908dc6235b59afe9f375ed39b5c4bbef4",
+      "source_filename": "A 0.0549 pJbitpindB PAM-3 Transmitter with Reconfigurable 150-Preset 4-Tap FFE for Various Channel Environments.pdf",
+      "source_sha256": "1919bb70d8af067688309ef6580850412221a59e93e65cfbe4bb078dbf578ad1",
+      "page_1based": 7,
+      "figure": "Fig. 13(a),(b)",
+      "crop_pdf_points": [
+        48,
+        59,
+        294,
+        144
+      ],
+      "pixels": [
+        984,
+        340
+      ],
+      "reference": "https://doi.org/10.1109/TVLSI.2026.3701343",
+      "scope": "Joint TX silicon measurement; 32 Gb/s, CH3, PRBS15"
+    },
+    {
+      "asset": "projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_architecture.png",
+      "asset_sha256": "cea0e084fd09aee931b6996ac46097d49fe9f2b7f258f0f6c9a1e430c1e37b6a",
+      "source_filename": "An FPGA-Verified DACADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD.pdf",
+      "source_sha256": "bb0ea287a3d02a29a6cc0c6b2c451efc09ef2f166427eb8c3f772790a91f6576",
+      "page_1based": 2,
+      "figure": "Fig. 4",
+      "crop_pdf_points": [
+        310,
+        273,
+        583,
+        508
+      ],
+      "pixels": [
+        1092,
+        940
+      ],
+      "reference": "https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351",
+      "scope": "A-SSCC paper architecture; distinct from public RTL snapshot"
+    },
+    {
+      "asset": "projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_measured_ber_contours.png",
+      "asset_sha256": "7f6c5fbb9ca8da9da3d61829ddc16ac3c6dc83b144ef9d5dba48b611a964805d",
+      "source_filename": "An FPGA-Verified DACADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD.pdf",
+      "source_sha256": "bb0ea287a3d02a29a6cc0c6b2c451efc09ef2f166427eb8c3f772790a91f6576",
+      "page_1based": 2,
+      "figure": "Fig. 5, upper panel",
+      "crop_pdf_points": [
+        32,
+        511,
+        300,
+        625
+      ],
+      "pixels": [
+        1072,
+        456
+      ],
+      "reference": "https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351",
+      "scope": "Paper RFSoC measurement at approximately 41-dB loss; not a new run"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/awg_sample_rate_before.png",
+      "asset_sha256": "d68438dd065df61a485399dbceb6fdb69f98ab726458ddc1421ea7ac90a79150",
+      "source_filename": "250413_측정자동화_진행상황_AWG.pptx",
+      "source_sha256": "dec28702f405cda2cfeea837632bb05e9dd411c30ba30703617c4e1c023db11d",
+      "slide_1based": 41,
+      "embedded_media": "image43.png",
+      "scope": "Sample-rate mismatch, before correction"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/awg_sample_rate_after.png",
+      "asset_sha256": "c8845e155b9e94f3e01609a79adac3ae380db46d14b35313bdd6ac852c8b7156",
+      "source_filename": "250413_측정자동화_진행상황_AWG.pptx",
+      "source_sha256": "dec28702f405cda2cfeea837632bb05e9dd411c30ba30703617c4e1c023db11d",
+      "slide_1based": 41,
+      "embedded_media": "image44.png",
+      "scope": "Sample-rate correction, output frequency verification"
+    },
+    {
+      "asset": "projects/zcu208-pam4-dsp-portfolio/assets/mlsd_minimal_recovery.png",
+      "asset_sha256": "59df12a96dd7e1df659c89e3b4186c6b255436d1c621cea805620c10fca85a88",
+      "source_file": "projects/zcu208-pam4-dsp-portfolio/reports/mlsd_metric_example_20261007/residual_isi_recovery.csv",
+      "source_sha256": "ecb3c0c350cc7a74157482b33a6ab83279582161796e1b9752c17aa2b84759e5",
+      "generator": "projects/zcu208-pam4-dsp-portfolio/scripts/plot_mlsd_example.py",
+      "generator_sha256": "bd507ad4e1dda7736f17987c6fbd5629cae022b72c62b12b133a7b85670a5103",
+      "scope": "Synthetic data, actual XSim metric-tile matrices, Python traceback; not FPGA measurement",
+      "reference": "projects/zcu208-pam4-dsp-portfolio/examples/mlsd_minimal/README.md"
+    }
+  ]
+}

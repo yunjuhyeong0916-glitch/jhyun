@@ -5,4 +5,6 @@
 - [전체 자료 지도와 변경된 경로](repository-map.md)
 - [검증 상태 한눈에 보기](validation-status.md)
 - [연구 성과 논문 6편과 프로젝트별 연결](publications.md)
+- [MLSD 설계 판단](../projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [최소 실행 예제](../projects/zcu208-pam4-dsp-portfolio/examples/mlsd_minimal/)
+- [LPDDR·USB 검증 그림과 AWG 설정 사례](../projects/high-speed-interface-research/docs/verification-figures.md) · [그림 출처·해시](figure-sources.json)
 - [기술 용어 짧게 읽기](glossary.md)

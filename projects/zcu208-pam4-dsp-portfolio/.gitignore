@@ -26,3 +26,7 @@ xsim.dir/
 *.backup.*
 ILADATA/
 uart_capture/
+
+# Curated, path-normalized verification records for the portfolio.
+!reports/mlsd_metric_example_20261007/*.log
+!reports/mlsd_adapter_audit_20261007/*.log

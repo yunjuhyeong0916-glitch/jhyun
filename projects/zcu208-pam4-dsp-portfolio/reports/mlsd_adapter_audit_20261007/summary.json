@@ -1,0 +1,65 @@
+{
+  "executed_at": "2026-10-07T14:56:08.902615+09:00",
+  "scope": "Full published board adapter; g2=0, EQ bypass, TB=40, two warmup words",
+  "simulator": "Vivado XSim 2022.2",
+  "clock_period_ns": 8,
+  "results": [
+    {
+      "case": "memoryless",
+      "status": "FAIL",
+      "g_q8": [
+        256,
+        0,
+        0
+      ],
+      "reference": "full four-state memory-1 L1 Viterbi",
+      "memoryless_slicer_errors": 0,
+      "failure": "Fatal: MLSD_MISMATCH word=0 lane=1 expected=32 actual=-32"
+    },
+    {
+      "case": "residual_isi",
+      "status": "FAIL",
+      "g_q8": [
+        192,
+        128,
+        0
+      ],
+      "reference": "full four-state memory-1 L1 Viterbi",
+      "memoryless_slicer_errors": 203,
+      "failure": "Fatal: MLSD_MISMATCH word=0 lane=1 expected=32 actual=-32"
+    }
+  ],
+  "negative_control": null,
+  "sha256": {
+    "rtl/ds_sbmm_rs4_row_min.sv": "74c6557860c6721a8259ae062e89765f8696f40e4e6eefcafd27bae1cd3011e0",
+    "rtl/ds_sbmm_rs4_apply_xform_rowpipe.sv": "c36f411e416331ae086ba03e52cb9a3d971aa95a557928eb13b5b99bb322db86",
+    "rtl/ds_sbmm_rs4_metric_tile8_dual_survivor.sv": "152b910886dc876e661e2c81fdc4c985443e4f1f96d7ef7174428bf45cb121a7",
+    "rtl/ds_sbmm_rs4_xform_export32.sv": "ef66a2410b3e85dd057b0c47d78e04cc08150928ddacb16a9ab09fb088beef1b",
+    "rtl/ds_sbmm_rs4_trace_shell32_rowpipe.sv": "1cf1d736385223b122002c73e5b5a5684a4ac0c821fb6393239569b86316607b",
+    "rtl/pam4_fir_ffe_32lane_filters.sv": "5c145e1298023a82ab26dde7d2f04b6c910439eeea922d186aa0ceb277dccdd1",
+    "rtl/ds_sbmm_rs4_trace32_board_adapter.sv": "5c5faeef6af0983fab42a2cc93a6c5171de0b0697c78ff9ebd41e1e78dc759ec",
+    "tb/tb_mlsd_adapter_regression.sv": "b5e185d59d2ef538066686e3fd46cbb86d4247c5f214fca98e1b81d55b44d01b",
+    "scripts/run_mlsd_example.py": "f4e239b923ae7d2a7bd8c36117ae73057ce6f370d3b22aba58e7c0b88cd3e773",
+    "examples/mlsd_minimal/memoryless.csv": "675a7a050be4e7d6405fa5568cf3519c2a7fa16cb6b021364be31f2d76e1b019",
+    "examples/mlsd_minimal/residual_isi.csv": "f23255028fca31742f02351ced466d520705c06cff2364626ab4598fdea7bf40"
+  },
+  "published_files": {
+    "build_0.log": {
+      "sha256": "7e1699583ede5e0fa026da6981ee067ac2a2cff3d128415f93a96312dc6c11e0",
+      "raw_sha256": "a437148e32a302046793cdcb62b2c915705f4b5f01af4ce848b1188ebde8f386"
+    },
+    "build_1.log": {
+      "sha256": "3d78cdad48ab15bdde7fad1e4425a4ca08ca8c32102e91b91245fb44595b7929",
+      "raw_sha256": "c829d7b35b07636f01795b6b99fe932ad36e0a82fb7f677eac0917e9f46defb4"
+    },
+    "memoryless.log": {
+      "sha256": "edeca8f78f8880418d9c4f08e539ba0f3479750023cb7896e9cf13444a0b58a3",
+      "raw_sha256": "eeac342e764669b6749b62f64e9d5a9200e957e325490dbc49168e690b023b24"
+    },
+    "residual_isi.log": {
+      "sha256": "bc181182b45f1b3e54a25b6ad46f8956aaef46f2ad23f0a207f392e846e69dfe",
+      "raw_sha256": "2560fd205215995b76e7f2fd8aa6b06de70985458f4984473ae5dd2bdb2eabf2"
+    }
+  },
+  "log_note": "Published logs replace local project/run paths with placeholders and remove trailing whitespace. Published CSV/log line endings use LF. Numeric data and diagnostic messages retained; raw and published hashes recorded."
+}

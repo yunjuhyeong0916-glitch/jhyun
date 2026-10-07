@@ -1,0 +1,16 @@
+
+****** xsim v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/snapshot/xsim_script.tcl
+# xsim {snapshot} -testplusarg CASE_residual_isi -testplusarg G0_192 -testplusarg G1_128 -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+expected_word=20e060e0606060a02020a0a0a0a0a0a020a060e0a0e0a0e0a0a0a0e0a02020e0 actual_word=e06060a0e0a0a02060a0e060e0a0e020e060e0e0e02060e0e020a020a020e0e0
+Fatal: MLSD_MISMATCH word=0 lane=1 expected=32 actual=-32
+Time: 1125 ns  Iteration: 0  Process: /tb_mlsd_adapter_regression/Always41_241  Scope: tb_mlsd_adapter_regression.Block59_242  File: <PROJECT_ROOT>/tb/tb_mlsd_adapter_regression.sv Line: 62
+$finish called at time : 1125 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct  7 14:56:08 2026...
