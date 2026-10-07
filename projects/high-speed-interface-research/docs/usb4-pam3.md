@@ -2,46 +2,44 @@
 
 [파트 개요](../README.md) · [LPDDR](lpddr.md) · [측정 장비](measurement-equipment.md) · [논문·근거](evidence.md)
 
-**연구 배경:** Near-display processing(NDP) 기반 테라급 라이트 필드 디스플레이 시스템 개발 과제의 고속 인터페이스 연구.
-
 **개인 담당·참여:** TX 논리계층 모델, RX CTLE 모델링과 송수신 통합 검증, 11B7S 인코더·스크램블러 RTL의 합성·P&R 및 전기 계층 연결 검증, 측정용 PCB·채널 분석과 차동 PAM-3 신호 평가. 제작 TX의 전체 아날로그 회로와 실리콘 성능은 공동 연구 결과입니다.
 
 ## 모델로 논리·전기 계층의 동작을 연결
 
-PAM-3에서는 인코딩된 심볼의 순서와 분포가 전기 계층에 전달되고, 채널을 통과한 신호가 다시 논리 데이터로 복원됩니다. 따라서 블록별 출력만 확인하는 것으로는 송수신 경로의 동작을 판단하기 어렵습니다. SystemVerilog·XMODEL 기반 모델에서 TX 논리계층과 RX CTLE를 다루고, 송수신 모델을 연결해 인코딩·스크램블링 및 수신 경로의 동작을 검증했습니다.
+SystemVerilog·XMODEL로 TX 논리계층과 RX CTLE를 모델링하고, 송수신 모델을 통합해 인코딩·스크램블링과 수신 데이터 복원을 검증했습니다.
 
-CTLE 보상을 높이면 채널 왜곡을 줄일 수 있지만 잡음 증폭도 커질 수 있습니다. 적정 보상과 과도한 보상의 파형을 비교하며 수신 판정 여유를 살폈습니다. RX 논문이 다루는 DFE·CDR 등을 포함한 전체 구조의 검증 참여와 각 회로의 개인 설계는 구분합니다.
+CTLE의 R·C와 바이어스를 조정해 채널 보상과 PAM-3 중간 레벨 안정성을 확인했습니다.
 
 ## TX 모델링과 검증 과정
 
-[TX 모델링 상세 페이지](usb-tx-modeling.md)에서 176-bit 입력의 인코딩·스크램블링 구조, 직접 계산한 기대값 비교, XMODEL의 복원·우회 경로, Serializer·FFE·채널 연결과 구현 후 VCS·POSIM 비교를 볼 수 있습니다. 각 단계의 검증 조건과 확인 범위를 함께 표시했습니다.
+176-bit 입력을 16개의 11B7S 인코더와 112개 Scrambler로 처리했습니다. 기대값 계산, Serializer·FFE·채널 연결과 구현 후 VCS·POSIM 출력을 대조했습니다. [TX 모델·검증](usb-tx-modeling.md)
 
 ## RX CTLE 모델링과 보상 조정
 
-[RX CTLE 상세 페이지](usb-rx-ctle-modeling.md)에는 바이어스·입력 공통전압을 먼저 정한 이유, XMODEL의 R·C 제어별 AC 응답과 FFE-off 조건의 CTLE 입력·출력 Eye를 모았습니다. 중간 레벨의 흔들림을 줄이기 위해 보상을 조정한 과정과 Sampler 연결 시 달라진 공통전압·부하 조건을 설명하고, 전체 RX의 DFE·CDR 결과와 구분했습니다.
+바이어스·입력 공통전압을 정한 뒤 R·C 제어별 AC 응답과 CTLE 입출력 Eye를 확인했습니다. 중간 레벨의 흔들림과 Sampler 연결에 따른 부하·공통전압 변화를 반영했습니다. [CTLE 모델](usb-rx-ctle-modeling.md)
 
 ## 논리 경로를 제작 TX에 연결
 
-11B7S 인코더와 스크램블러 RTL을 합성·P&R하고 공동 PAM-3 TX의 전기 계층과 연결해 동작을 확인했습니다. 이 논리 구현에는 RS-FEC와 precoder를 포함하지 않았습니다. 모델에서 확인한 논리 경로와 제작 칩의 구현 범위를 구분해, 어느 단계의 결과인지 설명할 수 있도록 정리했습니다.
+11B7S 인코더·스크램블러 RTL을 합성·P&R하고 공동 PAM-3 TX의 전기 계층에 연결했습니다. 구현 블록은 인코더·스크램블러이며, RS-FEC·precoder는 미포함입니다.
 
 ## 채널별 FFE 효과를 차동 신호로 확인
 
 제작 TX의 평가는 채널 조건과 FFE 설정을 함께 바꾸며 수행했습니다. Keysight 86100D·86118A로 차동 PAM-3 신호를 측정하고 상단·하단 Eye를 나누어 폭과 높이를 확인했습니다. FFE 적용 전후와 채널 조건에 따른 차이를 비교했으며, 제작 칩에서 확인한 32 Gb/s 성과는 공동 실리콘 측정 결과입니다.
 
-USB 평가에서도 M8195A AWG, MP1800A BERT와 E3631A를 활용했습니다. 파형 관측과 오류 평가는 서로 다른 측정 경로·설정을 가지므로, 결과에는 데이터 패턴·채널·scrambler 상태와 관측 조건을 연결합니다. [장비별 역할과 활용](measurement-equipment.md)
+입력·오류·전원 제어에는 M8195A AWG, MP1800A BERT와 E3631A를 활용했습니다. [장비·자동화](measurement-equipment.md)
 
-## 모델과 실리콘 결과의 구분
+<a id="모델과-실리콘-결과의-구분"></a>
 
-[검증 그림: 같은 CH#3·PRBS15 조건의 FFE 적용 전후 Eye](verification-figures.md#usb-pam-3-같은-채널패턴에서-ffe-효과-확인)에서 제작 TX의 파형 변화를 확인할 수 있습니다.
+## 검증 결과
 
-[USB 보드 배치와 CLK·DATA 전달 특성](pcb-hfss-verification.md#4-usb-보드에서는-신호-경로와-전원-공급-경로를-함께-검토)은 공동 PCB 작업 자료에 근거해 설명했습니다. GND via·전원 공급 경로의 배치 판단과 12.8-GHz 손실을 실리콘 Eye 측정과 별도로 확인할 수 있습니다.
+[CH#3·PRBS15의 FFE 적용 전후 실측 Eye](verification-figures.md#usb-pam-3-같은-채널패턴에서-ffe-효과-확인)
+
+공동 USB PCB에서는 GND via와 전원 공급 경로를 검토했습니다. HFSS의 12.8-GHz 손실은 CLK 약 1.11 dB, DATA 약 1.25 dB입니다. [보드·해석](pcb-hfss-verification.md#4-usb-보드에서는-신호-경로와-전원-공급-경로를-함께-검토)
 
 | 단계 | 대표 결과 | 근거·범위 |
 |---|---|---|
 | TX 모델 | 40 Gb/s/lane | [SMACD 2025: TX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092283), SystemVerilog 모델·시뮬레이션 |
-| RX 모델 | 25.6 GBaud/lane | [SMACD 2025: RX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092233), TX 모델과 단위도 구분 |
+| RX 모델 | 25.6 GBaud/lane | [SMACD 2025: RX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092233), 공동 RX 모델·시뮬레이션 |
 | 제작 PAM-3 TX | 28-nm CMOS, 32 Gb/s, 150-preset 4-tap FFE | [IEEE TVLSI 2026: PAM-3 TX·150-preset FFE 논문](https://doi.org/10.1109/TVLSI.2026.3701343), 공동 제작·측정 결과 |
-
-각 결과는 해당 모델·칩의 구성과 검증 조건에 연결해 읽습니다. 특히 Gb/s와 GBaud의 단위, 모델 시뮬레이션과 제작 TX 측정의 차이를 함께 확인해야 합니다.
 
 [논문 전체 제목과 근거](evidence.md) · [MLSD·LPDDR를 포함한 전체 성과 논문](../../../docs/publications.md)

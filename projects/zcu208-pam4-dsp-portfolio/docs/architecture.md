@@ -1,45 +1,36 @@
-# 설계 구조와 소스 안내
+# DSP 설계 구조
 
-[프로젝트 요약](../README.md) · [MLSD 설계 판단](design-decisions.md) · [FPGA 구현·JTAG 구동](fpga-bringup.md) · [검증 근거](validation.md)
+[프로젝트](../README.md) · [MLSD 설계 판단](design-decisions.md) · [측정·검증 결과](validation.md)
 
-## 프로젝트 기준
+## 병렬 데이터 경로
 
-- 원 프로젝트: `DSP_based_TRX_32lane_PAM4_4GS_OPT`
-- FPGA: `xczu48dr-fsvg1517-2-e`, 보드: ZCU208
-- 원 프로젝트 top: `design_1_wrapper`
-- 원 BD의 `ADC2_Sampling_Rate`, `DAC0_Sampling_Rate`: 각각 `4` GS/s 설정
-- 기존 구현 보고서의 클록: `RFADC2_CLK` 125 MHz, `RFDAC0_CLK` 500 MHz
-- 이 폴더의 RTL 복사 기준일: 2026-09-09
+ZCU208의 XCZU48DR-FSVG1517-2-E에서 ADC·DAC를 각각 4 GS/s로 설정했습니다. 기존 구현 보고서의 ADC 클록은 125 MHz, DAC 클록은 500 MHz입니다. ADC 병렬 경로의 설계 처리량은 **32 samples × 125 MHz = 4 Gsamples/s**입니다.
 
-32-lane은 한 클록에 처리하는 병렬 데이터 수를 뜻합니다. 물리적 송수신 채널 32개를 뜻하지 않습니다. 32 samples × 125 MHz = 4 Gsamples/s는 데이터 경로의 명목 처리량 계산이며, 최종 검출 결과의 연속 출력이나 실측 데이터율을 별도로 보증하지 않습니다. 4 GS/s 설정을 200 Gb/s 실측 성과로 해석하지 않습니다.
-
-## 대표 소스
-
-| 영역 | 파일 | 읽을 내용 |
+| 블록 | 역할 | 설계 항목 |
 |---|---|---|
-| 송신 패턴 | [TX_PRBS_MULTI_TOP_32LANE.sv](../rtl/TX_PRBS_MULTI_TOP_32LANE.sv), [PAM4_2b_to_8b.sv](../rtl/PAM4_2b_to_8b.sv) | PRBS 생성 및 PAM4 레벨 매핑 |
-| 송신 필터 연결 | [TX_PAM_FIR_TOP.sv](../rtl/TX_PAM_FIR_TOP.sv), [TX_PAM_FIR_TOP_FLAT.sv](../rtl/TX_PAM_FIR_TOP_FLAT.sv) | 병렬 FIR 입력·출력 구성 |
-| FIR 구현 | [pam4_fir_ffe_32lane_filters.sv](../rtl/pam4_fir_ffe_32lane_filters.sv) | TX 8-tap FIR, RX 21-tap FIR, 고정소수점 연산과 파이프라인 |
-| 수신 인터페이스 | [rx_bd_shim_raw1024_to_bitplanes_rxdsp8b.v](../rtl/rx_bd_shim_raw1024_to_bitplanes_rxdsp8b.v) | FIFO 데이터 유효 신호, 계수 로딩, 디버그 출력 연결 |
-| 수신 데이터 경로 | [rx_bd_shim_raw1024_to_bitplanes_mmrs_mlsd_fitfirst.v](../rtl/rx_bd_shim_raw1024_to_bitplanes_mmrs_mlsd_fitfirst.v) | EQ·검출 경로 선택과 통합 |
-| MLSD 메트릭 | [ds_sbmm_rs4_metric_tile8_dual_survivor.sv](../rtl/ds_sbmm_rs4_metric_tile8_dual_survivor.sv) | 8-lane nearest-branch 메트릭 변환 타일 |
-| MLSD 변환 결합 | [ds_sbmm_rs4_xform_export32.sv](../rtl/ds_sbmm_rs4_xform_export32.sv) | 32-lane 변환 연결과 출력 |
-| MLSD 경로 복원 | [ds_sbmm_rs4_trace_shell32_rowpipe.sv](../rtl/ds_sbmm_rs4_trace_shell32_rowpipe.sv), [ds_sbmm_rs4_trace32_board_adapter.sv](../rtl/ds_sbmm_rs4_trace32_board_adapter.sv) | 경로 메트릭 및 trace/board 연결 |
-| 계수 제어 | [pam4_rx_coeff_bram_loader.sv](../rtl/pam4_rx_coeff_bram_loader.sv) | BRAM을 통한 런타임 설정 갱신 |
-| 오류 검사 | [RX_PRBSCHK_MULTI_TOP_32LANE_BER_AUTO.sv](../rtl/RX_PRBSCHK_MULTI_TOP_32LANE_BER_AUTO.sv) | PRBS 기준의 수신 데이터 검사 |
+| PRBS·PAM4 생성 | 송신 패턴·심볼 레벨 생성 | 병렬 패턴 순서·레벨 매핑 |
+| TX FIR | 송신 파형 보상 | 8-tap 고정소수점 연산·파이프라인 |
+| RFDC·FIFO | DAC 송신·ADC 수신과 병렬 데이터 연결 | valid·ready·레인 순서 |
+| RX FIR | 수신 채널 등화 | 21-tap·포화 연산·지연 정렬 |
+| 메트릭 타일 | 심볼 후보의 거리·상태 변환 계산 | 8-lane 병렬 연산·후보 보존 |
+| min-plus 결합 | 구간별 상태 변환 연결 | 32-lane 변환·파이프라인 경계 |
+| 경로 복원 | 상태 이력으로 수신 심볼 결정 | metric·survivor·valid 정렬 |
+| 런타임 제어 | FIR·검출기 설정 적용 | BRAM 계수 로딩·GPIO·PS 제어 |
+| PRBS·ILA | 데이터·오류·내부 상태 관측 | lock 이후 오류 집계·캡처 |
 
-소스 파일명과 내부 모듈명이 일부 다릅니다. 원 프로젝트의 기존 명칭을 유지하기 위해 소스는 바꾸지 않고 복사했습니다. 26개 RTL 파일은 `sources_1/new`의 소스 스냅샷이며, 파일 존재가 모든 모듈의 활성화 또는 개별 검증 완료를 의미하지는 않습니다.
+## MLSD 메트릭
 
-## MLSD 구조의 해석
+이전 상태마다 nearest branch 후보 두 개를 보존하고, 도착 상태가 연결되지 않는 경우 destination rescue를 사용합니다. 전체 경로 Rank-2·16-state MLSD와의 동등성은 미검증입니다.
 
-이 버전의 metric tile에 있는 `SEGMENT_BRANCH_SURVIVORS`는 이전 상태별로 유지하는 branch 후보 수를 지정합니다. 파일명에 있는 dual-survivor를 전체 경로의 최상위 두 survivor를 엄밀히 유지하는 알고리즘으로 일반화하지 않습니다. 완전한 16-state MLSD와의 동등성이나 별도 후속 Rank-2 프로젝트의 결과도 이 버전에 적용하지 않습니다.
+## FIR 검증
 
-## 구현과 검증의 연결
+기준 회로와 비교 회로의 지연을 맞춘 뒤 32개 lane의 고정소수점 출력을 비교했습니다. TX FIR와 RX EQ21의 세 테스트가 통과했습니다. [입력·지연·결과](validation.md#fir-출력-정합성)
 
-필터 파이프라인을 바꾸면 출력 값뿐 아니라 출력 시점도 달라집니다. 공개한 FIR 테스트벤치는 기준 회로와 비교 회로 사이의 지연을 맞춘 후 32개 lane의 출력을 비교합니다. 이 방식으로 병렬 구조의 고정소수점 연산과 데이터 정렬을 함께 확인합니다. 검증한 입력 범위는 [검증 문서](validation.md)에 기록했습니다.
+## 논문·RTL 버전
 
-## 관련 논문과 공개 소스의 관계
+| 버전 | 구조·검증 |
+|---|---|
+| A-SSCC 2026 논문 | DS-SBM RS-MLSD·ZCU208 RFSoC·ISI 보드 시스템 측정 |
+| 2026-09-09 RTL | FIR 3종 PASS, 메트릭 검증 PASS, 전체 MLSD 어댑터 출력 불일치 |
 
-[An FPGA-Verified DAC/ADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)는 DS-SBM RS-MLSD와 ZCU208 RFSoC 기반 시스템 검증을 다룬 관련 연구 논문입니다. A-SSCC 2026 공식 정보에서 채택·발표 예정 상태를 확인했습니다(2026-10-07).
-
-논문의 구조·시스템 측정 결과와 이 폴더의 `DSP_based_TRX_32lane_PAM4_4GS_OPT` 소스 스냅샷은 버전과 검증 근거를 각각 확인해야 합니다. 공개본에서는 FIR 테스트 3종, MLSD 메트릭 예제와 전체 어댑터 테스트를 실행했습니다. FIR와 메트릭 검사는 통과했으며, 전체 어댑터에는 출력 불일치가 남아 있습니다. [공개본 검증 근거](validation.md) · [전체 성과 논문](../../../docs/publications.md)
+[관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [검증 결과](validation.md)

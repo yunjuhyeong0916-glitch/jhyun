@@ -1,8 +1,0 @@
--sverilog
-symbol_lut_mode_8b.sv
-survivor_mem_flat.sv
-traceback_flat.sv
-cmp_unified_mlsd_core_lane_8b.sv
-CMP_UNIFIED_MLSD_DSP_64LANE_8B.sv
-fir_siso_wide.sv
-tb_unified_channel_compare.sv

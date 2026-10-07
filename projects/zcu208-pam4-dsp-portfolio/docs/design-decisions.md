@@ -1,6 +1,6 @@
 # MLSD를 병렬 RTL로 구현하기 위한 설계 판단
 
-[프로젝트 요약](../README.md) · [공개 소스 구조](architecture.md) · [검증 결과](validation.md) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+[프로젝트 요약](../README.md) · [설계 구조](architecture.md) · [검증 결과](validation.md) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 ## 등화 이후 남은 ISI를 검출에 활용
 
@@ -10,13 +10,13 @@
 
 $$\hat y_k = g_0 a_k + g_1 a_{k-1} + g_2 a_{k-2},\qquad BM_k = d(y_k,\hat y_k).$$
 
-여기서 계수는 검출기 입력에서의 유효 응답을 설명합니다. 물리 채널의 손실 수치와는 다른 값입니다. 거리 함수와 고정소수점 표현도 구현 조건의 일부이며, 최소 재현 예제에서는 절대오차인 L1 메트릭을 사용합니다.
+여기서 계수는 검출기 입력에서의 유효 응답을 설명합니다. 물리 채널의 손실 수치와는 다른 값입니다. 거리 함수와 고정소수점 표현도 구현 조건의 일부이며, 2026-10-07 메트릭 검증에서는 절대오차인 L1 메트릭을 사용합니다.
 
 ## 상태 수를 줄이되 유력한 후보를 보존
 
 Memory-2 PAM4를 전체 상태로 표현하면 이전 심볼 두 개의 조합으로 16개 상태가 필요합니다. 상태·분기를 모두 유지하면 연산량뿐 아니라 survivor 정보를 저장하고 전달하는 비용도 커집니다. A-SSCC 논문의 DS-SBM RS-MLSD는 네 개의 visible state와 상태별 두 survivor branch를 이용해 유력한 후보를 남기는 방향을 제안합니다.
 
-이 선택은 후보 보존과 하드웨어 비용 사이의 절충입니다. 후보를 줄였다는 사실만으로 검출 품질이 유지되는 것은 아니므로, 기준 구조 대비 자원 비교와 실제 채널 조건의 오류 관측을 각각 확인해야 합니다. 논문의 8 active branches/symbol과 공개 코드의 `SEGMENT_BRANCH_SURVIVORS=2`는 각 버전의 정의에 따라 읽습니다.
+후보 수를 줄이면 연산·survivor 저장 비용이 감소합니다. 검출 품질은 채널 조건별 오류 관측으로 평가합니다. 논문은 8 active branches/symbol, 2026-09-09 RTL은 이전 상태별 nearest branch 후보 두 개와 destination rescue를 사용합니다.
 
 ## ACS의 심볼 간 의존성을 분할·행렬 결합으로 다루기
 
@@ -30,7 +30,7 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 
 ![A-SSCC 논문의 DS-SBM RS-MLSD 구조](../assets/mlsd_paper_architecture.png)
 
-출처: A-SSCC 2026 논문, p. 2 Fig. 4. **논문 구조**의 설명입니다. 공개 RTL 스냅샷의 타일 구성과 구분합니다. [공식 논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+출처: A-SSCC 2026, p. 2 Fig. 4. [논문 구조](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 ## 자원·정확도·지연을 함께 판단
 
@@ -40,14 +40,14 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 | 구간별 메트릭과 min-plus 결합 | 심볼별 ACS 의존성과 긴 조합 경로 | 구간 경계의 상태 연결, metric·survivor 전달 |
 | 고정소수점·파이프라인 | 자원 비용과 클록 주기 | 양자화·포화, 데이터와 valid의 정렬, 입력–출력 지연 |
 
-논문은 detector 비교에서 RS-ACS 대비 LUT 35.7%, FF 22.5% 감소를 보고합니다. 이 값은 해당 논문의 검출기 비교 조건에 대한 결과입니다. 전체 송수신기 자원, 저장소의 과거 placed 보고서, 최소 예제의 시뮬레이션 결과는 각각 다른 검증 항목입니다. [논문과 공개 소스의 관계](architecture.md#관련-논문과-공개-소스의-관계)
+**논문 detector 비교:** RS-ACS 대비 LUT 35.7%·FF 22.5% 감소. [구조·버전](architecture.md#논문rtl-버전)
 
-## 논문과 공개 코드에서 확인할 구현 범위
+## 논문·RTL 구조
 
-| 항목 | A-SSCC 논문 | 공개 RTL 스냅샷 |
+| 항목 | A-SSCC 논문 | 2026-09-09 RTL |
 |---|---|---|
 | 32-symbol 처리의 구간 표현 | 8개 4-symbol 구간의 계층적 결합 | xform export의 4개 8-lane 타일 |
 | 후보 유지의 설명 | 상태별 두 survivor branch, 8 active branches/symbol | 이전 상태별 nearest branch 후보 수와 destination rescue 로직 |
-| 확인 근거 | 논문 구조·검출기 자원 비교·RFSoC 측정 | 실제 파일·파라미터·테스트벤치·실행 로그 |
+| 확인 근거 | 논문 구조·검출기 자원 비교·RFSoC 측정 | 메트릭·FIR 회귀와 전체 어댑터 검사 |
 
-후속 Rank-2 연구나 논문 전체 검출기와의 알고리즘 대응은 별도의 검토 대상입니다. 이 문서의 코드 연결은 [구조 안내](architecture.md), 실행한 검증은 [검증 문서](validation.md)에서 확인할 수 있습니다.
+[RTL 구조](architecture.md) · [검증 결과](validation.md)

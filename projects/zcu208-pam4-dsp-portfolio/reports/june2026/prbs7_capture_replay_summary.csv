@@ -1,3 +1,0 @@
-"route","profile","loaded_frames","replay_frames","valid_rows","sel_prbs","pr0","pr1","pr2","level0","level1","level2","level3","thr0","thr1","thr2","lock","seen_bits","bits","errs","ber","ber_pct","csv"
-"1","700","1024","1024","1023","0","256","140","0","-22","-7","7","22","-14","0","14","0","65536","0","0","1.000000000000","100.000000%","E:/ZCU208_work/vivado/DSP_based_TRX_4GS_BER/tb/rx_replay/generated/iladata3_probe0_backend_fixed_prbs7_cmp_route1_eq_only_thr14.csv"
-"4","701","1024","1024","1023","0","256","140","0","-22","-7","7","22","-14","0","14","1","65536","64384","794","0.012332256461","1.233226%","E:/ZCU208_work/vivado/DSP_based_TRX_4GS_BER/tb/rx_replay/generated/iladata3_probe0_backend_fixed_prbs7_cmp_route4_mlsd_pr256_p140_p0_lvl22_7_thr14.csv"

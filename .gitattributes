@@ -1,9 +1,5 @@
-# Preserve historical source and board snapshot bytes across platforms.
-*.sv -text
-*.v -text
-*.vh -text
-*.svh -text
-*.xpr -text
-*.xci -text
-*.xdc -text
-*.bd -text
+*.md text eol=lf
+*.svg text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary

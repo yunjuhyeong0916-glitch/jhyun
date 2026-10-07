@@ -2,52 +2,49 @@
 
 **High-speed interfaces · DSP · RTL/FPGA**
 
-Circuit, modeling and RTL work connected to FPGA and measurement verification. This portfolio covers DSP transceiver research and LPDDR / USB PAM-3 projects, with design rationale, individual contributions and supporting evidence.
+Design and verification of PAM4 transceiver DSP, low-voltage LPDDR transmitters and USB PAM-3 interfaces. Work spans circuits, behavioral models and RTL, with FPGA and silicon evaluation.
 
 [DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB](#lpddr--usb-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [한국어](README.md)
 
 ## DSP transceiver research
 
-A **32-lane PAM4 DSP** connected to ZCU208 RFSoC to compensate channel distortion and recover received data.
+A **32-lane PAM4 DSP** integrated with ZCU208 RFSoC for channel compensation and received-data recovery.
 
 ### MLSD / RTL design
 
-Fixed-point MLSD RTL uses sequence information, with parallel structures for metric calculation, matrix composition and path recovery. The documentation connects the design choices to the published source and executable examples.
+Fixed-point MLSD with parallel metric calculation, min-plus matrix composition and path recovery. TX FIR and RX 21-tap FIR include data / valid alignment and runtime coefficient updates.
 
-[Design rationale](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Architecture and code](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [Minimal example](projects/zcu208-pam4-dsp-portfolio/examples/mlsd_minimal/)
+[Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Architecture](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
 
 ### FPGA implementation and board bring-up
 
-The DSP datapath integrates existing IP including RFDC. The guides connect Vivado builds and JTAG programming to the Vitis PS application, clock / RFDC initialization and runtime coefficient updates.
+Integrated RFDC, FIFO, DSP datapaths and a PS control application. Vivado / Vitis flow covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC **through an ISI board to ADC capture**.
 
-[Vivado / JTAG](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [Vitis / PS control / initialization](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [Full project](projects/zcu208-pam4-dsp-portfolio/)
+[Measurement results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 ## LPDDR / USB research
 
-Personal design and verification work is stated separately from joint silicon results.
-
-| Research | Direct work | Joint evaluation |
+| Research | Design and verification work | Joint silicon results |
 |---|---|---|
-| [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX circuit design / verification](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md); [TX Verilog modeling](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md) | Combo PHY TX eye and RX margins |
-| [USB PAM-3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX modeling / RTL verification](projects/high-speed-interface-research/docs/usb-tx-modeling.md); [RX CTLE modeling](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) | Fabricated TX differential-signal measurements |
+| [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX circuits](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog models](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), PCB / HFSS | 14 Gb/s/pin Combo PHY; TX eye 0.41 UI / 65.3 mV; RX margin 0.25 UI / 25 mV |
+| [USB PAM-3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX models / RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE models](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), differential-signal evaluation | 28-nm, 32-Gb/s TX with 150-preset four-tap FFE |
 
-The [PCB / HFSS page](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) connects layout, fabricated-board and bonding photos, simulated transfer curves and the measurement setup. The [LPDDR / USB research section](projects/high-speed-interface-research/) covers the related measurement work.
+[PCB / HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR / USB projects](projects/high-speed-interface-research/)
 
 ## Measurement / verification
 
-Both projects used the **86100D / 86118A sampling system, M8195A AWG, MP1800A BERT and E3631A power supply**. Equipment roles and automation examples are linked to source waveforms and instrument screens.
+Eye measurements with 86100D / 86118A and stimulus generation with M8195A AWG. MP1800A BERT, E3631A and I2C control support voltage / timing sweeps, early error termination, boundary search and CSV collection.
 
-[Equipment and automation](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye / Shmoo / AWG figures](projects/high-speed-interface-research/docs/verification-figures.md)
+[Equipment and automation](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye / Shmoo figures](projects/high-speed-interface-research/docs/verification-figures.md)
 
-**Published RTL verification status**
-
-| Item | Result | Scope |
+| Item | Result | Conditions / record |
 |---|---|---|
-| Three FIR tests | PASS · 2026-09-09 | Output equivalence under existing testbenches |
-| MLSD metric example | PASS · 2026-10-07 | RTL matrix checks and Python recovery on two synthetic channels |
-| Full MLSD adapter | FAIL · 2026-10-07 | Unresolved output mismatch; reproduction logs included |
+| Three FIR tests | PASS | 2026-09-09; output equivalence under existing testbenches |
+| MLSD metric verification | PASS | 2026-10-07; two synthetic channels, RTL matrices and Python recovery |
+| Full MLSD adapter | FAIL | 2026-10-07; output mismatch, data / valid alignment under review |
+| FPGA timing | WNS +0.083 ns / WHS +0.010 ns | Existing post-route physopt report dated 2026-06-29 |
 
-FPGA timing evidence comes from an existing 2026-06-29 implementation report. Paper-version system measurements and published-source execution results are documented with their respective [evidence and limits](projects/zcu208-pam4-dsp-portfolio/docs/validation.md).
+[Verification results and conditions](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 ## Research publications
 
@@ -57,10 +54,8 @@ FPGA timing evidence comes from an existing 2026-06-29 implementation report. Pa
 | LPDDR | [ICEIC 2025 · NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746) · [A-SSCC 2026 · Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
 | USB PAM-3 | [SMACD 2025 · TX model](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025 · RX model](https://doi.org/10.1109/SMACD65553.2025.11092233) · [IEEE TVLSI 2026 · fabricated TX](https://doi.org/10.1109/TVLSI.2026.3701343) |
 
-The [publication index](docs/publications.md) lists full titles and evidence scopes. Both A-SSCC 2026 papers are accepted for lecture presentations, with presentations forthcoming as of 2026-10-07.
+Both A-SSCC 2026 papers are accepted, with presentations forthcoming as of 2026-10-07. [Full publication list](docs/publications.md)
 
 ---
 
 [Repository map](docs/repository-map.md) · [Verification status](docs/validation-status.md) · [Glossary](docs/glossary.md)
-
-Detailed project guides are in Korean.
