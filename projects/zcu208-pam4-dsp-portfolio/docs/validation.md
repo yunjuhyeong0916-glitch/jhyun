@@ -1,4 +1,4 @@
-# PAM4 DSP 측정·검증 결과
+# A-SSCC PAM4 DSP 측정·검증 결과
 
 [프로젝트](../README.md) · [설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [논문](../../../docs/publications.md)
 
@@ -93,37 +93,8 @@
 
 ## FIR 출력 정합성
 
-**실행:** 2026-09-09, Vivado XSim 2022.2. 기준·비교 회로의 지연을 정렬한 뒤 32-lane 고정소수점 출력을 비교했습니다.
-
-| 검사 | 결과 | 전체 반복 수 | 지연 정렬 |
-|---|---|---:|---|
-| TX FIR systolic equivalence | PASS | 800 | 추가 지연 7 cycles |
-| RX EQ21 segmented/transposed equivalence | PASS | 900 | 비교 지연 7 cycles |
-| RX EQ21 old/segmented equivalence | PASS | 900 | 회로 간 지연 차이 3 cycles |
-
-출력 비교는 초기 대기 이후 시작했습니다. 입력은 테스트벤치의 의사난수·계수 조건입니다.
+2026-09-09 공통 RTL의 FIR 회귀 기록은 [학위논문 프로젝트의 검증 기준](../../pam4-mlsd-thesis/docs/validation.md#fir-출력-정합성)으로 옮겼습니다.
 
 ## MLSD 메트릭·전체 어댑터
 
-**실행:** 2026-10-07, Vivado XSim 2022.2. g₂=0인 memory-0/1 합성 채널 두 조건, PAM4 레벨 [−96, −32, 32, 96], signed 8-bit·Q8·L1 메트릭입니다.
-
-| 검사 | 결과 | 확인 범위 |
-|---|---|---|
-| Branch 산술·후보 보존·목적 상태 도달 | 두 조건 PASS | 조건별 512심볼 × 16원소 |
-| 8심볼 block min-plus 결합 | 두 조건 PASS | 조건별 block 행렬 1,024원소 |
-| RTL 행렬의 Python traceback | 두 조건 PASS | 조건별 512레벨 모두 기준값 일치 |
-| 기대값 변조 검출 | PASS | 기대 심볼 한 개 변경을 오류로 검출 |
-| 32-lane 전체 보드 어댑터 | 두 조건 FAIL | 첫 검사 word lane 1 기대 32 / 실제 −32 |
-
-![합성 채널에서 slicer와 RTL 행렬·Python 복원을 비교한 결과](../assets/mlsd_minimal_recovery.png)
-
-**합성 입력 결과:** 잔류 ISI 벡터에서 slicer 오류 203/512, RTL 행렬·Python 복원 오류 0/512. 메트릭 지연은 6 cycles, 테스트벤치 클록 주기는 8 ns입니다. 전체 RTL traceback, memory-2 이력과 overflow·포화 경계는 미검증입니다.
-
-## 검증 상태
-
-| 항목 | 상태 |
-|---|---|
-| FIR·메트릭 모듈 회귀 | PASS |
-| 전체 MLSD 어댑터 | FAIL·출력 불일치, 데이터·valid 정렬 원인 검토 필요 |
-| 2026-09-09 RTL의 보드 BER·무오류 관측 시간 | 미재현 |
-| 전체 MLSD 알고리즘 동등성·ASIC PPA·물리 signoff | 미검증 |
+2026-10-07의 메트릭 PASS·전체 어댑터 FAIL과 합성 입력 조건은 [학위논문 프로젝트의 10월 검증 결과](../../pam4-mlsd-thesis/docs/validation.md#10월-mlsd-메트릭전체-어댑터)에 정리했습니다.

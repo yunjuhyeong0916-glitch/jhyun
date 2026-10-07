@@ -8,19 +8,19 @@ Design and verification of PAM4 transceiver DSP, low-voltage LPDDR transmitters 
 
 ## DSP transceiver research
 
-A **32-lane PAM4 DSP** integrated with ZCU208 RFSoC for channel compensation and received-data recovery.
+Two projects: the A-SSCC RFSoC transceiver study and ongoing MLSD RTL verification for a master's thesis.
 
-### MLSD / RTL design
+### A-SSCC 2026 | ZCU208 PAM4 transceiver DSP
 
-Fixed-point MLSD with parallel metric calculation, min-plus matrix composition and path recovery. TX FIR and RX 21-tap FIR include data / valid alignment and runtime coefficient updates.
+Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and reduced-state MLSD with RFSoC. The Vivado / Vitis flow covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an ISI board to ADC capture.
 
-[Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Architecture](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+[A-SSCC project](projects/zcu208-pam4-dsp-portfolio/) · [Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
-### FPGA implementation and board bring-up
+### Master's thesis | PAM4 MLSD RTL design and verification
 
-Integrated RFDC, FIFO, DSP datapaths and a PS control application. Vivado / Vitis flow covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC **through an ISI board to ADC capture**.
+Ongoing verification of MLSD metric calculation and full-path recovery under residual ISI. In **October 2026**, metric checks and Python reference recovery passed on synthetic channels; the full RTL adapter's output mismatch remains under investigation.
 
-[Measurement results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[Thesis project](projects/pam4-mlsd-thesis/) · [Architecture and scope](projects/pam4-mlsd-thesis/docs/architecture.md) · [October verification](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ## LPDDR / USB research
 
@@ -37,14 +37,14 @@ Eye measurements with 86100D / 86118A and stimulus generation with M8195A AWG. M
 
 [Equipment and automation](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye / Shmoo figures](projects/high-speed-interface-research/docs/verification-figures.md)
 
-| Item | Result | Conditions / record |
+| Project | Item | Result and conditions |
 |---|---|---|
-| Three FIR tests | PASS | 2026-09-09; output equivalence under existing testbenches |
-| MLSD metric verification | PASS | 2026-10-07; two synthetic channels, RTL matrices and Python recovery |
-| Full MLSD adapter | FAIL | 2026-10-07; output mismatch, data / valid alignment under review |
-| FPGA timing | WNS +0.083 ns / WHS +0.010 ns | Existing post-route physopt report dated 2026-06-29 |
+| A-SSCC | FPGA timing | WNS +0.083 ns / WHS +0.010 ns; existing post-route physopt report dated 2026-06-29 |
+| Thesis / shared RTL baseline | Three FIR tests | PASS; output equivalence under existing testbenches, 2026-09-09 |
+| Thesis | MLSD metric verification | PASS; two synthetic channels, RTL matrices and Python recovery, 2026-10-07 |
+| Thesis | Full MLSD adapter | FAIL; output mismatch, data / valid alignment under review, 2026-10-07 |
 
-[Verification results and conditions](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[A-SSCC measurements and implementation](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) · [Thesis verification](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ## Research publications
 

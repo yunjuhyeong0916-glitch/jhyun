@@ -8,19 +8,19 @@ PAM4 송수신 DSP, LPDDR 저전압 TX와 USB PAM-3 인터페이스를 설계·�
 
 ## DSP 기반 송수신기 연구
 
-ZCU208 RFSoC에 **32-lane PAM4 DSP**를 연결해 채널 왜곡 보상과 수신 데이터 복원을 구현했습니다.
+RFSoC 기반 송수신 시스템의 채널 보상·데이터 복원을 구현했고, 학위논문 연구에서는 MLSD RTL의 단계별 정합성을 추가 검증하고 있습니다.
 
-### MLSD·RTL 설계
+### A-SSCC 2026 | ZCU208 PAM4 송수신 DSP
 
-MLSD를 고정소수점 RTL로 구현하고, 메트릭 계산·min-plus 행렬 결합·경로 복원을 병렬화했습니다. TX FIR와 RX 21-tap FIR에는 데이터·valid 지연 정렬과 런타임 계수 갱신을 적용했습니다.
+**32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·reduced-state MLSD를 RFSoC에 통합했습니다. Vivado·Vitis로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 ISI 보드를 거쳐 ADC로 수신 신호를 캡처했습니다.
 
-[설계 판단](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [설계 구조](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+[A-SSCC 프로젝트](projects/zcu208-pam4-dsp-portfolio/) · [설계 판단](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
-### FPGA 구현·보드 구동
+### 학위논문 연구 | PAM4 MLSD RTL 설계·검증
 
-RFDC·FIFO·DSP 데이터 경로와 PS 제어 앱을 통합했습니다. Vivado·Vitis로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성했습니다. 측정 신호는 DAC에서 **ISI 보드를 거쳐 ADC로 캡처**했습니다.
+잔류 ISI를 처리하는 MLSD의 메트릭 계산과 전체 경로 복원을 나누어 검증하고 있습니다. **2026년 10월** 합성 채널 검사에서 메트릭·Python 참조 복원은 통과했고, 전체 RTL 어댑터의 출력 불일치는 원인을 확인 중입니다.
 
-[측정·검증 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[학위논문 프로젝트](projects/pam4-mlsd-thesis/) · [구조·검증 범위](projects/pam4-mlsd-thesis/docs/architecture.md) · [10월 검증 결과](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ## LPDDR·USB 연구
 
@@ -37,14 +37,14 @@ RFDC·FIFO·DSP 데이터 경로와 PS 제어 앱을 통합했습니다. Vivado�
 
 [장비·자동화](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye·Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)
 
-| 항목 | 결과 | 조건·기록 |
+| 프로젝트 | 항목 | 결과·조건 |
 |---|---|---|
-| FIR 테스트 3종 | PASS | 2026-09-09 · 기존 테스트벤치의 출력 정합성 |
-| MLSD 메트릭 검증 | PASS | 2026-10-07 · 두 합성 채널, RTL 행렬 검사·Python 복원 |
-| MLSD 전체 어댑터 | FAIL | 2026-10-07 · 출력 불일치, 데이터·valid 정렬 검토 필요 |
-| FPGA 타이밍 | WNS +0.083 ns · WHS +0.010 ns | 2026-06-29 · 기존 post-route physopt 보고서 |
+| A-SSCC | FPGA 타이밍 | WNS +0.083 ns · WHS +0.010 ns, 2026-06-29 기존 post-route physopt 보고서 |
+| 학위논문·공통 RTL 기준 | FIR 테스트 3종 | PASS, 2026-09-09 기존 테스트벤치의 출력 정합성 |
+| 학위논문 | MLSD 메트릭 검증 | PASS, 2026-10-07 두 합성 채널·RTL 행렬 검사·Python 복원 |
+| 학위논문 | MLSD 전체 어댑터 | FAIL, 2026-10-07 출력 불일치·데이터·valid 정렬 검토 필요 |
 
-[검증 결과·조건](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[A-SSCC 측정·구현](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) · [학위논문 검증](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ## 연구 성과 논문
 
