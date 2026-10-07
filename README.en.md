@@ -18,7 +18,7 @@ Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and reduced-state MLSD wi
 
 ### Master's thesis | PAM4 MLSD RTL design and verification
 
-Ongoing verification of MLSD metric calculation and full-path recovery under residual ISI. In **October 2026**, metric checks and Python reference recovery passed on synthetic channels; the full RTL adapter's output mismatch remains under investigation.
+Ongoing research into MLSD under residual ISI, with separate verification of metric calculation and full-path recovery.
 
 [Thesis project](projects/pam4-mlsd-thesis/) · [Architecture and scope](projects/pam4-mlsd-thesis/docs/architecture.md) · [October verification](projects/pam4-mlsd-thesis/docs/validation.md)
 
@@ -36,13 +36,6 @@ Ongoing verification of MLSD metric calculation and full-path recovery under res
 Eye measurements with 86100D / 86118A and stimulus generation with M8195A AWG. MP1800A BERT, E3631A and I2C control support voltage / timing sweeps, early error termination, boundary search and CSV collection.
 
 [Equipment and automation](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye / Shmoo figures](projects/high-speed-interface-research/docs/verification-figures.md)
-
-| Project | Item | Result and conditions |
-|---|---|---|
-| A-SSCC | FPGA timing | WNS +0.083 ns / WHS +0.010 ns; existing post-route physopt report dated 2026-06-29 |
-| Thesis / shared RTL baseline | Three FIR tests | PASS; output equivalence under existing testbenches, 2026-09-09 |
-| Thesis | MLSD metric verification | PASS; two synthetic channels, RTL matrices and Python recovery, 2026-10-07 |
-| Thesis | Full MLSD adapter | FAIL; output mismatch, data / valid alignment under review, 2026-10-07 |
 
 [A-SSCC measurements and implementation](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) · [Thesis verification](projects/pam4-mlsd-thesis/docs/validation.md)
 

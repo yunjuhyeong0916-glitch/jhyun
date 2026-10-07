@@ -18,7 +18,7 @@ RFSoC 기반 송수신 시스템의 채널 보상·데이터 복원을 구현했
 
 ### 학위논문 연구 | PAM4 MLSD RTL 설계·검증
 
-잔류 ISI를 처리하는 MLSD의 메트릭 계산과 전체 경로 복원을 나누어 검증하고 있습니다. **2026년 10월** 합성 채널 검사에서 메트릭·Python 참조 복원은 통과했고, 전체 RTL 어댑터의 출력 불일치는 원인을 확인 중입니다.
+잔류 ISI를 처리하는 MLSD의 메트릭 계산과 전체 경로 복원을 나누어 검증하는 진행 중인 연구입니다.
 
 [학위논문 프로젝트](projects/pam4-mlsd-thesis/) · [구조·검증 범위](projects/pam4-mlsd-thesis/docs/architecture.md) · [10월 검증 결과](projects/pam4-mlsd-thesis/docs/validation.md)
 
@@ -36,13 +36,6 @@ RFSoC 기반 송수신 시스템의 채널 보상·데이터 복원을 구현했
 86100D·86118A로 Eye를 관측하고, M8195A AWG로 입력 신호를 공급했습니다. MP1800A BERT·E3631A·I2C를 연동해 전압·타이밍 스윕, 오류 조기 종료·경계 탐색과 CSV 수집을 구현했습니다.
 
 [장비·자동화](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye·Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)
-
-| 프로젝트 | 항목 | 결과·조건 |
-|---|---|---|
-| A-SSCC | FPGA 타이밍 | WNS +0.083 ns · WHS +0.010 ns, 2026-06-29 기존 post-route physopt 보고서 |
-| 학위논문·공통 RTL 기준 | FIR 테스트 3종 | PASS, 2026-09-09 기존 테스트벤치의 출력 정합성 |
-| 학위논문 | MLSD 메트릭 검증 | PASS, 2026-10-07 두 합성 채널·RTL 행렬 검사·Python 복원 |
-| 학위논문 | MLSD 전체 어댑터 | FAIL, 2026-10-07 출력 불일치·데이터·valid 정렬 검토 필요 |
 
 [A-SSCC 측정·구현](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) · [학위논문 검증](projects/pam4-mlsd-thesis/docs/validation.md)
 
