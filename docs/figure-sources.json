@@ -245,6 +245,198 @@
       "scope": "Existing shared Combo PHY integration-model write waveforms; top to bottom DQ0, DQ1, DQ2, DQ3; not RX BER evidence",
       "public_scope": "TX verification image explicitly authorized by the author; original presentation and IP source excluded",
       "reference": "projects/high-speed-interface-research/docs/lpddr-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_expected_values.png",
+      "asset_sha256": "d0a90c67dec18b42bc72b0b9724148d88fa40cee6d9f7528ed49836d26d9a541",
+      "source_collection": "original",
+      "source_filename": "1017_Logical_Layer_진행상황.pptx",
+      "source_sha256": "f9662e558047d9665e529fd9ce9ebc556cd129cbb8c32f199e51cb5d88a403a6",
+      "slide_1based": 34,
+      "embedded_media": "ppt/media/image91.png",
+      "pixels": [
+        1599,
+        589
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Manually calculated Data/F_out/Scramble_out; eight examples, first 14 bits per example",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_logical_roundtrip_error.png",
+      "asset_sha256": "a5d61689d07dece7d27bc405727b879687706efb93297b22997ca4f50c0b80e5",
+      "source_collection": "additional",
+      "source_filename": "241105 XMODEL TX Logical Layer Modeling&verification.pptx",
+      "source_sha256": "0c44fa257f06b4e56d97897ffd947ad24d51445e0026ddd940dbeba96830ebe1",
+      "slide_1based": 10,
+      "embedded_media": "ppt/media/image19.png",
+      "pixels": [
+        1919,
+        892
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "XMODEL logical roundtrip with 112 descramblers and 16 decoders; six observed error signals show lower 11 bits only; edge spikes retained",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_scrambler_off.png",
+      "asset_sha256": "6125710c6f2610b8733bd5ba217e0b97e2711c8a2a7e230dac69aae2dc30e45f",
+      "source_collection": "original",
+      "source_filename": "1023_Scrambler_on_off 추가자료.pptx",
+      "source_sha256": "ec967d56325368a2563960eb832aded804e42a2c72c0980c7cbde7f36df4b14f",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image17.png",
+      "pixels": [
+        1915,
+        855
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Bypass functional check; sel/rst_sel=1/1; encoder data selected and scrambler output held at zero",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_scrambler_on.png",
+      "asset_sha256": "2ee4f943c6c0ad02732ca5953fba4812770aaac0331f27956364b6e33e25dfc2",
+      "source_collection": "original",
+      "source_filename": "1023_Scrambler_on_off 추가자료.pptx",
+      "source_sha256": "ec967d56325368a2563960eb832aded804e42a2c72c0980c7cbde7f36df4b14f",
+      "slide_1based": 8,
+      "embedded_media": "ppt/media/image20.png",
+      "pixels": [
+        1914,
+        857
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Active functional check; sel/rst_sel=0/0; scrambled data selected; not an eye/jitter improvement result",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_serializer_7to1.jpg",
+      "asset_sha256": "79f65ce0e6658e66b020bb07bebb16238e45e886b99f4a4959e0ee0858cc0a6f",
+      "source_collection": "additional",
+      "source_filename": "241119 USB TX Serializer_112to1 verification.pptx",
+      "source_sha256": "d1dc87461b20af1d1ba8b3aaa0d09e26b25df6577e161f70b631623c6c989f5b",
+      "slide_1based": 2,
+      "embedded_media": "ppt/media/image5.JPG",
+      "pixels": [
+        1631,
+        793
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "One 7:1 path in the first 112-to-16 serializer stage; input order and serial output; not measured chip speed",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_posim_msb.png",
+      "asset_sha256": "84a14bff6cb3d1d9758da26930476d693eb79ba2e86e80df1a9d4737d51b84e4",
+      "source_collection": "original",
+      "source_filename": "250619_USB_TX_MPW 진행상황.pptx",
+      "source_sha256": "c9d30b72e981d12e51ef8e9c1bf091abbf32c893daa66ddc68f2e4098aefc8c6",
+      "slide_1based": 3,
+      "embedded_media": "ppt/media/image6.png",
+      "pixels": [
+        1634,
+        384
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "POSIM MSB[0:9] with idealized power labeling; existing functional comparison, not power-integrity signoff",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_vcs_msb.png",
+      "asset_sha256": "caabcf318fdc4bf1c78b27f814ff447fc02be601c725ff3e70a5e2b29f127d67",
+      "source_collection": "original",
+      "source_filename": "250619_USB_TX_MPW 진행상황.pptx",
+      "source_sha256": "c9d30b72e981d12e51ef8e9c1bf091abbf32c893daa66ddc68f2e4098aefc8c6",
+      "slide_1based": 3,
+      "embedded_media": "ppt/media/image7.png",
+      "pixels": [
+        1492,
+        300
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "VCS MSB[0:9] used for the corresponding POSIM comparison; initialization regions retained",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_posim_lsb.png",
+      "asset_sha256": "71b8e6be55dc96f8fb73a869330134d015971c7d65fcfca58835e287341b3ba0",
+      "source_collection": "original",
+      "source_filename": "250619_USB_TX_MPW 진행상황.pptx",
+      "source_sha256": "c9d30b72e981d12e51ef8e9c1bf091abbf32c893daa66ddc68f2e4098aefc8c6",
+      "slide_1based": 4,
+      "embedded_media": "ppt/media/image8.png",
+      "pixels": [
+        1633,
+        392
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "POSIM LSB[0:9] with idealized power labeling; existing functional comparison",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_vcs_lsb.png",
+      "asset_sha256": "8ebced275b674dd020c480db598854ebc795cffe4a5c83a174d73446f702e6d5",
+      "source_collection": "original",
+      "source_filename": "250619_USB_TX_MPW 진행상황.pptx",
+      "source_sha256": "c9d30b72e981d12e51ef8e9c1bf091abbf32c893daa66ddc68f2e4098aefc8c6",
+      "slide_1based": 4,
+      "embedded_media": "ppt/media/image9.png",
+      "pixels": [
+        1475,
+        256
+      ],
+      "extraction": "Original embedded image bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "VCS LSB[0:9] used for the corresponding POSIM comparison; initialization regions retained",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_electrical_architecture.png",
+      "asset_sha256": "d90214d9f2c3e5ff60ac017382a4929bfa6a9124e8b9cc5116af8cbb33a86f2b",
+      "source_collection": "electrical",
+      "source_filename": "250218_USB_TX_정리_V3.pptx",
+      "source_sha256": "069bdee44bf45d78fea4460999f74942b54e80d1ff40f787cdc3d9f12d694819",
+      "slide_1based": 3,
+      "embedded_media": "ppt/media/image5.png",
+      "pixels": [
+        1158,
+        662
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Joint electrical-layer overview from the project team's summary: MSB/LSB serializers, alignment and 4-tap FFE PAM3 driver; not a sole-analog-design attribution",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_channel_ffe_off.png",
+      "asset_sha256": "187ee0981a7b929dac9a42f576c45d4e78ee4f49e04b7ab364c554c0086f390c",
+      "source_collection": "electrical",
+      "source_filename": "1008_랩미팅_유용규_v2.pptx",
+      "source_sha256": "37f0ee82e8ea9602e6b046a1725e3de4faaccb01bf03dc8949a9587b7e7145e9",
+      "slide_1based": 5,
+      "embedded_media": "ppt/media/image10.png",
+      "pixels": [
+        760,
+        349
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Existing XMODEL channel-output eye, preset 0, C[-2],C[-1],C[0],C[1]=0,0,1,0; 25.6 GBaud, VDD 1 V; ideal model settings",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_tx_model_channel_ffe_preset7.png",
+      "asset_sha256": "71f2a799907183d3d7dab664b0d46a7ead56bf5cc4dfc6a1916ded434b8f4eba",
+      "source_collection": "electrical",
+      "source_filename": "1008_랩미팅_유용규_v2.pptx",
+      "source_sha256": "37f0ee82e8ea9602e6b046a1725e3de4faaccb01bf03dc8949a9587b7e7145e9",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image17.png",
+      "pixels": [
+        754,
+        382
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Existing XMODEL channel-output eye, preset 7, coefficients 0,-0.05,0.8,-0.15; same model/channel, different vertical axis range; not fabricated-TX measurement",
+      "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
     }
   ]
 }

@@ -15,6 +15,7 @@
 | LPDDR TX Verilog 동작 모델 | 2026-10-07 제공 소스·문서의 TX 구조 검토, 기존 VCS·Questa 파형·코드별 Eye·4-DQ 출력 이미지 확인 | [TX 모델링과 그림](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md); 20 Gb/s는 모델 조건, 새 시뮬레이션·합성·칩 측정 미실행 |
 | LPDDR Combo PHY | A-SSCC 공식 논문 정보의 14 Gb/s/pin·4-DQ 측정 조건과 Eye·RX 마진 | 공동 칩 측정 결과이며, 전체 PHY를 개인 설계했다고 표시하지 않음 |
 | USB4 PAM-3 | TX 40 Gb/s/lane·RX 25.6 GBaud/lane 모델 검증과 제작 TX 32 Gb/s 공동 측정 | [USB PAM-3](../projects/high-speed-interface-research/docs/usb4-pam3.md), 모델·실리콘·개인 기여를 구분 |
+| USB TX 모델링 개발 기록 | 2026-10-07 USB 관련 PPTX 126개·1,508장 검토, 논리·Serializer·FFE·채널·VCS/POSIM 기존 이미지 12개 추출 | [모델링 과정](../projects/high-speed-interface-research/docs/usb-tx-modeling.md); 하위 11-bit 오류 관측과 클록 엣지 글리치, ideal power labeling 조건을 명시. 새 시뮬레이션·P&R·칩 측정 미실행 |
 | 측정 장비 사용 | 이력서·측정 활동 자료와 작성자의 2026-10-07 확인: 86100D·86118A, M8195A, E3631A, MP1800A를 LPDDR·USB 모두에 사용 | [장비별 활용](../projects/high-speed-interface-research/docs/measurement-equipment.md), 제조사 사양은 개인 측정 성과와 구분 |
 | 검증 그림·AWG 설정 화면 | 2026-10-07 작성자 제공 논문·측정자료에서 추출, 축·주석·파형 유지 | [그림과 조건](../projects/high-speed-interface-research/docs/verification-figures.md), [출처·해시](figure-sources.json); 새 칩 측정 제외 |
 | MLSD 비교·변형 실험 | 소스 보존과 `.f` 참조 파일의 존재 점검 | 이번 정리에서 VCS 시뮬레이션 미실행 |

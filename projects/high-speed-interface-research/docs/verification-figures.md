@@ -6,6 +6,8 @@
 
 LPDDR Combo의 **TX Verilog 모델 검증 파형**은 [TX 모델링 상세 페이지](lpddr-tx-modeling.md)에 모았습니다. VCS·Questa 파형, pre-emphasis 코드별 Eye 4종과 4-DQ 통합 출력을 모델 조건과 함께 볼 수 있습니다.
 
+USB의 **TX 모델링·논리 복원·Scrambler on/off·Serializer·FFE·채널·VCS/POSIM 비교**는 [TX 모델링 과정과 검증 그림](usb-tx-modeling.md)에 모았습니다. 아래 제작 TX의 공동 실측 Eye와 검증 단계를 구분합니다.
+
 ## LPDDR TX: FFE 적용 전후의 시뮬레이션
 
 ![저전압 NRZ TX의 FFE 적용 전후 시뮬레이션 Eye](../assets/lpddr_tx_simulated_eye.png)

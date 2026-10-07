@@ -1,0 +1,1421 @@
+{
+  "reviewed_on": "2026-10-07",
+  "guide": "projects/high-speed-interface-research/docs/usb-tx-modeling.md",
+  "review_method": "Read-only PPTX text/structure inventory and visual inspection of candidate embedded images; no source files changed; no new simulator or hardware run",
+  "collections": [
+    {
+      "id": "original",
+      "label": "First USB_TX folder",
+      "pptx_count": 32,
+      "slide_count": 400
+    },
+    {
+      "id": "additional",
+      "label": "Additional TX folder",
+      "pptx_count": 26,
+      "slide_count": 201
+    },
+    {
+      "id": "electrical",
+      "label": "Third folder, USB project presentations at folder root",
+      "pptx_count": 68,
+      "slide_count": 907,
+      "excluded_subdirectory": "Linear_driver: separate later linear-driver research and third-party literature; contents not used in this TX modeling guide"
+    }
+  ],
+  "pptx_count": 126,
+  "slide_count": 1508,
+  "selected_image_count": 12,
+  "ownership_basis": "Author confirmed on 2026-10-07 their direct TX modeling/verification responsibility for the additional materials, including XMODEL integration and serializer verification. Whole analog TX and joint silicon measurements remain distinguished.",
+  "scope_notes": [
+    "Each deck is a development snapshot; filename dates and shared template creation timestamps are not used to prove event chronology.",
+    "18-combination test plan is distinct from retained calculations and six specific 8-bit examples.",
+    "Full logical roundtrip observes lower 11 bits of six error values and retains clock-edge glitches; no full-width equivalence proof claimed.",
+    "Scrambler on/off routing evidence does not establish eye, jitter or BER improvement; the 241210 model/SPICE discrepancy is explicitly described.",
+    "250619 MSB/LSB comparison uses idealized power labeling, not final power-integrity validation.",
+    "Model-paper 40 Gb/s/lane and fabricated-TX 32 Gb/s are separate results; no new speed metric inferred from draft presimulation sweeps.",
+    "Original decks, HDL/IP, standard excerpts, copied third-party paper figures and private PDK/server paths are not published.",
+    "Joint electrical architecture explains the user's logical-model connection; whole analog circuitry is not attributed to one designer.",
+    "Preset-0/preset-7 eyes are from an idealized XMODEL development model at 25.6 GBaud, VDD 1 V, 5 mA tail-current setting, channel-loss plot 9.89 dB at 12.8 GHz; their vertical axes differ. No maximum-speed or final-chip result inferred."
+  ],
+  "sources": [
+    {
+      "collection": "original",
+      "source_filename": "0910 Block diagram.pptx",
+      "source_sha256": "92400919e15e692e939dbbcdc972071079d14340c322287b990a954c19dae091",
+      "bytes": 225115,
+      "slide_count": 4,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "0911 ADD&MOD3.pptx",
+      "source_sha256": "e9c6a74c3a475033668846fd5fec845bbde021f1a24fd7beb422166f5969bdf3",
+      "bytes": 267462,
+      "slide_count": 5,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "0913_랩미팅_USB4.pptx",
+      "source_sha256": "94607e77314445d15292d0ce4bd3313d351c4704e40094aa56602cdcc06aeab6",
+      "bytes": 768655,
+      "slide_count": 15,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "0926_USB4_Logical_진행상황_윤주형.pptx",
+      "source_sha256": "ce7b092ef59d302e3722f163cc9d4d50237096fa60ea9dc37fec429a673862f2",
+      "bytes": 590058,
+      "slide_count": 21,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        4,
+        15
+      ],
+      "reason": "176-bit input, 16 encoders, 224-bit representation and 112-bit MSB/LSB; arithmetic typo in the old diagram excluded"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1004_USB4_Logical_Layer_진행상황_윤주형_임채현.pptx",
+      "source_sha256": "a5e63b6719e5fd81691093437988522f30611c8455c26692a118198c3b32f10d",
+      "bytes": 718235,
+      "slide_count": 17,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        11,
+        12,
+        14,
+        16
+      ],
+      "reason": "Descrambler test and reset/seed reference-sequence checks; historical role labels supplemented by the author's current scope confirmation"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1008_Logical_layer_진행상황_윤주형_임채현.pptx",
+      "source_sha256": "dc29cf59815afed5551c4a8cba4cf1a91dee43f3b4e21ad09f6320b5770ce657",
+      "bytes": 2145509,
+      "slide_count": 18,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        9,
+        10,
+        11,
+        15
+      ],
+      "reason": "Hierarchical import issue in the then-used environment, unit test and 112-instance extension; duplicate figures omitted"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1017_Logical_Layer_진행상황.pptx",
+      "source_sha256": "f9662e558047d9665e529fd9ce9ebc556cd129cbb8c32f199e51cb5d88a403a6",
+      "bytes": 2934269,
+      "slide_count": 47,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        14,
+        15,
+        17,
+        19,
+        20,
+        21,
+        31,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "reason": "Encoder branching/timing correction and independently calculated expected values; 18-combination plan distinguished from retained examples"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1021_Logical_Layer_진행상황.pptx",
+      "source_sha256": "79357a245f26b30db98b67bdb0d3f0164654a881b6e113e020080b7c66d66d11",
+      "bytes": 1055187,
+      "slide_count": 14,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1023_Scrambler_on_off 추가자료.pptx",
+      "source_sha256": "ec967d56325368a2563960eb832aded804e42a2c72c0980c7cbde7f36df4b14f",
+      "bytes": 749310,
+      "slide_count": 11,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        3,
+        6,
+        8,
+        10
+      ],
+      "reason": "On/off routing and unresolved interpretation of jitter changes; eye-performance claim excluded"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1024_Version 업데이트별 사용가능한 process conor simulation.pptx",
+      "source_sha256": "dd000273056df4398a7e7a95d0f14cc68fd1d61eaa99330abdb1f1995a37151d",
+      "bytes": 522529,
+      "slide_count": 8,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1029_Logical_Layer 진행상황.pptx",
+      "source_sha256": "1cdbd5329cc3c75ec4675b269f3d96352c5ea8b795bd4b6cb24adf1941f7cc78",
+      "bytes": 493772,
+      "slide_count": 9,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1105_Logical_Layer_진행상황.pptx",
+      "source_sha256": "6288d2b090226775ada4f02e4f34546feea4143c57bdc03f45b1f572f6bb4660",
+      "bytes": 1292463,
+      "slide_count": 20,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "1112_pnr진행상황.pptx",
+      "source_sha256": "d28faa65cf5e54c9c723997971b1201890719e608da74fa6e3bb8b02c29c5f32",
+      "bytes": 1016399,
+      "slide_count": 8,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "original",
+      "source_filename": "241119_PnR진행상황.pptx",
+      "source_sha256": "2ab94c0f70716880c42c2161a0bc87999b5d0051e05527ced87497fb2a2388eb",
+      "bytes": 842538,
+      "slide_count": 10,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "original",
+      "source_filename": "241126_PnR 진행상황.pptx",
+      "source_sha256": "1b0cf9dd0cb62fce3db87b06bfaf4fdaaead22f857b51f196428d5801805e7a4",
+      "bytes": 585703,
+      "slide_count": 9,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "original",
+      "source_filename": "241129_PnR진행상황_윤주형.pptx",
+      "source_sha256": "8597b63ed1fb6d9e2b1a39c33d32ae084d90229b7b73d6d3cf78567e02985387",
+      "bytes": 994258,
+      "slide_count": 10,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "original",
+      "source_filename": "241206_TX검증 진행상황.pptx",
+      "source_sha256": "7ad21760ba913b9d4ff1da645ffd9b658ddde1e3e040947ff907dd46c321a386",
+      "bytes": 957471,
+      "slide_count": 7,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "241210_TX검증_Scrambler문제.pptx",
+      "source_sha256": "cda393f5a1fc909cac827cd1d0981aa4dbbbcbea084f11503ede1f17f0967cad",
+      "bytes": 844750,
+      "slide_count": 8,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "241210_검증.pptx",
+      "source_sha256": "e998c481fade6abec8dc79dae311ec4b54a1bf06752be5657722cb50956609cb",
+      "bytes": 1164894,
+      "slide_count": 9,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reason": "Short-window test limitation, external/DC/repeating patterns and PRBS31; model/SPICE discrepancy retained as unresolved in this source"
+    },
+    {
+      "collection": "original",
+      "source_filename": "241226_CTLE 진행상황.pptx",
+      "source_sha256": "44b445d805a0f70d9ded3704d45efda7bfd3d831fb845017a6e49b88909cc0f9",
+      "bytes": 2489449,
+      "slide_count": 10,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250102_CLTE.pptx",
+      "source_sha256": "9bf2b3779bd4c120542ebc9f4f157312adeb40e786f57dbc3e461f200b6b05cb",
+      "bytes": 1454716,
+      "slide_count": 15,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250110_XMODEL CTLE.pptx",
+      "source_sha256": "c0fd76348f026ea0d6e7a3c7ece2351f056f9ab98b4ad0238ec7e1a677af6f2c",
+      "bytes": 770064,
+      "slide_count": 11,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250116_CTLE.pptx",
+      "source_sha256": "5e06239041d7d9deff773168c191c2ed31c42c9f3dd782162fdc03264238dce6",
+      "bytes": 841371,
+      "slide_count": 12,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250119_CTLE 진행상황.pptx",
+      "source_sha256": "408effbacd18c3cecc652e99774c8279060c91606a97e892498386226ff02d85",
+      "bytes": 1584768,
+      "slide_count": 13,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250203_RX 진행상황.pptx",
+      "source_sha256": "9839fb370ef4e3b6034f61c7533e5454c31a41df245b710745d1405c6d4e93b6",
+      "bytes": 1188132,
+      "slide_count": 18,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250205_RX_모델링.pptx",
+      "source_sha256": "f206c4e459144e8c68a2f5bd74c4be61dc85977d47d929e2c76f0f311e46df9d",
+      "bytes": 764026,
+      "slide_count": 8,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250208_RX_검증 진행상황.pptx",
+      "source_sha256": "275056dfe0e9d66d27a67b2dcd57d7edf4f39d1dce9efa2300118780e0fe1610",
+      "bytes": 441616,
+      "slide_count": 8,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250220_USB 진행 상황.pptx",
+      "source_sha256": "a87894c8e307b38b18beca6ac665c7639863eb101ab486fae1eec893b07a9a63",
+      "bytes": 340569,
+      "slide_count": 5,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250227 USB TX layout.pptx",
+      "source_sha256": "761f862ba164f826ee1aac776cb974d36ec8b851bd98b7e208d5b7696d3ebc7e",
+      "bytes": 859455,
+      "slide_count": 16,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250529_랩미팅자료_윤주형.pptx",
+      "source_sha256": "daa5b44a5b09888794d295e918231c82cc8aacb75ae7fbf23a84cab96845d6ff",
+      "bytes": 1711470,
+      "slide_count": 16,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250602_logical_layer posim 검증.pptx",
+      "source_sha256": "7d7e2927a8354a1d197459d4046a14fe28101e88521067fa5e871ba17331e372",
+      "bytes": 588273,
+      "slide_count": 8,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reason": "RTL/netlist VCS comparison and then-unresolved POSIM/power investigation; paths, floorplan images and speculative root causes excluded"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250619_USB_TX_MPW 진행상황.pptx",
+      "source_sha256": "c9d30b72e981d12e51ef8e9c1bf091abbf32c893daa66ddc68f2e4098aefc8c6",
+      "bytes": 1201603,
+      "slide_count": 10,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        3,
+        4,
+        8
+      ],
+      "reason": "MSB/LSB VCS/POSIM comparison under idealized power labeling; actual-power simulation was ongoing in this source"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "240912 ADD&MOD3 modeling by XMODEL.pptx",
+      "source_sha256": "1561d2390f4d799ba71e8131b236d4240d90798e097d5af5adc435fa8db523d4",
+      "bytes": 359984,
+      "slide_count": 6,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "240919 F function modeling by Verilog.pptx",
+      "source_sha256": "2f5eece0e7354ea6b3f59291905b5f44ce206edbcd342cd906fcf65d99169f08",
+      "bytes": 850124,
+      "slide_count": 6,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "240926 Scrambler modeling.pptx",
+      "source_sha256": "34e053372eb18782319032a1679abd26ce18dfecf1426703b2c79f86d0ef7bfb",
+      "bytes": 374967,
+      "slide_count": 4,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "240930 PRBS11&PRTS19 Gen check.pptx",
+      "source_sha256": "1f41bb5472fc115167185469218384414b9261a598be4133ff83bd73f71c6ff0",
+      "bytes": 365684,
+      "slide_count": 6,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241008 XMODEL import.pptx",
+      "source_sha256": "7e4f5de0da7bbd5008c3e0ad5809ef377410853edac2eeebc56bfcb569895fbd",
+      "bytes": 1329112,
+      "slide_count": 10,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        3,
+        4,
+        8
+      ],
+      "reason": "Corroborates import and unit-to-wide-bus progression; images duplicate the first collection"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241017 XMODEL import_Scrambler verification.pptx",
+      "source_sha256": "dd7f6512677890ed678c1bcc674e03ddf9a9401e8082ec6c2650775e2d523701",
+      "bytes": 1071078,
+      "slide_count": 9,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "reason": "Six observed 8-bit examples transcribed as a compact table; lower-8-bit difference signal is not full-width equality proof"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241024 verilog Decoder.pptx",
+      "source_sha256": "019bdbc1f105eae694c23038bd5088f142b8280be87573148ee9508360c9d126",
+      "bytes": 349046,
+      "slide_count": 3,
+      "disposition": "excluded_early_draft_duplicate_or_debug_detail",
+      "used_slides_1based": [],
+      "reason": "Early/repeated progress, import/library debug details or mixed-scope material superseded by clearer selected evidence"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241105 XMODEL TX Logical Layer Modeling&verification.pptx",
+      "source_sha256": "0c44fa257f06b4e56d97897ffd947ad24d51445e0026ddd940dbeba96830ebe1",
+      "bytes": 684180,
+      "slide_count": 10,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "reason": "Full logical reconstruction path, delay alignment and six lower-11-bit error observations; edge spikes explicitly retained"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241112 USB TX Serializer_block design.pptx",
+      "source_sha256": "716b42ab080858df4927b042455531bba3cd4c4a0ca2572c489e30c98f5a1919",
+      "bytes": 929983,
+      "slide_count": 11,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        9,
+        10
+      ],
+      "reason": "Serializer-stage context; repetitive unit waveforms omitted"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241119 USB TX Serializer_112to1 verification.pptx",
+      "source_sha256": "d1dc87461b20af1d1ba8b3aaa0d09e26b25df6577e161f70b631623c6c989f5b",
+      "bytes": 3558709,
+      "slide_count": 9,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2
+      ],
+      "reason": "112-to-16-to-4-to-1 serializer progression and selected 7:1 path waveform; presimulation speed sweeps and external reference figure excluded"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241126 USB Serializer_divide path&max speed.pptx",
+      "source_sha256": "612e5a8c20b7c492e1564bd1ef1b7130f27f56e448d3bbaa2d3847fbf6748699",
+      "bytes": 3099357,
+      "slide_count": 8,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241129 USB Serializer_jitter reduce.pptx",
+      "source_sha256": "eb5a02d26aea6d8e760fbc16958e970d906a8ce06bb9d6d2de7be02d7adc60bd",
+      "bytes": 1471776,
+      "slide_count": 7,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "241226 XMODEL Deserializer modeling.pptx",
+      "source_sha256": "9a9b0e22c58f98fb964197be340dbe84ac6dca43e31b7f5f7b1642c73f2802e2",
+      "bytes": 1873581,
+      "slide_count": 11,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250102 XMODEL CDR modeling.pptx",
+      "source_sha256": "14c35badda63236b760e4a1a6cbf7ccd09b29122d70142f28b166ca2abdb6ca2",
+      "bytes": 683974,
+      "slide_count": 10,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250110 XMODEL CDR_apply mutiphase Gen.pptx",
+      "source_sha256": "02d273388a72d52edc65e6298aa3c6197e142153b11736df074a8e5d8535a3eb",
+      "bytes": 703690,
+      "slide_count": 9,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250118 CTLE.pptx",
+      "source_sha256": "a4c454310ebe5ee7db521b5babc95637bec50d1e3e488508ccba76f36e6eaea9",
+      "bytes": 799001,
+      "slide_count": 6,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250203 XMODEL CDR_change sampling.pptx",
+      "source_sha256": "ad8e437d8e983c2009b4e5eda5b50141d47d506f05316fa2dea04f9c881739c8",
+      "bytes": 522409,
+      "slide_count": 4,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250206 XMODEL CDR_decrease PLL freq&jitter analysis.pptx",
+      "source_sha256": "95486b6d6f877f7aaec90a3cbcb414d10f07e82300a194eef6401b896d482be4",
+      "bytes": 658895,
+      "slide_count": 10,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250214 TER 진행상황.pptx",
+      "source_sha256": "98834555660514b27b81128650e996bc7eb8c539d6d792b28a9a9af1ae2b858d",
+      "bytes": 446460,
+      "slide_count": 5,
+      "disposition": "excluded_rx_or_receiver_evaluation",
+      "used_slides_1based": [],
+      "reason": "Outside the TX modeling narrative; retained unchanged in the author's original folder"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250227 USB TX layout.pptx",
+      "source_sha256": "cef25f26daf834eb3a246bf3ee0306f0c00e53e91b6d23f18e9c9ed6d1d3d60a",
+      "bytes": 531461,
+      "slide_count": 9,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250314 USB TX layout.pptx",
+      "source_sha256": "993d84f79b792bdd0d220cda64069027bb4a3f48705d9a23cad169b83200d486",
+      "bytes": 444011,
+      "slide_count": 9,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250320 USB TX layout.pptx",
+      "source_sha256": "bf5e4e704d64c9c1a104331743ce9b69709bcfb2184b5fe33a2b910744c684a7",
+      "bytes": 427356,
+      "slide_count": 6,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250327 USB TX 진행상황.pptx",
+      "source_sha256": "28d480be3fbdcb2f563df7fcee3cf73e762daad09f3cd9a56c891082c3658f09",
+      "bytes": 762929,
+      "slide_count": 12,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250403 USB TX_CLK DL.pptx",
+      "source_sha256": "cca69c7bb20bcd0b3921c5048c01c5badbcbc5a81630aa51c9b857f5d7abfb2c",
+      "bytes": 649569,
+      "slide_count": 8,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250410 USB TX_speed&area.pptx",
+      "source_sha256": "c31a683ca40d4fb416de9e5da299739fcada6a3c921237e5dec6ee7921a48685",
+      "bytes": 452106,
+      "slide_count": 7,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "260128_USB_TX_MPW_IR_DROP.pptx",
+      "source_sha256": "c2d42db1aba4f89e0d5d12e2a61a0b84b712ce2daa92a0387f2f07f3c16eb363",
+      "bytes": 669517,
+      "slide_count": 6,
+      "disposition": "excluded_physical_detail_or_separate_analysis",
+      "used_slides_1based": [],
+      "reason": "Layout, power/IR-drop or speed investigations are separate from the selected modeling explanation; no final-silicon or signoff claim inferred"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0730_USB4_MODELING.pptx",
+      "source_sha256": "485dcca6a7767a1ee7894dc260d7a23a120252258f166d1bb2d259fdee671811",
+      "bytes": 871558,
+      "slide_count": 12,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0806_랩미팅_자료_유용규.pptx",
+      "source_sha256": "2187e3ebd796351864bc159ddb139cdd34d40a6da33d856fca57c5b7a3b842ba",
+      "bytes": 840196,
+      "slide_count": 11,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0813_랩미팅_유용규.pptx",
+      "source_sha256": "8f9a3b59f2f800100b41fe61c9c07bbda8dd3201c0bf42090af35fef88bcb33f",
+      "bytes": 596651,
+      "slide_count": 10,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0820_유용규.pptx",
+      "source_sha256": "bcfbfe5b95dca95d67a047944777df0fe0fec4a375cb8668ceede2b7e564bd86",
+      "bytes": 542431,
+      "slide_count": 10,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0820_유용규_추가자료.pptx",
+      "source_sha256": "19045d60ac18d2e8f0f0084d1d9c5120858be0b1a716a68ecd2ad60bf709247d",
+      "bytes": 225574,
+      "slide_count": 3,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0827_랩미팅_유용규.pptx",
+      "source_sha256": "0462697f80e5d08dc010dfeca9f68938ec0048e79205dcf57a51894e1116352b",
+      "bytes": 3330342,
+      "slide_count": 32,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0903_유용규.pptx",
+      "source_sha256": "0b4cbe5feefcb0c1d1520cbfc817b61da2edcfa5dba2a227eaa3d4f22d089d93",
+      "bytes": 702959,
+      "slide_count": 12,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0908_랩미팅_유용규.pptx",
+      "source_sha256": "613791931b45973a3c5c59908f6143b27a3772e432d8fa1f2b5f185f47437fec",
+      "bytes": 1340759,
+      "slide_count": 19,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0908_유용규.pptx",
+      "source_sha256": "7fe5693174300f20df7c63f544aadb011dc36c1f9bf0d73199b05359367cf6fa",
+      "bytes": 1622252,
+      "slide_count": 33,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0909_랩미팅_USB.pptx",
+      "source_sha256": "c06c3c8da668243ae9baed929b5135fddbe34a6b1f8eeea745dbc203294cc69c",
+      "bytes": 1341911,
+      "slide_count": 19,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0909_랩미팅_USB4.pptx",
+      "source_sha256": "06d0a4ff2f9296f5611b0310e5c294800742eedc958941c4c3c69e49610d9a1b",
+      "bytes": 1341909,
+      "slide_count": 19,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0913_랩미팅_USB4.pptx",
+      "source_sha256": "a46c2f70515a075029a628a71285f375f1bf87dd1520ee26ae613b639edf113f",
+      "bytes": 903999,
+      "slide_count": 20,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0923_랩미팅_유용규.pptx",
+      "source_sha256": "2b3f10b0ba5f7c4fbed47111f756faed4fdd70693d4b7e8078fe347bf36c8b48",
+      "bytes": 530745,
+      "slide_count": 16,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0926_랩미팅_유용규.pptx",
+      "source_sha256": "0f57991247db763e45b3b2b40e43872b0792ac4ec505ac53eaf27a5d489b50fd",
+      "bytes": 736667,
+      "slide_count": 26,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "0930_랩미팅_유용규.pptx",
+      "source_sha256": "6289e5b5cedb9d08ebf2ed5cf3fc0b006c81cc5c36e26d2c49f20dd841cf1ae9",
+      "bytes": 270930,
+      "slide_count": 6,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1002_랩미팅_유용규.pptx",
+      "source_sha256": "b219a0b922aaf1372302f40f96a9f9151dbcef315d03f8a2c8c117e856791bb3",
+      "bytes": 367583,
+      "slide_count": 8,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1004_랩미팅_유용규.pptx",
+      "source_sha256": "c4f8f010fea9ff8b9626ed995d4d685e74cb7fefb6322a17e65f822ca183585a",
+      "bytes": 368878,
+      "slide_count": 8,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1008_랩미팅_유용규.pptx",
+      "source_sha256": "44d68afaf3fd34179cf6a899a06a0edc27f9ce3cff441c23781a3d3fe9a9b295",
+      "bytes": 2505314,
+      "slide_count": 53,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1008_랩미팅_유용규_v2.pptx",
+      "source_sha256": "37f0ee82e8ea9602e6b046a1725e3de4faaccb01bf03dc8949a9587b7e7145e9",
+      "bytes": 1159080,
+      "slide_count": 17,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        11,
+        12,
+        15,
+        16
+      ],
+      "reason": "Electrical model, channel-loss curve 9.89 dB at 12.8 GHz, selected preset-0/preset-7 eyes and explicitly idealized current/coefficient settings"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1014_랩미팅_유용규.pptx",
+      "source_sha256": "cec1577b6bc87bd296de56d208143e9d3f61811555f0082131adc45fccf8bc94",
+      "bytes": 692496,
+      "slide_count": 20,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1017_랩미팅_유용규.pptx",
+      "source_sha256": "8578b934f3abe07c2d5e51b6f5218ae9155f173679c2fe99a67c8783759f0cea",
+      "bytes": 690840,
+      "slide_count": 19,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1022_랩미팅_유용규.pptx",
+      "source_sha256": "78c0ec3b38d0dff9af922cf457cfe15c4d160cb6b1a33705fdb85cc1c16cfeb4",
+      "bytes": 440663,
+      "slide_count": 12,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1023_XWAVE_질문자료_광운대학교_유용규.pptx",
+      "source_sha256": "d9e1e20e54501273754e528e12ceb589cd3bda8be1d0ce37c35b062bef21a1d9",
+      "bytes": 592533,
+      "slide_count": 7,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1028_driver 유용규.pptx",
+      "source_sha256": "f5977015af65bb655baa5719859413d6092a4eb6a4a11110d77735f55ee2a5de",
+      "bytes": 282140,
+      "slide_count": 9,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1028_driver_유용규.pptx",
+      "source_sha256": "8e3d83836e125ef11632d513d37ded014bc0c44d989c90944cb6fa709f4ab88f",
+      "bytes": 282141,
+      "slide_count": 9,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1029_랩미팅_유용규.pptx",
+      "source_sha256": "63acdde8cb609ae0346ddeb9aea2e420cc1c2c73defe1ef54b9373687b5d2354",
+      "bytes": 894400,
+      "slide_count": 15,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        3,
+        4
+      ],
+      "reason": "Negative FFE coefficient expressed through positive current magnitude and inverted differential input; retained as model-to-circuit explanation, not a new measured result"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1105_랩미팅_유용규.pptx",
+      "source_sha256": "5654cb14442389b0894b426fb3009a58dfbe647c68b3b191fed0eb875f838eac",
+      "bytes": 963287,
+      "slide_count": 19,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1111_랩미팅_유용규.pptx",
+      "source_sha256": "213ff028abb43ccb6a379a0cf8d9c314e3ae6207df79cdfd1550365263f7472e",
+      "bytes": 156713,
+      "slide_count": 2,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1111_랩미팅_유용규_2.pptx",
+      "source_sha256": "568fc412f06b09f9f2570968c4439e2fe0cc5216f2bd7f97da6a6418b5478735",
+      "bytes": 489503,
+      "slide_count": 19,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1112_랩미팅_유용규.pptx",
+      "source_sha256": "adbe5c1cb81a4eec0e2b7d7795d90b29632ce899eae626ab6c87ed3058b1124b",
+      "bytes": 489505,
+      "slide_count": 19,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1115_진행상황.pptx",
+      "source_sha256": "6cd2037844ffa806a394aca431fae69570f2f2be0b0f797b417eeed3d0d2a4c3",
+      "bytes": 806345,
+      "slide_count": 12,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1119_랩미팅_V2.pptx",
+      "source_sha256": "c913d8bb94d0fc6da50b56511a1071d83bad9377eec9462b57143c122c6a7510",
+      "bytes": 886817,
+      "slide_count": 17,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1119_랩미팅_유용규.pptx",
+      "source_sha256": "c2dac6a0f706abc9ee3116b148f2b5314ed6235538774b9a397ec4e9c4626db3",
+      "bytes": 886828,
+      "slide_count": 17,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1126_랩미팅_유용규.pptx",
+      "source_sha256": "8cba88d9a3827d08f87a872d667defcd56d38e27899e643449f8ddb9f019bcfa",
+      "bytes": 585976,
+      "slide_count": 10,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1129_진행상황.pptx",
+      "source_sha256": "f8ac137d99589258033a79bc9c04e671f1d5fa0908fc04b5777047843e1e5a36",
+      "bytes": 488250,
+      "slide_count": 10,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1204_유용규.pptx",
+      "source_sha256": "114fe2819178abab95de656c5da0cf649498e9a54483ddd8fcc4bfb3d5ea7d9f",
+      "bytes": 649832,
+      "slide_count": 9,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1206_진행상황_유용규.pptx",
+      "source_sha256": "fad17105b160c9067b30c9e6d9b9c83dd96921503d1ed47c394dbaf70a5844e1",
+      "bytes": 495444,
+      "slide_count": 5,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1210_랩미팅_유용규 1.pptx",
+      "source_sha256": "892e820248fc49796f70042f1176a01a03365e0c417152bf5a6b016635e16b1d",
+      "bytes": 448379,
+      "slide_count": 5,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1210_랩미팅_유용규.pptx",
+      "source_sha256": "1851cd86651da0e5ffe02be2ab1ac3b7a2926bfa500dd70693e3ab46a62bc707",
+      "bytes": 1407464,
+      "slide_count": 13,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1213_진행자료_유용규.pptx",
+      "source_sha256": "d1f7214add7e64d2f5f61df4aa8e31d08679e0b75ec5f5a0262902f3fc48f4bf",
+      "bytes": 469198,
+      "slide_count": 13,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1217_랩미팅_자료_유용규.pptx",
+      "source_sha256": "04eb823b38de518e21eb50ee16c9f741d813f75998713e20234c21badbda8736",
+      "bytes": 871343,
+      "slide_count": 11,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1220_진행상황.pptx",
+      "source_sha256": "4c6ecaa1cc13a83c54343c40fd49719b8daff8bc184d7baea7d71a0dc6d16ac1",
+      "bytes": 592148,
+      "slide_count": 8,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1226_랩미팅.pptx",
+      "source_sha256": "e84ba099c20188c1bffb38a7577e7507aa828c37a47249a500d0ce31cf2b68cf",
+      "bytes": 893175,
+      "slide_count": 14,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "241210_랩미팅.pptx",
+      "source_sha256": "710ea03190dabc8d6a96dbbc12976dc87b84c0dd9bc8f1c717561e00bb13fa21",
+      "bytes": 839277,
+      "slide_count": 8,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250102_유용규.pptx",
+      "source_sha256": "15ab19cf849894163ca1f304cff7799a45a8f822ac941c0f44c0c7324649ba11",
+      "bytes": 570914,
+      "slide_count": 10,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250109_유용규.pptx",
+      "source_sha256": "6588da55883e24907b3b0b722f568ae617fa79007a626dc16b17cfe66a2b6ace",
+      "bytes": 2211743,
+      "slide_count": 29,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250115_유용규.pptx",
+      "source_sha256": "acb848fded2ea4af429c11736cdb1bc91e2bd1e459107876e0d424b4b1ea7448",
+      "bytes": 268682,
+      "slide_count": 3,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250203_진행자료.pptx",
+      "source_sha256": "a6fdda61c7a7a21f1e7be2ad31aed9e25f351f1916976be01dad4830015f8821",
+      "bytes": 256520,
+      "slide_count": 5,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250206 랩미팅_유용규.pptx",
+      "source_sha256": "143f7f3e407663b3993867157215e9e7213409232a9ec888070921c0043d1d34",
+      "bytes": 1182093,
+      "slide_count": 19,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250209_TRX_BER_검증.pptx",
+      "source_sha256": "059d5e270f3e35dc0574f68a8407ba6a7d3eaa79a3b872ec1cf99c1421583832",
+      "bytes": 1121216,
+      "slide_count": 7,
+      "disposition": "excluded_receiver_or_error_rate_analysis",
+      "used_slides_1based": [],
+      "reason": "Separate RX/end-to-end analysis, outside the selected TX modeling explanation"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250210_TER측정.pptx",
+      "source_sha256": "c7bba9f6dbfb2298856b90fd17af6413a78f3a03eb1df12a199b9ee1835616d8",
+      "bytes": 339398,
+      "slide_count": 13,
+      "disposition": "excluded_receiver_or_error_rate_analysis",
+      "used_slides_1based": [],
+      "reason": "Separate RX/end-to-end analysis, outside the selected TX modeling explanation"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250217_Bathtub.pptx",
+      "source_sha256": "656fc84177d602c8223d411a9d4ca1eb0fc7948adb0e20ec4bbecd757474f175",
+      "bytes": 815360,
+      "slide_count": 8,
+      "disposition": "excluded_receiver_or_error_rate_analysis",
+      "used_slides_1based": [],
+      "reason": "Separate RX/end-to-end analysis, outside the selected TX modeling explanation"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250218_USB_TX_정리.pptx",
+      "source_sha256": "b292e8a4b22c3e47e161f67a4c85b5830977d7fa88cc53855a66f7d265974d97",
+      "bytes": 638350,
+      "slide_count": 10,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250218_USB_TX_정리_V2.pptx",
+      "source_sha256": "f4454b9d76848fbbd390e5d7203c90cf94ac884cd7778f7f2a5e8f8d885570d2",
+      "bytes": 886025,
+      "slide_count": 13,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250218_USB_TX_정리_V3.pptx",
+      "source_sha256": "069bdee44bf45d78fea4460999f74942b54e80d1ff40f787cdc3d9f12d694819",
+      "bytes": 873784,
+      "slide_count": 13,
+      "disposition": "selected_explanation_or_evidence",
+      "used_slides_1based": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "reason": "Team's electrical architecture summary and FFE delay/shuffler connection; copied reference-circuit material on slide 7 is not published"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250220_유용규(측정).pptx",
+      "source_sha256": "019d5cff04062ffa5f076b3f269eb461396114f855d9e075825f9dc3d4de4b4a",
+      "bytes": 468525,
+      "slide_count": 8,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250227_유용규.pptx",
+      "source_sha256": "a988a789eafa6325f1e5f542c4de5bb618ca5dac9eeac2189743c871a3102b7a",
+      "bytes": 271185,
+      "slide_count": 10,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250313_랩미팅_유용규.pptx",
+      "source_sha256": "2478ba599d30c57214b76bb59202eac07dd9edc9acbc6e31cab4a8ea8625077e",
+      "bytes": 477165,
+      "slide_count": 12,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250416_USB_랩미팅.pptx",
+      "source_sha256": "537b820da7a5429c48bc2b01a0ca6fecfcaba20411aaf7a3644d5b349b0b6e36",
+      "bytes": 1490963,
+      "slide_count": 15,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250424_USB랩미팅.pptx",
+      "source_sha256": "3587a435a3baa76ffa3fe8bd67f174dacd7f2379b7853daf91a07281ad367141",
+      "bytes": 491714,
+      "slide_count": 8,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250501_랩미팅.pptx",
+      "source_sha256": "2ad5572ac25f7fc64948651579c1a565baac42ba770aa4deb2daf4cf1a026680",
+      "bytes": 685549,
+      "slide_count": 9,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250529 USB TX 최적화 진행상황.pptx",
+      "source_sha256": "d2eae0144445e886a5dca0f968abf80893697b196fa42ff0439c1ccfb5a77c72",
+      "bytes": 1007051,
+      "slide_count": 12,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250602 USB TX 최적화 진행상황.pptx",
+      "source_sha256": "302d8894e8479435b2c6ef75b7e1d1314e0f735d3cf0b6653bcdc4cc88c7c8e1",
+      "bytes": 1223010,
+      "slide_count": 17,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250604 USB TX 최적화 진행상황.pptx",
+      "source_sha256": "9433908762d0536018681379a57328bba006e0e7951bd4cdc3fd51236cf327f5",
+      "bytes": 1084759,
+      "slide_count": 15,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250605 USB TX 최적화 진행상황.pptx",
+      "source_sha256": "7a62319231383e7cfc04bb0bc66f4831fc3df6d806a7f875cce1a914a77e06f6",
+      "bytes": 1084746,
+      "slide_count": 15,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250612_USB_진행상황.pptx",
+      "source_sha256": "4f7af8af6fa70d2333269ad0f204a7cf9aaa057f2125858767d953d9e11d604d",
+      "bytes": 3893720,
+      "slide_count": 14,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250622 현재 정리 자료.pptx",
+      "source_sha256": "1e1a85f3f873f93a4b4f799a47e4e3ca2c8a6fdc304ea93bcdfe152af76f92e9",
+      "bytes": 283069,
+      "slide_count": 4,
+      "disposition": "excluded_duplicate_draft_or_separate_circuit_investigation",
+      "used_slides_1based": [],
+      "reason": "Repeated progress, specification/reference excerpts, alternate/presimulation circuit iterations, layout/power/debug or mixed-scope material; clearer selected sources used instead"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "NICS PPT 템플릿.pptx",
+      "source_sha256": "ea60748d730e1162274aaf1baecad09445f12b2b705b268245cfee8d40009c6f",
+      "bytes": 210716,
+      "slide_count": 2,
+      "disposition": "excluded_template",
+      "used_slides_1based": [],
+      "reason": "Empty presentation template, not project evidence"
+    }
+  ],
+  "selected_assets": [
+    "projects/high-speed-interface-research/assets/usb_tx_model_expected_values.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_logical_roundtrip_error.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_scrambler_off.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_scrambler_on.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_serializer_7to1.jpg",
+    "projects/high-speed-interface-research/assets/usb_tx_model_posim_msb.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_vcs_msb.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_posim_lsb.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_vcs_lsb.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_electrical_architecture.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_channel_ffe_off.png",
+    "projects/high-speed-interface-research/assets/usb_tx_model_channel_ffe_preset7.png"
+  ]
+}
