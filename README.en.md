@@ -16,7 +16,7 @@ Compared the signal paths, candidate retention and frame-boundary updates of the
 
 [Thesis project](projects/pam4-mlsd-thesis/) · [Architecture comparison](projects/pam4-mlsd-thesis/docs/architecture.md) · [Model and RTL results](projects/pam4-mlsd-thesis/docs/validation.md)
 
-### Journal preparation | DP-SMM design and verification
+### Journal preparation | DP-SMM design and verification (in progress)
 
 Designed a detector that composes segment metric matrices in parallel to reduce symbol-by-symbol path-metric dependencies. Each matrix entry retains two path proposals, which are rescored using actual symbol history before final selection. RTL verification and FPGA implementation are documented; board measurements are planned.
 

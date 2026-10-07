@@ -5,7 +5,7 @@
 | 분야 | 설계 | 결과 |
 |---|---|---|
 | 학위논문 · DS-SBM·DP-SMM 비교 (진행 중) | [프로젝트](../projects/pam4-mlsd-thesis/), [구조 비교](../projects/pam4-mlsd-thesis/docs/architecture.md) | [모델·RTL 비교 결과](../projects/pam4-mlsd-thesis/docs/validation.md) |
-| Journal 준비 · DP-SMM | [프로젝트](../projects/dp-smm-journal/), [검출기 구조](../projects/dp-smm-journal/docs/architecture.md) | [RTL 검증·FPGA 구현](../projects/dp-smm-journal/docs/validation.md) |
+| Journal 준비 · DP-SMM (진행 중) | [프로젝트](../projects/dp-smm-journal/), [검출기 구조](../projects/dp-smm-journal/docs/architecture.md) | [RTL 검증·FPGA 구현](../projects/dp-smm-journal/docs/validation.md) |
 | A-SSCC · DS-SBM PAM4 DSP | [구조](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md), [DS-SBM 설계 판단](../projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) | [ISI 보드 측정·FPGA 구현·ADC 분석](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md) |
 | LPDDR | [TX 회로](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX 모델](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md) | [회로·모델·제작 칩 측정](../projects/high-speed-interface-research/docs/lpddr.md) |
 | USB PAM-3 | [TX 모델](../projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) | [모델·제작 TX 측정](../projects/high-speed-interface-research/docs/usb4-pam3.md) |

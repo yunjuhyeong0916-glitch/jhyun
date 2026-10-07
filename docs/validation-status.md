@@ -15,7 +15,7 @@
 
 [동일 입력 비교·RTL 검증 조건](../projects/pam4-mlsd-thesis/docs/validation.md).
 
-## Journal 준비 | DP-SMM
+## Journal 준비 | DP-SMM (진행 중)
 
 | 항목 | 결과 | 조건·출처 |
 |---|---|---|

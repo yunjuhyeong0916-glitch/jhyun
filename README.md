@@ -16,7 +16,7 @@ PAM4 송수신 DSP, LPDDR 저전압 TX와 USB PAM-3 인터페이스를 설계·�
 
 [학위논문 프로젝트](projects/pam4-mlsd-thesis/) · [구조 비교](projects/pam4-mlsd-thesis/docs/architecture.md) · [모델·RTL 비교 결과](projects/pam4-mlsd-thesis/docs/validation.md)
 
-### Journal 준비 | DP-SMM 설계·검증
+### Journal 준비 | DP-SMM 설계·검증 (진행 중)
 
 심볼별 경로 메트릭 갱신의 의존성을 줄이기 위해 구간 메트릭 행렬을 병렬 합성하는 검출기를 설계했습니다. 행렬 원소마다 두 경로 후보를 보존하고, 실제 심볼 이력으로 비용을 다시 계산해 경로를 선택합니다. RTL 정합성과 FPGA 구현을 정리했으며, 보드 실측은 예정입니다.
 
