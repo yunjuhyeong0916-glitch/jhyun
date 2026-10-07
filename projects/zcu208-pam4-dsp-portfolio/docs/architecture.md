@@ -1,6 +1,6 @@
 # A-SSCC DS-SBM PAM4 DSP 설계 구조
 
-[프로젝트](../README.md) · [MLSD 설계 판단](design-decisions.md) · [측정·검증 결과](validation.md)
+[프로젝트](../README.md) · [MLSD 설계 판단](design-decisions.md) · [Vitis·FPGA 구동](vitis-bringup.md) · [측정·검증 결과](validation.md)
 
 ## 논문 전체 구조
 

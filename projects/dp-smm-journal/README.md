@@ -4,6 +4,14 @@
 
 [첫 화면](../../README.md) · [검출기 구조](docs/architecture.md) · [RTL 검증·FPGA 구현](docs/validation.md) · [DS-SBM·DP-SMM 비교 연구](../pam4-mlsd-thesis/)
 
+**DP-SMM 특허 출원 준비 중.**
+
+## 행렬 원소마다 두 경로 보존
+
+<img src="assets/dp_smm_two_path_entry.jpg" alt="동일한 시작·종료 상태를 잇는 rank-0·rank-1 경로와 행렬 원소의 두 경로 레코드" width="760">
+
+같은 시작·종료 상태를 연결하는 두 경로를 한 행렬 원소에 남깁니다. 빨강·파랑은 제안 비용으로 정한 경로 순위이며, 최종 경로는 실제 심볼 이력과 유입 PM을 반영해 선택합니다.
+
 ## 32심볼 병렬 처리 구조
 
 ![DP-SMM의 32심볼 프레임 분할과 구간 행렬 합성·PM 갱신·경로 복원](assets/dp_smm_frame_schedule.jpg)

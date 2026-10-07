@@ -4,7 +4,11 @@
 
 PAM4 송수신 DSP, LPDDR 저전압 TX와 USB PAM-3 인터페이스를 설계·검증했습니다. 회로·동작 모델·RTL 구현과 FPGA·실리콘 평가를 수행했습니다.
 
-[DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB](#lpddrusb-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [English](README.en.md)
+[DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB](#lpddrusb-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch) · [English](README.en.md)
+
+[![ZCU208·XM655·ISI 보드의 PAM4 송수신 측정 구성과 채널 응답](projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_isi_measurement_setup.png)](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+
+ZCU208 RFSoC와 ISI 보드를 연결한 PAM4 송수신 실측 환경. [A-SSCC 측정 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 ## DSP 기반 송수신기 연구
 
@@ -20,13 +24,15 @@ PAM4 송수신 DSP, LPDDR 저전압 TX와 USB PAM-3 인터페이스를 설계·�
 
 심볼별 경로 메트릭 갱신의 의존성을 줄이기 위해 구간 메트릭 행렬을 병렬 합성하는 검출기를 설계했습니다. 행렬 원소마다 두 경로 후보를 보존하고, 실제 심볼 이력으로 비용을 다시 계산해 경로를 선택합니다. 참조 모델과 RTL의 일치를 확인하고 FPGA 배치배선을 수행했으며, 보드 실측을 준비하고 있습니다.
 
+**DP-SMM 특허 출원 준비 중.**
+
 [DP-SMM Journal 프로젝트](projects/dp-smm-journal/) · [검출기 구조](projects/dp-smm-journal/docs/architecture.md) · [RTL 검증·FPGA 구현](projects/dp-smm-journal/docs/validation.md)
 
 ### A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP
 
 ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를 통합했습니다. Vivado·Vitis로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 ISI 보드를 거쳐 ADC로 수신 신호를 캡처했습니다.
 
-[A-SSCC 프로젝트](projects/zcu208-pam4-dsp-portfolio/) · [설계 판단](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[A-SSCC 프로젝트](projects/zcu208-pam4-dsp-portfolio/) · [설계 판단](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis·FPGA 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 ## LPDDR·USB 연구
 

@@ -4,7 +4,11 @@
 
 Design and verification of PAM4 transceiver DSP, low-voltage LPDDR transmitters and USB PAM-3 interfaces. Work spans circuits, behavioral models and RTL, with FPGA and silicon evaluation.
 
-[DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB](#lpddr--usb-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [한국어](README.md)
+[DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB](#lpddr--usb-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [GitHub profile](https://github.com/yunjuhyeong0916-glitch) · [한국어](README.md)
+
+[![ZCU208, XM655 and ISI-board PAM4 measurement setup and channel response](projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_isi_measurement_setup.png)](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+
+PAM4 transceiver measurement setup using the ZCU208 RFSoC and an ISI board. [A-SSCC measurement results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 ## DSP transceiver research
 
@@ -20,13 +24,15 @@ Compared the signal paths, candidate retention and frame-boundary updates of the
 
 Designed a detector that composes segment metric matrices in parallel to reduce symbol-by-symbol path-metric dependencies. Each matrix entry retains two path proposals, which are rescored using actual symbol history before final selection. Verified the RTL against a reference model and completed FPGA place and route; board measurements are in preparation.
 
+**A patent application for DP-SMM is in preparation.**
+
 [DP-SMM journal project](projects/dp-smm-journal/) · [Detector architecture](projects/dp-smm-journal/docs/architecture.md) · [RTL verification and FPGA implementation](projects/dp-smm-journal/docs/validation.md)
 
 ### A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP
 
 Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with the ZCU208 RFSoC. The Vivado / Vitis flow covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an ISI board to ADC capture.
 
-[A-SSCC project](projects/zcu208-pam4-dsp-portfolio/) · [Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[A-SSCC project](projects/zcu208-pam4-dsp-portfolio/) · [Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis / FPGA bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 ## LPDDR / USB research
 

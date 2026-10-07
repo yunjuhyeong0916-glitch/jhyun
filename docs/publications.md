@@ -17,6 +17,7 @@
 
 - **학위논문 · DS-SBM·DP-SMM 비교 (진행 중):** 두 구조의 차이와 동일 입력의 후보 보존 효과를 평가했습니다. DP-SMM 실측은 예정입니다. [프로젝트](../projects/pam4-mlsd-thesis/)
 - **Journal · DP-SMM (진행 중):** *A Segmented Metric-Matrix-Based MLSD Architecture with Dual-Path Reduced-State Detection for PAM4 Wireline Transceivers on an RFSoC Platform*. 구간 메트릭 행렬의 두 경로 후보 보존·실제 이력 재평가와 FPGA 구현을 다루는 원고를 준비 중입니다. [프로젝트](../projects/dp-smm-journal/)
+- **DP-SMM 특허 출원 준비 중:** 행렬 원소별 두 경로 보존과 계층적 메트릭 합성을 이용한 PAM4 검출기 구조. [기술 개요](../projects/dp-smm-journal/)
 
 ## 관련 설계·결과
 

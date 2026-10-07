@@ -6,6 +6,10 @@
 
 ## 비교의 핵심
 
+![DS-SBM과 DP-SMM의 관측 입력·행렬 경로 보존·프레임 경계 갱신 비교](assets/thesis_architecture_comparison.png)
+
+왼쪽 DS-SBM은 행렬 원소별 한 경로를, 오른쪽 DP-SMM은 두 경로 후보와 이력 정보를 유지합니다. 프레임 경계에서 비용을 결합하는 방식까지 나란히 비교했습니다.
+
 | 항목 | DS-SBM | DP-SMM |
 |---|---|---|
 | 관측 신호 | 21-tap RX FFE 뒤 별도 PR FIR 출력 | 11-tap RX FFE 출력, PR 목표는 예상 샘플 계산에 사용 |
