@@ -1,6 +1,6 @@
 # USB TX 모델링: 논리 데이터에서 전기 계층까지
 
-[파트 개요](../README.md) · [USB 연구·실리콘 평가](usb4-pam3.md) · [측정 그림](verification-figures.md) · [논문·근거](evidence.md)
+[파트 개요](../README.md) · [USB 연구·실리콘 평가](usb4-pam3.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·근거](evidence.md)
 
 **TX 논리 RTL의 기대값을 확인하고, 그 출력을 XMODEL과 전기 계층 구현에 연결한 과정입니다.** 인코더·스크램블러의 데이터 형식을 맞추는 데서 시작해, 직접 계산한 값과의 비교, 모델 통합, 구현 후 시뮬레이터 간 출력 확인으로 검증 범위를 넓혔습니다.
 

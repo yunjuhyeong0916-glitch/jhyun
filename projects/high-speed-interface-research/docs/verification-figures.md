@@ -8,6 +8,8 @@ LPDDR Combo의 **TX Verilog 모델 검증 파형**은 [TX 모델링 상세 페�
 
 USB의 **TX 모델링·논리 복원·Scrambler on/off·Serializer·FFE·채널·VCS/POSIM 비교**는 [TX 모델링 과정과 검증 그림](usb-tx-modeling.md)에 모았습니다. 아래 제작 TX의 공동 실측 Eye와 검증 단계를 구분합니다.
 
+USB의 **RX CTLE 동작점·R/C 제어 AC 응답·입출력 Eye**는 [CTLE 모델링과 보상 조정](usb-rx-ctle-modeling.md)에 모았습니다. 단품 CTLE 모델, 공동 RX 통합과 제작 TX 측정의 범위를 각각 표시했습니다.
+
 ## LPDDR TX: FFE 적용 전후의 시뮬레이션
 
 ![저전압 NRZ TX의 FFE 적용 전후 시뮬레이션 Eye](../assets/lpddr_tx_simulated_eye.png)

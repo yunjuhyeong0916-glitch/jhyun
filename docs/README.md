@@ -10,4 +10,5 @@
 - [LPDDR·USB 검증 그림과 AWG 설정 사례](../projects/high-speed-interface-research/docs/verification-figures.md) · [그림 출처·해시](figure-sources.json)
 - [LPDDR Combo TX 모델링·직렬화·pre-emphasis 검증 파형](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md)
 - [USB TX 모델링·XMODEL 통합·Serializer·구현 후 비교](../projects/high-speed-interface-research/docs/usb-tx-modeling.md)
+- [USB RX CTLE 모델링·동작점·R/C 응답·보상 조정](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md)
 - [기술 용어 짧게 읽기](glossary.md)

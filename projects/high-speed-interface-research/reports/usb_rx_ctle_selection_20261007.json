@@ -1,0 +1,207 @@
+{
+  "reviewed_on": "2026-10-07",
+  "guide": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md",
+  "review_method": "Read-only source-deck text/structure review and visual inspection of candidate figures; five original PNGs preserved and two embedded EMF AC plots rendered with Pillow Windows GDI at 216 dpi; no simulator/hardware run",
+  "source_deck_count": 11,
+  "source_slide_count": 130,
+  "selected_image_count": 7,
+  "role_basis": "1129_진행상황.pptx slide 10 assigns CTLE to the author; author's CTLE development decks and team integration decks provide evidence. Whole RX sampler/DFE/CDR design and final integrated-model results are distinguished from individual CTLE work.",
+  "scope_notes": [
+    "Source filename dates label development snapshots; shared template creation timestamps are not used to establish chronology.",
+    "250119 operating-point settings and 250203 XMODEL/merged-RX settings belong to different configurations.",
+    "CL 50 fF is a modeling assumption in the 250203 source, not measured input capacitance.",
+    "Rctrl_lev/Cctrl_lev are model-control levels; no implemented hardware registers or automatic adaptation inferred.",
+    "250203 mid-level ripple and 250205 adjusted input/output pairs are not a controlled quantitative before/after experiment; no noise-spectrum attribution or global-optimum claim.",
+    "250205 plots use TX FFE off and scrambled data; exact final control-code vector is not specified on the selected slide.",
+    "RX paper 25.6 GBaud/lane is whole-receiver modeling; fabricated TX 32 Gb/s is a separate joint silicon result.",
+    "Negative-capacitor/HPF reference studies, copied third-party circuits/specification tables, PDK/server paths and raw IP source are excluded."
+  ],
+  "sources": [
+    {
+      "collection": "original",
+      "source_filename": "241226_CTLE 진행상황.pptx",
+      "source_sha256": "44b445d805a0f70d9ded3704d45efda7bfd3d831fb845017a6e49b88909cc0f9",
+      "bytes": 2489449,
+      "slide_count": 10,
+      "disposition": "superseded_initial_model",
+      "reviewed_slides_1based": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "reason": "Early RZ sweep and FFE/CTLE tests; later programmable-model and FFE-off input/output evidence selected for a shorter narrative"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250102_CLTE.pptx",
+      "source_sha256": "9bf2b3779bd4c120542ebc9f4f157312adeb40e786f57dbc3e461f200b6b05cb",
+      "bytes": 1454716,
+      "slide_count": 15,
+      "disposition": "excluded_literature_or_unresolved_early_design",
+      "reviewed_slides_1based": [
+        2,
+        3,
+        11,
+        12,
+        13,
+        15
+      ],
+      "reason": "Initial calculations and literature studies; uncertainty in gm/pole matching and copied reference circuits not promoted to final CTLE results"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250110_XMODEL CTLE.pptx",
+      "source_sha256": "c0fd76348f026ea0d6e7a3c7ece2351f056f9ab98b4ad0238ec7e1a677af6f2c",
+      "bytes": 770064,
+      "slide_count": 11,
+      "disposition": "excluded_literature_or_unresolved_early_design",
+      "reviewed_slides_1based": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "reason": "Candidate reference circuits, negative-capacitor/HPF study and current discrepancies; not claimed as a completed novel architecture"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250116_CTLE.pptx",
+      "source_sha256": "5e06239041d7d9deff773168c191c2ed31c42c9f3dd782162fdc03264238dce6",
+      "bytes": 841371,
+      "slide_count": 12,
+      "disposition": "superseded_operating_point_iteration",
+      "reviewed_slides_1based": [
+        2,
+        4,
+        11
+      ],
+      "reason": "Preliminary bias/AC work superseded by 250119 design-sequence correction; raw internal paths and iterative debugging omitted"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250119_CTLE 진행상황.pptx",
+      "source_sha256": "408effbacd18c3cecc652e99774c8279060c91606a97e892498386226ff02d85",
+      "bytes": 1584768,
+      "slide_count": 13,
+      "disposition": "selected_explanation_or_evidence",
+      "reviewed_slides_1based": [
+        2,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "reason": "Rationale for fixing VBIAS/VCM before RC response tuning and selected joint DC sweep; no questionable gm unit/value transcribed"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250203_RX 진행상황.pptx",
+      "source_sha256": "9839fb370ef4e3b6034f61c7533e5454c31a41df245b710745d1405c6d4e93b6",
+      "bytes": 1188132,
+      "slide_count": 18,
+      "disposition": "selected_explanation_or_evidence",
+      "reviewed_slides_1based": [
+        2,
+        4,
+        5,
+        6,
+        16,
+        17,
+        18
+      ],
+      "reason": "Programmable XMODEL CTLE, initial settings, R/C AC responses and integration common-mode/load changes; ideal PLL model disclosed"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250205_RX_모델링.pptx",
+      "source_sha256": "f206c4e459144e8c68a2f5bd74c4be61dc85977d47d929e2c76f0f311e46df9d",
+      "bytes": 764026,
+      "slide_count": 8,
+      "disposition": "selected_explanation_or_evidence",
+      "reviewed_slides_1based": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "reason": "Boosting adjustment and corresponding FFE-off scrambled-data CTLE input/output eyes; whole-TRX checker was still under investigation in this snapshot, so no full-link pass inferred"
+    },
+    {
+      "collection": "original",
+      "source_filename": "250208_RX_검증 진행상황.pptx",
+      "source_sha256": "275056dfe0e9d66d27a67b2dcd57d7edf4f39d1dce9efa2300118780e0fe1610",
+      "bytes": 441616,
+      "slide_count": 8,
+      "disposition": "excluded_whole_rx_checker_debug",
+      "reviewed_slides_1based": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reason": "SerDes/checker investigation outside the CTLE focus; finite pattern checks and probe failures do not establish CTLE-only BER"
+    },
+    {
+      "collection": "additional",
+      "source_filename": "250118 CTLE.pptx",
+      "source_sha256": "a4c454310ebe5ee7db521b5babc95637bec50d1e3e488508ccba76f36e6eaea9",
+      "bytes": 799001,
+      "slide_count": 6,
+      "disposition": "duplicate_supporting_dc_evidence",
+      "reviewed_slides_1based": [
+        4,
+        5
+      ],
+      "reason": "Same embedded DC sweep image as 250119 slide 8; retained once using the source with fuller design-rationale text"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "1129_진행상황.pptx",
+      "source_sha256": "f8ac137d99589258033a79bc9c04e671f1d5fa0908fc04b5777047843e1e5a36",
+      "bytes": 488250,
+      "slide_count": 10,
+      "disposition": "selected_role_context",
+      "reviewed_slides_1based": [
+        10
+      ],
+      "reason": "Contemporaneous RX task allocation names the author for CTLE; sampler/DFE and DeMUX assignments remain distinct"
+    },
+    {
+      "collection": "electrical",
+      "source_filename": "250206 랩미팅_유용규.pptx",
+      "source_sha256": "143f7f3e407663b3993867157215e9e7213409232a9ec888070921c0043d1d34",
+      "bytes": 1182093,
+      "slide_count": 19,
+      "disposition": "duplicate_or_joint_rx_context",
+      "reviewed_slides_1based": [
+        2,
+        4
+      ],
+      "reason": "Repeated CTLE adjustment/eye evidence and joint DFE results; DFE improvement figures are not attributed to CTLE alone"
+    }
+  ],
+  "selected_assets": [
+    "projects/high-speed-interface-research/assets/usb_rx_ctle_bias_dc_sweep.png",
+    "projects/high-speed-interface-research/assets/usb_rx_ctle_programmable_model.png",
+    "projects/high-speed-interface-research/assets/usb_rx_ctle_r_control_ac.png",
+    "projects/high-speed-interface-research/assets/usb_rx_ctle_c_control_ac.png",
+    "projects/high-speed-interface-research/assets/usb_rx_ctle_midlevel_ripple.png",
+    "projects/high-speed-interface-research/assets/usb_rx_ctle_input_eye_ffe_off.png",
+    "projects/high-speed-interface-research/assets/usb_rx_ctle_output_eye_ffe_off.png"
+  ]
+}

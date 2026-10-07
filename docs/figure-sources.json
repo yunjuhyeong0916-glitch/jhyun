@@ -1,6 +1,6 @@
 {
   "recorded_on": "2026-10-07",
-  "extraction": "Source PDF crops and original embedded slide images, plus an explicitly labeled synthetic-data plot from saved RTL metrics",
+  "extraction": "Source PDF crops, original embedded slide images and faithful rasterizations of embedded EMF plots, plus an explicitly labeled synthetic-data plot from saved RTL metrics",
   "figures": [
     {
       "asset": "projects/high-speed-interface-research/assets/lpddr_tx_simulated_eye.png",
@@ -437,6 +437,120 @@
       "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
       "scope": "Existing XMODEL channel-output eye, preset 7, coefficients 0,-0.05,0.8,-0.15; same model/channel, different vertical axis range; not fabricated-TX measurement",
       "reference": "projects/high-speed-interface-research/docs/usb-tx-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_rx_ctle_bias_dc_sweep.png",
+      "asset_sha256": "139b4d354198c2dcbccaf77c1f7d78270125bed876a22b5aac59ee34dcdcfc79",
+      "source_filename": "250119_CTLE 진행상황.pptx",
+      "source_sha256": "408effbacd18c3cecc652e99774c8279060c91606a97e892498386226ff02d85",
+      "slide_1based": 8,
+      "embedded_media": "ppt/media/image14.png",
+      "embedded_media_sha256": "139b4d354198c2dcbccaf77c1f7d78270125bed876a22b5aac59ee34dcdcfc79",
+      "pixels": [
+        1653,
+        781
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Existing DC input/bias sweep; source records VBIAS 0.5 V, VCM 0.8 V, target 5 mA and 300-mV input-range saturation check; snapshot-specific conditions",
+      "reference": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_rx_ctle_programmable_model.png",
+      "asset_sha256": "618c77e362fc27c59efb4ba80534f52a597821a3533a5b197101822cc72304c3",
+      "source_filename": "250203_RX 진행상황.pptx",
+      "source_sha256": "9839fb370ef4e3b6034f61c7533e5454c31a41df245b710745d1405c6d4e93b6",
+      "slide_1based": 5,
+      "embedded_media": "ppt/media/image7.png",
+      "embedded_media_sha256": "618c77e362fc27c59efb4ba80534f52a597821a3533a5b197101822cc72304c3",
+      "pixels": [
+        1049,
+        805
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Conventional-based XMODEL CTLE circuit; RZ/CZ model controls and current mirror; not fabricated RX layout or measured silicon",
+      "reference": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_rx_ctle_r_control_ac.png",
+      "asset_sha256": "ded23a38f77c8481bad3da318ebbabd6d9d1ad52f2142fff27fc308d6bf220c2",
+      "source_filename": "250203_RX 진행상황.pptx",
+      "source_sha256": "9839fb370ef4e3b6034f61c7533e5454c31a41df245b710745d1405c6d4e93b6",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image9.emf",
+      "embedded_media_sha256": "1f4dd803ee151aa965b7d329c692bb4b7f2680c4ad7d2bc6ddddc7abff7499d0",
+      "pixels": [
+        1995,
+        885
+      ],
+      "extraction": "Original embedded EMF rendered by Pillow Windows GDI renderer at 216 dpi; no redraw or curve edits",
+      "scope": "Existing XMODEL AC response to RZ control levels 1-4; original embedded EMF rendered, not a new simulation",
+      "reference": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md",
+      "render_dpi": 216
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_rx_ctle_c_control_ac.png",
+      "asset_sha256": "11c4c5e7b49926bc7bf208c219b475f9c0a4a89485ad9ed92fed7b67beafa80e",
+      "source_filename": "250203_RX 진행상황.pptx",
+      "source_sha256": "9839fb370ef4e3b6034f61c7533e5454c31a41df245b710745d1405c6d4e93b6",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image10.emf",
+      "embedded_media_sha256": "7a66a9a170cc6cb0ed19847807ba7ccb8fdf0e3f2d959b07423d3515e0d078a6",
+      "pixels": [
+        2065,
+        883
+      ],
+      "extraction": "Original embedded EMF rendered by Pillow Windows GDI renderer at 216 dpi; no redraw or curve edits",
+      "scope": "Existing XMODEL AC response to CZ control levels 1-4; original embedded EMF rendered, not a new simulation",
+      "reference": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md",
+      "render_dpi": 216
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_rx_ctle_midlevel_ripple.png",
+      "asset_sha256": "dbfe516cad1b9a108c13c2662377cd3f5b20b40cb2e29d46c028068f8a01940f",
+      "source_filename": "250203_RX 진행상황.pptx",
+      "source_sha256": "9839fb370ef4e3b6034f61c7533e5454c31a41df245b710745d1405c6d4e93b6",
+      "slide_1based": 17,
+      "embedded_media": "ppt/media/image33.png",
+      "embedded_media_sha256": "dbfe516cad1b9a108c13c2662377cd3f5b20b40cb2e29d46c028068f8a01940f",
+      "pixels": [
+        902,
+        383
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Earlier CTLE output eye with mid-level variation; not a controlled quantitative before/after comparison with later eyes",
+      "reference": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_rx_ctle_input_eye_ffe_off.png",
+      "asset_sha256": "2ec7266f2b335e1ba0bc837e8c398bbfd5a9241b6f79a72369fd5100dcfcd4e7",
+      "source_filename": "250205_RX_모델링.pptx",
+      "source_sha256": "f206c4e459144e8c68a2f5bd74c4be61dc85977d47d929e2c76f0f311e46df9d",
+      "slide_1based": 2,
+      "embedded_media": "ppt/media/image5.png",
+      "embedded_media_sha256": "2ec7266f2b335e1ba0bc837e8c398bbfd5a9241b6f79a72369fd5100dcfcd4e7",
+      "pixels": [
+        855,
+        390
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "CTLE input eye in the source's TX FFE-off scrambled-data model test; source-selected best-case configuration",
+      "reference": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/usb_rx_ctle_output_eye_ffe_off.png",
+      "asset_sha256": "c8ab2e762e4752a58bdeb21a471f2e374281fa5f31ea926519cd385ca05faa8b",
+      "source_filename": "250205_RX_모델링.pptx",
+      "source_sha256": "f206c4e459144e8c68a2f5bd74c4be61dc85977d47d929e2c76f0f311e46df9d",
+      "slide_1based": 2,
+      "embedded_media": "ppt/media/image7.png",
+      "embedded_media_sha256": "c8ab2e762e4752a58bdeb21a471f2e374281fa5f31ea926519cd385ca05faa8b",
+      "pixels": [
+        842,
+        380
+      ],
+      "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
+      "scope": "Corresponding CTLE output eye after boosting adjustment; model simulation only; vertical scale and color-density scale differ from input plot",
+      "reference": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md"
     }
   ]
 }

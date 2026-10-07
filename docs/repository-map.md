@@ -20,6 +20,8 @@
 
 **USB TX 모델링:** [인코딩·기대값·XMODEL 복원·우회 경로·Serializer·FFE·채널·VCS/POSIM 비교](../projects/high-speed-interface-research/docs/usb-tx-modeling.md) → [자료별 선별 기록](../projects/high-speed-interface-research/reports/usb_tx_modeling_selection_20261007.json)
 
+**USB RX CTLE:** [동작점·R/C AC 응답·중간 레벨 보상·Sampler 연결](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) → [자료별 선별 기록](../projects/high-speed-interface-research/reports/usb_rx_ctle_selection_20261007.json)
+
 **검증 그림 확인:** [LPDDR·USB Eye·Shmoo와 AWG 설정 전후](../projects/high-speed-interface-research/docs/verification-figures.md) → [출처 파일·페이지·해시](figure-sources.json)
 
 **연구 이력 탐색:** [MLSD 비교 실험](../experiments/) → [참고 코어](../reference/mlsd-cores/) → [이전 보드 자료](../archive/)

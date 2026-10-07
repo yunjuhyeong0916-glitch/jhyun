@@ -26,6 +26,7 @@ Combo PHY 논문은 공식 정보 기준 채택·발표 예정입니다. DSP·ML
 | LPDDR TX 동작 모델 | 2026-10-07 제공된 Controller PHY 모델 소스·파일리스트와 `LP_Combo_Verilog Modeling_광운대(전달)` PDF·PPTX; 작성자가 TX 담당이라고 확인. 구조는 slides 9–14, TX 결과는 15–17·79에 근거해 [별도 정리](lpddr-tx-modeling.md) |
 | USB 개인 기여 | TX 논리계층·RX CTLE 모델, 11B7S·스크램블러 RTL 합성·P&R·전기 계층 연결 검증, PCB·채널 분석과 차동 PAM-3 측정 |
 | USB TX 모델링 과정 | 세 폴더의 USB 관련 PPTX 126개·1,508장. 논리 복원·우회 제어·Serializer·FFE·채널·VCS/POSIM의 구조도·계산표·기존 파형 12개를 [선별 정리](usb-tx-modeling.md). TX 논리 RTL·XMODEL 통합·Serializer 검증의 직접 수행 범위는 작성자의 2026-10-07 확인을 반영; [자료별 선별 기록](../reports/usb_tx_modeling_selection_20261007.json)에 파일 해시·사용 슬라이드·범위 수록 |
+| USB RX CTLE 모델링 | CTLE 관련 자료 11개·130장 중 DC·AC·회로·Eye 그림 7개를 [선별 정리](usb-rx-ctle-modeling.md). `1129_진행상황.pptx` slide 10의 CTLE 역할 분담과 `250119`·`250203`·`250205` 개발·통합 기록에 근거. 단품 CTLE 결과와 공동 RX·DFE·CDR 결과는 구분; [선별 기록](../reports/usb_rx_ctle_selection_20261007.json)에 파일·슬라이드·해시 수록 |
 | 공통 측정 장비 | 제공 이력서·측정 자료의 86100D·86118A, M8195A, E3631A, MP1800A; 2026-10-07 작성자가 LPDDR·USB 양쪽에서 사용했다고 확인 |
 | RX 자동화 | 2025.03~05 측정 활동 자료의 I2C·전원·BERT 연동, AWG 파일·샘플레이트 수정, 오류 조기 종료·경계 탐색·CSV 기록 |
 | 채널보드·실시간 스코프 | 제공 자료의 M8049A-003, DPO5204B·DSA72004B 등 사용 이력. 실험별 선로·스코프·설정을 하나로 합치지 않음 |
