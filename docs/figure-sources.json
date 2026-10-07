@@ -551,6 +551,96 @@
       "extraction": "Original embedded PNG bytes; no image edits, crops or slide-overlay annotations",
       "scope": "Corresponding CTLE output eye after boosting adjustment; model simulation only; vertical scale and color-density scale differ from input plot",
       "reference": "projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg",
+      "asset_sha256": "2eedd19c54dc9bce4770a133303cb14b468052fa8521802787185aef70622d05",
+      "source_filename": "LPDDR 과제결과 보고서_241004_v3.pptx",
+      "source_sha256": "d73579ec0da7096907b49bffcca744d60e19f632c7b3a3f64e3e721297b4ca14",
+      "slide_1based": 2,
+      "embedded_media": "ppt/media/image4.jpeg",
+      "embedded_media_sha256": "2eedd19c54dc9bce4770a133303cb14b468052fa8521802787185aef70622d05",
+      "extraction": "Original embedded image bytes preserved; no crop, recoloring or redrawing",
+      "pixels": [
+        1145,
+        567
+      ],
+      "scope": "TX structure only: 64-bit PRBS, serialization, main/1-UI FFE paths, shared clock and ZQ context"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png",
+      "asset_sha256": "04eef682f6b9c953130ba6985cb109c4fe7576a1fd16a0ff0fe91aba1c87df6f",
+      "source_filename": "LPDDR 과제결과 보고서_241004_v3.pptx",
+      "source_sha256": "d73579ec0da7096907b49bffcca744d60e19f632c7b3a3f64e3e721297b4ca14",
+      "slide_1based": 4,
+      "embedded_media": "ppt/media/image9.png",
+      "embedded_media_sha256": "04eef682f6b9c953130ba6985cb109c4fe7576a1fd16a0ff0fe91aba1c87df6f",
+      "extraction": "Original embedded image bytes preserved; no crop, recoloring or redrawing",
+      "pixels": [
+        880,
+        330
+      ],
+      "scope": "15.6-Gb/s TX simulation, FFE off; source annotations 37 ps and 56.5 mV"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_on.png",
+      "asset_sha256": "c79389d80292e639cf2c1b9be47cfdca99e87da66f7a8cb03a18f9244ae3d340",
+      "source_filename": "LPDDR 과제결과 보고서_241004_v3.pptx",
+      "source_sha256": "d73579ec0da7096907b49bffcca744d60e19f632c7b3a3f64e3e721297b4ca14",
+      "slide_1based": 4,
+      "embedded_media": "ppt/media/image10.png",
+      "embedded_media_sha256": "c79389d80292e639cf2c1b9be47cfdca99e87da66f7a8cb03a18f9244ae3d340",
+      "extraction": "Original embedded image bytes preserved; no crop, recoloring or redrawing",
+      "pixels": [
+        880,
+        337
+      ],
+      "scope": "15.6-Gb/s TX simulation, FFE on; source annotations 45.4 ps and 75.1 mV"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_tx_circuit_prbs7_period.png",
+      "asset_sha256": "4148590a0e06ff3e91b2b3b8bfa25b8c2471db0343045c29b2bd979d272ffc77",
+      "source_filename": "1104_공인인증서_추가자료.pptx",
+      "source_sha256": "c9a84d31755803d205d1379f6a6137d4f0cb6cf77b09dfd4c5c7d7aeaf4f3416",
+      "slide_1based": 16,
+      "embedded_media": "ppt/media/image15.png",
+      "embedded_media_sha256": "4148590a0e06ff3e91b2b3b8bfa25b8c2471db0343045c29b2bd979d272ffc77",
+      "extraction": "Original embedded image bytes preserved; no crop, recoloring or redrawing",
+      "pixels": [
+        1640,
+        800
+      ],
+      "scope": "November test-submission simulation: 127-bit PRBS7 period of 8.14 ns, not measured BER"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_tx_circuit_supply_current.png",
+      "asset_sha256": "73157efc9d4cbb02248f36c9660da0bfd3c7a42b68f77ae9ccf9341347cc8c0f",
+      "source_filename": "1104_공인인증서_추가자료.pptx",
+      "source_sha256": "c9a84d31755803d205d1379f6a6137d4f0cb6cf77b09dfd4c5c7d7aeaf4f3416",
+      "slide_1based": 23,
+      "embedded_media": "ppt/media/image20.png",
+      "embedded_media_sha256": "73157efc9d4cbb02248f36c9660da0bfd3c7a42b68f77ae9ccf9341347cc8c0f",
+      "extraction": "Original embedded image bytes preserved; no crop, recoloring or redrawing",
+      "pixels": [
+        1641,
+        799
+      ],
+      "scope": "November TX simulation supply currents: magnitudes of selected-window averages 9.86 mA at 1.05 V and 3.16 mA at 0.5 V"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/lpddr_tx_circuit_updated_eye.png",
+      "asset_sha256": "00937242aede3c2a0df7a626d15f09d40e5810085599918c65b7e7ab059728a7",
+      "source_filename": "1104_공인인증서_추가자료.pptx",
+      "source_sha256": "c9a84d31755803d205d1379f6a6137d4f0cb6cf77b09dfd4c5c7d7aeaf4f3416",
+      "slide_1based": 29,
+      "embedded_media": "ppt/media/image24.png",
+      "embedded_media_sha256": "00937242aede3c2a0df7a626d15f09d40e5810085599918c65b7e7ab059728a7",
+      "extraction": "Original embedded image bytes preserved; no crop, recoloring or redrawing",
+      "pixels": [
+        1503,
+        790
+      ],
+      "scope": "November updated TX simulation Eye: 46 ps and 75.7 mV; not a controlled improvement comparison with October plots"
     }
   ]
 }

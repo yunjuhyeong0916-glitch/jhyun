@@ -10,6 +10,8 @@
 
 이 TX 설계와 측정 전 검증은 개인 담당 범위입니다. TX가 포함된 LPDDR4X/5/5X Combo PHY의 클록·RX·전체 통합 및 최종 칩 성능은 공동 연구 범위로 구분합니다.
 
+[TX 회로 설계·검증 과정](lpddr-tx-circuit-verification.md)에서는 과제 보고서와 시험 제출자료를 바탕으로 main/1-UI 지연 경로의 구조, FFE 적용 전후 Eye, LVS·PEX 이후 PRBS 출력 주기와 두 전원 레일의 에너지 계산을 설명합니다. 구조도·검증 그림 6개에 출처와 조건을 붙였으며, 시험자료의 시뮬레이션 시연과 실제 칩 측정을 구분했습니다.
+
 ## TX 동작 모델에서 직렬화와 보상 경로 확인
 
 병렬 데이터가 직렬 출력으로 바뀌는 과정에서는 비트 순서·클록 위상과 보상용 지연 데이터의 관계를 함께 확인해야 합니다. LPDDR Combo Controller PHY에서는 TX 경로의 Verilog 동작 모델링을 맡아, 32:1 직렬화·위상 정렬과 main/1UI 지연 데이터 기반 pre-emphasis를 다뤘습니다. [TX 모델 구조·검증 파형](lpddr-tx-modeling.md)에 기존 VCS·Questa 결과, 레벨 코드별 Eye와 4-DQ 통합 출력을 정리했습니다.

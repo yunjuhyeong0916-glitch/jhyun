@@ -1,0 +1,88 @@
+{
+  "reviewed_on": "2026-10-07",
+  "guide": "projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md",
+  "review_method": "Read-only inspection of three user-supplied PPTX decks (87 slides), slide text/image/context review and visual inspection; six original embedded image files copied without modification; no EDA or hardware execution",
+  "source_deck_count": 3,
+  "source_slide_count": 87,
+  "selected_image_count": 6,
+  "role_basis": "Author identifies the LPDDR TX circuit design and premeasurement Schematic/Post-Layout verification as individual work. Shared clock/PRBS/ZQ context does not imply sole authorship of every block; RX and whole-chip results remain joint.",
+  "scope_notes": [
+    "November slides 4/39/41 describe test-day simulation and updated submission evidence; no issued accredited certificate or JEDEC/LPDDR6 conformance verdict established by these decks.",
+    "Circuit architecture uses 64-bit PRBS/64:4/4:1 serialization, distinct from the separate 32:1 Controller PHY Verilog model.",
+    "October FFE-off/on images are a paired comparison: 37 ps/56.5 mV and 45.4 ps/75.1 mV. November 46 ps/75.7 mV is a separate updated simulation record.",
+    "November power uses selected-window average-current magnitudes for two TX rails, not instantaneous peaks or an exhaustive PVT/pattern worst case.",
+    "127 bits divided by 8.14 ns checks simulated data rate, not measured BER.",
+    "Source ZQ MUX setting selects manually supplied codes; Eye/current plots alone do not prove autonomous calibration convergence or full-PVT impedance accuracy.",
+    "November TX area 0.0201 mm2 includes PRBS, data, driver, ZQ and clock blocks; earlier TX 0.0196 mm2 and TRX 0.0308 mm2 are versioned separately from updated TRX 0.0334 mm2.",
+    "TRX 0.91 pJ/bit combines TX 0.76 and RX 0.15; only TX is used for individual TX claims.",
+    "Existing ICEIC TX simulation and later Combo PHY joint silicon measurement remain separate conditions/results.",
+    "Raw IP code, complete source decks, detailed schematics/layouts, PDK/tool-server screens and private paths excluded; public scope is role/structure description and approved TX validation images."
+  ],
+  "sources": [
+    {
+      "source_filename": "1104_공인인증서_추가자료.pptx",
+      "source_sha256": "c9a84d31755803d205d1379f6a6137d4f0cb6cf77b09dfd4c5c7d7aeaf4f3416",
+      "bytes": 5566921,
+      "slide_count": 41,
+      "used_slides_1based": [
+        4,
+        9,
+        14,
+        16,
+        23,
+        27,
+        29,
+        35,
+        37,
+        38,
+        39,
+        41
+      ],
+      "selection_reason": "Updated TX speed, supply-current energy calculation, Eye and area; LVS/PEX/test-day simulation evidence. RX and TRX totals used only for scope distinctions."
+    },
+    {
+      "source_filename": "LPDDR 과제결과 보고서_241004_v3.pptx",
+      "source_sha256": "d73579ec0da7096907b49bffcca744d60e19f632c7b3a3f64e3e721297b4ca14",
+      "bytes": 2497038,
+      "slide_count": 6,
+      "used_slides_1based": [
+        2,
+        4,
+        6
+      ],
+      "selection_reason": "TX block diagram and paired FFE-off/on Eye plots; joint result targets are not treated as a compliance certificate."
+    },
+    {
+      "source_filename": "공인인증관련정리.pptx",
+      "source_sha256": "f252addd86ea162d5a0d45b8c82ff5dd4daa531456aebb080b529bf5a3ddc06b",
+      "bytes": 1496697,
+      "slide_count": 40,
+      "used_slides_1based": [
+        3,
+        7,
+        8,
+        10,
+        12,
+        16,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "selection_reason": "TX test-environment/PEX flow and manual-ZQ selection context; detailed register code vectors and private circuit/PDK screenshots excluded."
+    }
+  ],
+  "selected_assets": [
+    "projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg",
+    "projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png",
+    "projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_on.png",
+    "projects/high-speed-interface-research/assets/lpddr_tx_circuit_prbs7_period.png",
+    "projects/high-speed-interface-research/assets/lpddr_tx_circuit_supply_current.png",
+    "projects/high-speed-interface-research/assets/lpddr_tx_circuit_updated_eye.png"
+  ]
+}

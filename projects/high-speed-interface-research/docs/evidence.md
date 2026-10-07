@@ -23,6 +23,7 @@ Combo PHY 논문은 공식 정보 기준 채택·발표 예정입니다. DSP·ML
 | 항목 | 확인한 자료·설명 |
 |---|---|
 | LPDDR 개인 기여 | 작성자 제공 자료의 적용 TX 직접 설계, 해당 TX의 Schematic·Post-Layout 검증 전담, 측정용 PCB·HFSS 분석과 공동 칩 평가 |
+| LPDDR TX 회로 검증 자료 | `LPDDR 과제결과 보고서_241004_v3.pptx`·`공인인증관련정리.pptx`·`1104_공인인증서_추가자료.pptx`의 87장 검토. [TX 구조·FFE·PEX 이후 검증](lpddr-tx-circuit-verification.md)에 원본 그림 6개와 PRBS7 속도·두 전원 레일의 에너지 계산·면적 갱신값 수록. 시험자료의 시뮬레이션 시연과 인증서 발급·규격 적합성 판정은 구분; [자료별 선별 기록](../reports/lpddr_tx_circuit_selection_20261007.json) |
 | LPDDR TX 동작 모델 | 2026-10-07 제공된 Controller PHY 모델 소스·파일리스트와 `LP_Combo_Verilog Modeling_광운대(전달)` PDF·PPTX; 작성자가 TX 담당이라고 확인. 구조는 slides 9–14, TX 결과는 15–17·79에 근거해 [별도 정리](lpddr-tx-modeling.md) |
 | USB 개인 기여 | TX 논리계층·RX CTLE 모델, 11B7S·스크램블러 RTL 합성·P&R·전기 계층 연결 검증, PCB·채널 분석과 차동 PAM-3 측정 |
 | USB TX 모델링 과정 | 세 폴더의 USB 관련 PPTX 126개·1,508장. 논리 복원·우회 제어·Serializer·FFE·채널·VCS/POSIM의 구조도·계산표·기존 파형 12개를 [선별 정리](usb-tx-modeling.md). TX 논리 RTL·XMODEL 통합·Serializer 검증의 직접 수행 범위는 작성자의 2026-10-07 확인을 반영; [자료별 선별 기록](../reports/usb_tx_modeling_selection_20261007.json)에 파일 해시·사용 슬라이드·범위 수록 |

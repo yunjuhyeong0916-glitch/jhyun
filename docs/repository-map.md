@@ -18,6 +18,8 @@
 
 **LPDDR TX 모델링:** [32:1 직렬화·위상 정렬·pre-emphasis 구조와 기존 검증 파형](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md) → [회로·실리콘 결과와 비교 범위](../projects/high-speed-interface-research/docs/lpddr.md)
 
+**LPDDR TX 회로 검증:** [회로 구조·FFE 적용 전후 Eye·LVS/PEX·PRBS7 속도·두 전원 레일의 에너지](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) → [과제·시험 제출자료별 선별 기록](../projects/high-speed-interface-research/reports/lpddr_tx_circuit_selection_20261007.json)
+
 **USB TX 모델링:** [인코딩·기대값·XMODEL 복원·우회 경로·Serializer·FFE·채널·VCS/POSIM 비교](../projects/high-speed-interface-research/docs/usb-tx-modeling.md) → [자료별 선별 기록](../projects/high-speed-interface-research/reports/usb_tx_modeling_selection_20261007.json)
 
 **USB RX CTLE:** [동작점·R/C AC 응답·중간 레벨 보상·Sampler 연결](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) → [자료별 선별 기록](../projects/high-speed-interface-research/reports/usb_rx_ctle_selection_20261007.json)

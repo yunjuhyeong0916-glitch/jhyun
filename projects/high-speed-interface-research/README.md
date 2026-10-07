@@ -8,7 +8,7 @@
 
 | 연구 | 직접 수행·참여 범위 | 결과를 읽는 기준 |
 |---|---|---|
-| [LPDDR 메모리 인터페이스](docs/lpddr.md) | Combo PHY TX 회로 설계·Schematic/Post-Layout 검증 전담, [TX Verilog 모델링](docs/lpddr-tx-modeling.md), PCB·HFSS 분석과 공동 평가 참여 | TX 동작 모델·회로 시뮬레이션·공동 칩 실측을 구분 |
+| [LPDDR 메모리 인터페이스](docs/lpddr.md) | [TX 회로 설계·Schematic/Post-Layout 검증](docs/lpddr-tx-circuit-verification.md) 전담, [TX Verilog 모델링](docs/lpddr-tx-modeling.md), PCB·HFSS 분석과 공동 평가 참여 | TX 동작 모델·회로 시뮬레이션·공동 칩 실측을 구분 |
 | [USB4 PAM-3 인터페이스](docs/usb4-pam3.md) | [TX 모델링·RTL·Serializer 검증](docs/usb-tx-modeling.md), [RX CTLE 모델링과 통합 검증](docs/usb-rx-ctle-modeling.md), PCB·채널 분석·차동 PAM-3 측정 참여 | 송수신 모델 결과와 28-nm 제작 TX의 공동 실측을 구분 |
 
 ## 연구 성과 논문
@@ -28,7 +28,7 @@
 
 ## 읽는 순서
 
-1. [LPDDR: TX 회로 설계와 검증](docs/lpddr.md) · [TX Verilog 구조·시뮬레이션 파형](docs/lpddr-tx-modeling.md)
+1. [LPDDR 연구 개요](docs/lpddr.md) · [TX 회로·FFE·PEX 이후 검증](docs/lpddr-tx-circuit-verification.md) · [TX Verilog 구조·시뮬레이션 파형](docs/lpddr-tx-modeling.md)
 2. [USB: PAM-3 모델·RTL과 실리콘 평가](docs/usb4-pam3.md) · [TX 모델링·검증](docs/usb-tx-modeling.md) · [RX CTLE 동작점·보상 조정](docs/usb-rx-ctle-modeling.md)
 3. [측정 장비·PCB·채널 분석·자동화](docs/measurement-equipment.md)
 4. [관련 논문과 근거 범위](docs/evidence.md)

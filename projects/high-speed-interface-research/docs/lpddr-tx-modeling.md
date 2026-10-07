@@ -1,6 +1,6 @@
 # LPDDR Combo PHY: TX Verilog 모델링과 검증 파형
 
-[LPDDR 회로·실리콘 평가](lpddr.md) · [파트 개요](../README.md) · [검증 그림](verification-figures.md) · [논문·근거](evidence.md)
+[LPDDR 회로·실리콘 평가](lpddr.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [파트 개요](../README.md) · [검증 그림](verification-figures.md) · [논문·근거](evidence.md)
 
 **개인 담당은 LPDDR Combo Controller PHY의 TX 경로 모델링입니다.** 32-bit 병렬 데이터를 직렬화하고, 클록 위상에 맞춘 데이터와 1UI 지연 데이터를 이용해 pre-emphasis가 적용된 출력을 만드는 경로를 다뤘습니다. 아래 그림은 작성자 제공 자료에 남아 있는 **기존 동작 모델 시뮬레이션 결과**입니다.
 
