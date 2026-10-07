@@ -18,6 +18,7 @@
 | USB TX 모델링 개발 기록 | 2026-10-07 USB 관련 PPTX 126개·1,508장 검토, 논리·Serializer·FFE·채널·VCS/POSIM 기존 이미지 12개 추출 | [모델링 과정](../projects/high-speed-interface-research/docs/usb-tx-modeling.md); 하위 11-bit 오류 관측과 클록 엣지 글리치, ideal power labeling 조건을 명시. 새 시뮬레이션·P&R·칩 측정 미실행 |
 | USB RX CTLE 모델 | 2026-10-07 동작점 설정·R/C 제어 AC 응답·보상 조정·Sampler 연결 조건을 검토하고 기존 그림 7개 선별 | [CTLE 모델링](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md); PNG 5개 원본 유지·EMF 2개 렌더링. 모델의 부하 가정·수동 설정과 공동 RX 결과 구분, 새 시뮬레이션·실리콘 측정 미실행 |
 | 측정 장비 사용 | 이력서·측정 활동 자료와 작성자의 2026-10-07 확인: 86100D·86118A, M8195A, E3631A, MP1800A를 LPDDR·USB 모두에 사용 | [장비별 활용](../projects/high-speed-interface-research/docs/measurement-equipment.md), 제조사 사양은 개인 측정 성과와 구분 |
+| PCB·HFSS 그림·사진 | 2026-10-07 포트폴리오·보드·HFSS 자료 14개·166장 검토, 배치·배선·모델·S-parameter·제작 보드·본딩·계측 환경 원본 이미지 10개 선별 | [PCB·HFSS 설명](../projects/high-speed-interface-research/docs/pcb-hfss-verification.md); 기존 개인·공동 자료의 설명, 새 PCB 제작·HFSS 해석·VNA/칩 측정 제외. 동일 조건의 PCB 수정 전후 개선율과 Eye 개선 인과를 주장하지 않음 |
 | 검증 그림·AWG 설정 화면 | 2026-10-07 작성자 제공 논문·측정자료에서 추출, 축·주석·파형 유지 | [그림과 조건](../projects/high-speed-interface-research/docs/verification-figures.md), [출처·해시](figure-sources.json); 새 칩 측정 제외 |
 | MLSD 비교·변형 실험 | 소스 보존과 `.f` 참조 파일의 존재 점검 | 이번 정리에서 VCS 시뮬레이션 미실행 |
 | 구조별 참고 코어 | 폴더 관계와 README 점검 | 이번 정리에서 개별 기능 검증 미실행 |

@@ -31,7 +31,7 @@ RFDC 등 기존 IP와 DSP 데이터 경로를 통합했습니다. Vivado 빌드�
 | [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX 회로 설계·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델링](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md) | Combo PHY의 TX Eye·RX 마진 |
 | [USB PAM-3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX 모델링·RTL 검증](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE 모델링](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) | 제작 TX의 차동 신호 측정 |
 
-PCB·HFSS 채널 분석과 계측 경험은 [LPDDR·USB 연구 파트](projects/high-speed-interface-research/)에서 확인할 수 있습니다.
+PCB 설계·제작 사진과 HFSS 해석은 [보드 배선에서 실제 측정 경로까지](projects/high-speed-interface-research/docs/pcb-hfss-verification.md), 계측 경험은 [LPDDR·USB 연구 파트](projects/high-speed-interface-research/)에서 확인할 수 있습니다.
 
 ## 측정·검증
 

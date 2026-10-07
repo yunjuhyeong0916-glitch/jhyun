@@ -641,6 +641,156 @@
         790
       ],
       "scope": "November updated TX simulation Eye: 46 ps and 75.7 mV; not a controlled improvement comparison with October plots"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_layout.png",
+      "asset_sha256": "ef189be80745b8d5fdd197907fd0244c460f315289a987ad34bcb0f667acec0d",
+      "source_filename": "윤주형_연구 포트폴리오.pptx",
+      "source_sha256": "e943e59ebe86953c06d863808caebe3021e5b8717f68675c37d43856ceaf6922",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image59.png",
+      "embedded_media_sha256": "ef189be80745b8d5fdd197907fd0244c460f315289a987ad34bcb0f667acec0d",
+      "pixels": [
+        315,
+        683
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "LPDDR measurement-PCB layout from the author portfolio; individual circuit/layout/routing work, not an impedance or skew measurement"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_board_photo.png",
+      "asset_sha256": "45cecb7bcdbd2369f7699bcbf67ce507a5f2355c43360c6ea299427e088b108b",
+      "source_filename": "윤주형_연구 포트폴리오.pptx",
+      "source_sha256": "e943e59ebe86953c06d863808caebe3021e5b8717f68675c37d43856ceaf6922",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image63.png",
+      "embedded_media_sha256": "45cecb7bcdbd2369f7699bcbf67ce507a5f2355c43360c6ea299427e088b108b",
+      "pixels": [
+        3024,
+        4032
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "Fabricated measurement-PCB photo; no performance metric inferred from appearance"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_wirebond_photo.png",
+      "asset_sha256": "f2b355854eec4951fdf599e1f7a72276c80637ca762b7151c3c18c5f5a44d054",
+      "source_filename": "윤주형_연구 포트폴리오.pptx",
+      "source_sha256": "e943e59ebe86953c06d863808caebe3021e5b8717f68675c37d43856ceaf6922",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image65.png",
+      "embedded_media_sha256": "f2b355854eec4951fdf599e1f7a72276c80637ca762b7151c3c18c5f5a44d054",
+      "pixels": [
+        586,
+        689
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "COB/wire-bonding close-up; physical assembly evidence, no bond inductance extracted from photo"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_model.jpg",
+      "asset_sha256": "a847f86dbb5529a3787ab059ec81669e6850b0fd577f5c67a00a7153d38033d7",
+      "source_filename": "윤주형_연구 포트폴리오.pptx",
+      "source_sha256": "e943e59ebe86953c06d863808caebe3021e5b8717f68675c37d43856ceaf6922",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image60.jpeg",
+      "embedded_media_sha256": "a847f86dbb5529a3787ab059ec81669e6850b0fd577f5c67a00a7153d38033d7",
+      "pixels": [
+        376,
+        550
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "HFSS geometric model of chip-to-connector paths with ground/via context; not an E-field distribution plot"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_sparams_notch.jpg",
+      "asset_sha256": "8e616a2aace535743b054a559ac90a219b3c68de636c63f0e2e18808addc1062",
+      "source_filename": "윤주형_연구 포트폴리오.pptx",
+      "source_sha256": "e943e59ebe86953c06d863808caebe3021e5b8717f68675c37d43856ceaf6922",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image62.jpeg",
+      "embedded_media_sha256": "8e616a2aace535743b054a559ac90a219b3c68de636c63f0e2e18808addc1062",
+      "pixels": [
+        800,
+        433
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "HFSS PCB_cutout1 transmission S-parameters showing dips/notches; exact controlled before/after setup and causal geometry change not established"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_sparams_6p4ghz.jpg",
+      "asset_sha256": "dc234597d135b8eeddb260d4b6d7a7f885dec656b07eb5025523c74a2829b639",
+      "source_filename": "윤주형_연구 포트폴리오.pptx",
+      "source_sha256": "e943e59ebe86953c06d863808caebe3021e5b8717f68675c37d43856ceaf6922",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image61.jpeg",
+      "embedded_media_sha256": "dc234597d135b8eeddb260d4b6d7a7f885dec656b07eb5025523c74a2829b639",
+      "pixels": [
+        800,
+        376
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "HFSS PCB_cutout6: six transfer paths marked about -1.58 to -2.14 dB at 6.4 GHz; not VNA measurement or full instrument-path loss"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_usb_layout.png",
+      "asset_sha256": "b1246479aeeb9ed0e98497c27983b19385bd80fb244bab7cb6b42e6222bf4c43",
+      "source_filename": "251002_USB_TX_PCB.pptx",
+      "source_sha256": "5c75e1b69d5398c5dc4f51f327b3932c716d203d3d63ec2195f03523f8963022",
+      "slide_1based": 2,
+      "embedded_media": "ppt/media/image5.png",
+      "embedded_media_sha256": "b1246479aeeb9ed0e98497c27983b19385bd80fb244bab7cb6b42e6222bf4c43",
+      "pixels": [
+        1081,
+        658
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "Shared USB TX PCB layout review: ground-via spacing and power connectivity, 179.5 x 108 mm; not a sole-authorship or PI signoff claim"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_usb_clock_sparams.png",
+      "asset_sha256": "6908af3d88a8c386c6a5dafac0e995b4f97709ed22b218b069e037a0d89a8633",
+      "source_filename": "251002_USB_TX_PCB.pptx",
+      "source_sha256": "5c75e1b69d5398c5dc4f51f327b3932c716d203d3d63ec2195f03523f8963022",
+      "slide_1based": 3,
+      "embedded_media": "ppt/media/image7.png",
+      "embedded_media_sha256": "6908af3d88a8c386c6a5dafac0e995b4f97709ed22b218b069e037a0d89a8633",
+      "pixels": [
+        1627,
+        779
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "Shared USB PCB CLK simulated transfer curves: source summary about 1.11 dB loss at 12.8 GHz, individual curves -1.12/-1.11 dB"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_usb_data_sparams.png",
+      "asset_sha256": "75286b5cae45394ef4d470b0fa26583d4cec9b279925cafb12ed11243da89a41",
+      "source_filename": "251002_USB_TX_PCB.pptx",
+      "source_sha256": "5c75e1b69d5398c5dc4f51f327b3932c716d203d3d63ec2195f03523f8963022",
+      "slide_1based": 3,
+      "embedded_media": "ppt/media/image8.png",
+      "embedded_media_sha256": "75286b5cae45394ef4d470b0fa26583d4cec9b279925cafb12ed11243da89a41",
+      "pixels": [
+        1626,
+        779
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "Shared USB PCB DATA simulated transfer curves: source summary about 1.25 dB loss at 12.8 GHz, individual curves -1.25/-1.26 dB"
+    },
+    {
+      "asset": "projects/high-speed-interface-research/assets/pcb_hfss_measurement_setup.jpg",
+      "asset_sha256": "5e58ca7a633c712aa0278e9c22c31a3fb9ddcd1b2813c592ef00987535f2a5fe",
+      "source_filename": "윤주형_연구 포트폴리오.pptx",
+      "source_sha256": "e943e59ebe86953c06d863808caebe3021e5b8717f68675c37d43856ceaf6922",
+      "slide_1based": 6,
+      "embedded_media": "ppt/media/image66.jpeg",
+      "embedded_media_sha256": "5e58ca7a633c712aa0278e9c22c31a3fb9ddcd1b2813c592ef00987535f2a5fe",
+      "pixels": [
+        1477,
+        1223
+      ],
+      "extraction": "Original embedded PNG/JPEG bytes preserved; no image edits, cropping, recoloring or redrawing",
+      "scope": "Measurement-setup photo with PPG/BERT modules, power supplies, oscilloscope and TX board; not proof of simultaneous operation or a BER observation condition"
     }
   ]
 }

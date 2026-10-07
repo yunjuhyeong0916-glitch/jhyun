@@ -1,0 +1,188 @@
+{
+  "reviewed_on": "2026-10-07",
+  "guide": "projects/high-speed-interface-research/docs/pcb-hfss-verification.md",
+  "review_method": "Read-only review of 14 local source decks (166 slides); candidate-image visual inspection; ten original PNG/JPEG files copied byte-for-byte; no PCB/EDA/hardware execution",
+  "source_deck_count": 14,
+  "source_slide_count": 166,
+  "selected_image_count": 10,
+  "role_basis": "Individual measurement-PCB circuit/layout/routing and HFSS role are stated in the author's research portfolio slide 6. Shared USB PCB and lab-common modeling records are labeled separately; authorship of every team routing change is not inferred.",
+  "scope_notes": [
+    "Seven selected LPDDR/measurement images come from the author portfolio and three from a shared USB PCB progress deck.",
+    "HFSS screenshot is a geometric model, not an electric-field/current-density distribution.",
+    "PCB_cutout1 and PCB_cutout6 have different model names and vertical-axis ranges; controlled before/after boundary conditions and exact geometry change are not fully documented. No notch-removal causality or percentage improvement claimed.",
+    "LPDDR plot at 6.4 GHz marks six transfer responses about -1.58 to -2.14 dB. Slide text has omitted minus signs for DQ2/DQ3; guide uses values visible in plot and does not reproduce the ambiguous per-DQ text mapping.",
+    "USB source summary 1.11/1.25 dB at 12.8 GHz is loss magnitude. Individual plotted clock responses are -1.12/-1.11 dB and data responses -1.25/-1.26 dB; these are PCB simulation results.",
+    "HFSS curves, fabricated-board/COB photos, instrument-setup photos and joint silicon Eye/BER are separate evidence types.",
+    "Eye values comparing active-lane counts are not used as PCB-revision improvement evidence.",
+    "Ground-via/power-connectivity layout review is not represented as power-integrity simulation or signoff.",
+    "Initial surrogate-channel/SMA decks, copied connector datasheets, detailed chip layouts and bonding pin maps, vendor material documents, private paths and native PCB/Gerber/HFSS files excluded from publication.",
+    "All selected images retain their embedded bytes and original annotations; large board photo remains original-resolution PNG."
+  ],
+  "sources": [
+    {
+      "source_filename": "HFSS_Modeling_Analysis_정리 1.pptx",
+      "source_sha256": "e35a0621b7f50434a64dad73c54f59c07788952bf2d154d03d679dc6b2d83865",
+      "bytes": 1164527,
+      "slide_count": 26,
+      "used_slides_1based": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "disposition": "selected_explanation_or_evidence",
+      "reason": "Reference only: lab-common HFSS stackup, ports and model-validation workflow; no images published or sole-author role inferred."
+    },
+    {
+      "source_filename": "250716 진행상황.pptx",
+      "source_sha256": "80abdce5e013cf3d7371a672656c9535cf812447da8b829b33ce696f66bba4fe",
+      "bytes": 502035,
+      "slide_count": 10,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    },
+    {
+      "source_filename": "PAD_IMPORT_정리.pptx",
+      "source_sha256": "a41e7e339fb9ac4a33a19f1a60b13c8717c92011a1c8bcdb6b5a660e985d592d",
+      "bytes": 701925,
+      "slide_count": 15,
+      "used_slides_1based": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "disposition": "selected_explanation_or_evidence",
+      "reason": "Reference only: lab-common import, layer information and port-validation records; separate surrogate-channel work, not the individual LPDDR model."
+    },
+    {
+      "source_filename": "PAD_IMPORT_정리_경로수정본.pptx",
+      "source_sha256": "d269be8345337e02824d0799bab87199d23660ca096c677725aca28a4b09b42a",
+      "bytes": 702299,
+      "slide_count": 17,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    },
+    {
+      "source_filename": "SMA_연결 정리.pptx",
+      "source_sha256": "6be0b00f9a8808e0b2ec48f306bb97eca3f9d0874523225570de837bd8288a23",
+      "bytes": 1968356,
+      "slide_count": 25,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    },
+    {
+      "source_filename": "SMA_연결_0728.pptx",
+      "source_sha256": "c3db4ff5e87ce719155440cf0ada93eb084455347b873b723306df6b3c3de6a4",
+      "bytes": 567649,
+      "slide_count": 5,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    },
+    {
+      "source_filename": "SMA_연결_보충.pptx",
+      "source_sha256": "beffa9683b71603a308895a51eae776d8f30df1124932ec37c6a12728fdbb4f6",
+      "bytes": 620928,
+      "slide_count": 13,
+      "used_slides_1based": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "disposition": "selected_explanation_or_evidence",
+      "reason": "Reference only: dielectric/model-extent debugging; separate SMA/surrogate-channel investigation not attributed as personal LPDDR performance."
+    },
+    {
+      "source_filename": "COB request_LPDDR Combo.pptx",
+      "source_sha256": "6673fbffa139d2fe6df83dc3703a80a06f82c9c71381659c89ef42e153f449f2",
+      "bytes": 12659769,
+      "slide_count": 8,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    },
+    {
+      "source_filename": "PCB 240813 이종찬.pptx",
+      "source_sha256": "1f40010e75124d9919cd46a9ee8cae80ccae1b8025b17eb990ed3ba508e99374",
+      "bytes": 715087,
+      "slide_count": 7,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    },
+    {
+      "source_filename": "COB request_USB_TX.pptx",
+      "source_sha256": "daf4fcbbc40a0ae0df8bb838cb7efda23557370beb1c800d5ea3e3e471829f43",
+      "bytes": 8382395,
+      "slide_count": 9,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    },
+    {
+      "source_filename": "251002_USB_TX_PCB.pptx",
+      "source_sha256": "5c75e1b69d5398c5dc4f51f327b3932c716d203d3d63ec2195f03523f8963022",
+      "bytes": 421456,
+      "slide_count": 3,
+      "used_slides_1based": [
+        2,
+        3
+      ],
+      "disposition": "selected_explanation_or_evidence",
+      "reason": "Selected shared USB TX layout and CLK/DATA S-parameter plots, with source-based power-connectivity and via-spacing rationale; no new individual attribution of each routing change."
+    },
+    {
+      "source_filename": "0813_랩미팅_유용규.pptx",
+      "source_sha256": "8f9a3b59f2f800100b41fe61c9c07bbda8dd3201c0bf42090af35fef88bcb33f",
+      "bytes": 596651,
+      "slide_count": 10,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    },
+    {
+      "source_filename": "윤주형_연구 포트폴리오.pptx",
+      "source_sha256": "e943e59ebe86953c06d863808caebe3021e5b8717f68675c37d43856ceaf6922",
+      "bytes": 105350497,
+      "slide_count": 8,
+      "used_slides_1based": [
+        6
+      ],
+      "disposition": "selected_explanation_or_evidence",
+      "reason": "Primary individual PCB/HFSS role evidence: author portfolio with layout, model geometry, two transfer plots, fabricated PCB, wire bonding and instrument setup; seven original images selected."
+    },
+    {
+      "source_filename": "LPDDR for combo.pptx",
+      "source_sha256": "a8e85a2ba54b9d34b103ff920cee78cecbeada0c8373eadc8882b7f5b9a520e4",
+      "bytes": 1075258,
+      "slide_count": 10,
+      "used_slides_1based": [],
+      "disposition": "excluded_from_guide",
+      "reason": "Excluded duplicate/initial modeling draft, unrelated circuit material or detailed assembly/pin-map information; clearer author-portfolio and shared USB evidence selected."
+    }
+  ],
+  "selected_assets": [
+    "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_layout.png",
+    "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_board_photo.png",
+    "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_wirebond_photo.png",
+    "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_model.jpg",
+    "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_sparams_notch.jpg",
+    "projects/high-speed-interface-research/assets/pcb_hfss_lpddr_sparams_6p4ghz.jpg",
+    "projects/high-speed-interface-research/assets/pcb_hfss_usb_layout.png",
+    "projects/high-speed-interface-research/assets/pcb_hfss_usb_clock_sparams.png",
+    "projects/high-speed-interface-research/assets/pcb_hfss_usb_data_sparams.png",
+    "projects/high-speed-interface-research/assets/pcb_hfss_measurement_setup.jpg"
+  ]
+}

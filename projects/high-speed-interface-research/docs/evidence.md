@@ -29,6 +29,7 @@ Combo PHY 논문은 공식 정보 기준 채택·발표 예정입니다. DSP·ML
 | USB TX 모델링 과정 | 세 폴더의 USB 관련 PPTX 126개·1,508장. 논리 복원·우회 제어·Serializer·FFE·채널·VCS/POSIM의 구조도·계산표·기존 파형 12개를 [선별 정리](usb-tx-modeling.md). TX 논리 RTL·XMODEL 통합·Serializer 검증의 직접 수행 범위는 작성자의 2026-10-07 확인을 반영; [자료별 선별 기록](../reports/usb_tx_modeling_selection_20261007.json)에 파일 해시·사용 슬라이드·범위 수록 |
 | USB RX CTLE 모델링 | CTLE 관련 자료 11개·130장 중 DC·AC·회로·Eye 그림 7개를 [선별 정리](usb-rx-ctle-modeling.md). `1129_진행상황.pptx` slide 10의 CTLE 역할 분담과 `250119`·`250203`·`250205` 개발·통합 기록에 근거. 단품 CTLE 결과와 공동 RX·DFE·CDR 결과는 구분; [선별 기록](../reports/usb_rx_ctle_selection_20261007.json)에 파일·슬라이드·해시 수록 |
 | 공통 측정 장비 | 제공 이력서·측정 자료의 86100D·86118A, M8195A, E3631A, MP1800A; 2026-10-07 작성자가 LPDDR·USB 양쪽에서 사용했다고 확인 |
+| PCB·HFSS 사진과 해석 | 작성자의 `윤주형_연구 포트폴리오.pptx` slide 6과 공동 `251002_USB_TX_PCB.pptx` slides 2–3에서 원본 이미지 10개 선별. [배치·배선·HFSS 모델·손실·제작·계측 사진](pcb-hfss-verification.md)에 개인 설계·분석과 공동 USB 보드 검토를 구분해 설명; 공통 작업 절차 자료를 포함해 14개·166장 검토. [선별 기록](../reports/pcb_hfss_selection_20261007.json)에 출처·조건·범위 수록 |
 | RX 자동화 | 2025.03~05 측정 활동 자료의 I2C·전원·BERT 연동, AWG 파일·샘플레이트 수정, 오류 조기 종료·경계 탐색·CSV 기록 |
 | 채널보드·실시간 스코프 | 제공 자료의 M8049A-003, DPO5204B·DSA72004B 등 사용 이력. 실험별 선로·스코프·설정을 하나로 합치지 않음 |
 

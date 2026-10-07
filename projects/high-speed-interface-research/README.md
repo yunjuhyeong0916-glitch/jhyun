@@ -26,11 +26,13 @@
 
 [장비 문서](docs/measurement-equipment.md)는 장비별 역할과 실제 활용을 정리하고, AWG 파형·샘플레이트 불일치 수정, 전원 조건과 오류 판정 임계값의 연동, Shmoo 경계 탐색 사례를 설명합니다. PCB·HFSS는 측정 결과를 전송 경로와 연결해 해석하는 공통 역량으로 포함했습니다.
 
+[PCB·HFSS 사진과 해석](docs/pcb-hfss-verification.md)에서는 설계 화면·제작 보드·와이어 본딩·HFSS 모델과 S-parameter·측정 환경을 원본 이미지 10개로 연결합니다. LPDDR의 개인 설계·분석 자료와 USB 보드의 공동 검토 자료를 구분했습니다.
+
 ## 읽는 순서
 
 1. [LPDDR 연구 개요](docs/lpddr.md) · [TX 회로·FFE·PEX 이후 검증](docs/lpddr-tx-circuit-verification.md) · [TX Verilog 구조·시뮬레이션 파형](docs/lpddr-tx-modeling.md)
 2. [USB: PAM-3 모델·RTL과 실리콘 평가](docs/usb4-pam3.md) · [TX 모델링·검증](docs/usb-tx-modeling.md) · [RX CTLE 동작점·보상 조정](docs/usb-rx-ctle-modeling.md)
-3. [측정 장비·PCB·채널 분석·자동화](docs/measurement-equipment.md)
+3. [PCB·HFSS 설계 화면·사진·해석](docs/pcb-hfss-verification.md) · [측정 장비·자동화](docs/measurement-equipment.md)
 4. [관련 논문과 근거 범위](docs/evidence.md)
 5. [실제 Eye·Shmoo와 AWG 수정 전후 화면](docs/verification-figures.md)
 

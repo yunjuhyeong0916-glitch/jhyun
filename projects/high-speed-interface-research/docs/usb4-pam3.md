@@ -34,6 +34,8 @@ USB 평가에서도 M8195A AWG, MP1800A BERT와 E3631A를 활용했습니다. �
 
 [검증 그림: 같은 CH#3·PRBS15 조건의 FFE 적용 전후 Eye](verification-figures.md#usb-pam-3-같은-채널패턴에서-ffe-효과-확인)에서 제작 TX의 파형 변화를 확인할 수 있습니다.
 
+[USB 보드 배치와 CLK·DATA 전달 특성](pcb-hfss-verification.md#4-usb-보드에서는-신호-경로와-전원-공급-경로를-함께-검토)은 공동 PCB 작업 자료에 근거해 설명했습니다. GND via·전원 공급 경로의 배치 판단과 12.8-GHz 손실을 실리콘 Eye 측정과 별도로 확인할 수 있습니다.
+
 | 단계 | 대표 결과 | 근거·범위 |
 |---|---|---|
 | TX 모델 | 40 Gb/s/lane | [SMACD 2025: TX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092283), SystemVerilog 모델·시뮬레이션 |

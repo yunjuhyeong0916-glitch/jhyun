@@ -4,6 +4,8 @@
 
 기존 논문과 측정 활동 자료에서 추출한 그림입니다. 시뮬레이션, 공동 칩 실측과 계측기 설정 확인을 각각 표시했습니다. 원본의 축·주석·파형을 유지했으며, 출처 파일과 그림의 해시는 [추출 기록](../../../docs/figure-sources.json)에 있습니다.
 
+**PCB·HFSS 설계 화면과 실제 보드·본딩·계측 사진**은 [보드 배선에서 실제 측정 경로까지](pcb-hfss-verification.md)에 모았습니다. 원본 이미지 10개에 분석 구간·주파수·손실과 해석 범위를 붙였습니다.
+
 LPDDR Combo의 **TX Verilog 모델 검증 파형**은 [TX 모델링 상세 페이지](lpddr-tx-modeling.md)에 모았습니다. VCS·Questa 파형, pre-emphasis 코드별 Eye 4종과 4-DQ 통합 출력을 모델 조건과 함께 볼 수 있습니다.
 
 LPDDR의 **TX 회로·FFE·PEX 이후 검증**은 [회로 설계·검증 과정](lpddr-tx-circuit-verification.md)에 정리했습니다. 과제·시험 제출자료의 구조도, FFE off/on Eye와 PRBS7 주기·전원 전류·갱신 Eye 등 원본 그림 6개를 확인할 수 있습니다.

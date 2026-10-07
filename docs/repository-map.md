@@ -26,6 +26,8 @@
 
 **검증 그림 확인:** [LPDDR·USB Eye·Shmoo와 AWG 설정 전후](../projects/high-speed-interface-research/docs/verification-figures.md) → [출처 파일·페이지·해시](figure-sources.json)
 
+**PCB·HFSS 사진과 해석:** [PCB 배치·제작·본딩·HFSS 모델·전달 특성·계측 환경](../projects/high-speed-interface-research/docs/pcb-hfss-verification.md) → [자료별 선별 기록](../projects/high-speed-interface-research/reports/pcb_hfss_selection_20261007.json)
+
 **연구 이력 탐색:** [MLSD 비교 실험](../experiments/) → [참고 코어](../reference/mlsd-cores/) → [이전 보드 자료](../archive/)
 
 ## 폴더 구조
