@@ -20,9 +20,9 @@
 | 항목 | 결과 | 조건·출처 |
 |---|---|---|
 | 검출기 코어 RTL | 대응 bit-accurate 참조와 일치, 지연 23클록·II=1 | 개정 K=2 및 행렬 K=1 비교 코어 |
-| RX FFE 통합 RTL | 참조와 일치, 지연 24클록·II=1 | 11-tap RX FFE·검출기 통합 |
+| 기존 RX FFE 통합 RTL | 참조와 일치, 지연 24클록·II=1 | 기존 11-tap RX FFE·검출기 통합 구성 |
 | 검출기 FPGA 자원 | LUT 266,664·FF 168,330·BRAM 240·DSP 1,664 | Journal 초안의 post-route 구현, RX FFE 제외 |
-| 보드 실측 | 예정 | BER·PR 등고선·연속 처리율 |
+| 보드 실측 | 예정 | 21-tap RX FFE + DP-SMM, BER·PR 등고선·연속 처리율 |
 
 [Journal RTL 검증·구현 조건](../projects/dp-smm-journal/docs/validation.md).
 

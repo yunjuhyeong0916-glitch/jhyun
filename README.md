@@ -22,11 +22,11 @@ ZCU208 RFSoC와 ISI 보드를 연결한 PAM4 송수신 실측 환경. [A-SSCC �
 
 ### Journal 준비 | DP-SMM 설계·검증 (진행 중)
 
-DS-SBM의 구간 행렬 구조를 확장해, 합성 단계마다 두 경로를 보존하고 실제 심볼 이력으로 비용을 재평가하는 DP-SMM 검출기를 설계했습니다. 프레임 경계에서도 상태별 두 후보를 남겨 다음 프레임의 판정에 활용합니다. 참조 모델과 RTL의 일치를 확인하고 FPGA 배치배선을 수행했으며, 보드 실측을 준비하고 있습니다.
+DS-SBM의 구간 행렬 구조를 확장해, 합성 단계마다 두 경로를 보존하고 실제 심볼 이력으로 비용을 재평가하는 DP-SMM 검출기를 설계했습니다. 프레임 경계에서도 상태별 두 후보를 남겨 다음 프레임의 판정에 활용합니다. 참조 모델과 RTL의 일치를 확인하고 FPGA 배치배선을 수행했으며, **21-tap RX FFE + DP-SMM** 구성으로 보드 실측을 준비합니다.
 
 **DP-SMM 특허 출원 준비 중.**
 
-[DP-SMM Journal 프로젝트](projects/dp-smm-journal/) · [검출기 구조](projects/dp-smm-journal/docs/architecture.md) · [RTL 검증·FPGA 구현](projects/dp-smm-journal/docs/validation.md)
+[DP-SMM Journal 프로젝트](projects/dp-smm-journal/) · [DS-SBM·DP-SMM 비교 그림](projects/dp-smm-journal/#ds-sbm에서-확장한-점) · [RTL 검증·FPGA 구현](projects/dp-smm-journal/docs/validation.md)
 
 ### A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP
 

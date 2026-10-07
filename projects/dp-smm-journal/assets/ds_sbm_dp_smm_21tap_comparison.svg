@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="990" viewBox="0 0 1200 990" role="img" aria-labelledby="title desc">
+<title id="title">DS-SBM과 DP-SMM의 21-tap RX FFE 수신 구성과 후보 보존 비교</title><desc id="desc">DS-SBM은 별도 PR FIR, 행렬 원소별 한 경로와 상태별 한 PM을 사용한다. DP-SMM은 21-tap RX FFE 수신 구성을 진행할 예정이며, PR 목표로 예상 샘플을 계산하고 행렬 원소별 두 경로를 보존한다. 실제 이력으로 비용을 재평가한 뒤 상태별 두 PM·이력 후보를 다음 프레임에 전달한다.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#657587"/></marker></defs>
+<style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif;fill:#172b43}.small{fill:#526479}</style>
+<rect width="1200" height="990" fill="#fff"/>
+<text x="32" y="48" font-size="30" font-weight="700" text-anchor="start">DS-SBM과 DP-SMM의 수신 구성</text>
+<text x="32" y="84" font-size="19" font-weight="400" text-anchor="start" style="fill:#526479">공통: 21-tap RX FFE  ·  DP-SMM은 21-tap 수신 구성으로 진행 예정</text>
+<rect x="32" y="116" width="550" height="798" rx="18" fill="#fff8ed" stroke="#dbe3ec" stroke-width="2"/>
+<text x="307" y="162" font-size="30" font-weight="700" text-anchor="middle" style="fill:#b97824">DS-SBM</text>
+<text x="307" y="193" font-size="18" font-weight="400" text-anchor="middle" style="fill:#526479">A-SSCC 송수신 구성</text>
+<rect x="62" y="218" width="490" height="66" rx="12" fill="#fff" stroke="#b97824" stroke-width="2"/>
+<text x="307" y="260" font-size="25" font-weight="700" text-anchor="middle">21-tap RX FFE</text>
+<path d="M307 285L307 310" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="62" y="316" width="490" height="80" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="307" y="349" font-size="23" font-weight="700" text-anchor="middle">별도 3-tap PR FIR</text>
+<text x="307" y="379" font-size="20" font-weight="400" text-anchor="middle">PR FIR 출력으로 BM 계산</text>
+<path d="M307 397L307 421" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="62" y="428" width="490" height="102" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="307" y="462" font-size="24" font-weight="700" text-anchor="middle">행렬 원소별 한 경로</text>
+<path d="M177 488L437 488" fill="none" stroke="#d34b42" stroke-width="3"/>
+<circle cx="177" cy="488" r="4" fill="#d34b42"/><circle cx="437" cy="488" r="4" fill="#d34b42"/>
+<path d="M177 512L437 512" fill="none" stroke="#aeb8c4" stroke-width="3" stroke-dasharray="7 5"/>
+<circle cx="177" cy="512" r="4" fill="#aeb8c4"/><circle cx="437" cy="512" r="4" fill="#aeb8c4"/>
+<text x="485" y="518" font-size="17" font-weight="400" text-anchor="middle" style="fill:#6b7785">제외</text>
+<path d="M307 531L307 555" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="62" y="562" width="490" height="76" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="307" y="593" font-size="23" font-weight="700" text-anchor="middle">구간 행렬 합성</text>
+<text x="307" y="621" font-size="20" font-weight="400" text-anchor="middle">선택한 한 경로의 비용 전달</text>
+<path d="M307 639L307 664" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="62" y="670" width="490" height="94" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="307" y="708" font-size="23" font-weight="700" text-anchor="middle">구간 최소 비용 + 유입 PM</text>
+<text x="307" y="741" font-size="20" font-weight="400" text-anchor="middle">프레임 경계에서 경로 선택</text>
+<path d="M307 765L307 791" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="62" y="798" width="490" height="84" rx="12" fill="#fff" stroke="#b97824" stroke-width="2"/>
+<text x="307" y="834" font-size="23" font-weight="700" text-anchor="middle">상태별 PM 한 개</text>
+<text x="307" y="863" font-size="20" font-weight="400" text-anchor="middle">다음 프레임으로 전달</text>
+<rect x="618" y="116" width="550" height="798" rx="18" fill="#eff7ff" stroke="#dbe3ec" stroke-width="2"/>
+<text x="893" y="162" font-size="30" font-weight="700" text-anchor="middle" style="fill:#2563a6">DP-SMM</text>
+<text x="893" y="193" font-size="18" font-weight="400" text-anchor="middle" style="fill:#526479">Journal · 21-tap RX FFE 적용 예정</text>
+<rect x="648" y="218" width="490" height="66" rx="12" fill="#fff" stroke="#2563a6" stroke-width="2"/>
+<text x="893" y="260" font-size="25" font-weight="700" text-anchor="middle">21-tap RX FFE</text>
+<path d="M893 285L893 310" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="648" y="316" width="490" height="80" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="893" y="349" font-size="23" font-weight="700" text-anchor="middle">RX FFE 출력으로 BM 생성</text>
+<text x="893" y="379" font-size="20" font-weight="400" text-anchor="middle">PR 목표로 후보의 예상 샘플 계산</text>
+<path d="M893 397L893 421" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="648" y="428" width="490" height="102" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="893" y="462" font-size="24" font-weight="700" text-anchor="middle">행렬 원소별 두 경로</text>
+<path d="M763 488L1023 488" fill="none" stroke="#d34b42" stroke-width="3"/>
+<circle cx="763" cy="488" r="4" fill="#d34b42"/><circle cx="1023" cy="488" r="4" fill="#d34b42"/>
+<path d="M763 512L1023 512" fill="none" stroke="#2563bf" stroke-width="3"/>
+<circle cx="763" cy="512" r="4" fill="#2563bf"/><circle cx="1023" cy="512" r="4" fill="#2563bf"/>
+<path d="M893 531L893 555" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="648" y="562" width="490" height="76" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="893" y="593" font-size="23" font-weight="700" text-anchor="middle">구간 행렬 합성</text>
+<text x="893" y="621" font-size="20" font-weight="400" text-anchor="middle">각 원소의 두 경로를 유지하며 합성</text>
+<path d="M893 639L893 664" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="648" y="670" width="490" height="94" rx="12" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+<text x="893" y="708" font-size="23" font-weight="700" text-anchor="middle">실제 심볼 이력으로 비용 재평가</text>
+<text x="893" y="741" font-size="20" font-weight="400" text-anchor="middle">유입 PM을 더해 경계 후보 선택</text>
+<path d="M893 765L893 791" fill="none" stroke="#657587" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="648" y="798" width="490" height="84" rx="12" fill="#fff" stroke="#2563a6" stroke-width="2"/>
+<text x="893" y="834" font-size="23" font-weight="700" text-anchor="middle">상태별 PM·이력 후보 두 개</text>
+<text x="893" y="863" font-size="20" font-weight="400" text-anchor="middle">다음 프레임으로 전달</text>
+<text x="600" y="956" font-size="22" font-weight="700" text-anchor="middle">DP-SMM의 확장: 두 경로 보존 → 실제 이력 재평가 → 두 경계 후보 전달</text>
+</svg>

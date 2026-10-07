@@ -22,11 +22,11 @@ Compared the signal paths, candidate retention and frame-boundary updates of the
 
 ### Journal preparation | DP-SMM design and verification (in progress)
 
-Extended the DS-SBM segment-matrix architecture to retain two path proposals per entry through matrix composition and rescore them using actual symbol histories. Two accumulated-metric survivors per state carry alternative paths into the next frame. Verified the RTL against a reference model and completed FPGA place and route; board measurements are in preparation.
+Extended the DS-SBM segment-matrix architecture to retain two path proposals per entry through matrix composition and rescore them using actual symbol histories. Two accumulated-metric survivors per state carry alternative paths into the next frame. Verified the RTL against a reference model and completed FPGA place and route; board measurements are planned with a **21-tap RX FFE + DP-SMM** receiver.
 
 **A patent application for DP-SMM is in preparation.**
 
-[DP-SMM journal project](projects/dp-smm-journal/) · [Detector architecture](projects/dp-smm-journal/docs/architecture.md) · [RTL verification and FPGA implementation](projects/dp-smm-journal/docs/validation.md)
+[DP-SMM journal project](projects/dp-smm-journal/) · [DS-SBM / DP-SMM comparison figure](projects/dp-smm-journal/#ds-sbm에서-확장한-점) · [RTL verification and FPGA implementation](projects/dp-smm-journal/docs/validation.md)
 
 ### A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP
 

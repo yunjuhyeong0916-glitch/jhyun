@@ -2,6 +2,12 @@
 
 [프로젝트](../README.md) · [검증·구현 결과](validation.md) · [DS-SBM과의 구조 비교](../../pam4-mlsd-thesis/docs/architecture.md)
 
+## 21-tap RX FFE를 사용하는 수신 구성
+
+![21-tap RX FFE 기준 DS-SBM과 DP-SMM의 PR 처리·행렬 경로 수·경계 PM 비교](../assets/ds_sbm_dp_smm_21tap_comparison.svg)
+
+DP-SMM도 **21-tap RX FFE**를 사용하는 수신 구성으로 진행합니다. DS-SBM은 FFE 뒤의 별도 3-tap PR FIR 출력을 관측하고, DP-SMM은 FFE 출력을 관측하면서 PR 목표를 후보 심볼열의 예상 샘플 계산에 사용합니다. 두 구조의 후보 보존·경계 갱신 차이를 위 그림에 표시했습니다.
+
 ## DS-SBM의 한 경로 선택을 두 경로 보존으로 확장
 
 DS-SBM은 생존 분기로 만든 구간 행렬에서 시작·종료 상태마다 한 경로를 남깁니다. 중간 합성에서 제외된 경로는 뒤의 비용 계산에 참여할 수 없습니다. DP-SMM은 같은 상태 쌍의 두 경로를 유지하고, 프레임 전체의 후보가 만들어진 뒤 실제 내부 심볼 이력과 유입 survivor의 생략 심볼을 반영해 비용을 다시 평가합니다.
@@ -14,7 +20,7 @@ DP-SMM은 **Dual-Path Segmented Metric-Matrix** 기반 축소 상태 MLSD입니�
 
 | 단계 | 처리 내용 |
 |---|---|
-| 관측 입력 | 11-tap RX FFE 출력. PR 목표는 예상 샘플 계산에 사용 |
+| 관측 입력 | 21-tap RX FFE 출력으로 진행 예정. PR 목표는 예상 샘플 계산에 사용 |
 | BM 생성 | 프로파일 ROM에서 심볼당 64개 memory-2 BM 가설 공급 |
 | 4심볼 기초 행렬 | 4×4 행렬의 시작·종료 상태별로 두 경로 후보 보존 |
 | 구간 합성 | 4심볼 → 8심볼 → 16심볼 → 32심볼의 rank-2 min-plus 합성 |
@@ -41,6 +47,8 @@ DP-SMM은 **Dual-Path Segmented Metric-Matrix** 기반 축소 상태 MLSD입니�
 ![DP-SMM 프레임 경계 PM 갱신과 계층적 경로 복원](../assets/dp_smm_boundary_recovery.jpg)
 
 프레임 행렬에 남은 경로의 내부 비용을 실제 심볼 이력으로 다시 계산합니다. 유입 survivor의 생략 심볼로 첫 BM을 정하고 유입 PM을 더한 뒤, 종료 가시 상태마다 누적 비용이 작은 두 후보를 선택합니다. 네 입력 상태·두 유입 survivor·두 프레임 경로에 따라 종료 상태별 최대 16개 후보가 경쟁합니다.
+
+![실제 이력으로 비용을 재평가한 뒤 제안 2위 경로를 선택하는 DP-SMM 검증 사례](../assets/dp_smm_rescoring_selection.svg)
 
 기존 검증 벡터에서는 제안 비용이 21·22였던 두 경로가 실제 이력을 반영한 뒤 31·27로 바뀌어, 두 번째 경로가 최종 선택됐습니다. 유입 PM은 0인 조건으로, 두 경로를 유지한 덕분에 비용 순위가 바뀐 후보를 복원에 사용할 수 있었습니다. [RTL 대조와 복원 예](../../pam4-mlsd-thesis/docs/validation.md#두-번째-후보가-최종-선택에-사용된-예)
 
