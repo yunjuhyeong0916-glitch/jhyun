@@ -8,8 +8,8 @@ LPDDR 저전압 TX를 설계하고 Schematic·Post-Layout 검증을 수행했습
 
 | 프로젝트 | 담당 설계·검증 | 결과 |
 |---|---|---|
-| [LPDDR](docs/lpddr.md) | [TX 회로](docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델](docs/lpddr-tx-modeling.md), PCB·HFSS, 공동 평가 | TX 시뮬레이션 15.6 Gb/s·0.76 pJ/bit, 공동 Combo PHY 실측 14 Gb/s/pin |
-| [USB PAM-3](docs/usb4-pam3.md) | [TX 모델·RTL·Serializer](docs/usb-tx-modeling.md), [RX CTLE 모델](docs/usb-rx-ctle-modeling.md), PCB·채널 분석·차동 측정 | TX 모델 40 Gb/s/lane, RX 모델 25.6 GBaud/lane, 공동 TX 실측 32 Gb/s |
+| [LPDDR](docs/lpddr.md) | [TX 회로](docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델](docs/lpddr-tx-modeling.md), [PCB·HFSS](docs/pcb-hfss-verification.md), 공동 평가 | TX 시뮬레이션 15.6 Gb/s·0.76 pJ/bit, 공동 Combo PHY 실측 14 Gb/s/pin |
+| [USB PAM-3](docs/usb4-pam3.md) | [TX 모델·RTL·Serializer](docs/usb-tx-modeling.md), [RX CTLE 모델](docs/usb-rx-ctle-modeling.md), [PCB·채널 분석](docs/pcb-hfss-verification.md)·차동 측정 | TX 모델 40 Gb/s/lane, RX 모델 25.6 GBaud/lane, 공동 TX 실측 32 Gb/s |
 
 ## PCB·계측
 
