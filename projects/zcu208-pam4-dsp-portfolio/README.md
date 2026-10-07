@@ -1,5 +1,7 @@
 # A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP 설계·검증
 
+[첫 화면](../../README.md) · [설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [측정·구현 결과](docs/validation.md)
+
 ZCU208 RFSoC의 4-GS/s 설정 ADC·DAC에 **32-lane 병렬 DSP**를 연결했습니다. TX FIR, RX 21-tap FIR와 DS-SBM RS-MLSD를 구현하고, 런타임 계수 제어·PRBS 검사·ILA 디버깅 경로를 통합했습니다.
 
 DS-SBM 검출기 구조와 RFSoC 시스템의 BER·자원·타이밍 결과를 정리했습니다. 후속 DP-SMM 설계는 [Journal 준비 프로젝트](../dp-smm-journal/), 두 구조의 비교는 [학위논문](../pam4-mlsd-thesis/)에서 다룹니다.
@@ -14,8 +16,6 @@ DS-SBM 검출기 구조와 RFSoC 시스템의 BER·자원·타이밍 결과를 �
 | 보드 통합 | RFDC·FIFO, BRAM 계수 로더, GPIO 제어, PRBS 검사·ILA |
 | PS 제어 | Vitis A53 Standalone 앱, CLK104·RFDC 초기화, 계수 commit·캡처 수집 |
 
-[설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md)
-
 ## 송수신 경로
 
 ```mermaid
@@ -25,7 +25,8 @@ flowchart LR
     D --> I[ISI 보드]
     I --> A[RFDC ADC]
     A --> R[RX FIR 등화]
-    R --> M[DS-SBM RS-MLSD 검출]
+    R --> Q[3-tap PR FIR]
+    Q --> M[DS-SBM RS-MLSD 검출]
     M --> C[PRBS 검사 / ILA 캡처]
     G[런타임 계수 설정] -.-> R
     G -.-> M

@@ -1,6 +1,6 @@
 # LPDDR·USB 고속 인터페이스 설계·검증
 
-[저장소 첫 화면](../../README.md) · [측정·자동화](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문](docs/evidence.md)
+[저장소 첫 화면](../../README.md) · [측정·자동화](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문·담당 역할](docs/evidence.md)
 
 LPDDR 저전압 TX를 설계하고 Schematic·Post-Layout 검증을 수행했습니다. USB PAM-3에서는 TX 논리 RTL·동작 모델과 RX CTLE 모델을 구현하고, 송수신 통합·제작 TX의 차동 신호 평가에 참여했습니다.
 
@@ -27,4 +27,4 @@ PCB 배치·배선과 HFSS S-parameter 분석을 수행하고, COB 실장 이후
 | LPDDR | [ICEIC 2025 · 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746) | [A-SSCC 2026 · 14-Gb/s/pin Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141), 채택·발표 예정 |
 | USB PAM-3 | [SMACD 2025 · TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025 · RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233) | [IEEE TVLSI 2026 · 32-Gb/s TX·150-preset FFE](https://doi.org/10.1109/TVLSI.2026.3701343) |
 
-[논문별 결과·담당 역할](docs/evidence.md) · [전체 논문 목록](../../docs/publications.md)
+[성과·담당 역할](docs/evidence.md) · [전체 논문 목록](../../docs/publications.md)

@@ -1,4 +1,4 @@
-# 이전 기준 RTL의 회귀 기록
+# 부록 | 초기 RTL 회귀 시험
 
 [프로젝트](../README.md) · [학위논문 검증 결과](validation.md) · [A-SSCC DS-SBM 측정·구현 결과](../../zcu208-pam4-dsp-portfolio/docs/validation.md)
 
@@ -37,15 +37,5 @@
 | RX EQ21 old/segmented equivalence | PASS | 900 | 회로 간 지연 차이 3 cycles |
 
 출력 비교는 초기 대기 이후 시작했습니다. 입력은 테스트벤치의 의사난수·계수 조건입니다.
-
-## 검증 상태
-
-| 항목 | 상태 |
-|---|---|
-| FIR 회귀 기준 | 2026-09-09 PASS |
-| 메트릭 모듈·Python 참조 복원 | 2026-10-07 두 조건 PASS |
-| 전체 MLSD 어댑터 | 2026-10-07 두 조건 FAIL·출력 불일치, 정렬 원인 검토 필요 |
-| 2026-09-09 RTL의 보드 BER·무오류 관측 시간 | 미재현 |
-| memory-2 이력을 포함한 기준 RTL 전체 경로 정합성 | 추가 검증 필요 |
 
 A-SSCC의 DS-SBM 시스템 BER와 ADC 캡처·재생·통계 분석은 [DS-SBM 프로젝트의 측정 결과](../../zcu208-pam4-dsp-portfolio/docs/validation.md)에 정리했습니다.

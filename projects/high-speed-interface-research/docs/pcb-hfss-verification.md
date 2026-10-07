@@ -2,7 +2,7 @@
 
 # PCB 설계·HFSS 분석
 
-[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·근거](evidence.md)
+[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
 
 LPDDR 측정용 PCB의 회로·배치·배선을 설계하고 HFSS로 전달 특성을 분석했습니다. 제작 보드의 COB 실장·측정에 참여했으며, USB TX 보드에서는 GND via와 전원 공급 경로를 검토했습니다.
 

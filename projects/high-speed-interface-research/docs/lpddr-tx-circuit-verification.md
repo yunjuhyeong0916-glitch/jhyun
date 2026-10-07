@@ -1,6 +1,6 @@
 # LPDDR TX 회로 설계·검증: FFE와 PEX 이후 동작 확인
 
-[LPDDR 연구 개요](lpddr.md) · [TX Verilog 모델링](lpddr-tx-modeling.md) · [측정 장비](measurement-equipment.md) · [논문·근거](evidence.md)
+[LPDDR 연구 개요](lpddr.md) · [TX Verilog 모델링](lpddr-tx-modeling.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
 
 **담당:** 28-nm CMOS TX 회로 설계·Schematic/Post-Layout 검증. **검증:** 회로 시뮬레이션.
 
@@ -31,14 +31,14 @@ PI-LVSTL TX에 main·1-UI 지연 경로를 두고 드라이버 세그먼트와 F
 
 **조건:** 15.6 Gb/s 회로 시뮬레이션. ICEIC 논문 조건은 내부 전원 1.05 V·드라이버 전원 0.5 V·채널 손실 8.7 dB입니다.
 
-## 3. PEX 이후 속도와 전력의 산출 근거 확인
+## 3. PEX 이후 데이터율·전력 검증
 
-Schematic에서 정한 동작을 배선 이후에도 확인하기 위해 레이아웃의 DRC·LVS를 거쳐 기생성분을 추출하고, 추출 netlist를 FineSim에서 시뮬레이션했습니다. TX LVS 결과에는 **CORRECT**가 표시되어 있습니다.
+배선 기생성분이 TX 동작에 미치는 영향을 확인하기 위해 DRC·LVS를 거쳐 기생성분을 추출하고, 추출 netlist를 FineSim에서 시뮬레이션했습니다. TX의 LVS 정합성을 확인했습니다.
 
 출력 PRBS7 한 주기의 127 bits가 약 8.14 ns에 반복되어 **127 / 8.14 ns ≈ 15.6 Gb/s**로 계산됩니다.
 
 <details>
-<summary>11월 시험자료의 PRBS7 출력 주기 확인</summary>
+<summary>PRBS7 출력 주기로 데이터율 확인</summary>
 
 ![TX 시뮬레이션 출력에서 PRBS7 한 주기 8.14ns를 확인한 파형](../assets/lpddr_tx_circuit_prbs7_period.png)
 
@@ -46,7 +46,7 @@ Schematic에서 정한 동작을 배선 이후에도 확인하기 위해 레이�
 
 </details>
 
-전력은 내부 전원과 드라이버 전원의 기여를 각각 계산했습니다. 시험자료에서 선택한 구간의 평균전류 크기는 VDD2H에서 9.86 mA, VDDQ에서 3.16 mA입니다. 두 레일을 합하면 **9.86 mA × 1.05 V + 3.16 mA × 0.5 V ≈ 11.93 mW**, 이를 15.6 Gb/s로 나누면 **약 0.76 pJ/bit**입니다.
+전력은 내부 전원과 드라이버 전원의 기여를 각각 계산했습니다. 선택한 시뮬레이션 구간의 평균전류 크기는 VDD2H에서 9.86 mA, VDDQ에서 3.16 mA입니다. 두 레일을 합하면 **9.86 mA × 1.05 V + 3.16 mA × 0.5 V ≈ 11.93 mW**, 이를 15.6 Gb/s로 나누면 **약 0.76 pJ/bit**입니다.
 
 <details>
 <summary>두 전원 레일의 평균전류 파형 보기</summary>
@@ -59,29 +59,23 @@ Schematic에서 정한 동작을 배선 이후에도 확인하기 위해 레이�
 
 <a id="4-시험자료의-갱신값과-논문공동-측정의-구분"></a>
 
-## 4. 11월 시뮬레이션 결과
-
-11월 4일 시험 시뮬레이션의 TX Eye는 **46 ps·75.7 mV**입니다. 앞의 10월 값은 **45.4 ps·75.1 mV**입니다.
-
 <details>
-<summary>11월 갱신자료의 TX Eye 보기</summary>
+<summary>추가 회로 시뮬레이션의 TX Eye·면적·전력</summary>
 
-![11월 시험 제출자료의 TX 시뮬레이션 Eye, 폭 46ps 높이 75.7mV](../assets/lpddr_tx_circuit_updated_eye.png)
+## 4. 추가 회로 시뮬레이션
 
-**검증 단계:** 11월 갱신 시뮬레이션의 TX Eye입니다.
+11월 4일 추가 시뮬레이션의 TX Eye는 **46 ps·75.7 mV**입니다. 앞의 FFE 적용 전후 비교는 10월 시뮬레이션 결과입니다.
 
-</details>
+![추가 회로 시뮬레이션의 TX Eye, 폭 46ps 높이 75.7mV](../assets/lpddr_tx_circuit_updated_eye.png)
 
-| 항목 | 11월 추가자료의 기록 | 조건 |
+| 항목 | 결과 | 조건 |
 |---|---|---|
 | TX 데이터율 | 15.6 Gb/s | PRBS7 출력 주기로 확인한 시뮬레이션 |
 | TX 전원·전력·에너지 | 1.05 V / 0.5 V, 약 11.93 mW·0.76 pJ/bit | 두 전원 레일을 합산한 TX 결과 |
 | TX 면적 | 0.0201 mm² | PRBS·데이터·드라이버·ZQ·클록 경로를 포함한 TX 합계 |
 | TX Eye | 46 ps·75.7 mV | 해당 시뮬레이션 버전의 Eye 폭·높이 |
 
-**면적·에너지:** 11월 시뮬레이션의 TX 면적은 0.0201 mm², TRX 합계는 0.0334 mm²입니다. 에너지는 TX 0.76 pJ/bit·RX 0.15 pJ/bit로, TRX 합계는 0.91 pJ/bit입니다.
-
-**검증:** 시험 제출용 회로 시뮬레이션. [Combo PHY 제작 칩 측정](lpddr.md#검증-결과와-조건)
+</details>
 
 ## 관련 논문
 

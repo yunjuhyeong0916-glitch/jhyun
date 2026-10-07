@@ -1,6 +1,6 @@
 # USB TX 모델링: 논리 데이터에서 전기 계층까지
 
-[파트 개요](../README.md) · [USB 연구·제작 칩 측정](usb4-pam3.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·근거](evidence.md)
+[파트 개요](../README.md) · [USB 연구·제작 칩 측정](usb4-pam3.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·담당 역할](evidence.md)
 
 **담당:** TX 논리 RTL·XMODEL 모델링·통합, Serializer 검증, 합성·P&R 후 전기 계층 연결. **검증:** 모델·시뮬레이션.
 
@@ -22,20 +22,21 @@ flowchart LR
 
 ## 2. 직접 계산한 기대값으로 RTL 출력 확인
 
-인코더에서는 `A=11` 분기의 중간값 처리와 출력 선택 시점 때문에 지연·unknown 출력이 관찰됐습니다. 해당 분기의 계산을 분리하고 선택 타이밍을 조정한 뒤, 계산표와 시뮬레이션 출력을 다시 비교했습니다. 같은 코드의 Vivado·DVE 출력 비교도 함께 기록했습니다.
+인코더의 `A=11` 분기에서 중간값 계산과 출력 선택 시점이 맞지 않아 지연·unknown 출력이 발생했습니다. 해당 분기의 계산을 분리하고 선택 타이밍을 조정한 뒤, 직접 계산한 기대값과 Vivado·DVE 시뮬레이션 출력을 비교했습니다.
 
-스크램블러는 복원 경로를 연결하는 테스트와 별도로 `Data → F_out → Scramble_out`을 직접 계산해 비교했습니다. 아래 표는 **8개 데이터 예시의 첫 14 bit를 7개 심볼로 나누어 계산한 기록**입니다. 이후에는 224-bit 버스의 기대 출력과 RTL 파형을 대조했습니다.
+스크램블러는 복원 경로를 연결하는 테스트와 별도로 `Data → F_out → Scramble_out`을 직접 계산해 비교했습니다. 아래는 **8개 입력 예시의 첫 14 bit를 7개 심볼로 나누어 계산한 결과**입니다. 이후에는 224-bit 버스의 기대 출력과 RTL 파형을 대조했습니다.
+
+<details>
+<summary>입력·F 함수로 계산한 스크램블러 기대값</summary>
 
 ![입력 데이터와 F 함수로 직접 계산한 스크램블러 기대 출력](../assets/usb_tx_model_expected_values.png)
 
-**기대값 계산:** 입력 데이터와 F 함수로 직접 계산한 스크램블러 출력입니다.
+</details>
 
-**검증:** 선택 데이터의 계산값과 Vivado·DVE 출력 비교.
-
-PRBS11·PRTS19 발생기는 seed별 리셋 후 100개 출력을 참조 수열과 비교했습니다. PRTS19 3종×PRBS11 2종×입력 심볼 3종의 18조합은 검증 계획으로 기록했습니다.
+PRBS11·PRTS19 발생기는 seed별 리셋 후 100개 출력을 참조 수열과 비교했습니다.
 
 <details>
-<summary>추가 자료에 남은 6가지 PRTS19·PRBS11 조건의 비교 예시</summary>
+<summary>PRTS19·PRBS11 조합별 스크램블·복원 예시</summary>
 
 | PRTS19 / PRBS11 | 입력 → 스크램블 → 복원 데이터, 10진 표시 |
 |---|---|
@@ -56,11 +57,16 @@ PRBS11·PRTS19 발생기는 seed별 리셋 후 100개 출력을 참조 수열과
 
 후속 모델에서는 **Descrambler 112개와 Decoder 16개**를 연결해 원래 데이터로 돌아오는 검증 경로를 구성했습니다. 원입력 비교 경로에 `4/f_clk` 지연을 두어 복원 경로의 지연과 맞춘 뒤, 입력과 복원 데이터의 차이를 관찰했습니다.
 
+<details>
+<summary>복원 데이터의 비교 신호와 클록 파형</summary>
+
 ![XMODEL 전체 논리 복원 경로에서 관측한 여섯 오류 신호와 클록](../assets/usb_tx_model_logical_roundtrip_error.png)
 
 **관측:** 위부터 `err0`–`err5`, 맨 아래는 클록. 비교 신호는 하위 11 bit이며, 안정 구간에서 0·클록 전이에서 스파이크가 관측됩니다.
 
-## 4. Scrambler on/off는 출력 경로와 관측 조건을 함께 확인
+</details>
+
+## 4. Scrambler 우회·활성 모드의 출력 확인
 
 우회 경로를 추가해 인코더 출력과 스크램블 출력을 선택할 수 있도록 했습니다. `sel/rst_sel=1/1`에서는 스크램블 블록 출력을 0으로 두고 인코더 데이터를 전달하며, `0/0`에서는 스크램블 데이터를 전달합니다. 같은 관측점에서 입력·중간값·최종 출력을 함께 보아 제어 신호가 실제 데이터 경로에 반영되는지 확인했습니다.
 
@@ -76,9 +82,14 @@ PRBS11·PRTS19 발생기는 seed별 리셋 후 100개 출력을 참조 수열과
 
 112:1 Serializer를 112→16→4→1로 나눠 입력 비트·출력 순서를 대조했습니다. 아래는 첫 단계의 7:1 경로입니다.
 
+<details>
+<summary>7:1 Serializer의 입력·출력 순서 확인</summary>
+
 ![7개 병렬 입력과 클록 및 7대1 직렬화 출력을 함께 관찰한 파형](../assets/usb_tx_model_serializer_7to1.jpg)
 
 **관측:** `D[0], D[16], …, D[96]`, 클록과 7:1 출력. 단계별로 112→16 블록 16개·16→4 블록 4개·4→1 블록 1개의 출력을 확인했습니다.
+
+</details>
 
 ## 6. 논리 출력을 FFE 드라이버·채널 모델에 연결
 
@@ -107,7 +118,7 @@ RTL과 P&R Verilog netlist를 VCS에서 비교하고 전기 계층을 포함한 
 
 ![이상적인 power labeling 조건에서 관찰한 POSIM MSB 0부터 9까지](../assets/usb_tx_model_posim_msb.png)
 
-![동일 자료에서 비교에 사용한 VCS MSB 0부터 9까지](../assets/usb_tx_model_vcs_msb.png)
+![POSIM과 비교한 VCS의 MSB 0부터 9까지 출력](../assets/usb_tx_model_vcs_msb.png)
 
 **관측:** POSIM·VCS의 MSB[0:9], 리셋·초기화 후 비트열.
 

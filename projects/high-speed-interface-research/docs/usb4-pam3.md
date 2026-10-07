@@ -1,6 +1,6 @@
 # USB4 PAM-3: 모델·RTL 검증과 제작 칩 측정
 
-[파트 개요](../README.md) · [LPDDR](lpddr.md) · [측정 장비](measurement-equipment.md) · [논문·근거](evidence.md)
+[파트 개요](../README.md) · [LPDDR](lpddr.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
 
 TX 논리계층·RX CTLE 모델링과 송수신 통합 검증을 맡았습니다. 11B7S 인코더·스크램블러 RTL을 합성·P&R해 전기 계층과 연결했으며, 제작 TX 평가에서는 PCB·채널 분석과 차동 PAM-3 측정에 참여했습니다.
 
@@ -46,4 +46,4 @@ USB TX 보드에서는 GND via와 전원 공급 경로를 검토했습니다. HF
 | RX 모델 | 25.6 GBaud/lane | [SMACD 2025: RX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092233), RX 통합 모델·시뮬레이션 |
 | 제작 PAM-3 TX | 28-nm CMOS, 32 Gb/s, 150-preset 4-tap FFE | [IEEE TVLSI 2026: PAM-3 TX·150-preset FFE 논문](https://doi.org/10.1109/TVLSI.2026.3701343), 제작 칩 측정 |
 
-[논문 전체 제목과 근거](evidence.md) · [MLSD·LPDDR를 포함한 전체 성과 논문](../../../docs/publications.md)
+[논문·담당 역할](evidence.md) · [MLSD·LPDDR를 포함한 전체 성과 논문](../../../docs/publications.md)

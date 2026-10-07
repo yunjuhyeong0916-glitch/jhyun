@@ -1,6 +1,6 @@
 # USB RX CTLE 모델링: 동작점 설정과 보상 조정
 
-[파트 개요](../README.md) · [USB 연구 개요](usb4-pam3.md) · [TX 모델링](usb-tx-modeling.md) · [논문·근거](evidence.md)
+[파트 개요](../README.md) · [USB 연구 개요](usb4-pam3.md) · [TX 모델링](usb-tx-modeling.md) · [논문·담당 역할](evidence.md)
 
 **담당:** CTLE 모델링·송수신 통합 검증. 바이어스·입력 공통전압과 R·C 제어를 조정해 채널 보상과 PAM-3 중간 레벨 안정성을 확인했습니다.
 
@@ -34,9 +34,9 @@ Virtuoso에서 사용한 값을 XMODEL에 그대로 옮겼을 때 같은 응답�
 
 </details>
 
-아래는 초기 모델·AC 테스트 설정입니다. CL=50 fF는 당시 수신 부하를 가정해 둔 값입니다.
+AC 테스트에서는 수신 부하를 CL=50 fF로 가정하고 다음 설정을 사용했습니다.
 
-| 항목 | 해당 버전의 설정 |
+| 항목 | 모델·AC 테스트 설정 |
 |---|---|
 | RD / CL | 50 Ω / 50 fF |
 | RZ / CZ | 제어 레벨 1에서 300 Ω / 400 fF |
@@ -65,7 +65,7 @@ Virtuoso에서 사용한 값을 XMODEL에 그대로 옮겼을 때 같은 응답�
 
 | 채널을 통과한 CTLE 입력 | 보상 조정 후 CTLE 출력 |
 |---|---|
-| ![FFE off 상태에서 채널을 통과한 scrambled PAM3 데이터의 CTLE 입력 Eye](../assets/usb_rx_ctle_input_eye_ffe_off.png) | ![같은 자료의 보상 조정 후 CTLE 출력 Eye](../assets/usb_rx_ctle_output_eye_ffe_off.png) |
+| ![FFE off 상태에서 채널을 통과한 scrambled PAM3 데이터의 CTLE 입력 Eye](../assets/usb_rx_ctle_input_eye_ffe_off.png) | ![보상 조정 후 CTLE 출력 Eye](../assets/usb_rx_ctle_output_eye_ffe_off.png) |
 
 **조건:** TX FFE off·scrambled data에서 선택한 CTLE 설정의 입출력 Eye.
 

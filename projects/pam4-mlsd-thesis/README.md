@@ -2,14 +2,14 @@
 
 축소 상태 MLSD의 후보 선택이 판정 성능에 미치는 영향을 연구하고 있습니다. **DS-SBM과 DP-SMM의 신호 경로·후보 보존·메트릭 합성·프레임 경계 갱신**을 비교하고, 동일 입력의 코어 시험으로 행렬 경로 수의 영향을 확인했습니다.
 
-[구조 비교](docs/architecture.md) · [모델·RTL 비교 결과](docs/validation.md) · [A-SSCC DS-SBM](../zcu208-pam4-dsp-portfolio/) · [Journal DP-SMM](../dp-smm-journal/)
+[첫 화면](../../README.md) · [구조 비교](docs/architecture.md) · [모델·RTL 비교 결과](docs/validation.md) · [A-SSCC DS-SBM](../zcu208-pam4-dsp-portfolio/) · [Journal DP-SMM](../dp-smm-journal/)
 
 ## 비교의 핵심
 
 | 항목 | DS-SBM | DP-SMM |
 |---|---|---|
 | 관측 신호 | 21-tap RX FFE 뒤 별도 PR FIR 출력 | 11-tap RX FFE 출력, PR 목표는 예상 샘플 계산에 사용 |
-| 행렬 원소별 경로 | 한 경로 | 두 제안 경로와 이력 반영 비용 정보 |
+| 행렬 원소별 경로 | 한 경로 | 두 경로 후보와 이력 반영 비용 정보 |
 | 프레임 경계 | 가시 상태별 PM 한 개 | 가시 상태별 PM·이력 후보 두 개 |
 
 두 수신기의 필터와 관측 경로가 달라, 행렬 후보 수의 효과는 FFE 뒤의 동일 코어 입력에서 R=1/R=2를 비교해 평가했습니다. [비교 구조와 조건](docs/architecture.md)
@@ -22,7 +22,7 @@
 
 ## 하드웨어 검증
 
-DS-SBM의 기존 물리 송수신 측정은 추정 손실 41 dB에서 PRBS7 BER < 10⁻⁷·PRBS15 BER < 2×10⁻⁶을 보고했습니다. **DP-SMM 실측은 아직 수행하지 않았으며**, AWG 기반 ADC-DSP 수신 경로의 BER·PR 등고선·동작 처리율을 평가할 예정입니다.
+DS-SBM RFSoC 송수신 시스템의 측정 결과는 추정 손실 41 dB에서 PRBS7 BER < 10⁻⁷·PRBS15 BER < 2×10⁻⁶입니다. DP-SMM은 보드 측정 준비 단계이며, AWG 기반 ADC-DSP 수신 경로의 BER·PR 등고선·연속 처리율을 평가할 예정입니다.
 
 [DS-SBM 시스템 측정](../zcu208-pam4-dsp-portfolio/docs/validation.md) · [DP-SMM 구조와 Journal 준비](../dp-smm-journal/)
 

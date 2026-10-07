@@ -18,7 +18,7 @@ PAM4 송수신 DSP, LPDDR 저전압 TX와 USB PAM-3 인터페이스를 설계·�
 
 ### Journal 준비 | DP-SMM 설계·검증 (진행 중)
 
-심볼별 경로 메트릭 갱신의 의존성을 줄이기 위해 구간 메트릭 행렬을 병렬 합성하는 검출기를 설계했습니다. 행렬 원소마다 두 경로 후보를 보존하고, 실제 심볼 이력으로 비용을 다시 계산해 경로를 선택합니다. RTL 정합성과 FPGA 구현을 정리했으며, 보드 실측은 예정입니다.
+심볼별 경로 메트릭 갱신의 의존성을 줄이기 위해 구간 메트릭 행렬을 병렬 합성하는 검출기를 설계했습니다. 행렬 원소마다 두 경로 후보를 보존하고, 실제 심볼 이력으로 비용을 다시 계산해 경로를 선택합니다. 참조 모델과 RTL의 일치를 확인하고 FPGA 배치배선을 수행했으며, 보드 실측을 준비하고 있습니다.
 
 [DP-SMM Journal 프로젝트](projects/dp-smm-journal/) · [검출기 구조](projects/dp-smm-journal/docs/architecture.md) · [RTL 검증·FPGA 구현](projects/dp-smm-journal/docs/validation.md)
 

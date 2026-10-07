@@ -1,18 +1,18 @@
-# 관련 논문과 검증 근거
+# 연구 성과와 담당 역할
 
-[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [전체 성과 논문 6편](../../../docs/publications.md)
+[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [전체 논문 목록](../../../docs/publications.md)
 
 기준일: **2026-10-07**.
 
-## 논문별 결과의 범위
+## 연구별 성과
 
-| 연구 자료 | 결과 |
+| 연구·관련 논문 | 결과 |
 |---|---|
-| [A 1.05-V/0.5-V 15.6-Gb/s NRZ Transmitter Achieving 0.76-pJ/bit Energy Efficiency for Low-Power Memory Interfaces](https://doi.org/10.1109/ICEIC64972.2025.10879746) | LPDDR 지향 28-nm 저전압 TX의 구조와 15.6 Gb/s·0.76 pJ/bit 시뮬레이션 결과 |
-| [A 14-Gb/s/pin LPDDR4X/5/5X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) | 제작 Combo PHY의 14 Gb/s/pin 동작, TX Eye와 4-DQ RX 마진 |
-| [SystemVerilog-Based Modeling and Verification of 40-Gb/s/Lane PAM-3 Transmitter for USB4.0 Gen4](https://doi.org/10.1109/SMACD65553.2025.11092283) | TX 모델 구성과 40 Gb/s/lane 모델·시뮬레이션 |
-| [SystemVerilog-Based Modeling and Verification of 25.6-GBaud/Lane PAM-3 Receiver](https://doi.org/10.1109/SMACD65553.2025.11092233) | RX 모델 구성과 25.6 GBaud/lane 모델·시뮬레이션 |
-| [A 0.0549-pJ/bit/pin/dB PAM-3 Transmitter With Reconfigurable 150-Preset Four-Tap FFE for Various Channel Environments](https://doi.org/10.1109/TVLSI.2026.3701343) | 28-nm 제작 PAM-3 TX의 32 Gb/s 동작·150-preset 4-tap FFE 측정 결과 |
+| LPDDR 저전압 TX · [ICEIC 2025](https://doi.org/10.1109/ICEIC64972.2025.10879746) | 28-nm TX 회로 시뮬레이션, 15.6 Gb/s·0.76 pJ/bit |
+| LPDDR Combo PHY · [A-SSCC 2026](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) | 제작 칩 실측, 14 Gb/s/pin·TX Eye·4-DQ RX 마진 |
+| USB TX 모델 · [SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092283) | 40 Gb/s/lane TX 동작 모델·시뮬레이션 |
+| USB RX 모델 · [SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092233) | 25.6 GBaud/lane RX 동작 모델·시뮬레이션 |
+| PAM-3 TX · [IEEE TVLSI 2026](https://doi.org/10.1109/TVLSI.2026.3701343) | 28-nm 제작 칩 실측, 32 Gb/s·150-preset 4-tap FFE |
 
 Combo PHY 논문: 채택·발표 예정. [전체 논문](../../../docs/publications.md)
 
@@ -21,7 +21,7 @@ Combo PHY 논문: 채택·발표 예정. [전체 논문](../../../docs/publicati
 | 항목 | 담당 역할·결과 |
 |---|---|
 | LPDDR 담당 역할 | TX 회로 설계·Schematic·Post-Layout 검증, 측정용 PCB 설계·HFSS 분석과 제작 칩 측정 참여 |
-| LPDDR TX 회로 검증 | [TX 구조·FFE·PEX 이후 검증](lpddr-tx-circuit-verification.md): FFE off/on Eye, LVS·PEX 기록, PRBS7 출력 주기, 두 전원 레일의 에너지 계산과 버전별 면적. 시험 제출용 회로 시뮬레이션 |
+| LPDDR TX 회로 검증 | [TX 구조·FFE·PEX 이후 검증](lpddr-tx-circuit-verification.md): FFE 적용 전후 Eye, LVS·PEX, PRBS7 데이터율, 전력·에너지·면적 |
 | LPDDR TX 동작 모델 | [32:1 직렬화·위상 정렬·pre-emphasis](lpddr-tx-modeling.md) 모델링 담당. 20-Gb/s 모델 조건의 VCS·Questa 파형, 코드별 Eye와 4-DQ 통합 출력 |
 | USB 담당 역할 | TX 논리계층·RX CTLE 모델, 11B7S·스크램블러 RTL 합성·P&R·전기 계층 연결 검증, PCB·채널 분석과 차동 PAM-3 측정 |
 | USB TX 모델링 과정 | [TX 논리 RTL·XMODEL 통합·Serializer 검증](usb-tx-modeling.md) 담당. 기대값 계산, 논리 복원·우회 제어와 FFE·채널 연결, 구현 후 VCS·POSIM 비교 |

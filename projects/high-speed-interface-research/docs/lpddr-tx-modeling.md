@@ -1,6 +1,6 @@
 # LPDDR Combo PHY: TX Verilog 모델링과 검증 파형
 
-[LPDDR 회로·제작 칩 측정](lpddr.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [파트 개요](../README.md) · [검증 그림](verification-figures.md) · [논문·근거](evidence.md)
+[LPDDR 회로·제작 칩 측정](lpddr.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [파트 개요](../README.md) · [검증 그림](verification-figures.md) · [논문·담당 역할](evidence.md)
 
 **담당:** TX Verilog 동작 모델링. 32-bit 병렬 입력을 직렬화하고, 위상 정렬된 main/1UI 지연 데이터로 pre-emphasis 출력을 생성했습니다.
 
@@ -43,11 +43,12 @@ PRBS7 병렬 입력을 인가하고 직렬 데이터·1UI 지연·pre-emphasis·
 
 **관측 신호:** 위부터 `ser_out`, `ser_delay_out`, `dout_pre`, `ch_out`.
 
-**Questa 파형 — TX 출력과 채널 출력**
+<details>
+<summary>Questa의 TX·채널 출력 파형</summary>
 
 ![Questa에서 관찰한 TX pre-emphasis 출력과 채널 출력](../assets/lpddr_combo_tx_model_waveform_questa.png)
 
-**검증 방식:** VCS·Questa 파형 관찰.
+</details>
 
 ## Pre-emphasis 코드에 따른 Eye 변화
 

@@ -2,7 +2,7 @@
 
 심볼별 경로 메트릭(PM) 갱신의 의존성을 줄이기 위해, 32심볼 프레임을 구간 메트릭 행렬로 처리하는 **DP-SMM RS-MLSD**를 설계했습니다. 행렬 원소마다 두 경로 후보를 보존하고, 실제 심볼 이력을 반영한 비용과 이전 프레임의 PM으로 최종 경로를 선택합니다.
 
-[검출기 구조](docs/architecture.md) · [RTL 검증·FPGA 구현](docs/validation.md) · [DS-SBM·DP-SMM 비교 연구](../pam4-mlsd-thesis/)
+[첫 화면](../../README.md) · [검출기 구조](docs/architecture.md) · [RTL 검증·FPGA 구현](docs/validation.md) · [DS-SBM·DP-SMM 비교 연구](../pam4-mlsd-thesis/)
 
 ## 32심볼 병렬 처리 구조
 
@@ -23,10 +23,6 @@
 
 ## 측정 준비
 
-DP-SMM 보드 실측은 예정입니다. AWG 기반 ADC-DSP 수신 경로와 DAC–ISI 보드–ADC 송수신 경로의 평가를 준비합니다. 기존 DS-SBM의 측정 성과는 [A-SSCC 프로젝트](../zcu208-pam4-dsp-portfolio/)에서 확인할 수 있습니다.
-
-## 관련 연구
-
-**Journal 원고 준비 중입니다.** 학위논문에서는 DS-SBM과 DP-SMM의 신호 경로·후보 보존·메트릭 합성을 비교하고, 동일 입력의 R=1/R=2 코어 검증을 다룹니다.
+DP-SMM의 보드 실측을 준비하고 있습니다. AWG 기반 ADC-DSP 수신 경로와 DAC–ISI 보드–ADC 송수신 경로에서 BER·PR 등고선·연속 처리율을 평가할 예정입니다.
 
 [A-SSCC DS-SBM](../zcu208-pam4-dsp-portfolio/) · [학위논문 비교 연구](../pam4-mlsd-thesis/) · [연구 성과 논문](../../docs/publications.md)

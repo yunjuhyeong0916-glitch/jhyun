@@ -1,4 +1,4 @@
-# 기술 용어 짧게 읽기
+# 기술 용어
 
 [저장소 첫 화면](../README.md) · [대표 프로젝트](../projects/zcu208-pam4-dsp-portfolio/)
 
@@ -25,6 +25,7 @@
 | DP-SMM | Dual-Path Segmented Metric-Matrix. 행렬 원소별 두 경로 후보와 상태별 두 경계 survivor를 유지하는 Journal 준비 연구의 축소 상태 MLSD 구조 |
 | PR 목표 | 검출기가 예상 수신 샘플을 계산할 때 사용하는 부분응답 계수. DS-SBM은 별도 PR FIR을 두고, DP-SMM은 예상 샘플 계산에 반영 |
 | BM / PM | 후보 전이의 비용인 branch metric / 경로를 따라 누적한 비용인 path metric |
+| Survivor | 후보 선택 후 다음 단계로 전달하는 분기·경로 정보. 보존 위치와 개수는 검출기 구조에 따라 다름 |
 | II | Initiation interval. 연속 입력을 받아들일 수 있는 최소 클록 간격 |
 | 32-lane | 한 클록에서 처리하는 병렬 데이터 수. 물리적 연결 32개라는 뜻은 아님 |
 | GS/s | 초당 10억 샘플 단위의 샘플링 속도 |

@@ -18,7 +18,7 @@ Compared the signal paths, candidate retention and frame-boundary updates of the
 
 ### Journal preparation | DP-SMM design and verification (in progress)
 
-Designed a detector that composes segment metric matrices in parallel to reduce symbol-by-symbol path-metric dependencies. Each matrix entry retains two path proposals, which are rescored using actual symbol history before final selection. RTL verification and FPGA implementation are documented; board measurements are planned.
+Designed a detector that composes segment metric matrices in parallel to reduce symbol-by-symbol path-metric dependencies. Each matrix entry retains two path proposals, which are rescored using actual symbol history before final selection. Verified the RTL against a reference model and completed FPGA place and route; board measurements are in preparation.
 
 [DP-SMM journal project](projects/dp-smm-journal/) · [Detector architecture](projects/dp-smm-journal/docs/architecture.md) · [RTL verification and FPGA implementation](projects/dp-smm-journal/docs/validation.md)
 
