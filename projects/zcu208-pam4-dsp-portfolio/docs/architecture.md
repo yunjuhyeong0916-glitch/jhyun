@@ -37,3 +37,9 @@
 ## 구현과 검증의 연결
 
 필터 파이프라인을 바꾸면 출력 값뿐 아니라 출력 시점도 달라집니다. 공개한 FIR 테스트벤치는 기준 회로와 비교 회로 사이의 지연을 맞춘 후 32개 lane의 출력을 비교합니다. 이 방식으로 병렬 구조의 고정소수점 연산과 데이터 정렬을 함께 확인합니다. 검증한 입력 범위는 [검증 문서](validation.md)에 기록했습니다.
+
+## 관련 논문과 공개 소스의 관계
+
+[An FPGA-Verified DAC/ADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)는 DS-SBM RS-MLSD와 ZCU208 RFSoC 기반 시스템 검증을 다룬 관련 연구 논문입니다. A-SSCC 2026 공식 정보에서 채택·발표 예정 상태를 확인했습니다(2026-10-07).
+
+논문의 구조·시스템 측정 결과와 이 폴더의 `DSP_based_TRX_32lane_PAM4_4GS_OPT` 소스 스냅샷은 버전과 검증 근거를 각각 확인해야 합니다. 공개본에서 다시 실행한 항목은 FIR 테스트 3종이며, 논문 전체 검출기·시스템 결과와의 대응은 별도 확인 범위입니다. [공개본 검증 근거](validation.md) · [전체 성과 논문](../../../docs/publications.md)

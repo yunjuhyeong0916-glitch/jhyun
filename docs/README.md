@@ -4,4 +4,5 @@
 
 - [전체 자료 지도와 변경된 경로](repository-map.md)
 - [검증 상태 한눈에 보기](validation-status.md)
+- [연구 성과 논문 6편과 프로젝트별 연결](publications.md)
 - [기술 용어 짧게 읽기](glossary.md)

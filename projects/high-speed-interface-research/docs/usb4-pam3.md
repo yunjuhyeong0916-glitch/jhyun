@@ -26,8 +26,10 @@ USB 평가에서도 M8195A AWG, MP1800A BERT와 E3631A를 활용했습니다. �
 
 | 단계 | 대표 결과 | 근거·범위 |
 |---|---|---|
-| TX 모델 | 40 Gb/s/lane | [SMACD TX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092283), SystemVerilog 모델·시뮬레이션 |
-| RX 모델 | 25.6 GBaud/lane | [SMACD RX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092233), TX 모델과 단위도 구분 |
-| 제작 PAM-3 TX | 28-nm CMOS, 32 Gb/s, 150-preset 4-tap FFE | [TVLSI 관련 논문](https://doi.org/10.1109/TVLSI.2026.3701343), 공동 제작·측정 결과 |
+| TX 모델 | 40 Gb/s/lane | [SMACD 2025: TX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092283), SystemVerilog 모델·시뮬레이션 |
+| RX 모델 | 25.6 GBaud/lane | [SMACD 2025: RX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092233), TX 모델과 단위도 구분 |
+| 제작 PAM-3 TX | 28-nm CMOS, 32 Gb/s, 150-preset 4-tap FFE | [IEEE TVLSI 2026: PAM-3 TX·150-preset FFE 논문](https://doi.org/10.1109/TVLSI.2026.3701343), 공동 제작·측정 결과 |
 
 각 결과는 해당 모델·칩의 구성과 검증 조건에 연결해 읽습니다. 특히 Gb/s와 GBaud의 단위, 모델 시뮬레이션과 제작 TX 측정의 차이를 함께 확인해야 합니다.
+
+[논문 전체 제목과 근거](evidence.md) · [MLSD·LPDDR를 포함한 전체 성과 논문](../../../docs/publications.md)

@@ -28,6 +28,7 @@ RTL의 출력이 맞더라도 보드에서 데이터를 얻으려면 RFDC와 병
 
 ## 검증 자료
 
+- **관련 연구 논문:** [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 공식 정보). 논문에 보고한 시스템 검증과 이 공개본의 검증 범위는 [논문과 공개 소스의 관계](docs/architecture.md#관련-논문과-공개-소스의-관계)에 설명합니다.
 - **FIR 테스트 3종 PASS:** 이 폴더에 담긴 RTL과 기존 테스트벤치를 Vivado XSim 2022.2에서 2026-09-09 다시 실행했습니다. [실행 결과](reports/fir_validation_20260909.json)
 - **FPGA 구현 이력:** 2026-06-29의 기존 post-route physopt 보고서에서 WNS **+0.083 ns**, TNS **0.000 ns**를 확인했습니다. 해당 실행의 적용된 타이밍 제약을 만족한 결과이며, 현재 소스 복사본을 새로 합성·배치배선한 결과는 아닙니다. [검증 범위와 수치](docs/validation.md)
 - **보드 검증 지원:** ADC/ILA 캡처와 재생 시뮬레이션을 위한 원 프로젝트의 인터페이스·디버깅 구조를 소스에서 확인할 수 있습니다. 이 공개 묶음에 최종 실측 BER 성과를 부여하지 않습니다.
@@ -52,6 +53,7 @@ flowchart LR
 - [설계 구조와 대표 소스 안내](docs/architecture.md)
 - [FPGA 구현·JTAG 다운로드·초기 동작 확인](docs/fpga-bringup.md)
 - [검증 결과·환경·해석 범위](docs/validation.md)
+- [전체 연구 성과 논문](../../docs/publications.md)
 - [RTL 소스 26개](rtl/) · [기존 FIR 테스트벤치 3개](tb/)
 - [FIR 시뮬레이션 재현 방법](docs/reproduce.md)
 - [원본과의 SHA-256 대조 목록](reports/source_manifest.json)

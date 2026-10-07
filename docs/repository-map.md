@@ -12,6 +12,8 @@
 
 **LPDDR·USB 연구:** [회로·모델링·실리콘 평가 개요](../projects/high-speed-interface-research/) → [LPDDR](../projects/high-speed-interface-research/docs/lpddr.md) / [USB PAM-3](../projects/high-speed-interface-research/docs/usb4-pam3.md) → [측정 장비와 활용](../projects/high-speed-interface-research/docs/measurement-equipment.md) → [논문·근거](../projects/high-speed-interface-research/docs/evidence.md)
 
+**성과 논문 확인:** [전체 논문 6편·공식 링크·검증 범위](publications.md) → 해당 프로젝트의 담당 역할과 결과 설명
+
 **연구 이력 탐색:** [MLSD 비교 실험](../experiments/) → [참고 코어](../reference/mlsd-cores/) → [이전 보드 자료](../archive/)
 
 ## 폴더 구조

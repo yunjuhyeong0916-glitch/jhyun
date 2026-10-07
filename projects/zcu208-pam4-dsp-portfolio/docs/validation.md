@@ -42,6 +42,10 @@ TB 출력의 `checked=800/900`은 TB의 전체 반복 횟수입니다. 실제 �
 - [Route status](../reports/design_1_wrapper_route_status.txt)
 - [원 보고서 해시와 경로](../reports/report_provenance.json)
 
+## 관련 논문의 시스템 검증
+
+[A-SSCC 2026 관련 논문 공식 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)에는 DS-SBM RS-MLSD를 포함한 PAM4 송수신기의 ZCU208 RFSoC 시스템 검증이 보고되어 있습니다. 논문의 결과는 해당 논문 버전과 측정 조건에 연결됩니다. 이 폴더의 FIR 재실행 결과·기존 구현 보고서와의 관계는 [논문과 공개 소스의 관계](architecture.md#관련-논문과-공개-소스의-관계)에서 확인할 수 있습니다.
+
 ## 이 자료에서 주장하지 않는 결과
 
 최종 실측 BER, 무오류 수신 시간, 전체 MLSD의 엄밀한 알고리즘 동등성, ASIC PPA 및 물리설계 signoff는 이 공개 자료로 입증하지 않습니다. 기존 ADC replay 후보별 score도 최종 BER 성과에 포함하지 않았습니다.

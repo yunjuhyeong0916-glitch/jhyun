@@ -16,13 +16,13 @@
 
 ## 검증 결과와 조건
 
-| 검증 단계 | 결과·조건 | 기여·해석 범위 |
-|---|---|---|
-| TX 단독 시뮬레이션 | 15.6 Gb/s, 0.76 pJ/bit; 내부 전원 1.05 V·드라이버 전원 0.5 V, 채널 손실 8.7 dB 조건 | 개인 TX 설계·검증, 제작 칩 실측과 구분 |
-| Combo PHY TX Eye | 14 Gb/s/pin·4-DQ 활성 조건에서 0.41 UI·65.3 mV | 개인 설계 TX가 적용된 공동 칩의 실측 |
-| Combo PHY RX margin | TX–RX 연결·4-DQ 활성 조건에서 0.25 UI·25 mV | 공동 RX Shmoo 평가 결과; 개인 RX 회로 설계나 자동화에 따른 마진 개선량으로 해석하지 않음 |
+| 검증 단계 | 결과·조건 | 기여·해석 범위 | 관련 논문 |
+|---|---|---|---|
+| TX 단독 시뮬레이션 | 15.6 Gb/s, 0.76 pJ/bit; 내부 전원 1.05 V·드라이버 전원 0.5 V, 채널 손실 8.7 dB 조건 | 개인 TX 설계·검증, 제작 칩 실측과 구분 | [ICEIC 2025: 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746) |
+| Combo PHY TX Eye | 14 Gb/s/pin·4-DQ 활성 조건에서 0.41 UI·65.3 mV | 개인 설계 TX가 적용된 공동 칩의 실측 | [A-SSCC 2026: Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
+| Combo PHY RX margin | TX–RX 연결·4-DQ 활성 조건에서 0.25 UI·25 mV | 공동 RX Shmoo 평가 결과; 개인 RX 회로 설계나 자동화에 따른 마진 개선량으로 해석하지 않음 | [A-SSCC 2026: Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
 
-TX 시뮬레이션 결과는 [ICEIC 논문](https://doi.org/10.1109/ICEIC64972.2025.10879746), 공동 칩 결과는 [A-SSCC 2026 공식 논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)와 작성자 제공 연구자료를 기준으로 정리했습니다. 두 단계는 소스·통합 구성·검증 조건이 다르므로 15.6 Gb/s와 14 Gb/s/pin을 직접적인 성능 증감으로 비교하지 않습니다.
+결과는 표에 연결한 논문과 작성자 제공 연구자료를 기준으로 정리했습니다. A-SSCC 2026 Combo PHY 논문은 2026-10-07 공식 정보 기준 채택·발표 예정입니다. 두 단계는 소스·통합 구성·검증 조건이 다르므로 15.6 Gb/s와 14 Gb/s/pin을 직접적인 성능 증감으로 비교하지 않습니다. [논문 전체 제목과 근거](evidence.md)
 
 ## 측정 장비와 사용 목적
 

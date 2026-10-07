@@ -1,6 +1,6 @@
 # 관련 논문과 검증 근거
 
-[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md)
+[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [전체 성과 논문 6편](../../../docs/publications.md)
 
 정리 기준일: **2026-10-07**. 개인 담당 역할은 작성자 제공 이력서·연구소개서·측정 활동 자료와 작성자 설명을 기준으로 정리했습니다. 논문은 연구 구성과 결과의 근거이며, 공동저자라는 사실만으로 모든 블록을 개인 설계한 것으로 표시하지 않습니다.
 
@@ -15,6 +15,8 @@
 | [A 0.0549-pJ/bit/pin/dB PAM-3 Transmitter With Reconfigurable 150-Preset Four-Tap FFE for Various Channel Environments](https://doi.org/10.1109/TVLSI.2026.3701343) | 28-nm 제작 PAM-3 TX의 32 Gb/s·150-preset 4-tap FFE 공동 실리콘 연구 |
 
 DOI 4건의 제목과 저자 정보는 2026-10-07 Crossref DOI 등록정보와 대조했습니다. Combo PHY 논문은 같은 날 A-SSCC 공식 논문 정보에서 제목·측정 조건을 확인했습니다. 모델·회로·실리콘 결과는 작성자 제공 논문 및 연구자료의 해당 범위를 따릅니다.
+
+Combo PHY 논문은 공식 정보 기준 채택·발표 예정입니다. DSP·MLSD 관련 A-SSCC 논문을 포함한 전체 목록은 [연구 성과 논문](../../../docs/publications.md)에서 확인할 수 있습니다.
 
 ## 담당 역할과 장비 사용의 근거
 

@@ -4,7 +4,7 @@
 
 DSP 기반 송수신기 연구의 MLSD·RTL·FPGA 자료와 LPDDR·USB PAM-3 프로젝트의 회로 설계, 모델링, PCB·채널 분석 및 계측 경험을 모았습니다.
 
-[MLSD·RTL 구조](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [FPGA 구현·JTAG 구동](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [LPDDR·USB 연구](projects/high-speed-interface-research/) · [측정 장비·활용](projects/high-speed-interface-research/docs/measurement-equipment.md) · [English](README.en.md)
+[MLSD·RTL 구조](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [FPGA 구현·JTAG 구동](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) · [LPDDR·USB 연구](projects/high-speed-interface-research/) · [측정 장비·활용](projects/high-speed-interface-research/docs/measurement-equipment.md) · [성과 논문](docs/publications.md) · [English](README.en.md)
 
 ## 처음 방문하셨다면
 
@@ -15,6 +15,7 @@ DSP 기반 송수신기 연구의 MLSD·RTL·FPGA 자료와 LPDDR·USB PAM-3 프
 | FPGA 구현과 보드 실행 과정 확인하기 | [Vivado 빌드·JTAG 다운로드·초기 동작 확인](projects/zcu208-pam4-dsp-portfolio/docs/fpga-bringup.md) |
 | LPDDR·USB 프로젝트와 담당 역할 확인하기 | [회로·모델링·실리콘 평가 파트](projects/high-speed-interface-research/) |
 | 사용한 측정 장비와 활용 방법 확인하기 | [장비별 역할·측정 조건·자동화 사례](projects/high-speed-interface-research/docs/measurement-equipment.md) |
+| 연구 성과의 논문과 공식 정보 확인하기 | [프로젝트별 성과 논문 6편](docs/publications.md) |
 | 실제 확인된 검증 결과 살펴보기 | [테스트 결과와 FPGA 구현 근거](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) |
 | 직접 시뮬레이션 실행하기 | [FIR 테스트 3종 재현 방법](projects/zcu208-pam4-dsp-portfolio/docs/reproduce.md) |
 
@@ -31,6 +32,8 @@ DSP 기반 송수신기 연구의 MLSD·RTL·FPGA 자료와 LPDDR·USB PAM-3 프
 - **공개 자료** — RTL 26개, FIR 테스트벤치 3개, 구조 설명, 재현 스크립트, 구현 보고서와 출처 기록을 제공합니다.
 
 **[프로젝트 자세히 보기 →](projects/zcu208-pam4-dsp-portfolio/)**
+
+관련 연구 논문: [A-SSCC 2026 — FPGA 검증 PAM4 송수신기·DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) **(채택·발표 예정)**. 논문 버전과 공개 RTL 스냅샷의 관계는 [구조 문서](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#관련-논문과-공개-소스의-관계)에 설명합니다.
 
 ## MLSD·RTL 설계와 FPGA 보드 구동
 
@@ -53,6 +56,16 @@ DSP 기반 송수신기 연구의 MLSD·RTL·FPGA 자료와 LPDDR·USB PAM-3 프
 | USB4 PAM-3 인터페이스 | TX 논리 경로·RX CTLE 모델링 및 통합 검증, 인코더·스크램블러 RTL, 차동 PAM-3 측정; 제작 TX 성능은 공동 결과 | [USB 모델링·실리콘 평가](projects/high-speed-interface-research/docs/usb4-pam3.md) |
 
 **공통 계측:** Keysight 86100D·86118A, M8195A AWG, E3631A 전원공급기, Anritsu MP1800A BERT를 두 프로젝트에서 활용했습니다. 채널보드와 실시간 오실로스코프 사용, 장비 설정·결과 수집 자동화는 [측정 장비와 활용 사례](projects/high-speed-interface-research/docs/measurement-equipment.md)에 정리했습니다.
+
+## 연구 성과 논문
+
+| 연구 | 논문 바로가기 |
+|---|---|
+| DSP 기반 송수신기·MLSD | [A-SSCC 2026: RFSoC 검증 PAM4·RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) |
+| LPDDR | [ICEIC 2025: 저전압 NRZ TX 시뮬레이션](https://doi.org/10.1109/ICEIC64972.2025.10879746) · [A-SSCC 2026: 14-Gb/s/pin Combo PHY 실측](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
+| USB PAM-3 | [SMACD 2025: TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025: RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233) · [IEEE TVLSI 2026: 제작 TX 실측](https://doi.org/10.1109/TVLSI.2026.3701343) |
+
+전체 제목·학술지/학회·검증 범위는 [성과 논문 목록](docs/publications.md)에 정리했습니다. A-SSCC 2026 두 편은 2026-10-07 공식 정보 기준 채택·발표 예정입니다.
 
 ## 저장소 구성
 
