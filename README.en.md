@@ -39,11 +39,13 @@ Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with t
 
 ## Measurement / verification
 
-Automated voltage and timing sweeps by coordinating BERT, power-supply and I2C control. Early error termination and boundary search support Shmoo measurements, with eye observations and CSV collection used to assess operating margins.
-
-[Differential PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) · [Equipment and automation](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye / Shmoo figures](projects/high-speed-interface-research/docs/verification-figures.md)
-
-[A-SSCC measurements and implementation](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) · [Journal RTL verification and implementation](projects/dp-smm-journal/docs/validation.md) · [Thesis comparison results](projects/pam4-mlsd-thesis/docs/validation.md)
+| Area | Evaluation and verification | Details |
+|---|---|---|
+| Master's thesis<br>(in progress) | DS-SBM / DP-SMM architecture comparison, candidate retention and RTL behavior under identical inputs | [Model / RTL comparison](projects/pam4-mlsd-thesis/docs/validation.md) |
+| Journal preparation<br>(in progress) | DP-SMM reference-model / RTL checks and FPGA implementation; board measurements in preparation | [RTL / FPGA implementation](projects/dp-smm-journal/docs/validation.md) |
+| RFSoC system | ADC capture after the ISI board, BER, FPGA resources and timing | [A-SSCC measurements / implementation](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) |
+| Waveforms / operating margins | LPDDR TX eye / RX Shmoo and differential PAM-3 upper / lower eyes before and after FFE | [Eye / Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)<br>[PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) |
+| Measurement automation | Power-supply / BERT / I2C control, voltage / timing sweeps, early error termination, boundary search and CSV logging | [Equipment / control](projects/high-speed-interface-research/docs/measurement-equipment.md) |
 
 ## Research publications
 

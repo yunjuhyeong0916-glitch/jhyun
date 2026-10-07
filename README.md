@@ -39,11 +39,13 @@ ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를
 
 ## 측정·검증
 
-전압·타이밍에 따른 동작 마진을 확인하기 위해 BERT·전원공급기·I2C 제어를 연동했습니다. 오류 조기 종료와 경계 탐색으로 Shmoo 측정을 자동화하고, Eye 관측과 CSV 수집으로 결과를 정리했습니다.
-
-[차동 PAM-3 측정·FFE 검증](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) · [장비·자동화](projects/high-speed-interface-research/docs/measurement-equipment.md) · [Eye·Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)
-
-[A-SSCC 측정·구현](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) · [Journal RTL 검증·구현](projects/dp-smm-journal/docs/validation.md) · [학위논문 비교 결과](projects/pam4-mlsd-thesis/docs/validation.md)
+| 항목 | 평가·검증 내용 | 상세 자료 |
+|---|---|---|
+| 학위논문<br>(진행 중) | DS-SBM·DP-SMM 구조 비교, 동일 입력에서 후보 보존 효과와 RTL 동작 평가 | [모델·RTL 비교](projects/pam4-mlsd-thesis/docs/validation.md) |
+| Journal 준비<br>(진행 중) | DP-SMM 참조 모델·RTL 대조와 FPGA 구현 확인, 보드 측정 준비 | [RTL·FPGA 구현](projects/dp-smm-journal/docs/validation.md) |
+| RFSoC 시스템 | ISI 보드 통과 후 ADC 캡처, BER·FPGA 자원·타이밍 확인 | [A-SSCC 측정·구현](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) |
+| 파형·동작 마진 | LPDDR TX Eye·RX Shmoo, 차동 PAM-3의 FFE 적용 전후 상·하단 Eye 비교 | [Eye·Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)<br>[PAM-3 측정·FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) |
+| 계측 자동화 | 전원·BERT·I2C 연동, 전압·타이밍 스윕과 오류 조기 종료·경계 탐색·CSV 기록 | [장비·제어 방법](projects/high-speed-interface-research/docs/measurement-equipment.md) |
 
 ## 연구 성과 논문
 
