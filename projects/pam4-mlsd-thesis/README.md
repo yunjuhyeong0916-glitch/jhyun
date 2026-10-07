@@ -1,32 +1,29 @@
-# 학위논문 연구 | DP-SMM 설계·검증
+# 학위논문 연구 | DS-SBM·DP-SMM 비교 (진행 중)
 
-등화 뒤에 남은 ISI를 처리하는 DP-SMM을 검증하는 학위논문 연구입니다. 메트릭 행렬의 계산·결합과 경로 복원이 기준 모델과 일치하는지 단계별로 확인하고 있습니다.
+축소 상태 MLSD의 후보 선택이 판정 성능에 미치는 영향을 연구하고 있습니다. **DS-SBM과 DP-SMM의 신호 경로·후보 보존·메트릭 합성·프레임 경계 갱신**을 비교하고, 동일 입력의 코어 시험으로 행렬 경로 수의 영향을 확인했습니다.
 
-[DP-SMM 구조·검증 범위](docs/architecture.md) · [DP-SMM 검증 결과](docs/validation.md) · [A-SSCC DS-SBM 프로젝트](../zcu208-pam4-dsp-portfolio/)
+[구조 비교](docs/architecture.md) · [모델·RTL 비교 결과](docs/validation.md) · [A-SSCC DS-SBM](../zcu208-pam4-dsp-portfolio/) · [Journal DP-SMM](../dp-smm-journal/)
 
-## DP-SMM 검증 결과
+## 비교의 핵심
 
-2026-09-09 RTL을 기준으로 **10월 7일**에 메트릭 모듈과 32-lane 전체 어댑터를 검사했습니다. 메트릭 모듈은 두 합성 채널에서 기준값과 일치했고, 전체 어댑터에서는 출력 불일치가 남아 있습니다.
-
-| 검증 대상 | 결과 | 확인 범위 |
+| 항목 | DS-SBM | DP-SMM |
 |---|---|---|
-| Branch 메트릭·8심볼 min-plus 결합 | 두 조건 PASS | 조건별 512심볼, branch·block 행렬 비교 |
-| RTL 행렬을 이용한 Python 경로 복원 | 두 조건 PASS | 조건별 512레벨 모두 기준값 일치 |
-| 기대값 변조 검출 | PASS | 기대 심볼 한 개 변경을 오류로 검출 |
-| 32-lane 전체 MLSD 어댑터 | 두 조건 FAIL | 첫 검사 word lane 1 기대 32 / 실제 −32 |
+| 관측 신호 | 21-tap RX FFE 뒤 별도 PR FIR 출력 | 11-tap RX FFE 출력, PR 목표는 예상 샘플 계산에 사용 |
+| 행렬 원소별 경로 | 한 경로 | 두 제안 경로와 이력 반영 비용 정보 |
+| 프레임 경계 | 가시 상태별 PM 한 개 | 가시 상태별 PM·이력 후보 두 개 |
 
-합성 입력의 memory-0/1 조건에서 실행한 XSim 검증입니다. 전체 RTL 경로 복원과 보드 BER 검증은 남아 있습니다. [입력·클록·지연·결과](docs/validation.md)
+두 수신기의 필터와 관측 경로가 달라, 행렬 후보 수의 효과는 FFE 뒤의 동일 코어 입력에서 R=1/R=2를 비교해 평가했습니다. [비교 구조와 조건](docs/architecture.md)
 
-## 남은 검증
+## 확인한 결과
 
-- 전체 어댑터의 데이터·valid·경로 이력 정렬을 점검하고 출력 불일치의 원인을 확인합니다.
-- memory-2 이력과 overflow·포화 경계를 포함해 기준 모델과 비교합니다.
-- 검증한 RTL과 보드 bitstream의 빌드 대응을 확인한 뒤 해당 버전의 보드 BER를 평가합니다.
+후보 경로의 비용과 복원 심볼이 함께 전달되는지 확인하기 위해 참조 모델과 RTL의 내부 비용·이력·출력을 대조했습니다. 연속 입력과 공백 입력, 처리 중 리셋에서도 복원 순서와 지연이 기준과 일치했습니다.
 
-## A-SSCC DS-SBM 연구와의 관계
+경계 후보 수를 두 개로 고정한 합성 입력 비교에서는, SNR 16 dB의 응답 A·B에서 R=2의 오류 수가 R=1보다 각각 **36.9%·46.1% 감소**했습니다. 이 결과는 DP-SMM 코어의 행렬 후보 보존 효과를 확인한 것입니다. [입력 조건·오류 수·RTL 검증 범위](docs/validation.md)
 
-A-SSCC 연구의 대상은 DS-SBM RS-MLSD이며, ZCU208 RFSoC 송수신 시스템에서 검증했습니다. 학위논문 연구에서는 DP-SMM의 메트릭 행렬 결합과 경로 복원을 검증합니다.
+## 하드웨어 검증
 
-[DS-SBM 측정·구현 결과](../zcu208-pam4-dsp-portfolio/docs/validation.md) · [DP-SMM 구조·검증 범위](docs/architecture.md)
+DS-SBM의 기존 물리 송수신 측정은 추정 손실 41 dB에서 PRBS7 BER < 10⁻⁷·PRBS15 BER < 2×10⁻⁶을 보고했습니다. **DP-SMM 실측은 아직 수행하지 않았으며**, AWG 기반 ADC-DSP 수신 경로의 BER·PR 등고선·동작 처리율을 평가할 예정입니다.
+
+[DS-SBM 시스템 측정](../zcu208-pam4-dsp-portfolio/docs/validation.md) · [DP-SMM 구조와 Journal 준비](../dp-smm-journal/)
 
 **도구:** Verilog / SystemVerilog · Vivado XSim 2022.2 · Python

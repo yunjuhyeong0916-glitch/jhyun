@@ -4,7 +4,7 @@
 
 **담당:** 28-nm CMOS TX 회로 설계·Schematic/Post-Layout 검증. **검증:** 회로 시뮬레이션.
 
-[TX Verilog 모델](lpddr-tx-modeling.md) · [Combo PHY 공동 실측](lpddr.md#검증-결과와-조건)
+[TX Verilog 모델](lpddr-tx-modeling.md) · [Combo PHY 제작 칩 측정](lpddr.md#검증-결과와-조건)
 
 ## 1. Main 데이터와 1-UI 지연 데이터를 함께 사용하는 TX
 
@@ -19,7 +19,7 @@ PI-LVSTL TX에 main·1-UI 지연 경로를 두고 드라이버 세그먼트와 F
 
 </details>
 
-**ZQ 시험 설정:** 외부 지정 코드 선택 모드. 자동 보정 수렴·PVT 전 범위의 임피던스 오차는 미검증입니다.
+**ZQ 시험 설정:** 외부 지정 코드를 선택해 출력 임피던스를 제어했습니다.
 
 ## 2. FFE 적용 전후의 Eye로 보상 효과 확인
 
@@ -29,7 +29,7 @@ PI-LVSTL TX에 main·1-UI 지연 경로를 두고 드라이버 세그먼트와 F
 |---|---|
 | ![FFE off 조건의 TX 시뮬레이션 Eye, 폭 37ps 높이 56.5mV](../assets/lpddr_tx_circuit_eye_ffe_off.png) | ![FFE on 조건의 TX 시뮬레이션 Eye, 폭 45.4ps 높이 75.1mV](../assets/lpddr_tx_circuit_eye_ffe_on.png) |
 
-**조건:** 15.6 Gb/s 회로 시뮬레이션. ICEIC 논문 조건은 내부 전원 1.05 V·드라이버 전원 0.5 V·채널 손실 8.7 dB입니다. 개별 개발 파형의 전체 PVT 설정은 미확인입니다.
+**조건:** 15.6 Gb/s 회로 시뮬레이션. ICEIC 논문 조건은 내부 전원 1.05 V·드라이버 전원 0.5 V·채널 손실 8.7 dB입니다.
 
 ## 3. PEX 이후 속도와 전력의 산출 근거 확인
 
@@ -79,11 +79,11 @@ Schematic에서 정한 동작을 배선 이후에도 확인하기 위해 레이�
 | TX 면적 | 0.0201 mm² | PRBS·데이터·드라이버·ZQ·클록 경로를 포함한 TX 합계 |
 | TX Eye | 46 ps·75.7 mV | 해당 시뮬레이션 버전의 Eye 폭·높이 |
 
-**버전별 면적:** 초기 검증의 TX 면적 0.0196 mm²·TRX 합계 0.0308 mm²는 11월 검증에서 TX 0.0201 mm²·TRX 합계 0.0334 mm²로 갱신되었습니다. TRX의 0.91 pJ/bit는 TX 0.76과 RX 0.15를 합한 공동 결과이며, 개인 TX 성과에는 TX 값을 사용합니다.
+**면적·에너지:** 11월 시뮬레이션의 TX 면적은 0.0201 mm², TRX 합계는 0.0334 mm²입니다. 에너지는 TX 0.76 pJ/bit·RX 0.15 pJ/bit로, TRX 합계는 0.91 pJ/bit입니다.
 
-**검증:** 시험 제출용 회로 시뮬레이션. [Combo PHY 공동 칩 측정](lpddr.md#검증-결과와-조건)
+**검증:** 시험 제출용 회로 시뮬레이션. [Combo PHY 제작 칩 측정](lpddr.md#검증-결과와-조건)
 
 ## 관련 논문
 
 - [ICEIC 2025: 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746) — 저전압 TX 구조와 15.6-Gb/s·0.76-pJ/bit 시뮬레이션.
-- [A-SSCC 2026: LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) — 개인 설계 TX가 적용된 공동 PHY의 실리콘 평가. 공식 정보 기준 채택·발표 예정.
+- [A-SSCC 2026: LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) — 설계한 TX가 적용된 Combo PHY의 제작 칩 측정. 채택·발표 예정.

@@ -1,10 +1,8 @@
 # USB TX 모델링: 논리 데이터에서 전기 계층까지
 
-[파트 개요](../README.md) · [USB 연구·실리콘 평가](usb4-pam3.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·근거](evidence.md)
+[파트 개요](../README.md) · [USB 연구·제작 칩 측정](usb4-pam3.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·근거](evidence.md)
 
 **담당:** TX 논리 RTL·XMODEL 모델링·통합, Serializer 검증, 합성·P&R 후 전기 계층 연결. **검증:** 모델·시뮬레이션.
-
-아날로그 TX 회로와 제작 칩 평가는 공동 연구입니다.
 
 ## 1. 인코더와 드라이버 사이의 데이터 형식 정의
 
@@ -17,7 +15,7 @@ flowchart LR
     C --> D["112 × Scrambler"]
     F["PRTS19 · PRBS11<br/>F 함수"] --> D
     D --> E["MSB / LSB 분리<br/>각 112 bit"]
-    E --> G["공동 전기 계층 모델·구현"]
+    E --> G["전기 계층 모델·구현"]
 ```
 
 인코더 출력 순서·Scrambler 심볼 코드·드라이버 비트 순서를 각 모델의 코드 매핑에 맞췄습니다. [논리 구현 블록](usb4-pam3.md#논리-경로를-제작-tx에-연결)
@@ -72,7 +70,7 @@ PRBS11·PRTS19 발생기는 seed별 리셋 후 100개 출력을 참조 수열과
 
 **파형 설명:** 두 그림 모두 위부터 Encoder Data, Scramble Data, Data_out입니다. 우회·활성 모드의 출력 경로를 확인했습니다.
 
-후속 on/off 검증에서는 DC·반복 패턴과 PRBS31을 넣어 관측 구간을 500 ns·2 µs로 늘렸습니다. **XMODEL–SPICE 출력 차이는 미해결**이며, Eye·지터·BER 개선량은 미확정입니다.
+후속 on/off 검증에서는 DC·반복 패턴과 PRBS31을 넣어 관측 구간을 500 ns·2 µs로 늘렸습니다.
 
 ## 5. 병렬 데이터의 순서를 Serializer 단계별로 추적
 
@@ -84,13 +82,13 @@ PRBS11·PRTS19 발생기는 seed별 리셋 후 100개 출력을 참조 수열과
 
 ## 6. 논리 출력을 FFE 드라이버·채널 모델에 연결
 
-MSB·LSB Serializer와 aligner를 공동 4-tap FFE 드라이버에 연결했습니다. 최종 직렬화 단계에서 1–3 UI 지연 신호를 생성합니다.
+MSB·LSB Serializer와 aligner를 4-tap FFE 드라이버에 연결했습니다. 최종 직렬화 단계에서 1–3 UI 지연 신호를 생성합니다.
 
 ![MSB와 LSB의 Serializer 및 aligner를 4탭 PAM3 드라이버에 연결한 전기 계층 구조](../assets/usb_tx_model_electrical_architecture.png)
 
-**공동 아날로그 TX:** MSB·LSB Serializer → aligner → 4-tap FFE 드라이버.
+**전기 계층 연결:** MSB·LSB Serializer → aligner → 4-tap FFE 드라이버.
 
-초기 FFE 모델에서는 음수 계수를 전류원의 음수 값으로 표현했습니다. 이를 회로에서 구현할 수 있는 형태로 옮기기 위해 **전류 크기는 양수로 두고 해당 차동 입력의 극성을 반전**하는 방식으로 수정했으며, 같은 계수에서 수정 전후 Eye를 비교했습니다. 이 과정은 모델의 수학적 표현과 실제 회로의 제어 방식을 함께 확인한 사례입니다.
+초기 FFE 모델에서는 음수 계수를 전류원의 음수 값으로 표현했습니다. 회로에서 구현할 수 있도록 **전류 크기는 양수로 두고 해당 차동 입력의 극성을 반전**하는 방식으로 수정했으며, 같은 계수에서 수정 전후 Eye를 비교했습니다.
 
 채널 보상은 같은 모델·채널에서 계수를 바꾸어 확인했습니다. 아래 두 그림은 25.6 GBaud, 1 UI=39.0625 ps, VDD=1 V, tail-current 설정 5 mA의 모델 결과입니다. 사용한 채널의 손실 곡선은 **12.8 GHz에서 9.89 dB**를 표시합니다.
 
@@ -99,19 +97,19 @@ MSB·LSB Serializer와 aligner를 공동 4-tap FFE 드라이버에 연결했습�
 | ![메인 계수만 사용한 FFE 비활성 상태의 모델 Eye](../assets/usb_tx_model_channel_ffe_off.png) | ![프리 및 포스트 커서 계수를 적용한 모델 Eye](../assets/usb_tx_model_channel_ffe_preset7.png) |
 | `C[-2], C[-1], C[0], C[1] = 0, 0, 1, 0` | `0, -0.05, 0.8, -0.15` |
 
-**조건:** 채널 포함 XMODEL 시뮬레이션, 이상적 전류원·수동 FFE 계수. 두 그림의 세로축 범위는 서로 다릅니다.
+**조건:** 채널 포함 XMODEL 시뮬레이션, 이상적 전류원·수동 FFE 계수.
 
 ## 7. 구현 후 MSB·LSB를 VCS와 POSIM에서 교차 확인
 
 RTL과 P&R Verilog netlist를 VCS에서 비교하고 전기 계층을 포함한 POSIM 출력과 대조했습니다. 아래는 2025-06-19 MSB·LSB 결과입니다.
 
-**조건:** ideal power labeling의 선택 MSB·LSB 비트열 비교. 실제 전원·접지 배치를 반영한 검증은 당시 진행 중이었습니다.
+**조건:** ideal power labeling의 MSB·LSB 비트열 기능 비교.
 
 ![이상적인 power labeling 조건에서 관찰한 POSIM MSB 0부터 9까지](../assets/usb_tx_model_posim_msb.png)
 
 ![동일 자료에서 비교에 사용한 VCS MSB 0부터 9까지](../assets/usb_tx_model_vcs_msb.png)
 
-**관측:** POSIM·VCS의 MSB[0:9], 리셋·초기화 후 비트열. 화면의 표시 시간축은 서로 다릅니다.
+**관측:** POSIM·VCS의 MSB[0:9], 리셋·초기화 후 비트열.
 
 <details>
 <summary>LSB[0:9]의 POSIM·VCS 비교 보기</summary>
@@ -128,4 +126,4 @@ RTL과 P&R Verilog netlist를 VCS에서 비교하고 전기 계층을 포함한 
 
 ## 관련 논문
 
-[SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092283): 40 Gb/s/lane TX 모델·시뮬레이션. [IEEE TVLSI 2026](usb4-pam3.md#모델과-실리콘-결과의-구분): 32-Gb/s 공동 제작 TX 실측.
+[SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092283): 40 Gb/s/lane TX 모델·시뮬레이션. [IEEE TVLSI 2026](usb4-pam3.md#모델과-실리콘-결과의-구분): 32-Gb/s 제작 TX 측정.

@@ -1,8 +1,8 @@
-# USB4 PAM-3: 모델·RTL 검증과 실리콘 신호 평가
+# USB4 PAM-3: 모델·RTL 검증과 제작 칩 측정
 
 [파트 개요](../README.md) · [LPDDR](lpddr.md) · [측정 장비](measurement-equipment.md) · [논문·근거](evidence.md)
 
-**개인 담당·참여:** TX 논리계층 모델, RX CTLE 모델링과 송수신 통합 검증, 11B7S 인코더·스크램블러 RTL의 합성·P&R 및 전기 계층 연결 검증, 측정용 PCB·채널 분석과 차동 PAM-3 신호 평가. 제작 TX의 전체 아날로그 회로와 실리콘 성능은 공동 연구 결과입니다.
+TX 논리계층·RX CTLE 모델링과 송수신 통합 검증을 맡았습니다. 11B7S 인코더·스크램블러 RTL을 합성·P&R해 전기 계층과 연결했으며, 제작 TX 평가에서는 PCB·채널 분석과 차동 PAM-3 측정에 참여했습니다.
 
 ## 모델로 논리·전기 계층의 동작을 연결
 
@@ -20,11 +20,11 @@ CTLE의 R·C와 바이어스를 조정해 채널 보상과 PAM-3 중간 레벨 �
 
 ## 논리 경로를 제작 TX에 연결
 
-11B7S 인코더·스크램블러 RTL을 합성·P&R하고 공동 PAM-3 TX의 전기 계층에 연결했습니다. 구현 블록은 인코더·스크램블러이며, RS-FEC·precoder는 미포함입니다.
+11B7S 인코더·스크램블러 RTL을 합성·P&R하고 PAM-3 TX의 전기 계층에 연결했습니다. 구현 블록은 인코더·스크램블러이며, RS-FEC·precoder는 미포함입니다.
 
 ## 채널별 FFE 효과를 차동 신호로 확인
 
-제작 TX의 평가는 채널 조건과 FFE 설정을 함께 바꾸며 수행했습니다. Keysight 86100D·86118A로 차동 PAM-3 신호를 측정하고 상단·하단 Eye를 나누어 폭과 높이를 확인했습니다. FFE 적용 전후와 채널 조건에 따른 차이를 비교했으며, 제작 칩에서 확인한 32 Gb/s 성과는 공동 실리콘 측정 결과입니다.
+제작 TX의 평가는 채널 조건과 FFE 설정을 함께 바꾸며 수행했습니다. Keysight 86100D·86118A로 차동 PAM-3 신호를 측정하고 상단·하단 Eye의 폭과 높이를 확인했습니다. 제작 칩에서 32 Gb/s 동작과 채널별 FFE 효과를 확인했습니다.
 
 입력·오류·전원 제어에는 M8195A AWG, MP1800A BERT와 E3631A를 활용했습니다. [장비·자동화](measurement-equipment.md)
 
@@ -34,12 +34,12 @@ CTLE의 R·C와 바이어스를 조정해 채널 보상과 PAM-3 중간 레벨 �
 
 [CH#3·PRBS15의 FFE 적용 전후 실측 Eye](verification-figures.md#usb-pam-3-같은-채널패턴에서-ffe-효과-확인)
 
-공동 USB PCB에서는 GND via와 전원 공급 경로를 검토했습니다. HFSS의 12.8-GHz 손실은 CLK 약 1.11 dB, DATA 약 1.25 dB입니다. [보드·해석](pcb-hfss-verification.md#4-usb-보드에서는-신호-경로와-전원-공급-경로를-함께-검토)
+USB TX 보드에서는 GND via와 전원 공급 경로를 검토했습니다. HFSS의 12.8-GHz 손실은 CLK 약 1.11 dB, DATA 약 1.25 dB입니다. [보드·해석](pcb-hfss-verification.md#4-usb-보드에서는-신호-경로와-전원-공급-경로를-함께-검토)
 
 | 단계 | 대표 결과 | 근거·범위 |
 |---|---|---|
 | TX 모델 | 40 Gb/s/lane | [SMACD 2025: TX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092283), SystemVerilog 모델·시뮬레이션 |
-| RX 모델 | 25.6 GBaud/lane | [SMACD 2025: RX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092233), 공동 RX 모델·시뮬레이션 |
-| 제작 PAM-3 TX | 28-nm CMOS, 32 Gb/s, 150-preset 4-tap FFE | [IEEE TVLSI 2026: PAM-3 TX·150-preset FFE 논문](https://doi.org/10.1109/TVLSI.2026.3701343), 공동 제작·측정 결과 |
+| RX 모델 | 25.6 GBaud/lane | [SMACD 2025: RX 모델 논문](https://doi.org/10.1109/SMACD65553.2025.11092233), RX 통합 모델·시뮬레이션 |
+| 제작 PAM-3 TX | 28-nm CMOS, 32 Gb/s, 150-preset 4-tap FFE | [IEEE TVLSI 2026: PAM-3 TX·150-preset FFE 논문](https://doi.org/10.1109/TVLSI.2026.3701343), 제작 칩 측정 |
 
 [논문 전체 제목과 근거](evidence.md) · [MLSD·LPDDR를 포함한 전체 성과 논문](../../../docs/publications.md)

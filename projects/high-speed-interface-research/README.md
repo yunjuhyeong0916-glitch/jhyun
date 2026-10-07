@@ -1,4 +1,4 @@
-# LPDDR·USB 고속 인터페이스 회로·모델링·실리콘 평가
+# LPDDR·USB 고속 인터페이스 설계·검증
 
 [저장소 첫 화면](../../README.md) · [측정·자동화](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문](docs/evidence.md)
 
@@ -8,8 +8,8 @@ LPDDR 저전압 TX를 설계하고 Schematic·Post-Layout 검증을 수행했습
 
 | 프로젝트 | 담당 설계·검증 | 결과 |
 |---|---|---|
-| [LPDDR](docs/lpddr.md) | [TX 회로](docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델](docs/lpddr-tx-modeling.md), [PCB·HFSS](docs/pcb-hfss-verification.md), 공동 평가 | TX 시뮬레이션 15.6 Gb/s·0.76 pJ/bit, 공동 Combo PHY 실측 14 Gb/s/pin |
-| [USB PAM-3](docs/usb4-pam3.md) | [TX 모델·RTL·Serializer](docs/usb-tx-modeling.md), [RX CTLE 모델](docs/usb-rx-ctle-modeling.md), [PCB·채널 분석](docs/pcb-hfss-verification.md)·차동 측정 | TX 모델 40 Gb/s/lane, RX 모델 25.6 GBaud/lane, 공동 TX 실측 32 Gb/s |
+| [LPDDR](docs/lpddr.md) | [TX 회로](docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델](docs/lpddr-tx-modeling.md), [PCB·HFSS](docs/pcb-hfss-verification.md), 제작 칩 측정 참여 | TX 시뮬레이션 15.6 Gb/s·0.76 pJ/bit, Combo PHY 실측 14 Gb/s/pin |
+| [USB PAM-3](docs/usb4-pam3.md) | [TX 모델·RTL·Serializer](docs/usb-tx-modeling.md), [RX CTLE 모델](docs/usb-rx-ctle-modeling.md), [PCB·채널 분석](docs/pcb-hfss-verification.md)·차동 측정 | TX 모델 40 Gb/s/lane, RX 모델 25.6 GBaud/lane, 제작 TX 실측 32 Gb/s |
 
 ## PCB·계측
 
@@ -21,7 +21,7 @@ PCB 배치·배선과 HFSS S-parameter 분석을 수행하고, COB 실장 이후
 
 ## 연구 성과 논문
 
-| 연구 | 모델·시뮬레이션 | 실리콘 평가 |
+| 연구 | 모델·시뮬레이션 | 제작 칩 측정 |
 |---|---|---|
 | LPDDR | [ICEIC 2025 · 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746) | [A-SSCC 2026 · 14-Gb/s/pin Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141), 채택·발표 예정 |
 | USB PAM-3 | [SMACD 2025 · TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025 · RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233) | [IEEE TVLSI 2026 · 32-Gb/s TX·150-preset FFE](https://doi.org/10.1109/TVLSI.2026.3701343) |

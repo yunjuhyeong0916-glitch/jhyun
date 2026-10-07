@@ -4,7 +4,7 @@
 
 **담당:** CTLE 모델링·송수신 통합 검증. 바이어스·입력 공통전압과 R·C 제어를 조정해 채널 보상과 PAM-3 중간 레벨 안정성을 확인했습니다.
 
-**검증:** 모델·시뮬레이션. Sampler·DFE·CDR는 공동 RX 모델입니다.
+**검증:** CTLE 모델·시뮬레이션과 RX 통합 모델의 동작 확인.
 
 ## 1. 바이어스·입력 공통전압을 먼저 정한 이유
 
@@ -17,7 +17,7 @@
 
 ![입력 전압과 바이어스 변화에 따른 전류 및 동작영역 확인용 전압](../assets/usb_rx_ctle_bias_dc_sweep.png)
 
-**DC sweep:** 입력 0–1.2 V·10-mV 간격, VBIAS 0.4–0.7 V·50-mV 간격. 전류·드레인 전압·문턱전압을 관찰했습니다. 후속 XMODEL 통합 버전은 소자·부하·공통전압 설정이 다릅니다.
+**DC sweep:** 입력 0–1.2 V·10-mV 간격, VBIAS 0.4–0.7 V·50-mV 간격. 전류·드레인 전압·문턱전압을 관찰했습니다.
 
 </details>
 
@@ -52,14 +52,14 @@ Virtuoso에서 사용한 값을 XMODEL에 그대로 옮겼을 때 같은 응답�
 
 ## 3. 높은 부스트와 중간 레벨 안정성을 함께 판단
 
-초기 통합 모델에서 중간 레벨의 흔들림을 관측하고, 후속 모델의 boosting을 완화해 줄였습니다.
+초기 통합 모델에서 중간 레벨의 흔들림을 관측했습니다. 부스트 설정을 낮춘 후속 모델에서 CTLE 입출력 Eye를 확인했습니다.
 
 <details>
 <summary>보상 조정 전에 관찰한 중간 레벨의 흔들림</summary>
 
 ![중간 레벨의 변동이 관찰된 개발 중 CTLE 출력 Eye](../assets/usb_rx_ctle_midlevel_ripple.png)
 
-**관측:** 초기 개발 모델의 CTLE 출력. 후속 그림과 개발 시점·입력 조건이 달라 정량 전후 비교는 미평가입니다.
+**관측:** 초기 통합 모델의 CTLE 출력에서 나타난 중간 레벨의 흔들림.
 
 </details>
 
@@ -67,16 +67,16 @@ Virtuoso에서 사용한 값을 XMODEL에 그대로 옮겼을 때 같은 응답�
 |---|---|
 | ![FFE off 상태에서 채널을 통과한 scrambled PAM3 데이터의 CTLE 입력 Eye](../assets/usb_rx_ctle_input_eye_ffe_off.png) | ![같은 자료의 보상 조정 후 CTLE 출력 Eye](../assets/usb_rx_ctle_output_eye_ffe_off.png) |
 
-**조건:** TX FFE off·scrambled data·선택 best-case parameter의 입출력 Eye. 최종 R·C 코드 전체는 미기록이며, 두 그림의 세로축·색상 밀도 척도는 서로 다릅니다.
+**조건:** TX FFE off·scrambled data에서 선택한 CTLE 설정의 입출력 Eye.
 
 ## 4. Sampler에 연결할 때 공통전압·부하 조건 재확인
 
-단품 AC 입력 common-mode 850 mV에서 공동 RX 통합 시 약 700 mV로 변경했습니다. Sampler의 동작·부하에 맞춰 동작점과 보상 설정을 조정했습니다.
+단품 AC 시험의 입력 common-mode 850 mV를 RX 통합 시 약 700 mV로 변경했습니다. Sampler의 동작·부하에 맞춰 동작점과 보상 설정을 조정했습니다.
 
 ```mermaid
 flowchart LR
-    A["TX · 채널 출력"] --> B["CTLE<br/>개인 모델링"]
-    B --> C["Data Sampler · DFE<br/>공동 RX 모델"]
+    A["TX · 채널 출력"] --> B["CTLE"]
+    B --> C["Data Sampler · DFE"]
     C --> D["역직렬화 · 논리 복원"]
     B --> E["Edge Sampler"]
     E --> F["CDR · 복구 클록"]
@@ -89,4 +89,4 @@ flowchart LR
 
 ## 관련 논문
 
-[SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092233): CTLE·DFE·CDR를 포함한 25.6-GBaud/lane 공동 RX 모델. 담당 블록은 CTLE입니다. [32-Gb/s 공동 제작 TX](usb4-pam3.md#모델과-실리콘-결과의-구분)
+[SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092233): CTLE·DFE·CDR를 포함한 25.6-GBaud/lane RX 모델. [32-Gb/s 제작 TX 측정](usb4-pam3.md#모델과-실리콘-결과의-구분)

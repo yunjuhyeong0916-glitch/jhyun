@@ -4,9 +4,7 @@
 
 [파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·근거](evidence.md)
 
-LPDDR 측정용 PCB의 회로·배치·배선을 설계하고 HFSS로 전달 특성을 분석했습니다. 제작 보드의 COB 실장·계측과 공동 USB 보드 검토에 참여했습니다.
-
-LPDDR 사례는 개인 PCB 설계·HFSS 분석 결과이며, USB 보드는 공동 작업 사례입니다. 아래 전달 특성 곡선은 **HFSS 전자기 해석 결과**입니다.
+LPDDR 측정용 PCB의 회로·배치·배선을 설계하고 HFSS로 전달 특성을 분석했습니다. 제작 보드의 COB 실장·측정에 참여했으며, USB TX 보드에서는 GND via와 전원 공급 경로를 검토했습니다.
 
 <a id="1-제작-보드와-설계-화면에서-같은-신호-경로-확인"></a>
 
@@ -17,8 +15,6 @@ LPDDR 사례는 개인 PCB 설계·HFSS 분석 결과이며, USB 보드는 공�
 | PCB 배치·배선 | 제작 보드 | COB·와이어 본딩 |
 |---|---|---|
 | <img src="../assets/pcb_hfss_lpddr_layout.png" alt="칩 실장부와 커넥터 및 전원 제어 연결이 배치된 PCB 설계 화면" width="260"> | <img src="../assets/pcb_hfss_lpddr_board_photo.png" alt="측정용 PCB의 실제 제작 사진" width="260"> | <img src="../assets/pcb_hfss_lpddr_wirebond_photo.png" alt="칩 패드와 PCB 사이의 와이어 본딩 확대 사진" width="260"> |
-
-**사진 설명:** 왼쪽은 배치·배선, 가운데는 제작 보드, 오른쪽은 칩 패드와 PCB를 연결한 와이어 본딩입니다.
 
 <a id="2-hfss에는-분석할-배선과-기준-조건을-함께-반영"></a>
 
@@ -31,8 +27,6 @@ LPDDR 사례는 개인 PCB 설계·HFSS 분석 결과이며, USB 보드는 공�
 
 ![칩 쪽 패드에서 커넥터 방향으로 이어지는 배선과 주변 접지 및 via를 포함한 HFSS 해석 모델](../assets/pcb_hfss_lpddr_model.jpg)
 
-**모델 설명:** 전자기 해석에 사용한 배선과 주변 구조입니다.
-
 </details>
 
 공통 HFSS 절차는 PADS → ODB++ import → 적층·재료·두께 확인 → 포트·기준 접지 설정 → validation입니다. Validation에서 누락된 재료·두께·포트를 점검합니다.
@@ -44,8 +38,6 @@ LPDDR 사례는 개인 PCB 설계·HFSS 분석 결과이며, USB 보드는 공�
 | 포트·기준 접지 | 신호·접지 위치와 포트 구성 |
 | 모델·경계 | 보드·유전체 범위, 커넥터 접촉·연결 |
 
-**공통 해석 사례:** 모사채널·SMA 모델. 아래 LPDDR 보드와는 별도 구성입니다.
-
 <a id="3-한-주파수의-손실과-대역-중간의-notch를-함께-검토"></a>
 
 ## 3. LPDDR S-parameter
@@ -56,22 +48,20 @@ LPDDR 사례는 개인 PCB 설계·HFSS 분석 결과이며, USB 보드는 공�
 |---|---|
 | ![여러 전달 경로 중 일부에서 좁은 대역의 notch가 보이는 HFSS S-parameter 곡선](../assets/pcb_hfss_lpddr_sparams_notch.jpg) | ![6.4GHz에서 여섯 전달 경로의 값이 표시된 HFSS S-parameter 곡선](../assets/pcb_hfss_lpddr_sparams_6p4ghz.jpg) |
 
-**HFSS 모델:** 왼쪽 `PCB_cutout1`, 오른쪽 `PCB_cutout6`. 오른쪽 6.4-GHz 마커의 여섯 전달 경로는 약 **−1.58~−2.14 dB**입니다.
-
-**비교 조건:** 두 모델의 포트·적층·경계조건 일치 여부는 미확인입니다. 세로축 범위도 서로 달라 동일 조건의 수정 효과는 미산출입니다.
+오른쪽 HFSS 결과의 6.4-GHz 마커에서 여섯 전달 경로는 약 **−1.58~−2.14 dB**입니다.
 
 <a id="4-usb-보드에서는-신호-경로와-전원-공급-경로를-함께-검토"></a>
 
 ## 4. USB PCB·전달 특성
 
-USB TX의 공동 PCB 자료에는 GND via의 배치 간격을 검토하면서 전원층의 공급 경로가 끊기지 않도록 조정한 내용이 있습니다. 자료는 균일한 GND via 배치를 사용한 구조에서 일부 via를 제거한 구조와 비슷한 손실을 확인했다고 설명합니다. 이에 맞춰 VDDQ 공급 위치와 VBIAS 연결을 정리하고, SMA 커넥터 주변의 공간도 확보했습니다.
+USB TX 보드에서 GND via 배치와 전원 공급 경로를 검토했습니다. VDDQ 공급 위치와 VBIAS 연결을 정리하고, SMA 커넥터 주변 공간을 확보했습니다.
 
 <details>
 <summary>USB TX 보드의 배치·배선 화면 보기</summary>
 
 ![고속 신호의 커넥터 방향 배선과 전원 영역을 함께 보여주는 USB TX PCB 배치 화면](../assets/pcb_hfss_usb_layout.png)
 
-**공동 USB PCB:** 179.5 × 108 mm, GND via·전원 공급 경로·SMA 공간 배치 검토.
+**USB TX 보드:** 179.5 × 108 mm, GND via·전원 공급 경로·SMA 공간 배치 검토.
 
 </details>
 
@@ -100,5 +90,5 @@ PPG·BERT의 입력·오류 검출 경로, 전원공급기와 오실로스코프
 
 ## 관련 논문
 
-- [A-SSCC 2026: LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) — 공동 칩의 TX Eye·RX margin. 채택·발표 예정.
-- [IEEE TVLSI 2026: PAM-3 TX·150-preset FFE](https://doi.org/10.1109/TVLSI.2026.3701343) — 제작 USB PAM-3 TX의 공동 실리콘 평가.
+- [A-SSCC 2026: LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) — 제작 칩의 TX Eye·RX margin. 채택·발표 예정.
+- [IEEE TVLSI 2026: PAM-3 TX·150-preset FFE](https://doi.org/10.1109/TVLSI.2026.3701343) — USB PAM-3 TX의 제작 칩 측정.

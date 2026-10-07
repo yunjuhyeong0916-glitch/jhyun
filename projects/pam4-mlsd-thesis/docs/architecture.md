@@ -1,26 +1,33 @@
-# 학위논문 DP-SMM 구조·검증 범위
+# DS-SBM과 DP-SMM의 구조 비교
 
-[프로젝트](../README.md) · [DP-SMM 검증 결과](validation.md) · [A-SSCC DS-SBM 설계 판단](../../zcu208-pam4-dsp-portfolio/docs/design-decisions.md)
+[프로젝트](../README.md) · [모델·RTL 비교 결과](validation.md) · [DS-SBM 설계 판단](../../zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [DP-SMM 상세 구조](../../dp-smm-journal/docs/architecture.md)
 
-## DP-SMM 검증에 사용한 RTL
+## 관측 신호와 PR 목표
 
-DP-SMM 연구의 2026년 10월 검증은 **2026-09-09 RTL**을 기준으로 수행했습니다. 검사한 RTL은 이전 상태별 nearest branch 후보 두 개를 보존하고, 도착 상태가 연결되지 않는 경우 destination rescue를 사용합니다. 8-lane 메트릭 타일의 변환을 결합해 32-lane 경로에 연결하는 구조입니다.
+![DS-SBM의 별도 PR FIR과 DP-SMM의 예상 샘플용 PR 목표 비교](../assets/thesis_observation_paths.png)
 
-| 단계 | 검사 방법 | 현재 확인 범위 |
+DS-SBM은 RX FFE 뒤에 별도 3-tap PR FIR을 두고 그 출력을 관측합니다. DP-SMM은 RX FFE 출력을 직접 관측하며, 세 탭 PR 목표를 후보 심볼열의 예상 샘플 계산에 사용합니다. 비교 대상의 RX FFE는 각각 21탭과 11탭입니다.
+
+이 차이를 포함한 수신기 전체 비교와, 같은 FFE 출력에서 후보 수만 바꾸는 코어 비교는 평가 대상이 다릅니다.
+
+## 경로 정보를 보존하는 위치
+
+![DS-SBM과 DP-SMM의 행렬 경로·이력 정보·프레임 경계 PM 비교](../assets/thesis_architecture_comparison.png)
+
+| 항목 | DS-SBM | DP-SMM |
 |---|---|---|
-| Branch 메트릭 | 산술·후보 보존·목적 상태 도달을 기준값과 비교 | memory-0/1 두 조건 PASS |
-| 8심볼 min-plus 결합 | RTL block 행렬을 기준 행렬과 비교 | 두 조건 PASS |
-| 경로 복원 참조 | RTL 행렬을 Python traceback에 입력 | 두 조건에서 각각 512레벨 일치 |
-| 전체 어댑터 | 32-lane RTL 출력과 기대 심볼 비교 | 두 조건 FAIL, 정렬 원인 검토 중 |
+| 가시 상태 | 4개 | 4개 |
+| 분기·BM 처리 | 상태별 두 생존 분기, 총 8개 전파 | 심볼당 64개 memory-2 BM 가설 생성 |
+| 기초 행렬 | 여덟 개의 4심볼 행렬 | 여덟 개의 4심볼 행렬 |
+| 원소별 경로 수 R | 최대 1개 | 최대 2개 |
+| 상위 합성 | 스칼라 비용의 min-plus 합성 | 제안 비용으로 두 경로 선택·이력 반영 비용 정보 전달 |
+| 프레임 경계 PM | 가시 상태별 한 개 | 가시 상태별 두 개, 경계 후보 수 K_H=2 |
+| 경로 복원 | 선택된 구간의 복원 정보 이용 | 하위 행렬의 상태·순위 정보를 따라 현재 32심볼 복원 |
 
-메트릭 행렬과 Python 복원 검사는 g₂=0인 memory-0/1 조건에서 수행했습니다. memory-2 이력을 포함한 DP-SMM 전체 RTL 경로의 정합성은 추가 검증 대상입니다.
+DS-SBM의 8개는 선택 후 전파하는 활성 분기 수이고, DP-SMM의 64개는 생성하는 BM 가설 수입니다.
 
-## DS-SBM과 DP-SMM 검증의 구분
+## 동일 조건에서 후보 보존 효과 확인
 
-| 항목 | A-SSCC DS-SBM | 학위논문 DP-SMM 검증에 사용한 RTL |
-|---|---|---|
-| 32-symbol 처리의 구간 표현 | 8개 4-symbol 구간의 계층적 결합 | xform export의 4개 8-lane 타일 |
-| 후보 유지의 설명 | 상태별 두 survivor branch, 8 active branches/symbol | 이전 상태별 nearest branch 후보 두 개와 destination rescue |
-| 확인 근거 | DS-SBM 논문 구조·검출기 자원 비교·RFSoC 측정 | 메트릭 행렬·Python 참조 복원·전체 어댑터 검사 |
+DP-SMM 코어의 경계 후보 수 K_H=2, BM ROM, 입력 샘플, 초기 상태와 동률 규칙을 고정했습니다. 행렬 원소별 경로 수 R만 1과 2로 바꾸어 합성 신호의 오류와 RTL 동작을 비교했습니다.
 
-A-SSCC의 RFSoC 측정 성과는 DS-SBM 결과이며, DP-SMM의 정합성은 학위논문 검증에서 확인합니다. [DS-SBM 구조·설계 판단](../../zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [DP-SMM 검증 조건·결과](validation.md)
+R=1 비교 코어는 DP-SMM의 PR 처리·BM 생성·경계 후보 수를 유지하면서 행렬 원소별 경로 수만 하나로 제한한 구조입니다. [동일 입력 비교 결과](validation.md)

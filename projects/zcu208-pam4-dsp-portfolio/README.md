@@ -2,7 +2,7 @@
 
 ZCU208 RFSoC의 4-GS/s 설정 ADC·DAC에 **32-lane 병렬 DSP**를 연결했습니다. TX FIR, RX 21-tap FIR와 DS-SBM RS-MLSD를 구현하고, 런타임 계수 제어·PRBS 검사·ILA 디버깅 경로를 통합했습니다.
 
-DS-SBM 검출기 구조와 RFSoC 시스템의 BER·자원·타이밍 결과를 정리했습니다. **DP-SMM 검증은 [학위논문 프로젝트](../pam4-mlsd-thesis/)에서 다룹니다.**
+DS-SBM 검출기 구조와 RFSoC 시스템의 BER·자원·타이밍 결과를 정리했습니다. 후속 DP-SMM 설계는 [Journal 준비 프로젝트](../dp-smm-journal/), 두 구조의 비교는 [학위논문](../pam4-mlsd-thesis/)에서 다룹니다.
 
 ## 설계·구현
 
@@ -33,13 +33,13 @@ flowchart LR
 
 측정 파형은 **ISI 보드를 통과한 신호를 ADC로 캡처한 결과**입니다. 캡처 재생·통계 분석의 입력과 계산 조건은 [측정·검증 결과](docs/validation.md)에 표시했습니다.
 
-## A-SSCC·기존 시스템 결과
+## 시스템 측정·FPGA 구현 결과
 
 | 항목 | 결과 | 조건·출처 |
 |---|---|---|
 | RFSoC 시스템 BER | PRBS7 < 10⁻⁷·PRBS15 < 2×10⁻⁶ | A-SSCC 2026 Fig. 5, 41-dB 손실·ISI 보드 측정 |
 | 전체 TRX 자원 | LUT 189,108·FF 188,846·DSP 950·BRAM 24.5 | 2026-06-14 placed 요약, 논문 반올림 수치와 일치 |
-| 기존 FPGA 타이밍 | WNS +0.083 ns·WHS +0.010 ns·TNS/THS 0 | 2026-06-29 post-route physopt 보고서 |
+| FPGA 타이밍 | WNS +0.083 ns·WHS +0.010 ns·TNS/THS 0 | 2026-06-29 post-route physopt 보고서 |
 
 [상세 결과·검증 조건](docs/validation.md)
 
@@ -47,6 +47,6 @@ flowchart LR
 
 [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 기준).
 
-[DP-SMM 학위논문 프로젝트](../pam4-mlsd-thesis/) · [전체 논문](../../docs/publications.md)
+[학위논문 비교 연구 (진행 중)](../pam4-mlsd-thesis/) · [Journal DP-SMM](../dp-smm-journal/) · [전체 논문](../../docs/publications.md)
 
 **도구:** Verilog / SystemVerilog · Vivado 2022.2 · XSim · ZCU208 RFSoC · Python

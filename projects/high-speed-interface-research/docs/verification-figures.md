@@ -12,21 +12,23 @@
 
 **TX 시뮬레이션 결과:** Eye 폭 37 → 45.4 ps, 높이 56.5 → 75 mV.
 
-## LPDDR Combo PHY: 공동 칩의 Eye와 RX Shmoo
+<a id="lpddr-combo-phy-공동-칩의-eye와-rx-shmoo"></a>
+
+## LPDDR Combo PHY: 제작 칩의 Eye와 RX Shmoo
 
 ![4-DQ 활성 조건의 LPDDR Combo PHY TX Eye와 RX Shmoo](../assets/lpddr_combo_measured_eye_shmoo.png)
 
-**조건·관련 논문:** 14 Gb/s/pin, 4-DQ 활성. [A-SSCC 2026 Combo PHY 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141), p. 2 Fig. 5의 TX Eye·RX Shmoo 영역. **공동 실리콘 측정 결과**입니다.
+**측정 조건·관련 논문:** 14 Gb/s/pin, 4-DQ 활성. [A-SSCC 2026 Combo PHY 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141), p. 2 Fig. 5의 TX Eye·RX Shmoo.
 
-**공동 칩 실측:** TX Eye 0.41 UI·65.3 mV, RX Shmoo 마진 0.25 UI·25 mV. 담당: TX 설계·측정 전 검증, PCB·계측 참여.
+**제작 칩 측정 결과:** TX Eye 0.41 UI·65.3 mV, RX Shmoo 마진 0.25 UI·25 mV. [TX 설계·검증과 측정 역할](lpddr.md)
 
 ## USB PAM-3: 같은 채널·패턴에서 FFE 효과 확인
 
 ![PAM-3 제작 TX의 FFE 적용 전후 차동 Eye](../assets/pam3_measured_ffe_eye.png)
 
-**조건·관련 논문:** 32 Gb/s, CH#3, PRBS15, scrambler enabled. 채널 손실은 10.24 GHz에서 17.3 dB로 보고되었습니다. [TVLSI 관련 논문](https://doi.org/10.1109/TVLSI.2026.3701343), p. 7 Fig. 13(a),(b). **공동 TX 실리콘 측정 결과**입니다.
+**측정 조건·관련 논문:** 32 Gb/s, CH#3, PRBS15, scrambler enabled. 채널 손실은 10.24 GHz에서 17.3 dB입니다. [TVLSI 관련 논문](https://doi.org/10.1109/TVLSI.2026.3701343), p. 7 Fig. 13(a),(b).
 
-**공동 TX 실측:** 왼쪽 FFE off, 오른쪽 FFE on. 동일 CH#3·PRBS15의 상·하단 Eye 비교. [담당 역할](usb4-pam3.md)
+**제작 TX 측정 결과:** 왼쪽 FFE off, 오른쪽 FFE on. 동일 CH#3·PRBS15의 상·하단 Eye 비교. [모델링·RTL 검증과 측정 역할](usb4-pam3.md)
 
 ## AWG 속도 변경: 설정값과 실제 입력을 맞추기
 

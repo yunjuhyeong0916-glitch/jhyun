@@ -42,8 +42,8 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 
 **논문 detector 비교:** RS-ACS 대비 LUT 35.7%·FF 22.5% 감소. [시스템 구조](architecture.md)
 
-## DP-SMM 학위논문 연구
+## 후속 DP-SMM 설계와 구조 비교
 
-DP-SMM의 메트릭 행렬 결합과 경로 복원 검증은 [학위논문 프로젝트](../../pam4-mlsd-thesis/)에서 다룹니다. [DP-SMM 구조·검증 범위](../../pam4-mlsd-thesis/docs/architecture.md)
+DP-SMM의 두 경로 보존·이력 반영 비용과 구현은 [Journal 준비 프로젝트](../../dp-smm-journal/)에 정리했습니다. [학위논문](../../pam4-mlsd-thesis/)에서는 DS-SBM과 DP-SMM의 구조를 비교하고 동일 입력의 후보 보존 효과를 평가합니다.
 
 [RTL 구조](architecture.md) · [검증 결과](validation.md)
