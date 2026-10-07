@@ -59,6 +59,12 @@ Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with t
 
 Both A-SSCC 2026 papers are accepted, with presentations forthcoming as of 2026-10-07. [Full publication list](docs/publications.md)
 
+## AI assistance
+
+I used an AI agent connected through MATLAB MCP for **RTL coding and measurement-automation harness development**. It assisted with writing and revising code to implement model behavior in RTL and organize repeatable verification and measurement procedures.
+
+AI also assisted with portfolio editing, Korean–English translation, content organization and explanatory diagrams. Research results are grounded in the model–RTL comparisons, FPGA implementation records, simulations and measurement records presented in each project.
+
 ---
 
 [Repository map](docs/repository-map.md) · [Verification status](docs/validation-status.md) · [Glossary](docs/glossary.md)
