@@ -2,6 +2,14 @@
 
 [프로젝트](../README.md) · [MLSD 설계 판단](design-decisions.md) · [측정·검증 결과](validation.md)
 
+## 논문 전체 구조
+
+![A-SSCC 논문의 FPGA 기반 PAM4 송수신기 전체 구조와 TX·RX DSP 블록](../assets/mlsd_paper_top_architecture.jpg)
+
+A-SSCC 2026, p. 2 Fig. 2. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+
+상단은 PS 제어, PL의 TX·RX 데이터 경로, RF Data Converter와 ISI 보드의 연결을 보여줍니다. 하단의 송신 DSP는 PRBS7/15·PAM4 인코더와 8-tap TX FFE로 구성됩니다. 수신 DSP는 21-tap RX FFE → 3-tap partial response → MLSD 순서로 채널 왜곡을 보상하고 심볼을 복원합니다.
+
 ## 병렬 데이터 경로
 
 ZCU208의 XCZU48DR-FSVG1517-2-E에서 ADC·DAC를 각각 4 GS/s로 설정했습니다. 기존 구현 보고서의 ADC 클록은 125 MHz, DAC 클록은 500 MHz입니다. ADC 병렬 경로의 설계 처리량은 **32 samples × 125 MHz = 4 Gsamples/s**입니다.
@@ -21,19 +29,5 @@ ZCU208의 XCZU48DR-FSVG1517-2-E에서 ADC·DAC를 각각 4 GS/s로 설정했습�
 ## MLSD 메트릭
 
 논문의 DS-SBM RS-MLSD는 네 visible state와 상태별 두 survivor branch를 사용합니다. 구간별 branch metric 행렬을 계층적으로 결합해 심볼 간 ACS 의존성을 다룹니다. [후보 보존·행렬 결합의 설계 판단](design-decisions.md)
-
-## FIR 검증
-
-2026-09-09 공통 RTL의 FIR 회귀 기록은 [학위논문 프로젝트의 검증 기준](../../pam4-mlsd-thesis/docs/validation.md#fir-출력-정합성)에 정리했습니다.
-
-## 논문·RTL 버전
-
-| 버전 | 구조·검증 |
-|---|---|
-| A-SSCC 2026 논문 | DS-SBM RS-MLSD·ZCU208 RFSoC·ISI 보드 시스템 측정 |
-| 2026-09-09 공통 RTL | 같은 날 실행한 FIR 3종 PASS; 학위논문 추가 검증의 기준 RTL |
-| 2026-10-07 학위논문 검증 | 위 RTL의 메트릭 PASS, 전체 MLSD 어댑터 출력 불일치 |
-
-측정 당시 bitstream과 2026-09-09 RTL의 빌드 대응은 미확인입니다. 논문과 기준 RTL의 구간·후보 유지 방식은 [학위논문 프로젝트의 구조 비교](../../pam4-mlsd-thesis/docs/architecture.md)에 구분했습니다.
 
 [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [검증 결과](validation.md)

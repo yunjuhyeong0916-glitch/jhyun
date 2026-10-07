@@ -40,7 +40,7 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 | 구간별 메트릭과 min-plus 결합 | 심볼별 ACS 의존성과 긴 조합 경로 | 구간 경계의 상태 연결, metric·survivor 전달 |
 | 고정소수점·파이프라인 | 자원 비용과 클록 주기 | 양자화·포화, 데이터와 valid의 정렬, 입력–출력 지연 |
 
-**논문 detector 비교:** RS-ACS 대비 LUT 35.7%·FF 22.5% 감소. [구조·버전](architecture.md#논문rtl-버전)
+**논문 detector 비교:** RS-ACS 대비 LUT 35.7%·FF 22.5% 감소. [시스템 구조](architecture.md)
 
 ## 학위논문 프로젝트의 기준 RTL
 

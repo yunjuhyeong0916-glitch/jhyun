@@ -49,6 +49,6 @@ flowchart LR
 
 [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 기준).
 
-[논문·RTL 버전](docs/architecture.md#논문rtl-버전) · [학위논문 프로젝트](../pam4-mlsd-thesis/) · [전체 논문](../../docs/publications.md)
+[학위논문 프로젝트](../pam4-mlsd-thesis/) · [전체 논문](../../docs/publications.md)
 
 **도구:** Verilog / SystemVerilog · Vivado 2022.2 · XSim · ZCU208 RFSoC · Python

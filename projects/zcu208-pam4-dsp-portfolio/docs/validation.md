@@ -6,9 +6,13 @@
 
 ## ISI 보드를 통한 RFSoC 측정
 
-측정 신호 경로는 **ZCU208 DAC → ISI 보드 → ADC 캡처**입니다. 아래는 A-SSCC 2026에 보고한 RFSoC 시스템 결과입니다.
+측정 신호 경로는 **ZCU208 DAC → ISI 보드 → ADC 캡처**입니다.
 
-![ISI 보드를 이용한 RFSoC 시스템의 PRBS7·PRBS15 BER 컨투어](../assets/mlsd_paper_measured_ber_contours.png)
+![ZCU208·XM655·ISI 보드 측정 구성과 전체 채널의 주파수 응답](../assets/mlsd_paper_isi_measurement_setup.png)
+
+A-SSCC 2026, p. 2 Fig. 6 상단. 왼쪽은 ZCU208·XM655와 ISI 보드의 실제 측정 구성, 오른쪽은 ISI 보드와 DAC–ADC 경로를 포함한 약 41-dB 손실 조건입니다. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+
+논문에 보고한 RFSoC 시스템 결과는 다음과 같습니다.
 
 | 항목 | 결과 | 출처 |
 |---|---|---|
@@ -19,6 +23,10 @@
 [논문 공식 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351). 최종 41-dB 온칩 checker 원 로그와 후처리 CSV의 직접 대응은 미확인입니다.
 
 ## FPGA 자원·타이밍
+
+![논문의 FPGA TX·RX DSP 배치와 전체 자원 사용량·경로별 자원 구성](../assets/mlsd_paper_fpga_resources_layout.jpg)
+
+A-SSCC 2026, p. 3 Fig. 7. 상단은 TX FFE와 RX FFE·MLSD의 배치, 하단은 전체 자원 사용량과 경로별 구성입니다. RX 데이터 경로가 전체 LUT의 96.49%·FF의 98.57%를 차지합니다. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 2026-06-14 placed 자원 요약은 논문의 전체 TRX 자원 수치와 일치합니다.
 
@@ -78,6 +86,10 @@
 **출처:** 2026-06-13 캡처 재생 결과. 관측 비트 65,536개 중 lock 이후 64,384개를 BER 분모로 사용했습니다.
 
 ### 21-tap FFE·3-tap PR 통계 컨투어
+
+![A-SSCC 논문에 보고한 RFSoC 시스템의 PRBS7·PRBS15 BER 컨투어](../assets/mlsd_paper_measured_ber_contours.png)
+
+A-SSCC 2026, p. 2 Fig. 5의 BER 컨투어. 논문에 보고한 시스템 결과이며, 아래 표는 별도의 기대 BER 계산값입니다. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 2026-06-14 분석은 EQ 잔차의 평균·표준편차와 심볼 문맥별 횟수로 기대 BER를 계산했습니다. PRBS7은 ADC 캡처 입력, PRBS15는 IL40-dB 등가 입력에 결정적 AWGN을 더한 SNR 22-dB 조건입니다.
 
