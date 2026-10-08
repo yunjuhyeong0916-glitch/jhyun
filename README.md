@@ -30,6 +30,14 @@ ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를
 
 [A-SSCC 프로젝트](projects/zcu208-pam4-dsp-portfolio/) · [설계 판단](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis·FPGA 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
+<a id="ai-활용-범위"></a>
+
+### AI 활용 | MATLAB MCP 기반 RTL·측정 자동화
+
+MATLAB MCP와 연동한 AI 에이전트를 RTL 코딩과 측정 자동화 harness 구성에 활용했습니다.
+
+[AI 활용 흐름·상세 설명](docs/ai-assisted-dsp-workflow.md)
+
 ## LPDDR·USB 연구
 
 | 연구 | 담당 설계·검증 | 대표 성과 |
@@ -58,16 +66,6 @@ ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를
 | USB PAM-3 | [SMACD 2025 · TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025 · RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233) · [IEEE TVLSI 2026 · 제작 TX](https://doi.org/10.1109/TVLSI.2026.3701343) |
 
 A-SSCC 2026 두 편: 채택·발표 예정(2026-10-07 기준). [전체 논문 목록](docs/publications.md)
-
-## AI 활용 범위
-
-MATLAB MCP와 연동한 AI 에이전트를 **RTL 코딩과 측정 자동화 harness 구성**에 활용했습니다. 모델의 동작을 RTL로 옮기고 반복 검증·측정 절차를 구성하는 과정에서 코드 작성과 수정을 보조받았습니다.
-
-![MATLAB 모델링부터 RTL 코딩, FPGA 검증, 측정 자동화와 결과 분석으로 이어지는 AI 활용 흐름. 파란색은 AI가 코드 작성을 보조한 단계입니다.](assets/ai_workflow_ko.svg)
-
-[RTL·FPGA 검증](projects/dp-smm-journal/docs/validation.md) · [Vitis·FPGA 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [측정 장비·자동화](projects/high-speed-interface-research/docs/measurement-equipment.md)
-
-포트폴리오의 문장 정리·한영 번역·자료 구성·설명용 도식 제작에도 AI를 활용했습니다. 연구 결과는 각 프로젝트에 제시한 모델·RTL 비교, FPGA 구현, 시뮬레이션·측정 기록을 근거로 정리했습니다.
 
 ---
 

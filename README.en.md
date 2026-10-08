@@ -30,6 +30,14 @@ Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with t
 
 [A-SSCC project](projects/zcu208-pam4-dsp-portfolio/) · [Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis / FPGA bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
+<a id="ai-assistance"></a>
+
+### AI assistance | RTL and measurement automation with MATLAB MCP
+
+I used an AI agent connected through MATLAB MCP for RTL coding and measurement-automation harness development.
+
+[View the illustrated workflow](docs/ai-assisted-dsp-workflow.en.md)
+
 ## LPDDR / USB research
 
 | Research | Design and verification work | Key results |
@@ -58,16 +66,6 @@ Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with t
 | USB PAM-3 | [SMACD 2025 · TX model](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025 · RX model](https://doi.org/10.1109/SMACD65553.2025.11092233) · [IEEE TVLSI 2026 · fabricated TX](https://doi.org/10.1109/TVLSI.2026.3701343) |
 
 Both A-SSCC 2026 papers are accepted, with presentations forthcoming as of 2026-10-07. [Full publication list](docs/publications.md)
-
-## AI assistance
-
-I used an AI agent connected through MATLAB MCP for **RTL coding and measurement-automation harness development**. It assisted with writing and revising code to implement model behavior in RTL and organize repeatable verification and measurement procedures.
-
-![AI-assisted workflow from MATLAB modeling through RTL coding, FPGA verification, measurement automation and analysis. Blue identifies stages with AI coding support.](assets/ai_workflow_en.svg)
-
-[RTL / FPGA verification](projects/dp-smm-journal/docs/validation.md) · [Vitis / FPGA bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [Measurement equipment / automation](projects/high-speed-interface-research/docs/measurement-equipment.md)
-
-AI also assisted with portfolio editing, Korean–English translation, content organization and explanatory diagrams. Research results are grounded in the model–RTL comparisons, FPGA implementation records, simulations and measurement records presented in each project.
 
 ---
 
