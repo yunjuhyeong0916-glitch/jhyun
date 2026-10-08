@@ -4,7 +4,7 @@
 
 광운대학교 · 석사 학위논문 연구 중 · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch)
 
-안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 <strong>Ultra High-Speed 통신을 위한 <a href="projects/#dsp-transceiver-research">DSP 기반 Transceiver 연구</a></strong>를 진행하고 있습니다.
+안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 <strong>Ultra High-Speed 통신을 위한 <a href="projects/README.md#dsp-transceiver-research">DSP 기반 Transceiver 연구</a></strong>를 진행하고 있습니다.
 
 채널 손실과 ISI를 고려해 신호를 보상하고, 높은 전송 속도에서도 데이터를 안정적으로 주고받을 수 있는 회로와 시스템을 설계합니다.
 
@@ -18,7 +18,7 @@
 </p>
 
 <p>
-<a href="projects/#dsp-transceiver-research"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
+<a href="projects/README.md#dsp-transceiver-research"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
 <a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로 · TX/RX 모델 · 실리콘 측정" width="410"></a>
 </p>
 

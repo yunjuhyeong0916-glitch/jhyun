@@ -4,7 +4,7 @@
 
 Kwangwoon University · Master's thesis research in progress · [GitHub profile](https://github.com/yunjuhyeong0916-glitch)
 
-I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/#dsp-transceiver-research) for ultra-high-speed communication**.
+I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/README.md#dsp-transceiver-research) for ultra-high-speed communication**.
 
 I design circuits and systems that compensate for channel loss and ISI to support reliable data transmission at high speeds.
 
@@ -18,7 +18,7 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 </p>
 
 <p>
-<a href="projects/#dsp-transceiver-research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
+<a href="projects/README.md#dsp-transceiver-research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
 <a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits · TX/RX models · Silicon measurements" width="410"></a>
 </p>
 
