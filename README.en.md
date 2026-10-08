@@ -103,7 +103,7 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 </tr>
 <tr>
   <td nowrap>Board setup<br>(Vitis)</td>
-  <td>JTAG launch and clock / RFDC setup<br>RX coefficient updates / data collection<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md">Board setup and control</a></td>
+  <td>JTAG launch and clock / RFDC setup<br>RX coefficient updates / data collection<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md">Setup / control</a></td>
 </tr>
 <tr>
   <td nowrap>Automation</td>
@@ -127,7 +127,7 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 </tr>
 <tr>
   <td nowrap>28-nm<br>silicon tests</td>
-  <td>LPDDR TX eye / RX Shmoo<br>USB differential PAM&#8209;3 upper / lower eyes<br>before / after FFE<br><br><a href="projects/high-speed-interface-research/docs/verification-figures.md">Eye / Shmoo</a> <a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md">PAM&#8209;3 tests / FFE</a></td>
+  <td>LPDDR TX eye / RX Shmoo<br>USB differential PAM&#8209;3 upper / lower eyes<br>before / after FFE<br><br><a href="projects/high-speed-interface-research/docs/verification-figures.md">Eye / Shmoo</a><br><a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md">PAM&#8209;3 tests / FFE</a></td>
 </tr>
 <tr>
   <td nowrap>Automation</td>
