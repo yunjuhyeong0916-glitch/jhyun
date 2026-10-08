@@ -2,7 +2,7 @@
 
 I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/) for ultra-high-speed communication**.
 
-I design [circuits](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) and [systems](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) that compensate for channel loss and ISI to support reliable data transmission at high speeds.
+I design circuits and systems that compensate for channel loss and ISI to support reliable data transmission at high speeds.
 
 In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md) to assist with RTL and testbench development and with verification and measurement automation. My automation scripts allow checks to be repeated under the same conditions after design changes.
 

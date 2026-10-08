@@ -2,7 +2,7 @@
 
 안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 [DSP 기반 Transceiver 연구](projects/)**를 진행하고 있습니다.
 
-채널 손실과 ISI를 고려해 신호를 보상하고, 높은 전송 속도에서도 데이터를 안정적으로 주고받을 수 있는 [회로](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)와 [시스템](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)을 설계합니다.
+채널 손실과 ISI를 고려해 신호를 보상하고, 높은 전송 속도에서도 데이터를 안정적으로 주고받을 수 있는 회로와 시스템을 설계합니다.
 
 최근 설계 트렌드에 맞게 [AI](docs/ai-assisted-dsp-workflow.md)를 RTL·테스트벤치 작성과 검증·측정 자동화에 활용하고 있습니다. 설계가 바뀌어도 같은 조건으로 검증을 반복할 수 있도록 자동화 코드를 구성했습니다.
 
