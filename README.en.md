@@ -4,7 +4,7 @@ I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC LPDD
 
 I design circuits and systems that compensate for channel loss and ISI to support reliable data transmission at high speeds.
 
-I use AI to assist with RTL and testbench development, as well as verification and measurement automation, so I can repeat checks under the same conditions after design changes.
+In line with current design trends, I use AI to assist with RTL and testbench development and with verification and measurement automation. My automation scripts allow checks to be repeated under the same conditions after design changes.
 
 [DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB interfaces](#lpddr--usb-interface-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [GitHub profile](https://github.com/yunjuhyeong0916-glitch) · [한국어](README.md)
 
