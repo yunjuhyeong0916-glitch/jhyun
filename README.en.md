@@ -2,24 +2,23 @@
 
 # Juhyeong Yun | High-Speed Interface & DSP Transceiver Research
 
-I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/) for ultra-high-speed communication**.
+Kwangwoon University · Master's thesis research in progress · [GitHub profile](https://github.com/yunjuhyeong0916-glitch)
+
+I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/#dsp-transceiver-research) for ultra-high-speed communication**.
 
 I design circuits and systems that compensate for channel loss and ISI to support reliable data transmission at high speeds.
 
-In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md) to assist with RTL and testbench development and with verification and measurement automation. My automation scripts allow checks to be repeated under the same conditions after design changes.
+In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md) to assist with RTL, testbench and automation code for repeatable verification and measurements.
 
 <p>
-<a href="#dsp-transceiver-research"><img src="assets/readme/nav-dsp.svg" alt="DSP·FPGA" width="115" height="30"></a>
-<a href="#lpddr--usb-interface-research"><img src="assets/readme/nav-interface.svg" alt="LPDDR·USB" width="125" height="30"></a>
 <a href="#measurement--verification"><img src="assets/readme/nav-measurement-en.svg" alt="Verification" width="119" height="30"></a>
 <a href="#research-publications"><img src="assets/readme/nav-papers-en.svg" alt="Papers" width="90" height="30"></a>
 <a href="docs/ai-assisted-dsp-workflow.en.md"><img src="assets/readme/nav-ai-en.svg" alt="AI workflow" width="118" height="30"></a>
-<a href="https://github.com/yunjuhyeong0916-glitch"><img src="assets/readme/nav-github.svg" alt="GitHub" width="94" height="30"></a>
 <a href="README.md"><img src="assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a>
 </p>
 
 <p>
-<a href="projects/"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — DS-SBM · DP-SMM / Model · RTL · FPGA" width="410"></a>
+<a href="projects/#dsp-transceiver-research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
 <a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits · TX/RX models · Silicon measurements" width="410"></a>
 </p>
 
@@ -30,6 +29,8 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 <a href="projects/dp-smm-journal/"><img src="assets/readme/status-journal-en.svg" alt="Journal · In progress" width="174" height="30"></a>
 <a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc-en.svg" alt="A-SSCC 2026 · Accepted" width="194" height="30"></a>
 </p>
+
+**My role and key result:** Implemented PAM4 transceiver DSP and detector RTL and [validated receiver performance on an RFSoC board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정). The resulting [A-SSCC 2026 paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) was accepted.
 
 <details>
 <summary><strong>View research · Thesis / Journal preparation / A-SSCC / AI assistance</strong></summary>
@@ -78,13 +79,16 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 <a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md" title="USB TX silicon measurements, differential PAM-3 and FFE verification"><img src="assets/readme/nav-usb-tx-measurement-en.svg" alt="USB TX silicon measurements, differential PAM-3 and FFE verification" width="174" height="30"></a>
 </p>
 
+- **LPDDR:** Designed a [15.6-Gb/s low-voltage TX circuit](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) and verified it with post-layout simulation. Participated in measurements of a [28-nm Combo PHY](projects/high-speed-interface-research/docs/lpddr-combo.md) at 14 Gb/s/pin.
+- **USB:** Designed and verified [TX RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md) and [RX CTLE behavioral models](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), and participated in [differential PAM-3 measurements of a 32-Gb/s TX chip](projects/high-speed-interface-research/docs/pam3-differential-measurement.md).
+
 <details>
 <summary><strong>View design and verification · TX / RX / PCB / HFSS / Measurements</strong></summary>
 
 | Research | Design and verification work | Key results |
 |---|---|---|
-| [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX circuits](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog models](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), [PCB / HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) | 14 Gb/s/pin Combo PHY; TX eye 0.41 UI / 65.3 mV; RX margin 0.25 UI / 25 mV |
-| [USB&nbsp;PAM&#8209;3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX models / RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE models](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [Differential PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | 32 Gb/s, PRBS15, 17.3-dB loss at 10.24 GHz<br>Upper eye: 11.19 ps / 21.16 mV<br>Lower eye: 11.67 ps / 19.80 mV |
+| [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX circuits](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog models](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), [PCB / HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) | 15.6-Gb/s TX circuit simulation; participation in 14-Gb/s/pin Combo PHY measurements |
+| [USB&nbsp;PAM&#8209;3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX models / RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE models](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [Differential PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | Integrated TX/RX model verification; differential signal evaluation and FFE-effect checks on a 32-Gb/s TX chip |
 
 [PCB / HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR / USB interface research](projects/high-speed-interface-research/)
 
@@ -100,7 +104,9 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 | FPGA implementation / bring-up | Resource and timing checks; JTAG launch, clock / RFDC initialization and coefficient updates | [Implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍)<br>[Vitis bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
 | Measurement automation | Condition-specific app builds and execution, UART capture and storage, and Python BER analysis of ILA counters | [Measurement harness diagram](docs/ai-assisted-dsp-workflow.en.md#zcu208-measurement-harness) |
 
-### 28-nm silicon validation with PCB design and HFSS analysis
+<a id="28-nm-silicon-validation-with-pcb-design-and-hfss-analysis"></a>
+
+### 28-nm chip measurements / PCB and HFSS analysis
 
 | Area | Evaluation and verification | Details |
 |---|---|---|

@@ -11,7 +11,7 @@
     </g>
     <text x="106" y="40" font-size="11" font-weight="700" fill="#0969da" letter-spacing="1">DSP TRANSCEIVER</text>
     <text x="106" y="70" font-size="21" font-weight="700" fill="#1f2328">DSP 기반 송수신기 연구</text>
-    <text x="106" y="96" font-size="12" fill="#59636e">DS-SBM · DP-SMM / 모델·RTL·FPGA</text>
+    <text x="106" y="96" font-size="12" fill="#59636e">검출기 RTL 설계 · RFSoC 보드 검증</text>
     <path d="M22 113H428" stroke="#e8ecf0"/>
     <text x="22" y="137" font-size="12" fill="#59636e">학위논문 · Journal 준비 · A-SSCC 2026</text>
     <path d="M413 128l5 5-5 5m-10-5h15" stroke="#0969da" stroke-width="1.7" fill="none"/>

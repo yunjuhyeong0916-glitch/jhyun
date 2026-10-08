@@ -2,24 +2,23 @@
 
 # 윤주형 | High-Speed Interface·DSP Transceiver 연구
 
-안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 <strong>Ultra High-Speed 통신을 위한 <a href="projects/">DSP 기반 Transceiver 연구</a></strong>를 진행하고 있습니다.
+광운대학교 · 석사 학위논문 연구 중 · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch)
+
+안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 <strong>Ultra High-Speed 통신을 위한 <a href="projects/#dsp-transceiver-research">DSP 기반 Transceiver 연구</a></strong>를 진행하고 있습니다.
 
 채널 손실과 ISI를 고려해 신호를 보상하고, 높은 전송 속도에서도 데이터를 안정적으로 주고받을 수 있는 회로와 시스템을 설계합니다.
 
-최근 설계 트렌드에 맞게 [AI](docs/ai-assisted-dsp-workflow.md)를 RTL·테스트벤치 작성과 검증·측정 자동화에 활용하고 있습니다. 설계가 바뀌어도 같은 조건으로 검증을 반복할 수 있도록 자동화 코드를 구성했습니다.
+최근 설계 트렌드에 맞게 [AI](docs/ai-assisted-dsp-workflow.md)를 RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 활용합니다.
 
 <p>
-<a href="#dsp-기반-송수신기-연구"><img src="assets/readme/nav-dsp.svg" alt="DSP·FPGA" width="115" height="30"></a>
-<a href="#lpddrusb-인터페이스-연구"><img src="assets/readme/nav-interface.svg" alt="LPDDR·USB" width="125" height="30"></a>
 <a href="#측정검증"><img src="assets/readme/nav-measurement.svg" alt="측정·검증" width="113" height="30"></a>
 <a href="#연구-성과-논문"><img src="assets/readme/nav-papers.svg" alt="논문" width="76" height="30"></a>
 <a href="docs/ai-assisted-dsp-workflow.md"><img src="assets/readme/nav-ai.svg" alt="AI 활용" width="94" height="30"></a>
-<a href="https://github.com/yunjuhyeong0916-glitch"><img src="assets/readme/nav-github.svg" alt="GitHub" width="94" height="30"></a>
 <a href="README.en.md"><img src="assets/readme/nav-en.svg" alt="English" width="96" height="30"></a>
 </p>
 
 <p>
-<a href="projects/"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — DS-SBM · DP-SMM / 모델·RTL·FPGA" width="410"></a>
+<a href="projects/#dsp-transceiver-research"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
 <a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로 · TX/RX 모델 · 실리콘 측정" width="410"></a>
 </p>
 
@@ -30,6 +29,8 @@
 <a href="projects/dp-smm-journal/"><img src="assets/readme/status-journal.svg" alt="Journal · 진행 중" width="153" height="30"></a>
 <a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc.svg" alt="A-SSCC 2026 · 채택" width="172" height="30"></a>
 </p>
+
+**담당·대표 성과:** PAM4 송수신 DSP·검출기를 RTL로 구현하고 [RFSoC 보드에서 수신 성능을 검증](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)했습니다. 이 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 
 <details>
 <summary><strong>연구 내용 보기 · 학위논문 / Journal 준비 / A-SSCC / AI 활용</strong></summary>
@@ -78,13 +79,16 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 <a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md" title="USB TX 칩 측정·차동 PAM-3·FFE 검증"><img src="assets/readme/nav-usb-tx-measurement.svg" alt="USB TX 칩 측정·차동 PAM-3·FFE 검증" width="142" height="30"></a>
 </p>
 
+- **LPDDR:** [15.6 Gb/s 저전압 TX 회로](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)를 설계하고 Post-Layout 시뮬레이션으로 검증했습니다. [28 nm Combo PHY](projects/high-speed-interface-research/docs/lpddr-combo.md)의 14 Gb/s/pin 제작 칩 측정에 참여했습니다.
+- **USB:** [TX RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md)·[RX CTLE 동작 모델](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md)을 설계·검증하고, [32 Gb/s TX 칩의 차동 PAM-3 측정](projects/high-speed-interface-research/docs/pam3-differential-measurement.md)에 참여했습니다.
+
 <details>
 <summary><strong>설계·검증 내용 보기 · TX / RX / PCB·HFSS / 측정</strong></summary>
 
 | 연구 | 담당 설계·검증 | 대표 성과 |
 |---|---|---|
-| [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX 회로 설계·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델링](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), [PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) | 14 Gb/s/pin Combo PHY, TX Eye 0.41 UI·65.3 mV, RX 마진 0.25 UI·25 mV |
-| [USB&nbsp;PAM&#8209;3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX 모델링·RTL 검증](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE 모델링](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [차동 PAM-3 측정·FFE 검증](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | 32 Gb/s·PRBS15, 손실 17.3 dB @ 10.24 GHz<br>상단 Eye 11.19 ps·21.16 mV<br>하단 Eye 11.67 ps·19.80 mV |
+| [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX 회로 설계·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델링](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), [PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) | 15.6 Gb/s TX 회로 시뮬레이션, 14 Gb/s/pin Combo PHY 실측 참여 |
+| [USB&nbsp;PAM&#8209;3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX 모델링·RTL 검증](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE 모델링](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [차동 PAM-3 측정·FFE 검증](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | 송수신 모델 통합 검증, 32 Gb/s TX 칩의 차동 신호 평가·FFE 효과 확인 |
 
 [PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR·USB 인터페이스 연구](projects/high-speed-interface-research/)
 
@@ -100,7 +104,9 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 | FPGA 구현·구동 | 자원·타이밍 확인, JTAG 실행·클록/RFDC 초기화·계수 적용 | [구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍)<br>[Vitis 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
 | 측정 자동화 | 조건별 앱 빌드·실행, UART 캡처·저장과 ILA 집계값의 Python BER 분석 | [측정 harness 연결 구조](docs/ai-assisted-dsp-workflow.md#zcu208-측정-harness) |
 
-### PCB·HFSS 기반 28 nm 실리콘 칩 검증
+<a id="pcbhfss-기반-28-nm-실리콘-칩-검증"></a>
+
+### 28 nm 칩 측정·PCB/HFSS 분석
 
 | 항목 | 평가·검증 내용 | 상세 자료 |
 |---|---|---|

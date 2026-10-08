@@ -4,12 +4,12 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="연구 목록로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
   <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-축소 상태 MLSD의 후보 선택이 판정 성능에 미치는 영향을 연구하고 있습니다. **[DS-SBM과 DP-SMM의 신호 경로·후보 보존·메트릭 합성·프레임 경계 갱신](docs/architecture.md)**을 비교하고, [동일 입력의 코어 시험](docs/validation.md#동일-입력에서의-후보-보존-효과)으로 행렬 경로 수의 영향을 확인했습니다.
+수신 검출기가 남기는 경로 후보 수와 선택 방식이 판정 성능에 미치는 영향을 연구하고 있습니다. **[DS-SBM과 DP-SMM의 구조](docs/architecture.md)**를 비교하고, DP-SMM 코어의 후보 수를 바꾼 [동일 입력 시험](docs/validation.md#동일-입력에서의-후보-보존-효과)으로 후보 보존 효과를 확인했습니다.
 
 [구조 비교](docs/architecture.md) · [모델·RTL 비교 결과](docs/validation.md) · [A-SSCC DS-SBM](../zcu208-pam4-dsp-portfolio/) · [Journal DP-SMM](../dp-smm-journal/)
 
@@ -43,7 +43,7 @@
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="연구 목록로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
   <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>

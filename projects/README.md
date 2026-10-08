@@ -1,6 +1,8 @@
 <a id="page-top"></a>
 
-# 프로젝트
+<a id="프로젝트"></a>
+
+# 연구 프로젝트
 
 <!-- page-navigation:top -->
 <p>
@@ -10,12 +12,25 @@
 
 [논문](../docs/publications.md)
 
+<a id="dsp-transceiver-research"></a>
+
+## DSP 기반 송수신기 연구
+
 | 프로젝트 | 설계·검증 | 결과 |
 |---|---|---|
-| [학위논문 · DS-SBM·DP-SMM 비교 (진행 중)](pam4-mlsd-thesis/) | 신호 경로·후보 보존·경계 갱신 비교, 동일 입력 R=1/R=2 코어 평가 | 합성 입력의 오류 수 비교, 연속·간격 입력과 reset 후 RTL 정합성 |
-| [Journal 준비 · DP-SMM (진행 중)](dp-smm-journal/) | 두 경로 후보를 보존하는 구간 메트릭 행렬·실제 이력 재평가·경로 복원 | RTL 참조 정합성, FPGA 구현 자원·처리 스케줄, 보드 실측 예정 |
-| [A-SSCC 2026 · DS-SBM PAM4 DSP](zcu208-pam4-dsp-portfolio/) | DS-SBM RS-MLSD·병렬 FIR, ZCU208 RFSoC 데이터 경로·PS 제어 통합 | ISI 보드 측정, FPGA 자원·타이밍, ADC 캡처·분석 |
-| [LPDDR·USB 고속 인터페이스 연구](high-speed-interface-research/) | 저전압 TX 회로, TX·RX 동작 모델, [PCB·HFSS](high-speed-interface-research/docs/pcb-hfss-verification.md)·계측 자동화 | 모델·회로 시뮬레이션, 제작 칩 Eye·Shmoo 측정 |
+| [학위논문 · DS-SBM·DP-SMM 비교 (진행 중)](pam4-mlsd-thesis/) | 수신 검출기의 후보 보존 방식과 판정 성능 비교 | 동일 입력의 코어 비교, 모델·RTL의 판정 결과와 출력 타이밍 확인 |
+| [Journal 준비 · DP-SMM (진행 중)](dp-smm-journal/) | 두 경로 후보를 남기고 실제 심볼 이력으로 다시 평가하는 검출기 설계 | 참조 모델·RTL 일치, FPGA 배치배선, 보드 측정 준비 |
+| [A-SSCC 2026 · DS-SBM PAM4 DSP](zcu208-pam4-dsp-portfolio/) | PAM4 송수신 DSP·검출기 RTL 구현과 RFSoC 보드 통합 | ISI 보드 수신 검증, FPGA 자원·타이밍 확인, A-SSCC 2026 채택 |
+
+## LPDDR·USB 인터페이스 연구
+
+| 프로젝트 | 담당 설계·검증 | 결과 |
+|---|---|---|
+| [LPDDR 15.6 Gb/s TX](high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) | 저전압 TX 회로 설계·Post-Layout 검증 | 15.6 Gb/s·0.76 pJ/bit 회로 시뮬레이션 |
+| [LPDDR Combo PHY](high-speed-interface-research/docs/lpddr-combo.md) | TX 회로·Verilog 동작 모델, PCB 설계·HFSS 분석과 제작 칩 측정 참여 | 28-nm 칩의 14 Gb/s/pin TX Eye·RX Shmoo 평가 |
+| [USB TX·RX](high-speed-interface-research/docs/usb4-pam3.md) | TX 논리 RTL·RX CTLE 모델과 송수신 통합 검증, 제작 TX 측정 참여 | 40 Gb/s/lane TX 모델, 25.6 GBaud/lane RX 모델, 32 Gb/s TX 칩 평가 |
+
+[인터페이스 연구 개요](high-speed-interface-research/) · [PCB·HFSS 분석](high-speed-interface-research/docs/pcb-hfss-verification.md) · [측정 장비·자동화](high-speed-interface-research/docs/measurement-equipment.md)
 
 <!-- page-navigation:bottom -->
 <p>

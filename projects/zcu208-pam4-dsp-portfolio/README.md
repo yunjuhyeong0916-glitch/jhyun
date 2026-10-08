@@ -4,14 +4,16 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="연구 목록로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
   <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
 [설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [Vitis·FPGA 구동](docs/vitis-bringup.md) · [측정·구현 결과](docs/validation.md)
 
-ZCU208 RFSoC의 4-GS/s 설정 ADC·DAC에 **[32-lane 병렬 DSP](docs/architecture.md)**를 연결했습니다. TX FIR, RX 21-tap FIR와 [DS-SBM RS-MLSD](docs/design-decisions.md)를 구현하고, [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)·PRBS 검사·ILA 디버깅 경로를 통합했습니다.
+PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위해 **송수신 DSP·검출기 RTL과 RFSoC 제어·오류 검사 경로**를 구현했습니다. ISI 보드를 통한 송수신 평가 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
+
+ZCU208 RFSoC의 4-GS/s 설정 ADC·DAC에 **[32-lane 병렬 DSP](docs/architecture.md)**를 연결하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 통합했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
 
 DS-SBM 검출기 구조와 RFSoC 시스템의 [BER·자원·타이밍 결과](docs/validation.md)를 정리했습니다. 후속 DP-SMM 설계는 [Journal 준비 프로젝트](../dp-smm-journal/), 두 구조의 비교는 [학위논문](../pam4-mlsd-thesis/)에서 다룹니다.
 
@@ -73,7 +75,7 @@ Vivado에서 내보낸 XSA를 Vitis의 Cortex-A53 Standalone 앱과 연결했습
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="연구 목록로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
   <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
