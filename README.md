@@ -2,7 +2,7 @@
 
 안녕하세요. 윤주형입니다. **JEDEC LPDDR 및 USB4 Gen4 규격 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 DSP 기반 Transceiver 연구**를 진행하고 있습니다.
 
-설계한 회로와 시스템이 실제 하드웨어에서도 의도대로 동작하는지 확인하는 데 중점을 둡니다. 인터페이스 회로는 시뮬레이션과 제작 칩 측정으로, DSP 기반 Transceiver는 모델·RTL 검증과 FPGA 보드 평가로 동작과 성능을 확인해 왔습니다.
+채널 손실과 ISI를 고려해 신호를 보상하고, 높은 전송 속도에서도 데이터를 안정적으로 주고받을 수 있는 회로와 시스템을 설계합니다.
 
 [DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB 인터페이스](#lpddrusb-인터페이스-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch) · [English](README.en.md)
 

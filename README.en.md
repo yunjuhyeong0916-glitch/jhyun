@@ -2,7 +2,7 @@
 
 I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC LPDDR and USB4 Gen4 specifications** and **DSP-based transceivers for ultra-high-speed communication**.
 
-I focus on verifying that circuits and systems behave as intended in hardware. I evaluate interface circuits through simulation and fabricated-chip measurements, and DSP-based transceivers through model-to-RTL verification and FPGA board evaluation.
+I design circuits and systems that compensate for channel loss and ISI to support reliable data transmission at high speeds.
 
 [DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB interfaces](#lpddr--usb-interface-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [GitHub profile](https://github.com/yunjuhyeong0916-glitch) · [한국어](README.md)
 
