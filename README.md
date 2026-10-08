@@ -1,8 +1,8 @@
 # 윤주형 | HW 설계·검증
 
-안녕하세요. 고속 인터페이스의 회로와 DSP를 설계·검증하는 윤주형입니다. 현재는 PAM4 수신기의 DS-SBM과 DP-SMM을 비교하며, 경로 후보를 보존하는 방식이 검출 성능에 미치는 영향을 연구하고 있습니다.
+안녕하세요. 윤주형입니다. **JEDEC LPDDR 및 USB4 Gen4 규격 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 DSP 기반 Transceiver 연구**를 진행하고 있습니다.
 
-설계한 구조가 하드웨어에서도 의도대로 동작하는지 확인하는 데 중점을 둡니다. 모델과 RTL의 판정 결과를 대조하고, FPGA 구현과 보드 측정으로 검증을 이어 왔습니다.
+설계한 회로와 시스템이 실제 하드웨어에서도 의도대로 동작하는지 확인하는 데 중점을 둡니다. 인터페이스 회로는 시뮬레이션과 제작 칩 측정으로, DSP 기반 Transceiver는 모델·RTL 검증과 FPGA 보드 평가로 동작과 성능을 확인해 왔습니다.
 
 [DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB 인터페이스](#lpddrusb-인터페이스-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch) · [English](README.en.md)
 
