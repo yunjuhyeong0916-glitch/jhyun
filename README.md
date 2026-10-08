@@ -34,7 +34,7 @@ ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를
 
 ### AI 활용 | MATLAB MCP 기반 RTL·측정 자동화
 
-MATLAB MCP와 연동한 AI 에이전트를 RTL 코딩과 측정 자동화 harness 구성에 활용했습니다.
+RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER 분석을 연결하는 자동화 코드 구성에 AI를 활용했습니다.
 
 [AI 활용 흐름·상세 설명](docs/ai-assisted-dsp-workflow.md)
 

@@ -34,7 +34,7 @@ Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with t
 
 ### AI assistance | RTL and measurement automation with MATLAB MCP
 
-I used an AI agent connected through MATLAB MCP for RTL coding and measurement-automation harness development.
+I used AI to help develop RTL and testbenches, plus automation code connecting ZCU208 coefficient settings, data collection and BER analysis.
 
 [View the illustrated workflow](docs/ai-assisted-dsp-workflow.en.md)
 
