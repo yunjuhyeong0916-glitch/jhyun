@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="710" viewBox="0 0 1200 710" role="img" aria-labelledby="title desc">
+<title id="title">AI-assisted design, verification and measurement</title><desc id="desc">MATLAB modeling, AI-assisted RTL coding, model–RTL and FPGA verification, AI-assisted measurement-automation harness development, and BER or waveform analysis. Results guide code and condition revisions. MATLAB MCP connects Codex AI to MATLAB.</desc>
+<!-- MATLAB and Python icons: Devicon, MIT; see vendor/devicon/NOTICE and LICENSE. Other icons are original vector drawings. -->
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#7b899a"/></marker><marker id="blue-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3974c6"/></marker></defs>
+<style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR","Segoe UI",sans-serif}</style>
+<rect width="1200" height="710" fill="#fff"/>
+<text x="32" y="48" font-size="29" font-weight="700" text-anchor="start" fill="#182c43">AI-assisted design, verification and measurement</text>
+<text x="32" y="82" font-size="19" font-weight="400" text-anchor="start" fill="#526479">An iterative workflow connecting MATLAB models, RTL, FPGA and measurement results</text>
+<rect x="32" y="107" width="1136" height="113" rx="17" fill="#f6f8fb" stroke="#dfe6ed" stroke-width="1.6"/>
+<g transform="translate(58 128)" fill="none" stroke="#526479" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="36" cy="18" r="12"/><path d="M13 62v-4c0-13 10-23 23-23s23 10 23 23v4"/>
+</g>
+<text x="151" y="151" font-size="23" font-weight="700" text-anchor="start" fill="#182c43">Researcher</text>
+<text x="151" y="187" font-size="16" font-weight="400" text-anchor="start" fill="#526479">Architecture · Test conditions · Evaluation criteria</text>
+<path d="M548 128V199" fill="none" stroke="#d7dfe8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g transform="translate(572 128)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="9" width="66" height="53" rx="11" fill="#1d2939" stroke="#1d2939"/><path d="M17 25l10 9-10 9m18 0h12" stroke="#fff"/><path d="M59 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#3974c6" stroke="#3974c6"/>
+</g>
+<text x="660" y="151" font-size="23" font-weight="700" text-anchor="start" fill="#182c43">Codex AI + MATLAB MCP</text>
+<text x="660" y="187" font-size="16" font-weight="400" text-anchor="start" fill="#526479">MATLAB connection · RTL / harness coding support</text>
+<path d="M914 222V250H368V283" fill="none" stroke="#3974c6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#blue-arrow)"/>
+<path d="M832 250V283" fill="none" stroke="#3974c6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#blue-arrow)"/>
+<g data-card="1" data-left="32" data-right="240">
+<rect x="32" y="286" width="208" height="282" rx="18" fill="#fff8ef" stroke="#e4c6a5" stroke-width="1.6"/>
+<text x="50" y="314" font-size="17" font-weight="700" text-anchor="start" fill="#ab6b2d">01</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" x="96" y="331" width="80" height="80"><defs><linearGradient id="matlab-original-a" gradientUnits="userSpaceOnUse" x1="16.803" y1="16.631" x2="15.013" y2="22.411" gradientTransform="matrix(4 0 0 -4 0 128)"><stop offset="0" stop-color="#512" /><stop offset=".23" stop-color="#523" /><stop offset=".36" stop-color="#534" /><stop offset=".51" stop-color="#645" /><stop offset=".66" stop-color="#568" /><stop offset=".84" stop-color="#29d" /></linearGradient><linearGradient id="matlab-original-b" gradientUnits="userSpaceOnUse" x1="29.71" y1="18.983" x2="11.71" y2="14.563" gradientTransform="scale(4)"><stop offset=".081" stop-color="#c33" /><stop offset=".189" stop-color="#de5239" /><stop offset=".313" stop-color="#f06e3e" /><stop offset=".421" stop-color="#fa8042" /><stop offset=".5" stop-color="#fe8643" /><stop offset=".58" stop-color="#fa7f42" /><stop offset=".696" stop-color="#ef6c3e" /><stop offset=".833" stop-color="#dc4c37" /><stop offset=".916" stop-color="#cf3633" /></linearGradient></defs><path d="M8 70.2l31.879-12.88a82.62 82.62 0 0110.883-11.8c2.636-1.399 7.597-.641 16.68-11.918 8.796-11 11.597-20.403 15.718-20.403 6.52 0 11.32 14.082 18.602 35.403A461.75 461.75 0 00120 96.48c-7.602-7.082-14.078-14.718-21.48-14.52-6.88.161-14.52 8.321-22.88 18.802C69 109.16 60.2 114.922 56.763 114.8c0 0-8.883-25.121-16.32-29.2a10.563 10.563 0 00-9.563.797L8 70.16zm0 0" fill="#49d" /><path d="M79.2 16.078c-2.68 3.602-5.92 10.203-11.76 17.524-9.082 11.277-14 10.52-16.68 11.918a78.673 78.673 0 00-10.882 11.8l13.2 9.64C64.28 51.68 70.28 35.122 74.96 24.399a54.649 54.649 0 014.238-8.32zm0 0" fill="url(#matlab-original-a)" /><path d="M83.2 13.2c-8.72 0-14.68 45.921-46.88 71.562 9.04-1.48 16.88 20.957 20.48 30.039 16-2.723 28.802-33.32 41.72-32.84 7.402.277 13.878 7.437 21.48 14.52C102.64 60 94.52 13.198 83.2 13.198zm0 0" fill="url(#matlab-original-b)" /></svg>
+<text x="136" y="448" font-size="23" font-weight="700" text-anchor="middle" fill="#182c43">Modeling</text>
+<text x="136" y="480" font-size="15" font-weight="400" text-anchor="middle" fill="#526479">MATLAB / Simulink</text>
+<text x="136" y="517" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">DSP behavior</text>
+<text x="136" y="544" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">Fixed-point model</text>
+</g>
+<path d="M242 421H260" fill="none" stroke="#7b899a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-card="2" data-left="264" data-right="472">
+<rect x="264" y="286" width="208" height="282" rx="18" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
+<text x="282" y="314" font-size="17" font-weight="700" text-anchor="start" fill="#3974c6">02</text>
+<g transform="translate(331 333)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="7" width="68" height="53" rx="9"/><path d="M25 22l-10 11 10 11m24-22 10 11-10 11m-7-26-10 30M20 69h34m-17-9v9"/>
+</g>
+<text x="368" y="448" font-size="23" font-weight="700" text-anchor="middle" fill="#182c43">RTL coding</text>
+<text x="368" y="480" font-size="15" font-weight="400" text-anchor="middle" fill="#526479">Verilog / SystemVerilog</text>
+<text x="368" y="517" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">Implement behavior</text>
+<text x="368" y="544" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">Write and revise code</text>
+</g>
+<path d="M474 421H492" fill="none" stroke="#7b899a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-card="3" data-left="496" data-right="704">
+<rect x="496" y="286" width="208" height="282" rx="18" fill="#f0f8f3" stroke="#a1c5b0" stroke-width="1.6"/>
+<text x="514" y="314" font-size="17" font-weight="700" text-anchor="start" fill="#327653">03</text>
+<g transform="translate(563 333)" fill="none" stroke="#327653" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="16" y="16" width="42" height="42" rx="7"/><rect x="26" y="26" width="22" height="22" rx="3"/>
+<path d="M25 7v9m0 42v9M7 25h9m42 0h9"/>
+<path d="M37 7v9m0 42v9M7 37h9m42 0h9"/>
+<path d="M49 7v9m0 42v9M7 49h9m42 0h9"/>
+</g>
+<text x="600" y="448" font-size="23" font-weight="700" text-anchor="middle" fill="#182c43">Verification</text>
+<text x="600" y="480" font-size="15" font-weight="400" text-anchor="middle" fill="#526479">Vivado / Vitis · ZCU208</text>
+<text x="600" y="517" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">Model–RTL checks</text>
+<text x="600" y="544" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">FPGA operation</text>
+</g>
+<path d="M706 421H724" fill="none" stroke="#7b899a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-card="4" data-left="728" data-right="936">
+<rect x="728" y="286" width="208" height="282" rx="18" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
+<text x="746" y="314" font-size="17" font-weight="700" text-anchor="start" fill="#3974c6">04</text>
+<g transform="translate(795 333)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="2" y="7" width="70" height="53" rx="8"/><rect x="10" y="15" width="43" height="35" rx="3" stroke-width="2"/><path d="M13 33h8l5-11 7 22 5-11h11M18 69h39m-20-9v9"/><circle cx="62" cy="22" r="3"/><circle cx="62" cy="36" r="3"/>
+</g>
+<text x="832" y="448" font-size="23" font-weight="700" text-anchor="middle" fill="#182c43">Measurement</text>
+<text x="832" y="480" font-size="15" font-weight="400" text-anchor="middle" fill="#526479">Automation harness</text>
+<text x="832" y="517" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">Set conditions · Run</text>
+<text x="832" y="544" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">Collect results</text>
+</g>
+<path d="M938 421H956" fill="none" stroke="#7b899a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<g data-card="5" data-left="960" data-right="1168">
+<rect x="960" y="286" width="208" height="282" rx="18" fill="#f7f9fc" stroke="#d6dee8" stroke-width="1.6"/>
+<text x="978" y="314" font-size="17" font-weight="700" text-anchor="start" fill="#526479">05</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" x="1028" y="332" width="72" height="72"><linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4" /><stop offset="1" stop-color="#306998" /></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B" /><stop offset="1" stop-color="#FFE873" /></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)" /><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)" /><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498" /><stop offset="1" stop-color="#7F7F7F" stop-opacity="0" /></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z" /></svg>
+<text x="1064" y="448" font-size="23" font-weight="700" text-anchor="middle" fill="#182c43">Analysis</text>
+<text x="1064" y="480" font-size="15" font-weight="400" text-anchor="middle" fill="#526479">Python / MATLAB</text>
+<text x="1064" y="517" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">Compare BER / traces</text>
+<text x="1064" y="544" font-size="16" font-weight="400" text-anchor="middle" fill="#182c43">Evaluate conditions</text>
+</g>
+<path d="M1064 570V616H136V571" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="354" y="596" width="492" height="40" rx="14" fill="#fff" stroke="none" stroke-width="1.6"/>
+<text x="600" y="624" font-size="21" font-weight="500" text-anchor="middle" fill="#526479">Refine conditions / code and reverify</text>
+<circle cx="48" cy="673" r="6" fill="#3974c6"/>
+<text x="64" y="679" font-size="18" font-weight="400" text-anchor="start" fill="#526479">AI coding support</text>
+<circle cx="305" cy="673" r="6" fill="#327653"/>
+<text x="321" y="679" font-size="18" font-weight="400" text-anchor="start" fill="#526479">Simulation, FPGA and measurement checks</text>
+</svg>

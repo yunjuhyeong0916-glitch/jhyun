@@ -63,6 +63,10 @@ A-SSCC 2026 두 편: 채택·발표 예정(2026-10-07 기준). [전체 논문 �
 
 MATLAB MCP와 연동한 AI 에이전트를 **RTL 코딩과 측정 자동화 harness 구성**에 활용했습니다. 모델의 동작을 RTL로 옮기고 반복 검증·측정 절차를 구성하는 과정에서 코드 작성과 수정을 보조받았습니다.
 
+![MATLAB 모델링부터 RTL 코딩, FPGA 검증, 측정 자동화와 결과 분석으로 이어지는 AI 활용 흐름. 파란색은 AI가 코드 작성을 보조한 단계입니다.](assets/ai_workflow_ko.svg)
+
+[RTL·FPGA 검증](projects/dp-smm-journal/docs/validation.md) · [Vitis·FPGA 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [측정 장비·자동화](projects/high-speed-interface-research/docs/measurement-equipment.md)
+
 포트폴리오의 문장 정리·한영 번역·자료 구성·설명용 도식 제작에도 AI를 활용했습니다. 연구 결과는 각 프로젝트에 제시한 모델·RTL 비교, FPGA 구현, 시뮬레이션·측정 기록을 근거로 정리했습니다.
 
 ---
