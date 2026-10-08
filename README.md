@@ -1,5 +1,9 @@
 <a id="page-top"></a>
 
+<p align="right">
+<a href="README.en.md" title="View this portfolio in English"><img src="assets/readme/nav-en.svg" alt="English" width="96" height="30"></a>
+</p>
+
 # 윤주형 | High-Speed Interface·DSP Transceiver 연구
 
 광운대학교 · 석사 학위논문 연구 중 · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch)
@@ -14,7 +18,6 @@
 <a href="#측정검증"><img src="assets/readme/nav-measurement.svg" alt="측정·검증" width="113" height="30"></a>
 <a href="#연구-성과-논문"><img src="assets/readme/nav-papers.svg" alt="논문" width="76" height="30"></a>
 <a href="docs/ai-assisted-dsp-workflow.md"><img src="assets/readme/nav-ai.svg" alt="AI 활용" width="94" height="30"></a>
-<a href="README.en.md"><img src="assets/readme/nav-en.svg" alt="English" width="96" height="30"></a>
 </p>
 
 <p>

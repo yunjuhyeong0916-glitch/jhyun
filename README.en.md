@@ -1,5 +1,9 @@
 <a id="page-top"></a>
 
+<p align="right">
+<a href="README.md" title="한국어 포트폴리오 보기"><img src="assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a>
+</p>
+
 # Juhyeong Yun | High-Speed Interface & DSP Transceiver Research
 
 Kwangwoon University · Master's thesis research in progress · [GitHub profile](https://github.com/yunjuhyeong0916-glitch)
@@ -14,7 +18,6 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 <a href="#measurement--verification"><img src="assets/readme/nav-measurement-en.svg" alt="Verification" width="119" height="30"></a>
 <a href="#research-publications"><img src="assets/readme/nav-papers-en.svg" alt="Papers" width="90" height="30"></a>
 <a href="docs/ai-assisted-dsp-workflow.en.md"><img src="assets/readme/nav-ai-en.svg" alt="AI workflow" width="118" height="30"></a>
-<a href="README.md"><img src="assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a>
 </p>
 
 <p>
