@@ -17,8 +17,8 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 </p>
 
 <p>
-<a href="projects/"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — DS-SBM · DP-SMM / Model · RTL · FPGA" width="450"></a>
-<a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits · TX/RX models · Silicon measurements" width="450"></a>
+<a href="projects/"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — DS-SBM · DP-SMM / Model · RTL · FPGA" width="410"></a>
+<a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits · TX/RX models · Silicon measurements" width="410"></a>
 </p>
 
 ## DSP transceiver research

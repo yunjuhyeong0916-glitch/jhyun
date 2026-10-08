@@ -17,8 +17,8 @@
 </p>
 
 <p>
-<a href="projects/"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — DS-SBM · DP-SMM / 모델·RTL·FPGA" width="450"></a>
-<a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로 · TX/RX 모델 · 실리콘 측정" width="450"></a>
+<a href="projects/"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — DS-SBM · DP-SMM / 모델·RTL·FPGA" width="410"></a>
+<a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로 · TX/RX 모델 · 실리콘 측정" width="410"></a>
 </p>
 
 ## DSP 기반 송수신기 연구
