@@ -61,12 +61,20 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 
 ## 측정·검증
 
+### FPGA 측정·검증
+
 | 항목 | 평가·검증 내용 | 상세 자료 |
 |---|---|---|
-| 학위논문<br>(진행 중) | DS-SBM·DP-SMM 구조 비교, 동일 입력에서 후보 보존 효과와 RTL 동작 평가 | [모델·RTL 비교](projects/pam4-mlsd-thesis/docs/validation.md) |
-| Journal 준비<br>(진행 중) | DP-SMM 참조 모델·RTL 대조와 FPGA 구현 확인, 보드 측정 준비 | [RTL·FPGA 구현](projects/dp-smm-journal/docs/validation.md) |
-| RFSoC 시스템 | ISI 보드 통과 후 ADC 캡처, BER·FPGA 자원·타이밍 확인 | [A-SSCC 측정·구현](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) |
-| 파형·동작 마진 | LPDDR TX Eye·RX Shmoo, 차동 PAM-3의 FFE 적용 전후 상·하단 Eye 비교 | [Eye·Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)<br>[PAM-3 측정·FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) |
+| RFSoC 실측 | ZCU208 DAC → ISI 보드 → ADC 캡처, PL PRBS 검사기의 집계값으로 BER 평가 | [ISI 보드 측정·BER](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) |
+| FPGA 구현·구동 | 자원·타이밍 확인, JTAG 실행·클록/RFDC 초기화·계수 적용 | [구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍)<br>[Vitis 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
+| 측정 자동화 | 조건별 앱 빌드·실행, UART 캡처·저장과 ILA 집계값의 Python BER 분석 | [측정 harness 연결 구조](docs/ai-assisted-dsp-workflow.md#zcu208-측정-harness) |
+
+### PCB·HFSS 기반 28 nm 실리콘 칩 검증
+
+| 항목 | 평가·검증 내용 | 상세 자료 |
+|---|---|---|
+| PCB·HFSS | LPDDR 측정용 PCB 설계·전달 특성 분석, USB TX 보드의 접지·전원 경로 검토 | [PCB 설계·HFSS 분석](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) |
+| 28 nm 칩 측정 | LPDDR TX Eye·RX Shmoo, USB 차동 PAM-3의 FFE 적용 전후 상·하단 Eye 비교 | [Eye·Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)<br>[PAM-3 측정·FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) |
 | 계측 자동화 | 전원·BERT·I2C 연동, 전압·타이밍 스윕과 오류 조기 종료·경계 탐색·CSV 기록 | [장비·제어 방법](projects/high-speed-interface-research/docs/measurement-equipment.md) |
 
 ## 연구 성과 논문

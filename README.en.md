@@ -61,12 +61,20 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 
 ## Measurement / verification
 
+### FPGA measurement and validation
+
 | Area | Evaluation and verification | Details |
 |---|---|---|
-| Master's thesis<br>(in progress) | DS-SBM / DP-SMM architecture comparison, candidate retention and RTL behavior under identical inputs | [Model / RTL comparison](projects/pam4-mlsd-thesis/docs/validation.md) |
-| Journal preparation<br>(in progress) | DP-SMM reference-model / RTL checks and FPGA implementation; board measurements in preparation | [RTL / FPGA implementation](projects/dp-smm-journal/docs/validation.md) |
-| RFSoC system | ADC capture after the ISI board, BER, FPGA resources and timing | [A-SSCC measurements / implementation](projects/zcu208-pam4-dsp-portfolio/docs/validation.md) |
-| Waveforms / operating margins | LPDDR TX eye / RX Shmoo and differential PAM-3 upper / lower eyes before and after FFE | [Eye / Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)<br>[PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) |
+| RFSoC measurements | ZCU208 DAC → ISI board → ADC capture; BER evaluation using PL PRBS checker counts | [ISI-board measurements / BER](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) |
+| FPGA implementation / bring-up | Resource and timing checks; JTAG launch, clock / RFDC initialization and coefficient updates | [Implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍)<br>[Vitis bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
+| Measurement automation | Condition-specific app builds and execution, UART capture and storage, and Python BER analysis of ILA counters | [Measurement harness diagram](docs/ai-assisted-dsp-workflow.en.md#zcu208-measurement-harness) |
+
+### 28-nm silicon validation with PCB design and HFSS analysis
+
+| Area | Evaluation and verification | Details |
+|---|---|---|
+| PCB / HFSS | LPDDR measurement-PCB design and transmission analysis; USB TX board ground and power-path review | [PCB design / HFSS analysis](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) |
+| 28-nm silicon measurements | LPDDR TX eye / RX Shmoo and USB differential PAM-3 upper / lower eyes before and after FFE | [Eye / Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)<br>[PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) |
 | Measurement automation | Power-supply / BERT / I2C control, voltage / timing sweeps, early error termination, boundary search and CSV logging | [Equipment / control](projects/high-speed-interface-research/docs/measurement-equipment.md) |
 
 ## Research publications
