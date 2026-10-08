@@ -33,7 +33,7 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 <a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc-en.svg" alt="A-SSCC 2026 · Accepted" width="194" height="30"></a>
 </p>
 
-**My role and key result:** Implemented PAM4 transceiver DSP and detector RTL and [validated receiver performance on an RFSoC board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정). The resulting [A-SSCC 2026 paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) was accepted.
+**My role and key result:** I implemented PAM4 transceiver DSP and detector RTL and [validated receiver performance on an RFSoC board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정). The resulting [A-SSCC 2026 paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) was accepted.
 
 <details>
 <summary><strong>View research · Thesis / Journal preparation / A-SSCC / AI assistance</strong></summary>
@@ -42,13 +42,13 @@ The ongoing [master's thesis](projects/pam4-mlsd-thesis/) compares DS-SBM and DP
 
 ### Master's thesis | DS-SBM and DP-SMM comparison (in progress)
 
-Compared the [signal paths, candidate retention and frame-boundary updates](projects/pam4-mlsd-thesis/docs/architecture.md) of the two architectures. Identical-input R=1/R=2 tests within DP-SMM evaluate [how matrix-path retention affects error counts](projects/pam4-mlsd-thesis/docs/validation.md#동일-입력에서의-후보-보존-효과).
+I compared the [signal paths, candidate retention and frame-boundary updates](projects/pam4-mlsd-thesis/docs/architecture.md) of the two architectures. I used identical inputs for R=1/R=2 tests within DP-SMM to evaluate [how matrix-path retention affects error counts](projects/pam4-mlsd-thesis/docs/validation.md#동일-입력에서의-후보-보존-효과).
 
 [Thesis project](projects/pam4-mlsd-thesis/) · [Architecture comparison](projects/pam4-mlsd-thesis/docs/architecture.md) · [Model and RTL results](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ### Journal preparation | DP-SMM design and verification (in progress)
 
-Extended the DS-SBM segment-matrix architecture to retain [two path proposals per entry](projects/dp-smm-journal/docs/architecture.md) through matrix composition and rescore them using actual symbol histories. Two accumulated-metric survivors per state carry alternative paths into the next frame. Verified the [RTL against a reference model](projects/dp-smm-journal/docs/validation.md) and completed FPGA place and route; board measurements are planned with a **21-tap RX FFE + DP-SMM** receiver.
+I extended the DS-SBM segment-matrix architecture to retain [two path proposals per entry](projects/dp-smm-journal/docs/architecture.md) through matrix composition and rescore them using actual symbol histories. Two accumulated-metric survivors per state carry alternative paths into the next frame. I verified the [RTL against a reference model](projects/dp-smm-journal/docs/validation.md) and completed FPGA place and route. Board measurements are planned with a **21-tap RX FFE + DP-SMM** receiver.
 
 **A patent application for DP-SMM is in preparation.**
 
@@ -56,7 +56,7 @@ Extended the DS-SBM segment-matrix architecture to retain [two path proposals pe
 
 ### A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP
 
-Integrated **[32-lane PAM4 DSP](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with the ZCU208 RFSoC. The [Vivado / Vitis flow](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an [ISI board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) to ADC capture.
+I integrated **[32-lane PAM4 DSP](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with the ZCU208 RFSoC. The [Vivado / Vitis flow](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an [ISI board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) to ADC capture.
 
 [A-SSCC project](projects/zcu208-pam4-dsp-portfolio/) · [Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis / FPGA bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
@@ -123,7 +123,7 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 |---|---|
 | DSP / MLSD | [A-SSCC 2026 · RFSoC-verified PAM4 transceiver](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) |
 | LPDDR | [ICEIC 2025 · NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746) · [A-SSCC 2026 · Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) |
-| USB PAM-3 | [SMACD 2025 · TX model](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025 · RX model](https://doi.org/10.1109/SMACD65553.2025.11092233) · [IEEE TVLSI 2026 · fabricated TX](https://doi.org/10.1109/TVLSI.2026.3701343) |
+| USB PAM-3 | [SMACD 2025 · TX model](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025 · RX model](https://doi.org/10.1109/SMACD65553.2025.11092233) · [IEEE TVLSI 2026 · TX chip](https://doi.org/10.1109/TVLSI.2026.3701343) |
 
 Both A-SSCC 2026 papers are accepted, with presentations forthcoming as of 2026-10-07. [Full publication list](docs/publications.md)
 

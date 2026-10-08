@@ -10,14 +10,14 @@
 
 [측정·자동화](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문·담당 역할](docs/evidence.md)
 
-[LPDDR 저전압 TX](docs/lpddr-tx-circuit-verification.md)를 설계하고 Schematic·Post-Layout 검증을 수행했습니다. USB PAM-3에서는 [TX 논리 RTL·동작 모델](docs/usb-tx-modeling.md)과 [RX CTLE 모델](docs/usb-rx-ctle-modeling.md)을 구현하고, 송수신 통합·제작 TX의 [차동 신호 평가](docs/pam3-differential-measurement.md)에 참여했습니다.
+[LPDDR 저전압 TX](docs/lpddr-tx-circuit-verification.md)를 설계하고 Schematic·Post-Layout 검증을 수행했습니다. USB PAM-3에서는 [TX 논리 RTL·동작 모델](docs/usb-tx-modeling.md)과 [RX CTLE 모델](docs/usb-rx-ctle-modeling.md)을 구현하고 송수신 통합 검증을 수행했습니다. TX 칩의 [차동 PAM-3 측정](docs/pam3-differential-measurement.md)에도 참여해 채널과 FFE 설정에 따른 Eye 변화를 평가했습니다.
 
 ## 설계·결과
 
 | 프로젝트 | 담당 설계·검증 | 결과 |
 |---|---|---|
 | [LPDDR](docs/lpddr.md) | [TX 회로](docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델](docs/lpddr-tx-modeling.md), [PCB·HFSS](docs/pcb-hfss-verification.md), 제작 칩 측정 참여 | TX 시뮬레이션 15.6 Gb/s·0.76 pJ/bit, [Combo PHY 구조·실측 14 Gb/s/pin](docs/lpddr-combo.md) |
-| [USB PAM-3](docs/usb4-pam3.md) | [TX 모델·RTL·Serializer](docs/usb-tx-modeling.md), [RX CTLE 모델](docs/usb-rx-ctle-modeling.md), [PCB·채널 분석](docs/pcb-hfss-verification.md), [차동 PAM-3 측정](docs/pam3-differential-measurement.md) | TX 모델 40 Gb/s/lane, RX 모델 25.6 GBaud/lane, 제작 TX 실측 32 Gb/s |
+| [USB PAM-3](docs/usb4-pam3.md) | [TX 모델·RTL·Serializer](docs/usb-tx-modeling.md), [RX CTLE 모델](docs/usb-rx-ctle-modeling.md), [PCB·채널 분석](docs/pcb-hfss-verification.md), [차동 PAM-3 측정](docs/pam3-differential-measurement.md) | TX 모델 40 Gb/s/lane, RX 모델 25.6 GBaud/lane, TX 칩 실측 32 Gb/s |
 
 ## PCB·계측
 

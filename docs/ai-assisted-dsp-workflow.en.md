@@ -19,7 +19,7 @@ To repeat checks under the same conditions after changing the PAM4 receiver mode
 
 I used `sparameters` in [RF Toolbox](https://www.mathworks.com/help/rf/ref/sparameters.html) to read channel `.s4p` files and generate PRBS PAM4 input CSV with the SDD21 response applied. MATLAB/Simulink defined receiver behavior, interfaces and fixed-point conditions. **HDL Coder** generated Verilog for FFE/DFE prototypes. I configured execution code using `makehdl` for Simulink and `coder.config('hdl')` for MATLAB-to-HDL conversion. [HDL Coder model-to-HDL conversion](https://www.mathworks.com/help/hdlcoder/)
 
-The RTL verification harness connects a **PowerShell runner → Python reference-vector generation → Vivado XSim**. Channel CSV becomes input and expected-value HEX files. The testbench applies identical inputs and coefficients, comparing **FFE outputs, detector decisions and output timing**. The runner checks tool exit status and the PASS log, allowing the same verification procedure to be repeated after code changes.
+I linked **Python reference-vector generation and Vivado XSim** through a **PowerShell runner**. Channel CSV becomes input and expected-value HEX files. The testbench applies identical inputs and coefficients, comparing **FFE outputs, detector decisions and output timing**. The runner checks tool exit status and the PASS log, allowing the same verification procedure to be repeated after code changes.
 
 [Model–RTL verification results](../projects/dp-smm-journal/docs/validation.md)
 

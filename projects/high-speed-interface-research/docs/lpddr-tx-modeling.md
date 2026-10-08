@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[LPDDR 회로·제작 칩 측정](lpddr.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [파트 개요](../README.md) · [논문·담당 역할](evidence.md)
+[LPDDR 회로·제작 칩 측정](lpddr.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [인터페이스 연구 개요](../README.md) · [논문·담당 역할](evidence.md)
 
 **담당:** TX Verilog 동작 모델링. 32-bit 병렬 입력을 직렬화하고, 위상 정렬된 main/1UI 지연 데이터로 pre-emphasis 출력을 생성했습니다.
 

@@ -13,9 +13,9 @@
 
 PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위해 **송수신 DSP·검출기 RTL과 RFSoC 제어·오류 검사 경로**를 구현했습니다. ISI 보드를 통한 송수신 평가 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 
-ZCU208 RFSoC의 4-GS/s 설정 ADC·DAC에 **[32-lane 병렬 DSP](docs/architecture.md)**를 연결하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 통합했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
+ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 **[32-lane 병렬 DSP](docs/architecture.md)**로 구현해 연결했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
 
-DS-SBM 검출기 구조와 RFSoC 시스템의 [BER·자원·타이밍 결과](docs/validation.md)를 정리했습니다. 후속 DP-SMM 설계는 [Journal 준비 프로젝트](../dp-smm-journal/), 두 구조의 비교는 [학위논문](../pam4-mlsd-thesis/)에서 다룹니다.
+후속 DP-SMM 설계는 [Journal 준비 프로젝트](../dp-smm-journal/), 두 구조의 비교는 [학위논문](../pam4-mlsd-thesis/)에서 다룹니다.
 
 ## 설계·구현
 
@@ -43,7 +43,7 @@ flowchart LR
     G -.-> M
 ```
 
-측정 파형은 **ISI 보드를 통과한 신호를 ADC로 캡처한 결과**입니다. 캡처 재생·통계 분석의 입력과 계산 조건은 [측정·검증 결과](docs/validation.md)에 표시했습니다.
+ISI 보드를 통과한 수신 신호를 ADC로 캡처했습니다. [캡처 파형·재생·통계 분석](docs/validation.md)
 
 ## RX FFE와 PR 필터의 역할
 
@@ -53,14 +53,14 @@ RX FFE로 채널 왜곡을 보상한 뒤, 별도 3-tap PR 필터로 MLSD에 사�
 
 ## Vitis 기반 보드 구동
 
-Vivado에서 내보낸 XSA를 Vitis의 Cortex-A53 Standalone 앱과 연결했습니다. JTAG 로드 순서를 구성하고, PS에서 CLK104·RFDC 초기화와 RX 계수 쓰기·commit을 제어하도록 통합했습니다. 수신 디버그 데이터는 BRAM에서 읽어 UART CSV로 수집합니다. [구동 순서·PS–PL 제어 경로](docs/vitis-bringup.md)
+Vivado에서 내보낸 XSA로 Vitis 플랫폼을 구성하고 Cortex-A53 Standalone 앱을 JTAG으로 실행했습니다. 앱에서 CLK104·RFDC 초기화와 RX 계수 쓰기·commit을 제어하고, BRAM의 수신 디버그 데이터를 UART CSV로 수집했습니다. [구동 순서·PS–PL 제어 경로](docs/vitis-bringup.md)
 
 ## 시스템 측정·FPGA 구현 결과
 
 | 항목 | 결과 | 조건·출처 |
 |---|---|---|
 | RFSoC 시스템 BER | PRBS7 < 10⁻⁷·PRBS15 < 2×10⁻⁶ | A-SSCC 2026 Fig. 5, 41-dB 손실·ISI 보드 측정 |
-| 전체 TRX 자원 | LUT 189,108·FF 188,846·DSP 950·BRAM 24.5 | 2026-06-14 placed 요약, 논문 반올림 수치와 일치 |
+| 전체 TRX 자원 | LUT 189,108·FF 188,846·DSP 950·BRAM 24.5 | 전체 TRX, 2026-06-14 배치(placed) 결과 |
 | FPGA 타이밍 | WNS +0.083 ns·WHS +0.010 ns·TNS/THS 0 | 2026-06-29 post-route physopt 보고서 |
 
 [상세 결과·검증 조건](docs/validation.md)

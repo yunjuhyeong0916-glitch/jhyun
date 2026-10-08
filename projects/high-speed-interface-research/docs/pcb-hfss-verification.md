@@ -53,7 +53,7 @@ LPDDR 측정용 PCB의 회로·배치·배선을 설계하고 HFSS로 전달 특
 
 주파수별 전달 S-parameter를 비교해 완만한 손실과 좁은 대역의 notch를 검토하고 배치·배선을 수정했습니다.
 
-| 일부 경로에 notch가 나타난 해석 결과 | 6.4 GHz 지점에 값이 표시된 해석 결과 |
+| 경로별 notch 비교 | 6.4 GHz에서의 경로별 전달 손실 |
 |---|---|
 | ![여러 전달 경로 중 일부에서 좁은 대역의 notch가 보이는 HFSS S-parameter 곡선](../assets/pcb_hfss_lpddr_sparams_notch.jpg) | ![6.4GHz에서 여섯 전달 경로의 값이 표시된 HFSS S-parameter 곡선](../assets/pcb_hfss_lpddr_sparams_6p4ghz.jpg) |
 

@@ -11,7 +11,7 @@
 
 [USB PAM-3](usb4-pam3.md) · [논문·담당 역할](evidence.md)
 
-저전압에서 신호 품질을 확보하는 **15.6 Gb/s TX 회로 설계**와, LPDDR4X/5/5X를 지원하는 **Combo PHY의 TX 설계·모델링**을 정리했습니다.
+LPDDR 연구에서는 **15.6 Gb/s 저전압 TX 회로 설계**와 LPDDR4X/5/5X를 지원하는 **Combo PHY의 DQ TX 설계·모델링**을 담당했습니다.
 
 <p>
   <a href="#lpddr-156-gbs-tx"><img src="../../../assets/readme/nav-lpddr-15p6.svg" alt="LPDDR 15.6 Gb/s 섹션으로 이동" height="30"></a>

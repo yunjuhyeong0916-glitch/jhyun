@@ -15,7 +15,7 @@
 
 ![21-tap RX FFE를 사용하는 DS-SBM과 DP-SMM의 관측 신호·경로 보존·경계 갱신 비교](../../dp-smm-journal/assets/ds_sbm_dp_smm_21tap_comparison.svg)
 
-DS-SBM은 21-tap RX FFE 뒤에 별도 3-tap PR FIR을 두고 그 출력을 관측합니다. DP-SMM도 **21-tap RX FFE**를 사용하는 수신 구성으로 진행하며, FFE 출력을 직접 관측하고 세 탭 PR 목표를 후보 심볼열의 예상 샘플 계산에 사용합니다.
+DS-SBM은 21-tap RX FFE 뒤에 별도 3-tap PR FIR을 두고 그 출력을 관측합니다. DP-SMM의 보드 평가에도 **21-tap RX FFE**를 적용할 예정이며, FFE 출력을 직접 관측하고 세 탭 PR 목표를 후보 심볼열의 예상 샘플 계산에 사용합니다.
 
 이 차이를 포함한 수신기 전체 비교와, 같은 FFE 출력에서 후보 수만 바꾸는 코어 비교는 평가 대상이 다릅니다.
 

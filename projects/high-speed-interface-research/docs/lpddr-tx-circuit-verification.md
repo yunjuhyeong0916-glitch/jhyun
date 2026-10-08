@@ -73,7 +73,7 @@ PI-LVSTL TX에 main·1-UI 지연 경로를 두고 드라이버 세그먼트와 F
 
 ## 4. 추가 회로 시뮬레이션
 
-11월 4일 추가 시뮬레이션의 TX Eye는 **46 ps·75.7 mV**입니다. 앞의 FFE 적용 전후 비교는 10월 시뮬레이션 결과입니다.
+추가 시뮬레이션에서는 TX Eye 폭 **46 ps**, 높이 **75.7 mV**를 확인했습니다.
 
 ![추가 회로 시뮬레이션의 TX Eye, 폭 46ps 높이 75.7mV](../assets/lpddr_tx_circuit_updated_eye.png)
 

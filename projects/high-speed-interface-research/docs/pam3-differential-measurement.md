@@ -11,7 +11,7 @@
 
 [TX 모델링](usb-tx-modeling.md) · [PCB·HFSS](pcb-hfss-verification.md) · [측정 장비](measurement-equipment.md)
 
-제작 TX의 차동 PAM-3 측정에 참여해 채널 손실과 FFE 설정에 따른 출력 Eye를 평가했습니다. 32 Gb/s에서 채널별 프리셋을 바꾸고, 상·하단 Eye의 폭과 높이를 비교했습니다.
+TX 칩의 차동 PAM-3 측정에 참여해 채널 손실과 FFE 설정에 따른 출력 Eye를 평가했습니다. 32 Gb/s에서 채널별 프리셋을 바꾸고, 상·하단 Eye의 폭과 높이를 비교했습니다.
 
 ## 측정 구성과 관측 경로
 

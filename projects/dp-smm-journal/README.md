@@ -21,7 +21,7 @@
 
 ![21-tap RX FFE를 공통으로 사용하는 DS-SBM과 DP-SMM의 신호 경로·후보 보존·프레임 경계 선택 비교](assets/ds_sbm_dp_smm_21tap_comparison.svg)
 
-왼쪽 DS-SBM은 각 행렬 원소에 한 경로를 남기고, 오른쪽 DP-SMM은 두 경로를 합성 단계까지 유지합니다. DP-SMM에서는 실제 이력으로 비용을 다시 평가한 뒤, 상태별 두 후보의 PM·이력을 다음 프레임으로 전달합니다. 두 방식 모두 32심볼 구간 행렬을 병렬 처리하며, 진행할 DP-SMM 수신 구성의 RX FFE도 **21-tap**입니다.
+왼쪽 DS-SBM은 각 행렬 원소에 한 경로를 남기고, 오른쪽 DP-SMM은 두 경로를 합성 단계까지 유지합니다. DP-SMM에서는 실제 이력으로 비용을 다시 평가한 뒤, 상태별 두 후보의 PM·이력을 다음 프레임으로 전달합니다. 두 방식 모두 32심볼 구간 행렬을 병렬 처리합니다.
 
 <details>
 <summary>분기·행렬 경로·경계 후보의 세부 비교</summary>
@@ -32,7 +32,7 @@
 | 행렬 원소별 경로 | 한 경로 보존 | 두 경로와 심볼 이력·복원 정보 보존 |
 | 경로 비용과 선택 | 구간 최소 비용을 합성하고 유입 PM과 결합 | 두 제안 경로를 실제 이력으로 재평가한 뒤 유입 PM과 결합 |
 | 프레임 경계 | visible state별 PM 한 개 전달 | visible state별 PM·이력을 가진 후보 두 개 전달 |
-| 검출기 관측 입력 | 21-tap RX FFE 뒤 별도 3-tap PR FIR 출력 | 21-tap RX FFE 출력, PR 목표는 예상 샘플 계산에 사용하는 구성으로 진행 예정 |
+| 검출기 관측 입력 | 21-tap RX FFE 뒤 별도 3-tap PR FIR 출력 | 21-tap RX FFE 출력 직접 사용·PR 목표로 예상 샘플 계산 (보드 평가 예정) |
 
 DS-SBM의 ‘dual-survivor’는 상태별로 전파하는 두 survivor branch를 뜻합니다. DP-SMM의 ‘dual-path’는 같은 시작·종료 상태를 잇는 행렬 원소에 남기는 두 경로를 뜻합니다. [신호 경로·후보 보존 위치 비교](../pam4-mlsd-thesis/docs/architecture.md)
 
@@ -60,7 +60,7 @@ DS-SBM의 ‘dual-survivor’는 상태별로 전파하는 두 survivor branch�
 | 행렬 K=1·경계 H=2 비교 코어 | 해당 참조 모델과 일치 | 행렬 후보 수를 제한한 비교 구조 |
 | 연속 입력 처리 | II=1 | 검출기 코어 지연 23클록 |
 
-32심볼·125 MHz·II=1의 설계 처리율은 **4 Gsymbol/s**, 비부호화 PAM4 **8 Gb/s**입니다. 기존 FFE 통합 시험과 FPGA 자원은 [검증 조건·구현 자원](docs/validation.md)에 정리했습니다.
+32심볼·125 MHz·II=1의 설계 처리율은 **4 Gsymbol/s**, 비부호화 PAM4 **8 Gb/s**입니다. [FFE 통합 검증·FPGA 자원](docs/validation.md)
 
 ## 측정 준비
 

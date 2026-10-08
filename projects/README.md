@@ -28,7 +28,7 @@
 |---|---|---|
 | [LPDDR 15.6 Gb/s TX](high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) | 저전압 TX 회로 설계·Post-Layout 검증 | 15.6 Gb/s·0.76 pJ/bit 회로 시뮬레이션 |
 | [LPDDR Combo PHY](high-speed-interface-research/docs/lpddr-combo.md) | TX 회로·Verilog 동작 모델, PCB 설계·HFSS 분석과 제작 칩 측정 참여 | 28-nm 칩의 14 Gb/s/pin TX Eye·RX Shmoo 평가 |
-| [USB TX·RX](high-speed-interface-research/docs/usb4-pam3.md) | TX 논리 RTL·RX CTLE 모델과 송수신 통합 검증, 제작 TX 측정 참여 | 40 Gb/s/lane TX 모델, 25.6 GBaud/lane RX 모델, 32 Gb/s TX 칩 평가 |
+| [USB TX·RX](high-speed-interface-research/docs/usb4-pam3.md) | TX 논리 RTL·RX CTLE 모델과 송수신 통합 검증, TX 칩 측정 참여 | 40 Gb/s/lane TX 모델, 25.6 GBaud/lane RX 모델, 32 Gb/s TX 칩 평가 |
 
 [인터페이스 연구 개요](high-speed-interface-research/) · [PCB·HFSS 분석](high-speed-interface-research/docs/pcb-hfss-verification.md) · [측정 장비·자동화](high-speed-interface-research/docs/measurement-equipment.md)
 

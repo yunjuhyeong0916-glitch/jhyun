@@ -33,11 +33,11 @@
 
 ## USB PAM-3: 같은 채널·패턴에서 FFE 효과 확인
 
-![PAM-3 제작 TX의 FFE 적용 전후 차동 Eye](../assets/pam3_measured_ffe_eye.png)
+![PAM-3 TX 칩의 FFE 적용 전후 차동 Eye](../assets/pam3_measured_ffe_eye.png)
 
 **측정 조건·관련 논문:** 32 Gb/s, CH#3, PRBS15, scrambler enabled. 채널 손실은 10.24 GHz에서 17.3 dB입니다. [TVLSI 관련 논문](https://doi.org/10.1109/TVLSI.2026.3701343), p. 7 Fig. 13(a),(b).
 
-**제작 TX 측정 결과:** 왼쪽 FFE off, 오른쪽 FFE on. 동일 CH#3·PRBS15의 상·하단 Eye 비교. [모델링·RTL 검증과 측정 역할](usb4-pam3.md)
+**TX 칩 측정 결과:** 왼쪽 FFE off, 오른쪽 FFE on. 동일 CH#3·PRBS15의 상·하단 Eye 비교. [모델링·RTL 검증과 측정 역할](usb4-pam3.md)
 
 FFE 적용 후 상단 Eye는 **11.19 ps·21.16 mV**, 하단 Eye는 **11.67 ps·19.80 mV**입니다. [측정 구성·PRBS15/31 비교·채널별 FFE 설정](pam3-differential-measurement.md)
 

@@ -40,7 +40,7 @@ ZCU208·ZU48DR 배치배선 결과입니다. 검출기 코어 범위에는 RX FF
 
 ## 보드 측정 계획
 
-**21-tap RX FFE + DP-SMM** 구성으로 보드 BER·PR 등고선·연속 처리율을 평가할 예정입니다. AWG 수신 평가와 물리 DAC-to-ADC 검증 결과는 측정 후 추가합니다.
+**21-tap RX FFE + DP-SMM** 수신 구성에서 BER·PR 등고선·연속 처리율을 평가할 예정입니다. AWG 기반 ADC 수신 경로와 DAC–ISI 보드–ADC 송수신 경로를 사용할 계획입니다.
 
 [DS-SBM 시스템의 측정 결과](../../zcu208-pam4-dsp-portfolio/docs/validation.md)
 

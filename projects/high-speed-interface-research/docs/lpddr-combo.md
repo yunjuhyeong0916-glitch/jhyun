@@ -43,7 +43,7 @@ main 데이터와 지연 데이터의 간격이 1 UI에서 벗어나면 pre-emph
 
 ![단일 DQ TX 모델의 직렬 데이터·1UI 지연 데이터·pre-emphasis 출력·채널 출력 파형](../assets/lpddr_combo_tx_model_waveform_vcs.png)
 
-위부터 **직렬 main 데이터 → 1-UI 지연 데이터 → pre-emphasis 출력 → 채널 출력**입니다. 입력 패턴의 직렬화, 두 데이터의 시간 관계와 전이 방향에 따른 출력 레벨 변화를 확인했습니다. VCS·Questa 파형과 레벨 코드별 Eye는 [TX 모델 상세](lpddr-tx-modeling.md)에 정리했습니다.
+위부터 **직렬 main 데이터 → 1-UI 지연 데이터 → pre-emphasis 출력 → 채널 출력**입니다. 입력 패턴의 직렬화, 두 데이터의 시간 관계와 전이 방향에 따른 출력 레벨 변화를 확인했습니다. [VCS·Questa 파형·레벨 코드별 Eye](lpddr-tx-modeling.md)
 
 ## 4-DQ 통합 환경에서 Write 출력 확인
 

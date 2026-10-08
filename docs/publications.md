@@ -20,7 +20,7 @@
 | LPDDR Combo PHY | [A 14-Gb/s/pin LPDDR4X/5/5X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) | A-SSCC 2026 · 채택·발표 예정 | 설계한 TX가 적용된 Combo PHY의 제작 칩 측정 |
 | USB PAM-3 TX 모델 | [SystemVerilog-Based Modeling and Verification of 40-Gb/s/Lane PAM-3 Transmitter for USB4.0 Gen4](https://doi.org/10.1109/SMACD65553.2025.11092283) | SMACD 2025 | 40 Gb/s/lane TX 모델·시뮬레이션 |
 | USB PAM-3 RX 모델 | [SystemVerilog-Based Modeling and Verification of 25.6-GBaud/Lane PAM-3 Receiver](https://doi.org/10.1109/SMACD65553.2025.11092233) | SMACD 2025 | 25.6 GBaud/lane RX 모델·시뮬레이션 |
-| PAM-3 제작 TX | [A 0.0549-pJ/bit/pin/dB PAM-3 Transmitter With Reconfigurable 150-Preset Four-Tap FFE for Various Channel Environments](https://doi.org/10.1109/TVLSI.2026.3701343) | IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 2026 | 28-nm·32-Gb/s TX, 150-preset 4-tap FFE의 제작 칩 측정 |
+| PAM-3 TX 칩 | [A 0.0549-pJ/bit/pin/dB PAM-3 Transmitter With Reconfigurable 150-Preset Four-Tap FFE for Various Channel Environments](https://doi.org/10.1109/TVLSI.2026.3701343) | IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 2026 | 28-nm·32-Gb/s TX, 150-preset 4-tap FFE의 제작 칩 측정 |
 
 ## 준비 중인 연구
 
@@ -34,7 +34,7 @@
 - **Journal · DP-SMM (진행 중):** [검출기 구조](../projects/dp-smm-journal/docs/architecture.md), [RTL 검증·FPGA 구현](../projects/dp-smm-journal/docs/validation.md).
 - **A-SSCC · DS-SBM:** [설계 구조](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md), [측정·구현 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md).
 - **LPDDR:** [TX 설계·회로 검증과 제작 칩 측정](../projects/high-speed-interface-research/docs/lpddr.md#검증-결과와-조건).
-- **USB PAM-3:** [TX·RX 모델과 제작 TX 결과](../projects/high-speed-interface-research/docs/usb4-pam3.md#모델과-실리콘-결과의-구분), [차동 PAM-3 측정·채널별 FFE 검증](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md).
+- **USB PAM-3:** [TX·RX 모델과 TX 칩 결과](../projects/high-speed-interface-research/docs/usb4-pam3.md#모델과-실리콘-결과의-구분), [차동 PAM-3 측정·채널별 FFE 검증](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md).
 - **계측:** [장비별 역할·자동화·PCB·채널 분석](../projects/high-speed-interface-research/docs/measurement-equipment.md), [담당 역할·검증 자료](../projects/high-speed-interface-research/docs/evidence.md).
 
 <!-- page-navigation:bottom -->

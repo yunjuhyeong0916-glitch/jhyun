@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[파트 개요](../README.md) · [TX 모델링](usb-tx-modeling.md) · [논문·담당 역할](evidence.md)
+[인터페이스 연구 개요](../README.md) · [TX 모델링](usb-tx-modeling.md) · [논문·담당 역할](evidence.md)
 
 **담당:** CTLE 모델링·송수신 통합 검증. 바이어스·입력 공통전압과 R·C 제어를 조정해 채널 보상과 PAM-3 중간 레벨 안정성을 확인했습니다.
 
@@ -98,7 +98,7 @@ flowchart LR
 
 ## 관련 논문
 
-[SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092233): CTLE·DFE·CDR를 포함한 25.6-GBaud/lane RX 모델. [32-Gb/s 제작 TX 측정](usb4-pam3.md#모델과-실리콘-결과의-구분)
+[SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092233): CTLE·DFE·CDR를 포함한 25.6-GBaud/lane RX 모델. [32-Gb/s TX 칩 측정](usb4-pam3.md#모델과-실리콘-결과의-구분)
 
 <!-- page-navigation:bottom -->
 <p>

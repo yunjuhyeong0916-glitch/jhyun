@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[파트 개요](../README.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·담당 역할](evidence.md)
+[인터페이스 연구 개요](../README.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·담당 역할](evidence.md)
 
 **담당:** TX 논리 RTL·XMODEL 모델링·통합, Serializer 검증, 합성·P&R 후 전기 계층 연결. **검증:** 모델·시뮬레이션.
 
@@ -146,7 +146,7 @@ RTL과 P&R Verilog netlist를 VCS에서 비교하고 전기 계층을 포함한 
 
 ## 관련 논문
 
-[SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092283): 40 Gb/s/lane TX 모델·시뮬레이션. [IEEE TVLSI 2026](usb4-pam3.md#모델과-실리콘-결과의-구분): 32-Gb/s 제작 TX 측정.
+[SMACD 2025](https://doi.org/10.1109/SMACD65553.2025.11092283): 40 Gb/s/lane TX 모델·시뮬레이션. [IEEE TVLSI 2026](usb4-pam3.md#모델과-실리콘-결과의-구분): 32-Gb/s TX 칩 측정.
 
 <!-- page-navigation:bottom -->
 <p>
