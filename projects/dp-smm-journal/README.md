@@ -1,8 +1,17 @@
+<a id="page-top"></a>
+
 # Journal 준비 | DP-SMM 기반 PAM4 검출기 (진행 중)
+
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="연구 목록로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
 
 DP-SMM의 보드 평가는 **21-tap RX FFE**를 적용한 수신 구성으로 진행합니다. [DS-SBM의 구간 행렬 구조](../zcu208-pam4-dsp-portfolio/docs/architecture.md)를 확장해, 행렬 원소마다 두 경로를 남기고 [실제 심볼 이력으로 비용을 다시 계산](docs/architecture.md#실제-이력에-따른-비용과-프레임-경계-선택)합니다. 구간 계산에서 두 번째였던 경로도 최종 판정에 사용할 수 있도록 설계했습니다.
 
-[첫 화면](../../README.md) · [검출기 구조](docs/architecture.md) · [RTL 검증·FPGA 구현](docs/validation.md) · [DS-SBM·DP-SMM 비교 연구](../pam4-mlsd-thesis/)
+[검출기 구조](docs/architecture.md) · [RTL 검증·FPGA 구현](docs/validation.md) · [DS-SBM·DP-SMM 비교 연구](../pam4-mlsd-thesis/)
 
 **DP-SMM 특허 출원 준비 중.**
 
@@ -56,3 +65,11 @@ DS-SBM의 ‘dual-survivor’는 상태별로 전파하는 두 survivor branch�
 **21-tap RX FFE + DP-SMM** 구성으로 보드 실측을 준비합니다. AWG 기반 ADC-DSP 수신 경로와 DAC–ISI 보드–ADC 송수신 경로에서 BER·PR 등고선·연속 처리율을 평가할 예정입니다.
 
 [A-SSCC DS-SBM](../zcu208-pam4-dsp-portfolio/) · [학위논문 비교 연구](../pam4-mlsd-thesis/) · [연구 성과 논문](../../docs/publications.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="연구 목록로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

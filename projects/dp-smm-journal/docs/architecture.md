@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # DP-SMM 검출기 구조
 
-[프로젝트](../README.md) · [검증·구현 결과](validation.md) · [DS-SBM과의 구조 비교](../../pam4-mlsd-thesis/docs/architecture.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[검증·구현 결과](validation.md) · [DS-SBM과의 구조 비교](../../pam4-mlsd-thesis/docs/architecture.md)
 
 ## 21-tap RX FFE를 사용하는 수신 구성
 
@@ -55,3 +64,11 @@ DP-SMM은 **Dual-Path Segmented Metric-Matrix** 기반 축소 상태 MLSD입니�
 선택한 경로의 정규화 PM과 생략 심볼은 다음 프레임으로 전달합니다. 현재 프레임의 복원은 합성 트리에 저장된 선택 정보를 따라 수행합니다. 후보 제거 단계에서 버린 경로는 재평가로 복구되지 않으므로, 전체 상태 MLSD의 최적성과는 구분해 성능을 평가합니다.
 
 [검증 결과](validation.md) · [학위논문의 후보 보존 비교](../../pam4-mlsd-thesis/docs/validation.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="Journal 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-journal.svg" alt="Journal 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

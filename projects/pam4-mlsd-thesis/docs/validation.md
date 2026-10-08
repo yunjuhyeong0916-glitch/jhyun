@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # 학위논문의 구조 비교와 검증 결과
 
-[프로젝트](../README.md) · [DS-SBM·DP-SMM 구조 비교](architecture.md) · [Journal DP-SMM 검증](../../dp-smm-journal/docs/validation.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[DS-SBM·DP-SMM 구조 비교](architecture.md) · [Journal DP-SMM 검증](../../dp-smm-journal/docs/validation.md)
 
 ## 동일 입력에서의 후보 보존 효과
 
@@ -49,3 +58,11 @@ DS-SBM은 추정 손실 41 dB·4 GS/s의 DAC-to-ADC 물리 경로에서 PRBS7 BE
 **DP-SMM 실측은 아직 수행하지 않았습니다.** 학위논문에서는 AWG → XM655 ADC → RX FFE → DP-SMM → PRBS 검사기 경로에서 PRBS7·PRBS15 BER와 PR 등고선을 평가할 예정입니다. 측정용 수신기의 구현 자원·실제 클록·연속 처리율도 해당 빌드로 확인합니다.
 
 Journal 초안의 개정 K=2 코어 검증·구현 집계는 [별도 프로젝트](../../dp-smm-journal/docs/validation.md)에 정리했습니다. 이전 기준 RTL의 사전 회귀는 [부록 기록](baseline-rtl-validation.md)에 남겼습니다.
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

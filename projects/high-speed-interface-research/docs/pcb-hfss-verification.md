@@ -1,8 +1,17 @@
+<a id="page-top"></a>
+
 <a id="pcbhfss-검증-보드-배선에서-실제-측정-경로까지"></a>
 
 # PCB 설계·HFSS 분석
 
-[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
 
 LPDDR 측정용 PCB의 회로·배치·배선을 설계하고 HFSS로 전달 특성을 분석했습니다. 제작 보드의 COB 실장·측정에 참여했으며, USB TX 보드에서는 GND via와 전원 공급 경로를 검토했습니다.
 
@@ -92,3 +101,11 @@ PPG·BERT의 입력·오류 검출 경로, 전원공급기와 오실로스코프
 
 - [A-SSCC 2026: LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) — 제작 칩의 TX Eye·RX margin. 채택·발표 예정.
 - [IEEE TVLSI 2026: PAM-3 TX·150-preset FFE](https://doi.org/10.1109/TVLSI.2026.3701343) — USB PAM-3 TX의 제작 칩 측정.
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

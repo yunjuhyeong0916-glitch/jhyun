@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # DS-SBM을 병렬 RTL로 구현하기 위한 설계 판단
 
-[프로젝트 요약](../README.md) · [설계 구조](architecture.md) · [검증 결과](validation.md) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[설계 구조](architecture.md) · [검증 결과](validation.md) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 ## 등화 이후 남은 ISI를 검출에 활용
 
@@ -47,3 +56,11 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 DP-SMM의 두 경로 보존·이력 반영 비용과 구현은 [Journal 준비 프로젝트](../../dp-smm-journal/)에 정리했습니다. [학위논문](../../pam4-mlsd-thesis/)에서는 DS-SBM과 DP-SMM의 구조를 비교하고 동일 입력의 후보 보존 효과를 평가합니다.
 
 [RTL 구조](architecture.md) · [검증 결과](validation.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

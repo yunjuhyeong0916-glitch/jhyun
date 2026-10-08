@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # 차동 PAM-3 측정과 채널별 FFE 효과 검증
 
-[USB 연구 개요](usb4-pam3.md) · [TX 모델링](usb-tx-modeling.md) · [PCB·HFSS](pcb-hfss-verification.md) · [측정 장비](measurement-equipment.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="usb4-pam3.md" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[TX 모델링](usb-tx-modeling.md) · [PCB·HFSS](pcb-hfss-verification.md) · [측정 장비](measurement-equipment.md)
 
 제작 TX의 차동 PAM-3 측정에 참여해 채널 손실과 FFE 설정에 따른 출력 Eye를 평가했습니다. 32 Gb/s에서 채널별 프리셋을 바꾸고, 상·하단 Eye의 폭과 높이를 비교했습니다.
 
@@ -71,3 +80,11 @@ BER 평가에서는 **32 Gb/s·scrambler off·PRBS7 주기에 해당하는 패�
 [A 0.0549-pJ/bit/pin/dB PAM-3 Transmitter With Reconfigurable 150-Preset Four-Tap FFE for Various Channel Environments — IEEE TVLSI 2026](https://doi.org/10.1109/TVLSI.2026.3701343)
 
 [TX 모델·RTL 검증](usb-tx-modeling.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [장비·자동화](measurement-equipment.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="usb4-pam3.md" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

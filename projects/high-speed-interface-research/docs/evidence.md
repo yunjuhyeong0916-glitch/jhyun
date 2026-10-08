@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # 연구 성과와 담당 역할
 
-[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [전체 논문 목록](../../../docs/publications.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [전체 논문 목록](../../../docs/publications.md)
 
 기준일: **2026-10-07**.
 
@@ -31,3 +40,11 @@ Combo PHY 논문: 채택·발표 예정. [전체 논문](../../../docs/publicati
 | PCB·HFSS 사진과 해석 | [배치·배선·HFSS 모델·손실·제작·계측 사진](pcb-hfss-verification.md): LPDDR 보드 설계·분석과 USB TX 보드 검토 |
 | RX 자동화 | 2025.03~05 평가의 I2C·전원·BERT 연동, AWG 파일·샘플레이트 수정, 오류 조기 종료·경계 탐색·CSV 기록 |
 | 채널보드·실시간 스코프 | M8049A-003, DPO5204B·DSA72004B 등 사용. 실험별 선로·스코프 설정 |
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # 검증 상태
 
-[첫 화면](../README.md) · [논문](publications.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="README.md" title="문서 목록로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[논문](publications.md)
 
 기준일: **2026-10-07**.
 
@@ -47,3 +56,11 @@
 | PAM-3 제작 TX | 32 Gb/s·150-preset 4-tap FFE | IEEE TVLSI 2026, 제작 칩 측정 |
 
 [논문별 결과·담당 역할](../projects/high-speed-interface-research/docs/evidence.md) · [측정 그림](../projects/high-speed-interface-research/docs/verification-figures.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="README.md" title="문서 목록로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # LPDDR Combo PHY: TX Verilog 모델링과 검증 파형
 
-[Combo PHY 연구 개요](lpddr-combo.md) · [LPDDR 회로·제작 칩 측정](lpddr.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [파트 개요](../README.md) · [논문·담당 역할](evidence.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="lpddr-combo.md" title="LPDDR Combo PHY로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo PHY로 돌아가기" width="140" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[LPDDR 회로·제작 칩 측정](lpddr.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [파트 개요](../README.md) · [논문·담당 역할](evidence.md)
 
 **담당:** TX Verilog 동작 모델링. 32-bit 병렬 입력을 직렬화하고, 위상 정렬된 main/1UI 지연 데이터로 pre-emphasis 출력을 생성했습니다.
 
@@ -87,3 +96,11 @@ PRBS7 병렬 입력을 인가하고 직렬 데이터·1UI 지연·pre-emphasis·
 | 20-Gb/s 파형·Eye | TX 동작 모델 시뮬레이션 | 위 TX 구조·단일 TX·4-DQ 검증 파형 |
 | 15.6 Gb/s · 0.76 pJ/bit TX | TX 회로 설계·Schematic/Post-Layout 검증 | [ICEIC 2025](https://doi.org/10.1109/ICEIC64972.2025.10879746) · [회로 결과](lpddr.md#검증-결과와-조건) |
 | 14 Gb/s/pin · 4-DQ Combo PHY | 설계한 TX가 적용된 Combo PHY의 제작 칩 측정 | [A-SSCC 2026](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) · [실측 그림](verification-figures.md#lpddr-combo-phy-공동-칩의-eye와-rx-shmoo) |
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="lpddr-combo.md" title="LPDDR Combo PHY로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo PHY로 돌아가기" width="140" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="70" height="30" viewBox="0 0 70 30" role="img" aria-label="홈">
+  <title>홈</title>
+  <rect x=".5" y=".5" width="69" height="29" rx="7" fill="#f6f8fa" stroke="#59636e" stroke-opacity=".18"/>
+  <g fill="none" stroke="#59636e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m9 14 6-5 6 5M11 13v9h8v-9M14 22v-5h2v5"/></g>
+  <text x="29" y="20" font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#59636e">홈</text>
+</svg>

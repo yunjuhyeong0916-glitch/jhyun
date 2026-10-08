@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # AI assistance | RTL implementation and FPGA measurement automation
 
-[DSP transceiver research](../README.en.md#dsp-transceiver-research) · [Repository map](repository-map.md) · [한국어](ai-assisted-dsp-workflow.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.en.md#dsp-transceiver-research" title="Back to DSP transceiver research"><img src="../assets/readme/nav-back-dsp-en.svg" alt="Back to DSP transceiver research" width="136" height="30"></a>
+  <a href="../README.en.md" title="Back to home"><img src="../assets/readme/nav-home-en.svg" alt="Back to home" width="86" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[Repository map](repository-map.md) · [한국어](ai-assisted-dsp-workflow.md)
 
 To repeat checks under the same conditions after changing the PAM4 receiver model or coefficients, I connected inputs, execution and result collection through scripts. AI assisted with **RTL, testbenches and automation code**, while MATLAB MCP connected Codex to MATLAB for model execution and result inspection.
 
@@ -24,6 +33,10 @@ On ZCU208, the PS writes coefficients and verifies their application; the PL per
 
 [Vitis coefficient updates and data collection](../projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [A-SSCC measurement results](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
----
-
-[Back to DSP transceiver research](../README.en.md#dsp-transceiver-research)
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.en.md#dsp-transceiver-research" title="Back to DSP transceiver research"><img src="../assets/readme/nav-back-dsp-en.svg" alt="Back to DSP transceiver research" width="136" height="30"></a>
+  <a href="../README.en.md" title="Back to home"><img src="../assets/readme/nav-home-en.svg" alt="Back to home" width="86" height="30"></a>
+  <a href="#page-top" title="Back to top"><img src="../assets/readme/nav-top-en.svg" alt="Back to top" width="124" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

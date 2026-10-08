@@ -1,3 +1,5 @@
+<a id="page-top"></a>
+
 # 윤주형 | High-Speed Interface·DSP Transceiver 연구
 
 안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 <strong>Ultra High-Speed 통신을 위한 <a href="projects/">DSP 기반 Transceiver 연구</a></strong>를 진행하고 있습니다.
@@ -119,3 +121,9 @@ A-SSCC 2026 두 편: 채택·발표 예정(2026-10-07 기준). [전체 논문 �
 ---
 
 [문서 지도](docs/repository-map.md) · [검증 상태](docs/validation-status.md) · [기술 용어](docs/glossary.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

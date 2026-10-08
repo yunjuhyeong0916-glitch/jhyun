@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # LPDDR TX 회로 설계·검증: FFE와 PEX 이후 동작 확인
 
-[LPDDR 연구 개요](lpddr.md) · [TX Verilog 모델링](lpddr-tx-modeling.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="lpddr.md" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[TX Verilog 모델링](lpddr-tx-modeling.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
 
 **담당:** 28-nm CMOS TX 회로 설계·Schematic/Post-Layout 검증. **검증:** 회로 시뮬레이션.
 
@@ -81,3 +90,11 @@ PI-LVSTL TX에 main·1-UI 지연 경로를 두고 드라이버 세그먼트와 F
 
 - [ICEIC 2025: 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746) — 저전압 TX 구조와 15.6-Gb/s·0.76-pJ/bit 시뮬레이션.
 - [A-SSCC 2026: LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) — 설계한 TX가 적용된 Combo PHY의 제작 칩 측정. 채택·발표 예정.
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="lpddr.md" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

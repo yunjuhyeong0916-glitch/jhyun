@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # 문서 지도
 
-[첫 화면](../README.md) · [프로젝트](../projects/)
+<!-- page-navigation:top -->
+<p>
+  <a href="README.md" title="문서 목록로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[프로젝트](../projects/)
 
 | 분야 | 설계 | 결과 |
 |---|---|---|
@@ -12,3 +21,11 @@
 | USB PAM-3 | [TX 모델](../projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) | [차동 측정·FFE 검증](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md), [전체 결과](../projects/high-speed-interface-research/docs/usb4-pam3.md) |
 | PCB·계측 | [PCB·HFSS](../projects/high-speed-interface-research/docs/pcb-hfss-verification.md), [장비·자동화](../projects/high-speed-interface-research/docs/measurement-equipment.md) | [Eye·Shmoo](../projects/high-speed-interface-research/docs/verification-figures.md) |
 | 연구 성과 | [논문 목록](publications.md) | [검증 상태](validation-status.md) |
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="README.md" title="문서 목록로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

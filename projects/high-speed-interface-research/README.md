@@ -1,6 +1,14 @@
+<a id="page-top"></a>
+
 # LPDDR·USB 고속 인터페이스 연구
 
-[저장소 첫 화면](../../README.md) · [측정·자동화](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문·담당 역할](docs/evidence.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[측정·자동화](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문·담당 역할](docs/evidence.md)
 
 [LPDDR 저전압 TX](docs/lpddr-tx-circuit-verification.md)를 설계하고 Schematic·Post-Layout 검증을 수행했습니다. USB PAM-3에서는 [TX 논리 RTL·동작 모델](docs/usb-tx-modeling.md)과 [RX CTLE 모델](docs/usb-rx-ctle-modeling.md)을 구현하고, 송수신 통합·제작 TX의 [차동 신호 평가](docs/pam3-differential-measurement.md)에 참여했습니다.
 
@@ -28,3 +36,10 @@
 | USB PAM-3 | [SMACD 2025 · TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283) · [SMACD 2025 · RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233) | [IEEE TVLSI 2026 · 32-Gb/s TX·150-preset FFE](https://doi.org/10.1109/TVLSI.2026.3701343) |
 
 [성과·담당 역할](docs/evidence.md) · [전체 논문 목록](../../docs/publications.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

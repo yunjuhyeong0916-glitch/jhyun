@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # 부록 | 초기 RTL 회귀 시험
 
-[프로젝트](../README.md) · [학위논문 검증 결과](validation.md) · [A-SSCC DS-SBM 측정·구현 결과](../../zcu208-pam4-dsp-portfolio/docs/validation.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[학위논문 검증 결과](validation.md) · [A-SSCC DS-SBM 측정·구현 결과](../../zcu208-pam4-dsp-portfolio/docs/validation.md)
 
 기준일: **2026-10-07**. 2026-09-09 RTL을 사용한 사전 회귀 기록입니다. 학위논문의 R=1/R=2 코어 검증과 Journal 초안의 개정 K=2 검증은 별도의 결과입니다.
 
@@ -39,3 +48,11 @@
 출력 비교는 초기 대기 이후 시작했습니다. 입력은 테스트벤치의 의사난수·계수 조건입니다.
 
 A-SSCC의 DS-SBM 시스템 BER와 ADC 캡처·재생·통계 분석은 [DS-SBM 프로젝트의 측정 결과](../../zcu208-pam4-dsp-portfolio/docs/validation.md)에 정리했습니다.
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="학위논문 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-thesis.svg" alt="학위논문 프로젝트로 돌아가기" width="158" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

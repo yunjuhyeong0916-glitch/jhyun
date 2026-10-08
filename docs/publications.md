@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # 연구 성과 논문
 
-[저장소 첫 화면](../README.md) · [학위논문 (진행 중)](../projects/pam4-mlsd-thesis/) · [Journal 준비 (진행 중)](../projects/dp-smm-journal/) · [A-SSCC DSP 프로젝트](../projects/zcu208-pam4-dsp-portfolio/) · [LPDDR·USB 인터페이스 연구](../projects/high-speed-interface-research/)
+<!-- page-navigation:top -->
+<p>
+  <a href="README.md" title="문서 목록로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[학위논문 (진행 중)](../projects/pam4-mlsd-thesis/) · [Journal 준비 (진행 중)](../projects/dp-smm-journal/) · [A-SSCC DSP 프로젝트](../projects/zcu208-pam4-dsp-portfolio/) · [LPDDR·USB 인터페이스 연구](../projects/high-speed-interface-research/)
 
 기준일: **2026-10-07**.
 
@@ -27,3 +36,11 @@
 - **LPDDR:** [TX 설계·회로 검증과 제작 칩 측정](../projects/high-speed-interface-research/docs/lpddr.md#검증-결과와-조건).
 - **USB PAM-3:** [TX·RX 모델과 제작 TX 결과](../projects/high-speed-interface-research/docs/usb4-pam3.md#모델과-실리콘-결과의-구분), [차동 PAM-3 측정·채널별 FFE 검증](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md).
 - **계측:** [장비별 역할·자동화·PCB·채널 분석](../projects/high-speed-interface-research/docs/measurement-equipment.md), [담당 역할·검증 자료](../projects/high-speed-interface-research/docs/evidence.md).
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="README.md" title="문서 목록로 돌아가기"><img src="../assets/readme/nav-back-docs.svg" alt="문서 목록로 돌아가기" width="110" height="30"></a>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

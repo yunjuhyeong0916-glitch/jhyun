@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # LPDDR 인터페이스 연구
 
-[인터페이스 연구](../README.md) · [USB PAM-3](usb4-pam3.md) · [논문·담당 역할](evidence.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[USB PAM-3](usb4-pam3.md) · [논문·담당 역할](evidence.md)
 
 저전압에서 신호 품질을 확보하는 **15.6 Gb/s TX 회로 설계**와, LPDDR4X/5/5X를 지원하는 **Combo PHY의 TX 설계·모델링**을 정리했습니다.
 
@@ -55,3 +64,11 @@ LPDDR4X와 LPDDR5/5X의 클록·위상 조정 자원을 공유하는 Combo Contr
 86100D·86118A로 Eye를 관측하고, M8195A·E3631A·MP1800A로 입력·전원 조건과 오류 집계를 제어했습니다. RX Shmoo는 I2C 제어를 전원·BERT와 연동해 전압·타이밍 조건을 바꾸고 오류를 수집했습니다.
 
 [장비·AWG·Shmoo 자동화](measurement-equipment.md) · [TX 시뮬레이션 Eye·Combo PHY Eye·Shmoo](verification-figures.md#lpddr-tx-ffe-적용-전후의-시뮬레이션)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

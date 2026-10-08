@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # A-SSCC DS-SBM PAM4 DSP 설계 구조
 
-[프로젝트](../README.md) · [MLSD 설계 판단](design-decisions.md) · [Vitis·FPGA 구동](vitis-bringup.md) · [측정·검증 결과](validation.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[MLSD 설계 판단](design-decisions.md) · [Vitis·FPGA 구동](vitis-bringup.md) · [측정·검증 결과](validation.md)
 
 ## 논문 전체 구조
 
@@ -31,3 +40,11 @@ ZCU208의 XCZU48DR-FSVG1517-2-E에서 ADC·DAC를 각각 4 GS/s로 설정했습�
 논문의 DS-SBM RS-MLSD는 네 visible state와 상태별 두 survivor branch를 사용합니다. 구간별 branch metric 행렬을 계층적으로 결합해 심볼 간 ACS 의존성을 다룹니다. [후보 보존·행렬 결합의 설계 판단](design-decisions.md)
 
 [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [검증 결과](validation.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

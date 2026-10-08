@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # A-SSCC DS-SBM PAM4 DSP 측정·검증 결과
 
-[프로젝트](../README.md) · [설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [논문](../../../docs/publications.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [논문](../../../docs/publications.md)
 
 기준일: **2026-10-07**.
 
@@ -122,3 +131,11 @@ A-SSCC 2026, p. 2 Fig. 5. 21-tap RX FFE와 3-tap PR 조건에서 PR 계수에 �
 ## 관련 연구
 
 [학위논문 DS-SBM·DP-SMM 비교 (진행 중)](../../pam4-mlsd-thesis/) · [Journal DP-SMM 설계·검증](../../dp-smm-journal/)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

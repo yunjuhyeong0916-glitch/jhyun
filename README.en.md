@@ -1,3 +1,5 @@
+<a id="page-top"></a>
+
 # Juhyeong Yun | High-Speed Interface & DSP Transceiver Research
 
 I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/) for ultra-high-speed communication**.
@@ -119,3 +121,9 @@ Both A-SSCC 2026 papers are accepted, with presentations forthcoming as of 2026-
 ---
 
 [Repository map](docs/repository-map.md) · [Verification status](docs/validation-status.md) · [Glossary](docs/glossary.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="#page-top" title="Back to top"><img src="assets/readme/nav-top-en.svg" alt="Back to top" width="124" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

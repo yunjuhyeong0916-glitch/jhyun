@@ -1,4 +1,13 @@
+<a id="page-top"></a>
+
 # LPDDR Combo PHY: TX 설계·모델링과 28 nm 칩 검증
+
+<!-- page-navigation:top -->
+<p>
+  <a href="lpddr.md" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
 
 [인터페이스 연구](../README.md) · [15.6-Gb/s TX 회로](lpddr-tx-circuit-verification.md) · [TX 모델 상세](lpddr-tx-modeling.md) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
@@ -85,3 +94,11 @@ main 데이터와 지연 데이터의 간격이 1 UI에서 벗어나면 pre-emph
 [A 14-Gb/s/pin LPDDR4X/5/5X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator — A-SSCC 2026](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
 [TX 모델·코드별 Eye·4-DQ 지연 검증](lpddr-tx-modeling.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [PCB·HFSS](pcb-hfss-verification.md) · [논문·담당 역할](evidence.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="lpddr.md" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

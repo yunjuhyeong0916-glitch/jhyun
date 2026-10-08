@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="156" height="30" viewBox="0 0 156 30" role="img" aria-label="A-SSCC 프로젝트">
+  <title>A-SSCC 프로젝트</title>
+  <rect x=".5" y=".5" width="155" height="29" rx="7" fill="#edf4ff" stroke="#1754ac" stroke-opacity=".18"/>
+  <g fill="none" stroke="#1754ac" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 10-5 5 5 5M10 15h11"/></g>
+  <text x="29" y="20" font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#1754ac">A-SSCC 프로젝트</text>
+</svg>

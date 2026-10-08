@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # LPDDR·USB 검증 그림과 해석
 
-[파트 개요](../README.md) · [LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [장비 활용](measurement-equipment.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [장비 활용](measurement-equipment.md)
 
 [PCB·HFSS](pcb-hfss-verification.md) · [LPDDR TX 모델](lpddr-tx-modeling.md) · [LPDDR TX 회로](lpddr-tx-circuit-verification.md) · [USB TX 모델](usb-tx-modeling.md) · [RX CTLE](usb-rx-ctle-modeling.md)
 
@@ -43,3 +52,11 @@ FFE 적용 후 상단 Eye는 **11.19 ps·21.16 mV**, 하단 Eye는 **11.67 ps·1
 BIN 파일 교체 시 목표와 다른 주파수가 관측되어 파일·샘플레이트를 함께 설정하도록 수정했습니다. **검증:** 실제 AWG 출력 주파수. [제어 수정](measurement-equipment.md#awg-파일-전송-이후의-실제-출력까지-확인)
 
 825 MHz와 데이터 속도의 1/16 관계는 이 사례의 설정입니다.
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="30" viewBox="0 0 124 30" role="img" aria-label="Back to top">
+  <title>Back to top</title>
+  <rect x=".5" y=".5" width="123" height="29" rx="7" fill="#f6f8fa" stroke="#59636e" stroke-opacity=".18"/>
+  <g fill="none" stroke="#59636e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m10 15 5-5 5 5M15 10v11"/></g>
+  <text x="29" y="20" font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif" font-size="12" font-weight="600" fill="#59636e">Back to top</text>
+</svg>

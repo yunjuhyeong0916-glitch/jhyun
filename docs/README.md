@@ -1,6 +1,14 @@
+<a id="page-top"></a>
+
 # 설계·검증 문서
 
-[첫 화면](../README.md) · [문서 지도](repository-map.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[문서 지도](repository-map.md)
 
 - **학위논문 · DS-SBM·DP-SMM 비교 (진행 중):** [프로젝트](../projects/pam4-mlsd-thesis/), [구조 비교](../projects/pam4-mlsd-thesis/docs/architecture.md), [모델·RTL 비교 결과](../projects/pam4-mlsd-thesis/docs/validation.md)
 - **Journal 준비 · DP-SMM (진행 중):** [프로젝트](../projects/dp-smm-journal/), [검출기 구조](../projects/dp-smm-journal/docs/architecture.md), [RTL 검증·FPGA 구현](../projects/dp-smm-journal/docs/validation.md)
@@ -10,3 +18,10 @@
 - **USB PAM-3:** [연구 개요](../projects/high-speed-interface-research/docs/usb4-pam3.md), [TX 모델](../projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [차동 측정·FFE 검증](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md)
 - **계측:** [PCB·HFSS](../projects/high-speed-interface-research/docs/pcb-hfss-verification.md), [장비·자동화](../projects/high-speed-interface-research/docs/measurement-equipment.md), [Eye·Shmoo](../projects/high-speed-interface-research/docs/verification-figures.md)
 - **연구 성과:** [논문](publications.md), [검증 상태](validation-status.md), [기술 용어](glossary.md)
+
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->

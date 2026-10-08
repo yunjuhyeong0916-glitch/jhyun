@@ -1,6 +1,15 @@
+<a id="page-top"></a>
+
 # AI 활용 | RTL 구현·FPGA 측정 자동화
 
-[DSP 기반 송수신기 연구](../README.md#dsp-기반-송수신기-연구) · [문서 지도](repository-map.md) · [English](ai-assisted-dsp-workflow.en.md)
+<!-- page-navigation:top -->
+<p>
+  <a href="../README.md#dsp-기반-송수신기-연구" title="DSP 기반 송수신기 연구로 돌아가기"><img src="../assets/readme/nav-back-dsp.svg" alt="DSP 기반 송수신기 연구로 돌아가기" width="112" height="30"></a>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+</p>
+<!-- /page-navigation:top -->
+
+[문서 지도](repository-map.md) · [English](ai-assisted-dsp-workflow.en.md)
 
 PAM4 수신기의 모델이나 계수를 바꿀 때 같은 조건으로 검증을 반복할 수 있도록, 입력·실행·결과 수집을 스크립트로 묶었습니다. AI는 **RTL·테스트벤치와 자동화 코드 작성·수정**에 활용했고, MATLAB MCP로 Codex에서 MATLAB 모델을 실행하고 결과를 확인했습니다.
 
@@ -24,6 +33,10 @@ ZCU208에서는 PS가 계수를 쓰고 적용 여부를 확인하며, PL이 수�
 
 [Vitis 계수 적용·데이터 수집](../projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [A-SSCC 측정 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
----
-
-[DSP 기반 송수신기 연구로 돌아가기](../README.md#dsp-기반-송수신기-연구)
+<!-- page-navigation:bottom -->
+<p>
+  <a href="../README.md#dsp-기반-송수신기-연구" title="DSP 기반 송수신기 연구로 돌아가기"><img src="../assets/readme/nav-back-dsp.svg" alt="DSP 기반 송수신기 연구로 돌아가기" width="112" height="30"></a>
+  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="#page-top" title="페이지 맨 위로 이동"><img src="../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
+</p>
+<!-- /page-navigation:bottom -->
