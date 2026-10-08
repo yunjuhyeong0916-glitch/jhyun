@@ -23,6 +23,7 @@
 
 [PCB 배치·배선과 HFSS S-parameter 분석](docs/pcb-hfss-verification.md)을 수행하고, COB 실장 이후의 출력 Eye를 평가했습니다. 86100D·86118A로 Eye를 관측하고, M8195A·MP1800A·E3631A·I2C를 연동해 [입력·전압·타이밍 조건과 오류 집계](docs/measurement-equipment.md)를 제어했습니다.
 
+- [LPDDR Combo SI·PI 설계](docs/lpddr-combo-si-pi.md)
 - [PCB·HFSS 설계·해석](docs/pcb-hfss-verification.md)
 - [차동 PAM-3 측정·채널별 FFE 효과](docs/pam3-differential-measurement.md)
 - [AWG 샘플레이트 연동·Shmoo 경계 탐색](docs/measurement-equipment.md)

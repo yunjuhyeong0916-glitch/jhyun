@@ -46,7 +46,7 @@ LPDDR4X와 LPDDR5/5X의 클록·위상 조정 자원을 공유하는 Combo Contr
 
 [Combo PHY 구조·TX 모델·제작 칩 검증 상세 보기 →](lpddr-combo.md)
 
-[TX Verilog 모델·코드별 Eye·4-DQ 파형](lpddr-tx-modeling.md) · [PCB·HFSS](pcb-hfss-verification.md)
+[TX Verilog 모델·코드별 Eye·4-DQ 파형](lpddr-tx-modeling.md) · [SI·PI를 고려한 PCB 설계](lpddr-combo-si-pi.md) · [PCB·HFSS](pcb-hfss-verification.md)
 
 관련 논문: [A-SSCC 2026 — LPDDR4X/5/5X Combo Controller PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) · 채택·발표 예정
 

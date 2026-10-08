@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="0 0 600 480" role="img" aria-labelledby="title desc">
+  <title id="title">LPDDR Combo 측정용 PCB의 SI·PI 설계 관점</title>
+  <desc id="desc">SI는 칩 패드와 커넥터 사이의 배선, GND via와 적층을 포함한 HFSS 전달 특성 분석을 다룬다. PI는 기능별 전원 핀과 전원·GND 및 COB 연결 구성을 다룬다. 제작 보드에 칩을 실장한 뒤 4-DQ 동작 조건에서 TX Eye와 RX Shmoo를 평가했다.</desc>
+  <rect width="600" height="480" rx="16" fill="#ffffff"/>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif">
+    <text x="18" y="33" font-size="20" font-weight="700" fill="#1f2937">LPDDR Combo 측정용 PCB: 신호 경로와 전원·GND</text>
+    <rect x="18" y="58" width="564" height="145" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <g fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M36 93h9l6-12 9 24 6-12h13"/></g>
+    <text x="94" y="94" font-size="23" font-weight="700" fill="#1d4ed8">SI · Signal Integrity</text>
+    <text x="36" y="132" font-size="18" fill="#334155">칩 패드 → 배선 → 커넥터 · 주변 GND via·적층 반영</text>
+    <path d="M36 150H564" stroke="#c9dcf8"/>
+    <text x="36" y="181" font-size="19" font-weight="700" fill="#1d4ed8">HFSS 전달 특성 분석: 주파수별 손실·notch 검토</text>
+    <rect x="18" y="217" width="564" height="145" rx="12" fill="#effaf5" stroke="#b9e4ce"/>
+    <g fill="none" stroke="#14804a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M51 234v15m-10 0h20m-16 6h12m-9 6h6"/></g>
+    <text x="94" y="253" font-size="23" font-weight="700" fill="#137347">PI · Power Integrity</text>
+    <text x="36" y="291" font-size="18" fill="#334155">기능별 전원 핀 구분 · 전원·GND와 COB 연결 구성</text>
+    <path d="M36 309H564" stroke="#c8e7d7"/>
+    <text x="36" y="340" font-size="19" font-weight="700" fill="#137347">칩 구동·측정을 위한 전원·GND 배치·연결</text>
+    <rect x="18" y="380" width="564" height="82" rx="12" fill="#f4f6f8" stroke="#d8dee5"/>
+    <text x="300" y="413" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2937">PCB 제작·COB 실장 → 4-DQ 동작 평가</text>
+    <text x="300" y="443" text-anchor="middle" font-size="18" fill="#475569">TX Eye · TX–RX 연결 조건의 RX Shmoo</text>
+  </g>
+</svg>

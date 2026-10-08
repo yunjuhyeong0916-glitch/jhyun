@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[인터페이스 연구](../README.md) · [15.6-Gb/s TX 회로](lpddr-tx-circuit-verification.md) · [TX 모델 상세](lpddr-tx-modeling.md) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+[인터페이스 연구](../README.md) · [15.6-Gb/s TX 회로](lpddr-tx-circuit-verification.md) · [TX 모델 상세](lpddr-tx-modeling.md) · [SI·PI 설계](#si-pi-board-design) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
 LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다릅니다. 이 연구는 세대별 클록·위상 조정 회로를 각각 구현할 때 늘어나는 면적을 줄이기 위해, **클록·위상 조정 자원을 공유하고 모드에 따라 신호 경로를 바꾸는 Combo Controller PHY**를 구현했습니다.
 
@@ -29,7 +29,7 @@ LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다�
 
 [A-SSCC 2026 논문 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141). 빨간색은 LPDDR4X, 보라색은 LPDDR5/5X, 하늘색은 공통 클록 경로입니다.
 
-PHY에는 **4개의 DQ TRX, 2개의 CA TX, CK TX, DQS TRX, WCK TX와 ZQ 보정 블록**이 들어갑니다. 같은 위상 조정 자원을 LPDDR4X에서는 DQS, LPDDR5/5X에서는 WCK에 사용하고, DQ와 strobe의 상대 타이밍은 PI·delay line으로 조정합니다. 제가 담당한 TX는 각 DQ 경로에서 병렬 데이터를 직렬화하고 출력 보상을 적용하는 부분입니다.
+PHY에는 **4개의 DQ TRX, 2개의 CA TX, CK TX, DQS TRX, WCK TX와 ZQ 보정 블록**이 들어갑니다. 같은 위상 조정 자원을 LPDDR4X에서는 DQS, LPDDR5/5X에서는 WCK에 사용하고, DQ와 strobe의 상대 타이밍은 phase interpolator·delay line으로 조정합니다. 제가 담당한 TX는 각 DQ 경로에서 병렬 데이터를 직렬화하고 출력 보상을 적용하는 부분입니다.
 
 ## TX 모델에서 데이터 순서·위상·출력 보상을 연결
 
@@ -52,6 +52,16 @@ main 데이터와 지연 데이터의 간격이 1 UI에서 벗어나면 pre-emph
 ![Combo PHY 통합 모델의 Write 동작에서 확인한 DQ0부터 DQ3까지의 PRBS7 출력](../assets/lpddr_combo_tx_model_dq4_prbs.png)
 
 위부터 DQ0–DQ3입니다. DQ별 지연 코드에 따른 WCK와 데이터 에지의 상대 위치도 [통합 검증 파형](lpddr-tx-modeling.md#dq별-지연-설정과-wck의-상대-위상)에서 확인했습니다.
+
+<a id="si-pi-board-design"></a>
+
+## SI·PI를 고려한 측정용 PCB 설계
+
+TX를 제작 칩에서 평가하기 위해, **DQ·strobe의 신호 전달과 기능별 전원·GND 연결**을 함께 고려해 측정용 PCB를 설계했습니다. SI(Signal Integrity)는 배선·GND via를 포함한 HFSS 전달 특성으로 검토하고, PI(Power Integrity)는 칩 구동을 위한 전원·GND 배치와 COB 연결 구성으로 다뤘습니다.
+
+![LPDDR Combo 측정용 PCB의 SI·PI 설계 관점과 제작 칩 평가 흐름](../assets/lpddr_combo_si_pi_overview.svg)
+
+[SI·PI 설계 상세 보기 — PCB 배치·HFSS 모델·전달 손실 →](lpddr-combo-si-pi.md)
 
 ## 제작 보드에서 확인한 28 nm Combo PHY의 동작
 
