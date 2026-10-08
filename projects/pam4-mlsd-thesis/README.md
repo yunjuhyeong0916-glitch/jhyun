@@ -1,6 +1,6 @@
 # 학위논문 연구 | DS-SBM·DP-SMM 비교 (진행 중)
 
-축소 상태 MLSD의 후보 선택이 판정 성능에 미치는 영향을 연구하고 있습니다. **DS-SBM과 DP-SMM의 신호 경로·후보 보존·메트릭 합성·프레임 경계 갱신**을 비교하고, 동일 입력의 코어 시험으로 행렬 경로 수의 영향을 확인했습니다.
+축소 상태 MLSD의 후보 선택이 판정 성능에 미치는 영향을 연구하고 있습니다. **[DS-SBM과 DP-SMM의 신호 경로·후보 보존·메트릭 합성·프레임 경계 갱신](docs/architecture.md)**을 비교하고, [동일 입력의 코어 시험](docs/validation.md#동일-입력에서의-후보-보존-효과)으로 행렬 경로 수의 영향을 확인했습니다.
 
 [첫 화면](../../README.md) · [구조 비교](docs/architecture.md) · [모델·RTL 비교 결과](docs/validation.md) · [A-SSCC DS-SBM](../zcu208-pam4-dsp-portfolio/) · [Journal DP-SMM](../dp-smm-journal/)
 
@@ -26,7 +26,7 @@
 
 ## 하드웨어 검증
 
-DS-SBM RFSoC 송수신 시스템의 측정 결과는 추정 손실 41 dB에서 PRBS7 BER < 10⁻⁷·PRBS15 BER < 2×10⁻⁶입니다. DP-SMM은 보드 측정 준비 단계이며, AWG 기반 ADC-DSP 수신 경로의 BER·PR 등고선·연속 처리율을 평가할 예정입니다.
+[DS-SBM RFSoC 송수신 시스템의 측정 결과](../zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)는 추정 손실 41 dB에서 PRBS7 BER < 10⁻⁷·PRBS15 BER < 2×10⁻⁶입니다. DP-SMM은 보드 측정 준비 단계이며, AWG 기반 ADC-DSP 수신 경로의 BER·PR 등고선·연속 처리율을 평가할 예정입니다.
 
 [DS-SBM 시스템 측정](../zcu208-pam4-dsp-portfolio/docs/validation.md) · [DP-SMM 구조와 Journal 준비](../dp-smm-journal/)
 

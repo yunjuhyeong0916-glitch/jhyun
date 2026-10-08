@@ -1,6 +1,6 @@
 # Journal 준비 | DP-SMM 기반 PAM4 검출기 (진행 중)
 
-DP-SMM의 보드 평가는 **21-tap RX FFE**를 적용한 수신 구성으로 진행합니다. DS-SBM의 구간 행렬 구조를 확장해, 행렬 원소마다 두 경로를 남기고 실제 심볼 이력으로 비용을 다시 계산합니다. 구간 계산에서 두 번째였던 경로도 최종 판정에 사용할 수 있도록 설계했습니다.
+DP-SMM의 보드 평가는 **21-tap RX FFE**를 적용한 수신 구성으로 진행합니다. [DS-SBM의 구간 행렬 구조](../zcu208-pam4-dsp-portfolio/docs/architecture.md)를 확장해, 행렬 원소마다 두 경로를 남기고 [실제 심볼 이력으로 비용을 다시 계산](docs/architecture.md#실제-이력에-따른-비용과-프레임-경계-선택)합니다. 구간 계산에서 두 번째였던 경로도 최종 판정에 사용할 수 있도록 설계했습니다.
 
 [첫 화면](../../README.md) · [검출기 구조](docs/architecture.md) · [RTL 검증·FPGA 구현](docs/validation.md) · [DS-SBM·DP-SMM 비교 연구](../pam4-mlsd-thesis/)
 

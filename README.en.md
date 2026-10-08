@@ -1,10 +1,10 @@
 # Juhyeong Yun | Hardware Design & Verification
 
-I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC LPDDR and USB4 Gen4 specifications** and **DSP-based transceivers for ultra-high-speed communication**.
+I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/) for ultra-high-speed communication**.
 
-I design circuits and systems that compensate for channel loss and ISI to support reliable data transmission at high speeds.
+I design [circuits](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) and [systems](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) that compensate for channel loss and ISI to support reliable data transmission at high speeds.
 
-In line with current design trends, I use AI to assist with RTL and testbench development and with verification and measurement automation. My automation scripts allow checks to be repeated under the same conditions after design changes.
+In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md) to assist with RTL and testbench development and with verification and measurement automation. My automation scripts allow checks to be repeated under the same conditions after design changes.
 
 [DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB interfaces](#lpddr--usb-interface-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [GitHub profile](https://github.com/yunjuhyeong0916-glitch) · [한국어](README.md)
 
@@ -13,17 +13,17 @@ In line with current design trends, I use AI to assist with RTL and testbench de
 <details>
 <summary><strong>View research · Thesis / Journal preparation / A-SSCC / AI assistance</strong></summary>
 
-The ongoing master's thesis compares DS-SBM and DP-SMM and evaluates candidate retention. The journal project develops DP-SMM, and the A-SSCC study validates a DS-SBM RFSoC transceiver.
+The ongoing [master's thesis](projects/pam4-mlsd-thesis/) compares DS-SBM and DP-SMM and evaluates candidate retention. The [journal project](projects/dp-smm-journal/) develops DP-SMM, and the [A-SSCC study](projects/zcu208-pam4-dsp-portfolio/) validates a DS-SBM RFSoC transceiver.
 
 ### Master's thesis | DS-SBM and DP-SMM comparison (in progress)
 
-Compared the signal paths, candidate retention and frame-boundary updates of the two architectures. Identical-input R=1/R=2 tests within DP-SMM evaluate how matrix-path retention affects error counts.
+Compared the [signal paths, candidate retention and frame-boundary updates](projects/pam4-mlsd-thesis/docs/architecture.md) of the two architectures. Identical-input R=1/R=2 tests within DP-SMM evaluate [how matrix-path retention affects error counts](projects/pam4-mlsd-thesis/docs/validation.md#동일-입력에서의-후보-보존-효과).
 
 [Thesis project](projects/pam4-mlsd-thesis/) · [Architecture comparison](projects/pam4-mlsd-thesis/docs/architecture.md) · [Model and RTL results](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ### Journal preparation | DP-SMM design and verification (in progress)
 
-Extended the DS-SBM segment-matrix architecture to retain two path proposals per entry through matrix composition and rescore them using actual symbol histories. Two accumulated-metric survivors per state carry alternative paths into the next frame. Verified the RTL against a reference model and completed FPGA place and route; board measurements are planned with a **21-tap RX FFE + DP-SMM** receiver.
+Extended the DS-SBM segment-matrix architecture to retain [two path proposals per entry](projects/dp-smm-journal/docs/architecture.md) through matrix composition and rescore them using actual symbol histories. Two accumulated-metric survivors per state carry alternative paths into the next frame. Verified the [RTL against a reference model](projects/dp-smm-journal/docs/validation.md) and completed FPGA place and route; board measurements are planned with a **21-tap RX FFE + DP-SMM** receiver.
 
 **A patent application for DP-SMM is in preparation.**
 
@@ -31,7 +31,7 @@ Extended the DS-SBM segment-matrix architecture to retain two path proposals per
 
 ### A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP
 
-Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with the ZCU208 RFSoC. The Vivado / Vitis flow covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an ISI board to ADC capture.
+Integrated **[32-lane PAM4 DSP](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with the ZCU208 RFSoC. The [Vivado / Vitis flow](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an [ISI board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) to ADC capture.
 
 [A-SSCC project](projects/zcu208-pam4-dsp-portfolio/) · [Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis / FPGA bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 

@@ -2,7 +2,7 @@
 
 [저장소 첫 화면](../../README.md) · [측정·자동화](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문·담당 역할](docs/evidence.md)
 
-LPDDR 저전압 TX를 설계하고 Schematic·Post-Layout 검증을 수행했습니다. USB PAM-3에서는 TX 논리 RTL·동작 모델과 RX CTLE 모델을 구현하고, 송수신 통합·제작 TX의 차동 신호 평가에 참여했습니다.
+[LPDDR 저전압 TX](docs/lpddr-tx-circuit-verification.md)를 설계하고 Schematic·Post-Layout 검증을 수행했습니다. USB PAM-3에서는 [TX 논리 RTL·동작 모델](docs/usb-tx-modeling.md)과 [RX CTLE 모델](docs/usb-rx-ctle-modeling.md)을 구현하고, 송수신 통합·제작 TX의 [차동 신호 평가](docs/pam3-differential-measurement.md)에 참여했습니다.
 
 ## 설계·결과
 
@@ -13,7 +13,7 @@ LPDDR 저전압 TX를 설계하고 Schematic·Post-Layout 검증을 수행했습
 
 ## PCB·계측
 
-PCB 배치·배선과 HFSS S-parameter 분석을 수행하고, COB 실장 이후의 출력 Eye를 평가했습니다. 86100D·86118A로 Eye를 관측하고, M8195A·MP1800A·E3631A·I2C를 연동해 입력·전압·타이밍 조건과 오류 집계를 제어했습니다.
+[PCB 배치·배선과 HFSS S-parameter 분석](docs/pcb-hfss-verification.md)을 수행하고, COB 실장 이후의 출력 Eye를 평가했습니다. 86100D·86118A로 Eye를 관측하고, M8195A·MP1800A·E3631A·I2C를 연동해 [입력·전압·타이밍 조건과 오류 집계](docs/measurement-equipment.md)를 제어했습니다.
 
 - [PCB·HFSS 설계·해석](docs/pcb-hfss-verification.md)
 - [차동 PAM-3 측정·채널별 FFE 효과](docs/pam3-differential-measurement.md)

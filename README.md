@@ -1,10 +1,10 @@
 # 윤주형 | HW 설계·검증
 
-안녕하세요. 윤주형입니다. **JEDEC LPDDR 및 USB4 Gen4 규격 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 DSP 기반 Transceiver 연구**를 진행하고 있습니다.
+안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 [DSP 기반 Transceiver 연구](projects/)**를 진행하고 있습니다.
 
-채널 손실과 ISI를 고려해 신호를 보상하고, 높은 전송 속도에서도 데이터를 안정적으로 주고받을 수 있는 회로와 시스템을 설계합니다.
+채널 손실과 ISI를 고려해 신호를 보상하고, 높은 전송 속도에서도 데이터를 안정적으로 주고받을 수 있는 [회로](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)와 [시스템](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)을 설계합니다.
 
-최근 설계 트렌드에 맞게 AI를 RTL·테스트벤치 작성과 검증·측정 자동화에 활용하고 있습니다. 설계가 바뀌어도 같은 조건으로 검증을 반복할 수 있도록 자동화 코드를 구성했습니다.
+최근 설계 트렌드에 맞게 [AI](docs/ai-assisted-dsp-workflow.md)를 RTL·테스트벤치 작성과 검증·측정 자동화에 활용하고 있습니다. 설계가 바뀌어도 같은 조건으로 검증을 반복할 수 있도록 자동화 코드를 구성했습니다.
 
 [DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB 인터페이스](#lpddrusb-인터페이스-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch) · [English](README.en.md)
 
@@ -13,17 +13,17 @@
 <details>
 <summary><strong>연구 내용 보기 · 학위논문 / Journal 준비 / A-SSCC / AI 활용</strong></summary>
 
-학위논문에서는 DS-SBM과 DP-SMM의 구조를 비교하고 후보 보존 효과를 검증하고 있습니다. Journal 준비 연구는 DP-SMM 설계를, A-SSCC 연구는 DS-SBM의 RFSoC 송수신 실측을 다룹니다.
+[학위논문](projects/pam4-mlsd-thesis/)에서는 DS-SBM과 DP-SMM의 구조를 비교하고 후보 보존 효과를 검증하고 있습니다. [Journal 준비 연구](projects/dp-smm-journal/)는 DP-SMM 설계를, [A-SSCC 연구](projects/zcu208-pam4-dsp-portfolio/)는 DS-SBM의 RFSoC 송수신 실측을 다룹니다.
 
 ### 학위논문 연구 | DS-SBM·DP-SMM 비교 (진행 중)
 
-두 구조의 신호 경로·후보 보존·프레임 경계 갱신을 비교했습니다. DP-SMM에서는 행렬 원소마다 경로를 하나 또는 두 개 남기는 코어에 동일 입력을 적용해, 후보 보존이 오류 수에 미치는 영향을 확인했습니다.
+두 구조의 [신호 경로·후보 보존·프레임 경계 갱신](projects/pam4-mlsd-thesis/docs/architecture.md)을 비교했습니다. DP-SMM에서는 행렬 원소마다 경로를 하나 또는 두 개 남기는 코어에 동일 입력을 적용해, [후보 보존이 오류 수에 미치는 영향](projects/pam4-mlsd-thesis/docs/validation.md#동일-입력에서의-후보-보존-효과)을 확인했습니다.
 
 [학위논문 프로젝트](projects/pam4-mlsd-thesis/) · [구조 비교](projects/pam4-mlsd-thesis/docs/architecture.md) · [모델·RTL 비교 결과](projects/pam4-mlsd-thesis/docs/validation.md)
 
 ### Journal 준비 | DP-SMM 설계·검증 (진행 중)
 
-DS-SBM의 구간 행렬 구조를 확장해, 합성 단계마다 두 경로를 보존하고 실제 심볼 이력으로 비용을 재평가하는 DP-SMM 검출기를 설계했습니다. 프레임 경계에서도 상태별 두 후보를 남겨 다음 프레임의 판정에 활용합니다. 참조 모델과 RTL의 일치를 확인하고 FPGA 배치배선을 수행했으며, **21-tap RX FFE + DP-SMM** 구성으로 보드 실측을 준비합니다.
+DS-SBM의 구간 행렬 구조를 확장해, 합성 단계마다 두 경로를 보존하고 실제 심볼 이력으로 비용을 재평가하는 [DP-SMM 검출기](projects/dp-smm-journal/docs/architecture.md)를 설계했습니다. 프레임 경계에서도 상태별 두 후보를 남겨 다음 프레임의 판정에 활용합니다. [참조 모델과 RTL의 일치](projects/dp-smm-journal/docs/validation.md)를 확인하고 FPGA 배치배선을 수행했으며, **21-tap RX FFE + DP-SMM** 구성으로 보드 실측을 준비합니다.
 
 **DP-SMM 특허 출원 준비 중.**
 
@@ -31,7 +31,7 @@ DS-SBM의 구간 행렬 구조를 확장해, 합성 단계마다 두 경로를 �
 
 ### A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP
 
-ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를 통합했습니다. Vivado·Vitis로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 ISI 보드를 거쳐 ADC로 수신 신호를 캡처했습니다.
+ZCU208 RFSoC에 **[32-lane PAM4 DSP](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를 통합했습니다. [Vivado·Vitis](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md)로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 [ISI 보드](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)를 거쳐 ADC로 수신 신호를 캡처했습니다.
 
 [A-SSCC 프로젝트](projects/zcu208-pam4-dsp-portfolio/) · [설계 판단](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis·FPGA 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
