@@ -53,7 +53,7 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 
 ## 후속 DP-SMM 설계와 구조 비교
 
-DP-SMM의 두 경로 보존·이력 반영 비용과 구현은 [Journal 준비 프로젝트](../../dp-smm-journal/)에 정리했습니다. [학위논문](../../pam4-mlsd-thesis/)에서는 DS-SBM과 DP-SMM의 구조를 비교하고 동일 입력의 후보 보존 효과를 평가합니다.
+DP-SMM의 두 경로 보존·이력 반영 비용과 구현은 [Journal 준비 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)에 정리했습니다. [학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)에서는 DS-SBM과 DP-SMM의 구조를 비교하고 동일 입력의 후보 보존 효과를 평가합니다.
 
 [RTL 구조](architecture.md) · [검증 결과](validation.md)
 

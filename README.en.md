@@ -6,7 +6,7 @@
 
 # Juhyeong Yun | High-Speed Interface & DSP Transceiver Research
 
-Kwangwoon University · Master's thesis research in progress · [GitHub profile](https://github.com/yunjuhyeong0916-glitch)
+Kwangwoon University · Master's thesis research in progress
 
 I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/README.md#dsp-transceiver-research) for ultra-high-speed communication**.
 
@@ -28,31 +28,18 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 ## DSP transceiver research
 
 <p>
-<a href="projects/pam4-mlsd-thesis/"><img src="assets/readme/status-thesis-en.svg" alt="Thesis · In progress" width="166" height="30"></a>
-<a href="projects/dp-smm-journal/"><img src="assets/readme/status-journal-en.svg" alt="Journal · In progress" width="174" height="30"></a>
 <a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc-en.svg" alt="A-SSCC 2026 · Accepted" width="194" height="30"></a>
 </p>
 
 **My role and key result:** I implemented PAM4 transceiver DSP and detector RTL and [validated receiver performance on an RFSoC board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정). The resulting [A-SSCC 2026 paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) was accepted.
 
+<a id="masters-thesis--ds-sbm-and-dp-smm-comparison-in-progress"></a>
+<a id="journal-preparation--dp-smm-design-and-verification-in-progress"></a>
+
+Ongoing **[thesis and journal research](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md)** is available in a separate repository.
+
 <details>
-<summary><strong>View research · Thesis / Journal preparation / A-SSCC / AI assistance</strong></summary>
-
-The ongoing [master's thesis](projects/pam4-mlsd-thesis/) compares DS-SBM and DP-SMM and evaluates candidate retention. The [journal project](projects/dp-smm-journal/) develops DP-SMM, and the [A-SSCC study](projects/zcu208-pam4-dsp-portfolio/) validates a DS-SBM RFSoC transceiver.
-
-### Master's thesis | DS-SBM and DP-SMM comparison (in progress)
-
-I compared the [signal paths, candidate retention and frame-boundary updates](projects/pam4-mlsd-thesis/docs/architecture.md) of the two architectures. I used identical inputs for R=1/R=2 tests within DP-SMM to evaluate [how matrix-path retention affects error counts](projects/pam4-mlsd-thesis/docs/validation.md#동일-입력에서의-후보-보존-효과).
-
-[Thesis project](projects/pam4-mlsd-thesis/) · [Architecture comparison](projects/pam4-mlsd-thesis/docs/architecture.md) · [Model and RTL results](projects/pam4-mlsd-thesis/docs/validation.md)
-
-### Journal preparation | DP-SMM design and verification (in progress)
-
-I extended the DS-SBM segment-matrix architecture to retain [two path proposals per entry](projects/dp-smm-journal/docs/architecture.md) through matrix composition and rescore them using actual symbol histories. Two accumulated-metric survivors per state carry alternative paths into the next frame. I verified the [RTL against a reference model](projects/dp-smm-journal/docs/validation.md) and completed FPGA place and route. Board measurements are planned with a **21-tap RX FFE + DP-SMM** receiver.
-
-**A patent application for DP-SMM is in preparation.**
-
-[DP-SMM journal project](projects/dp-smm-journal/) · [DS-SBM / DP-SMM comparison figure](projects/dp-smm-journal/#ds-sbm에서-확장한-점) · [RTL verification and FPGA implementation](projects/dp-smm-journal/docs/validation.md)
+<summary><strong>View research · A-SSCC / AI assistance</strong></summary>
 
 ### A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP
 

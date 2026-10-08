@@ -13,7 +13,7 @@
     <text x="106" y="70" font-size="21" font-weight="700" fill="#1f2328">DSP transceiver research</text>
     <text x="106" y="96" font-size="12" fill="#59636e">Detector RTL design · RFSoC board validation</text>
     <path d="M22 113H428" stroke="#e8ecf0"/>
-    <text x="22" y="137" font-size="12" fill="#59636e">Master&#x27;s thesis · Journal preparation · A-SSCC 2026</text>
+    <text x="22" y="137" font-size="12" fill="#59636e">A-SSCC 2026 · DSP / RFSoC verification</text>
     <path d="M413 128l5 5-5 5m-10-5h15" stroke="#0969da" stroke-width="1.7" fill="none"/>
   </g>
 </svg>

@@ -6,7 +6,7 @@
 
 # 윤주형 | High-Speed Interface·DSP Transceiver 연구
 
-광운대학교 · 석사 학위논문 연구 중 · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch)
+광운대학교 · 석사 학위논문 연구 중
 
 안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 <strong>Ultra High-Speed 통신을 위한 <a href="projects/README.md#dsp-transceiver-research">DSP 기반 Transceiver 연구</a></strong>를 진행하고 있습니다.
 
@@ -28,31 +28,18 @@
 ## DSP 기반 송수신기 연구
 
 <p>
-<a href="projects/pam4-mlsd-thesis/"><img src="assets/readme/status-thesis.svg" alt="학위논문 · 진행 중" width="157" height="30"></a>
-<a href="projects/dp-smm-journal/"><img src="assets/readme/status-journal.svg" alt="Journal · 진행 중" width="153" height="30"></a>
 <a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc.svg" alt="A-SSCC 2026 · 채택" width="172" height="30"></a>
 </p>
 
 **담당·대표 성과:** PAM4 송수신 DSP·검출기를 RTL로 구현하고 [RFSoC 보드에서 수신 성능을 검증](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)했습니다. 이 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 
+<a id="학위논문-연구--ds-sbmdp-smm-비교-진행-중"></a>
+<a id="journal-준비--dp-smm-설계검증-진행-중"></a>
+
+진행 중인 **[학위논문·Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md)**는 별도 저장소에서 볼 수 있습니다.
+
 <details>
-<summary><strong>연구 내용 보기 · 학위논문 / Journal 준비 / A-SSCC / AI 활용</strong></summary>
-
-[학위논문](projects/pam4-mlsd-thesis/)에서는 DS-SBM과 DP-SMM의 구조를 비교하고 후보 보존 효과를 검증하고 있습니다. [Journal 준비 연구](projects/dp-smm-journal/)는 DP-SMM 설계를, [A-SSCC 연구](projects/zcu208-pam4-dsp-portfolio/)는 DS-SBM의 RFSoC 송수신 실측을 다룹니다.
-
-### 학위논문 연구 | DS-SBM·DP-SMM 비교 (진행 중)
-
-두 구조의 [신호 경로·후보 보존·프레임 경계 갱신](projects/pam4-mlsd-thesis/docs/architecture.md)을 비교했습니다. DP-SMM에서는 행렬 원소마다 경로를 하나 또는 두 개 남기는 코어에 동일 입력을 적용해, [후보 보존이 오류 수에 미치는 영향](projects/pam4-mlsd-thesis/docs/validation.md#동일-입력에서의-후보-보존-효과)을 확인했습니다.
-
-[학위논문 프로젝트](projects/pam4-mlsd-thesis/) · [구조 비교](projects/pam4-mlsd-thesis/docs/architecture.md) · [모델·RTL 비교 결과](projects/pam4-mlsd-thesis/docs/validation.md)
-
-### Journal 준비 | DP-SMM 설계·검증 (진행 중)
-
-DS-SBM의 구간 행렬 구조를 확장해, 합성 단계마다 두 경로를 보존하고 실제 심볼 이력으로 비용을 재평가하는 [DP-SMM 검출기](projects/dp-smm-journal/docs/architecture.md)를 설계했습니다. 프레임 경계에서도 상태별 두 후보를 남겨 다음 프레임의 판정에 활용합니다. [참조 모델과 RTL의 일치](projects/dp-smm-journal/docs/validation.md)를 확인하고 FPGA 배치배선을 수행했으며, **21-tap RX FFE + DP-SMM** 구성으로 보드 실측을 준비합니다.
-
-**DP-SMM 특허 출원 준비 중.**
-
-[DP-SMM Journal 프로젝트](projects/dp-smm-journal/) · [DS-SBM·DP-SMM 비교 그림](projects/dp-smm-journal/#ds-sbm에서-확장한-점) · [RTL 검증·FPGA 구현](projects/dp-smm-journal/docs/validation.md)
+<summary><strong>연구 내용 보기 · A-SSCC / AI 활용</strong></summary>
 
 ### A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP
 

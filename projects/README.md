@@ -18,9 +18,9 @@
 
 | 프로젝트 | 설계·검증 | 결과 |
 |---|---|---|
-| [학위논문 · DS-SBM·DP-SMM 비교 (진행 중)](pam4-mlsd-thesis/) | 수신 검출기의 후보 보존 방식과 판정 성능 비교 | 동일 입력의 코어 비교, 모델·RTL의 판정 결과와 출력 타이밍 확인 |
-| [Journal 준비 · DP-SMM (진행 중)](dp-smm-journal/) | 두 경로 후보를 남기고 실제 심볼 이력으로 다시 평가하는 검출기 설계 | 참조 모델·RTL 일치, FPGA 배치배선, 보드 측정 준비 |
 | [A-SSCC 2026 · DS-SBM PAM4 DSP](zcu208-pam4-dsp-portfolio/) | PAM4 송수신 DSP·검출기 RTL 구현과 RFSoC 보드 통합 | ISI 보드 수신 검증, FPGA 자원·타이밍 확인, A-SSCC 2026 채택 |
+
+진행 중인 [학위논문·Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md)는 별도 연구 저장소에 정리했습니다.
 
 ## LPDDR·USB 인터페이스 연구
 

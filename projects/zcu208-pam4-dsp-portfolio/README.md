@@ -9,13 +9,13 @@
 </p>
 <!-- /page-navigation:top -->
 
-[설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [Vitis·FPGA 구동](docs/vitis-bringup.md) · [측정·구현 결과](docs/validation.md)
+[설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [Vitis·FPGA 구동](docs/vitis-bringup.md) · [측정·구현 결과](docs/validation.md) · [AI 활용·자동화](#ai-활용검증-자동화)
 
 PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위해 **송수신 DSP·검출기 RTL과 RFSoC 제어·오류 검사 경로**를 구현했습니다. ISI 보드를 통한 송수신 평가 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 
 ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 **[32-lane 병렬 DSP](docs/architecture.md)**로 구현해 연결했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
 
-후속 DP-SMM 설계는 [Journal 준비 프로젝트](../dp-smm-journal/), 두 구조의 비교는 [학위논문](../pam4-mlsd-thesis/)에서 다룹니다.
+후속 DP-SMM 설계는 [Journal 준비 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md), 두 구조의 비교는 [학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)에서 다룹니다.
 
 ## 설계·구현
 
@@ -65,11 +65,24 @@ Vivado에서 내보낸 XSA로 Vitis 플랫폼을 구성하고 Cortex-A53 Standal
 
 [상세 결과·검증 조건](docs/validation.md)
 
+## AI 활용·검증 자동화
+
+RTL·테스트벤치 작성과 계수 설정·데이터 수집·BER 분석을 연결하는 자동화 코드 구성에 AI를 활용했습니다. 검출기 구조와 검증 조건을 정하고, 모델·RTL 대조와 보드 측정으로 결과를 확인했습니다.
+
+[사용 Toolbox·MATLAB MCP·자동화 harness 연결 구조](../../docs/ai-assisted-dsp-workflow.md)
+
+<details>
+<summary>계수 설정부터 캡처·BER 분석까지의 측정 harness 보기</summary>
+
+![PowerShell 실행기에서 Vitis·XSCT·UART 수집과 ILA CSV·Python BER 분석으로 이어지는 ZCU208 측정 자동화 구조](../../assets/ai_measurement_harness_ko.svg)
+
+</details>
+
 ## 관련 논문
 
 [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 기준).
 
-[학위논문 비교 연구 (진행 중)](../pam4-mlsd-thesis/) · [Journal DP-SMM](../dp-smm-journal/) · [전체 논문](../../docs/publications.md)
+[학위논문 비교 연구 (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) · [Journal DP-SMM](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) · [전체 논문](../../docs/publications.md)
 
 **도구:** Verilog / SystemVerilog · Vivado·Vitis 2022.2 · XSim · ZCU208 RFSoC · Python
 

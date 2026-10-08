@@ -13,27 +13,10 @@
 
 기준일: **2026-10-07**.
 
-## 학위논문 | DS-SBM·DP-SMM 비교 (진행 중)
+<a id="학위논문--ds-sbmdp-smm-비교-진행-중"></a>
+<a id="journal-준비--dp-smm-진행-중"></a>
 
-| 항목 | 결과 | 조건 |
-|---|---|---|
-| 구조 비교 | 신호 경로·행렬 후보·경계 PM 갱신 비교 | DS-SBM과 DP-SMM |
-| 후보 보존 효과 | R=2의 오류 수가 R=1보다 36.9%·46.1% 감소 | memory-2 합성 응답 A·B, SNR 16 dB, 경계 후보 수 K_H=2 고정 |
-| R=1/R=2 코어 RTL | 참조 출력·메트릭·경로 정보 일치 | 연속·간격 입력, reset 후 재시작 |
-| DP-SMM 실측 | 예정 | AWG 기반 ADC-DSP 수신 평가 |
-
-[동일 입력 비교·RTL 검증 조건](../projects/pam4-mlsd-thesis/docs/validation.md).
-
-## Journal 준비 | DP-SMM (진행 중)
-
-| 항목 | 결과 | 조건·출처 |
-|---|---|---|
-| 검출기 코어 RTL | bit-accurate 참조 모델과 일치, 지연 23클록·II=1 | 개정 K=2 및 행렬 K=1 비교 코어 |
-| 기존 RX FFE 통합 RTL | 참조와 일치, 지연 24클록·II=1 | 기존 11-tap RX FFE·검출기 통합 구성 |
-| 검출기 FPGA 자원 | LUT 266,664·FF 168,330·BRAM 240·DSP 1,664 | Journal 초안의 post-route 구현, RX FFE 제외 |
-| 보드 실측 | 예정 | 21-tap RX FFE + DP-SMM, BER·PR 등고선·연속 처리율 |
-
-[Journal RTL 검증·구현 조건](../projects/dp-smm-journal/docs/validation.md).
+진행 중인 [학위논문·Journal 검증 현황](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/validation-status.md)은 연구 저장소에 정리했습니다.
 
 ## A-SSCC 2026 | DS-SBM PAM4 DSP
 

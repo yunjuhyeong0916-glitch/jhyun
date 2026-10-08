@@ -21,7 +21,7 @@ PAM4 수신기의 모델이나 계수를 바꿀 때 같은 조건으로 검증�
 
 RTL 검증은 **PowerShell runner → Python 참조 벡터 생성 → Vivado XSim** 순서로 연결했습니다. 채널 CSV에서 입력·기대값 HEX를 만든 뒤, 테스트벤치가 같은 입력·계수로 **FFE 출력·검출기 판정·출력 시점**을 비교합니다. runner는 각 도구의 종료 상태와 PASS 로그를 검사해, 코드 수정 후에도 같은 절차로 다시 검증하도록 구성했습니다.
 
-[모델·RTL 검증 결과](../projects/dp-smm-journal/docs/validation.md)
+[후속 DP-SMM 모델·RTL 검증 결과](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/docs/validation.md)
 
 ## ZCU208 측정 harness
 

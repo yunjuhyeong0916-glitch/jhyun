@@ -21,7 +21,7 @@ I used `sparameters` in [RF Toolbox](https://www.mathworks.com/help/rf/ref/spara
 
 I linked **Python reference-vector generation and Vivado XSim** through a **PowerShell runner**. Channel CSV becomes input and expected-value HEX files. The testbench applies identical inputs and coefficients, comparing **FFE outputs, detector decisions and output timing**. The runner checks tool exit status and the PASS log, allowing the same verification procedure to be repeated after code changes.
 
-[Model–RTL verification results](../projects/dp-smm-journal/docs/validation.md)
+[Follow-up DP-SMM model–RTL verification](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/docs/validation.md)
 
 ## ZCU208 measurement harness
 

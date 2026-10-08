@@ -130,7 +130,7 @@ A-SSCC 2026, p. 2 Fig. 5. 21-tap RX FFE와 3-tap PR 조건에서 PR 계수에 �
 
 ## 관련 연구
 
-[학위논문 DS-SBM·DP-SMM 비교 (진행 중)](../../pam4-mlsd-thesis/) · [Journal DP-SMM 설계·검증](../../dp-smm-journal/)
+[학위논문 DS-SBM·DP-SMM 비교 (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) · [Journal DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)
 
 <!-- page-navigation:bottom -->
 <p>
