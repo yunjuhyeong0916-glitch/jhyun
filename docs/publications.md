@@ -1,6 +1,6 @@
 # 연구 성과 논문
 
-[저장소 첫 화면](../README.md) · [학위논문 (진행 중)](../projects/pam4-mlsd-thesis/) · [Journal 준비 (진행 중)](../projects/dp-smm-journal/) · [A-SSCC DSP 프로젝트](../projects/zcu208-pam4-dsp-portfolio/) · [LPDDR·USB 연구](../projects/high-speed-interface-research/)
+[저장소 첫 화면](../README.md) · [학위논문 (진행 중)](../projects/pam4-mlsd-thesis/) · [Journal 준비 (진행 중)](../projects/dp-smm-journal/) · [A-SSCC DSP 프로젝트](../projects/zcu208-pam4-dsp-portfolio/) · [LPDDR·USB 인터페이스 연구](../projects/high-speed-interface-research/)
 
 기준일: **2026-10-07**.
 

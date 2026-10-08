@@ -4,7 +4,7 @@ I'm Juhyeong Yun, a researcher working on high-speed interface circuits and DSP.
 
 I focus on whether the intended behavior of a design is preserved in hardware. I compare model and RTL decisions and evaluate system behavior through FPGA implementation and board measurements.
 
-[DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB](#lpddr--usb-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [GitHub profile](https://github.com/yunjuhyeong0916-glitch) · [한국어](README.md)
+[DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB interfaces](#lpddr--usb-interface-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [GitHub profile](https://github.com/yunjuhyeong0916-glitch) · [한국어](README.md)
 
 ## DSP transceiver research
 
@@ -38,14 +38,16 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 
 [Toolbox roles and automation harness diagrams](docs/ai-assisted-dsp-workflow.en.md)
 
-## LPDDR / USB research
+<a id="lpddr--usb-research"></a>
+
+## LPDDR / USB interface research
 
 | Research | Design and verification work | Key results |
 |---|---|---|
 | [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX circuits](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog models](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), [PCB / HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) | 14 Gb/s/pin Combo PHY; TX eye 0.41 UI / 65.3 mV; RX margin 0.25 UI / 25 mV |
 | [USB&nbsp;PAM&#8209;3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX models / RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE models](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [Differential PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | 32 Gb/s, PRBS15, 17.3-dB loss at 10.24 GHz<br>Upper eye: 11.19 ps / 21.16 mV<br>Lower eye: 11.67 ps / 19.80 mV |
 
-[PCB / HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR / USB projects](projects/high-speed-interface-research/)
+[PCB / HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR / USB interface research](projects/high-speed-interface-research/)
 
 ## Measurement / verification
 

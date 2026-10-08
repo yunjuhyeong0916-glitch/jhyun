@@ -1,4 +1,4 @@
-# LPDDR·USB 고속 인터페이스 설계·검증
+# LPDDR·USB 고속 인터페이스 연구
 
 [저장소 첫 화면](../../README.md) · [측정·자동화](docs/measurement-equipment.md) · [검증 그림](docs/verification-figures.md) · [논문·담당 역할](docs/evidence.md)
 

@@ -36,7 +36,7 @@
 
 [DS-SBM 상세 결과·측정 및 분석 조건](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md).
 
-## LPDDR·USB
+## LPDDR·USB 인터페이스 연구
 
 | 항목 | 결과 | 조건·출처 |
 |---|---|---|

@@ -4,7 +4,7 @@
 
 설계한 구조가 하드웨어에서도 의도대로 동작하는지 확인하는 데 중점을 둡니다. 모델과 RTL의 판정 결과를 대조하고, FPGA 구현과 보드 측정으로 검증을 이어 왔습니다.
 
-[DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB](#lpddrusb-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch) · [English](README.en.md)
+[DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB 인터페이스](#lpddrusb-인터페이스-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch) · [English](README.en.md)
 
 ## DSP 기반 송수신기 연구
 
@@ -38,14 +38,16 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 
 [사용 Toolbox·자동화 harness 연결 구조](docs/ai-assisted-dsp-workflow.md)
 
-## LPDDR·USB 연구
+<a id="lpddrusb-연구"></a>
+
+## LPDDR·USB 인터페이스 연구
 
 | 연구 | 담당 설계·검증 | 대표 성과 |
 |---|---|---|
 | [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) | [TX 회로 설계·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX Verilog 모델링](projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), [PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) | 14 Gb/s/pin Combo PHY, TX Eye 0.41 UI·65.3 mV, RX 마진 0.25 UI·25 mV |
 | [USB&nbsp;PAM&#8209;3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX 모델링·RTL 검증](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE 모델링](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [차동 PAM-3 측정·FFE 검증](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | 32 Gb/s·PRBS15, 손실 17.3 dB @ 10.24 GHz<br>상단 Eye 11.19 ps·21.16 mV<br>하단 Eye 11.67 ps·19.80 mV |
 
-[PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR·USB 프로젝트](projects/high-speed-interface-research/)
+[PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR·USB 인터페이스 연구](projects/high-speed-interface-research/)
 
 ## 측정·검증
 
