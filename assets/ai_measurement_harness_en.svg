@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1090" viewBox="0 0 1200 1090" role="img" aria-labelledby="title desc">
+<title id="title">How the ZCU208 measurement harness is connected</title><desc id="desc">PowerShell coordinates condition selection, Vitis application builds, XSCT launch and UART collection. ZCU208 PS applies coefficients and reads capture BRAM; PL performs receiver DSP and PRBS checking. UART stores sample captures. ILA CSV exports PRBS counters for Python BER analysis.</desc>
+<!-- MATLAB and Python icons: Devicon, MIT; see vendor/devicon/NOTICE and LICENSE. Other icons are original vector drawings. -->
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7b899a"/></marker><marker id="blue-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3974c6"/></marker><marker id="data-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#28836c"/></marker></defs>
+<style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR","Segoe UI",sans-serif}</style>
+<rect width="1200" height="1090" fill="#fff"/>
+<text x="32" y="48" font-size="29" font-weight="700" text-anchor="start" fill="#182c43">How the ZCU208 measurement harness is connected</text>
+<text x="32" y="82" font-size="18" font-weight="400" text-anchor="start" fill="#526479">The runner connects conditions, build, board execution and storage; each capture path has its own analysis</text>
+<rect x="32" y="111" width="1136" height="118" rx="17" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
+<text x="56" y="146" font-size="24" font-weight="700" text-anchor="start" fill="#3974c6">PowerShell orchestration</text>
+<text x="56" y="179" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">run_rx_vitis_sweep_automation.ps1</text>
+<text x="56" y="210" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">Select mode / coefficient settings · Build app · Start UART logger and XSCT · Save run logs</text>
+<path d="M200 239V294" fill="none" stroke="#3974c6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#blue-arrow)"/>
+<path d="M600 239V294" fill="none" stroke="#3974c6" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#blue-arrow)"/>
+<text x="224" y="274" font-size="16" font-weight="400" text-anchor="start" fill="#3974c6">Build</text>
+<text x="624" y="274" font-size="16" font-weight="400" text-anchor="start" fill="#3974c6">Launch</text>
+<g data-card="32-308" data-left="32" data-right="368">
+<rect x="32" y="308" width="336" height="192" rx="16" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
+<g transform="translate(50 326) scale(.58)">
+<g transform="translate(0 0)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="7" width="68" height="53" rx="9"/><path d="M25 22l-10 11 10 11m24-22 10 11-10 11m-7-26-10 30M20 69h34m-17-9v9"/>
+</g>
+</g>
+<text x="106" y="356" font-size="21" font-weight="700" text-anchor="start" fill="#3974c6">Vitis app build</text>
+<text x="52" y="402" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Condition-specific defines → ELF</text>
+<text x="52" y="434" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Cortex-A53 standalone application</text>
+<text x="52" y="466" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Save build.log</text>
+</g>
+<g data-card="432-308" data-left="432" data-right="768">
+<rect x="432" y="308" width="336" height="192" rx="16" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
+<g transform="translate(450 326) scale(.58)">
+<g transform="translate(0 0)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="7" width="68" height="53" rx="9"/><path d="M25 22l-10 11 10 11m24-22 10 11-10 11m-7-26-10 30M20 69h34m-17-9v9"/>
+</g>
+</g>
+<text x="506" y="356" font-size="21" font-weight="700" text-anchor="start" fill="#3974c6">XSCT / JTAG</text>
+<text x="452" y="402" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Initialize the PS through FSBL</text>
+<text x="452" y="434" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Download and run the app ELF</text>
+<text x="452" y="466" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Save xsct.log</text>
+</g>
+<g data-card="832-308" data-left="832" data-right="1168">
+<rect x="832" y="308" width="336" height="192" rx="16" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
+<g transform="translate(850 326) scale(.58)">
+<g transform="translate(0 0)" fill="none" stroke="#526479" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="16" y="16" width="42" height="42" rx="7"/><rect x="26" y="26" width="22" height="22" rx="3"/>
+<path d="M25 7v9m0 42v9M7 25h9m42 0h9"/>
+<path d="M37 7v9m0 42v9M7 37h9m42 0h9"/>
+<path d="M49 7v9m0 42v9M7 49h9m42 0h9"/>
+</g>
+</g>
+<text x="906" y="356" font-size="21" font-weight="700" text-anchor="start" fill="#526479">ZCU208 PS · PL</text>
+<text x="852" y="402" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">PS: write and verify coefficients</text>
+<text x="852" y="434" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">PL: receiver DSP and PRBS checker</text>
+<text x="852" y="466" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Samples, errors and checked bits</text>
+</g>
+<path d="M378 405H420" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M778 405H820" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1000 510V543H300V593" fill="none" stroke="#28836c" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#data-arrow)"/>
+<path d="M1000 543H900V593" fill="none" stroke="#28836c" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#data-arrow)"/>
+<text x="324" y="576" font-size="17" font-weight="400" text-anchor="start" fill="#28836c">Received samples</text>
+<text x="924" y="576" font-size="17" font-weight="400" text-anchor="start" fill="#28836c">PRBS counters</text>
+<g data-card="32-610" data-left="32" data-right="568">
+<rect x="32" y="610" width="536" height="190" rx="16" fill="#f1f9f6" stroke="#abd1c4" stroke-width="1.6"/>
+<g transform="translate(50 628) scale(.58)">
+<g transform="translate(0 0)" fill="none" stroke="#28836c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="2" y="7" width="70" height="53" rx="8"/><rect x="10" y="15" width="43" height="35" rx="3" stroke-width="2"/><path d="M13 33h8l5-11 7 22 5-11h11M18 69h39m-20-9v9"/><circle cx="62" cy="22" r="3"/><circle cx="62" cy="36" r="3"/>
+</g>
+</g>
+<text x="106" y="658" font-size="21" font-weight="700" text-anchor="start" fill="#28836c">UART capture and storage</text>
+<text x="52" y="704" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">PS reads capture BRAM and prints CSV</text>
+<text x="52" y="736" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">UART logger saves per-condition CSV and raw logs</text>
+<text x="52" y="768" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Stop on a completion marker or timeout</text>
+</g>
+<g data-card="632-610" data-left="632" data-right="1168">
+<rect x="632" y="610" width="536" height="190" rx="16" fill="#f1f9f6" stroke="#abd1c4" stroke-width="1.6"/>
+<g transform="translate(650 628) scale(.58)">
+<g transform="translate(0 0)" fill="none" stroke="#28836c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="2" y="7" width="70" height="53" rx="8"/><rect x="10" y="15" width="43" height="35" rx="3" stroke-width="2"/><path d="M13 33h8l5-11 7 22 5-11h11M18 69h39m-20-9v9"/><circle cx="62" cy="22" r="3"/><circle cx="62" cy="36" r="3"/>
+</g>
+</g>
+<text x="706" y="658" font-size="21" font-weight="700" text-anchor="start" fill="#28836c">ILA capture</text>
+<text x="652" y="704" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Vivado Hardware Manager</text>
+<text x="652" y="736" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Observe lock, errors and checked-bit counts</text>
+<text x="652" y="768" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Export ILA CSV</text>
+</g>
+<path d="M300 810V846" fill="none" stroke="#28836c" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#data-arrow)"/>
+<path d="M900 810V846" fill="none" stroke="#28836c" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#data-arrow)"/>
+<g data-card="32-862" data-left="32" data-right="568">
+<rect x="32" y="862" width="536" height="174" rx="16" fill="#f1f9f6" stroke="#abd1c4" stroke-width="1.6"/>
+<g transform="translate(50 880) scale(.58)">
+<g transform="translate(0 0)" fill="none" stroke="#28836c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="7" width="68" height="53" rx="9"/><path d="M25 22l-10 11 10 11m24-22 10 11-10 11m-7-26-10 30M20 69h34m-17-9v9"/>
+</g>
+</g>
+<text x="106" y="910" font-size="21" font-weight="700" text-anchor="start" fill="#28836c">Per-run records</text>
+<text x="52" y="956" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Mode / coefficient settings and build / XSCT logs</text>
+<text x="52" y="988" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Received-sample CSV and capture summaries</text>
+</g>
+<g data-card="632-862" data-left="632" data-right="1168">
+<rect x="632" y="862" width="536" height="174" rx="16" fill="#f1f9f6" stroke="#abd1c4" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" x="650" y="882" width="43" height="43"><linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4" /><stop offset="1" stop-color="#306998" /></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B" /><stop offset="1" stop-color="#FFE873" /></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)" /><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)" /><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498" /><stop offset="1" stop-color="#7F7F7F" stop-opacity="0" /></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z" /></svg>
+<text x="706" y="910" font-size="21" font-weight="700" text-anchor="start" fill="#28836c">Python BER analysis</text>
+<text x="652" y="956" font-size="14" font-weight="400" text-anchor="start" fill="#182c43">decode_prbs_ber_capture.py</text>
+<text x="652" y="988" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">BER = error count / checked-bit count</text>
+<text x="652" y="1020" font-size="17" font-weight="400" text-anchor="start" fill="#182c43">Compare results across conditions</text>
+</g>
+<text x="32" y="1071" font-size="17" font-weight="400" text-anchor="start" fill="#526479">Blue: execution control code   ·   Green: capture, storage and analysis data paths</text>
+</svg>

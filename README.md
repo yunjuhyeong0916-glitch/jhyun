@@ -36,7 +36,7 @@ ZCU208 RFSoC에 **32-lane PAM4 DSP**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를
 
 RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER 분석을 연결하는 자동화 코드 구성에 AI를 활용했습니다.
 
-[AI 활용 흐름·상세 설명](docs/ai-assisted-dsp-workflow.md)
+[사용 Toolbox·자동화 harness 연결 구조](docs/ai-assisted-dsp-workflow.md)
 
 ## LPDDR·USB 연구
 

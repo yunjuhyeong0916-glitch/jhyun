@@ -36,7 +36,7 @@ Integrated **32-lane PAM4 DSP**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with t
 
 I used AI to help develop RTL and testbenches, plus automation code connecting ZCU208 coefficient settings, data collection and BER analysis.
 
-[View the illustrated workflow](docs/ai-assisted-dsp-workflow.en.md)
+[Toolbox roles and automation harness diagrams](docs/ai-assisted-dsp-workflow.en.md)
 
 ## LPDDR / USB research
 

@@ -2,21 +2,25 @@
 
 [DSP 기반 송수신기 연구](../README.md#dsp-기반-송수신기-연구) · [문서 지도](repository-map.md) · [English](ai-assisted-dsp-workflow.en.md)
 
-PAM4 수신기의 모델이나 계수를 바꾸면 RTL 검증과 FPGA 평가도 반복해야 했습니다. 이 과정에서 **RTL·테스트벤치**와 **FPGA 제어·데이터 수집·분석 코드**를 작성·수정하는 데 AI를 활용했습니다. MATLAB MCP는 Codex에서 MATLAB 모델을 실행하고 결과를 확인하는 연결 수단으로 사용했습니다.
+PAM4 수신기의 모델이나 계수를 바꿀 때 같은 조건으로 검증을 반복할 수 있도록, 입력·실행·결과 수집을 스크립트로 묶었습니다. AI는 **RTL·테스트벤치와 자동화 코드 작성·수정**에 활용했고, MATLAB MCP로 Codex에서 MATLAB 모델을 실행하고 결과를 확인했습니다.
 
-![AI를 활용한 두 작업: 모델 조건에 맞춘 RTL·테스트벤치 작성과 출력 대조, ZCU208 계수 설정·캡처 수집·BER 분석을 위한 제어 코드와 실행 스크립트 구성.](../assets/ai_workflow_ko.svg)
+## Toolbox와 RTL 검증 harness
 
-## RTL·테스트벤치 작성과 수정
+![RF Toolbox의 채널 입력 생성, MATLAB·Simulink 수신기 모델, HDL Coder의 FFE·DFE 프로토타입 변환과 PowerShell·Python·XSim으로 묶은 RTL 검증 harness.](../assets/ai_workflow_ko.svg)
 
-MATLAB/Simulink에서 정의한 동작과 입출력·고정소수점 조건을 기준으로 RTL과 테스트벤치를 작성·수정하는 데 AI를 활용했습니다. 같은 입력 벡터를 고정소수점 참조 모델과 RTL에 넣고 **FFE 출력·검출기 판정·출력 시점**을 대조했습니다. 결과가 다른 구간은 코드를 수정하고 다시 실행해 확인했습니다.
+[RF Toolbox](https://www.mathworks.com/help/rf/ref/sparameters.html)의 `sparameters`로 채널의 `.s4p` 파일을 읽고, SDD21 응답을 적용한 PRBS PAM4 입력 CSV를 생성했습니다. MATLAB/Simulink에서는 수신기의 동작과 입출력·고정소수점 조건을 정의했습니다. **HDL Coder**는 FFE/DFE 프로토타입의 Verilog 생성에 사용했습니다. Simulink용 `makehdl`과 MATLAB-to-HDL용 `coder.config('hdl')` 실행 코드를 구성했습니다. [HDL Coder의 모델·HDL 변환](https://www.mathworks.com/help/hdlcoder/)
+
+RTL 검증은 **PowerShell runner → Python 참조 벡터 생성 → Vivado XSim** 순서로 연결했습니다. 채널 CSV에서 입력·기대값 HEX를 만든 뒤, 테스트벤치가 같은 입력·계수로 **FFE 출력·검출기 판정·출력 시점**을 비교합니다. runner는 각 도구의 종료 상태와 PASS 로그를 검사해, 코드 수정 후에도 같은 절차로 다시 검증하도록 구성했습니다.
 
 [모델·RTL 검증 결과](../projects/dp-smm-journal/docs/validation.md)
 
-## ZCU208의 계수별 평가 자동화
+## ZCU208 측정 harness
 
-필터 계수 후보별 수신 성능을 비교하기 위해 **Vitis 제어 코드, 조건별 캡처·저장 스크립트, Python 분석 코드**를 작성·수정하는 데 AI를 활용했습니다. 이 코드를 연결해 계수 적용부터 결과 수집·비교까지 반복하는 측정 자동화 harness를 구성했습니다.
+![PowerShell이 조건 선택·Vitis 앱 빌드·XSCT 실행·UART 저장을 연결하는 구조. 수신 샘플은 캡처 BRAM과 UART로 수집하고, PL PRBS 집계값은 ILA CSV로 내보내 Python에서 BER를 계산한다.](../assets/ai_measurement_harness_ko.svg)
 
-계수가 실제 FPGA에 반영됐는지 확인하고, 조건별 데이터와 PL PRBS 검사 결과를 수집했습니다. Python에서는 **오류 수와 검사 비트 수로 BER를 계산**해 계수 후보별 결과를 비교했습니다.
+**PowerShell 실행 스크립트**에서 평가 모드와 계수 조건을 선택하면, 해당 조건으로 Vitis 앱 ELF를 빌드하고 XSCT로 A53 앱을 실행합니다. UART logger는 앱 실행 전에 시작해 캡처를 저장하고, 완료 메시지나 timeout으로 수집을 끝냅니다. 실행마다 조건·빌드 로그·XSCT 로그·캡처 파일을 함께 남겼습니다.
+
+ZCU208에서는 PS가 계수를 쓰고 적용 여부를 확인하며, PL이 수신 DSP 연산과 PRBS 검사를 수행합니다. **수신 샘플**은 캡처 BRAM → PS → UART CSV로 수집했습니다. **BER 평가**에는 PL의 lock·오류 수·검사 비트 수를 ILA CSV로 내보내고, Python에서 오류 수 / 검사 비트 수를 계산해 조건별 결과를 비교했습니다.
 
 [Vitis 계수 적용·데이터 수집](../projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [A-SSCC 측정 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 

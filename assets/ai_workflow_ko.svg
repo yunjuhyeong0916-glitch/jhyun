@@ -1,51 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" role="img" aria-labelledby="title desc">
-<title id="title">AI 적용 지점과 확인 방법</title><desc id="desc">MATLAB MCP는 Codex에서 MATLAB 모델을 실행하고 결과를 확인하도록 연결한다. 첫 번째 활용은 모델 조건에 맞춘 RTL과 테스트벤치 작성·수정이며, FFE 출력·검출기 판정·출력 시점을 대조한다. 두 번째 활용은 ZCU208의 계수 설정, 조건별 캡처, PL PRBS 검사 결과 수집과 Python BER 분석을 위한 제어·실행·분석 코드 작성이다.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="930" viewBox="0 0 1200 930" role="img" aria-labelledby="title desc">
+<title id="title">Toolbox 적용 위치와 RTL 검증 harness</title><desc id="desc">RF Toolbox reads S-parameters for channel input generation. MATLAB and Simulink model receiver behavior. HDL Coder generates FFE/DFE prototype Verilog. A PowerShell RTL runner connects Python reference-vector generation, XSim and output checks.</desc>
 <!-- MATLAB and Python icons: Devicon, MIT; see vendor/devicon/NOTICE and LICENSE. Other icons are original vector drawings. -->
-<defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7b899a"/></marker></defs>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#7b899a"/></marker><marker id="blue-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#3974c6"/></marker><marker id="data-arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#28836c"/></marker></defs>
 <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR","Segoe UI",sans-serif}</style>
-<rect width="1200" height="850" fill="#fff"/>
-<text x="32" y="48" font-size="29" font-weight="700" text-anchor="start" fill="#182c43">AI 적용 지점과 확인 방법</text>
-<text x="32" y="82" font-size="19" font-weight="400" text-anchor="start" fill="#526479">RTL·테스트벤치 작성과 ZCU208 측정 자동화 코드를 연결</text>
-<rect x="32" y="109" width="1136" height="99" rx="17" fill="#f6f8fb" stroke="#dfe6ed" stroke-width="1.6"/>
-<g transform="translate(62 121)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect width="1200" height="930" fill="#fff"/>
+<text x="32" y="48" font-size="29" font-weight="700" text-anchor="start" fill="#182c43">Toolbox 적용 위치와 RTL 검증 harness</text>
+<text x="32" y="82" font-size="19" font-weight="400" text-anchor="start" fill="#526479">채널 입력·수신기 모델·HDL 변환의 역할을 구분하고 같은 입력으로 RTL을 대조</text>
+<rect x="32" y="111" width="1136" height="99" rx="17" fill="#f6f8fb" stroke="#dfe6ed" stroke-width="1.6"/>
+<g transform="translate(62 124)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
 <rect x="3" y="9" width="66" height="53" rx="11" fill="#1d2939" stroke="#1d2939"/><path d="M17 25l10 9-10 9m18 0h12" stroke="#fff"/><path d="M59 2l2 7 7 2-7 2-2 7-2-7-7-2 7-2z" fill="#3974c6" stroke="#3974c6"/>
 </g>
-<text x="153" y="151" font-size="24" font-weight="700" text-anchor="start" fill="#182c43">Codex AI</text>
-<text x="153" y="184" font-size="18" font-weight="400" text-anchor="start" fill="#526479">코드 작성·수정</text>
-<path d="M413 158H460M741 158H789" fill="none" stroke="#7b899a" stroke-width="2.4" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-<text x="600" y="151" font-size="24" font-weight="700" text-anchor="middle" fill="#182c43">MATLAB MCP</text>
-<text x="600" y="184" font-size="18" font-weight="400" text-anchor="middle" fill="#526479">모델 실행·결과 확인</text>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" x="818" y="121" width="70" height="70"><defs><linearGradient id="matlab-original-a" gradientUnits="userSpaceOnUse" x1="16.803" y1="16.631" x2="15.013" y2="22.411" gradientTransform="matrix(4 0 0 -4 0 128)"><stop offset="0" stop-color="#512" /><stop offset=".23" stop-color="#523" /><stop offset=".36" stop-color="#534" /><stop offset=".51" stop-color="#645" /><stop offset=".66" stop-color="#568" /><stop offset=".84" stop-color="#29d" /></linearGradient><linearGradient id="matlab-original-b" gradientUnits="userSpaceOnUse" x1="29.71" y1="18.983" x2="11.71" y2="14.563" gradientTransform="scale(4)"><stop offset=".081" stop-color="#c33" /><stop offset=".189" stop-color="#de5239" /><stop offset=".313" stop-color="#f06e3e" /><stop offset=".421" stop-color="#fa8042" /><stop offset=".5" stop-color="#fe8643" /><stop offset=".58" stop-color="#fa7f42" /><stop offset=".696" stop-color="#ef6c3e" /><stop offset=".833" stop-color="#dc4c37" /><stop offset=".916" stop-color="#cf3633" /></linearGradient></defs><path d="M8 70.2l31.879-12.88a82.62 82.62 0 0110.883-11.8c2.636-1.399 7.597-.641 16.68-11.918 8.796-11 11.597-20.403 15.718-20.403 6.52 0 11.32 14.082 18.602 35.403A461.75 461.75 0 00120 96.48c-7.602-7.082-14.078-14.718-21.48-14.52-6.88.161-14.52 8.321-22.88 18.802C69 109.16 60.2 114.922 56.763 114.8c0 0-8.883-25.121-16.32-29.2a10.563 10.563 0 00-9.563.797L8 70.16zm0 0" fill="#49d" /><path d="M79.2 16.078c-2.68 3.602-5.92 10.203-11.76 17.524-9.082 11.277-14 10.52-16.68 11.918a78.673 78.673 0 00-10.882 11.8l13.2 9.64C64.28 51.68 70.28 35.122 74.96 24.399a54.649 54.649 0 014.238-8.32zm0 0" fill="url(#matlab-original-a)" /><path d="M83.2 13.2c-8.72 0-14.68 45.921-46.88 71.562 9.04-1.48 16.88 20.957 20.48 30.039 16-2.723 28.802-33.32 41.72-32.84 7.402.277 13.878 7.437 21.48 14.52C102.64 60 94.52 13.198 83.2 13.198zm0 0" fill="url(#matlab-original-b)" /></svg>
-<text x="908" y="151" font-size="22" font-weight="700" text-anchor="start" fill="#182c43">MATLAB / Simulink</text>
-<text x="908" y="184" font-size="18" font-weight="400" text-anchor="start" fill="#526479">기준 모델·동작 조건</text>
-<text x="32" y="248" font-size="24" font-weight="700" text-anchor="start" fill="#182c43">01  RTL 구현·검증</text>
-<g data-card="0-0" data-left="32" data-right="368">
-<rect x="32" y="276" width="336" height="196" rx="17" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
-<g transform="translate(52 296) scale(.65)">
+<text x="153" y="153" font-size="24" font-weight="700" text-anchor="start" fill="#182c43">Codex AI</text>
+<text x="153" y="185" font-size="17" font-weight="400" text-anchor="start" fill="#526479">코드·실행 절차 작성·수정</text>
+<path d="M418 160H468" fill="none" stroke="#7b899a" stroke-width="2.4" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<path d="M741 160H789" fill="none" stroke="#7b899a" stroke-width="2.4" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="604" y="153" font-size="24" font-weight="700" text-anchor="middle" fill="#182c43">MATLAB MCP</text>
+<text x="604" y="185" font-size="16" font-weight="400" text-anchor="middle" fill="#526479">MATLAB 실행·결과 확인</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" x="818" y="124" width="68" height="68"><defs><linearGradient id="matlab-original-a" gradientUnits="userSpaceOnUse" x1="16.803" y1="16.631" x2="15.013" y2="22.411" gradientTransform="matrix(4 0 0 -4 0 128)"><stop offset="0" stop-color="#512" /><stop offset=".23" stop-color="#523" /><stop offset=".36" stop-color="#534" /><stop offset=".51" stop-color="#645" /><stop offset=".66" stop-color="#568" /><stop offset=".84" stop-color="#29d" /></linearGradient><linearGradient id="matlab-original-b" gradientUnits="userSpaceOnUse" x1="29.71" y1="18.983" x2="11.71" y2="14.563" gradientTransform="scale(4)"><stop offset=".081" stop-color="#c33" /><stop offset=".189" stop-color="#de5239" /><stop offset=".313" stop-color="#f06e3e" /><stop offset=".421" stop-color="#fa8042" /><stop offset=".5" stop-color="#fe8643" /><stop offset=".58" stop-color="#fa7f42" /><stop offset=".696" stop-color="#ef6c3e" /><stop offset=".833" stop-color="#dc4c37" /><stop offset=".916" stop-color="#cf3633" /></linearGradient></defs><path d="M8 70.2l31.879-12.88a82.62 82.62 0 0110.883-11.8c2.636-1.399 7.597-.641 16.68-11.918 8.796-11 11.597-20.403 15.718-20.403 6.52 0 11.32 14.082 18.602 35.403A461.75 461.75 0 00120 96.48c-7.602-7.082-14.078-14.718-21.48-14.52-6.88.161-14.52 8.321-22.88 18.802C69 109.16 60.2 114.922 56.763 114.8c0 0-8.883-25.121-16.32-29.2a10.563 10.563 0 00-9.563.797L8 70.16zm0 0" fill="#49d" /><path d="M79.2 16.078c-2.68 3.602-5.92 10.203-11.76 17.524-9.082 11.277-14 10.52-16.68 11.918a78.673 78.673 0 00-10.882 11.8l13.2 9.64C64.28 51.68 70.28 35.122 74.96 24.399a54.649 54.649 0 014.238-8.32zm0 0" fill="url(#matlab-original-a)" /><path d="M83.2 13.2c-8.72 0-14.68 45.921-46.88 71.562 9.04-1.48 16.88 20.957 20.48 30.039 16-2.723 28.802-33.32 41.72-32.84 7.402.277 13.878 7.437 21.48 14.52C102.64 60 94.52 13.198 83.2 13.198zm0 0" fill="url(#matlab-original-b)" /></svg>
+<text x="908" y="153" font-size="22" font-weight="700" text-anchor="start" fill="#182c43">MATLAB / Simulink</text>
+<text x="908" y="185" font-size="16" font-weight="400" text-anchor="start" fill="#526479">모델·Toolbox 실행 환경</text>
+<text x="32" y="254" font-size="24" font-weight="700" text-anchor="start" fill="#182c43">01  모델링·HDL 변환에 사용한 도구</text>
+<g data-card="32-279" data-left="32" data-right="368">
+<rect x="32" y="279" width="336" height="212" rx="16" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
+<g transform="translate(50 297) scale(.58)">
 <g transform="translate(0 0)" fill="none" stroke="#526479" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
 <rect x="2" y="7" width="70" height="53" rx="8"/><rect x="10" y="15" width="43" height="35" rx="3" stroke-width="2"/><path d="M13 33h8l5-11 7 22 5-11h11M18 69h39m-20-9v9"/><circle cx="62" cy="22" r="3"/><circle cx="62" cy="36" r="3"/>
 </g>
 </g>
-<text x="119" y="329" font-size="24" font-weight="700" text-anchor="start" fill="#526479">모델 조건</text>
-<text x="52" y="393" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">입출력·고정소수점 형식</text>
-<text x="52" y="430" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">참조 모델·입력 벡터</text>
+<text x="106" y="327" font-size="23" font-weight="700" text-anchor="start" fill="#526479">RF Toolbox</text>
+<text x="52" y="373" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">sparameters: .s4p 읽기</text>
+<text x="52" y="405" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">SDD21 채널 응답 적용</text>
+<text x="52" y="437" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">PRBS PAM4 입력 CSV 생성</text>
 </g>
-<path d="M378 374H420" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<g data-card="0-1" data-left="432" data-right="768">
-<rect x="432" y="276" width="336" height="196" rx="17" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
-<g transform="translate(452 296) scale(.65)">
-<g transform="translate(0 0)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<g data-card="432-279" data-left="432" data-right="768">
+<rect x="432" y="279" width="336" height="212" rx="16" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
+<g transform="translate(450 297) scale(.58)">
+<g transform="translate(0 0)" fill="none" stroke="#526479" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
 <rect x="3" y="7" width="68" height="53" rx="9"/><path d="M25 22l-10 11 10 11m24-22 10 11-10 11m-7-26-10 30M20 69h34m-17-9v9"/>
 </g>
 </g>
-<text x="519" y="329" font-size="24" font-weight="700" text-anchor="start" fill="#3974c6">RTL·테스트벤치</text>
-<text x="452" y="393" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">모델 조건을 RTL로 구현</text>
-<text x="452" y="430" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">불일치 구간 수정·재실행</text>
+<text x="506" y="327" font-size="23" font-weight="700" text-anchor="start" fill="#526479">MATLAB / Simulink</text>
+<text x="452" y="373" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">FFE·검출기 동작 모델</text>
+<text x="452" y="405" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">입출력·고정소수점 조건 정의</text>
+<text x="452" y="437" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">시뮬레이션 파형 확인</text>
 </g>
-<path d="M778 374H820" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<g data-card="0-2" data-left="832" data-right="1168">
-<rect x="832" y="276" width="336" height="196" rx="17" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
-<g transform="translate(852 296) scale(.65)">
+<g data-card="832-279" data-left="832" data-right="1168">
+<rect x="832" y="279" width="336" height="212" rx="16" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
+<g transform="translate(850 297) scale(.58)">
 <g transform="translate(0 0)" fill="none" stroke="#526479" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
 <rect x="16" y="16" width="42" height="42" rx="7"/><rect x="26" y="26" width="22" height="22" rx="3"/>
 <path d="M25 7v9m0 42v9M7 25h9m42 0h9"/>
@@ -53,45 +54,48 @@
 <path d="M49 7v9m0 42v9M7 49h9m42 0h9"/>
 </g>
 </g>
-<text x="919" y="329" font-size="24" font-weight="700" text-anchor="start" fill="#526479">출력 대조</text>
-<text x="852" y="393" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">FFE 출력·검출기 판정</text>
-<text x="852" y="430" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">모델·RTL 출력 시점 확인</text>
+<text x="906" y="327" font-size="23" font-weight="700" text-anchor="start" fill="#526479">HDL Coder</text>
+<text x="852" y="373" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">FFE/DFE 프로토타입 HDL 변환</text>
+<text x="852" y="405" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">makehdl / coder.config(&#x27;hdl&#x27;)</text>
+<text x="852" y="437" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">Verilog 생성</text>
 </g>
-<text x="32" y="528" font-size="24" font-weight="700" text-anchor="start" fill="#182c43">02  ZCU208 계수별 평가 자동화</text>
-<g data-card="1-0" data-left="32" data-right="368">
-<rect x="32" y="556" width="336" height="196" rx="17" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
-<g transform="translate(52 576) scale(.65)">
-<g transform="translate(0 0)" fill="none" stroke="#526479" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-<rect x="16" y="16" width="42" height="42" rx="7"/><rect x="26" y="26" width="22" height="22" rx="3"/>
-<path d="M25 7v9m0 42v9M7 25h9m42 0h9"/>
-<path d="M37 7v9m0 42v9M7 37h9m42 0h9"/>
-<path d="M49 7v9m0 42v9M7 49h9m42 0h9"/>
+<text x="32" y="545" font-size="24" font-weight="700" text-anchor="start" fill="#182c43">02  모델·RTL 검증을 묶는 실행 스크립트</text>
+<rect x="32" y="570" width="1136" height="75" rx="15" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
+<text x="56" y="601" font-size="22" font-weight="700" text-anchor="start" fill="#3974c6">PowerShell RTL runner</text>
+<text x="56" y="630" font-size="17" font-weight="400" text-anchor="start" fill="#3974c6">run_xsim.ps1</text>
+<text x="1144" y="614" font-size="18" font-weight="400" text-anchor="end" fill="#182c43">참조 벡터 생성 → XSim 실행 → 종료 상태·PASS 검사</text>
+<g data-card="32-693" data-left="32" data-right="368">
+<rect x="32" y="693" width="336" height="185" rx="16" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" x="50" y="713" width="43" height="43"><linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4" /><stop offset="1" stop-color="#306998" /></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B" /><stop offset="1" stop-color="#FFE873" /></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)" /><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)" /><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498" /><stop offset="1" stop-color="#7F7F7F" stop-opacity="0" /></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z" /></svg>
+<text x="106" y="741" font-size="23" font-weight="700" text-anchor="start" fill="#526479">참조 벡터 생성</text>
+<text x="52" y="787" font-size="14" font-weight="400" text-anchor="start" fill="#182c43">generate_two_profile_vectors.py</text>
+<text x="52" y="819" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">채널 CSV → 입력·기대값 HEX</text>
+<text x="52" y="851" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">Python 고정소수점 기준값</text>
 </g>
-</g>
-<text x="119" y="609" font-size="24" font-weight="700" text-anchor="start" fill="#526479">필터 계수 후보</text>
-<text x="52" y="673" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">PS에서 계수 설정</text>
-<text x="52" y="710" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">FPGA 적용 여부 확인</text>
-</g>
-<path d="M378 654H420" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<g data-card="1-1" data-left="432" data-right="768">
-<rect x="432" y="556" width="336" height="196" rx="17" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
-<g transform="translate(452 576) scale(.65)">
+<g data-card="432-693" data-left="432" data-right="768">
+<rect x="432" y="693" width="336" height="185" rx="16" fill="#edf5ff" stroke="#78a7e3" stroke-width="1.6"/>
+<g transform="translate(450 711) scale(.58)">
 <g transform="translate(0 0)" fill="none" stroke="#3974c6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
 <rect x="3" y="7" width="68" height="53" rx="9"/><path d="M25 22l-10 11 10 11m24-22 10 11-10 11m-7-26-10 30M20 69h34m-17-9v9"/>
 </g>
 </g>
-<text x="519" y="609" font-size="24" font-weight="700" text-anchor="start" fill="#3974c6">제어·분석 코드</text>
-<text x="452" y="673" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">Vitis·실행 스크립트·Python</text>
-<text x="452" y="710" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">조건별 실행·캡처·BER 계산</text>
+<text x="506" y="741" font-size="23" font-weight="700" text-anchor="start" fill="#3974c6">Vivado XSim</text>
+<text x="452" y="787" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">RTL + SystemVerilog TB</text>
+<text x="452" y="819" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">xvlog → xelab → xsim</text>
+<text x="452" y="851" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">같은 입력·계수로 실행</text>
 </g>
-<path d="M778 654H820" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<g data-card="1-2" data-left="832" data-right="1168">
-<rect x="832" y="556" width="336" height="196" rx="17" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" x="852" y="576" width="48" height="48"><linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4" /><stop offset="1" stop-color="#306998" /></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B" /><stop offset="1" stop-color="#FFE873" /></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)" /><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)" /><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498" /><stop offset="1" stop-color="#7F7F7F" stop-opacity="0" /></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z" /></svg>
-<text x="919" y="609" font-size="24" font-weight="700" text-anchor="start" fill="#526479">측정 결과</text>
-<text x="852" y="673" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">PL: 오류·검사 비트 집계</text>
-<text x="852" y="710" font-size="19" font-weight="400" text-anchor="start" fill="#182c43">Python: BER 계산·비교</text>
+<g data-card="832-693" data-left="832" data-right="1168">
+<rect x="832" y="693" width="336" height="185" rx="16" fill="#f8fafc" stroke="#d6dee8" stroke-width="1.6"/>
+<g transform="translate(850 711) scale(.58)">
+<g transform="translate(0 0)" fill="none" stroke="#526479" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="2" y="7" width="70" height="53" rx="8"/><rect x="10" y="15" width="43" height="35" rx="3" stroke-width="2"/><path d="M13 33h8l5-11 7 22 5-11h11M18 69h39m-20-9v9"/><circle cx="62" cy="22" r="3"/><circle cx="62" cy="36" r="3"/>
 </g>
-<circle cx="43" cy="814" r="6" fill="#3974c6"/>
-<text x="60" y="821" font-size="20" font-weight="400" text-anchor="start" fill="#526479">파란색: AI를 활용해 작성·수정한 코드</text>
+</g>
+<text x="906" y="741" font-size="23" font-weight="700" text-anchor="start" fill="#526479">출력 대조</text>
+<text x="852" y="787" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">FFE·검출기 판정·출력 시점</text>
+<text x="852" y="819" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">기대값과 RTL 출력 비교</text>
+<text x="852" y="851" font-size="18" font-weight="400" text-anchor="start" fill="#182c43">PASS·불일치 로그</text>
+</g>
+<path d="M378 785H420" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M778 785H820" fill="none" stroke="#7b899a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 </svg>
