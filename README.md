@@ -95,7 +95,7 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 <tbody>
 <tr>
   <td nowrap>RFSoC<br>실측</td>
-  <td>ZCU208 DAC<br>→ ISI 보드 → ADC 캡처<br>PL PRBS 검사기의<br>집계값으로 BER 평가<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정">ISI 보드 측정·BER</a></td>
+  <td>ZCU208 DAC<br>→ ISI 보드<br>→ ADC 캡처<br>PL PRBS 검사기의<br>집계값으로 BER 평가<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정">ISI 보드 측정·BER</a></td>
 </tr>
 <tr>
   <td nowrap>FPGA 구현<br>(Vivado)</td>
@@ -107,7 +107,7 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 </tr>
 <tr>
   <td nowrap>측정 자동화</td>
-  <td>조건별 앱 빌드·실행<br>UART 기록<br>ILA 집계값 기반<br>Python BER 분석<br><br><a href="docs/ai-assisted-dsp-workflow.md#zcu208-측정-harness">측정 harness 연결 구조</a></td>
+  <td>조건별 앱 빌드·실행<br>UART 기록<br>ILA 집계값 기반<br>Python BER 분석<br><br><a href="docs/ai-assisted-dsp-workflow.md#zcu208-측정-harness">측정 harness 구조</a></td>
 </tr>
 </tbody>
 </table>
@@ -131,7 +131,7 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 </tr>
 <tr>
   <td nowrap>계측 자동화</td>
-  <td>전원·BERT·I2C 연동<br>전압·타이밍 스윕<br>오류 조기 종료·경계 탐색<br>CSV 기록<br><br><a href="projects/high-speed-interface-research/docs/measurement-equipment.md">장비·제어 방법</a></td>
+  <td>전원·BERT·I2C 연동<br>전압·타이밍 스윕<br>오류 조기 종료<br>경계 탐색<br>CSV 기록<br><br><a href="projects/high-speed-interface-research/docs/measurement-equipment.md">장비·제어 방법</a></td>
 </tr>
 </tbody>
 </table>
