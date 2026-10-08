@@ -91,7 +91,8 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 | 항목 | 평가·검증 내용 | 상세 자료 |
 |---|---|---|
 | RFSoC 실측 | ZCU208 DAC → ISI 보드 → ADC 캡처, PL PRBS 검사기의 집계값으로 BER 평가 | [ISI 보드 측정·BER](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) |
-| FPGA 구현·구동 | 자원·타이밍 확인, JTAG 실행·클록/RFDC 초기화·계수 적용 | [구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍)<br>[Vitis 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
+| FPGA 구현 (Vivado) | RTL 구현 후 자원 사용량과 타이밍 여유 확인 | [자원·타이밍 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍) |
+| 보드 초기화·제어 (Vitis) | JTAG 실행, CLK104·RFDC 초기화, RX 계수 적용·수신 데이터 수집 | [초기화·계수 적용 절차](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
 | 측정 자동화 | 조건별 앱 빌드·실행, UART 캡처·저장과 ILA 집계값의 Python BER 분석 | [측정 harness 연결 구조](docs/ai-assisted-dsp-workflow.md#zcu208-측정-harness) |
 
 <a id="pcbhfss-기반-28-nm-실리콘-칩-검증"></a>

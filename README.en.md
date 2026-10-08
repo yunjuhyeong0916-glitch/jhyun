@@ -91,7 +91,8 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 | Area | Evaluation and verification | Details |
 |---|---|---|
 | RFSoC measurements | ZCU208 DAC → ISI board → ADC capture; BER evaluation using PL PRBS checker counts | [ISI-board measurements / BER](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) |
-| FPGA implementation / bring-up | Resource and timing checks; JTAG launch, clock / RFDC initialization and coefficient updates | [Implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍)<br>[Vitis bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
+| FPGA implementation (Vivado) | Resource utilization and timing margin of the implemented RTL | [Resource and timing results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍) |
+| Board initialization / control (Vitis) | JTAG launch, CLK104 / RFDC initialization, RX coefficient updates and received-data collection | [Initialization and coefficient-update procedure](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
 | Measurement automation | Condition-specific app builds and execution, UART capture and storage, and Python BER analysis of ILA counters | [Measurement harness diagram](docs/ai-assisted-dsp-workflow.en.md#zcu208-measurement-harness) |
 
 <a id="28-nm-silicon-validation-with-pcb-design-and-hfss-analysis"></a>

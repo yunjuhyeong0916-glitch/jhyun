@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[DSP 설계 구조](architecture.md) · [측정·구현 결과](validation.md)
+[DSP 설계 구조](architecture.md) · [FPGA 자원·타이밍 결과](validation.md#fpga-자원타이밍) · [RFSoC 실측·BER](validation.md#isi-보드를-통한-rfsoc-측정)
 
 PL에 구현한 송수신 DSP를 제어하기 위해 Cortex-A53 Standalone 앱을 구성했습니다. Vitis에서 JTAG 실행, CLK104·RFDC 초기화, 계수 적용과 수신 디버그 데이터 수집을 연결했습니다.
 

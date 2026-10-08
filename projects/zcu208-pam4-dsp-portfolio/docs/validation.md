@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [논문](../../../docs/publications.md)
+[설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [보드 초기화·제어 (Vitis)](vitis-bringup.md) · [논문](../../../docs/publications.md)
 
 기준일: **2026-10-07**.
 
