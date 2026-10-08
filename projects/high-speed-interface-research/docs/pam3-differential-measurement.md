@@ -30,7 +30,7 @@
 | PRBS15 | 11.19 ps | 21.16 mV | 11.67 ps | 19.80 mV |
 | PRBS31 | 10.24 ps | 20.94 mV | 9.76 ps | 17.12 mV |
 
-**측정 조건:** 두 행 모두 CH#3·32 Gb/s·scrambler on·동일 FFE 프리셋입니다. PRBS31에서 상·하단 개구가 모두 작아지고, 하단 Eye 높이는 17.12 mV로 관측됩니다. 위 수치는 논문의 측정 결과입니다. [논문 Section V-C·Fig. 13(b),(c)](https://doi.org/10.1109/TVLSI.2026.3701343)
+**측정 조건:** 두 행 모두 CH#3·32 Gb/s·scrambler on·동일 FFE 프리셋입니다. PRBS31에서 상·하단 Eye opening이 모두 작아지고, 하단 Eye 높이는 17.12 mV로 관측됩니다. 위 수치는 논문의 측정 결과입니다. [논문 Section V-C·Fig. 13(b),(c)](https://doi.org/10.1109/TVLSI.2026.3701343)
 
 ## 채널별 프리셋을 선택한 과정
 
@@ -53,14 +53,14 @@
 
 </details>
 
-## BER에 따른 타이밍 개구
+## BER bathtub과 timing opening
 
-BER 평가에서는 **32 Gb/s·scrambler off·PRBS7 주기에 해당하는 패턴 길이**를 사용했습니다. BER 10⁻¹² 기준 타이밍 개구는 CH#2에서 **0.43 UI**, CH#3에서 **0.33 UI**입니다. [논문 Section V-D·Fig. 14](https://doi.org/10.1109/TVLSI.2026.3701343)
+BER 평가에서는 **32 Gb/s·scrambler off·PRBS7 주기에 해당하는 패턴 길이**를 사용했습니다. BER 10⁻¹² 기준 timing opening은 CH#2에서 **0.43 UI**, CH#3에서 **0.33 UI**입니다. [논문 Section V-D·Fig. 14](https://doi.org/10.1109/TVLSI.2026.3701343)
 
 <details>
 <summary>CH#2·CH#3의 BER bathtub 곡선</summary>
 
-![32Gb/s에서 CH2 0.43UI와 CH3 0.33UI의 BER 10의 마이너스12승 기준 타이밍 개구를 나타낸 실측 bathtub 곡선](../assets/pam3_measured_ber_bathtub.png)
+![32 Gb/s에서 CH#2 0.43 UI와 CH#3 0.33 UI의 BER 10⁻¹² 기준 timing opening을 나타낸 실측 bathtub 곡선](../assets/pam3_measured_ber_bathtub.png)
 
 왼쪽은 CH#2, 오른쪽은 CH#3입니다.
 

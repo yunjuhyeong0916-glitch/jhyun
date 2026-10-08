@@ -4,7 +4,7 @@
 
 Combo PHY의 TX 회로와 TX Verilog 동작 모델을 설계했습니다. 회로의 Schematic·Post-Layout 검증과 측정용 PCB 설계·HFSS 분석을 수행하고, 제작 칩 측정에 참여했습니다.
 
-## 낮은 전압에서도 채널을 통과하는 TX 설계
+## 저전압에서 Eye opening을 확보하는 TX 설계
 
 28-nm CMOS의 0.5-V VDDQ TX에 PI-LVSTL 드라이버, 2-tap de-emphasis FFE와 ZQ 제어를 적용했습니다. Schematic·Post-Layout 시뮬레이션에서 출력 Eye와 배선 기생성분의 영향을 확인했습니다.
 

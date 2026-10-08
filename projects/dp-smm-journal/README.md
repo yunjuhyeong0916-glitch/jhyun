@@ -17,13 +17,13 @@ DP-SMM의 보드 평가는 **21-tap RX FFE**를 적용한 수신 구성으로 �
 
 | 항목 | DS-SBM | DP-SMM |
 |---|---|---|
-| 분기·BM 처리 | 상태별 두 생존 분기, 심볼당 총 8개 전파 | 심볼당 64개 memory-2 BM 가설을 ROM에서 공급 |
+| 분기·BM 처리 | 상태별 두 survivor branch, 심볼당 총 8개 전파 | 심볼당 64개 memory-2 BM 가설을 ROM에서 공급 |
 | 행렬 원소별 경로 | 한 경로 보존 | 두 경로와 심볼 이력·복원 정보 보존 |
 | 경로 비용과 선택 | 구간 최소 비용을 합성하고 유입 PM과 결합 | 두 제안 경로를 실제 이력으로 재평가한 뒤 유입 PM과 결합 |
-| 프레임 경계 | 가시 상태별 PM 한 개 전달 | 가시 상태별 PM·이력을 가진 후보 두 개 전달 |
+| 프레임 경계 | visible state별 PM 한 개 전달 | visible state별 PM·이력을 가진 후보 두 개 전달 |
 | 검출기 관측 입력 | 21-tap RX FFE 뒤 별도 3-tap PR FIR 출력 | 21-tap RX FFE 출력, PR 목표는 예상 샘플 계산에 사용하는 구성으로 진행 예정 |
 
-DS-SBM의 ‘dual-survivor’는 상태별로 전파하는 두 생존 분기를 뜻합니다. DP-SMM의 ‘dual-path’는 같은 시작·종료 상태를 잇는 행렬 원소에 남기는 두 경로를 뜻합니다. [신호 경로·후보 보존 위치 비교](../pam4-mlsd-thesis/docs/architecture.md)
+DS-SBM의 ‘dual-survivor’는 상태별로 전파하는 두 survivor branch를 뜻합니다. DP-SMM의 ‘dual-path’는 같은 시작·종료 상태를 잇는 행렬 원소에 남기는 두 경로를 뜻합니다. [신호 경로·후보 보존 위치 비교](../pam4-mlsd-thesis/docs/architecture.md)
 
 </details>
 
