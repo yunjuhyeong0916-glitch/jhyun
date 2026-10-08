@@ -88,22 +88,53 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 
 ### FPGA measurement and validation
 
-| Area | Evaluation and verification | Details |
-|---|---|---|
-| RFSoC measurements | ZCU208 DAC → ISI board → ADC capture; BER evaluation using PL PRBS checker counts | [ISI-board measurements / BER](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) |
-| FPGA implementation (Vivado) | Resource utilization and timing margin of the implemented RTL | [Resource and timing results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍) |
-| Board initialization / control (Vitis) | JTAG launch, CLK104 / RFDC initialization, RX coefficient updates and received-data collection | [Initialization and coefficient-update procedure](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) |
-| Measurement automation | Condition-specific app builds and execution, UART capture and storage, and Python BER analysis of ILA counters | [Measurement harness diagram](docs/ai-assisted-dsp-workflow.en.md#zcu208-measurement-harness) |
+<table>
+<thead>
+<tr><th nowrap>Area</th><th nowrap>Checks and details</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td nowrap>RFSoC<br>tests</td>
+  <td>ZCU208 DAC → ISI board → ADC capture<br>BER from PL PRBS checker counts<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정">ISI-board tests / BER</a></td>
+</tr>
+<tr>
+  <td nowrap>FPGA build<br>(Vivado)</td>
+  <td>RTL resource use<br>and timing margin<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍">Resources and timing</a></td>
+</tr>
+<tr>
+  <td nowrap>Board setup<br>(Vitis)</td>
+  <td>JTAG launch and clock / RFDC setup<br>RX coefficient updates / data collection<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md">Board setup and control</a></td>
+</tr>
+<tr>
+  <td nowrap>Automation</td>
+  <td>App build / launch and UART capture<br>Python BER analysis of ILA counters<br><br><a href="docs/ai-assisted-dsp-workflow.en.md#zcu208-measurement-harness">Automation harness</a></td>
+</tr>
+</tbody>
+</table>
 
 <a id="28-nm-silicon-validation-with-pcb-design-and-hfss-analysis"></a>
 
 ### 28-nm chip measurements / PCB and HFSS analysis
 
-| Area | Evaluation and verification | Details |
-|---|---|---|
-| PCB / HFSS | LPDDR measurement-PCB design and transmission analysis; USB TX board ground and power-path review | [PCB design / HFSS analysis](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) |
-| 28-nm silicon measurements | LPDDR TX eye / RX Shmoo and USB differential PAM-3 upper / lower eyes before and after FFE | [Eye / Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)<br>[PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) |
-| Measurement automation | Power-supply / BERT / I2C control, voltage / timing sweeps, early error termination, boundary search and CSV logging | [Equipment / control](projects/high-speed-interface-research/docs/measurement-equipment.md) |
+<table>
+<thead>
+<tr><th nowrap>Area</th><th nowrap>Checks and details</th></tr>
+</thead>
+<tbody>
+<tr>
+  <td nowrap>PCB / HFSS</td>
+  <td>LPDDR PCB design / transfer analysis<br>USB TX ground / power-path review<br><br><a href="projects/high-speed-interface-research/docs/pcb-hfss-verification.md">PCB / HFSS analysis</a></td>
+</tr>
+<tr>
+  <td nowrap>28-nm<br>silicon tests</td>
+  <td>LPDDR TX eye / RX Shmoo<br>USB differential PAM&#8209;3 upper / lower eyes<br>before / after FFE<br><br><a href="projects/high-speed-interface-research/docs/verification-figures.md">Eye / Shmoo</a> <a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md">PAM&#8209;3 tests / FFE</a></td>
+</tr>
+<tr>
+  <td nowrap>Automation</td>
+  <td>Power-supply / BERT / I2C control<br>Voltage / timing sweeps and early error stops<br>Boundary search / CSV logging<br><br><a href="projects/high-speed-interface-research/docs/measurement-equipment.md">Equipment / control</a></td>
+</tr>
+</tbody>
+</table>
 
 ## Research publications
 
