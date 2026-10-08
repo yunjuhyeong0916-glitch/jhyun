@@ -1,8 +1,10 @@
 # LPDDR: TX 회로 설계·모델링과 Combo PHY 검증
 
-[파트 개요](../README.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
+[파트 개요](../README.md) · [Combo PHY 연구](lpddr-combo.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
 
 Combo PHY의 TX 회로와 TX Verilog 동작 모델을 설계했습니다. 회로의 Schematic·Post-Layout 검증과 측정용 PCB 설계·HFSS 분석을 수행하고, 제작 칩 측정에 참여했습니다.
+
+[Combo PHY 전체 구조·세대별 신호 관계·28 nm 칩 검증](lpddr-combo.md)
 
 ## 저전압에서 Eye opening을 확보하는 TX 설계
 

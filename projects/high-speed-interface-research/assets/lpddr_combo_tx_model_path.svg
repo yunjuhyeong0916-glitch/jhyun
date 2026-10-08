@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340" role="img" aria-label="LPDDR Combo TX 동작 모델의 병렬 입력, 직렬화, 위상 정렬과 pre-emphasis 경로">
+<title>LPDDR Combo TX 동작 모델의 데이터·클록·보상 경로</title>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8Z" fill="#147d64"/></marker></defs>
+<rect width="960" height="340" rx="12" fill="#ffffff"/>
+<g font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif">
+<text x="24" y="32" font-size="20" font-weight="700" fill="#147d64" text-anchor="start">DQ TX behavioral model</text>
+<rect x="24" y="73" width="140" height="76" rx="9" fill="#edf8f3" stroke="#a8cfc3"/>
+<text x="94.0" y="102" font-size="16" font-weight="600" fill="#1f2328" text-anchor="middle">Parallel input</text>
+<text x="94.0" y="126" font-size="13" font-weight="400" fill="#59636e" text-anchor="middle">32-bit PRBS7</text>
+<rect x="194" y="73" width="170" height="76" rx="9" fill="#edf8f3" stroke="#a8cfc3"/>
+<text x="279.0" y="102" font-size="16" font-weight="600" fill="#1f2328" text-anchor="middle">Staged serializer</text>
+<text x="279.0" y="126" font-size="13" font-weight="400" fill="#59636e" text-anchor="middle">32 → 16 → 8 → 4</text>
+<rect x="394" y="73" width="195" height="76" rx="9" fill="#edf8f3" stroke="#a8cfc3"/>
+<text x="491.5" y="102" font-size="16" font-weight="600" fill="#1f2328" text-anchor="middle">Aligner + 4:1 SER</text>
+<text x="491.5" y="126" font-size="13" font-weight="400" fill="#59636e" text-anchor="middle">Main / 1-UI delayed data</text>
+<rect x="619" y="73" width="155" height="76" rx="9" fill="#edf8f3" stroke="#a8cfc3"/>
+<text x="696.5" y="102" font-size="16" font-weight="600" fill="#1f2328" text-anchor="middle">Pre-emphasis</text>
+<text x="696.5" y="126" font-size="13" font-weight="400" fill="#59636e" text-anchor="middle">Transition + level</text>
+<rect x="804" y="73" width="130" height="76" rx="9" fill="#edf8f3" stroke="#a8cfc3"/>
+<text x="869.0" y="102" font-size="16" font-weight="600" fill="#1f2328" text-anchor="middle">TX output</text>
+<text x="869.0" y="126" font-size="13" font-weight="400" fill="#59636e" text-anchor="middle">Real-valued signal</text>
+<path d="M164 111L194 111" fill="none" stroke="#147d64" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M364 111L394 111" fill="none" stroke="#147d64" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M589 111L619 111" fill="none" stroke="#147d64" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M774 111L804 111" fill="none" stroke="#147d64" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="266" y="205" width="274" height="76" rx="9" fill="#f6f8fa" stroke="#a8cfc3"/>
+<text x="403.0" y="234" font-size="16" font-weight="600" fill="#1f2328" text-anchor="middle">LOCAL_CLK</text>
+<text x="403.0" y="258" font-size="13" font-weight="400" fill="#59636e" text-anchor="middle">Divided clocks / 4-phase clocks</text>
+<path d="M300 205L300 151" fill="none" stroke="#147d64" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="5 4"/>
+<path d="M492 205L492 151" fill="none" stroke="#147d64" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="5 4"/>
+<rect x="619" y="205" width="155" height="76" rx="9" fill="#f6f8fa" stroke="#a8cfc3"/>
+<text x="696.5" y="234" font-size="16" font-weight="600" fill="#1f2328" text-anchor="middle">Mode / level code</text>
+<text x="696.5" y="258" font-size="13" font-weight="400" fill="#59636e" text-anchor="middle">Swing / emphasis</text>
+<path d="M697 205L697 151" fill="none" stroke="#147d64" stroke-width="2" marker-end="url(#arrow)" stroke-dasharray="5 4"/>
+<text x="24" y="314" font-size="14" font-weight="400" fill="#59636e" text-anchor="start">Model checks: bit order → phase alignment → transition-dependent output</text>
+</g></svg>

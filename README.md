@@ -70,7 +70,7 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 
 <p>
 <a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md" title="LPDDR 15.6 Gb/s TX 회로 설계·검증"><img src="assets/readme/nav-lpddr-15p6.svg" alt="LPDDR 15.6 Gb/s TX 회로 설계·검증" width="147" height="30"></a>
-<a href="projects/high-speed-interface-research/docs/lpddr-tx-modeling.md" title="LPDDR Combo TX Verilog 모델링"><img src="assets/readme/nav-lpddr-combo.svg" alt="LPDDR Combo TX Verilog 모델링" width="132" height="30"></a>
+<a href="projects/high-speed-interface-research/docs/lpddr-combo.md" title="LPDDR Combo PHY 구조·TX 설계·모델링·칩 검증"><img src="assets/readme/nav-lpddr-combo.svg" alt="LPDDR Combo PHY 구조·TX 설계·모델링·칩 검증" width="132" height="30"></a>
 <a href="projects/high-speed-interface-research/docs/usb-tx-modeling.md" title="USB TX 모델링·RTL 검증"><img src="assets/readme/nav-usb-tx.svg" alt="USB TX 모델링·RTL 검증" width="90" height="30"></a>
 <a href="projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md" title="USB RX CTLE 모델링"><img src="assets/readme/nav-usb-rx.svg" alt="USB RX CTLE 모델링" width="90" height="30"></a>
 <a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md" title="USB TX 칩 측정·차동 PAM-3·FFE 검증"><img src="assets/readme/nav-usb-tx-measurement.svg" alt="USB TX 칩 측정·차동 PAM-3·FFE 검증" width="142" height="30"></a>
