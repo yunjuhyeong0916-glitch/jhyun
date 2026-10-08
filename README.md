@@ -1,4 +1,4 @@
-# 윤주형 | HW 설계·검증
+# 윤주형 | High-Speed Interface·DSP Transceiver 연구
 
 안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 [DSP 기반 Transceiver 연구](projects/)**를 진행하고 있습니다.
 

@@ -1,4 +1,4 @@
-# Juhyeong Yun | Hardware Design & Verification
+# Juhyeong Yun | High-Speed Interface & DSP Transceiver Research
 
 I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/) for ultra-high-speed communication**.
 
