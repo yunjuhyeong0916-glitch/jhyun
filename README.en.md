@@ -68,6 +68,14 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 
 ## LPDDR / USB interface research
 
+<p>
+<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md" title="LPDDR 15.6 Gb/s TX circuit design and verification"><img src="assets/readme/nav-lpddr-15p6.svg" alt="LPDDR 15.6 Gb/s TX circuit design and verification" width="147" height="30"></a>
+<a href="projects/high-speed-interface-research/docs/lpddr-tx-modeling.md" title="LPDDR Combo TX Verilog modeling"><img src="assets/readme/nav-lpddr-combo.svg" alt="LPDDR Combo TX Verilog modeling" width="132" height="30"></a>
+<a href="projects/high-speed-interface-research/docs/usb-tx-modeling.md" title="USB TX modeling and RTL verification"><img src="assets/readme/nav-usb-tx.svg" alt="USB TX modeling and RTL verification" width="90" height="30"></a>
+<a href="projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md" title="USB RX CTLE modeling"><img src="assets/readme/nav-usb-rx.svg" alt="USB RX CTLE modeling" width="90" height="30"></a>
+<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md" title="USB TX silicon measurements, differential PAM-3 and FFE verification"><img src="assets/readme/nav-usb-tx-measurement-en.svg" alt="USB TX silicon measurements, differential PAM-3 and FFE verification" width="174" height="30"></a>
+</p>
+
 <details>
 <summary><strong>View design and verification · TX / RX / PCB / HFSS / Measurements</strong></summary>
 
