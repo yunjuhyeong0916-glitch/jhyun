@@ -88,53 +88,23 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 
 ### FPGA 측정·검증
 
-<table>
-<thead>
-<tr><th nowrap>항목</th><th nowrap>평가·검증 내용</th></tr>
-</thead>
-<tbody>
-<tr>
-  <td nowrap>RFSoC<br>실측</td>
-  <td>ZCU208 DAC<br>→ ISI 보드<br>→ ADC 캡처<br>PL PRBS 검사기의<br>집계값으로 BER 평가<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정">ISI 보드 측정·BER</a></td>
-</tr>
-<tr>
-  <td nowrap>FPGA 구현<br>(Vivado)</td>
-  <td>RTL 자원 사용량<br>타이밍 여유 확인<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍">자원·타이밍 결과</a></td>
-</tr>
-<tr>
-  <td nowrap>보드<br>초기화·제어<br>(Vitis)</td>
-  <td>JTAG 실행<br>클록/RFDC 초기화<br>RX 계수 적용<br>데이터 수집<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md">초기화·계수 적용 절차</a></td>
-</tr>
-<tr>
-  <td nowrap>측정 자동화</td>
-  <td>조건별 앱 빌드·실행<br>UART 기록<br>ILA 집계값 기반<br>Python BER 분석<br><br><a href="docs/ai-assisted-dsp-workflow.md#zcu208-측정-harness">측정 harness 구조</a></td>
-</tr>
-</tbody>
-</table>
+- **[RFSoC 실측](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정):** ZCU208 DAC → ISI 보드 → ADC 경로의 신호를 캡처하고 PL PRBS 검사기 집계값으로 BER을 평가했습니다.
+
+- **[FPGA 구현 · Vivado](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍):** RTL 구현 결과의 자원 사용량과 타이밍 여유를 확인했습니다.
+
+- **[보드 초기화·제어 · Vitis](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md):** JTAG 실행, 클록·RFDC 초기화, RX 계수 적용과 데이터 수집을 구성했습니다.
+
+- **[측정 자동화](docs/ai-assisted-dsp-workflow.md#zcu208-측정-harness):** 조건별 앱 빌드·실행과 UART 기록을 묶고, ILA 집계값을 Python으로 분석해 BER을 산출했습니다.
 
 <a id="pcbhfss-기반-28-nm-실리콘-칩-검증"></a>
 
 ### 28 nm 칩 측정·PCB/HFSS 분석
 
-<table>
-<thead>
-<tr><th nowrap>항목</th><th nowrap>평가·검증 내용</th></tr>
-</thead>
-<tbody>
-<tr>
-  <td nowrap>PCB·HFSS</td>
-  <td>LPDDR 측정 PCB 설계<br>HFSS 전달 특성 분석<br>USB TX 접지·전원<br>경로 검토<br><br><a href="projects/high-speed-interface-research/docs/pcb-hfss-verification.md">PCB·HFSS 설계·분석</a></td>
-</tr>
-<tr>
-  <td nowrap>28 nm<br>칩 측정</td>
-  <td>LPDDR TX Eye<br>LPDDR RX Shmoo<br>USB 차동 PAM&#8209;3<br>FFE 전후<br>상·하단 Eye 비교<br><br><a href="projects/high-speed-interface-research/docs/verification-figures.md">Eye·Shmoo</a><br><a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md">PAM&#8209;3 측정·FFE</a></td>
-</tr>
-<tr>
-  <td nowrap>계측 자동화</td>
-  <td>전원·BERT·I2C 연동<br>전압·타이밍 스윕<br>오류 조기 종료<br>경계 탐색<br>CSV 기록<br><br><a href="projects/high-speed-interface-research/docs/measurement-equipment.md">장비·제어 방법</a></td>
-</tr>
-</tbody>
-</table>
+- **[PCB·HFSS 설계·분석](projects/high-speed-interface-research/docs/pcb-hfss-verification.md):** LPDDR 측정용 PCB의 전달 특성을 분석하고, USB TX의 접지·전원 경로를 검토했습니다.
+
+- **28 nm 칩 측정:** [LPDDR TX Eye·RX Shmoo](projects/high-speed-interface-research/docs/verification-figures.md)를 측정하고, [USB 차동 PAM&#8209;3의 FFE 적용 전후 상·하단 Eye](projects/high-speed-interface-research/docs/pam3-differential-measurement.md)를 비교했습니다.
+
+- **[계측 자동화](projects/high-speed-interface-research/docs/measurement-equipment.md):** 전원·BERT·I2C를 연동해 전압·타이밍을 스윕하고, 오류 조기 종료·경계 탐색을 적용했습니다. 결과는 CSV로 기록했습니다.
 
 ## 연구 성과 논문
 

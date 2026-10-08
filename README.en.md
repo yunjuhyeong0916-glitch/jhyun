@@ -88,53 +88,23 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 
 ### FPGA measurement and validation
 
-<table>
-<thead>
-<tr><th nowrap>Area</th><th nowrap>Checks and details</th></tr>
-</thead>
-<tbody>
-<tr>
-  <td nowrap>RFSoC<br>tests</td>
-  <td>ZCU208 DAC → ISI board → ADC capture<br>BER from PL PRBS checker counts<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정">ISI-board tests / BER</a></td>
-</tr>
-<tr>
-  <td nowrap>FPGA build<br>(Vivado)</td>
-  <td>RTL resource use<br>and timing margin<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍">Resources and timing</a></td>
-</tr>
-<tr>
-  <td nowrap>Board setup<br>(Vitis)</td>
-  <td>JTAG launch and clock / RFDC setup<br>RX coefficient updates / data collection<br><br><a href="projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md">Setup / control</a></td>
-</tr>
-<tr>
-  <td nowrap>Automation</td>
-  <td>App build / launch and UART capture<br>Python BER analysis of ILA counters<br><br><a href="docs/ai-assisted-dsp-workflow.en.md#zcu208-measurement-harness">Automation harness</a></td>
-</tr>
-</tbody>
-</table>
+- **[RFSoC measurements](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정):** Captured signals through the ZCU208 DAC → ISI board → ADC path and evaluated BER using PL PRBS checker counts.
+
+- **[FPGA implementation · Vivado](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍):** Checked resource utilization and timing margin after RTL implementation.
+
+- **[Board setup and control · Vitis](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md):** Configured JTAG launch, clock and RFDC initialization, RX coefficient updates and data collection.
+
+- **[Measurement automation](docs/ai-assisted-dsp-workflow.en.md#zcu208-measurement-harness):** Connected condition-specific app builds and execution with UART logging, then calculated BER from ILA counts in Python.
 
 <a id="28-nm-silicon-validation-with-pcb-design-and-hfss-analysis"></a>
 
 ### 28-nm chip measurements / PCB and HFSS analysis
 
-<table>
-<thead>
-<tr><th nowrap>Area</th><th nowrap>Checks and details</th></tr>
-</thead>
-<tbody>
-<tr>
-  <td nowrap>PCB / HFSS</td>
-  <td>LPDDR PCB design / transfer analysis<br>USB TX ground / power-path review<br><br><a href="projects/high-speed-interface-research/docs/pcb-hfss-verification.md">PCB / HFSS analysis</a></td>
-</tr>
-<tr>
-  <td nowrap>28-nm<br>silicon tests</td>
-  <td>LPDDR TX eye / RX Shmoo<br>USB differential PAM&#8209;3 upper / lower eyes<br>before / after FFE<br><br><a href="projects/high-speed-interface-research/docs/verification-figures.md">Eye / Shmoo</a><br><a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md">PAM&#8209;3 tests / FFE</a></td>
-</tr>
-<tr>
-  <td nowrap>Automation</td>
-  <td>Power-supply / BERT / I2C control<br>Voltage / timing sweeps and early error stops<br>Boundary search / CSV logging<br><br><a href="projects/high-speed-interface-research/docs/measurement-equipment.md">Equipment / control</a></td>
-</tr>
-</tbody>
-</table>
+- **[PCB design and HFSS analysis](projects/high-speed-interface-research/docs/pcb-hfss-verification.md):** Analyzed transmission characteristics of the LPDDR measurement PCB and reviewed USB TX ground and power paths.
+
+- **28-nm chip measurements:** Measured [LPDDR TX eyes and RX Shmoo](projects/high-speed-interface-research/docs/verification-figures.md) and compared [USB differential PAM&#8209;3 upper and lower eyes before and after FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md).
+
+- **[Instrument automation](projects/high-speed-interface-research/docs/measurement-equipment.md):** Coordinated power-supply, BERT and I2C control for voltage and timing sweeps. Applied early error stops and boundary searches, and logged results to CSV.
 
 ## Research publications
 
