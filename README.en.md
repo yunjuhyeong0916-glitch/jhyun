@@ -8,6 +8,9 @@ I focus on whether the intended behavior of a design is preserved in hardware. I
 
 ## DSP transceiver research
 
+<details>
+<summary><strong>View research · Thesis / Journal preparation / A-SSCC / AI assistance</strong></summary>
+
 The ongoing master's thesis compares DS-SBM and DP-SMM and evaluates candidate retention. The journal project develops DP-SMM, and the A-SSCC study validates a DS-SBM RFSoC transceiver.
 
 ### Master's thesis | DS-SBM and DP-SMM comparison (in progress)
@@ -38,9 +41,14 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 
 [Toolbox roles and automation harness diagrams](docs/ai-assisted-dsp-workflow.en.md)
 
+</details>
+
 <a id="lpddr--usb-research"></a>
 
 ## LPDDR / USB interface research
+
+<details>
+<summary><strong>View design and verification · TX / RX / PCB / HFSS / Measurements</strong></summary>
 
 | Research | Design and verification work | Key results |
 |---|---|---|
@@ -48,6 +56,8 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 | [USB&nbsp;PAM&#8209;3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX models / RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE models](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [Differential PAM-3 measurements / FFE](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | 32 Gb/s, PRBS15, 17.3-dB loss at 10.24 GHz<br>Upper eye: 11.19 ps / 21.16 mV<br>Lower eye: 11.67 ps / 19.80 mV |
 
 [PCB / HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR / USB interface research](projects/high-speed-interface-research/)
+
+</details>
 
 ## Measurement / verification
 

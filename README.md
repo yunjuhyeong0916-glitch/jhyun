@@ -8,6 +8,9 @@
 
 ## DSP 기반 송수신기 연구
 
+<details>
+<summary><strong>연구 내용 보기 · 학위논문 / Journal 준비 / A-SSCC / AI 활용</strong></summary>
+
 학위논문에서는 DS-SBM과 DP-SMM의 구조를 비교하고 후보 보존 효과를 검증하고 있습니다. Journal 준비 연구는 DP-SMM 설계를, A-SSCC 연구는 DS-SBM의 RFSoC 송수신 실측을 다룹니다.
 
 ### 학위논문 연구 | DS-SBM·DP-SMM 비교 (진행 중)
@@ -38,9 +41,14 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 
 [사용 Toolbox·자동화 harness 연결 구조](docs/ai-assisted-dsp-workflow.md)
 
+</details>
+
 <a id="lpddrusb-연구"></a>
 
 ## LPDDR·USB 인터페이스 연구
+
+<details>
+<summary><strong>설계·검증 내용 보기 · TX / RX / PCB·HFSS / 측정</strong></summary>
 
 | 연구 | 담당 설계·검증 | 대표 성과 |
 |---|---|---|
@@ -48,6 +56,8 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 | [USB&nbsp;PAM&#8209;3](projects/high-speed-interface-research/docs/usb4-pam3.md) | [TX 모델링·RTL 검증](projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE 모델링](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [차동 PAM-3 측정·FFE 검증](projects/high-speed-interface-research/docs/pam3-differential-measurement.md) | 32 Gb/s·PRBS15, 손실 17.3 dB @ 10.24 GHz<br>상단 Eye 11.19 ps·21.16 mV<br>하단 Eye 11.67 ps·19.80 mV |
 
 [PCB·HFSS](projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [LPDDR·USB 인터페이스 연구](projects/high-speed-interface-research/)
+
+</details>
 
 ## 측정·검증
 
