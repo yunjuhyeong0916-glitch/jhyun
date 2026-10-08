@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="153" height="30" viewBox="0 0 153 30" role="img" aria-label="Journal · 진행 중">
+  <title>Journal · 진행 중</title>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif">
+    <rect x=".5" y=".5" width="152" height="29" rx="7" fill="#eef5ff" stroke="#0969da" stroke-opacity=".18"/>
+    <circle cx="15" cy="15" r="3" fill="#0969da"/>
+    <text x="26" y="20" font-size="12" font-weight="600" fill="#0969da">Journal · 진행 중</text>
+  </g>
+</svg>

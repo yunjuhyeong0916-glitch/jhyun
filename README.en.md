@@ -6,9 +6,28 @@ I design circuits and systems that compensate for channel loss and ISI to suppor
 
 In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md) to assist with RTL and testbench development and with verification and measurement automation. My automation scripts allow checks to be repeated under the same conditions after design changes.
 
-[DSP / FPGA](#dsp-transceiver-research) · [LPDDR / USB interfaces](#lpddr--usb-interface-research) · [Verification](#measurement--verification) · [Papers](#research-publications) · [GitHub profile](https://github.com/yunjuhyeong0916-glitch) · [한국어](README.md)
+<p>
+<a href="#dsp-transceiver-research"><img src="assets/readme/nav-dsp.svg" alt="DSP·FPGA" width="115" height="30"></a>
+<a href="#lpddr--usb-interface-research"><img src="assets/readme/nav-interface.svg" alt="LPDDR·USB" width="125" height="30"></a>
+<a href="#measurement--verification"><img src="assets/readme/nav-measurement-en.svg" alt="Verification" width="119" height="30"></a>
+<a href="#research-publications"><img src="assets/readme/nav-papers-en.svg" alt="Papers" width="90" height="30"></a>
+<a href="docs/ai-assisted-dsp-workflow.en.md"><img src="assets/readme/nav-ai-en.svg" alt="AI workflow" width="118" height="30"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch"><img src="assets/readme/nav-github.svg" alt="GitHub" width="94" height="30"></a>
+<a href="README.md"><img src="assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a>
+</p>
+
+<p>
+<a href="projects/"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — DS-SBM · DP-SMM / Model · RTL · FPGA" width="450"></a>
+<a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits · TX/RX models · Silicon measurements" width="450"></a>
+</p>
 
 ## DSP transceiver research
+
+<p>
+<a href="projects/pam4-mlsd-thesis/"><img src="assets/readme/status-thesis-en.svg" alt="Thesis · In progress" width="166" height="30"></a>
+<a href="projects/dp-smm-journal/"><img src="assets/readme/status-journal-en.svg" alt="Journal · In progress" width="174" height="30"></a>
+<a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc-en.svg" alt="A-SSCC 2026 · Accepted" width="194" height="30"></a>
+</p>
 
 <details>
 <summary><strong>View research · Thesis / Journal preparation / A-SSCC / AI assistance</strong></summary>

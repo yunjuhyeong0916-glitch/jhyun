@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="157" height="30" viewBox="0 0 157 30" role="img" aria-label="학위논문 · 진행 중">
+  <title>학위논문 · 진행 중</title>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif">
+    <rect x=".5" y=".5" width="156" height="29" rx="7" fill="#eef5ff" stroke="#0969da" stroke-opacity=".18"/>
+    <circle cx="15" cy="15" r="3" fill="#0969da"/>
+    <text x="26" y="20" font-size="12" font-weight="600" fill="#0969da">학위논문 · 진행 중</text>
+  </g>
+</svg>

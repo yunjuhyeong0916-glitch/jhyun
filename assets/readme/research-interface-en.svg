@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="155" viewBox="0 0 450 155" role="img" aria-label="LPDDR / USB interfaces">
+  <title>LPDDR / USB interfaces</title>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif">
+    <rect x="1" y="1" width="448" height="153" rx="12" fill="#ffffff" stroke="#d1d9e0"/>
+    <rect x="1" y="1" width="448" height="5" rx="3" fill="#147d64"/>
+    <rect x="17" y="22" width="72" height="76" rx="12" fill="#edf8f3"/>
+    <g transform="translate(16 19)" fill="none" stroke="#147d64" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 39h12v20h14V29h14v20h14"/>
+      <path d="M10 66c11-37 20-37 31 0 8 27 16-2 23-20"/>
+    </g>
+    <text x="106" y="40" font-size="11" font-weight="700" fill="#147d64" letter-spacing="1">HIGH-SPEED INTERFACE</text>
+    <text x="106" y="70" font-size="21" font-weight="700" fill="#1f2328">LPDDR / USB interfaces</text>
+    <text x="106" y="96" font-size="12" fill="#59636e">TX circuits · TX/RX models · Silicon measurements</text>
+    <path d="M22 113H428" stroke="#e8ecf0"/>
+    <text x="22" y="137" font-size="12" fill="#59636e">JEDEC LPDDR · USB4 Gen4</text>
+    <path d="M413 128l5 5-5 5m-10-5h15" stroke="#147d64" stroke-width="1.7" fill="none"/>
+  </g>
+</svg>

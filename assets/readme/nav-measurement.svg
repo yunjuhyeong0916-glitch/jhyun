@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="113" height="30" viewBox="0 0 113 30" role="img" aria-label="측정·검증">
+  <title>측정·검증</title>
+  <g font-family="Malgun Gothic, Apple SD Gothic Neo, Segoe UI, sans-serif">
+    <rect x=".5" y=".5" width="112" height="29" rx="7" fill="#f6f8fa" stroke="#59636e" stroke-opacity=".18"/>
+    <circle cx="15" cy="15" r="3" fill="#59636e"/>
+    <text x="26" y="20" font-size="12" font-weight="600" fill="#59636e">측정·검증</text>
+  </g>
+</svg>

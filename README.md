@@ -1,14 +1,33 @@
 # 윤주형 | High-Speed Interface·DSP Transceiver 연구
 
-안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 [DSP 기반 Transceiver 연구](projects/)**를 진행하고 있습니다.
+안녕하세요. 윤주형입니다. **JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) 및 [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) 규격 기반의 High-Speed Interface 연구**와 <strong>Ultra High-Speed 통신을 위한 <a href="projects/">DSP 기반 Transceiver 연구</a></strong>를 진행하고 있습니다.
 
 채널 손실과 ISI를 고려해 신호를 보상하고, 높은 전송 속도에서도 데이터를 안정적으로 주고받을 수 있는 회로와 시스템을 설계합니다.
 
 최근 설계 트렌드에 맞게 [AI](docs/ai-assisted-dsp-workflow.md)를 RTL·테스트벤치 작성과 검증·측정 자동화에 활용하고 있습니다. 설계가 바뀌어도 같은 조건으로 검증을 반복할 수 있도록 자동화 코드를 구성했습니다.
 
-[DSP·FPGA](#dsp-기반-송수신기-연구) · [LPDDR·USB 인터페이스](#lpddrusb-인터페이스-연구) · [측정·검증](#측정검증) · [논문](#연구-성과-논문) · [GitHub 프로필](https://github.com/yunjuhyeong0916-glitch) · [English](README.en.md)
+<p>
+<a href="#dsp-기반-송수신기-연구"><img src="assets/readme/nav-dsp.svg" alt="DSP·FPGA" width="115" height="30"></a>
+<a href="#lpddrusb-인터페이스-연구"><img src="assets/readme/nav-interface.svg" alt="LPDDR·USB" width="125" height="30"></a>
+<a href="#측정검증"><img src="assets/readme/nav-measurement.svg" alt="측정·검증" width="113" height="30"></a>
+<a href="#연구-성과-논문"><img src="assets/readme/nav-papers.svg" alt="논문" width="76" height="30"></a>
+<a href="docs/ai-assisted-dsp-workflow.md"><img src="assets/readme/nav-ai.svg" alt="AI 활용" width="94" height="30"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch"><img src="assets/readme/nav-github.svg" alt="GitHub" width="94" height="30"></a>
+<a href="README.en.md"><img src="assets/readme/nav-en.svg" alt="English" width="96" height="30"></a>
+</p>
+
+<p>
+<a href="projects/"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — DS-SBM · DP-SMM / 모델·RTL·FPGA" width="450"></a>
+<a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로 · TX/RX 모델 · 실리콘 측정" width="450"></a>
+</p>
 
 ## DSP 기반 송수신기 연구
+
+<p>
+<a href="projects/pam4-mlsd-thesis/"><img src="assets/readme/status-thesis.svg" alt="학위논문 · 진행 중" width="157" height="30"></a>
+<a href="projects/dp-smm-journal/"><img src="assets/readme/status-journal.svg" alt="Journal · 진행 중" width="153" height="30"></a>
+<a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc.svg" alt="A-SSCC 2026 · 채택" width="172" height="30"></a>
+</p>
 
 <details>
 <summary><strong>연구 내용 보기 · 학위논문 / Journal 준비 / A-SSCC / AI 활용</strong></summary>
@@ -31,7 +50,7 @@ DS-SBM의 구간 행렬 구조를 확장해, 합성 단계마다 두 경로를 �
 
 ### A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP
 
-ZCU208 RFSoC에 **[32-lane PAM4 DSP](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)**의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를 통합했습니다. [Vivado·Vitis](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md)로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 [ISI 보드](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)를 거쳐 ADC로 수신 신호를 캡처했습니다.
+ZCU208 RFSoC에 <strong><a href="projects/zcu208-pam4-dsp-portfolio/docs/architecture.md">32-lane PAM4 DSP</a></strong>의 TX FIR·RX 21-tap FIR·DS-SBM RS-MLSD를 통합했습니다. [Vivado·Vitis](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md)로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 [ISI 보드](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)를 거쳐 ADC로 수신 신호를 캡처했습니다.
 
 [A-SSCC 프로젝트](projects/zcu208-pam4-dsp-portfolio/) · [설계 판단](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis·FPGA 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
