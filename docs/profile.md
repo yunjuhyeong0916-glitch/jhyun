@@ -24,7 +24,7 @@
 
 2024.12.11 · 사단법인 반도체공학회 · 팀 수상
 
-28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **TX 회로 설계·검증과 회로설계보고서 작성**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
+28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **TX 회로 설계·검증**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
 ## 연구·설계 경험
 
