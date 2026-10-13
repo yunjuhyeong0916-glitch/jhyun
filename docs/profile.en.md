@@ -26,23 +26,29 @@ I design and verify high-speed interface transmitter circuits and receiver DSP. 
 
 The team received the award for a low-voltage, low-power NRZ transceiver in 28-nm CMOS. I was responsible for **TX circuit design and verification**. [Related TX design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
-## Project participation
+<a id="project-participation"></a>
 
-- **[Master's thesis · DS-SBM and DP-SMM comparison](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) (in progress):** Architecture comparison and model–RTL evaluation of the two detectors.
+## Research projects
 
-- **[Journal · DP-SMM design and verification](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) (in progress):** Detector RTL and FPGA implementation; preparation for board measurements with a 21-tap RX FFE.
+### Terabit-scale light-field display system development based on Near-display processing (NDP)
 
-- **[A-SSCC 2026 · DS-SBM PAM4 DSP](../projects/zcu208-pam4-dsp-portfolio/):** Transceiver DSP and detector RTL design, ZCU208 RFSoC integration and board validation.
+**Organization:** National Research Foundation of Korea · **Research period:** 1 Apr 2024–30 Jun 2026
 
-- **[LPDDR 15.6-Gb/s TX](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md):** Low-voltage TX circuit design and post-layout verification.
+**Role:** USB4/DisplayPort interface circuit modeling and verification. [Related USB4 research](../projects/high-speed-interface-research/docs/usb4-pam3.md)
 
-- **[LPDDR Combo PHY](../projects/high-speed-interface-research/docs/lpddr-combo.md):** DQ TX circuit design, Verilog modeling, measurement PCB and HFSS analysis, and participation in silicon measurements.
+### Design optimization for high-density parallel data transmission and reception buses
 
-- **[USB4 TX modeling and RTL verification](../projects/high-speed-interface-research/docs/usb-tx-modeling.md):** TX logic RTL and serializer modeling, and electrical-layer integration checks.
+**Organization:** Samsung Electronics (미래기술육성센터) · **Research period:** 1 Jun 2024–30 Jun 2026
 
-- **[USB4 RX CTLE modeling](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md):** CTLE behavioral modeling and RX integration checks.
+**Role:** Parallel-data interconnect channel modeling and transceiver architecture analysis.
 
-- **[USB TX silicon measurements](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md):** Participation in differential PAM&#8209;3 measurements and channel-specific FFE evaluation.
+### Next-generation LPDDR 5/6-class memory interface IP technology development
+
+**Commissioning organization:** KEIT (한국산업기술평가관리원) · **Undergraduate internship:** 4 Sep 2023–30 Aug 2024
+
+**Role:** Transmitter technology development and verification. [Related LPDDR research](../projects/high-speed-interface-research/docs/lpddr.md)
+
+**Related research:** [DSP-based transceivers](../projects/zcu208-pam4-dsp-portfolio/) · [Master's thesis and journal research (in progress)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md)
 
 **[DP-SMM patent application in preparation](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md).**
 

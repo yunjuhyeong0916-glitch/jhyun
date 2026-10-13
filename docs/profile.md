@@ -26,23 +26,29 @@
 
 28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **TX 회로 설계·검증**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
-## 참여 프로젝트
+<a id="참여-프로젝트"></a>
 
-- **[학위논문 · DS-SBM·DP-SMM 비교](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) (진&#8288;행&nbsp;중):** 두 검출기의 구조와 모델·RTL 비교.
+## 참여 연구과제
 
-- **[Journal · DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) (진&#8288;행&nbsp;중):** 검출기 RTL·FPGA 구현, 21-tap RX FFE 구성의 실측 준비.
+### Near-display processing (NDP) 기반의 테라급 라이트 필드 디스플레이 시스템 개발
 
-- **[A-SSCC 2026 · DS-SBM PAM4 DSP](../projects/zcu208-pam4-dsp-portfolio/):** 송수신 DSP·검출기 RTL 설계, ZCU208 RFSoC 통합·보드 검증.
+**기관:** 한국연구재단 · **연구기간:** 2024.04.01–2026.06.30
 
-- **[LPDDR 15.6 Gb/s TX](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md):** 저전압 TX 회로 설계·Post-Layout 검증.
+**담당:** USB4/DisplayPort 인터페이스 회로 모델링·검증. [USB4 관련 연구](../projects/high-speed-interface-research/docs/usb4-pam3.md)
 
-- **[LPDDR Combo PHY](../projects/high-speed-interface-research/docs/lpddr-combo.md):** DQ TX 회로·Verilog 모델링, 측정용 PCB·HFSS 분석, 제작 칩 측정 참여.
+### 고밀도 병렬 데이터 송수신 버스의 최적화 설계 연구
 
-- **[USB4 TX 모델링·RTL 검증](../projects/high-speed-interface-research/docs/usb-tx-modeling.md):** TX 논리 RTL·Serializer 모델링, 전기 계층 통합 검증.
+**기관:** 삼성전자 미래기술육성센터 · **연구기간:** 2024.06.01–2026.06.30
 
-- **[USB4 RX CTLE 모델링](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md):** CTLE 동작 모델링과 RX 통합 검증.
+**담당:** 병렬 데이터 인터커넥트 채널 모델링·송수신기 구조 분석.
 
-- **[USB TX 칩 측정](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md):** 차동 PAM&#8209;3 측정 참여·채널별 FFE 평가.
+### 차세대 LPDDR 5/6급 메모리 인터페이스 IP 기술 개발
+
+**발주처:** 한국산업기술평가관리원 · **학부 인턴 참여:** 2023.09.04–2024.08.30
+
+**담당:** Transmitter 기술 개발·검증. [LPDDR 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md)
+
+**관련 연구:** [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/) · [학위논문·Journal (진&#8288;행&nbsp;중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md)
 
 **[DP-SMM 특허 출원 준비 중](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md).**
 
