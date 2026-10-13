@@ -36,6 +36,8 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 **Role:** PAM4 transceiver DSP and MLSD detector RTL design, RFSoC integration and board validation. [DSP-based transceiver research](../projects/zcu208-pam4-dsp-portfolio/)
 
+I use [AI and MATLAB MCP](ai-assisted-dsp-workflow.en.md) for RTL, testbench and automation code supporting repeatable verification and measurements.
+
 ### Terabit-scale light-field display system development based on Near-display processing (NDP)
 
 **Organization:** National Research Foundation of Korea · **Research period:** 1 Apr 2024–30 Jun 2026
@@ -54,11 +56,10 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 **Role:** Transmitter technology development and verification. [Related LPDDR research](../projects/high-speed-interface-research/docs/lpddr.md)
 
-**Related research:** [DSP-based transceivers](../projects/zcu208-pam4-dsp-portfolio/) · [Master's thesis and journal research (in progress)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md)
+## Ongoing papers and patent preparation
 
-**[DP-SMM patent application in preparation](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md).**
-
-I use [AI and MATLAB MCP](ai-assisted-dsp-workflow.en.md) for RTL, testbench and automation code supporting repeatable verification and measurements.
+- [Master's thesis and journal research](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md) **(in progress)**
+- [DP-SMM patent application in preparation](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)
 
 ## Selected publications
 

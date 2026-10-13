@@ -36,6 +36,8 @@
 
 **담당:** PAM4 송수신 DSP·MLSD 검출기 RTL 설계, RFSoC 통합·보드 검증. [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/)
 
+RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 [AI·MATLAB MCP](ai-assisted-dsp-workflow.md)를 활용합니다.
+
 ### Near-display processing (NDP) 기반의 테라급 라이트 필드 디스플레이 시스템 개발
 
 **기관:** 한국연구재단 · **연구기간:** 2024.04.01–2026.06.30
@@ -54,11 +56,10 @@
 
 **담당:** Transmitter 기술 개발·검증. [LPDDR 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md)
 
-**관련 연구:** [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/) · [학위논문·Journal (진&#8288;행&nbsp;중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md)
+## 진행 중인 논문·특허
 
-**[DP-SMM 특허 출원 준비 중](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md).**
-
-RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 [AI·MATLAB MCP](ai-assisted-dsp-workflow.md)를 활용합니다.
+- [학위논문·Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md) **(진&#8288;행&nbsp;중)**
+- [DP-SMM 특허 출원 준비](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)
 
 ## 주요 논문
 
