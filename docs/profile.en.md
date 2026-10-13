@@ -30,6 +30,12 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 ## Research projects
 
+### Semiconductor design technology for 200+Gb/s-class next-generation ultra-high-speed interfaces
+
+**Funding administration:** Sungkyunkwan University (산학협력단)<br> **Student researcher:** 1 Apr 2026–31 Dec 2026 **(in progress)**
+
+**Role:** PAM4 transceiver DSP and MLSD detector RTL design, RFSoC integration and board validation. [DSP-based transceiver research](../projects/zcu208-pam4-dsp-portfolio/)
+
 ### Terabit-scale light-field display system development based on Near-display processing (NDP)
 
 **Organization:** National Research Foundation of Korea · **Research period:** 1 Apr 2024–30 Jun 2026
