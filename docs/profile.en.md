@@ -24,47 +24,29 @@ I design and verify high-speed interface transmitter circuits and receiver DSP. 
 
 11 Dec 2024 · ISE (반도체공학회) · Team award
 
-The team received the award for a low-voltage, low-power NRZ transceiver in 28-nm CMOS. I was responsible for **TX circuit design, verification and the circuit design report**. [Related TX design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
+The team received the award for a low-voltage, low-power NRZ transceiver in 28-nm CMOS. I was responsible for **TX circuit design and verification**. [Related TX design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
-## Research and design experience
+## Project participation
 
-### LPDDR TX circuits and Combo PHY modeling
+- **[Master's thesis · DS-SBM and DP-SMM comparison](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) (in progress):** Architecture comparison and model–RTL evaluation of the two detectors.
 
-I designed FFE using main and 1-UI-delayed paths to compensate channel loss at a low driver voltage. After DRC, LVS and parasitic extraction, **28-nm TX post-layout simulation showed 15.6 Gb/s and 0.76 pJ/bit**.
+- **[Journal · DP-SMM design and verification](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) (in progress):** Detector RTL and FPGA implementation; preparation for board measurements with a 21-tap RX FFE.
 
-For the LPDDR4X/5/5X Combo PHY, I was responsible for **DQ TX circuit design and verification, and TX Verilog behavioral modeling**. I checked serialization, phase alignment and pre-emphasis, and participated in **joint measurements of the fabricated 14-Gb/s/pin chip incorporating the TX I designed**.
+- **[A-SSCC 2026 · DS-SBM PAM4 DSP](../projects/zcu208-pam4-dsp-portfolio/):** Transceiver DSP and detector RTL design, ZCU208 RFSoC integration and board validation.
 
-[TX circuit verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) · [Combo PHY contribution](../projects/high-speed-interface-research/docs/lpddr-combo.md) · [TX model](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md)
+- **[LPDDR 15.6-Gb/s TX](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md):** Low-voltage TX circuit design and post-layout verification.
 
-### USB4 TX and RX models, and differential signal evaluation
+- **[LPDDR Combo PHY](../projects/high-speed-interface-research/docs/lpddr-combo.md):** DQ TX circuit design, Verilog modeling, measurement PCB and HFSS analysis, and participation in silicon measurements.
 
-I connected **11B7S and scrambler RTL with the serializer and FFE paths** to verify the interface between logic and electrical-layer models. I compared VCS and POSIM waveforms after TX RTL synthesis and place-and-route. On the receiver side, I checked **the CTLE behavioral model and its connection to the sampler**.
+- **[USB4 TX modeling and RTL verification](../projects/high-speed-interface-research/docs/usb-tx-modeling.md):** TX logic RTL and serializer modeling, and electrical-layer integration checks.
 
-I participated in **joint measurements of a 28-nm, 32-Gb/s TX chip**, evaluating differential PAM&#8209;3 upper and lower eyes and BER bathtubs under channel-specific FFE settings.
+- **[USB4 RX CTLE modeling](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md):** CTLE behavioral modeling and RX integration checks.
 
-[USB TX modeling and RTL checks](../projects/high-speed-interface-research/docs/usb-tx-modeling.md) · [RX CTLE model](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) · [Differential PAM&#8209;3 measurements](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md)
+- **[USB TX silicon measurements](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md):** Participation in differential PAM&#8209;3 measurements and channel-specific FFE evaluation.
 
-### PAM4 DSP, RTL and RFSoC board validation
+**[DP-SMM patent application in preparation](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md).**
 
-To evaluate channel compensation and MLSD detection on hardware, I implemented **TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD as 32-lane parallel RTL** and integrated them on the ZCU208 RFSoC. I controlled clock and RFDC initialization and coefficient updates through Vitis, captured signals through the DAC → ISI board → ADC path, and evaluated BER using PL PRBS checker counts.
-
-The **A-SSCC 2026 paper was accepted**, reporting FPGA resource and timing results alongside RFSoC measurements.
-
-[A-SSCC project](../projects/zcu208-pam4-dsp-portfolio/) · [Architecture](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [FPGA implementation and measurements](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md) · [Vitis board control](../projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md)
-
-## Measurement setup and automation
-
-I designed the LPDDR measurement PCB and analyzed its signal transmission characteristics in HFSS. For silicon evaluation, I connected power-supply, BERT and I2C control for voltage and timing sweeps, automating repeated tests with early error stops, boundary searches and CSV logging.
-
-For RFSoC measurements, I connected condition-specific Vitis app execution, UART data collection and Python BER analysis of ILA counts in a harness. In line with current design trends, I use **AI and MATLAB MCP for RTL, testbench and automation code supporting repeatable verification and measurements**.
-
-[PCB and HFSS](../projects/high-speed-interface-research/docs/pcb-hfss-verification.md) · [Instruments and control](../projects/high-speed-interface-research/docs/measurement-equipment.md) · [AI, Toolbox roles and automation harness](ai-assisted-dsp-workflow.en.md)
-
-## Ongoing research
-
-- **[Master's thesis · DS-SBM and DP-SMM comparison](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) (in progress):** Comparing how survivor retention affects receiver decisions in models and RTL.
-- **[Journal preparation · DP-SMM design and verification](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) (in progress):** Studying two-path retention in segmented metric matrices and cost re-evaluation using actual symbol history. Board measurements with a 21-tap RX FFE + DP-SMM configuration are being prepared.
-- **[DP-SMM patent application preparation](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md):** A PAM4 detector using dual-path retention and hierarchical metric composition.
+I use [AI and MATLAB MCP](ai-assisted-dsp-workflow.en.md) for RTL, testbench and automation code supporting repeatable verification and measurements.
 
 ## Selected publications
 
