@@ -14,9 +14,17 @@ I design and verify high-speed interface transmitter circuits and receiver DSP. 
 
 ## Education
 
-- **M.S. program, Electronics and Communications Engineering · Kwangwoon University** · Sep 2024–present<br>
-  Coursework completed Aug 2026; registered for thesis research. **Expected graduation: Feb 2027.**
-- **B.S., Electronic Convergence Engineering · Kwangwoon University** · Mar 2022–Aug 2024
+- **M.S. program, Electronics and Communications Engineering · Kwangwoon University** · Sep 2024–present<br> Coursework completed Aug 2026; registered for thesis research. **Expected graduation: Feb 2027.**<br> **GPA: 4.35/4.50**
+- **B.S., Electronic Convergence Engineering · Kwangwoon University**<br> **Transferred Mar 2022; graduated Aug 2024.**<br> **GPA: 3.60/4.50**
+- **Undergraduate studies · Baekseok University**<br> Information Security, ICT Division · Enrolled Mar 2017<br> Before transfer to Kwangwoon University
+
+## Awards
+
+**2024 Korean University Student Semiconductor Circuit Design Competition · Bronze Award**
+
+11 Dec 2024 · ISE (반도체공학회) · Team award
+
+The team received the award for a low-voltage, low-power NRZ transceiver in 28-nm CMOS. I was responsible for **TX circuit design, verification and the circuit design report**. [Related TX design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
 ## Research and design experience
 
