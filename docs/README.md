@@ -8,7 +8,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[문서 지도](repository-map.md)
+[윤주형 연구 이력](profile.md) · [문서 지도](repository-map.md)
 
 - **A-SSCC · DS-SBM PAM4 DSP:** [프로젝트](../projects/zcu208-pam4-dsp-portfolio/), [설계 구조](../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md), [DS-SBM 설계 판단](../projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md), [Vitis·FPGA 구동](../projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md), [측정·구현 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 - **DSP 개발 흐름:** [AI 활용·RTL 코딩·측정 자동화](ai-assisted-dsp-workflow.md)

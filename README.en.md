@@ -4,7 +4,7 @@
 <a href="README.md" title="한국어 포트폴리오 보기"><img src="assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a>
 </p>
 
-# Juhyeong Yun | High-Speed Interface & DSP Transceiver Research
+# [Juhyeong Yun](docs/profile.en.md) | High-Speed Interface & DSP Transceiver Research
 
 Kwangwoon University · Master's thesis research in progress
 

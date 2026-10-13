@@ -4,7 +4,7 @@
 <a href="README.en.md" title="View this portfolio in English"><img src="assets/readme/nav-en.svg" alt="English" width="96" height="30"></a>
 </p>
 
-# 윤주형 | High-Speed Interface·DSP Transceiver 연구
+# [윤주형](docs/profile.md) | High-Speed Interface·DSP Transceiver 연구
 
 광운대학교 · 석사 학위논문 연구 중
 
