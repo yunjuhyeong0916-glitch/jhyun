@@ -38,17 +38,17 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 I use [AI and MATLAB MCP](ai-assisted-dsp-workflow.en.md) for RTL, testbench and automation code supporting repeatable verification and measurements.
 
+### Memory Interface Architecture exploration and validation
+
+**Research period:** 1 Jan 2025–31 Dec 2026 **(in progress)**
+
+**Role:** Memory-interface transmitter circuit design and verification. [Related LPDDR Combo research](../projects/high-speed-interface-research/docs/lpddr.md#lpddr-combo-phy)
+
 ### Terabit-scale light-field display system development based on Near-display processing (NDP)
 
-**Organization:** National Research Foundation of Korea · **Research period:** 1 Apr 2024–30 Jun 2026
+**Funding:** National Research Foundation of Korea · **Funding administration:** Hanyang University<br> **Student researcher:** 1 Apr 2024–31 Dec 2026 **(in progress)**
 
 **Role:** USB4/DisplayPort interface circuit modeling and verification. [Related USB4 research](../projects/high-speed-interface-research/docs/usb4-pam3.md)
-
-### Design optimization for high-density parallel data transmission and reception buses
-
-**Organization:** Samsung Electronics (미래기술육성센터) · **Research period:** 1 Jun 2024–30 Jun 2026
-
-**Role:** Parallel-data interconnect channel modeling and transceiver architecture analysis.
 
 ### Next-generation LPDDR 5/6-class memory interface IP technology development
 

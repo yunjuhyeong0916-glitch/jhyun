@@ -38,17 +38,17 @@
 
 RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 [AI·MATLAB MCP](ai-assisted-dsp-workflow.md)를 활용합니다.
 
+### Memory Interface Architecture 탐구 및 검증
+
+**연구기간:** 2025.01.01–2026.12.31 **(진&#8288;행&nbsp;중)**
+
+**담당:** 메모리 인터페이스 송신부 회로 설계·검증. [LPDDR Combo 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md#lpddr-combo-phy)
+
 ### Near-display processing (NDP) 기반의 테라급 라이트 필드 디스플레이 시스템 개발
 
-**기관:** 한국연구재단 · **연구기간:** 2024.04.01–2026.06.30
+**연구비 지원:** 한국연구재단 · **연구비 주관:** 한양대학교<br> **학생연구원 참여:** 2024.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
 
 **담당:** USB4/DisplayPort 인터페이스 회로 모델링·검증. [USB4 관련 연구](../projects/high-speed-interface-research/docs/usb4-pam3.md)
-
-### 고밀도 병렬 데이터 송수신 버스의 최적화 설계 연구
-
-**기관:** 삼성전자 미래기술육성센터 · **연구기간:** 2024.06.01–2026.06.30
-
-**담당:** 병렬 데이터 인터커넥트 채널 모델링·송수신기 구조 분석.
 
 ### 차세대 LPDDR 5/6급 메모리 인터페이스 IP 기술 개발
 
