@@ -13,17 +13,29 @@
 
 기준일: **2026-10-07**.
 
+## DSP 기반 송수신기
+
 - **A-SSCC 2026 · 제1저자 · 채택·발표 예정**
 
   [An FPGA-Verified DAC/ADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
   **DSP 기반 송수신기·MLSD:** DS-SBM RS-MLSD 연구와 ZCU208 RFSoC 시스템 검증
 
+## LPDDR 인터페이스
+
 - **A-SSCC 2026 · 공동저자 · 채택·발표 예정**
 
   [A 14-Gb/s/pin LPDDR4X/5/5X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
   **LPDDR Combo PHY:** 설계한 TX가 적용된 Combo PHY의 제작 칩 측정
+
+- **ICEIC 2025 · 공동 제1저자**
+
+  [A 1.05-V/0.5-V 15.6-Gb/s NRZ Transmitter Achieving 0.76-pJ/bit Energy Efficiency for Low-Power Memory Interfaces](https://doi.org/10.1109/ICEIC64972.2025.10879746)
+
+  **LPDDR 저전압 TX:** 28-nm 저전압 TX 단독 시뮬레이션
+
+## USB 인터페이스
 
 - **IEEE TVLSI 2026 · 공동 제1저자**
 
@@ -42,12 +54,6 @@
   [SystemVerilog-Based Modeling and Verification of 25.6-GBaud/Lane PAM-3 Receiver](https://doi.org/10.1109/SMACD65553.2025.11092233)
 
   **USB PAM-3 RX 모델:** 25.6 GBaud/lane RX 모델·시뮬레이션
-
-- **ICEIC 2025 · 공동 제1저자**
-
-  [A 1.05-V/0.5-V 15.6-Gb/s NRZ Transmitter Achieving 0.76-pJ/bit Energy Efficiency for Low-Power Memory Interfaces](https://doi.org/10.1109/ICEIC64972.2025.10879746)
-
-  **LPDDR 저전압 TX:** 28-nm 저전압 TX 단독 시뮬레이션
 
 ## 준비 중인 연구
 

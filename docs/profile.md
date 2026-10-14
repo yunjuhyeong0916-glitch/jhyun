@@ -58,12 +58,20 @@ RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 
 
 ## 주요 논문
 
+### DSP 기반 송수신기
+
 - **A-SSCC 2026 · 제1저자 · 채택:** [DS-SBM 기반 RFSoC PAM4 송수신기](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+
+### LPDDR 인터페이스
+
 - **A-SSCC 2026 · 공동저자 · 채택:** [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+- **ICEIC 2025 · 공동 제1저자:** [15.6-Gb/s 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746)
+
+### USB 인터페이스
+
 - **IEEE TVLSI 2026 · 공동 제1저자:** [150-preset 4-tap FFE를 적용한 PAM&#8209;3 TX](https://doi.org/10.1109/TVLSI.2026.3701343)
 - **SMACD 2025 · 공동 제1저자:** [USB4 Gen4 PAM&#8209;3 TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283)
 - **SMACD 2025 · 공동 제1저자:** [PAM&#8209;3 RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233)
-- **ICEIC 2025 · 공동 제1저자:** [15.6-Gb/s 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746)
 
 [논문 제목·검증 범위 전체 보기](publications.md)
 
