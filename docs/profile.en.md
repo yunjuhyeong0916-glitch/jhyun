@@ -14,7 +14,7 @@ I design and verify high-speed interface transmitter circuits and receiver DSP. 
 
 ## Education
 
-- **M.S. program, Electronics and Communications Engineering · Kwangwoon University** · Sep 2024–present<br> Coursework completed Aug 2026; registered for thesis research. **Expected graduation: Feb 2027.**<br> **GPA: 4.35/4.50**
+- **M.S. program, Electronics and Communications Engineering · Kwangwoon University** · Sep 2024–present<br> Coursework completed Aug 2026. **Expected graduation: Feb 2027.**<br> **GPA: 4.35/4.50**
 - **B.S., Electronic Convergence Engineering · Kwangwoon University**<br> **Transferred Mar 2022; graduated Aug 2024.**<br> **GPA: 3.60/4.50**
 - **Undergraduate studies · Baekseok University**<br> Information Security, ICT Division · Enrolled Mar 2017<br> Before transfer to Kwangwoon University
 
@@ -32,43 +32,45 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 ### Semiconductor design technology for 200+Gb/s-class next-generation ultra-high-speed interfaces
 
-**Funding administration:** Sungkyunkwan University (산학협력단)<br> **Student researcher:** 1 Apr 2026–31 Dec 2026 **(in progress)**
-
 **Role:** PAM4 transceiver DSP and MLSD detector RTL design, RFSoC integration and board validation. [DSP-based transceiver research](../projects/zcu208-pam4-dsp-portfolio/)
+
+**Funding administration:** Sungkyunkwan University (산학협력단)<br> **Student researcher:** 1 Apr 2026–31 Dec 2026 **(in progress)**
 
 I use [AI and MATLAB MCP](ai-assisted-dsp-workflow.en.md) for RTL, testbench and automation code supporting repeatable verification and measurements.
 
 ### Memory Interface Architecture exploration and validation
 
-**Research period:** 1 Jan 2025–31 Dec 2026 **(in progress)**
-
 **Role:** Memory-interface transmitter circuit design and verification. [Related LPDDR Combo research](../projects/high-speed-interface-research/docs/lpddr.md#lpddr-combo-phy)
+
+**Research period:** 1 Jan 2025–31 Dec 2026 **(in progress)**
 
 ### Terabit-scale light-field display system development based on Near-display processing (NDP)
 
-**Funding:** National Research Foundation of Korea · **Funding administration:** Hanyang University<br> **Student researcher:** 1 Apr 2024–31 Dec 2026 **(in progress)**
-
 **Role:** USB4/DisplayPort interface circuit modeling and verification. [Related USB4 research](../projects/high-speed-interface-research/docs/usb4-pam3.md)
+
+**Funding:** National Research Foundation of Korea · **Funding administration:** Hanyang University<br> **Student researcher:** 1 Apr 2024–31 Dec 2026 **(in progress)**
 
 ### Next-generation LPDDR 5/6-class memory interface IP technology development
 
+**Role:** LPDDR TX circuit design and verification. [Related LPDDR research](../projects/high-speed-interface-research/docs/lpddr.md)
+
 **Commissioning organization:** KEIT (한국산업기술평가관리원) · **Undergraduate internship:** 4 Sep 2023–30 Aug 2024
 
-**Role:** Transmitter technology development and verification. [Related LPDDR research](../projects/high-speed-interface-research/docs/lpddr.md)
+## Selected publications
+
+- **A-SSCC 2026 · First author · Accepted:** [DS-SBM RFSoC PAM4 transceiver](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+- **A-SSCC 2026 · Co-author · Accepted:** [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+- **IEEE TVLSI 2026 · Co-first author:** [PAM&#8209;3 TX with 150-preset four-tap FFE](https://doi.org/10.1109/TVLSI.2026.3701343)
+- **SMACD 2025 · Co-first author:** [USB4 Gen4 PAM&#8209;3 TX model](https://doi.org/10.1109/SMACD65553.2025.11092283)
+- **SMACD 2025 · Co-first author:** [PAM&#8209;3 RX model](https://doi.org/10.1109/SMACD65553.2025.11092233)
+- **ICEIC 2025 · Co-first author:** [15.6-Gb/s low-voltage NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746)
+
+[Full paper titles and validation scope](publications.md)
 
 ## Ongoing papers and patent preparation
 
 - [Master's thesis and journal research](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md) **(in progress)**
 - [DP-SMM patent application in preparation](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)
-
-## Selected publications
-
-- **A-SSCC 2026 · Accepted:** [DS-SBM RFSoC PAM4 transceiver](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
-- **ICEIC 2025:** [15.6-Gb/s low-voltage NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746)
-- **SMACD 2025:** [USB4 Gen4 PAM&#8209;3 TX model](https://doi.org/10.1109/SMACD65553.2025.11092283) · [PAM&#8209;3 RX model](https://doi.org/10.1109/SMACD65553.2025.11092233)
-- **IEEE TVLSI 2026:** [PAM&#8209;3 TX with 150-preset four-tap FFE](https://doi.org/10.1109/TVLSI.2026.3701343)
-
-[Full paper titles and validation scope](publications.md)
 
 ---
 

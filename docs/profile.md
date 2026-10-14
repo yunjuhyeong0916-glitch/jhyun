@@ -14,7 +14,7 @@
 
 ## 학력
 
-- **광운대학교 전자통신공학과**<br> 석사과정 · 2024.09–현재<br> 2026.08 수료 · 학위논문 연구등록 · **2027.02 졸업 예정**<br> **평점 4.35/4.50**
+- **광운대학교 전자통신공학과**<br> 석사과정 · 2024.09–현재<br> 2026.08 수료 · **2027.02 졸업 예정**<br> **평점 4.35/4.50**
 - **광운대학교 전자융합공학과**<br> **2022.03 편입 · 2024.08 학사 졸업**<br> **평점 3.60/4.50**
 - **백석대학교 ICT학부**<br> 정보보호학전공 · 2017.03 입학<br> 광운대학교 편입 전 학력
 
@@ -32,43 +32,45 @@
 
 ### 200+Gbps급 차세대 초고속 인터페이스 반도체 설계 기술
 
-**연구비 주관:** 성균관대학교 산학협력단<br> **학생연구원 참여:** 2026.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
-
 **담당:** PAM4 송수신 DSP·MLSD 검출기 RTL 설계, RFSoC 통합·보드 검증. [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/)
+
+**연구비 주관:** 성균관대학교 산학협력단<br> **학생연구원 참여:** 2026.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
 
 RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 [AI·MATLAB MCP](ai-assisted-dsp-workflow.md)를 활용합니다.
 
 ### Memory Interface Architecture 탐구 및 검증
 
-**연구기간:** 2025.01.01–2026.12.31 **(진&#8288;행&nbsp;중)**
-
 **담당:** 메모리 인터페이스 송신부 회로 설계·검증. [LPDDR Combo 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md#lpddr-combo-phy)
+
+**연구기간:** 2025.01.01–2026.12.31 **(진&#8288;행&nbsp;중)**
 
 ### Near-display processing (NDP) 기반의 테라급 라이트 필드 디스플레이 시스템 개발
 
-**연구비 지원:** 한국연구재단 · **연구비 주관:** 한양대학교<br> **학생연구원 참여:** 2024.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
-
 **담당:** USB4/DisplayPort 인터페이스 회로 모델링·검증. [USB4 관련 연구](../projects/high-speed-interface-research/docs/usb4-pam3.md)
+
+**연구비 지원:** 한국연구재단 · **연구비 주관:** 한양대학교<br> **학생연구원 참여:** 2024.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
 
 ### 차세대 LPDDR 5/6급 메모리 인터페이스 IP 기술 개발
 
+**담당:** LPDDR TX 회로 설계·검증. [LPDDR 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md)
+
 **발주처:** 한국산업기술평가관리원 · **학부 인턴 참여:** 2023.09.04–2024.08.30
 
-**담당:** Transmitter 기술 개발·검증. [LPDDR 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md)
+## 주요 논문
+
+- **A-SSCC 2026 · 제1저자 · 채택:** [DS-SBM 기반 RFSoC PAM4 송수신기](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+- **A-SSCC 2026 · 공동저자 · 채택:** [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+- **IEEE TVLSI 2026 · 공동 제1저자:** [150-preset 4-tap FFE를 적용한 PAM&#8209;3 TX](https://doi.org/10.1109/TVLSI.2026.3701343)
+- **SMACD 2025 · 공동 제1저자:** [USB4 Gen4 PAM&#8209;3 TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283)
+- **SMACD 2025 · 공동 제1저자:** [PAM&#8209;3 RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233)
+- **ICEIC 2025 · 공동 제1저자:** [15.6-Gb/s 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746)
+
+[논문 제목·검증 범위 전체 보기](publications.md)
 
 ## 진행 중인 논문·특허
 
 - [학위논문·Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md) **(진&#8288;행&nbsp;중)**
 - [DP-SMM 특허 출원 준비](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)
-
-## 주요 논문
-
-- **A-SSCC 2026 · 채택:** [DS-SBM 기반 RFSoC PAM4 송수신기](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
-- **ICEIC 2025:** [15.6-Gb/s 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746)
-- **SMACD 2025:** [USB4 Gen4 PAM&#8209;3 TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283) · [PAM&#8209;3 RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233)
-- **IEEE TVLSI 2026:** [150-preset 4-tap FFE를 적용한 PAM&#8209;3 TX](https://doi.org/10.1109/TVLSI.2026.3701343)
-
-[논문 제목·검증 범위 전체 보기](publications.md)
 
 ---
 
