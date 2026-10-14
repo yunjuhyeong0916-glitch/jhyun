@@ -30,7 +30,9 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 ## Research projects
 
-### Semiconductor design technology for 200+Gb/s-class next-generation ultra-high-speed interfaces
+### DSP transceiver research
+
+#### Semiconductor design technology for 200+Gb/s-class next-generation ultra-high-speed interfaces
 
 **Role:** PAM4 transceiver DSP and MLSD detector RTL design, RFSoC integration and board validation. [DSP-based transceiver research](../projects/zcu208-pam4-dsp-portfolio/)
 
@@ -38,23 +40,27 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 I use [AI and MATLAB MCP](ai-assisted-dsp-workflow.en.md) for RTL, testbench and automation code supporting repeatable verification and measurements.
 
-### Memory Interface Architecture exploration and validation
+### LPDDR interface research
+
+#### Memory Interface Architecture exploration and validation
 
 **Role:** Memory-interface transmitter circuit design and verification. [Related LPDDR Combo research](../projects/high-speed-interface-research/docs/lpddr.md#lpddr-combo-phy)
 
 **Research period:** 1 Jan 2025–31 Dec 2026 **(in progress)**
 
-### Terabit-scale light-field display system development based on Near-display processing (NDP)
-
-**Role:** USB4/DisplayPort interface circuit modeling and verification. [Related USB4 research](../projects/high-speed-interface-research/docs/usb4-pam3.md)
-
-**Funding:** National Research Foundation of Korea · **Funding administration:** Hanyang University<br> **Student researcher:** 1 Apr 2024–31 Dec 2026 **(in progress)**
-
-### Next-generation LPDDR 5/6-class memory interface IP technology development
+#### Next-generation LPDDR 5/6-class memory interface IP technology development
 
 **Role:** LPDDR TX circuit design and verification. [Related LPDDR research](../projects/high-speed-interface-research/docs/lpddr.md)
 
 **Commissioning organization:** KEIT (한국산업기술평가관리원) · **Undergraduate internship:** 4 Sep 2023–30 Aug 2024
+
+### USB interface research
+
+#### Terabit-scale light-field display system development based on Near-display processing (NDP)
+
+**Role:** USB4/DisplayPort interface circuit modeling and verification. [Related USB4 research](../projects/high-speed-interface-research/docs/usb4-pam3.md)
+
+**Funding:** National Research Foundation of Korea · **Funding administration:** Hanyang University<br> **Student researcher:** 1 Apr 2024–31 Dec 2026 **(in progress)**
 
 ## Selected publications
 
