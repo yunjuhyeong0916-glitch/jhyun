@@ -8,9 +8,10 @@
 
 <p>
   <a href="../README.md" title="포트폴리오 홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="포트폴리오 홈으로 돌아가기" width="70" height="30"></a>
+  <a href="glossary.md"><img src="../assets/readme/nav-terms.svg" alt="용어 안내" width="102" height="30"></a>
 </p>
 
-고속 인터페이스의 송신 회로와 수신 DSP를 설계·검증합니다. **JEDEC LPDDR·USB4 Gen4 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 DSP 기반 Transceiver 연구**를 진행하고 있습니다.
+고속 인터페이스의 송신 회로와 수신 [DSP](concepts/hardware-workflow.md#term-dsp)를 설계·검증합니다. **[JEDEC LPDDR](concepts/interfaces.md#term-lpddr)·[USB4 Gen4](concepts/interfaces.md#term-usb4) 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 DSP 기반 Transceiver 연구**를 진행하고 있습니다.
 
 ## 학력
 
@@ -24,7 +25,7 @@
 
 2024.12.11 · 사단법인 반도체공학회 · 팀 수상
 
-28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **TX 회로 설계·검증**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
+28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **[TX](concepts/interfaces.md#term-phy) 회로 설계·검증**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
 <a id="참여-프로젝트"></a>
 
@@ -34,7 +35,7 @@
 
 #### 200+Gbps급 차세대 초고속 인터페이스 반도체 설계 기술
 
-**담당:** PAM4 송수신 DSP·MLSD 검출기 RTL 설계, RFSoC 통합·보드 검증. [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/)
+**담당:** [PAM4](concepts/pam-signaling.md#term-pam4) 송수신 DSP·[MLSD](concepts/mlsd.md "연속된 수신 신호를 함께 비교해 데이터열을 찾는 기법") 검출기 [RTL](concepts/hardware-workflow.md#term-rtl) 설계, [RFSoC](concepts/hardware-workflow.md#term-fpga-rfsoc) 통합·보드 검증. [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/)
 
 > **연구비 주관:** 성균관대학교 산학협력단<br> **학생연구원 참여:** 2026.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
 >

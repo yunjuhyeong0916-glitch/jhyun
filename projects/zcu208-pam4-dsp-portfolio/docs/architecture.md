@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[MLSD 설계 판단](design-decisions.md) · [Vitis·FPGA 구동](vitis-bringup.md) · [측정·검증 결과](validation.md)
+[MLSD 개념](../../../docs/concepts/mlsd.md) · [MLSD 설계 판단](design-decisions.md) · [Vitis·FPGA 구동](vitis-bringup.md) · [측정·검증 결과](validation.md)
 
 ## 논문 전체 구조
 

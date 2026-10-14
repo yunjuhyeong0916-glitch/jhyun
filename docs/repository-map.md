@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[윤주형 연구 이력](profile.md) · [프로젝트](../projects/)
+[윤주형 연구 이력](profile.md) · [프로젝트](../projects/) · [용어 안내](glossary.md)
 
 | 분야 | 설계 | 결과 |
 |---|---|---|

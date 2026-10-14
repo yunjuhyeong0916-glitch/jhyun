@@ -10,7 +10,7 @@ Kwangwoon University · Master's thesis research in progress
 
 I'm Juhyeong Yun. My research covers **high-speed interfaces based on JEDEC [LPDDR](projects/high-speed-interface-research/docs/lpddr.md) and [USB4 Gen4](projects/high-speed-interface-research/docs/usb4-pam3.md) specifications** and **[DSP-based transceivers](projects/README.md#dsp-transceiver-research) for ultra-high-speed communication**.
 
-I design circuits and systems that compensate for channel loss and ISI to support reliable data transmission at high speeds.
+I design circuits and systems that compensate for channel loss and [ISI](docs/concepts/equalization.en.md#term-isi) to support reliable data transmission at high speeds.
 
 In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md) to assist with RTL, testbench and automation code for repeatable verification and measurements.
 
@@ -18,6 +18,7 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 <a href="#measurement--verification"><img src="assets/readme/nav-measurement-en.svg" alt="Verification" width="119" height="30"></a>
 <a href="#research-publications"><img src="assets/readme/nav-papers-en.svg" alt="Papers" width="90" height="30"></a>
 <a href="docs/ai-assisted-dsp-workflow.en.md"><img src="assets/readme/nav-ai-en.svg" alt="AI workflow" width="118" height="30"></a>
+<a href="docs/glossary.en.md"><img src="assets/readme/nav-terms-en.svg" alt="Terms" width="86" height="30"></a>
 </p>
 
 <p>
@@ -31,7 +32,7 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 <a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc-en.svg" alt="A-SSCC 2026 · Accepted" width="194" height="30"></a>
 </p>
 
-**My role and key result:** I implemented PAM4 transceiver DSP and detector RTL and [validated receiver performance on an RFSoC board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정). The resulting [A-SSCC 2026 paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) was accepted.
+**My role and key result:** I implemented [PAM4](docs/concepts/pam-signaling.en.md#term-pam4) transceiver [DSP](docs/concepts/hardware-workflow.en.md#term-dsp) and detector [RTL](docs/concepts/hardware-workflow.en.md#term-rtl) and [validated receiver performance on an RFSoC board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정). The resulting [A-SSCC 2026 paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) was accepted.
 
 <a id="masters-thesis--ds-sbm-and-dp-smm-comparison-in-progress"></a>
 <a id="journal-preparation--dp-smm-design-and-verification-in-progress"></a>
@@ -43,7 +44,7 @@ Ongoing **[thesis and journal research](https://github.com/yunjuhyeong0916-glitc
 
 ### A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP
 
-I integrated **[32-lane PAM4 DSP](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)**, TX FIR, RX 21-tap FIR and DS-SBM RS-MLSD with the ZCU208 RFSoC. The [Vivado / Vitis flow](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an [ISI board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) to ADC capture.
+I integrated **[32-lane PAM4 DSP](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)**, TX FIR, RX [21-tap FIR](docs/concepts/equalization.en.md#term-fir-taps) and [DS-SBM RS-MLSD](docs/concepts/mlsd.en.md) with the ZCU208 RFSoC. The [Vivado / Vitis flow](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an [ISI board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) to ADC capture.
 
 [A-SSCC project](projects/zcu208-pam4-dsp-portfolio/) · [Design decisions](projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md) · [Vitis / FPGA bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
 
@@ -127,7 +128,7 @@ Both A-SSCC 2026 papers are accepted, with presentations forthcoming as of 2026-
 
 ---
 
-[Repository map](docs/repository-map.md) · [Verification status](docs/validation-status.md) · [Glossary](docs/glossary.md)
+[Repository map](docs/repository-map.md) · [Verification status](docs/validation-status.md) · [Term guide](docs/glossary.en.md)
 
 <!-- page-navigation:bottom -->
 <p>

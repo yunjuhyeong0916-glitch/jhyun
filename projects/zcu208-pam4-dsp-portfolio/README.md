@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [Vitis·FPGA 구동](docs/vitis-bringup.md) · [측정·구현 결과](docs/validation.md) · [AI 활용·자동화](#ai-활용검증-자동화)
+[MLSD 개념](../../docs/concepts/mlsd.md) · [설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [Vitis·FPGA 구동](docs/vitis-bringup.md) · [측정·구현 결과](docs/validation.md) · [AI 활용·자동화](#ai-활용검증-자동화)
 
 PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위해 **송수신 DSP·검출기 RTL과 RFSoC 제어·오류 검사 경로**를 구현했습니다. ISI 보드를 통한 송수신 평가 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 

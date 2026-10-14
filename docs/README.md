@@ -15,7 +15,8 @@
 - **LPDDR:** [연구 개요](../projects/high-speed-interface-research/docs/lpddr.md), [TX 회로](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md), [TX 모델](../projects/high-speed-interface-research/docs/lpddr-tx-modeling.md), [Combo SI·PI 설계](../projects/high-speed-interface-research/docs/lpddr-combo-si-pi.md)
 - **USB PAM-3:** [연구 개요](../projects/high-speed-interface-research/docs/usb4-pam3.md), [TX 모델](../projects/high-speed-interface-research/docs/usb-tx-modeling.md), [RX CTLE](../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), [차동 측정·FFE 검증](../projects/high-speed-interface-research/docs/pam3-differential-measurement.md)
 - **계측:** [PCB·HFSS](../projects/high-speed-interface-research/docs/pcb-hfss-verification.md), [장비·자동화](../projects/high-speed-interface-research/docs/measurement-equipment.md), [Eye·Shmoo](../projects/high-speed-interface-research/docs/verification-figures.md)
-- **연구 성과:** [논문](publications.md), [검증 상태](validation-status.md), [기술 용어](glossary.md)
+- **용어 안내:** [처음 읽는 용어](glossary.md), [MLSD](concepts/mlsd.md), [신호 레벨](concepts/pam-signaling.md), [등화](concepts/equalization.md), [RTL·FPGA](concepts/hardware-workflow.md), [인터페이스·PHY](concepts/interfaces.md), [측정 지표](concepts/measurements.md)
+- **연구 성과:** [논문](publications.md), [검증 상태](validation-status.md), [용어 안내](glossary.md)
 
 진행 중인 [학위논문·Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md) · [연구 검증 현황](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/validation-status.md)
 

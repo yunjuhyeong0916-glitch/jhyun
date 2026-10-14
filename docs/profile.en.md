@@ -8,9 +8,10 @@
 
 <p>
   <a href="../README.en.md" title="Back to the portfolio home"><img src="../assets/readme/nav-home-en.svg" alt="Back to the portfolio home" width="86" height="30"></a>
+  <a href="glossary.en.md"><img src="../assets/readme/nav-terms-en.svg" alt="Terms" width="86" height="30"></a>
 </p>
 
-I design and verify high-speed interface transmitter circuits and receiver DSP. My research covers **JEDEC LPDDR and USB4 Gen4 interfaces** and **DSP-based transceivers for ultra-high-speed communication**.
+I design and verify high-speed interface transmitter circuits and receiver [DSP](concepts/hardware-workflow.en.md#term-dsp). My research covers **[JEDEC LPDDR](concepts/interfaces.en.md#term-lpddr) and [USB4 Gen4](concepts/interfaces.en.md#term-usb4) interfaces** and **DSP-based transceivers for ultra-high-speed communication**.
 
 ## Education
 
@@ -24,7 +25,7 @@ I design and verify high-speed interface transmitter circuits and receiver DSP. 
 
 11 Dec 2024 · ISE (반도체공학회) · Team award
 
-The team received the award for a low-voltage, low-power NRZ transceiver in 28-nm CMOS. I was responsible for **TX circuit design and verification**. [Related TX design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
+The team received the award for a low-voltage, low-power NRZ transceiver in 28-nm CMOS. I was responsible for **[TX](concepts/interfaces.en.md#term-phy) circuit design and verification**. [Related TX design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
 <a id="project-participation"></a>
 
@@ -34,7 +35,7 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 #### Semiconductor design technology for 200+Gb/s-class next-generation ultra-high-speed interfaces
 
-**Role:** PAM4 transceiver DSP and MLSD detector RTL design, RFSoC integration and board validation. [DSP-based transceiver research](../projects/zcu208-pam4-dsp-portfolio/)
+**Role:** [PAM4](concepts/pam-signaling.en.md#term-pam4) transceiver DSP and [MLSD](concepts/mlsd.en.md "Detection using a sequence of received observations") detector [RTL](concepts/hardware-workflow.en.md#term-rtl) design, [RFSoC](concepts/hardware-workflow.en.md#term-fpga-rfsoc) integration and board validation. [DSP-based transceiver research](../projects/zcu208-pam4-dsp-portfolio/)
 
 > **Funding administration:** Sungkyunkwan University (산학협력단)<br> **Student researcher:** 1 Apr 2026–31 Dec 2026 **(in progress)**
 >
