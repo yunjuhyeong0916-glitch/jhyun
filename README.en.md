@@ -77,7 +77,13 @@ My [master’s thesis](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-resea
 ### [LPDDR 15.6&nbsp;Gb/s | Low-voltage TX circuit design](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
 <p>
-<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_on.png" alt="15.6-Gb/s low-voltage TX circuit-simulation eye with FFE enabled" width="660"></a>
+<strong>FFE OFF</strong> · Eye width 37&nbsp;ps / height 56.5&nbsp;mV<br>
+<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png" alt="15.6-Gb/s low-voltage TX circuit-simulation eye with FFE disabled: width 37 ps, height 56.5 mV" width="660"></a>
+</p>
+
+<p>
+<strong>FFE ON</strong> · Eye width 45.4&nbsp;ps / height 75.1&nbsp;mV<br>
+<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_on.png" alt="15.6-Gb/s low-voltage TX circuit-simulation eye with FFE enabled: width 45.4 ps, height 75.1 mV" width="660"></a>
 </p>
 
 <blockquote>
