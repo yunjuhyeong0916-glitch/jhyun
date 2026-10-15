@@ -23,18 +23,15 @@
 
 ## 수상 내역
 
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/assets/profile/award-2024-circuit-design-bronze.png" title="상장 확대 보기"><img align="right" src="../assets/profile/award-2024-circuit-design-bronze.png" alt="2024 한국 대학생 반도체 회로설계 경진대회 동상 상장" width="25%"></a>
+
 **2024 한국 대학생 반도체 회로설계 경진대회**<br> **동상 · 팀 수상**
 
 2024.12.11 · 사단법인 반도체공학회
 
 28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **[TX](concepts/interfaces.md#term-phy) 회로 설계·검증**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#page-top)
 
-<p align="center">
-  <a href="../assets/profile/award-2024-circuit-design-bronze.png?raw=true" title="상장 확대 보기">
-    <img src="../assets/profile/award-2024-circuit-design-bronze.png" alt="2024 한국 대학생 반도체 회로설계 경진대회 동상 상장" width="240"><br>
-    <sub>상장 확대 보기</sub>
-  </a>
-</p>
+[상장 확대 보기](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/assets/profile/award-2024-circuit-design-bronze.png)<br clear="all">
 
 <a id="참여-프로젝트"></a>
 

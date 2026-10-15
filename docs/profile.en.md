@@ -23,18 +23,15 @@ I design and verify [JEDEC LPDDR](concepts/interfaces.en.md#term-lpddr) and [USB
 
 ## Awards
 
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/assets/profile/award-2024-circuit-design-bronze.png" title="View full-size award certificate"><img align="right" src="../assets/profile/award-2024-circuit-design-bronze.png" alt="Bronze award certificate, 2024 Korean University Student Semiconductor Circuit Design Competition" width="25%"></a>
+
 **2024 Korean University Student Semiconductor Circuit Design Competition**<br> **Bronze Award · Team award**
 
 11 Dec 2024 · ISE (반도체공학회)
 
 The team received the award for a low-voltage, low-power NRZ transceiver in 28-nm CMOS. I was responsible for **[TX](concepts/interfaces.en.md#term-phy) circuit design and verification**. [Related TX design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#page-top)
 
-<p align="center">
-  <a href="../assets/profile/award-2024-circuit-design-bronze.png?raw=true" title="View full-size award certificate">
-    <img src="../assets/profile/award-2024-circuit-design-bronze.png" alt="Bronze award certificate, 2024 Korean University Student Semiconductor Circuit Design Competition" width="240"><br>
-    <sub>View award certificate</sub>
-  </a>
-</p>
+[View award certificate](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/assets/profile/award-2024-circuit-design-bronze.png)<br clear="all">
 
 <a id="project-participation"></a>
 
