@@ -99,8 +99,8 @@ Circuit simulation · 8.7-dB channel loss · ICEIC 2025 <strong>Co-first author<
 <table>
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
 <tbody><tr>
-<td align="center" valign="top"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_tx_eye.svg" alt="LPDDR Combo TX eye at 14 Gb/s/pin with four DQs active: 0.41 UI, 65.3 mV" width="330"></a></td>
-<td align="center" valign="top"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_rx_shmoo.svg" alt="LPDDR Combo RX Shmoo at 14 Gb/s/pin with four DQs active: 0.25 UI, 25 mV" width="330"></a></td>
+<td align="center" valign="top"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_tx_eye.svg?v=2" alt="LPDDR Combo TX eye at 14 Gb/s/pin with four DQs active: 0.41 UI, 65.3 mV" width="330"></a></td>
+<td align="center" valign="top"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_rx_shmoo.svg?v=2" alt="LPDDR Combo RX Shmoo at 14 Gb/s/pin with four DQs active: 0.25 UI, 25 mV" width="330"></a></td>
 </tr></tbody>
 </table>
 
