@@ -6,24 +6,26 @@
 
 # Juhyeong Yun | CV
 
+**Email:** [wngud1074@kw.ac.kr](mailto:wngud1074@kw.ac.kr)
+
 <p>
   <a href="../README.en.md#page-top" title="Back to the portfolio home"><img src="../assets/readme/nav-home-en.svg" alt="Back to the portfolio home" width="86" height="30"></a>
   <a href="glossary.en.md#page-top"><img src="../assets/readme/nav-terms-en.svg" alt="Terms" width="86" height="30"></a>
 </p>
 
-I design and verify high-speed interface transmitter circuits and receiver [DSP](concepts/hardware-workflow.en.md#term-dsp). My research covers **[JEDEC LPDDR](concepts/interfaces.en.md#term-lpddr) and [USB4 Gen4](concepts/interfaces.en.md#term-usb4) interfaces** and **DSP-based transceivers for ultra-high-speed communication**.
+I design and verify [JEDEC LPDDR](concepts/interfaces.en.md#term-lpddr) and [USB4 Gen4](concepts/interfaces.en.md#term-usb4) interface circuits and [DSP](concepts/hardware-workflow.en.md#term-dsp)-based transceivers for ultra-high-speed communication.
 
 ## Education
 
-- **M.S. program, Electronics and Communications Engineering · Kwangwoon University** · Sep 2024–present<br> Coursework completed Aug 2026. **Expected graduation: Feb 2027.**<br> **GPA: 4.35/4.50**
-- **B.S., Electronic Convergence Engineering · Kwangwoon University**<br> **Transferred Mar 2022; graduated Aug 2024.**<br> **GPA: 3.60/4.50**
-- **Undergraduate studies · Baekseok University**<br> Information Security, ICT Division · Enrolled Mar 2017<br> Before transfer to Kwangwoon University
+- **Kwangwoon University**<br> M.S. program, Electronics and Communications Engineering<br> Sep 2024–present · Coursework completed Aug 2026<br> **Expected graduation: Feb 2027**<br> **GPA: 4.35/4.50**
+- **Kwangwoon University**<br> B.S., Electronic Convergence Engineering<br> Transferred Mar 2022 · Graduated Aug 2024<br> **GPA: 3.60/4.50**
+- **Baekseok University**<br> Undergraduate studies in Information Security, ICT Division<br> Enrolled Mar 2017 · Before transfer to Kwangwoon University
 
 ## Awards
 
-**2024 Korean University Student Semiconductor Circuit Design Competition · Bronze Award**
+**2024 Korean University Student Semiconductor Circuit Design Competition**<br> **Bronze Award · Team award**
 
-11 Dec 2024 · ISE (반도체공학회) · Team award
+11 Dec 2024 · ISE (반도체공학회)
 
 The team received the award for a low-voltage, low-power NRZ transceiver in 28-nm CMOS. I was responsible for **[TX](concepts/interfaces.en.md#term-phy) circuit design and verification**. [Related TX design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#page-top)
 
@@ -35,11 +37,11 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 #### Semiconductor design technology for 200+Gb/s-class next-generation ultra-high-speed interfaces
 
-**Role:** [PAM4](concepts/pam-signaling.en.md#term-pam4) transceiver DSP and [MLSD](concepts/mlsd.en.md#page-top "Detection using a sequence of received observations") detector [RTL](concepts/hardware-workflow.en.md#term-rtl) design, [RFSoC](concepts/hardware-workflow.en.md#term-fpga-rfsoc) integration and board validation. [DSP-based transceiver research](../projects/zcu208-pam4-dsp-portfolio/README.en.md#page-top)
+> **Participation period:** 1 Apr 2026–31 Dec 2026 **(in progress)**<br> **Position:** Student researcher<br> **Funding administration:** Sungkyunkwan University (산학협력단)
 
-> **Funding administration:** Sungkyunkwan University (산학협력단)<br> **Student researcher:** 1 Apr 2026–31 Dec 2026 **(in progress)**
->
-> I use [AI and MATLAB MCP](ai-assisted-dsp-workflow.en.md#page-top) for RTL, testbench and automation code supporting repeatable verification and measurements.
+**Role:** [PAM4](concepts/pam-signaling.en.md#term-pam4) TX/RX filter and [MLSD](concepts/mlsd.en.md#page-top "Detection using a sequence of received observations") detector [RTL](concepts/hardware-workflow.en.md#term-rtl) design, [RFSoC](concepts/hardware-workflow.en.md#term-fpga-rfsoc) integration and board validation. [DSP-based transceiver research](../projects/zcu208-pam4-dsp-portfolio/README.en.md#page-top)
+
+I use [AI and MATLAB MCP](ai-assisted-dsp-workflow.en.md#page-top) for RTL, testbench and automation code supporting repeatable verification and measurements.
 
 ---
 
@@ -47,15 +49,15 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 #### Memory Interface Architecture exploration and validation
 
-**Role:** Memory-interface transmitter circuit design and verification. [Related LPDDR Combo research](../projects/high-speed-interface-research/docs/lpddr.en.md#lpddr-combo-phy)
+> **Participation period:** 1 Jan 2025–31 Dec 2026 **(in progress)**
 
-> **Research period:** 1 Jan 2025–31 Dec 2026 **(in progress)**
+**Role:** DQ TX circuit design and verification, TX Verilog modeling, measurement PCB design and HFSS analysis. [LPDDR Combo design and verification](../projects/high-speed-interface-research/docs/lpddr-combo.en.md#page-top)
 
 #### Next-generation LPDDR 5/6-class memory interface IP technology development
 
-**Role:** LPDDR TX circuit design and verification. [Related LPDDR research](../projects/high-speed-interface-research/docs/lpddr.en.md#page-top)
+> **Participation period:** 4 Sep 2023–30 Aug 2024<br> **Position:** Undergraduate intern<br> **Commissioning organization:** KEIT (한국산업기술평가관리원)
 
-> **Commissioning organization:** KEIT (한국산업기술평가관리원) · **Undergraduate internship:** 4 Sep 2023–30 Aug 2024
+**Role:** 15.6-Gb/s low-voltage TX circuit design, schematic and post-layout verification. [LPDDR TX circuit design and verification](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#page-top)
 
 ---
 
@@ -63,9 +65,9 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 #### Terabit-scale light-field display system development based on Near-display processing (NDP)
 
-**Role:** USB4/DisplayPort interface circuit modeling and verification. [Related USB4 research](../projects/high-speed-interface-research/docs/usb4-pam3.en.md#page-top)
+> **Participation period:** 1 Apr 2024–31 Dec 2026 **(in progress)**<br> **Position:** Student researcher<br> **Funding:** National Research Foundation of Korea<br> **Funding administration:** Hanyang University
 
-> **Funding:** National Research Foundation of Korea · **Funding administration:** Hanyang University<br> **Student researcher:** 1 Apr 2024–31 Dec 2026 **(in progress)**
+**Role:** USB4 Gen4 TX RTL and RX CTLE modeling, transceiver integration checks, and participation in differential PAM&#8209;3 TX silicon measurements. [USB4 design and verification](../projects/high-speed-interface-research/docs/usb4-pam3.en.md#page-top)
 
 ---
 

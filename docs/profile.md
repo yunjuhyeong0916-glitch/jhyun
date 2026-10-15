@@ -6,12 +6,14 @@
 
 # 윤주형 | 연구 이력
 
+**이메일:** [wngud1074@kw.ac.kr](mailto:wngud1074@kw.ac.kr)
+
 <p>
   <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="포트폴리오 홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="포트폴리오 홈으로 돌아가기" width="70" height="30"></a>
   <a href="glossary.md#page-top"><img src="../assets/readme/nav-terms.svg" alt="용어 안내" width="102" height="30"></a>
 </p>
 
-고속 인터페이스의 송신 회로와 수신 [DSP](concepts/hardware-workflow.md#term-dsp)를 설계·검증합니다. **[JEDEC LPDDR](concepts/interfaces.md#term-lpddr)·[USB4 Gen4](concepts/interfaces.md#term-usb4) 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 DSP 기반 Transceiver 연구**를 진행하고 있습니다.
+[JEDEC LPDDR](concepts/interfaces.md#term-lpddr)·[USB4 Gen4](concepts/interfaces.md#term-usb4) 기반의 인터페이스 회로와 초고속 통신을 위한 [DSP](concepts/hardware-workflow.md#term-dsp) 기반 송수신기를 설계·검증합니다.
 
 ## 학력
 
@@ -21,9 +23,9 @@
 
 ## 수상 내역
 
-**2024 한국 대학생 반도체 회로설계 경진대회 · 동상**
+**2024 한국 대학생 반도체 회로설계 경진대회**<br> **동상 · 팀 수상**
 
-2024.12.11 · 사단법인 반도체공학회 · 팀 수상
+2024.12.11 · 사단법인 반도체공학회
 
 28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **[TX](concepts/interfaces.md#term-phy) 회로 설계·검증**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#page-top)
 
@@ -35,11 +37,11 @@
 
 #### 200+Gbps급 차세대 초고속 인터페이스 반도체 설계 기술
 
-**담당:** [PAM4](concepts/pam-signaling.md#term-pam4) 송수신 DSP·[MLSD](concepts/mlsd.md#page-top "연속된 수신 신호를 함께 비교해 데이터열을 찾는 기법") 검출기 [RTL](concepts/hardware-workflow.md#term-rtl) 설계, [RFSoC](concepts/hardware-workflow.md#term-fpga-rfsoc) 통합·보드 검증. [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/README.md#page-top)
+> **참여기간:** 2026.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**<br> **참여 형태:** 학생연구원<br> **연구비 주관:** 성균관대학교 산학협력단
 
-> **연구비 주관:** 성균관대학교 산학협력단<br> **학생연구원 참여:** 2026.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
->
-> RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 [AI·MATLAB MCP](ai-assisted-dsp-workflow.md#page-top)를 활용합니다.
+**담당:** [PAM4](concepts/pam-signaling.md#term-pam4) 송수신 필터와 [MLSD](concepts/mlsd.md#page-top "연속된 수신 신호를 함께 비교해 데이터열을 찾는 기법") 검출기의 [RTL](concepts/hardware-workflow.md#term-rtl) 설계, [RFSoC](concepts/hardware-workflow.md#term-fpga-rfsoc) 통합·보드 검증. [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/README.md#page-top)
+
+RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 [AI·MATLAB MCP](ai-assisted-dsp-workflow.md#page-top)를 활용합니다.
 
 ---
 
@@ -47,15 +49,15 @@
 
 #### Memory Interface Architecture 탐구 및 검증
 
-**담당:** 메모리 인터페이스 송신부 회로 설계·검증. [LPDDR Combo 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md#lpddr-combo-phy)
+> **참여기간:** 2025.01.01–2026.12.31 **(진&#8288;행&nbsp;중)**
 
-> **연구기간:** 2025.01.01–2026.12.31 **(진&#8288;행&nbsp;중)**
+**담당:** DQ TX 회로 설계·검증과 TX Verilog 모델링, 측정용 PCB 설계·HFSS 분석. [LPDDR Combo 설계·검증](../projects/high-speed-interface-research/docs/lpddr-combo.md#page-top)
 
 #### 차세대 LPDDR 5/6급 메모리 인터페이스 IP 기술 개발
 
-**담당:** LPDDR TX 회로 설계·검증. [LPDDR 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md#page-top)
+> **참여기간:** 2023.09.04–2024.08.30<br> **참여 형태:** 학부 인턴<br> **발주처:** 한국산업기술평가관리원
 
-> **발주처:** 한국산업기술평가관리원 · **학부 인턴 참여:** 2023.09.04–2024.08.30
+**담당:** 15.6-Gb/s 저전압 TX 회로 설계, Schematic·Post-Layout 검증. [LPDDR TX 회로 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#page-top)
 
 ---
 
@@ -63,9 +65,9 @@
 
 #### Near-display processing (NDP) 기반의 테라급 라이트 필드 디스플레이 시스템 개발
 
-**담당:** USB4/DisplayPort 인터페이스 회로 모델링·검증. [USB4 관련 연구](../projects/high-speed-interface-research/docs/usb4-pam3.md#page-top)
+> **참여기간:** 2024.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**<br> **참여 형태:** 학생연구원<br> **연구비 지원:** 한국연구재단 · **연구비 주관:** 한양대학교
 
-> **연구비 지원:** 한국연구재단 · **연구비 주관:** 한양대학교<br> **학생연구원 참여:** 2024.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
+**담당:** USB4 Gen4 TX RTL·RX CTLE 모델링과 송수신 통합 검증, TX 칩의 차동 PAM&#8209;3 측정 참여. [USB4 설계·검증](../projects/high-speed-interface-research/docs/usb4-pam3.md#page-top)
 
 ---
 
