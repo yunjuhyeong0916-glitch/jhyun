@@ -76,15 +76,13 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 ### [LPDDR 15.6&nbsp;Gb/s | 저전압 TX 설계](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
-<p>
-<strong>FFE OFF</strong> · Eye 폭 37&nbsp;ps / 높이 56.5&nbsp;mV<br>
-<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png" alt="15.6 Gb/s 저전압 TX의 FFE 적용 전 회로 시뮬레이션 Eye: 폭 37 ps, 높이 56.5 mV" width="660"></a>
-</p>
-
-<p>
-<strong>FFE ON</strong> · Eye 폭 45.4&nbsp;ps / 높이 75.1&nbsp;mV<br>
-<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_on.png" alt="15.6 Gb/s 저전압 TX의 FFE 적용 후 회로 시뮬레이션 Eye: 폭 45.4 ps, 높이 75.1 mV" width="660"></a>
-</p>
+<table>
+<thead><tr><th align="center">FFE OFF</th><th align="center">FFE ON</th></tr></thead>
+<tbody><tr>
+<td align="center"><a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png" alt="15.6 Gb/s 저전압 TX의 FFE 적용 전 회로 시뮬레이션 Eye: 폭 37 ps, 높이 56.5 mV" width="330"></a></td>
+<td align="center"><a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_on.png" alt="15.6 Gb/s 저전압 TX의 FFE 적용 후 회로 시뮬레이션 Eye: 폭 45.4 ps, 높이 75.1 mV" width="330"></a></td>
+</tr></tbody>
+</table>
 
 <blockquote>
 <strong>15.6&nbsp;Gb/s · Eye 폭 37 → 45.4&nbsp;ps · 높이 56.5 → 75.1&nbsp;mV</strong><br>
