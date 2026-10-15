@@ -34,6 +34,8 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 
 **My role and key result:** I implemented [PAM4](docs/concepts/pam-signaling.en.md#term-pam4) transceiver [DSP](docs/concepts/hardware-workflow.en.md#term-dsp) and detector [RTL](docs/concepts/hardware-workflow.en.md#term-rtl) and [validated receiver performance on an RFSoC board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정). The resulting [A-SSCC 2026 paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) was accepted.
 
+[View results](projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result) · [Understand MLSD with an example](docs/concepts/mlsd.en.md)
+
 <a id="masters-thesis--ds-sbm-and-dp-smm-comparison-in-progress"></a>
 <a id="journal-preparation--dp-smm-design-and-verification-in-progress"></a>
 
@@ -72,6 +74,8 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 
 - **LPDDR:** Designed a [15.6-Gb/s low-voltage TX circuit](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) and verified it with post-layout simulation. Participated in measurements of a [28-nm Combo PHY](projects/high-speed-interface-research/docs/lpddr-combo.md) at 14 Gb/s/pin.
 - **USB:** Designed and verified [TX RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md) and [RX CTLE behavioral models](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), and participated in [differential PAM-3 measurements of a 32-Gb/s TX chip](projects/high-speed-interface-research/docs/pam3-differential-measurement.md).
+
+[LPDDR Combo results](projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result) · [USB silicon FFE results](projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result) · [How to read Eye and BER](docs/concepts/measurements.en.md)
 
 <details>
 <summary><strong>View design and verification · TX / RX / PCB / HFSS / Measurements</strong></summary>

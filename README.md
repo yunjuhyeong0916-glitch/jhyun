@@ -34,6 +34,8 @@
 
 **담당·대표 성과:** [PAM4](docs/concepts/pam-signaling.md#term-pam4) 송수신 [DSP](docs/concepts/hardware-workflow.md#term-dsp)·검출기를 [RTL](docs/concepts/hardware-workflow.md#term-rtl)로 구현하고 [RFSoC 보드에서 수신 성능을 검증](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)했습니다. 이 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 
+[결과 보기](projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result) · [MLSD를 예제로 이해하기](docs/concepts/mlsd.md)
+
 <a id="학위논문-연구--ds-sbmdp-smm-비교-진행-중"></a>
 <a id="journal-준비--dp-smm-설계검증-진행-중"></a>
 
@@ -72,6 +74,8 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 
 - **LPDDR:** [15.6 Gb/s 저전압 TX 회로](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)를 설계하고 Post-Layout 시뮬레이션으로 검증했습니다. [28 nm Combo PHY](projects/high-speed-interface-research/docs/lpddr-combo.md)의 14 Gb/s/pin 제작 칩 측정에 참여했습니다.
 - **USB:** [TX RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md)·[RX CTLE 동작 모델](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md)을 설계·검증하고, [32 Gb/s TX 칩의 차동 PAM-3 측정](projects/high-speed-interface-research/docs/pam3-differential-measurement.md)에 참여했습니다.
+
+[LPDDR Combo 결과](projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result) · [USB 칩의 FFE 결과](projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result) · [Eye·BER 읽는 방법](docs/concepts/measurements.md)
 
 <details>
 <summary><strong>설계·검증 내용 보기 · TX / RX / PCB·HFSS / 측정</strong></summary>

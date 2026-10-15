@@ -14,19 +14,19 @@
 
 ## DSP: define the signal-processing operations
 
-**DSP (Digital Signal Processing)** operates on sampled signals using digital arithmetic. The receiver here uses an [FFE](equalization.en.md#term-ffe) for compensation and [MLSD](mlsd.en.md) for sequence detection.
+**DSP** (Digital Signal Processing) operates on sampled signals using digital arithmetic. The receiver here uses an [FFE](equalization.en.md#term-ffe) for compensation and [MLSD](mlsd.en.md) for sequence detection.
 
 <a id="term-rtl"></a>
 
 ## RTL: describe arithmetic, storage and data movement
 
-**RTL (Register-Transfer Level)** specifies values held in registers and the operations and transfers performed between clock events. Verilog and SystemVerilog describe the filter and detector datapaths and control. Parallel arithmetic and pipeline alignment are part of the circuit design. [Project RTL architecture](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+A register stores a value, and a clock provides the timing reference. **RTL** (Register-Transfer Level) specifies values held in registers and the operations and transfers performed between clock events. Verilog and SystemVerilog describe the filter and detector datapaths and control. Parallel arithmetic and pipeline alignment are part of the circuit design. [Project RTL architecture](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
 
 <a id="term-fpga-rfsoc"></a>
 
 ## FPGA and RFSoC: implement the circuit
 
-An **FPGA (Field-Programmable Gate Array)** provides configurable logic and connections. An **RFSoC** integrates processor resources, programmable logic and high-speed **ADCs and DACs**. A DAC converts digital samples to an analog signal; an ADC converts an analog signal to samples. [AMD Zynq UltraScale+ RFSoC](https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc/zynq-ultrascale-plus-rfsoc.html)
+An **FPGA** (Field-Programmable Gate Array) provides configurable logic and connections. An **RFSoC** integrates processor resources, programmable logic and high-speed **ADCs and DACs**. A DAC converts digital samples to an analog signal; an ADC converts an analog signal to samples. [AMD Zynq UltraScale+ RFSoC](https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc/zynq-ultrascale-plus-rfsoc.html)
 
 <a id="term-ps-pl"></a>
 
@@ -41,17 +41,31 @@ An **FPGA (Field-Programmable Gate Array)** provides configurable logic and conn
 
 ## Vivado, Vitis and ILA
 
-Here, **Vivado** supports RTL simulation and FPGA implementation; **Vitis** builds and runs the PS control application. An **ILA (Integrated Logic Analyzer)** observes internal FPGA signals for debugging. [AMD embedded development flow](https://xilinx.github.io/Embedded-Design-Tutorials/docs/2022.2/build/html/docs/Introduction/ZynqMPSoC-EDT/4-build-sw-for-ps-subsystems.html)
+Here, **Vivado** supports RTL simulation and FPGA implementation; **Vitis** builds and runs the PS control application. An **ILA** (Integrated Logic Analyzer) observes internal FPGA signals for debugging. [AMD embedded development flow](https://xilinx.github.io/Embedded-Design-Tutorials/docs/2022.2/build/html/docs/Introduction/ZynqMPSoC-EDT/4-build-sw-for-ps-subsystems.html)
 
 <a id="term-verification"></a>
 
-## Reading verification and implementation results
+## Compare the model with the circuit
 
-A **testbench** supplies inputs and checks circuit behavior. Model and RTL outputs are compared, followed by resource and timing checks after implementation. **WNS** reports the worst slack, and **TNS** the sum of negative slack. Slack expresses margin against a timing requirement. [Project results](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+A **testbench** supplies inputs and checks circuit behavior. Model and RTL outputs are compared using the same inputs, followed by FPGA resource and timing checks. [Implementation and verification results](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍)
+
+<a id="term-timing"></a>
+
+<details>
+<summary>Implementation metrics · WNS and TNS</summary>
+
+**Slack** is the margin against a timing requirement. **WNS** reports the worst slack and **TNS** the sum of negative slack. These are read alongside resource usage in implementation reports.
+
+</details>
 
 <a id="term-parallelism"></a>
 
-**32-lane** means the number of parallel data items processed in a clock cycle here. **II (Initiation Interval)** is the minimum clock interval between accepted input groups. Data width, clock rate and II together describe processing throughput. [Parallel datapath](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#병렬-데이터-경로)
+<details>
+<summary>Parallel processing · 32 lanes and II</summary>
+
+**32-lane** means processing 32 data items together in one clock cycle here. **II (Initiation Interval)** is the minimum clock interval between accepted input groups. Data width, clock rate and II together determine throughput. [Parallel datapath](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#병렬-데이터-경로)
+
+</details>
 
 ## Related research
 

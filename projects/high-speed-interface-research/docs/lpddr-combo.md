@@ -9,11 +9,44 @@
 </p>
 <!-- /page-navigation:top -->
 
-[인터페이스 연구](../README.md) · [15.6-Gb/s TX 회로](lpddr-tx-circuit-verification.md) · [TX 모델 상세](lpddr-tx-modeling.md) · [SI·PI 설계](#si-pi-board-design) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+[대표 결과](#lpddr-combo-result) · [LPDDR·PHY 개념](../../../docs/concepts/interfaces.md#term-lpddr) · [인터페이스 연구](../README.md) · [15.6-Gb/s TX 회로](lpddr-tx-circuit-verification.md) · [TX 모델 상세](lpddr-tx-modeling.md) · [SI·PI 설계](#si-pi-board-design) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
 LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다릅니다. 이 연구는 세대별 클록·위상 조정 회로를 각각 구현할 때 늘어나는 면적을 줄이기 위해, **클록·위상 조정 자원을 공유하고 모드에 따라 신호 경로를 바꾸는 Combo Controller PHY**를 구현했습니다.
 
 제가 맡은 부분은 **DQ TX 회로 설계·검증과 TX Verilog 동작 모델링**입니다. 병렬 입력이 직렬 데이터와 pre-emphasis 출력으로 이어지는 경로를 확인하고, 측정용 PCB 설계·HFSS 분석과 제작 칩의 TX Eye·RX Shmoo 평가에 참여했습니다.
+
+<a id="lpddr-combo-result"></a>
+
+## 제작 보드에서 확인한 28&nbsp;nm Combo PHY의 동작
+
+실제 신호 경로를 평가하기 위해 측정용 PCB를 설계하고, 칩 패드–커넥터 구간의 전달 특성을 HFSS로 분석했습니다. COB 실장 이후에는 설계한 TX가 적용된 Combo PHY의 출력 Eye와 TX–RX 연결 시의 수신 마진을 측정했습니다.
+
+| 측정용 PCB | COB 실장 |
+|---|---|
+| <img src="../assets/pcb_hfss_lpddr_board_photo.png" alt="LPDDR Combo 측정용 PCB" width="280"> | <img src="../assets/pcb_hfss_lpddr_wirebond_photo.png" alt="칩 패드와 PCB의 COB·와이어 본딩" width="280"> |
+
+**평가 구성:** 측정용 PCB와 COB·와이어 본딩으로 칩의 신호·전원 경로를 연결했습니다. [PCB 설계·HFSS 전달 특성](pcb-hfss-verification.md)
+
+![14 Gb/s/pin·4-DQ 활성 조건의 Combo PHY TX Eye와 RX Shmoo](../assets/lpddr_combo_measured_eye_shmoo.png)
+
+**측정 조건:** 28-nm CMOS 제작 칩, 14 Gb/s/pin, 4-DQ 활성. 위는 TX Eye, 아래는 TX–RX 연결 조건의 RX Shmoo입니다. [논문 Fig. 5](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) · [Eye·Shmoo 읽는 방법](../../../docs/concepts/measurements.md)
+
+| 평가 항목 | 결과 | 확인한 동작 |
+|---|---|---|
+| TX Eye | **0.41 UI · 65.3 mV** | 네 DQ가 활성화된 상태의 출력 Eye opening |
+| RX Shmoo | **0.25 UI · 25 mV** | TX–RX 연결 상태에서의 타이밍·전압 마진 |
+| 세대별 신호 관계 | LPDDR4X SDR CA, LPDDR5/5X DDR CA·WCK:CK 2:1/4:1 | 모드에 따른 CA·CK·WCK 동작 |
+
+<details>
+<summary>LPDDR4X·5/5X 모드별 CA·CK·WCK 측정 파형</summary>
+
+![LPDDR4X의 SDR CA와 LPDDR5의 DDR CA, WCK:CK 2:1 및 4:1 모드에서 측정한 신호 파형](../assets/lpddr_combo_measured_clock_modes.png)
+
+위는 CA·CK, 아래는 WCK·CK 파형입니다. 모드에 따라 CA의 SDR/DDR 관계와 WCK:CK 주파수 비가 바뀌는 것을 확인한 실측 결과입니다. [논문 Fig. 5](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+
+</details>
+
+파형 관측에는 **86100D·86118A**, 입력·전원 조건과 오류 평가에는 **M8195A·E3631A·MP1800A**를 사용했습니다. RX Shmoo는 I2C 제어를 전원·BERT와 연동해 전압·타이밍 조건을 바꾸고 오류를 수집했습니다. [측정 장비·자동화](measurement-equipment.md)
 
 ## 세대에 따라 달라지는 클록·데이터 경로
 
@@ -62,42 +95,6 @@ TX를 제작 칩에서 평가하기 위해, **DQ·strobe의 신호 전달과 기
 ![LPDDR Combo 측정용 PCB의 SI·PI 설계 관점과 제작 칩 평가 흐름](../assets/lpddr_combo_si_pi_overview.svg)
 
 [SI·PI 설계 상세 보기 — PCB 배치·HFSS 모델·전달 손실 →](lpddr-combo-si-pi.md)
-
-## 제작 보드에서 확인한 28 nm Combo PHY의 동작
-
-실제 신호 경로를 평가하기 위해 측정용 PCB를 설계하고, 칩 패드–커넥터 구간의 전달 특성을 HFSS로 분석했습니다. COB 실장 이후에는 설계한 TX가 적용된 Combo PHY의 출력 Eye와 TX–RX 연결 시의 수신 마진을 측정했습니다.
-
-<details>
-<summary>측정용 PCB와 COB 실장 사진</summary>
-
-| 측정용 PCB | COB·와이어 본딩 |
-|---|---|
-| ![LPDDR Combo PHY 측정용 PCB 제작 사진](../assets/pcb_hfss_lpddr_board_photo.png) | ![칩 패드와 측정용 PCB 사이의 와이어 본딩](../assets/pcb_hfss_lpddr_wirebond_photo.png) |
-
-[PCB 설계·HFSS 전달 특성](pcb-hfss-verification.md)
-
-</details>
-
-![14 Gb/s/pin·4-DQ 활성 조건의 Combo PHY TX Eye와 RX Shmoo](../assets/lpddr_combo_measured_eye_shmoo.png)
-
-**측정 조건:** 28-nm CMOS 제작 칩, 14 Gb/s/pin, 4-DQ 활성. 위는 TX Eye, 아래는 TX–RX 연결 조건의 RX Shmoo입니다. [논문 Fig. 5](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
-
-| 평가 항목 | 결과 | 확인한 동작 |
-|---|---|---|
-| TX Eye | **0.41 UI · 65.3 mV** | 네 DQ가 활성화된 상태의 출력 Eye opening |
-| RX Shmoo | **0.25 UI · 25 mV** | TX–RX 연결 상태에서의 타이밍·전압 마진 |
-| 세대별 신호 관계 | LPDDR4X SDR CA, LPDDR5/5X DDR CA·WCK:CK 2:1/4:1 | 모드에 따른 CA·CK·WCK 동작 |
-
-<details>
-<summary>LPDDR4X·5/5X 모드별 CA·CK·WCK 측정 파형</summary>
-
-![LPDDR4X의 SDR CA와 LPDDR5의 DDR CA, WCK:CK 2:1 및 4:1 모드에서 측정한 신호 파형](../assets/lpddr_combo_measured_clock_modes.png)
-
-위는 CA·CK, 아래는 WCK·CK 파형입니다. 모드에 따라 CA의 SDR/DDR 관계와 WCK:CK 주파수 비가 바뀌는 것을 확인한 실측 결과입니다. [논문 Fig. 5](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
-
-</details>
-
-파형 관측에는 **86100D·86118A**, 입력·전원 조건과 오류 평가에는 **M8195A·E3631A·MP1800A**를 사용했습니다. RX Shmoo는 I2C 제어를 전원·BERT와 연동해 전압·타이밍 조건을 바꾸고 오류를 수집했습니다. [측정 장비·자동화](measurement-equipment.md)
 
 ## 관련 논문과 설계 자료
 

@@ -39,6 +39,8 @@ USB4 Version 2.0 introduced a PAM3-based physical layer. The USB4 Gen4 work in t
 
 Separating these quantities helps distinguish circuit data rate from FPGA sample throughput. [Rate and UI definitions](https://helpfiles.keysight.com/scopes/FlexDCA-PG/Content/Topics/Quick-Start/theory_bits_vs_symbols.htm)
 
+[Next: overlapping symbols and equalization →](equalization.en.md)
+
 ## Related research
 
 [NRZ TX circuit](../../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) · [USB PAM-3](../../projects/high-speed-interface-research/docs/usb4-pam3.md) · [PAM4 DSP](../../projects/zcu208-pam4-dsp-portfolio/)

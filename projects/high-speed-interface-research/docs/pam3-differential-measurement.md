@@ -9,9 +9,9 @@
 </p>
 <!-- /page-navigation:top -->
 
-[TX 모델링](usb-tx-modeling.md) · [PCB·HFSS](pcb-hfss-verification.md) · [측정 장비](measurement-equipment.md)
+[대표 결과](#pam3-ffe-result) · [Eye·BER 읽는 방법](../../../docs/concepts/measurements.md) · [TX 모델링](usb-tx-modeling.md) · [PCB·HFSS](pcb-hfss-verification.md) · [측정 장비](measurement-equipment.md)
 
-TX 칩의 차동 PAM-3 측정에 참여해 채널 손실과 FFE 설정에 따른 출력 Eye를 평가했습니다. 32 Gb/s에서 채널별 프리셋을 바꾸고, 상·하단 Eye의 폭과 높이를 비교했습니다.
+**담당:** TX 칩의 차동 PAM-3 측정에 참여해 채널 손실과 FFE 설정에 따른 출력 Eye를 평가했습니다. 32 Gb/s에서 채널별 프리셋을 바꾸고, 상·하단 Eye의 폭과 높이를 비교했습니다.
 
 ## 측정 구성과 관측 경로
 
@@ -25,6 +25,8 @@ TX 칩의 차동 PAM-3 측정에 참여해 채널 손실과 FFE 설정에 따른
 | TX 동작 | 32 Gb/s, 4-tap FFE·150개 프리셋 |
 | Eye 측정 | PRBS15·PRBS31, scrambler on |
 | 관측 항목 | FFE off/on 파형, 상·하단 Eye 폭·높이 |
+
+<a id="pam3-ffe-result"></a>
 
 ## 같은 채널에서 FFE 적용 전후 비교
 
@@ -63,6 +65,8 @@ TX 칩의 차동 PAM-3 측정에 참여해 채널 손실과 FFE 설정에 따른
 </details>
 
 ## BER bathtub과 timing opening
+
+[BER·timing opening 이해하기](../../../docs/concepts/measurements.md)
 
 BER 평가에서는 **32 Gb/s·scrambler off·PRBS7 주기에 해당하는 패턴 길이**를 사용했습니다. BER 10⁻¹² 기준 timing opening은 CH#2에서 **0.43 UI**, CH#3에서 **0.33 UI**입니다. [논문 Section V-D·Fig. 14](https://doi.org/10.1109/TVLSI.2026.3701343)
 

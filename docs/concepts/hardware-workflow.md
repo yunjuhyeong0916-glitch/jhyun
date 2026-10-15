@@ -8,25 +8,25 @@
 
 **DSP는 신호를 처리하는 방법, RTL은 디지털 회로를 기술하는 방식, FPGA는 그 회로를 구현하는 장치입니다.** 이 세 단계를 연결하면 모델에서 정한 동작을 실제 신호로 확인할 수 있습니다.
 
-![모델에서 알고리즘을 정하고, RTL로 회로를 기술하고, FPGA에 구현한 뒤 보드에서 신호를 평가하는 흐름](../../assets/concepts/hardware-flow.svg)
+![모델에서 알고리즘을 정하고, RTL로 회로를 기술하고, FPGA에 구현한 뒤 보드에서 신호를 평가하는 흐름](../../assets/concepts/hardware-flow-ko.svg)
 
 <a id="term-dsp"></a>
 
 ## DSP: 신호에 필요한 계산을 정합니다
 
-**DSP(Digital Signal Processing)**는 샘플로 표현한 신호를 디지털 연산으로 처리하는 방식입니다. 이 연구에서는 신호를 보상하는 [FFE](equalization.md#term-ffe)와 데이터열을 찾는 [MLSD](mlsd.md)가 주요 수신 연산입니다.
+**DSP**(Digital Signal Processing)는 샘플로 표현한 신호를 디지털 연산으로 처리하는 방식입니다. 이 연구에서는 신호를 보상하는 [FFE](equalization.md#term-ffe)와 데이터열을 찾는 [MLSD](mlsd.md)가 주요 수신 연산입니다.
 
 <a id="term-rtl"></a>
 
 ## RTL: 연산과 저장이 회로에서 어떻게 연결되는지 적습니다
 
-**RTL(Register-Transfer Level)**에서는 레지스터에 무엇을 저장하고, 한 클록 동안 어떤 연산과 데이터 이동을 수행할지 기술합니다. Verilog·SystemVerilog를 사용해 필터·검출기의 데이터 경로와 제어를 작성합니다. 여러 연산을 병렬로 배치하고 지연을 맞추는 일이 구현의 일부입니다. [이 프로젝트의 RTL 구성](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+레지스터는 값을 저장하는 회로이고, 클록은 동작의 기준 박자입니다. **RTL**(Register-Transfer Level)에서는 레지스터에 무엇을 저장하고, 한 클록 동안 어떤 연산과 데이터 이동을 수행할지 기술합니다. Verilog·SystemVerilog를 사용해 필터·검출기의 데이터 경로와 제어를 작성합니다. 여러 연산을 병렬로 배치하고 지연을 맞추는 일이 구현의 일부입니다. [이 프로젝트의 RTL 구성](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
 
 <a id="term-fpga-rfsoc"></a>
 
 ## FPGA·RFSoC: 설계한 회로를 실제 장치에 구현합니다
 
-**FPGA(Field-Programmable Gate Array)**는 내부 논리와 연결을 설정해 디지털 회로를 구현할 수 있는 장치입니다. **RFSoC**는 프로세서·FPGA 논리와 고속 **ADC·DAC**를 한 장치에 통합합니다. DAC는 디지털 샘플을 아날로그 신호로, ADC는 아날로그 신호를 디지털 샘플로 바꿉니다. [AMD Zynq UltraScale+ RFSoC](https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc/zynq-ultrascale-plus-rfsoc.html)
+**FPGA**(Field-Programmable Gate Array)는 내부 논리와 연결을 설정해 디지털 회로를 구현할 수 있는 장치입니다. **RFSoC**는 프로세서·FPGA 논리와 고속 **ADC·DAC**를 한 장치에 통합합니다. DAC는 디지털 샘플을 아날로그 신호로, ADC는 아날로그 신호를 디지털 샘플로 바꿉니다. [AMD Zynq UltraScale+ RFSoC](https://www.amd.com/en/products/adaptive-socs-and-fpgas/soc/zynq-ultrascale-plus-rfsoc.html)
 
 <a id="term-ps-pl"></a>
 
@@ -41,17 +41,31 @@
 
 ## Vivado·Vitis·ILA는 어디에 쓰이나요?
 
-이 프로젝트에서 **Vivado**는 RTL 시뮬레이션·FPGA 회로 구현에, **Vitis**는 PS 제어 앱의 빌드·실행에 사용합니다. **ILA(Integrated Logic Analyzer)**는 FPGA 내부 신호를 관찰하는 디버깅 수단입니다. [AMD의 하드웨어·소프트웨어 개발 흐름](https://xilinx.github.io/Embedded-Design-Tutorials/docs/2022.2/build/html/docs/Introduction/ZynqMPSoC-EDT/4-build-sw-for-ps-subsystems.html)
+이 프로젝트에서 **Vivado**는 RTL 시뮬레이션·FPGA 회로 구현에, **Vitis**는 PS 제어 앱의 빌드·실행에 사용합니다. **ILA**(Integrated Logic Analyzer)는 FPGA 내부 신호를 관찰하는 디버깅 수단입니다. [AMD의 하드웨어·소프트웨어 개발 흐름](https://xilinx.github.io/Embedded-Design-Tutorials/docs/2022.2/build/html/docs/Introduction/ZynqMPSoC-EDT/4-build-sw-for-ps-subsystems.html)
 
 <a id="term-verification"></a>
 
-## 검증 결과에서 확인하는 것
+## 모델과 회로의 결과를 비교합니다
 
-**Testbench**는 회로에 입력을 주고 출력·동작을 점검하는 검증 코드입니다. 모델과 RTL의 결과를 비교한 뒤, 구현 보고서에서 자원 사용량과 타이밍을 살펴봅니다. **WNS**는 보고된 경로 중 가장 나쁜 slack, **TNS**는 음수 slack의 합입니다. Slack은 정해진 타이밍 조건에 대한 여유를 뜻합니다. [프로젝트의 구현·검증 결과](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+**Testbench**는 회로에 입력을 주고 출력·동작을 점검하는 검증 코드입니다. 같은 입력에서 모델과 RTL의 결과를 비교하고, FPGA에 구현한 뒤에는 자원 사용량과 타이밍을 확인합니다. [실제 구현·검증 결과](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#fpga-자원타이밍)
+
+<a id="term-timing"></a>
+
+<details>
+<summary>구현 지표 더 보기 · WNS·TNS</summary>
+
+**Slack**은 정해진 타이밍 조건에 대한 여유입니다. **WNS**는 보고된 경로 중 가장 나쁜 slack, **TNS**는 음수 slack의 합입니다. 자원 사용량과 함께 구현 보고서에서 확인합니다.
+
+</details>
 
 <a id="term-parallelism"></a>
 
-**32-lane**은 여기서 한 클록에 처리하는 병렬 데이터 수를 뜻합니다. **II(Initiation Interval)**는 새 입력 묶음을 받아들일 수 있는 최소 클록 간격입니다. 데이터 폭·클록·II를 함께 보면 처리량을 이해할 수 있습니다. [병렬 데이터 경로](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#병렬-데이터-경로)
+<details>
+<summary>병렬 처리 더 보기 · 32-lane·II</summary>
+
+**32-lane**은 이 연구에서 한 클록에 처리하는 병렬 데이터 수입니다. 한 개씩 계산하는 대신 32개를 묶어 동시에 다룹니다. **II**(Initiation Interval)는 새 입력 묶음을 받아들일 수 있는 최소 클록 간격입니다. 데이터 폭·클록·II를 함께 보면 처리량을 이해할 수 있습니다. [병렬 데이터 경로](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#병렬-데이터-경로)
+
+</details>
 
 ## 관련 연구
 

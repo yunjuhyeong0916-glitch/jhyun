@@ -9,11 +9,29 @@
 </p>
 <!-- /page-navigation:top -->
 
-[인터페이스 연구 개요](../README.md) · [TX 모델링](usb-tx-modeling.md) · [논문·담당 역할](evidence.md)
+[대표 결과](#usb-rx-ctle-result) · [CTLE 개념](../../../docs/concepts/equalization.md#term-ctle) · [인터페이스 연구 개요](../README.md) · [TX 모델링](usb-tx-modeling.md) · [논문·담당 역할](evidence.md)
 
 **담당:** CTLE 모델링·송수신 통합 검증. 바이어스·입력 공통전압과 R·C 제어를 조정해 채널 보상과 PAM-3 중간 레벨 안정성을 확인했습니다.
 
 **검증:** CTLE 모델·시뮬레이션과 RX 통합 모델의 동작 확인.
+
+<a id="usb-rx-ctle-result"></a>
+
+## 대표 결과: CTLE 입력과 출력 Eye
+
+채널을 통과한 PAM-3 신호에 CTLE 보상을 적용하고, 같은 통합 모델에서 입력과 출력 Eye를 확인했습니다.
+
+### 채널을 통과한 CTLE 입력
+
+![채널을 통과한 scrambled PAM-3 데이터의 CTLE 입력 Eye](../assets/usb_rx_ctle_input_eye_ffe_off.png)
+
+### 보상 조정 후 CTLE 출력
+
+![보상 조정 후 CTLE 출력 Eye](../assets/usb_rx_ctle_output_eye_ffe_off.png)
+
+**조건:** TX FFE off·scrambled data에서 선택한 CTLE 설정의 입출력 Eye.
+
+입력과 출력의 상·하단 Eye를 함께 보며 보상 상태를 판단했습니다. [CTLE의 보상 원리](../../../docs/concepts/equalization.md#term-ctle) · [Eye 읽는 방법](../../../docs/concepts/measurements.md#term-eye)
 
 ## 1. 바이어스·입력 공통전압을 먼저 정한 이유
 
@@ -71,12 +89,6 @@ AC 테스트에서는 수신 부하를 CL=50 fF로 가정하고 다음 설정을
 **관측:** 초기 통합 모델의 CTLE 출력에서 나타난 중간 레벨의 흔들림.
 
 </details>
-
-| 채널을 통과한 CTLE 입력 | 보상 조정 후 CTLE 출력 |
-|---|---|
-| ![FFE off 상태에서 채널을 통과한 scrambled PAM3 데이터의 CTLE 입력 Eye](../assets/usb_rx_ctle_input_eye_ffe_off.png) | ![보상 조정 후 CTLE 출력 Eye](../assets/usb_rx_ctle_output_eye_ffe_off.png) |
-
-**조건:** TX FFE off·scrambled data에서 선택한 CTLE 설정의 입출력 Eye.
 
 ## 4. Sampler에 연결할 때 공통전압·부하 조건 재확인
 

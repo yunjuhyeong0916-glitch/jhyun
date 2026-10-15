@@ -9,7 +9,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [보드 초기화·제어 (Vitis)](vitis-bringup.md) · [논문](../../../docs/publications.md)
+[개념부터: Eye·BER·Shmoo](../../../docs/concepts/measurements.md) · [설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [보드 초기화·제어 (Vitis)](vitis-bringup.md) · [논문](../../../docs/publications.md)
 
 기준일: **2026-10-07**.
 
@@ -27,9 +27,11 @@ A-SSCC 2026, p. 2 Fig. 6 상단. 왼쪽은 ZCU208·XM655와 ISI 보드의 실제
 | PRBS7 BER | < 10⁻⁷ | 동일 그림의 RFSoC 시스템 결과 |
 | PRBS15 BER | < 2×10⁻⁶ | 동일 그림의 RFSoC 시스템 결과 |
 
-[논문 공식 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+[BER·PRBS 읽는 방법](../../../docs/concepts/measurements.md#term-ber) · [논문 공식 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 ## FPGA 자원·타이밍
+
+[자원·타이밍 지표 이해하기](../../../docs/concepts/hardware-workflow.md#term-timing)
 
 ![논문의 FPGA TX·RX DSP 배치와 전체 자원 사용량·경로별 자원 구성](../assets/mlsd_paper_fpga_resources_layout.jpg)
 

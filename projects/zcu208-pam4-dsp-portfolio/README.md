@@ -9,15 +9,37 @@
 </p>
 <!-- /page-navigation:top -->
 
-[MLSD 개념](../../docs/concepts/mlsd.md) · [설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [Vitis·FPGA 구동](docs/vitis-bringup.md) · [측정·구현 결과](docs/validation.md) · [AI 활용·자동화](#ai-활용검증-자동화)
+[대표 결과](#asscc-result) · [MLSD 개념](../../docs/concepts/mlsd.md) · [설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [Vitis·FPGA 구동](docs/vitis-bringup.md) · [측정·구현 결과](docs/validation.md) · [AI 활용·자동화](#ai-활용검증-자동화)
 
 PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위해 **송수신 DSP·검출기 RTL과 RFSoC 제어·오류 검사 경로**를 구현했습니다. ISI 보드를 통한 송수신 평가 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 
-ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 **[32-lane 병렬 DSP](docs/architecture.md)**로 구현해 연결했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
+**담당:** TX·RX 필터와 DS-SBM 검출기 RTL 설계, RFSoC 통합·제어와 보드 검증.
 
 후속 DP-SMM 설계는 [Journal 준비 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md), 두 구조의 비교는 [학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)에서 다룹니다.
 
+<a id="asscc-result"></a>
+
+## 시스템 측정·FPGA 구현 결과
+
+![ZCU208·XM655와 ISI 보드를 연결한 실제 측정 구성과 채널 응답](assets/mlsd_paper_isi_measurement_setup.png)
+
+**평가 구성:** ZCU208 DAC → ISI 보드 → ADC. 왼쪽은 보드 연결 사진, 오른쪽은 DAC–ADC 경로를 포함한 약 41-dB 손실 조건입니다.
+
+![A-SSCC에 보고한 PRBS7·PRBS15 수신 BER 컨투어](assets/mlsd_paper_measured_ber_contours.png)
+
+**대표 결과:** 21-tap RX FFE와 3-tap PR 조건에서 PR 계수에 따른 PRBS7·PRBS15의 BER 분포입니다. 짙은 파란 영역일수록 BER이 작습니다. [BER 읽는 방법](../../docs/concepts/measurements.md#term-ber)
+
+| 항목 | 결과 | 조건·출처 |
+|---|---|---|
+| RFSoC 시스템 BER | PRBS7 < 10⁻⁷·PRBS15 < 2×10⁻⁶ | A-SSCC 2026 Fig. 5, 41-dB 손실·ISI 보드 측정 |
+| 전체 TRX 자원 | LUT 189,108·FF 188,846·DSP 950·BRAM 24.5 | 전체 TRX, 2026-06-14 배치(placed) 결과 |
+| FPGA 타이밍 | WNS +0.083 ns·WHS +0.010 ns·TNS/THS 0 | 2026-06-29 post-route physopt 보고서 |
+
+[측정·구현 상세](docs/validation.md) · [MLSD를 예제로 이해하기](../../docs/concepts/mlsd.md)
+
 ## 설계·구현
+
+ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 **[32-lane 병렬 DSP](docs/architecture.md)**로 구현해 연결했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
 
 | 영역 | 구현 |
 |---|---|
@@ -54,16 +76,6 @@ RX FFE로 채널 왜곡을 보상한 뒤, 별도 3-tap PR 필터로 MLSD에 사�
 ## Vitis 기반 보드 구동
 
 Vivado에서 내보낸 XSA로 Vitis 플랫폼을 구성하고 Cortex-A53 Standalone 앱을 JTAG으로 실행했습니다. 앱에서 CLK104·RFDC 초기화와 RX 계수 쓰기·commit을 제어하고, BRAM의 수신 디버그 데이터를 UART CSV로 수집했습니다. [구동 순서·PS–PL 제어 경로](docs/vitis-bringup.md)
-
-## 시스템 측정·FPGA 구현 결과
-
-| 항목 | 결과 | 조건·출처 |
-|---|---|---|
-| RFSoC 시스템 BER | PRBS7 < 10⁻⁷·PRBS15 < 2×10⁻⁶ | A-SSCC 2026 Fig. 5, 41-dB 손실·ISI 보드 측정 |
-| 전체 TRX 자원 | LUT 189,108·FF 188,846·DSP 950·BRAM 24.5 | 전체 TRX, 2026-06-14 배치(placed) 결과 |
-| FPGA 타이밍 | WNS +0.083 ns·WHS +0.010 ns·TNS/THS 0 | 2026-06-29 post-route physopt 보고서 |
-
-[상세 결과·검증 조건](docs/validation.md)
 
 ## AI 활용·검증 자동화
 

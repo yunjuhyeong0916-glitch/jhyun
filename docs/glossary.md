@@ -13,7 +13,7 @@
 
 [연구 이력](profile.md) · [대표 프로젝트](../projects/zcu208-pam4-dsp-portfolio/)
 
-각 설명은 **개념 → 필요한 이유 → 간단한 예 → 관련 연구** 순서로 이어집니다. 용어를 누르면 해당 설명 페이지로 이동합니다.
+처음이라면 **[PAM 신호](concepts/pam-signaling.md) → [ISI·등화](concepts/equalization.md) → [MLSD](concepts/mlsd.md)** 순서로 읽어 보세요. 신호 표현부터 수신 판정까지 이어집니다. 구현 과정은 [RTL·FPGA](concepts/hardware-workflow.md), 결과 해석은 [Eye·BER·Shmoo](concepts/measurements.md)에서 볼 수 있습니다.
 
 ## 주제별로 읽기
 
@@ -43,10 +43,25 @@
 | [FPGA / RFSoC](concepts/hardware-workflow.md#term-fpga-rfsoc) | 설계한 회로를 구현하는 재구성 가능한 장치 / ADC·DAC가 통합된 SoC |
 | [PS / PL](concepts/hardware-workflow.md#term-ps-pl) | SoC의 프로세서 영역 / FPGA 회로 영역. 이 프로젝트에서는 PS 앱이 PL의 모드·계수를 설정 |
 | [Vivado / Vitis](concepts/hardware-workflow.md#term-tools) | PL 회로 구현·디버깅 도구 / PS 제어 앱·플랫폼·부트 구성의 개발·실행 도구 |
-| XSA / BSP / ELF | 하드웨어 전달 파일 / 해당 하드웨어의 소프트웨어 지원 구성 / CPU에서 실행할 프로그램 파일 |
-| FSBL / PMUFW | 초기 하드웨어 설정·다음 실행 파일 로딩을 담당하는 부트로더 / 플랫폼 관리 프로세서의 펌웨어 |
 | [FIR](concepts/equalization.md#term-fir-taps) | 여러 시점의 샘플에 계수를 곱해 합산하는 디지털 필터 |
 | [MLSD](concepts/mlsd.md) | 연속된 수신 신호의 정보를 이용해 송신 데이터열을 판별하는 방식 |
+| [GS/s](concepts/pam-signaling.md#term-rates) | 초당 10억 샘플 단위의 샘플링 속도 |
+| [PRBS](concepts/measurements.md#term-ber) | 송수신 데이터와 오류를 비교하는 데 사용하는 의사난수 비트 패턴 |
+| [Testbench](concepts/hardware-workflow.md#term-verification) | 회로에 입력을 주고 동작이나 출력을 점검하는 검증용 코드 |
+| [ILA](concepts/hardware-workflow.md#term-tools) | FPGA 내부 신호를 관찰하기 위한 디버깅 수단 |
+| [ISI](concepts/equalization.md#term-isi) | 한 심볼의 영향이 다른 심볼의 관측 시점에 겹치는 현상 |
+| [BER](concepts/measurements.md#term-ber) | 오류 비트 수 / 비교한 전체 비트 수 |
+| [PHY / TX / RX](concepts/interfaces.md#term-phy) | 전기 신호를 주고받는 물리 계층 / 송신부 / 수신부 |
+| [SI / PI](concepts/interfaces.md#term-si-pi) | 신호 파형·타이밍 품질 / 전원·접지 품질 |
+| [NDP](concepts/interfaces.md#term-ndp) | 이력서에서는 Near-display processing 기반 디스플레이 시스템 개발 과제 |
+
+<details>
+<summary>구현·부팅·연구 구조 용어 더 보기</summary>
+
+| 용어 | 이 저장소에서의 의미 |
+|---|---|
+| XSA / BSP / ELF | 하드웨어 전달 파일 / 해당 하드웨어의 소프트웨어 지원 구성 / CPU에서 실행할 프로그램 파일 |
+| FSBL / PMUFW | 초기 하드웨어 설정·다음 실행 파일 로딩을 담당하는 부트로더 / 플랫폼 관리 프로세서의 펌웨어 |
 | [DS-SBM](concepts/mlsd.md#term-research) | Dual-Survivor Segmented Branch Metric-Matrix. 상태별 두 survivor branch와 구간별 BM 행렬 결합을 사용하는 A-SSCC의 축소 상태 MLSD 구조 |
 | [DP-SMM](concepts/mlsd.md#term-research) | Dual-Path Segmented Metric-Matrix. 행렬 원소별 두 경로 후보와 상태별 두 경계 survivor를 유지하는 Journal 준비 연구의 축소 상태 MLSD 구조 |
 | [PR 목표](concepts/equalization.md#term-pr) | 검출기가 예상 수신 샘플을 계산할 때 사용하는 부분응답 계수. DS-SBM은 별도 PR FIR을 두고, DP-SMM은 예상 샘플 계산에 반영 |
@@ -54,16 +69,9 @@
 | [Survivor](concepts/mlsd.md#term-metrics) | 후보 선택 후 다음 단계로 전달하는 분기·경로 정보. 보존 위치와 개수는 검출기 구조에 따라 다름 |
 | [II](concepts/hardware-workflow.md#term-parallelism) | Initiation interval. 연속 입력을 받아들일 수 있는 최소 클록 간격 |
 | [32-lane](concepts/hardware-workflow.md#term-parallelism) | 한 클록에서 처리하는 병렬 데이터 수. 물리적 연결 32개라는 뜻은 아님 |
-| [GS/s](concepts/pam-signaling.md#term-rates) | 초당 10억 샘플 단위의 샘플링 속도 |
-| [PRBS](concepts/measurements.md#term-ber) | 송수신 데이터와 오류를 비교하는 데 사용하는 의사난수 비트 패턴 |
-| [Testbench](concepts/hardware-workflow.md#term-verification) | 회로에 입력을 주고 동작이나 출력을 점검하는 검증용 코드 |
-| [WNS / TNS](concepts/hardware-workflow.md#term-verification) | 타이밍 보고서의 최악 slack / 음수 slack 합계. 적용된 제약과 함께 해석 |
-| [ILA](concepts/hardware-workflow.md#term-tools) | FPGA 내부 신호를 관찰하기 위한 디버깅 수단 |
-| [ISI](concepts/equalization.md#term-isi) | 한 심볼의 영향이 다른 심볼의 관측 시점에 겹치는 현상 |
-| [BER](concepts/measurements.md#term-ber) | 오류 비트 수 / 비교한 전체 비트 수 |
-| [PHY / TX / RX](concepts/interfaces.md#term-phy) | 전기 신호를 주고받는 물리 계층 / 송신부 / 수신부 |
-| [SI / PI](concepts/interfaces.md#term-si-pi) | 신호 파형·타이밍 품질 / 전원·접지 품질 |
-| [NDP](concepts/interfaces.md#term-ndp) | 이력서에서는 Near-display processing 기반 디스플레이 시스템 개발 과제 |
+| [WNS / TNS](concepts/hardware-workflow.md#term-timing) | 타이밍 보고서의 최악 slack / 음수 slack 합계. 적용된 제약과 함께 해석 |
+
+</details>
 
 <!-- page-navigation:bottom -->
 <p>

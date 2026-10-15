@@ -6,49 +6,58 @@
 
 [← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md)
 
-**Equalization compensates for channel distortion so that a receiver can distinguish transmitted data more reliably.**
+**Equalization compensates for changes introduced by the transmission path so that a receiver can distinguish data more reliably.**
+
+A **symbol** is one transmitted signal value. The **channel** is its path through traces, connectors or cables.
 
 <a id="term-isi"></a>
 
-## One symbol can affect the next observation
+## 1. The same symbol can produce different observations
 
-Traces, connectors and cables can spread a waveform in time or create reflections. **ISI (Inter-Symbol Interference)** occurs when one symbol influences observations of other symbols. Equalization uses the channel response to reduce this effect. [MathWorks equalization overview](https://www.mathworks.com/help/comm/ug/equalization.html)
+Assume the current symbol is `+1` and half of the previous symbol remains in the observation. A previous `+1` gives `1.5`; a previous `−1` gives `0.5`. **The current data is the same, but earlier data changes what the receiver sees.**
 
-If a sample contains `the current symbol + part of a previous symbol`, its amplitude depends on the preceding data. A receiver can compensate for this relationship or exploit it in detection using [MLSD](mlsd.en.md).
+![Transmitted symbols, samples with previous-symbol ISI and samples after a simple compensating filter](../../assets/concepts/isi-equalization.svg)
+
+This illustration sends the same sequence through a channel and applies a simple compensating filter. Some residual influence remains. **ISI** (Inter-Symbol Interference) means that one symbol affects observations of other symbols. [Equalization principles](https://www.mathworks.com/help/comm/ug/equalization.html)
 
 <a id="term-ffe"></a>
 
-## FFE, CTLE and DFE
+## 2. What information does each equalizer use?
 
-**FFE (Feed-Forward Equalizer)** combines weighted signal values from several time instants. A TX FFE shapes a waveform before transmission; an RX FFE compensates received samples. [FFE documentation](https://www.mathworks.com/help/serdes/ref/serdes.ffe-system-object.html)
+**FFE** (Feed-Forward Equalizer) combines weighted signal values from several times. A TX FFE shapes the outgoing waveform; an RX FFE compensates the received signal. [FFE](https://www.mathworks.com/help/serdes/ref/serdes.ffe-system-object.html)
 
 <a id="term-ctle"></a>
 
-**CTLE (Continuous-Time Linear Equalizer)** adjusts gain with frequency. It can relatively boost fast-changing components attenuated by a channel. The USB RX work here includes behavioral modeling of this circuit. [CTLE documentation](https://www.mathworks.com/help/serdes/ref/serdes.ctle-system-object.html)
+**CTLE** (Continuous-Time Linear Equalizer) adjusts analog gain with frequency. It can relatively boost high-frequency components attenuated by a channel. [CTLE](https://www.mathworks.com/help/serdes/ref/serdes.ctle-system-object.html)
 
 <a id="term-dfe"></a>
 
-**DFE (Decision-Feedback Equalizer)** uses previously detected symbols to estimate and subtract their contribution to the current observation. Its feedback path therefore depends on earlier decisions. [DFE documentation](https://www.mathworks.com/help/serdes/ref/serdes.dfe-system-object.html)
+**DFE** (Decision-Feedback Equalizer) uses earlier symbol decisions to estimate and subtract their contribution to the current observation. [DFE](https://www.mathworks.com/help/serdes/ref/serdes.dfe-system-object.html)
 
 <a id="term-fir-taps"></a>
 
-## FIR, taps and coefficients
+## 3. What does a 21-tap FFE mean?
 
-An **FIR (Finite Impulse Response)** filter forms a weighted sum of input samples from several time instants. Each delayed-sample contribution is a **tap**; its weight is a **coefficient**.
+An **FIR** (Finite Impulse Response) filter forms a weighted sum of samples from several times. A weight is a **coefficient**, and each sample contribution is a **tap**.
 
-A `21-tap RX FFE` combines 21 sample positions for receiver equalization. The project implements this operation in [RTL](hardware-workflow.en.md#term-rtl) for parallel FPGA processing. [RX FIR implementation](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+A `21-tap RX FFE` combines 21 sample positions, each multiplied by its coefficient. The project implements this operation in RTL. [RX FIR architecture](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
 
 <a id="term-pr"></a>
 
-## PR defines the response used by MLSD
+<details>
+<summary>Read more · Partial-response targets and MLSD</summary>
 
-A **partial-response (PR) target** describes how current and previous symbols should contribute at the detector input. Equalization shapes the response, and MLSD uses that target to predict candidate observations.
+A **partial-response (PR) target** specifies how current and previous symbols should contribute to a detector observation. Equalization shapes the response, and MLSD uses that response to predict candidate observations.
 
-The A-SSCC DS-SBM receiver uses **RX FFE → three-tap PR FIR → MLSD**. [Implemented signal path](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+The A-SSCC DS-SBM path is **RX FFE → three-tap PR FIR → MLSD**. [Implemented signal path](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
 
-## Related research
+</details>
 
-[USB TX FFE models](../../projects/high-speed-interface-research/docs/usb-tx-modeling.md) · [USB RX CTLE models](../../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) · [PAM4 receiver DSP](../../projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md)
+## Continue to the research results
+
+[USB TX FFE model results](../../projects/high-speed-interface-research/docs/usb-tx-modeling.md#usb-tx-ffe-result) · [USB RX CTLE input/output eyes](../../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md#usb-rx-ctle-result) · [USB silicon FFE measurements](../../projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result)
+
+[← PAM signaling](pam-signaling.en.md) · [Using residual ISI with MLSD →](mlsd.en.md)
 
 ---
 

@@ -12,7 +12,7 @@
 
 ## PHY, TX and RX
 
-The **PHY (Physical Layer)** converts data to transmitted electrical signals and recovers data from received signals. **TX** means transmitter and **RX** means receiver.
+The **PHY** (Physical Layer) converts data to transmitted electrical signals and recovers data from received signals. **TX** means transmitter and **RX** means receiver.
 
 A controller manages communication operations; the PHY implements the electrical signal path and timing. **TX circuit design** in the CV refers to responsibility for the transmitter path and its verification. [TX work in the LPDDR Combo project](../../projects/high-speed-interface-research/docs/lpddr-combo.md)
 
@@ -20,7 +20,7 @@ A controller manages communication operations; the PHY implements the electrical
 
 ## LPDDR, JEDEC and Combo PHY
 
-**LPDDR (Low-Power Double Data Rate)** is a family of power-conscious DRAM standards. **JEDEC** develops memory standards of this kind. [Micron LPDDR overview](https://www.micron.com/products/memory/lpddr-components) · [JEDEC](https://www.jedec.org/)
+**LPDDR** (Low-Power Double Data Rate) is a family of power-conscious DRAM standards. **JEDEC** develops memory standards of this kind. [Micron LPDDR overview](https://www.micron.com/products/memory/lpddr-components) · [JEDEC](https://www.jedec.org/)
 
 A **Combo PHY** supports multiple interface generations in one PHY. The LPDDR4X/5/5X design here selects and configures data and clock paths for each operating mode. [Generation-dependent paths and TX implementation](../../projects/high-speed-interface-research/docs/lpddr-combo.md)
 
@@ -28,7 +28,7 @@ A **Combo PHY** supports multiple interface generations in one PHY. The LPDDR4X/
 
 ## USB4 Gen4 and PAM-3
 
-USB4 specifies communication between devices. Gen4 signaling in USB4 Version 2.0 uses [PAM-3](pam-signaling.en.md#term-pam3). The portfolio presents TX/RX model verification and TX silicon evaluation as distinct activities. [USB-IF announcement](https://www.usb.org/sites/default/files/2022-10/USB-IF%20USB%2080Gbps%20Announcement_FINAL_v2.pdf) · [Related research](../../projects/high-speed-interface-research/docs/usb4-pam3.md)
+USB4 specifies communication between devices. Gen4 signaling in USB4 Version 2.0 uses [PAM-3](pam-signaling.en.md#term-pam3). The work includes TX/RX modeling and evaluation of TX silicon output signals. [USB-IF announcement](https://www.usb.org/sites/default/files/2022-10/USB-IF%20USB%2080Gbps%20Announcement_FINAL_v2.pdf) · [Related research](../../projects/high-speed-interface-research/docs/usb4-pam3.md)
 
 <a id="term-zq"></a>
 
@@ -40,7 +40,7 @@ ZQ calibration adjusts transmitter output resistance toward a reference value to
 
 ## PCB, SI, PI and HFSS
 
-A **PCB** connects chips, connectors and power networks. **SI (Signal Integrity)** concerns signal shape and timing. **PI (Power Integrity)** concerns the quality of power and ground delivered to circuits.
+A **PCB** connects chips, connectors and power networks. **SI** (Signal Integrity) concerns signal shape and timing. **PI** (Power Integrity) concerns the quality of power and ground delivered to circuits.
 
 **HFSS** performs electromagnetic analysis of structures such as board interconnects. **S-parameters** describe frequency-dependent reflection and transmission. In a two-port example, `S11` describes reflection at the input and `S21` transmission from input to output. [Ansys HFSS](https://ansys.synopsys.com/products/electronics/ansys-hfss) · [Reflection and transmission coefficients](https://optics.ansys.com/hc/en-us/articles/360042095873-Metamaterial-S-parameter-extraction)
 

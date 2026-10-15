@@ -9,9 +9,33 @@
 </p>
 <!-- /page-navigation:top -->
 
-[인터페이스 연구 개요](../README.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·담당 역할](evidence.md)
+[대표 결과](#usb-tx-ffe-result) · [PAM-3 신호 이해하기](../../../docs/concepts/pam-signaling.md#term-pam3) · [인터페이스 연구 개요](../README.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·담당 역할](evidence.md)
 
 **담당:** TX 논리 RTL·XMODEL 모델링·통합, Serializer 검증, 합성·P&R 후 전기 계층 연결. **검증:** 모델·시뮬레이션.
+
+<a id="usb-tx-ffe-result"></a>
+
+## 대표 결과: 채널을 포함한 TX 모델의 FFE 비교
+
+**평가 경로:** MSB·LSB 직렬화 → 4-tap FFE 드라이버 → 채널 → Eye 관측.
+
+채널 보상은 같은 모델·채널에서 계수를 바꾸어 확인했습니다. 아래 두 그림은 25.6 GBaud, 1 UI=39.0625 ps, VDD=1 V, tail-current 설정 5 mA의 모델 결과입니다. 사용한 채널의 손실 곡선은 **12.8 GHz에서 9.89 dB**를 표시합니다.
+
+### FFE off · Preset 0
+
+![메인 계수만 사용한 모델 Eye](../assets/usb_tx_model_channel_ffe_off.png)
+
+`C[-2], C[-1], C[0], C[1] = 0, 0, 1, 0`
+
+### FFE on · Preset 7
+
+![프리·포스트 커서 계수를 적용한 모델 Eye](../assets/usb_tx_model_channel_ffe_preset7.png)
+
+`C[-2], C[-1], C[0], C[1] = 0, -0.05, 0.8, -0.15`
+
+**조건:** 채널 포함 XMODEL 시뮬레이션, 이상적 전류원·수동 FFE 계수.
+
+같은 채널에서 계수를 바꾸어 출력 Eye를 비교했습니다. [FFE의 보상 원리](../../../docs/concepts/equalization.md#term-ffe) · [Eye 읽는 방법](../../../docs/concepts/measurements.md#term-eye)
 
 ## 1. 인코더와 드라이버 사이의 데이터 형식 정의
 
@@ -109,15 +133,6 @@ MSB·LSB Serializer와 aligner를 4-tap FFE 드라이버에 연결했습니다. 
 **전기 계층 연결:** MSB·LSB Serializer → aligner → 4-tap FFE 드라이버.
 
 초기 FFE 모델에서는 음수 계수를 전류원의 음수 값으로 표현했습니다. 회로에서 구현할 수 있도록 **전류 크기는 양수로 두고 해당 차동 입력의 극성을 반전**하는 방식으로 수정했으며, 같은 계수에서 수정 전후 Eye를 비교했습니다.
-
-채널 보상은 같은 모델·채널에서 계수를 바꾸어 확인했습니다. 아래 두 그림은 25.6 GBaud, 1 UI=39.0625 ps, VDD=1 V, tail-current 설정 5 mA의 모델 결과입니다. 사용한 채널의 손실 곡선은 **12.8 GHz에서 9.89 dB**를 표시합니다.
-
-| FFE off · Preset 0 | FFE on · Preset 7 |
-|---|---|
-| ![메인 계수만 사용한 FFE 비활성 상태의 모델 Eye](../assets/usb_tx_model_channel_ffe_off.png) | ![프리 및 포스트 커서 계수를 적용한 모델 Eye](../assets/usb_tx_model_channel_ffe_preset7.png) |
-| `C[-2], C[-1], C[0], C[1] = 0, 0, 1, 0` | `0, -0.05, 0.8, -0.15` |
-
-**조건:** 채널 포함 XMODEL 시뮬레이션, 이상적 전류원·수동 FFE 계수.
 
 ## 7. 구현 후 MSB·LSB를 VCS와 POSIM에서 교차 확인
 
