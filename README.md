@@ -99,13 +99,13 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 <table>
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
 <tbody><tr>
-<td align="center"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_tx_eye.svg" alt="14 Gb/s/pin·4-DQ 활성 조건의 LPDDR Combo TX Eye: 0.41 UI, 65.3 mV" width="330"></a></td>
-<td align="center"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_rx_shmoo.svg" alt="14 Gb/s/pin·4-DQ 활성 조건의 LPDDR Combo RX Shmoo: 0.25 UI, 25 mV" width="330"></a></td>
+<td align="center" valign="top"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_tx_eye.svg" alt="14 Gb/s/pin·4-DQ 활성 조건의 LPDDR Combo TX Eye: 0.41 UI, 65.3 mV" width="330"></a></td>
+<td align="center" valign="top"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_rx_shmoo.svg" alt="14 Gb/s/pin·4-DQ 활성 조건의 LPDDR Combo RX Shmoo: 0.25 UI, 25 mV" width="330"></a></td>
 </tr></tbody>
 </table>
 
 <blockquote>
-<strong>14&nbsp;Gb/s/pin · TX Eye 0.41&nbsp;UI / 65.3&nbsp;mV</strong><br>
+<strong>14&nbsp;Gb/s/pin · 4-DQ 활성 · TX Eye 0.41&nbsp;UI / 65.3&nbsp;mV</strong><br>
 <strong>담당:</strong> DQ TX 회로·Verilog 모델, 측정용 PCB 설계·HFSS 분석. 칩 측정 참여.<br>
 28&nbsp;nm 제작 칩 측정 · A-SSCC 2026 <strong>공&#8288;동&#8288;저&#8288;자 · 채택</strong>
 </blockquote>
