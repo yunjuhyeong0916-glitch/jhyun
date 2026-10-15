@@ -63,7 +63,7 @@
 | TX Eye | **0.41 UI · 65.3 mV** | 14 Gb/s/pin, 4-DQ 활성 |
 | RX Shmoo | **0.25 UI · 25 mV** | 같은 칩·속도·4-DQ 활성, TX–RX 연결 |
 
-[측정 그림·모드별 파형·평가 조건](lpddr-combo.md#제작-보드에서-확인한-28-nm-combo-phy의-동작)
+[측정 그림·모드별 파형·평가 조건](lpddr-combo.md#lpddr-combo-result)
 
 관련 논문: [A-SSCC 2026 — LPDDR4X/5/5X Combo Controller PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 

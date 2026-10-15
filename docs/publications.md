@@ -57,7 +57,7 @@
 
 ## 준비 중인 연구
 
-[학위논문·Journal·DP-SMM 특허 출원 준비](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)는 별도 연구 저장소에서 확인할 수 있습니다.
+[석사 학위논문 · DS-SBM 설계·RFSoC 검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)은 원고 마무리 중입니다. [Journal·DP-SMM 특허 출원 준비](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)는 별도 연구 저장소에서 확인할 수 있습니다.
 
 ## 관련 설계·결과
 

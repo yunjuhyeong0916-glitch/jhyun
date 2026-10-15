@@ -90,7 +90,8 @@
 
 ## 진행 중인 논문·특허
 
-- [학위논문·Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md) **(진&#8288;행&nbsp;중)**
+- [석사 학위논문 · DS-SBM 설계·RFSoC 검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) **(원고 마무리 중)**
+- [Journal · DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) **(진&#8288;행&nbsp;중)**
 - [DP-SMM 특허 출원 준비](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)
 
 ---

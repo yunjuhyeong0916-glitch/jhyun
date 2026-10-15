@@ -1,6 +1,6 @@
 <a id="page-top"></a>
 
-# 학위논문의 구조 비교와 검증 결과
+# DS-SBM 물리채널 측정과 FPGA 자원
 
 <!-- page-navigation:top -->
 <p>
@@ -13,7 +13,7 @@
 <a id="두-번째-후보가-최종-선택에-사용된-예"></a>
 <a id="시스템-측정과-후속-평가"></a>
 
-이 연구는 **[pam4-mlsd-research 저장소](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/docs/validation.md)**로 옮겼습니다.
+이 연구는 [pam4-mlsd-research 저장소](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/docs/validation.md)로 옮겼습니다.
 
 학위논문과 Journal 준비 연구의 설명·그림·검증 결과를 새 저장소에서 볼 수 있습니다.
 

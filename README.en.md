@@ -46,7 +46,7 @@ Results reported in A-SSCC 2026 · <strong>First author · Accepted</strong>
 <a id="masters-thesis--ds-sbm-and-dp-smm-comparison-in-progress"></a>
 <a id="journal-preparation--dp-smm-design-and-verification-in-progress"></a>
 
-Ongoing [**thesis and journal research**](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md) is available in a separate repository.
+My [**DS-SBM thesis**](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.en.md) is being finalized. The follow-up [**DP-SMM journal research**](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) is documented in a separate project.
 
 <details>
 <summary><strong>View research · A-SSCC / AI assistance</strong></summary>

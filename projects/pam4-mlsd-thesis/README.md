@@ -1,6 +1,6 @@
 <a id="page-top"></a>
 
-# 학위논문 연구 | DS-SBM·DP-SMM 비교 (진행 중)
+# 학위논문 | DS-SBM 설계·RFSoC 검증 (진행 중)
 
 <!-- page-navigation:top -->
 <p>
@@ -12,7 +12,7 @@
 <a id="하드웨어-검증"></a>
 <a id="확인한-결과"></a>
 
-이 연구는 **[pam4-mlsd-research 저장소](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)**로 옮겼습니다.
+이 연구는 [pam4-mlsd-research 저장소](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)로 옮겼습니다.
 
 학위논문과 Journal 준비 연구의 설명·그림·검증 결과를 새 저장소에서 볼 수 있습니다.
 

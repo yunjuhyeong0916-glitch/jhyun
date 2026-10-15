@@ -13,7 +13,7 @@
 <a id="병렬-처리율"></a>
 <a id="보드-측정-계획"></a>
 
-이 연구는 **[pam4-mlsd-research 저장소](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/docs/validation.md)**로 옮겼습니다.
+이 연구는 [pam4-mlsd-research 저장소](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/docs/validation.md)로 옮겼습니다.
 
 학위논문과 Journal 준비 연구의 설명·그림·검증 결과를 새 저장소에서 볼 수 있습니다.
 

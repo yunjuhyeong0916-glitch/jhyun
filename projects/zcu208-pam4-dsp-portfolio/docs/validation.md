@@ -43,7 +43,7 @@ A-SSCC 2026, p. 3 Fig. 7. 상단은 TX FFE와 RX FFE·MLSD의 배치, 하단은 
 |---:|---:|---:|---:|
 | 189,108 | 188,846 | 950 | 24.5 |
 
-TX·RX FFE와 PR 필터를 전치형 FIR로 구현해, 직접형 FIR 대비 LUT 79.93%·CARRY8 70.96%를 줄였습니다. [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+TX·RX FFE와 PR 필터를 전치형 FIR로 구현해, 직접형 FIR 대비 LUT 79.93%·CARRY8 70.95%를 줄였습니다. [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 2026-06-29 배치배선 후 최적화(post-route physopt) 보고서의 타이밍 결과입니다.
 
@@ -132,7 +132,7 @@ A-SSCC 2026, p. 2 Fig. 5. 21-tap RX FFE와 3-tap PR 조건에서 PR 계수에 �
 
 ## 관련 연구
 
-[학위논문 DS-SBM·DP-SMM 비교 (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) · [Journal DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)
+[학위논문 · DS-SBM 설계·검증 (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) · [Journal DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)
 
 <!-- page-navigation:bottom -->
 <p>

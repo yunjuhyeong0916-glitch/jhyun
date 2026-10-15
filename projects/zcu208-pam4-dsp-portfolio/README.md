@@ -15,7 +15,7 @@ PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위�
 
 **담당:** TX·RX 필터와 DS-SBM 검출기 RTL 설계, RFSoC 통합·제어와 보드 검증.
 
-후속 DP-SMM 설계는 [Journal 준비 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md), 두 구조의 비교는 [학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)에서 다룹니다.
+[학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)은 DS-SBM의 분기 선택·구간 행렬·PM 갱신과 RFSoC 검증을 상세히 설명합니다. 후속 DP-SMM 설계와 두 구조의 비교는 [Journal 준비 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)에서 다룹니다.
 
 <a id="asscc-result"></a>
 
@@ -39,7 +39,7 @@ PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위�
 
 ## 설계·구현
 
-ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 **[32-lane 병렬 DSP](docs/architecture.md)**로 구현해 연결했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
+ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 [32-lane 병렬 DSP](docs/architecture.md)로 구현해 연결했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
 
 | 영역 | 구현 |
 |---|---|
@@ -94,7 +94,7 @@ RTL·테스트벤치 작성과 계수 설정·데이터 수집·BER 분석을 �
 
 [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 기준).
 
-[학위논문 비교 연구 (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) · [Journal DP-SMM](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) · [전체 논문](../../docs/publications.md)
+[학위논문 · DS-SBM (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) · [Journal DP-SMM](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) · [전체 논문](../../docs/publications.md)
 
 **도구:** Verilog / SystemVerilog · Vivado·Vitis 2022.2 · XSim · ZCU208 RFSoC · Python
 

@@ -46,7 +46,7 @@ A-SSCC 2026 논문 보고값 · <strong>제1저자 · 채택</strong>
 <a id="학위논문-연구--ds-sbmdp-smm-비교-진행-중"></a>
 <a id="journal-준비--dp-smm-설계검증-진행-중"></a>
 
-진행 중인 [**학위논문·Journal 연구**](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md)는 별도 저장소에서 볼 수 있습니다.
+[**학위논문 · DS-SBM 설계·RFSoC 검증**](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)은 원고 마무리 중입니다. 후속 [**Journal · DP-SMM 연구**](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)는 별도 프로젝트에서 진행하고 있습니다.
 
 <details>
 <summary><strong>연구 내용 보기 · A-SSCC / AI 활용</strong></summary>

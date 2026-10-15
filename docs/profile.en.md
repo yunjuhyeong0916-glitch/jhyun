@@ -90,7 +90,8 @@ The team received the award for a low-voltage, low-power NRZ transceiver in 28-n
 
 ## Ongoing papers and patent preparation
 
-- [Master's thesis and journal research](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md) **(in progress)**
+- [Master’s thesis · DS-SBM design and RFSoC verification](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.en.md) **(manuscript being finalized)**
+- [Journal · DP-SMM design and verification](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) **(in progress)**
 - [DP-SMM patent application in preparation](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)
 
 ---
