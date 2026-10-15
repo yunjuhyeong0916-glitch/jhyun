@@ -96,9 +96,13 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 ### [LPDDR Combo | TX 설계·모델링과 28&nbsp;nm 칩 평가](projects/high-speed-interface-research/docs/lpddr-combo.md)
 
-<p>
-<a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_eye_shmoo.png" alt="14 Gb/s/pin·4-DQ 활성 조건에서 측정한 LPDDR Combo TX Eye와 RX Shmoo" width="400"></a>
-</p>
+<table>
+<thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
+<tbody><tr>
+<td align="center"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_tx_eye.svg" alt="14 Gb/s/pin·4-DQ 활성 조건의 LPDDR Combo TX Eye: 0.41 UI, 65.3 mV" width="330"></a></td>
+<td align="center"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_rx_shmoo.svg" alt="14 Gb/s/pin·4-DQ 활성 조건의 LPDDR Combo RX Shmoo: 0.25 UI, 25 mV" width="330"></a></td>
+</tr></tbody>
+</table>
 
 <blockquote>
 <strong>14&nbsp;Gb/s/pin · TX Eye 0.41&nbsp;UI / 65.3&nbsp;mV</strong><br>
