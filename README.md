@@ -15,36 +15,43 @@
 최근 설계 트렌드에 맞게 [AI](docs/ai-assisted-dsp-workflow.md)를 RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 활용합니다.
 
 <p>
+<a href="#dsp-research"><img src="assets/readme/nav-dsp.svg" alt="DSP / FPGA" width="115" height="30"></a>
+<a href="#interface-research"><img src="assets/readme/nav-interface.svg" alt="LPDDR / USB" width="125" height="30"></a>
 <a href="#측정검증"><img src="assets/readme/nav-measurement.svg" alt="측정·검증" width="113" height="30"></a>
 <a href="#연구-성과-논문"><img src="assets/readme/nav-papers.svg" alt="논문" width="76" height="30"></a>
 <a href="docs/ai-assisted-dsp-workflow.md"><img src="assets/readme/nav-ai.svg" alt="AI 활용" width="94" height="30"></a>
 <a href="docs/glossary.md"><img src="assets/readme/nav-terms.svg" alt="용어 안내" width="102" height="30"></a>
 </p>
 
-<p>
-<a href="projects/README.md#dsp-transceiver-research"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
-<a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로 · TX/RX 모델 · 실리콘 측정" width="410"></a>
-</p>
+<a id="dsp-research"></a>
 
 ## DSP 기반 송수신기 연구
 
+### [A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP](projects/zcu208-pam4-dsp-portfolio/)
+
 <p>
-<a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc.svg" alt="A-SSCC 2026 · 채택" width="172" height="30"></a>
+<a href="projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result"><img src="projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_isi_measurement_setup.png" alt="ZCU208·XM655와 ISI 보드를 연결한 PAM4 송수신 평가 구성" width="840"></a>
 </p>
 
-**담당·대표 성과:** [PAM4](docs/concepts/pam-signaling.md#term-pam4) 송수신 [DSP](docs/concepts/hardware-workflow.md#term-dsp)·검출기를 [RTL](docs/concepts/hardware-workflow.md#term-rtl)로 구현하고 [RFSoC 보드에서 수신 성능을 검증](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)했습니다. 이 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
+ZCU208의 DAC에서 ISI 보드를 거쳐 ADC로 신호를 받아, 설계한 수신 DSP와 검출기의 동작을 평가했습니다.
 
-[결과 보기](projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result) · [MLSD를 예제로 이해하기](docs/concepts/mlsd.md)
+<blockquote>
+<strong>41&nbsp;dB 채널 · PRBS7 BER &lt; 10⁻⁷ · PRBS15 BER &lt; 2×10⁻⁶</strong><br>
+<strong>담당:</strong> PAM4 TX·RX 필터와 MLSD 검출기 RTL 설계, RFSoC 통합·제어와 보드 검증.<br>
+A-SSCC 2026 논문 보고값 · <strong>제1저자 · 채택</strong>
+</blockquote>
+
+[측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result) · [설계 구조](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [MLSD를 예제로 이해하기](docs/concepts/mlsd.md) · [논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 <a id="학위논문-연구--ds-sbmdp-smm-비교-진행-중"></a>
 <a id="journal-준비--dp-smm-설계검증-진행-중"></a>
 
-진행 중인 **[학위논문·Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md)**는 별도 저장소에서 볼 수 있습니다.
+진행 중인 [**학위논문·Journal 연구**](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.md)는 별도 저장소에서 볼 수 있습니다.
 
 <details>
 <summary><strong>연구 내용 보기 · A-SSCC / AI 활용</strong></summary>
 
-### A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP
+### FPGA 구현과 보드 구동
 
 ZCU208 RFSoC에 <strong><a href="projects/zcu208-pam4-dsp-portfolio/docs/architecture.md">32-lane PAM4 DSP</a></strong>의 TX FIR·RX [21-tap FIR](docs/concepts/equalization.md#term-fir-taps)·[DS-SBM RS-MLSD](docs/concepts/mlsd.md)를 통합했습니다. [Vivado·Vitis](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md)로 JTAG 다운로드, CLK104·RFDC 초기화와 계수 적용을 구성하고, DAC에서 [ISI 보드](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)를 거쳐 ADC로 수신 신호를 캡처했습니다.
 
@@ -61,6 +68,7 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 </details>
 
 <a id="lpddrusb-연구"></a>
+<a id="interface-research"></a>
 
 ## LPDDR·USB 인터페이스 연구
 
@@ -72,10 +80,64 @@ RTL·테스트벤치 작성과 ZCU208의 계수 설정·데이터 수집·BER �
 <a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md" title="USB TX 칩 측정·차동 PAM-3·FFE 검증"><img src="assets/readme/nav-usb-tx-measurement.svg" alt="USB TX 칩 측정·차동 PAM-3·FFE 검증" width="142" height="30"></a>
 </p>
 
-- **LPDDR:** [15.6 Gb/s 저전압 TX 회로](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)를 설계하고 Post-Layout 시뮬레이션으로 검증했습니다. [28 nm Combo PHY](projects/high-speed-interface-research/docs/lpddr-combo.md)의 14 Gb/s/pin 제작 칩 측정에 참여했습니다.
-- **USB:** [TX RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md)·[RX CTLE 동작 모델](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md)을 설계·검증하고, [32 Gb/s TX 칩의 차동 PAM-3 측정](projects/high-speed-interface-research/docs/pam3-differential-measurement.md)에 참여했습니다.
+### [LPDDR 15.6&nbsp;Gb/s | 저전압 TX 회로 설계](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
-[LPDDR Combo 결과](projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result) · [USB 칩의 FFE 결과](projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result) · [Eye·BER 읽는 방법](docs/concepts/measurements.md)
+<p>
+<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png" alt="15.6 Gb/s TX 회로 시뮬레이션: FFE off Eye" width="48%"></a>
+<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_on.png" alt="15.6 Gb/s TX 회로 시뮬레이션: FFE on Eye" width="48%"></a>
+</p>
+
+왼쪽은 FFE off, 오른쪽은 FFE on의 **회로 시뮬레이션 Eye**입니다. 같은 전송 속도에서 출력 보상 전후를 비교했습니다.
+
+<blockquote>
+<strong>15.6&nbsp;Gb/s · Eye 폭 37 → 45.4&nbsp;ps · 높이 56.5 → 75.1&nbsp;mV</strong><br>
+<strong>담당:</strong> 28&nbsp;nm TX 회로 설계와 Schematic·Post-Layout 검증.<br>
+회로 시뮬레이션 · 채널 손실 8.7&nbsp;dB · ICEIC 2025 <strong>공동 제1저자</strong>
+</blockquote>
+
+[회로 구조·검증 결과](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) · [FFE 원리](docs/concepts/equalization.md#term-ffe) · [논문](https://doi.org/10.1109/ICEIC64972.2025.10879746)
+
+---
+
+### [LPDDR Combo | TX 설계·모델링과 28&nbsp;nm 칩 평가](projects/high-speed-interface-research/docs/lpddr-combo.md)
+
+<p align="center">
+<a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/pcb_hfss_lpddr_wirebond_photo.png" alt="LPDDR Combo PHY의 COB 실장·와이어 본딩 사진" width="40%"></a>
+<a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_eye_shmoo.png" alt="14 Gb/s/pin·4-DQ 활성 조건에서 측정한 TX Eye와 RX Shmoo" width="34%"></a>
+</p>
+
+왼쪽은 COB 실장·와이어 본딩, 오른쪽은 **14&nbsp;Gb/s/pin·4-DQ 활성 조건의 TX Eye와 RX Shmoo**입니다.
+
+<blockquote>
+<strong>14&nbsp;Gb/s/pin · TX Eye 0.41&nbsp;UI / 65.3&nbsp;mV</strong><br>
+<strong>담당:</strong> DQ TX 회로·Verilog 모델, 측정용 PCB 설계·HFSS 분석. 칩 측정 참여.<br>
+28&nbsp;nm 제작 칩 측정 · A-SSCC 2026 <strong>공동저자 · 채택</strong>
+</blockquote>
+
+[TX 모델·측정 결과](projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result) · [PCB·HFSS](projects/high-speed-interface-research/docs/lpddr-combo-si-pi.md) · [Eye·Shmoo 읽기](docs/concepts/measurements.md) · [논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+
+---
+
+### [USB&nbsp;PAM&#8209;3 | TX·RX 모델링과 TX 칩 평가](projects/high-speed-interface-research/docs/usb4-pam3.md)
+
+<p>
+<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md"><img src="projects/high-speed-interface-research/assets/pam3_measurement_setup.jpeg" alt="USB PAM-3 TX의 실제 Eye·BER 측정 환경" width="800"></a>
+</p>
+
+TX 보드·채널·계측기를 연결한 실제 평가 환경입니다. 아래는 같은 채널에서 FFE off/on을 비교한 출력 Eye입니다.
+
+<p>
+<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result"><img src="projects/high-speed-interface-research/assets/pam3_measured_ffe_eye.png" alt="같은 CH#3에서 FFE off와 on을 비교한 실측 PAM-3 Eye" width="800"></a>
+</p>
+
+<blockquote>
+<strong>32&nbsp;Gb/s · FFE 적용 후 Eye 높이: 상단 21.16&nbsp;mV / 하단 19.80&nbsp;mV</strong><br>
+CH#3 손실 17.3&nbsp;dB @ 10.24&nbsp;GHz · PRBS15 · scrambler on<br>
+<strong>담당:</strong> TX RTL·RX CTLE 모델링과 통합 검증, TX 칩의 차동 신호 측정 참여.<br>
+IEEE TVLSI 2026 <strong>공동 제1저자</strong>
+</blockquote>
+
+[측정 결과·FFE 설정](projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result) · [TX 모델](projects/high-speed-interface-research/docs/usb-tx-modeling.md) · [RX CTLE](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) · [논문](https://doi.org/10.1109/TVLSI.2026.3701343)
 
 <details>
 <summary><strong>설계·검증 내용 보기 · TX / RX / PCB·HFSS / 측정</strong></summary>

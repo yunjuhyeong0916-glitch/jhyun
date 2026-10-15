@@ -15,36 +15,43 @@ I design circuits and systems that compensate for channel loss and [ISI](docs/co
 In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md) to assist with RTL, testbench and automation code for repeatable verification and measurements.
 
 <p>
+<a href="#dsp-research"><img src="assets/readme/nav-dsp.svg" alt="DSP / FPGA" width="115" height="30"></a>
+<a href="#interface-research"><img src="assets/readme/nav-interface.svg" alt="LPDDR / USB" width="125" height="30"></a>
 <a href="#measurement--verification"><img src="assets/readme/nav-measurement-en.svg" alt="Verification" width="119" height="30"></a>
 <a href="#research-publications"><img src="assets/readme/nav-papers-en.svg" alt="Papers" width="90" height="30"></a>
 <a href="docs/ai-assisted-dsp-workflow.en.md"><img src="assets/readme/nav-ai-en.svg" alt="AI workflow" width="118" height="30"></a>
 <a href="docs/glossary.en.md"><img src="assets/readme/nav-terms-en.svg" alt="Terms" width="86" height="30"></a>
 </p>
 
-<p>
-<a href="projects/README.md#dsp-transceiver-research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
-<a href="projects/high-speed-interface-research/"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits · TX/RX models · Silicon measurements" width="410"></a>
-</p>
+<a id="dsp-research"></a>
 
 ## DSP transceiver research
 
+### [A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP](projects/zcu208-pam4-dsp-portfolio/)
+
 <p>
-<a href="projects/zcu208-pam4-dsp-portfolio/"><img src="assets/readme/status-asscc-en.svg" alt="A-SSCC 2026 · Accepted" width="194" height="30"></a>
+<a href="projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result"><img src="projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_isi_measurement_setup.png" alt="ZCU208, XM655 and ISI-board setup for PAM4 transceiver evaluation" width="840"></a>
 </p>
 
-**My role and key result:** I implemented [PAM4](docs/concepts/pam-signaling.en.md#term-pam4) transceiver [DSP](docs/concepts/hardware-workflow.en.md#term-dsp) and detector [RTL](docs/concepts/hardware-workflow.en.md#term-rtl) and [validated receiver performance on an RFSoC board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정). The resulting [A-SSCC 2026 paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) was accepted.
+The ZCU208 DAC sends a signal through an ISI board to the ADC, evaluating the implemented receiver DSP and detector.
 
-[View results](projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result) · [Understand MLSD with an example](docs/concepts/mlsd.en.md)
+<blockquote>
+<strong>41-dB channel · PRBS7 BER &lt; 10⁻⁷ · PRBS15 BER &lt; 2×10⁻⁶</strong><br>
+<strong>My role:</strong> PAM4 TX/RX filter and MLSD detector RTL, RFSoC integration, control and board validation.<br>
+Results reported in A-SSCC 2026 · <strong>First author · Accepted</strong>
+</blockquote>
+
+[Measurement and implementation results](projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result) · [Architecture](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [MLSD example](docs/concepts/mlsd.en.md) · [Paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 <a id="masters-thesis--ds-sbm-and-dp-smm-comparison-in-progress"></a>
 <a id="journal-preparation--dp-smm-design-and-verification-in-progress"></a>
 
-Ongoing **[thesis and journal research](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md)** is available in a separate repository.
+Ongoing [**thesis and journal research**](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/README.en.md) is available in a separate repository.
 
 <details>
 <summary><strong>View research · A-SSCC / AI assistance</strong></summary>
 
-### A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP
+### FPGA implementation and board control
 
 I integrated **[32-lane PAM4 DSP](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)**, TX FIR, RX [21-tap FIR](docs/concepts/equalization.en.md#term-fir-taps) and [DS-SBM RS-MLSD](docs/concepts/mlsd.en.md) with the ZCU208 RFSoC. The [Vivado / Vitis flow](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) covers JTAG programming, CLK104 / RFDC initialization and coefficient updates. Measurement signals pass from the DAC through an [ISI board](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) to ADC capture.
 
@@ -61,6 +68,7 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 </details>
 
 <a id="lpddr--usb-research"></a>
+<a id="interface-research"></a>
 
 ## LPDDR / USB interface research
 
@@ -72,10 +80,64 @@ I used AI to help develop RTL and testbenches, plus automation code connecting Z
 <a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md" title="USB TX silicon measurements, differential PAM-3 and FFE verification"><img src="assets/readme/nav-usb-tx-measurement-en.svg" alt="USB TX silicon measurements, differential PAM-3 and FFE verification" width="174" height="30"></a>
 </p>
 
-- **LPDDR:** Designed a [15.6-Gb/s low-voltage TX circuit](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) and verified it with post-layout simulation. Participated in measurements of a [28-nm Combo PHY](projects/high-speed-interface-research/docs/lpddr-combo.md) at 14 Gb/s/pin.
-- **USB:** Designed and verified [TX RTL](projects/high-speed-interface-research/docs/usb-tx-modeling.md) and [RX CTLE behavioral models](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md), and participated in [differential PAM-3 measurements of a 32-Gb/s TX chip](projects/high-speed-interface-research/docs/pam3-differential-measurement.md).
+### [LPDDR 15.6&nbsp;Gb/s | Low-voltage TX circuit design](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
 
-[LPDDR Combo results](projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result) · [USB silicon FFE results](projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result) · [How to read Eye and BER](docs/concepts/measurements.en.md)
+<p>
+<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png" alt="15.6-Gb/s TX circuit simulation with FFE off" width="48%"></a>
+<a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_on.png" alt="15.6-Gb/s TX circuit simulation with FFE on" width="48%"></a>
+</p>
+
+**Circuit-simulation eyes:** FFE off on the left, FFE on on the right, compared at the same data rate.
+
+<blockquote>
+<strong>15.6&nbsp;Gb/s · Eye width 37 → 45.4&nbsp;ps · Height 56.5 → 75.1&nbsp;mV</strong><br>
+<strong>My role:</strong> 28-nm TX circuit design and schematic/post-layout verification.<br>
+Circuit simulation · 8.7-dB channel loss · ICEIC 2025 <strong>Co-first author</strong>
+</blockquote>
+
+[Circuit and verification results](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) · [FFE principles](docs/concepts/equalization.en.md#term-ffe) · [Paper](https://doi.org/10.1109/ICEIC64972.2025.10879746)
+
+---
+
+### [LPDDR Combo | TX design, modeling and 28-nm silicon evaluation](projects/high-speed-interface-research/docs/lpddr-combo.md)
+
+<p align="center">
+<a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/pcb_hfss_lpddr_wirebond_photo.png" alt="COB assembly and wire bonds of the LPDDR Combo PHY" width="40%"></a>
+<a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_eye_shmoo.png" alt="Measured TX eye and RX Shmoo at 14 Gb/s/pin with four DQs active" width="34%"></a>
+</p>
+
+COB assembly and wire bonds on the left; **measured TX eye and RX Shmoo at 14&nbsp;Gb/s/pin with four DQs active** on the right.
+
+<blockquote>
+<strong>14&nbsp;Gb/s/pin · TX eye 0.41&nbsp;UI / 65.3&nbsp;mV</strong><br>
+<strong>My role:</strong> TX circuit/model design, measurement PCB design and HFSS analysis; participation in chip measurements.<br>
+28-nm silicon measurements · A-SSCC 2026 <strong>Co-author · Accepted</strong>
+</blockquote>
+
+[TX model and measurement results](projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result) · [PCB/HFSS](projects/high-speed-interface-research/docs/lpddr-combo-si-pi.md) · [Reading Eye and Shmoo](docs/concepts/measurements.en.md) · [Paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+
+---
+
+### [USB&nbsp;PAM&#8209;3 | TX/RX modeling and TX silicon evaluation](projects/high-speed-interface-research/docs/usb4-pam3.md)
+
+<p>
+<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md"><img src="projects/high-speed-interface-research/assets/pam3_measurement_setup.jpeg" alt="Lab setups for USB PAM-3 TX eye and BER measurements" width="800"></a>
+</p>
+
+Lab setups connect the TX board, channel and instruments. The eyes below compare FFE off and on on the same channel.
+
+<p>
+<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result"><img src="projects/high-speed-interface-research/assets/pam3_measured_ffe_eye.png" alt="Measured PAM-3 eyes with FFE off and on on the same CH3 channel" width="800"></a>
+</p>
+
+<blockquote>
+<strong>32&nbsp;Gb/s · Eye height with FFE: upper 21.16&nbsp;mV / lower 19.80&nbsp;mV</strong><br>
+CH3: 17.3-dB loss at 10.24&nbsp;GHz · PRBS15 · scrambler on<br>
+<strong>My role:</strong> TX RTL, RX CTLE modeling and integrated verification; participation in differential TX silicon measurements.<br>
+IEEE TVLSI 2026 <strong>Co-first author</strong>
+</blockquote>
+
+[Measurements and FFE settings](projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result) · [TX models](projects/high-speed-interface-research/docs/usb-tx-modeling.md) · [RX CTLE](projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md) · [Paper](https://doi.org/10.1109/TVLSI.2026.3701343)
 
 <details>
 <summary><strong>View design and verification · TX / RX / PCB / HFSS / Measurements</strong></summary>
