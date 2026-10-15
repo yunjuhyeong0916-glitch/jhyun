@@ -4,16 +4,16 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[설계 구조](architecture.md) · [검증 결과](validation.md) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+[설계 구조](architecture.md#page-top) · [검증 결과](validation.md#page-top) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 ## 등화 이후 남은 ISI를 검출에 활용
 
-채널 손실을 보상해도 이전 심볼의 영향이 남으면 같은 수신 레벨을 여러 심볼 조합으로 설명할 수 있습니다. 한 샘플의 크기만으로 판단하는 slicer에 비해, 연속된 심볼의 예상 응답을 비교하는 [MLSD](../../../docs/concepts/mlsd.md)는 이 정보를 판정에 활용할 수 있습니다. DSP 기반 송수신기 연구에서는 RX FFE와 3-tap partial-response(PR) 구성을 이용해 잔여 ISI를 다루고, 그 응답에 맞는 시퀀스를 검출하는 구조를 연구했습니다.
+채널 손실을 보상해도 이전 심볼의 영향이 남으면 같은 수신 레벨을 여러 심볼 조합으로 설명할 수 있습니다. 한 샘플의 크기만으로 판단하는 slicer에 비해, 연속된 심볼의 예상 응답을 비교하는 [MLSD](../../../docs/concepts/mlsd.md#page-top)는 이 정보를 판정에 활용할 수 있습니다. DSP 기반 송수신기 연구에서는 RX FFE와 3-tap partial-response(PR) 구성을 이용해 잔여 ISI를 다루고, 그 응답에 맞는 시퀀스를 검출하는 구조를 연구했습니다.
 
 검출기가 사용하는 기대 샘플은 다음과 같이 표현할 수 있습니다.
 
@@ -23,7 +23,7 @@ $$\hat y_k = g_0 a_k + g_1 a_{k-1} + g_2 a_{k-2},\qquad BM_k = d(y_k,\hat y_k).$
 
 ## 상태 수를 줄이되 유력한 후보를 보존
 
-Memory-2 PAM4를 전체 상태로 표현하면 이전 심볼 두 개의 조합으로 16개 상태가 필요합니다. 상태·분기를 모두 유지하면 연산량뿐 아니라 survivor 정보를 저장하고 전달하는 비용도 커집니다. A-SSCC 논문의 DS-SBM RS-MLSD는 네 개의 visible state와 상태별 두 survivor branch를 이용해 유력한 후보를 남기는 방향을 제안합니다.
+Memory-2 PAM4를 전체 상태로 표현하면 이전 심볼 두 개의 조합으로 16개 상태가 필요합니다. 상태·분기를 모두 유지하면 연산량뿐 아니라 survivor 정보를 저장하고 전달하는 비용도 커집니다. A-SSCC 논문의 DS-SBM RS-MLSD는 4개의 축소 상태(visible state)와 상태별 두 survivor branch를 이용해 유력한 후보를 남기는 방향을 제안합니다.
 
 후보 수를 줄이면 연산·survivor 저장 비용이 감소합니다. 검출 품질은 채널 조건별 오류 관측으로 평가합니다. 논문은 8 active branches/symbol을 사용합니다.
 
@@ -49,18 +49,18 @@ $$M_{B:A}[d,s] = \min_m\{M_B[d,m]+M_A[m,s]\}.$$
 | 구간별 메트릭과 min-plus 결합 | 심볼별 ACS 의존성과 긴 조합 경로 | 구간 경계의 상태 연결, metric·survivor 전달 |
 | 고정소수점·파이프라인 | 자원 비용과 클록 주기 | 양자화·포화, 데이터와 valid의 정렬, 입력–출력 지연 |
 
-**검출기 자원 비교:** 심볼별 BM·PM을 갱신하는 RS-ACS 기준 구조 대비 LUT 35.7%·FF 22.5% 감소. [시스템 구조](architecture.md)
+**검출기 자원 비교:** 심볼별 BM·PM을 갱신하는 RS-ACS 기준 구조 대비 LUT 35.7%·FF 22.5% 감소. [시스템 구조](architecture.md#page-top)
 
 ## 후속 DP-SMM 설계와 구조 비교
 
-[학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)은 DS-SBM의 대표 이력·분기 선택·행렬 합성과 RFSoC 검증을 상세히 정리합니다. 후속 DP-SMM의 두 경로 보존·이력 반영 비용은 [Journal 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md), 두 구조의 차이와 후보 보존 효과는 [비교 자료](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/docs/ds-sbm-comparison.md)에서 볼 수 있습니다.
+[학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md#page-top)은 DS-SBM의 대표 이력·분기 선택·행렬 합성과 RFSoC 검증을 상세히 정리합니다. 후속 DP-SMM의 두 경로 보존·이력 반영 비용은 [Journal 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md#page-top), 두 구조의 차이와 후보 보존 효과는 [비교 자료](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/docs/ds-sbm-comparison.md#page-top)에서 볼 수 있습니다.
 
-[RTL 구조](architecture.md) · [검증 결과](validation.md)
+[RTL 구조](architecture.md#page-top) · [검증 결과](validation.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

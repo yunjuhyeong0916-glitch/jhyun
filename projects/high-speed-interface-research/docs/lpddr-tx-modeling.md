@@ -4,12 +4,12 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="lpddr-combo.md" title="LPDDR Combo PHY로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo PHY로 돌아가기" width="140" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="lpddr-combo.md#page-top" title="LPDDR Combo PHY로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo PHY로 돌아가기" width="140" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[LPDDR 회로·제작 칩 측정](lpddr.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [인터페이스 연구 개요](../README.md) · [논문·담당 역할](evidence.md)
+[LPDDR 회로·제작 칩 측정](lpddr.md#page-top) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md#page-top) · [인터페이스 연구 개요](../README.md#page-top) · [논문·담당 역할](evidence.md#page-top)
 
 **담당:** TX Verilog 동작 모델링. 32-bit 병렬 입력을 직렬화하고, 위상 정렬된 main/1UI 지연 데이터로 pre-emphasis 출력을 생성했습니다.
 
@@ -99,8 +99,8 @@ PRBS7 병렬 입력을 인가하고 직렬 데이터·1UI 지연·pre-emphasis·
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="lpddr-combo.md" title="LPDDR Combo PHY로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo PHY로 돌아가기" width="140" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="lpddr-combo.md#page-top" title="LPDDR Combo PHY로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo PHY로 돌아가기" width="140" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

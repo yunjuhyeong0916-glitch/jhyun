@@ -1,14 +1,14 @@
 <a id="page-top"></a>
 
 <p align="right">
-<a href="profile.en.md" title="View this research CV in English"><img src="../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a>
+<a href="profile.en.md#page-top" title="View this research CV in English"><img src="../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a>
 </p>
 
 # 윤주형 | 연구 이력
 
 <p>
-  <a href="../README.md" title="포트폴리오 홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="포트폴리오 홈으로 돌아가기" width="70" height="30"></a>
-  <a href="glossary.md"><img src="../assets/readme/nav-terms.svg" alt="용어 안내" width="102" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="포트폴리오 홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="포트폴리오 홈으로 돌아가기" width="70" height="30"></a>
+  <a href="glossary.md#page-top"><img src="../assets/readme/nav-terms.svg" alt="용어 안내" width="102" height="30"></a>
 </p>
 
 고속 인터페이스의 송신 회로와 수신 [DSP](concepts/hardware-workflow.md#term-dsp)를 설계·검증합니다. **[JEDEC LPDDR](concepts/interfaces.md#term-lpddr)·[USB4 Gen4](concepts/interfaces.md#term-usb4) 기반의 High-Speed Interface 연구**와 **Ultra High-Speed 통신을 위한 DSP 기반 Transceiver 연구**를 진행하고 있습니다.
@@ -25,7 +25,7 @@
 
 2024.12.11 · 사단법인 반도체공학회 · 팀 수상
 
-28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **[TX](concepts/interfaces.md#term-phy) 회로 설계·검증**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md)
+28 nm CMOS 기반 저전압·저전력 NRZ 송수신기 설계로 수상했습니다. **[TX](concepts/interfaces.md#term-phy) 회로 설계·검증**을 담당했습니다. [관련 TX 설계·검증](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#page-top)
 
 <a id="참여-프로젝트"></a>
 
@@ -35,11 +35,11 @@
 
 #### 200+Gbps급 차세대 초고속 인터페이스 반도체 설계 기술
 
-**담당:** [PAM4](concepts/pam-signaling.md#term-pam4) 송수신 DSP·[MLSD](concepts/mlsd.md "연속된 수신 신호를 함께 비교해 데이터열을 찾는 기법") 검출기 [RTL](concepts/hardware-workflow.md#term-rtl) 설계, [RFSoC](concepts/hardware-workflow.md#term-fpga-rfsoc) 통합·보드 검증. [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/)
+**담당:** [PAM4](concepts/pam-signaling.md#term-pam4) 송수신 DSP·[MLSD](concepts/mlsd.md#page-top "연속된 수신 신호를 함께 비교해 데이터열을 찾는 기법") 검출기 [RTL](concepts/hardware-workflow.md#term-rtl) 설계, [RFSoC](concepts/hardware-workflow.md#term-fpga-rfsoc) 통합·보드 검증. [DSP 기반 송수신기 연구](../projects/zcu208-pam4-dsp-portfolio/README.md#page-top)
 
 > **연구비 주관:** 성균관대학교 산학협력단<br> **학생연구원 참여:** 2026.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
 >
-> RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 [AI·MATLAB MCP](ai-assisted-dsp-workflow.md)를 활용합니다.
+> RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 [AI·MATLAB MCP](ai-assisted-dsp-workflow.md#page-top)를 활용합니다.
 
 ---
 
@@ -53,7 +53,7 @@
 
 #### 차세대 LPDDR 5/6급 메모리 인터페이스 IP 기술 개발
 
-**담당:** LPDDR TX 회로 설계·검증. [LPDDR 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md)
+**담당:** LPDDR TX 회로 설계·검증. [LPDDR 관련 연구](../projects/high-speed-interface-research/docs/lpddr.md#page-top)
 
 > **발주처:** 한국산업기술평가관리원 · **학부 인턴 참여:** 2023.09.04–2024.08.30
 
@@ -63,7 +63,7 @@
 
 #### Near-display processing (NDP) 기반의 테라급 라이트 필드 디스플레이 시스템 개발
 
-**담당:** USB4/DisplayPort 인터페이스 회로 모델링·검증. [USB4 관련 연구](../projects/high-speed-interface-research/docs/usb4-pam3.md)
+**담당:** USB4/DisplayPort 인터페이스 회로 모델링·검증. [USB4 관련 연구](../projects/high-speed-interface-research/docs/usb4-pam3.md#page-top)
 
 > **연구비 지원:** 한국연구재단 · **연구비 주관:** 한양대학교<br> **학생연구원 참여:** 2024.04.01–2026.12.31 **(진&#8288;행&nbsp;중)**
 
@@ -86,17 +86,17 @@
 - **SMACD 2025 · 공동 제1저자:** [USB4 Gen4 PAM&#8209;3 TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283)
 - **SMACD 2025 · 공동 제1저자:** [PAM&#8209;3 RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233)
 
-[논문 제목·검증 범위 전체 보기](publications.md)
+[논문 제목·검증 범위 전체 보기](publications.md#page-top)
 
 ## 진행 중인 논문·특허
 
-- [석사 학위논문 · DS-SBM 설계·RFSoC 검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) **(원고 마무리 중)**
-- [Journal · DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) **(진&#8288;행&nbsp;중)**
-- [DP-SMM 특허 출원 준비](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md)
+- [석사 학위논문 · DS-SBM 설계·RFSoC 검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md#page-top) **(원고 마무리 중)**
+- [Journal · DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md#page-top) **(진&#8288;행&nbsp;중)**
+- [DP-SMM 특허 출원 준비](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/docs/publications.md#page-top)
 
 ---
 
 <p>
-  <a href="../README.md" title="포트폴리오 홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="포트폴리오 홈으로 돌아가기" width="70" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="포트폴리오 홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="포트폴리오 홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>

@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="vitis-bringup.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # Vitis 기반 ZCU208 구동·PS 제어
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[DSP 설계 구조](architecture.md) · [FPGA 자원·타이밍 결과](validation.md#fpga-자원타이밍) · [RFSoC 실측·BER](validation.md#isi-보드를-통한-rfsoc-측정)
+[DSP 설계 구조](architecture.md#page-top) · [FPGA 자원·타이밍 결과](validation.md#fpga-자원타이밍) · [RFSoC 보드 측정·BER](validation.md#isi-보드를-통한-rfsoc-측정)
 
 PL에 구현한 송수신 DSP를 제어하기 위해 Cortex-A53 Standalone 앱을 구성했습니다. Vitis에서 JTAG 실행, CLK104·RFDC 초기화, 계수 적용과 수신 디버그 데이터 수집을 연결했습니다.
 
@@ -55,12 +57,12 @@ PL 회로와 A53 앱을 함께 준비해, 앱의 AXI 접근이 실제 GPIO·BRAM
 
 RX 계수는 PS에서 AXI BRAM Controller를 통해 쓰고, 메모리 값을 다시 읽어 비교합니다. 쓰기가 끝나면 **commit sequence**를 갱신합니다. PL 계수 로더는 shadow bank에 읽어 둔 값을 적용 가능 시점에 active bank로 전환하도록 구성해, 설정 중간값이 DSP 연산에 들어가지 않도록 했습니다.
 
-수신 디버그 데이터는 캡처 완료 상태를 확인한 뒤 BRAM에서 읽어 UART CSV로 출력합니다. 이 샘플 캡처는 내부 신호 분석에 사용하고, BER는 PL PRBS 검사기의 검사 비트 수·오류 수·lock 상태로 평가합니다. [ADC 캡처·시스템 측정 결과](validation.md)
+수신 디버그 데이터는 캡처 완료 상태를 확인한 뒤 BRAM에서 읽어 UART CSV로 출력합니다. 이 샘플 캡처는 내부 신호 분석에 사용하고, BER는 PL PRBS 검사기의 검사 비트 수·오류 수·lock 상태로 평가합니다. [ADC 캡처·시스템 측정 결과](validation.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

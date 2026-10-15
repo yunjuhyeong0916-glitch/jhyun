@@ -1,19 +1,21 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="lpddr-tx-circuit-verification.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # LPDDR TX 회로 설계·검증: FFE와 PEX 이후 동작 확인
 
 <!-- page-navigation:top -->
 <p>
-  <a href="lpddr.md" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="lpddr.md#page-top" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[TX Verilog 모델링](lpddr-tx-modeling.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
+[TX Verilog 모델링](lpddr-tx-modeling.md#page-top) · [측정 장비](measurement-equipment.md#page-top) · [논문·담당 역할](evidence.md#page-top)
 
 **담당:** 28-nm CMOS TX 회로 설계·Schematic/Post-Layout 검증. **검증:** 회로 시뮬레이션.
 
-[TX Verilog 모델](lpddr-tx-modeling.md) · [Combo PHY 제작 칩 측정](lpddr.md#검증-결과와-조건)
+[TX Verilog 모델](lpddr-tx-modeling.md#page-top) · [Combo PHY 제작 칩 측정](lpddr.md#검증-결과와-조건)
 
 ## 1. Main 데이터와 1-UI 지연 데이터를 함께 사용하는 TX
 
@@ -93,8 +95,8 @@ PI-LVSTL TX에 main·1-UI 지연 경로를 두고 드라이버 세그먼트와 F
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="lpddr.md" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="lpddr.md#page-top" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

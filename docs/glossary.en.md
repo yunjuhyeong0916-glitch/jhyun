@@ -1,21 +1,21 @@
 <a id="page-top"></a>
 
-<p align="right"><a href="glossary.md"><img src="../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
+<p align="right"><a href="glossary.md#page-top"><img src="../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
 
 # Term guide | High-speed interfaces and DSP
 
-[Documents](README.md) · [CV](profile.en.md) · [Home](../README.en.md)
+[Documents](README.en.md#page-top) · [CV](profile.en.md#page-top) · [Home](../README.en.md#page-top)
 
-Start with **[PAM signaling](concepts/pam-signaling.en.md) → [ISI and equalization](concepts/equalization.en.md) → [MLSD](concepts/mlsd.en.md)** to follow a signal from representation to detection. Continue with [RTL and FPGA](concepts/hardware-workflow.en.md) for implementation or [Eye, BER and Shmoo](concepts/measurements.en.md) for results.
+Start with **[PAM signaling](concepts/pam-signaling.en.md#page-top) → [ISI and equalization](concepts/equalization.en.md#page-top) → [MLSD](concepts/mlsd.en.md#page-top)** to follow a signal from representation to detection. Continue with [RTL and FPGA](concepts/hardware-workflow.en.md#page-top) for implementation or [Eye, BER and Shmoo](concepts/measurements.en.md#page-top) for results.
 
 ## Read by topic
 
-- **[MLSD](concepts/mlsd.en.md):** Recovering data from a sequence of observations
-- **[PAM4·PAM-3·NRZ](concepts/pam-signaling.en.md):** Signal levels, bit rate, symbol rate and sample rate
-- **[ISI·FFE·CTLE·DFE](concepts/equalization.en.md):** Why symbols overlap and how equalizers help
-- **[DSP·RTL·FPGA·RFSoC](concepts/hardware-workflow.en.md):** From signal-processing algorithms to board evaluation
-- **[LPDDR·USB4·PHY](concepts/interfaces.en.md):** Interface circuits, boards and signal integrity
-- **[Eye·BER·Shmoo](concepts/measurements.en.md):** Reading waveforms, bit errors and operating margins
+- **[MLSD](concepts/mlsd.en.md#page-top):** Recovering data from a sequence of observations
+- **[PAM4·PAM-3·NRZ](concepts/pam-signaling.en.md#page-top):** Signal levels, bit rate, symbol rate and sample rate
+- **[ISI·FFE·CTLE·DFE](concepts/equalization.en.md#page-top):** Why symbols overlap and how equalizers help
+- **[DSP·RTL·FPGA·RFSoC](concepts/hardware-workflow.en.md#page-top):** From signal-processing algorithms to board evaluation
+- **[LPDDR·USB4·PHY](concepts/interfaces.en.md#page-top):** Interface circuits, boards and signal integrity
+- **[Eye·BER·Shmoo](concepts/measurements.en.md#page-top):** Reading waveforms, bit errors and operating margins
 
 ## Quick definitions
 
@@ -25,7 +25,7 @@ Start with **[PAM signaling](concepts/pam-signaling.en.md) → [ISI and equaliza
 | [LPDDR](concepts/interfaces.en.md#term-lpddr) | Low-power memory-interface standards; TX and Combo PHY work here. |
 | [PAM-3](concepts/pam-signaling.en.md#term-pam3) | Three-level signaling used in the USB-related models and TX work. |
 | [Eye opening / timing opening](concepts/measurements.en.md#term-eye) | Waveform opening / timing range meeting a specified error criterion. |
-| [FFE / CTLE / DFE](concepts/equalization.en.md) | Weighted signal combination / continuous-time equalization / decision feedback. |
+| [FFE / CTLE / DFE](concepts/equalization.en.md#page-top) | Weighted signal combination / continuous-time equalization / decision feedback. |
 | [ZQ calibration](concepts/interfaces.en.md#term-zq) | Calibration of transmitter output impedance. |
 | [AWG / BERT](concepts/measurements.en.md#term-equipment) | Arbitrary waveform generator / bit-error-ratio test equipment. |
 | [Shmoo](concepts/measurements.en.md#term-shmoo) | An operating-region map across test conditions. |
@@ -36,7 +36,7 @@ Start with **[PAM signaling](concepts/pam-signaling.en.md) → [ISI and equaliza
 | [PS / PL](concepts/hardware-workflow.en.md#term-ps-pl) | Processor subsystem / programmable logic. PS software configures PL modes and coefficients here. |
 | [Vivado / Vitis](concepts/hardware-workflow.en.md#term-tools) | FPGA design and debugging / PS application and platform development in this project. |
 | [FIR](concepts/equalization.en.md#term-fir-taps) | A filter forming a weighted sum of samples over a finite set of delays. |
-| [MLSD](concepts/mlsd.en.md) | Detection using a sequence of received observations. |
+| [MLSD](concepts/mlsd.en.md#page-top) | Detection using a sequence of received observations. |
 | [GS/s](concepts/pam-signaling.en.md#term-rates) | Billions of samples per second. |
 | [PRBS](concepts/measurements.en.md#term-ber) | A reproducible pseudo-random binary test pattern. |
 | [Testbench](concepts/hardware-workflow.en.md#term-verification) | Code supplying inputs and checking circuit behavior. |
@@ -60,11 +60,11 @@ Start with **[PAM signaling](concepts/pam-signaling.en.md) → [ISI and equaliza
 | [BM / PM](concepts/mlsd.en.md#term-metrics) | Branch mismatch cost / accumulated path cost. |
 | [Survivor](concepts/mlsd.en.md#term-metrics) | Candidate information retained for subsequent detection steps. |
 | [II](concepts/hardware-workflow.en.md#term-parallelism) | Initiation interval: minimum clock interval between accepted input groups. |
-| [32-lane](concepts/hardware-workflow.en.md#term-parallelism) | The number of parallel data items processed per clock here. |
+| [32-symbol parallel processing (32-lane)](concepts/hardware-workflow.en.md#term-parallelism) | The number of parallel data items processed per clock here. |
 | [WNS / TNS](concepts/hardware-workflow.en.md#term-timing) | Worst slack / sum of negative slack in a timing report. |
 
 </details>
 
 ---
 
-[Documents](README.md) · [CV](profile.en.md) · [Home](../README.en.md) · [Back to top](#page-top)
+[Documents](README.en.md#page-top) · [CV](profile.en.md#page-top) · [Home](../README.en.md#page-top) · [Back to top](#page-top)

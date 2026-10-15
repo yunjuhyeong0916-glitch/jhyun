@@ -1,17 +1,19 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="pcb-hfss-verification.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 <a id="pcbhfss-검증-보드-배선에서-실제-측정-경로까지"></a>
 
 # PCB 설계·HFSS 분석
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[LPDDR](lpddr.md) · [Combo SI·PI 설계](lpddr-combo-si-pi.md) · [USB PAM-3](usb4-pam3.md) · [측정 장비](measurement-equipment.md) · [논문·담당 역할](evidence.md)
+[LPDDR](lpddr.md#page-top) · [Combo SI·PI 설계](lpddr-combo-si-pi.md#page-top) · [USB PAM-3](usb4-pam3.md#page-top) · [측정 장비](measurement-equipment.md#page-top) · [논문·담당 역할](evidence.md#page-top)
 
 LPDDR 측정용 PCB의 회로·배치·배선을 설계하고 HFSS로 전달 특성을 분석했습니다. 제작 보드의 COB 실장·측정에 참여했으며, USB TX 보드에서는 GND via와 전원 공급 경로를 검토했습니다.
 
@@ -38,7 +40,7 @@ LPDDR 측정용 PCB의 회로·배치·배선을 설계하고 HFSS로 전달 특
 
 </details>
 
-공통 HFSS 절차는 PADS → ODB++ import → 적층·재료·두께 확인 → 포트·기준 접지 설정 → validation입니다. Validation에서 누락된 재료·두께·포트를 점검합니다.
+HFSS 해석 흐름은 PADS → ODB++ import → 적층·재료·두께 확인 → 포트·기준 접지 설정 → validation입니다. Validation에서 누락된 재료·두께·포트를 점검합니다.
 
 | 항목 | 설정·검토 |
 |---|---|
@@ -95,7 +97,7 @@ PPG·BERT의 입력·오류 검출 경로, 전원공급기와 오실로스코프
 
 </details>
 
-[장비·제어](measurement-equipment.md) · [LPDDR TX Eye·RX Shmoo·USB FFE Eye](verification-figures.md)
+[장비·제어](measurement-equipment.md#page-top) · [LPDDR TX Eye·RX Shmoo·USB FFE Eye](verification-figures.md#page-top)
 
 ## 관련 논문
 
@@ -104,8 +106,8 @@ PPG·BERT의 입력·오류 검출 경로, 전원공급기와 오실로스코프
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

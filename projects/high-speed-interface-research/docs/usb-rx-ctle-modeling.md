@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="usb-rx-ctle-modeling.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # USB RX CTLE 모델링: 동작점 설정과 보상 조정
 
 <!-- page-navigation:top -->
 <p>
-  <a href="usb4-pam3.md" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="usb4-pam3.md#page-top" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[대표 결과](#usb-rx-ctle-result) · [CTLE 개념](../../../docs/concepts/equalization.md#term-ctle) · [인터페이스 연구 개요](../README.md) · [TX 모델링](usb-tx-modeling.md) · [논문·담당 역할](evidence.md)
+[대표 결과](#usb-rx-ctle-result) · [CTLE 개념](../../../docs/concepts/equalization.md#term-ctle) · [인터페이스 연구 개요](../README.md#page-top) · [TX 모델링](usb-tx-modeling.md#page-top) · [논문·담당 역할](evidence.md#page-top)
 
 **담당:** CTLE 모델링·송수신 통합 검증. 바이어스·입력 공통전압과 R·C 제어를 조정해 채널 보상과 PAM-3 중간 레벨 안정성을 확인했습니다.
 
@@ -21,13 +23,13 @@
 
 채널을 통과한 PAM-3 신호에 CTLE 보상을 적용하고, 같은 통합 모델에서 입력과 출력 Eye를 확인했습니다.
 
-### 채널을 통과한 CTLE 입력
-
-![채널을 통과한 scrambled PAM-3 데이터의 CTLE 입력 Eye](../assets/usb_rx_ctle_input_eye_ffe_off.png)
-
-### 보상 조정 후 CTLE 출력
-
-![보상 조정 후 CTLE 출력 Eye](../assets/usb_rx_ctle_output_eye_ffe_off.png)
+<table>
+<thead><tr><th align="center" width="50%">CTLE 입력</th><th align="center" width="50%">CTLE 출력</th></tr></thead>
+<tbody><tr>
+<td align="center" valign="top"><a href="../assets/usb_rx_ctle_input_eye_ffe_off.png"><img src="../assets/usb_rx_ctle_input_eye_ffe_off.png" alt="채널을 통과한 PAM-3의 CTLE 입력 Eye" width="330"></a></td>
+<td align="center" valign="top"><a href="../assets/usb_rx_ctle_output_eye_ffe_off.png"><img src="../assets/usb_rx_ctle_output_eye_ffe_off.png" alt="보상 조정 후 CTLE 출력 Eye" width="330"></a></td>
+</tr></tbody>
+</table>
 
 **조건:** TX FFE off·scrambled data에서 선택한 CTLE 설정의 입출력 Eye.
 
@@ -114,8 +116,8 @@ flowchart LR
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="usb4-pam3.md" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="usb4-pam3.md#page-top" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

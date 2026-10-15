@@ -4,12 +4,12 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="lpddr-combo.md" title="LPDDR Combo로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo로 돌아가기" width="140" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="lpddr-combo.md#page-top" title="LPDDR Combo로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo로 돌아가기" width="140" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[SI·신호 경로](#si-signal-path) · [PI·전원과 GND](#pi-power-ground) · [제작 칩 평가](#silicon-validation) · [PCB·HFSS 전체 자료](pcb-hfss-verification.md)
+[SI·신호 경로](#si-signal-path) · [PI·전원과 GND](#pi-power-ground) · [제작 칩 평가](#silicon-validation) · [PCB·HFSS 전체 자료](pcb-hfss-verification.md#page-top)
 
 설계한 DQ TX를 제작 칩에서 평가하기 위해 **측정용 PCB의 회로·배치·배선과 HFSS 분석**을 수행했습니다. 칩 패드에서 커넥터까지의 신호 전달과 기능별 전원·GND 연결을 함께 고려하고, COB 실장 이후 TX Eye·RX Shmoo 측정에 참여했습니다.
 
@@ -69,8 +69,8 @@
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="lpddr-combo.md" title="LPDDR Combo로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo로 돌아가기" width="140" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="lpddr-combo.md#page-top" title="LPDDR Combo로 돌아가기"><img src="../../../assets/readme/nav-back-combo.svg" alt="LPDDR Combo로 돌아가기" width="140" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

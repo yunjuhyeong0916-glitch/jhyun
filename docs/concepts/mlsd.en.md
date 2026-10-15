@@ -1,10 +1,10 @@
 <a id="page-top"></a>
 
-<p align="right"><a href="mlsd.md"><img src="../../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
+<p align="right"><a href="mlsd.md#page-top"><img src="../../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
 
 # MLSD | Recovering a transmitted symbol sequence
 
-[← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md)
+[← Term guide](../glossary.en.md#page-top) · [CV](../profile.en.md#page-top) · [Home](../../README.en.md#page-top)
 
 **MLSD compares observations from several symbol times to find the most likely transmitted sequence.**
 
@@ -39,7 +39,7 @@ For the first observation alone, `1.5` is closer to `0.7` than `−0.5`, favorin
 
 [PAM4](pam-signaling.en.md#term-pam4) has four levels and therefore more candidates. Hardware design considers **which candidates to retain while reducing computation**. This is the problem addressed by DS-SBM and the follow-up DP-SMM work.
 
-[A-SSCC receiver architecture](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [RFSoC measurements and BER](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) · [How to read BER](measurements.en.md#term-ber)
+[A-SSCC receiver architecture](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.en.md#page-top) · [RFSoC board measurements and BER](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.en.md#board-measurements) · [How to read BER](measurements.en.md#term-ber)
 
 <a id="term-metrics"></a>
 
@@ -55,14 +55,14 @@ For the first observation alone, `1.5` is closer to `0.7` than `−0.5`, favorin
 
 With PAM4 and two previous symbols represented explicitly, there are `4 × 4 = 16` states. **RS-MLSD** (reduced-state MLSD) reduces states to lower hardware cost. [State count and algorithm](https://www.mathworks.com/help/comm/ref/comm.mlseequalizer-system-object.html)
 
-**DS-SBM** propagates two survivor branches per visible state and combines segment-cost matrices. [A-SSCC design decisions](../../projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md)
+**DS-SBM** propagates two survivor branches per visible state and combines segment-cost matrices. [A-SSCC design decisions](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.en.md#design-choices)
 
-**DP-SMM** retains two paths for each matrix element connecting the same start and end states, then reevaluates costs using actual symbol history. [Journal research](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)
+**DP-SMM** retains two paths for each matrix element connecting the same start and end states, then reevaluates costs using actual symbol history. [Journal research](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.en.md#page-top)
 
 </details>
 
-[← ISI and equalization example](equalization.en.md) · [Implementing RTL on an FPGA →](hardware-workflow.en.md)
+[← ISI and equalization example](equalization.en.md#page-top) · [Implementing RTL on an FPGA →](hardware-workflow.en.md#page-top)
 
 ---
 
-[← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md) · [Back to top](#page-top)
+[← Term guide](../glossary.en.md#page-top) · [CV](../profile.en.md#page-top) · [Home](../../README.en.md#page-top) · [Back to top](#page-top)

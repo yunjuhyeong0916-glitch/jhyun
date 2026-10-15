@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="validation.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # A-SSCC DS-SBM PAM4 DSP 측정·검증 결과
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[개념부터: Eye·BER·Shmoo](../../../docs/concepts/measurements.md) · [설계 구조](architecture.md) · [MLSD 설계 판단](design-decisions.md) · [보드 초기화·제어 (Vitis)](vitis-bringup.md) · [논문](../../../docs/publications.md)
+[개념부터: Eye·BER·Shmoo](../../../docs/concepts/measurements.md#page-top) · [설계 구조](architecture.md#page-top) · [MLSD 설계 판단](design-decisions.md#page-top) · [보드 초기화·제어 (Vitis)](vitis-bringup.md#page-top) · [논문](../../../docs/publications.md#page-top)
 
 기준일: **2026-10-07**.
 
@@ -29,7 +31,29 @@ A-SSCC 2026, p. 2 Fig. 6 상단. 왼쪽은 ZCU208·XM655와 ISI 보드의 실제
 
 [BER·PRBS 읽는 방법](../../../docs/concepts/measurements.md#term-ber) · [논문 공식 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
+<a id="21-tap-ffe3-tap-pr-통계-컨투어"></a>
+
+## PR 응답에 따른 BER 컨투어
+
+![A-SSCC 논문에 보고한 RFSoC 시스템의 PRBS7·PRBS15 BER 컨투어](../assets/mlsd_paper_measured_ber_contours.png)
+
+21-tap RX FFE와 3-tap PR 조건에서 PR 계수에 따른 PRBS7·PRBS15의 BER 분포입니다. 두 축은 후행 커서의 PR 설정이고 색은 log₁₀(BER)를 나타냅니다. 위 표는 각 패턴에서 선정한 PR 응답의 결과입니다. [A-SSCC 2026 Fig. 5](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+
 ## FPGA 자원·타이밍
+
+<a id="detector-resources"></a>
+
+### 검출기 단독 자원 비교
+
+| 검출 구조 | LUT | FF |
+|---|---:|---:|
+| RS-ACS | 258k | 80k |
+| **DS-SBM** | **166k** | **62k** |
+| **감소율** | **35.7%** | **22.5%** |
+
+RS-ACS 대비 검출기 단독 자원 비교입니다. [학위논문의 검출기 비교 그림·집계](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/docs/validation.md#검출기-단독-자원-비교)
+
+### 전체 송수신기 자원과 타이밍
 
 [자원·타이밍 지표 이해하기](../../../docs/concepts/hardware-workflow.md#term-timing)
 
@@ -64,80 +88,21 @@ TX·RX FFE와 PR 필터를 전치형 FIR로 구현해, 직접형 FIR 대비 LUT 
 
 </details>
 
-## ADC 캡처 파형·채널 응답
+<a id="adc-캡처-파형채널-응답"></a>
+<a id="adc-캡처-재생통계-분석"></a>
 
-<details>
-<summary>TX–ADC 파형 비교와 SBR·TX FFE 후보 분석</summary>
+## 캡처·재생 분석 자료
 
-2026-06-10 RFDC ILA에서 DAC 입력과 ADC 출력을 비교했습니다. 두 slot의 valid/ready는 각각 1,024/1,024였고, ADC peak는 5,700 counts(약 17.4% FS)였습니다. 지연을 맞춘 TX–ADC 정규화 상관계수는 0.657, 지연은 534샘플입니다.
-
-![ISI 보드 통과 후 ADC 캡처와 TX의 지연 보상·정규화 파형](../assets/tx_adc_correlation_20260610.svg)
-
-**분석 조건:** 2026-06-10 RFDC ILA 캡처의 지연 보상·정규화 비교.
-
-2026-06-11 SBR 캡처는 256개 펄스 중 240개 유효 창을 사용했습니다. baseline은 −544 counts, 주응답은 baseline 대비 약 6,782 counts였고, 주응답으로 정규화한 이전·다음 응답은 0.559·0.744였습니다. 인접 심볼에 걸친 ISI를 관측했습니다.
-
-| TX FFE 후보 캡처 | 값 |
-|---|---:|
-| ADC peak | 5,884 counts, 약 18.0% FS |
-| TX–ADC 상관계수 | 0.731 |
-| 최소제곱 채널 적합 상관계수 | 0.932 |
-| TX rail hit 비율 | 9.41% |
-| EQ 출력 범위 | −74 ~ +96 |
-
-**분석 조건:** 2026-06-11 SBR·TX FFE 후보 캡처의 채널 적합 결과.
-
-</details>
-
-## ADC 캡처 재생·통계 분석
-
-<details>
-<summary>저장 ADC 입력의 PRBS7 시뮬레이션 재생</summary>
-
-### PRBS7 캡처 재생
-
-2026-06-13 저장 ADC 입력을 시뮬레이션에서 재생했습니다. 각 경로에 1,024프레임을 입력했고 유효 출력 행은 1,023개였습니다. PR 계수는 [256, 140, 0], 레벨은 [−22, −7, 7, 22], 임계값은 [−14, 0, 14]입니다.
-
-| 경로 | Checker lock | 평가 비트 | 오류 | BER |
-|---|---:|---:|---:|---:|
-| EQ-only | 0 | 0 | 0 | 평가 미성립 |
-| MLSD | 1 | 64,384 | 794 | 0.0123323 |
-
-**출처:** 2026-06-13 캡처 재생 결과. 관측 비트 65,536개 중 lock 이후 64,384개를 BER 분모로 사용했습니다.
-
-</details>
-
-### 21-tap FFE·3-tap PR 통계 컨투어
-
-![A-SSCC 논문에 보고한 RFSoC 시스템의 PRBS7·PRBS15 BER 컨투어](../assets/mlsd_paper_measured_ber_contours.png)
-
-A-SSCC 2026, p. 2 Fig. 5. 21-tap RX FFE와 3-tap PR 조건에서 PR 계수에 따른 PRBS7·PRBS15의 BER 분포를 보여줍니다. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
-
-<details>
-<summary>EQ 잔차 통계로 계산한 기대 BER·분석 조건</summary>
-
-2026-06-14 분석은 EQ 잔차의 평균·표준편차와 심볼 문맥별 횟수로 기대 BER를 계산했습니다. PRBS7은 ADC 캡처 입력, PRBS15는 IL40-dB 등가 입력에 결정적 AWGN을 더한 SNR 22-dB 조건입니다.
-
-| 항목 | PRBS7 | PRBS15 |
-|---|---:|---:|
-| 최적 PR 계수 | [256, 148, −16] | [256, 112, −80] |
-| 정규화된 post1, post2 | (0.578125, −0.0625) | (0.4375, −0.3125) |
-| 기대 BER | 5.071389105066×10⁻¹² | 2.243856315445×10⁻⁶ |
-| 10⁷비트 기준 기대 오류 | 0.000050714 | 22.438563154 |
-| 10⁷비트 기준 표시 | 10⁻⁷ 하한 | 2.2×10⁻⁶ |
-
-기대 오류는 계산한 BER에 평가 비트 수를 곱한 값입니다. 표의 10⁷비트 기준 표시는 기대 BER에 10⁻⁷의 표시 하한을 적용했습니다.
-
-</details>
+[ADC 파형·SBR·초기 캡처 재생·통계 추정 분석](capture-analysis.md#page-top)
 
 ## 관련 연구
 
-[학위논문 · DS-SBM 설계·검증 (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) · [Journal DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)
+[학위논문 · DS-SBM 설계·검증 (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md#page-top) · [Journal DP-SMM 설계·검증](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

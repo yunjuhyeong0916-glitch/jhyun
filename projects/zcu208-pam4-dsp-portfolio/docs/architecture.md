@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="architecture.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # A-SSCC DS-SBM PAM4 DSP 설계 구조
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[MLSD 개념](../../../docs/concepts/mlsd.md) · [MLSD 설계 판단](design-decisions.md) · [Vitis·FPGA 구동](vitis-bringup.md) · [측정·검증 결과](validation.md)
+[MLSD 개념](../../../docs/concepts/mlsd.md#page-top) · [MLSD 설계 판단](design-decisions.md#page-top) · [Vitis·FPGA 구동](vitis-bringup.md#page-top) · [측정·검증 결과](validation.md#page-top)
 
 ## 논문 전체 구조
 
@@ -29,7 +31,7 @@ ZCU208의 XCZU48DR-FSVG1517-2-E에서 ADC·DAC를 각각 4 GS/s로 설정했습�
 | TX FIR | 송신 파형 보상 | 8-tap 고정소수점 연산·파이프라인 |
 | RFDC·FIFO | DAC 송신·ADC 수신과 병렬 데이터 연결 | valid·ready·레인 순서 |
 | RX FIR | 수신 채널 등화 | 21-tap·포화 연산·지연 정렬 |
-| 메트릭 계산 | 심볼 후보의 거리·상태 변환 계산 | 논문의 네 visible state·상태별 두 survivor branch |
+| 메트릭 계산 | 심볼 후보의 거리·상태 변환 계산 | 4개의 축소 상태(visible state)·상태별 두 survivor branch |
 | min-plus 결합 | 구간별 상태 변환 연결 | 논문의 8개 4-symbol 구간·계층적 결합 |
 | 경로 복원 | 상태 이력으로 수신 심볼 결정 | metric·survivor·valid 정렬 |
 | 런타임 제어 | FIR·검출기 설정 적용 | BRAM 계수 로딩·GPIO·PS 제어 |
@@ -37,14 +39,14 @@ ZCU208의 XCZU48DR-FSVG1517-2-E에서 ADC·DAC를 각각 4 GS/s로 설정했습�
 
 ## DS-SBM 메트릭
 
-논문의 DS-SBM RS-MLSD는 네 visible state와 상태별 두 survivor branch를 사용합니다. 구간별 branch metric 행렬을 계층적으로 결합해 심볼 간 ACS 의존성을 다룹니다. [후보 보존·행렬 결합의 설계 판단](design-decisions.md)
+논문의 DS-SBM RS-MLSD는 4개의 축소 상태(visible state)와 상태별 두 survivor branch를 사용합니다. 구간별 branch metric 행렬을 계층적으로 결합해 심볼 간 ACS 의존성을 다룹니다. [후보 보존·행렬 결합의 설계 판단](design-decisions.md#page-top)
 
-[관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [검증 결과](validation.md)
+[관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351) · [검증 결과](validation.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="A-SSCC 프로젝트로 돌아가기"><img src="../../../assets/readme/nav-back-asscc.svg" alt="A-SSCC 프로젝트로 돌아가기" width="156" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

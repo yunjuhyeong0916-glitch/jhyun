@@ -4,14 +4,14 @@
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [장비 활용](measurement-equipment.md)
+[LPDDR](lpddr.md#page-top) · [USB PAM-3](usb4-pam3.md#page-top) · [장비 활용](measurement-equipment.md#page-top)
 
-[PCB·HFSS](pcb-hfss-verification.md) · [LPDDR TX 모델](lpddr-tx-modeling.md) · [LPDDR TX 회로](lpddr-tx-circuit-verification.md) · [USB TX 모델](usb-tx-modeling.md) · [RX CTLE](usb-rx-ctle-modeling.md)
+[PCB·HFSS](pcb-hfss-verification.md#page-top) · [LPDDR TX 모델](lpddr-tx-modeling.md#page-top) · [LPDDR TX 회로](lpddr-tx-circuit-verification.md#page-top) · [USB TX 모델](usb-tx-modeling.md#page-top) · [RX CTLE](usb-rx-ctle-modeling.md#page-top)
 
 ## LPDDR TX: FFE 적용 전후의 시뮬레이션
 
@@ -29,7 +29,7 @@
 
 **측정 조건·관련 논문:** 14 Gb/s/pin, 4-DQ 활성. [A-SSCC 2026 Combo PHY 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141), p. 2 Fig. 5의 TX Eye·RX Shmoo.
 
-**제작 칩 측정 결과:** TX Eye 0.41 UI·65.3 mV, RX Shmoo 마진 0.25 UI·25 mV. [TX 설계·검증과 측정 역할](lpddr.md)
+**제작 칩 측정 결과:** TX Eye 0.41 UI·65.3 mV, RX Shmoo 마진 0.25 UI·25 mV. [TX 설계·검증과 측정 역할](lpddr.md#page-top)
 
 ## USB PAM-3: 같은 채널·패턴에서 FFE 효과 확인
 
@@ -37,9 +37,9 @@
 
 **측정 조건·관련 논문:** 32 Gb/s, CH#3, PRBS15, scrambler enabled. 채널 손실은 10.24 GHz에서 17.3 dB입니다. [TVLSI 관련 논문](https://doi.org/10.1109/TVLSI.2026.3701343), p. 7 Fig. 13(a),(b).
 
-**TX 칩 측정 결과:** 왼쪽 FFE off, 오른쪽 FFE on. 동일 CH#3·PRBS15의 상·하단 Eye 비교. [모델링·RTL 검증과 측정 역할](usb4-pam3.md)
+**TX 칩 측정 결과:** 왼쪽 FFE off, 오른쪽 FFE on. 동일 CH#3·PRBS15의 상·하단 Eye 비교. [모델링·RTL 검증과 측정 역할](usb4-pam3.md#page-top)
 
-FFE 적용 후 상단 Eye는 **11.19 ps·21.16 mV**, 하단 Eye는 **11.67 ps·19.80 mV**입니다. [측정 구성·PRBS15/31 비교·채널별 FFE 설정](pam3-differential-measurement.md)
+FFE 적용 후 상단 Eye는 **11.19 ps·21.16 mV**, 하단 Eye는 **11.67 ps·19.80 mV**입니다. [측정 구성·PRBS15/31 비교·채널별 FFE 설정](pam3-differential-measurement.md#page-top)
 
 ## AWG 속도 변경: 설정값과 실제 입력을 맞추기
 
@@ -55,8 +55,8 @@ BIN 파일 교체 시 목표와 다른 주파수가 관측되어 파일·샘플�
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

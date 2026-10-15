@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="pam3-differential-measurement.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # 차동 PAM-3 측정과 채널별 FFE 효과 검증
 
 <!-- page-navigation:top -->
 <p>
-  <a href="usb4-pam3.md" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="usb4-pam3.md#page-top" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[대표 결과](#pam3-ffe-result) · [Eye·BER 읽는 방법](../../../docs/concepts/measurements.md) · [TX 모델링](usb-tx-modeling.md) · [PCB·HFSS](pcb-hfss-verification.md) · [측정 장비](measurement-equipment.md)
+[대표 결과](#pam3-ffe-result) · [Eye·BER 읽는 방법](../../../docs/concepts/measurements.md#page-top) · [TX 모델링](usb-tx-modeling.md#page-top) · [PCB·HFSS](pcb-hfss-verification.md#page-top) · [측정 장비](measurement-equipment.md#page-top)
 
 **담당:** TX 칩의 차동 PAM-3 측정에 참여해 채널 손실과 FFE 설정에 따른 출력 Eye를 평가했습니다. 32 Gb/s에서 채널별 프리셋을 바꾸고, 상·하단 Eye의 폭과 높이를 비교했습니다.
 
@@ -66,7 +68,7 @@
 
 ## BER bathtub과 timing opening
 
-[BER·timing opening 이해하기](../../../docs/concepts/measurements.md)
+[BER·timing opening 이해하기](../../../docs/concepts/measurements.md#page-top)
 
 BER 평가에서는 **32 Gb/s·scrambler off·PRBS7 주기에 해당하는 패턴 길이**를 사용했습니다. BER 10⁻¹² 기준 timing opening은 CH#2에서 **0.43 UI**, CH#3에서 **0.33 UI**입니다. [논문 Section V-D·Fig. 14](https://doi.org/10.1109/TVLSI.2026.3701343)
 
@@ -83,12 +85,12 @@ BER 평가에서는 **32 Gb/s·scrambler off·PRBS7 주기에 해당하는 패�
 
 [A 0.0549-pJ/bit/pin/dB PAM-3 Transmitter With Reconfigurable 150-Preset Four-Tap FFE for Various Channel Environments — IEEE TVLSI 2026](https://doi.org/10.1109/TVLSI.2026.3701343)
 
-[TX 모델·RTL 검증](usb-tx-modeling.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [장비·자동화](measurement-equipment.md)
+[TX 모델·RTL 검증](usb-tx-modeling.md#page-top) · [RX CTLE 모델링](usb-rx-ctle-modeling.md#page-top) · [장비·자동화](measurement-equipment.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="usb4-pam3.md" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="usb4-pam3.md#page-top" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

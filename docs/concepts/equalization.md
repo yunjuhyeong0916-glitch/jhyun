@@ -1,10 +1,10 @@
 <a id="page-top"></a>
 
-<p align="right"><a href="equalization.en.md"><img src="../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+<p align="right"><a href="equalization.en.md#page-top"><img src="../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
 
 # ISI·등화 | 겹쳐 보이는 신호를 보상하는 방법
 
-[← 용어 안내](../glossary.md) · [연구 이력](../profile.md) · [홈](../../README.md)
+[← 용어 안내](../glossary.md#page-top) · [연구 이력](../profile.md#page-top) · [홈](https://github.com/yunjuhyeong0916-glitch/jhyun#page-top)
 
 **등화는 전송 경로에서 변한 신호를 보상해, 수신기가 데이터를 구분하기 쉽게 만드는 과정입니다.**
 
@@ -40,7 +40,7 @@
 
 **FIR**(Finite Impulse Response)은 여러 시점의 샘플을 가중 합산하는 필터입니다. 각 샘플에 곱하는 가중치가 **계수**, 샘플별 계산 항이 **tap**입니다.
 
-`21-tap RX FFE`는 21개 시점의 샘플에 각각 계수를 곱해 더하는 수신 등화 구조입니다. 이 연구에서는 이 연산을 RTL로 구현했습니다. [RX FIR 구조](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+`21-tap RX FFE`는 21개 시점의 샘플에 각각 계수를 곱해 더하는 수신 등화 구조입니다. 이 연구에서는 이 연산을 RTL로 구현했습니다. [RX FIR 구조](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#page-top)
 
 <a id="term-pr"></a>
 
@@ -49,7 +49,7 @@
 
 **PR**(Partial Response) 목표는 현재 수신값에 현재·이전 심볼이 각각 얼마나 반영되도록 할지 정한 응답입니다. 등화 출력을 이 응답에 가깝게 만들고, MLSD가 같은 응답으로 후보별 예상값을 계산합니다.
 
-A-SSCC DS-SBM 경로는 **RX FFE → 3-tap PR FIR → MLSD**입니다. [실제 신호 경로](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+A-SSCC DS-SBM 경로는 **RX FFE → 3-tap PR FIR → MLSD**입니다. [실제 신호 경로](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#page-top)
 
 </details>
 
@@ -57,8 +57,8 @@ A-SSCC DS-SBM 경로는 **RX FFE → 3-tap PR FIR → MLSD**입니다. [실제 �
 
 [USB TX FFE 모델 결과](../../projects/high-speed-interface-research/docs/usb-tx-modeling.md#usb-tx-ffe-result) · [USB RX CTLE 입출력 Eye](../../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md#usb-rx-ctle-result) · [USB 칩의 FFE 측정 결과](../../projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result)
 
-[← PAM 신호 이해하기](pam-signaling.md) · [남은 ISI를 이용하는 MLSD →](mlsd.md)
+[← PAM 신호 이해하기](pam-signaling.md#page-top) · [남은 ISI를 이용하는 MLSD →](mlsd.md#page-top)
 
 ---
 
-[← 용어 안내](../glossary.md) · [연구 이력](../profile.md) · [홈](../../README.md) · [맨 위로](#page-top)
+[← 용어 안내](../glossary.md#page-top) · [연구 이력](../profile.md#page-top) · [홈](https://github.com/yunjuhyeong0916-glitch/jhyun#page-top) · [맨 위로](#page-top)

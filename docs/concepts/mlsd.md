@@ -1,10 +1,10 @@
 <a id="page-top"></a>
 
-<p align="right"><a href="mlsd.en.md"><img src="../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+<p align="right"><a href="mlsd.en.md#page-top"><img src="../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
 
 # MLSD | 연속된 신호에서 송신 데이터 찾기
 
-[← 용어 안내](../glossary.md) · [연구 이력](../profile.md) · [홈](../../README.md)
+[← 용어 안내](../glossary.md#page-top) · [연구 이력](../profile.md#page-top) · [홈](https://github.com/yunjuhyeong0916-glitch/jhyun#page-top)
 
 **MLSD는 여러 시점에 받은 신호를 함께 비교해, 보냈을 가능성이 가장 높은 데이터열을 찾는 수신 기법입니다.**
 
@@ -39,7 +39,7 @@
 
 [PAM4](pam-signaling.md#term-pam4)는 네 레벨을 사용하므로 후보가 더 많아집니다. 하드웨어에서는 **계산량을 줄이면서 어떤 후보를 다음 비교에 남길지**를 함께 설계합니다. 이 포트폴리오의 DS-SBM과 후속 DP-SMM 연구가 다루는 문제입니다.
 
-[A-SSCC 수신 구조](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md) · [RFSoC 측정·BER 결과](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) · [BER 읽는 방법](measurements.md#term-ber)
+[A-SSCC 수신 구조](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#page-top) · [RFSoC 측정·BER 결과](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정) · [BER 읽는 방법](measurements.md#term-ber)
 
 <a id="term-metrics"></a>
 
@@ -55,14 +55,14 @@
 
 PAM4에서 이전 두 심볼의 모든 조합을 상태로 두면 `4 × 4 = 16`개가 필요합니다. **RS-MLSD**(Reduced-State MLSD)는 상태를 줄여 하드웨어 비용을 낮추는 방향입니다. [상태 수와 알고리즘](https://www.mathworks.com/help/comm/ref/comm.mlseequalizer-system-object.html)
 
-**DS-SBM**은 상태별 두 survivor branch와 구간별 비용 행렬의 결합을 사용합니다. [A-SSCC 설계 판단](../../projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md)
+**DS-SBM**은 상태별 두 survivor branch와 구간별 비용 행렬의 결합을 사용합니다. [A-SSCC 설계 판단](../../projects/zcu208-pam4-dsp-portfolio/docs/design-decisions.md#page-top)
 
-**DP-SMM**은 같은 시작·종료 상태를 연결하는 행렬 원소에 두 경로 후보를 남기고, 실제 심볼 이력을 반영해 비용을 다시 평가하는 후속 구조입니다. [Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)
+**DP-SMM**은 같은 시작·종료 상태를 연결하는 행렬 원소에 두 경로 후보를 남기고, 실제 심볼 이력을 반영해 비용을 다시 평가하는 후속 구조입니다. [Journal 연구](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md#page-top)
 
 </details>
 
-[← ISI·등화 예제](equalization.md) · [RTL·FPGA로 구현하기 →](hardware-workflow.md)
+[← ISI·등화 예제](equalization.md#page-top) · [RTL·FPGA로 구현하기 →](hardware-workflow.md#page-top)
 
 ---
 
-[← 용어 안내](../glossary.md) · [연구 이력](../profile.md) · [홈](../../README.md) · [맨 위로](#page-top)
+[← 용어 안내](../glossary.md#page-top) · [연구 이력](../profile.md#page-top) · [홈](https://github.com/yunjuhyeong0916-glitch/jhyun#page-top) · [맨 위로](#page-top)

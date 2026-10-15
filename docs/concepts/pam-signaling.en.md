@@ -1,10 +1,10 @@
 <a id="page-top"></a>
 
-<p align="right"><a href="pam-signaling.md"><img src="../../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
+<p align="right"><a href="pam-signaling.md#page-top"><img src="../../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
 
 # PAM4, PAM-3 and NRZ | Signal levels and data rates
 
-[← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md)
+[← Term guide](../glossary.en.md#page-top) · [CV](../profile.en.md#page-top) · [Home](../../README.en.md#page-top)
 
 **NRZ, PAM-3 and PAM4 represent data using signal amplitude levels.** In this portfolio, they refer to two-, three- and four-level signaling respectively.
 
@@ -18,13 +18,13 @@ A **symbol** is one value chosen from the signaling alphabet. Two-level NRZ repr
 
 It carries more bits at the same symbol rate. For example, **2-GBd PAM4 corresponds to 4 Gb/s before coding overhead**.
 
-For the same overall voltage range, adjacent levels are closer together than in two-level signaling. This makes [equalization](equalization.en.md) and detection methods such as [MLSD](mlsd.en.md) useful for handling distortion and noise. [Tektronix PAM4 overview](https://www.tek.com/de/blog/time-get-ready-pam4)
+For the same overall voltage range, adjacent levels are closer together than in two-level signaling. This makes [equalization](equalization.en.md#page-top) and detection methods such as [MLSD](mlsd.en.md#page-top) useful for handling distortion and noise. [Tektronix PAM4 overview](https://www.tek.com/de/blog/time-get-ready-pam4)
 
 <a id="term-pam3"></a>
 
 ## How does PAM-3 carry bits?
 
-Three levels do not map directly to the four combinations of a two-bit word. Coding can instead map a block of bits to a sequence of symbols. The USB TX model here uses **11B7S encoding: 11 bits mapped to seven symbols**. [USB TX modeling](../../projects/high-speed-interface-research/docs/usb-tx-modeling.md)
+Three levels do not map directly to the four combinations of a two-bit word. Coding can instead map a block of bits to a sequence of symbols. The USB TX model here uses **11B7S encoding: 11 bits mapped to seven symbols**. [USB TX modeling](../../projects/high-speed-interface-research/docs/usb-tx-modeling.en.md#page-top)
 
 USB4 Version 2.0 introduced a PAM3-based physical layer. The USB4 Gen4 work in this portfolio covers transmitter and receiver modeling and TX evaluation using that signaling approach. [USB-IF announcement](https://www.usb.org/sites/default/files/2022-10/USB-IF%20USB%2080Gbps%20Announcement_FINAL_v2.pdf)
 
@@ -39,12 +39,12 @@ USB4 Version 2.0 introduced a PAM3-based physical layer. The USB4 Gen4 work in t
 
 Separating these quantities helps distinguish circuit data rate from FPGA sample throughput. [Rate and UI definitions](https://helpfiles.keysight.com/scopes/FlexDCA-PG/Content/Topics/Quick-Start/theory_bits_vs_symbols.htm)
 
-[Next: overlapping symbols and equalization →](equalization.en.md)
+[Next: overlapping symbols and equalization →](equalization.en.md#page-top)
 
 ## Related research
 
-[NRZ TX circuit](../../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md) · [USB PAM-3](../../projects/high-speed-interface-research/docs/usb4-pam3.md) · [PAM4 DSP](../../projects/zcu208-pam4-dsp-portfolio/)
+[NRZ TX circuit](../../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#page-top) · [USB PAM-3](../../projects/high-speed-interface-research/docs/usb4-pam3.en.md#page-top) · [PAM4 DSP](../../projects/zcu208-pam4-dsp-portfolio/README.en.md#page-top)
 
 ---
 
-[← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md) · [Back to top](#page-top)
+[← Term guide](../glossary.en.md#page-top) · [CV](../profile.en.md#page-top) · [Home](../../README.en.md#page-top) · [Back to top](#page-top)

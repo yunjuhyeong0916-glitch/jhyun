@@ -1,10 +1,10 @@
 <a id="page-top"></a>
 
-<p align="right"><a href="measurements.en.md"><img src="../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+<p align="right"><a href="measurements.en.md#page-top"><img src="../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
 
 # Eye·BER·Shmoo | 측정 결과 읽기
 
-[← 용어 안내](../glossary.md) · [연구 이력](../profile.md) · [홈](../../README.md)
+[← 용어 안내](../glossary.md#page-top) · [연구 이력](../profile.md#page-top) · [홈](https://github.com/yunjuhyeong0916-glitch/jhyun#page-top)
 
 **Eye는 신호를 구분할 전압·시간 여유, BER은 판정한 비트의 오류 비율, Shmoo는 조건별 동작 영역을 보여줍니다.**
 
@@ -53,10 +53,10 @@ Eye는 파형의 여유를 보여주고, BER은 데이터를 판정한 결과를
 - **BERT:** 알려진 비트 패턴을 만들거나 수신 패턴과 비교해 비트 오류를 측정합니다.
 - **오실로스코프:** 시간에 따른 전압 파형과 Eye를 관찰합니다.
 
-[사용 장비와 측정 자동화](../../projects/high-speed-interface-research/docs/measurement-equipment.md)
+[사용 장비와 측정 자동화](../../projects/high-speed-interface-research/docs/measurement-equipment.md#page-top)
 
 </details>
 
 ---
 
-[← 용어 안내](../glossary.md) · [연구 이력](../profile.md) · [홈](../../README.md) · [맨 위로](#page-top)
+[← 용어 안내](../glossary.md#page-top) · [연구 이력](../profile.md#page-top) · [홈](https://github.com/yunjuhyeong0916-glitch/jhyun#page-top) · [맨 위로](#page-top)

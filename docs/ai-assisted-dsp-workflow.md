@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="ai-assisted-dsp-workflow.en.md#page-top"><img src="../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # AI 활용 | RTL 구현·FPGA 측정 자동화
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md#dsp-기반-송수신기-연구" title="DSP 기반 송수신기 연구로 돌아가기"><img src="../assets/readme/nav-back-dsp.svg" alt="DSP 기반 송수신기 연구로 돌아가기" width="112" height="30"></a>
-  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#dsp-기반-송수신기-연구" title="DSP 기반 송수신기 연구로 돌아가기"><img src="../assets/readme/nav-back-dsp.svg" alt="DSP 기반 송수신기 연구로 돌아가기" width="112" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[문서 지도](repository-map.md) · [English](ai-assisted-dsp-workflow.en.md)
+[문서 지도](repository-map.md#page-top) · [English](ai-assisted-dsp-workflow.en.md#page-top)
 
 PAM4 수신기의 모델이나 계수를 바꿀 때 같은 조건으로 검증을 반복할 수 있도록, 입력·실행·결과 수집을 스크립트로 묶었습니다. AI는 **RTL·테스트벤치와 자동화 코드 작성·수정**에 활용했고, MATLAB MCP로 Codex에서 MATLAB 모델을 실행하고 결과를 확인했습니다.
 
@@ -21,7 +23,7 @@ PAM4 수신기의 모델이나 계수를 바꿀 때 같은 조건으로 검증�
 
 RTL 검증은 **PowerShell runner → Python 참조 벡터 생성 → Vivado XSim** 순서로 연결했습니다. 채널 CSV에서 입력·기대값 HEX를 만든 뒤, 테스트벤치가 같은 입력·계수로 **FFE 출력·검출기 판정·출력 시점**을 비교합니다. runner는 각 도구의 종료 상태와 PASS 로그를 검사해, 코드 수정 후에도 같은 절차로 다시 검증하도록 구성했습니다.
 
-[후속 DP-SMM 모델·RTL 검증 결과](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/docs/validation.md)
+[후속 DP-SMM 모델·RTL 검증 결과](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/docs/validation.md#page-top)
 
 ## ZCU208 측정 harness
 
@@ -31,12 +33,12 @@ RTL 검증은 **PowerShell runner → Python 참조 벡터 생성 → Vivado XSi
 
 ZCU208에서는 PS가 계수를 쓰고 적용 여부를 확인하며, PL이 수신 DSP 연산과 PRBS 검사를 수행합니다. **수신 샘플**은 캡처 BRAM → PS → UART CSV로 수집했습니다. **BER 평가**에는 PL의 lock·오류 수·검사 비트 수를 ILA CSV로 내보내고, Python에서 오류 수 / 검사 비트 수를 계산해 조건별 결과를 비교했습니다.
 
-[Vitis 계수 적용·데이터 수집](../projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md) · [A-SSCC 측정 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md)
+[Vitis 계수 적용·데이터 수집](../projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md#page-top) · [A-SSCC 측정 결과](../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md#dsp-기반-송수신기-연구" title="DSP 기반 송수신기 연구로 돌아가기"><img src="../assets/readme/nav-back-dsp.svg" alt="DSP 기반 송수신기 연구로 돌아가기" width="112" height="30"></a>
-  <a href="../README.md" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#dsp-기반-송수신기-연구" title="DSP 기반 송수신기 연구로 돌아가기"><img src="../assets/readme/nav-back-dsp.svg" alt="DSP 기반 송수신기 연구로 돌아가기" width="112" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

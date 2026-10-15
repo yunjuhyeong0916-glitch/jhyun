@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="lpddr-combo.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # LPDDR Combo PHY: TX 설계·모델링과 28 nm 칩 검증
 
 <!-- page-navigation:top -->
 <p>
-  <a href="lpddr.md" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="lpddr.md#page-top" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[대표 결과](#lpddr-combo-result) · [LPDDR·PHY 개념](../../../docs/concepts/interfaces.md#term-lpddr) · [인터페이스 연구](../README.md) · [15.6-Gb/s TX 회로](lpddr-tx-circuit-verification.md) · [TX 모델 상세](lpddr-tx-modeling.md) · [SI·PI 설계](#si-pi-board-design) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+[대표 결과](#lpddr-combo-result) · [LPDDR·PHY 개념](../../../docs/concepts/interfaces.md#term-lpddr) · [인터페이스 연구](../README.md#page-top) · [15.6-Gb/s TX 회로](lpddr-tx-circuit-verification.md#page-top) · [TX 모델 상세](lpddr-tx-modeling.md#page-top) · [SI·PI 설계](#si-pi-board-design) · [관련 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
 LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다릅니다. 이 연구는 세대별 클록·위상 조정 회로를 각각 구현할 때 늘어나는 면적을 줄이기 위해, **클록·위상 조정 자원을 공유하고 모드에 따라 신호 경로를 바꾸는 Combo Controller PHY**를 구현했습니다.
 
@@ -25,11 +27,11 @@ LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다�
 |---|---|
 | <img src="../assets/pcb_hfss_lpddr_board_photo.png" alt="LPDDR Combo 측정용 PCB" width="280"> | <img src="../assets/pcb_hfss_lpddr_wirebond_photo.png" alt="칩 패드와 PCB의 COB·와이어 본딩" width="280"> |
 
-**평가 구성:** 측정용 PCB와 COB·와이어 본딩으로 칩의 신호·전원 경로를 연결했습니다. [PCB 설계·HFSS 전달 특성](pcb-hfss-verification.md)
+**평가 구성:** 측정용 PCB와 COB·와이어 본딩으로 칩의 신호·전원 경로를 연결했습니다. [PCB 설계·HFSS 전달 특성](pcb-hfss-verification.md#page-top)
 
 ![14 Gb/s/pin·4-DQ 활성 조건의 Combo PHY TX Eye와 RX Shmoo](../assets/lpddr_combo_measured_eye_shmoo.png)
 
-**측정 조건:** 28-nm CMOS 제작 칩, 14 Gb/s/pin, 4-DQ 활성. 위는 TX Eye, 아래는 TX–RX 연결 조건의 RX Shmoo입니다. [논문 Fig. 5](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) · [Eye·Shmoo 읽는 방법](../../../docs/concepts/measurements.md)
+**측정 조건:** 28-nm CMOS 제작 칩, 14 Gb/s/pin, 4-DQ 활성. 위는 TX Eye, 아래는 TX–RX 연결 조건의 RX Shmoo입니다. [논문 Fig. 5](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) · [Eye·Shmoo 읽는 방법](../../../docs/concepts/measurements.md#page-top)
 
 | 평가 항목 | 결과 | 확인한 동작 |
 |---|---|---|
@@ -46,7 +48,7 @@ LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다�
 
 </details>
 
-파형 관측에는 **86100D·86118A**, 입력·전원 조건과 오류 평가에는 **M8195A·E3631A·MP1800A**를 사용했습니다. RX Shmoo는 I2C 제어를 전원·BERT와 연동해 전압·타이밍 조건을 바꾸고 오류를 수집했습니다. [측정 장비·자동화](measurement-equipment.md)
+파형 관측에는 **86100D·86118A**, 입력·전원 조건과 오류 평가에는 **M8195A·E3631A·MP1800A**를 사용했습니다. RX Shmoo는 I2C 제어를 전원·BERT와 연동해 전압·타이밍 조건을 바꾸고 오류를 수집했습니다. [측정 장비·자동화](measurement-equipment.md#page-top)
 
 ## 세대에 따라 달라지는 클록·데이터 경로
 
@@ -76,7 +78,7 @@ main 데이터와 지연 데이터의 간격이 1 UI에서 벗어나면 pre-emph
 
 ![단일 DQ TX 모델의 직렬 데이터·1UI 지연 데이터·pre-emphasis 출력·채널 출력 파형](../assets/lpddr_combo_tx_model_waveform_vcs.png)
 
-위부터 **직렬 main 데이터 → 1-UI 지연 데이터 → pre-emphasis 출력 → 채널 출력**입니다. 입력 패턴의 직렬화, 두 데이터의 시간 관계와 전이 방향에 따른 출력 레벨 변화를 확인했습니다. [VCS·Questa 파형·레벨 코드별 Eye](lpddr-tx-modeling.md)
+위부터 **직렬 main 데이터 → 1-UI 지연 데이터 → pre-emphasis 출력 → 채널 출력**입니다. 입력 패턴의 직렬화, 두 데이터의 시간 관계와 전이 방향에 따른 출력 레벨 변화를 확인했습니다. [VCS·Questa 파형·레벨 코드별 Eye](lpddr-tx-modeling.md#page-top)
 
 ## 4-DQ 통합 환경에서 Write 출력 확인
 
@@ -94,18 +96,18 @@ TX를 제작 칩에서 평가하기 위해, **DQ·strobe의 신호 전달과 기
 
 ![LPDDR Combo 측정용 PCB의 SI·PI 설계 관점과 제작 칩 평가 흐름](../assets/lpddr_combo_si_pi_overview.svg)
 
-[SI·PI 설계 상세 보기 — PCB 배치·HFSS 모델·전달 손실 →](lpddr-combo-si-pi.md)
+[SI·PI 설계 상세 보기 — PCB 배치·HFSS 모델·전달 손실 →](lpddr-combo-si-pi.md#page-top)
 
 ## 관련 논문과 설계 자료
 
 [A 14-Gb/s/pin LPDDR4X/5/5X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator — A-SSCC 2026](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
-[TX 모델·코드별 Eye·4-DQ 지연 검증](lpddr-tx-modeling.md) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md) · [PCB·HFSS](pcb-hfss-verification.md) · [논문·담당 역할](evidence.md)
+[TX 모델·코드별 Eye·4-DQ 지연 검증](lpddr-tx-modeling.md#page-top) · [TX 회로 설계·검증](lpddr-tx-circuit-verification.md#page-top) · [PCB·HFSS](pcb-hfss-verification.md#page-top) · [논문·담당 역할](evidence.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="lpddr.md" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="lpddr.md#page-top" title="LPDDR 연구로 돌아가기"><img src="../../../assets/readme/nav-back-lpddr.svg" alt="LPDDR 연구로 돌아가기" width="94" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

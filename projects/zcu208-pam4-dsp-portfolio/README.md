@@ -1,21 +1,23 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="README.en.md#page-top"><img src="../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP 설계·검증
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
-  <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[대표 결과](#asscc-result) · [MLSD 개념](../../docs/concepts/mlsd.md) · [설계 구조](docs/architecture.md) · [MLSD 설계 판단](docs/design-decisions.md) · [Vitis·FPGA 구동](docs/vitis-bringup.md) · [측정·구현 결과](docs/validation.md) · [AI 활용·자동화](#ai-활용검증-자동화)
+[대표 결과](#asscc-result) · [MLSD 개념](../../docs/concepts/mlsd.md#page-top) · [설계 구조](docs/architecture.md#page-top) · [MLSD 설계 판단](docs/design-decisions.md#page-top) · [Vitis·FPGA 구동](docs/vitis-bringup.md#page-top) · [측정·구현 결과](docs/validation.md#page-top) · [AI 활용·자동화](#ai-활용검증-자동화)
 
 PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위해 **송수신 DSP·검출기 RTL과 RFSoC 제어·오류 검사 경로**를 구현했습니다. ISI 보드를 통한 송수신 평가 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 
 **담당:** TX·RX 필터와 DS-SBM 검출기 RTL 설계, RFSoC 통합·제어와 보드 검증.
 
-[학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md)은 DS-SBM의 분기 선택·구간 행렬·PM 갱신과 RFSoC 검증을 상세히 설명합니다. 후속 DP-SMM 설계와 두 구조의 비교는 [Journal 준비 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md)에서 다룹니다.
+[학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md#page-top)은 DS-SBM의 분기 선택·구간 행렬·PM 갱신과 RFSoC 검증을 상세히 설명합니다. 후속 DP-SMM 설계와 두 구조의 비교는 [Journal 준비 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md#page-top)에서 다룹니다.
 
 <a id="asscc-result"></a>
 
@@ -32,18 +34,19 @@ PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위�
 | 항목 | 결과 | 조건·출처 |
 |---|---|---|
 | RFSoC 시스템 BER | PRBS7 < 10⁻⁷·PRBS15 < 2×10⁻⁶ | A-SSCC 2026 Fig. 5, 41-dB 손실·ISI 보드 측정 |
+| 검출기 자원 | LUT 166k·FF 62k | RS-ACS 대비 LUT 35.7%·FF 22.5% 감소, 검출기 단독 집계 |
 | 전체 TRX 자원 | LUT 189,108·FF 188,846·DSP 950·BRAM 24.5 | 전체 TRX, 2026-06-14 배치(placed) 결과 |
 | FPGA 타이밍 | WNS +0.083 ns·WHS +0.010 ns·TNS/THS 0 | 2026-06-29 post-route physopt 보고서 |
 
-[측정·구현 상세](docs/validation.md) · [MLSD를 예제로 이해하기](../../docs/concepts/mlsd.md)
+[측정·구현 상세](docs/validation.md#page-top) · [검출기 자원 비교](docs/validation.md#detector-resources) · [MLSD를 예제로 이해하기](../../docs/concepts/mlsd.md#page-top)
 
 ## 설계·구현
 
-ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md)를 [32-lane 병렬 DSP](docs/architecture.md)로 구현해 연결했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
+ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-SBM RS-MLSD](docs/design-decisions.md#page-top)를 [32심볼 병렬 처리 DSP](docs/architecture.md#page-top)로 구현해 연결했습니다. [런타임 계수 제어](docs/vitis-bringup.md#계수-적용과-캡처-수집)와 PRBS 검사·ILA 경로로 수신 동작을 확인했습니다.
 
 | 영역 | 구현 |
 |---|---|
-| 병렬 데이터 경로 | 32-lane 연산, 고정소수점·파이프라인, 데이터·valid 지연 정렬 |
+| 병렬 데이터 경로 | 32심볼 병렬 연산, 고정소수점·파이프라인, 데이터·valid 지연 정렬 |
 | 채널 보상 | TX 8-tap FIR, RX 21-tap FIR, Q 형식·포화 연산 |
 | MLSD | DS-SBM RS-MLSD, 구간별 메트릭 결합·경로 복원 |
 | 보드 통합 | RFDC·FIFO, BRAM 계수 로더, GPIO 제어, PRBS 검사·ILA |
@@ -65,23 +68,23 @@ flowchart LR
     G -.-> M
 ```
 
-ISI 보드를 통과한 수신 신호를 ADC로 캡처했습니다. [캡처 파형·재생·통계 분석](docs/validation.md)
+ISI 보드를 통과한 수신 신호를 ADC로 캡처했습니다. [캡처 파형·재생·통계 분석](docs/capture-analysis.md#page-top)
 
 ## RX FFE와 PR 필터의 역할
 
 ![RX 21-tap FFE의 채널 등화, 별도 3-tap PR 필터의 응답 형성, MLSD의 경로 선택](assets/ds_sbm_ffe_pr_detection.jpg)
 
-RX FFE로 채널 왜곡을 보상한 뒤, 별도 3-tap PR 필터로 MLSD에 사용할 잔류 ISI 응답을 만듭니다. 채널 등화 계수와 PR 계수를 독립적으로 바꾸면서 검출 성능을 평가하도록 구성했습니다. [전체 설계 구조](docs/architecture.md)
+RX FFE로 채널 왜곡을 보상한 뒤, 별도 3-tap PR 필터로 MLSD에 사용할 잔류 ISI 응답을 만듭니다. 채널 등화 계수와 PR 계수를 독립적으로 바꾸면서 검출 성능을 평가하도록 구성했습니다. [전체 설계 구조](docs/architecture.md#page-top)
 
 ## Vitis 기반 보드 구동
 
-Vivado에서 내보낸 XSA로 Vitis 플랫폼을 구성하고 Cortex-A53 Standalone 앱을 JTAG으로 실행했습니다. 앱에서 CLK104·RFDC 초기화와 RX 계수 쓰기·commit을 제어하고, BRAM의 수신 디버그 데이터를 UART CSV로 수집했습니다. [구동 순서·PS–PL 제어 경로](docs/vitis-bringup.md)
+Vivado에서 내보낸 XSA로 Vitis 플랫폼을 구성하고 Cortex-A53 Standalone 앱을 JTAG으로 실행했습니다. 앱에서 CLK104·RFDC 초기화와 RX 계수 쓰기·commit을 제어하고, BRAM의 수신 디버그 데이터를 UART CSV로 수집했습니다. [구동 순서·PS–PL 제어 경로](docs/vitis-bringup.md#page-top)
 
 ## AI 활용·검증 자동화
 
 RTL·테스트벤치 작성과 계수 설정·데이터 수집·BER 분석을 연결하는 자동화 코드 구성에 AI를 활용했습니다. 검출기 구조와 검증 조건을 정하고, 모델·RTL 대조와 보드 측정으로 결과를 확인했습니다.
 
-[사용 Toolbox·MATLAB MCP·자동화 harness 연결 구조](../../docs/ai-assisted-dsp-workflow.md)
+[사용 Toolbox·MATLAB MCP·자동화 harness 연결 구조](../../docs/ai-assisted-dsp-workflow.md#page-top)
 
 <details>
 <summary>계수 설정부터 캡처·BER 분석까지의 측정 harness 보기</summary>
@@ -94,14 +97,14 @@ RTL·테스트벤치 작성과 계수 설정·데이터 수집·BER 분석을 �
 
 [A-SSCC 2026 — FPGA-Verified PAM4 Transceiver with DS-SBM RS-MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351), 채택·발표 예정(2026-10-07 기준).
 
-[학위논문 · DS-SBM (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md) · [Journal DP-SMM](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md) · [전체 논문](../../docs/publications.md)
+[학위논문 · DS-SBM (진행 중)](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md#page-top) · [Journal DP-SMM](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md#page-top) · [전체 논문](../../docs/publications.md#page-top)
 
 **도구:** Verilog / SystemVerilog · Vivado·Vitis 2022.2 · XSim · ZCU208 RFSoC · Python
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
-  <a href="../../README.md" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="연구 목록으로 돌아가기"><img src="../../assets/readme/nav-back-research.svg" alt="연구 목록으로 돌아가기" width="110" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

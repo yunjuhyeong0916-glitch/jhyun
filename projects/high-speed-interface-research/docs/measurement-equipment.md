@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="measurement-equipment.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # 측정 장비와 자동화
 
 <!-- page-navigation:top -->
 <p>
-  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[LPDDR](lpddr.md) · [USB PAM-3](usb4-pam3.md) · [논문·담당 역할](evidence.md)
+[LPDDR](lpddr.md#page-top) · [USB PAM-3](usb4-pam3.md#page-top) · [논문·담당 역할](evidence.md#page-top)
 
 LPDDR·USB 평가에서 파형 관측, 입력 공급, 전원 설정과 오류 집계를 수행했습니다.
 
@@ -28,7 +30,7 @@ LPDDR·USB 평가에서 파형 관측, 입력 공급, 전원 설정과 오류 �
 
 **장비 자료:** [DCA 구성](https://www.keysight.com/mx/en/assets/7018-04520/configuration-guides-archived/5992-0038.pdf) · [M8195A](https://www.keysight.com/us/en/assets/9018-04320/user-manuals/9018-04320.pdf) · [MP1800A](https://www.anritsu.com/en-au/test-measurement/products/mp1800a) · [M8049A](https://www.keysight.com/us/en/product/M8049A/isi-channel-boards.html) · [E3631A](https://www.keysight.com/us/en/support/E3631A/80w-triple-output-power-supply-6v-5a--25v-1a.html?rd=1)
 
-[차동 PAM-3의 측정 구성·FFE 전후 Eye·BER bathtub](pam3-differential-measurement.md)
+[차동 PAM-3의 측정 구성·FFE 전후 Eye·BER bathtub](pam3-differential-measurement.md#page-top)
 
 ## 입력 공급·파형 관측·오류 평가의 관계
 
@@ -59,14 +61,14 @@ RX 평가에서는 기준전압과 타이밍을 바꿔 수신 동작 여유를 �
 
 ## 오류 조기 종료·경계 탐색으로 Shmoo 측정 자동화
 
-모든 전압·타이밍 지점을 같은 관측량까지 측정하면 평가 시간이 길어졌습니다. 오류가 확인된 지점의 조기 종료와 양방향 경계 탐색을 적용해 동작 영역의 경계를 먼저 확인했습니다. 실제 관측점은 조건·카운트·오류와 함께 CSV로 저장하고, 생략한 내부 구간은 미측정으로 표시했습니다. [RX Shmoo 측정](lpddr.md)
+모든 전압·타이밍 지점을 같은 관측량까지 측정하면 평가 시간이 길어졌습니다. 오류가 확인된 지점의 조기 종료와 양방향 경계 탐색을 적용해 동작 영역의 경계를 먼저 확인했습니다. 실제 관측점은 조건·카운트·오류와 함께 CSV로 저장하고, 생략한 내부 구간은 미측정으로 표시했습니다. [RX Shmoo 측정](lpddr.md#page-top)
 
-[PCB 설계·HFSS 전달 특성](pcb-hfss-verification.md) · [Eye·Shmoo와 AWG 출력 확인](verification-figures.md)
+[PCB 설계·HFSS 전달 특성](pcb-hfss-verification.md#page-top) · [Eye·Shmoo와 AWG 출력 확인](verification-figures.md#page-top)
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="../README.md" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="../README.md#page-top" title="LPDDR·USB 인터페이스 연구로 돌아가기"><img src="../../../assets/readme/nav-back-interface.svg" alt="LPDDR·USB 인터페이스 연구로 돌아가기" width="146" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->

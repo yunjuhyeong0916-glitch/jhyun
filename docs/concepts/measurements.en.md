@@ -1,10 +1,10 @@
 <a id="page-top"></a>
 
-<p align="right"><a href="measurements.md"><img src="../../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
+<p align="right"><a href="measurements.md#page-top"><img src="../../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
 
 # Eye, BER and Shmoo | Reading measurement results
 
-[← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md)
+[← Term guide](../glossary.en.md#page-top) · [CV](../profile.en.md#page-top) · [Home](../../README.en.md#page-top)
 
 **An eye diagram shows voltage and timing margins, BER is the fraction of compared bits detected incorrectly, and a Shmoo plot maps operation across test conditions.**
 
@@ -20,7 +20,7 @@ Overlaying waveform segments aligned to symbol timing produces an **eye diagram*
 
 [PAM-3](pam-signaling.en.md#term-pam3) has two eyes between its three levels. **Timing opening** is the timing range meeting a specified error criterion.
 
-[Measured USB silicon eyes with FFE off/on →](../../projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result)
+[Measured USB silicon eyes with FFE off/on →](../../projects/high-speed-interface-research/docs/pam3-differential-measurement.en.md#pam3-ffe-result)
 
 <a id="term-ber"></a>
 
@@ -30,7 +30,7 @@ Overlaying waveform segments aligned to symbol timing produces an **eye diagram*
 
 Sending a known bit pattern makes it possible to compare recovered data and count errors. A **PRBS** (Pseudo-Random Binary Sequence) is a pattern reproducible from the same generation rule.
 
-The RFSoC work calculates BER from the internal checker's error count and compared-bit count. [RFSoC measurements and BER →](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.md#isi-보드를-통한-rfsoc-측정)
+The RFSoC work calculates BER from the internal checker's error count and compared-bit count. [RFSoC board measurements and BER →](../../projects/zcu208-pam4-dsp-portfolio/docs/validation.en.md#board-measurements)
 
 An eye diagram shows waveform margins; BER evaluates the recovered data. Together they help relate waveform changes to receiver performance.
 
@@ -42,7 +42,7 @@ A Shmoo plot varies parameters such as voltage and sampling time and marks pass/
 
 ![Illustrative voltage-timing Shmoo map marking passing and failing conditions](../../assets/concepts/shmoo-map.svg)
 
-[Measured LPDDR Combo TX eye and RX Shmoo →](../../projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result)
+[Measured LPDDR Combo TX eye and RX Shmoo →](../../projects/high-speed-interface-research/docs/lpddr-combo.en.md#lpddr-combo-result)
 
 <a id="term-equipment"></a>
 
@@ -53,10 +53,10 @@ A Shmoo plot varies parameters such as voltage and sampling time and marks pass/
 - **BERT:** generates known bit patterns and/or compares received patterns to measure errors.
 - **Oscilloscope:** observes voltage waveforms over time and eye diagrams.
 
-[Instrument roles and measurement automation](../../projects/high-speed-interface-research/docs/measurement-equipment.md)
+[Instrument roles and measurement automation](../../projects/high-speed-interface-research/docs/measurement-equipment.en.md#page-top)
 
 </details>
 
 ---
 
-[← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md) · [Back to top](#page-top)
+[← Term guide](../glossary.en.md#page-top) · [CV](../profile.en.md#page-top) · [Home](../../README.en.md#page-top) · [Back to top](#page-top)

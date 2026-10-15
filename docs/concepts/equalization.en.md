@@ -1,10 +1,10 @@
 <a id="page-top"></a>
 
-<p align="right"><a href="equalization.md"><img src="../../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
+<p align="right"><a href="equalization.md#page-top"><img src="../../assets/readme/nav-ko.svg" alt="한국어" width="87" height="30"></a></p>
 
 # ISI and equalization | Compensating for overlapping symbols
 
-[← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md)
+[← Term guide](../glossary.en.md#page-top) · [CV](../profile.en.md#page-top) · [Home](../../README.en.md#page-top)
 
 **Equalization compensates for changes introduced by the transmission path so that a receiver can distinguish data more reliably.**
 
@@ -40,7 +40,7 @@ This illustration sends the same sequence through a channel and applies a simple
 
 An **FIR** (Finite Impulse Response) filter forms a weighted sum of samples from several times. A weight is a **coefficient**, and each sample contribution is a **tap**.
 
-A `21-tap RX FFE` combines 21 sample positions, each multiplied by its coefficient. The project implements this operation in RTL. [RX FIR architecture](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+A `21-tap RX FFE` combines 21 sample positions, each multiplied by its coefficient. The project implements this operation in RTL. [RX FIR architecture](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.en.md#page-top)
 
 <a id="term-pr"></a>
 
@@ -49,16 +49,16 @@ A `21-tap RX FFE` combines 21 sample positions, each multiplied by its coefficie
 
 A **partial-response (PR) target** specifies how current and previous symbols should contribute to a detector observation. Equalization shapes the response, and MLSD uses that response to predict candidate observations.
 
-The A-SSCC DS-SBM path is **RX FFE → three-tap PR FIR → MLSD**. [Implemented signal path](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.md)
+The A-SSCC DS-SBM path is **RX FFE → three-tap PR FIR → MLSD**. [Implemented signal path](../../projects/zcu208-pam4-dsp-portfolio/docs/architecture.en.md#page-top)
 
 </details>
 
 ## Continue to the research results
 
-[USB TX FFE model results](../../projects/high-speed-interface-research/docs/usb-tx-modeling.md#usb-tx-ffe-result) · [USB RX CTLE input/output eyes](../../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.md#usb-rx-ctle-result) · [USB silicon FFE measurements](../../projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result)
+[USB TX FFE model results](../../projects/high-speed-interface-research/docs/usb-tx-modeling.en.md#usb-tx-ffe-result) · [USB RX CTLE input/output eyes](../../projects/high-speed-interface-research/docs/usb-rx-ctle-modeling.en.md#usb-rx-ctle-result) · [USB silicon FFE measurements](../../projects/high-speed-interface-research/docs/pam3-differential-measurement.en.md#pam3-ffe-result)
 
-[← PAM signaling](pam-signaling.en.md) · [Using residual ISI with MLSD →](mlsd.en.md)
+[← PAM signaling](pam-signaling.en.md#page-top) · [Using residual ISI with MLSD →](mlsd.en.md#page-top)
 
 ---
 
-[← Term guide](../glossary.en.md) · [CV](../profile.en.md) · [Home](../../README.en.md) · [Back to top](#page-top)
+[← Term guide](../glossary.en.md#page-top) · [CV](../profile.en.md#page-top) · [Home](../../README.en.md#page-top) · [Back to top](#page-top)

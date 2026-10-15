@@ -1,15 +1,17 @@
 <a id="page-top"></a>
 
+<p align="right"><a href="usb-tx-modeling.en.md#page-top"><img src="../../../assets/readme/nav-en.svg" alt="English" width="96" height="30"></a></p>
+
 # USB TX 모델링: 논리 데이터에서 전기 계층까지
 
 <!-- page-navigation:top -->
 <p>
-  <a href="usb4-pam3.md" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="usb4-pam3.md#page-top" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
 </p>
 <!-- /page-navigation:top -->
 
-[대표 결과](#usb-tx-ffe-result) · [PAM-3 신호 이해하기](../../../docs/concepts/pam-signaling.md#term-pam3) · [인터페이스 연구 개요](../README.md) · [RX CTLE 모델링](usb-rx-ctle-modeling.md) · [측정 그림](verification-figures.md) · [논문·담당 역할](evidence.md)
+[대표 결과](#usb-tx-ffe-result) · [PAM-3 신호 이해하기](../../../docs/concepts/pam-signaling.md#term-pam3) · [인터페이스 연구 개요](../README.md#page-top) · [RX CTLE 모델링](usb-rx-ctle-modeling.md#page-top) · [측정 그림](verification-figures.md#page-top) · [논문·담당 역할](evidence.md#page-top)
 
 **담당:** TX 논리 RTL·XMODEL 모델링·통합, Serializer 검증, 합성·P&R 후 전기 계층 연결. **검증:** 모델·시뮬레이션.
 
@@ -21,17 +23,23 @@
 
 채널 보상은 같은 모델·채널에서 계수를 바꾸어 확인했습니다. 아래 두 그림은 25.6 GBaud, 1 UI=39.0625 ps, VDD=1 V, tail-current 설정 5 mA의 모델 결과입니다. 사용한 채널의 손실 곡선은 **12.8 GHz에서 9.89 dB**를 표시합니다.
 
-### FFE off · Preset 0
+<table>
+<thead><tr><th align="center" width="50%">FFE OFF · Preset 0</th><th align="center" width="50%">FFE ON · Preset 7</th></tr></thead>
+<tbody><tr>
+<td align="center" valign="top"><a href="../assets/usb_tx_model_channel_ffe_off.png"><img src="../assets/usb_tx_model_channel_ffe_off.png" alt="메인 계수만 사용한 TX 모델 Eye" width="330"></a></td>
+<td align="center" valign="top"><a href="../assets/usb_tx_model_channel_ffe_preset7.png"><img src="../assets/usb_tx_model_channel_ffe_preset7.png" alt="프리·포스트 커서 계수를 적용한 TX 모델 Eye" width="330"></a></td>
+</tr></tbody>
+</table>
 
-![메인 계수만 사용한 모델 Eye](../assets/usb_tx_model_channel_ffe_off.png)
+<details>
+<summary>두 프리셋의 FFE 계수</summary>
 
-`C[-2], C[-1], C[0], C[1] = 0, 0, 1, 0`
+`C[-2], C[-1], C[0], C[1]` 순서입니다.
 
-### FFE on · Preset 7
+- **Preset 0:** `0, 0, 1, 0`
+- **Preset 7:** `0, -0.05, 0.8, -0.15`
 
-![프리·포스트 커서 계수를 적용한 모델 Eye](../assets/usb_tx_model_channel_ffe_preset7.png)
-
-`C[-2], C[-1], C[0], C[1] = 0, -0.05, 0.8, -0.15`
+</details>
 
 **조건:** 채널 포함 XMODEL 시뮬레이션, 이상적 전류원·수동 FFE 계수.
 
@@ -165,8 +173,8 @@ RTL과 P&R Verilog netlist를 VCS에서 비교하고 전기 계층을 포함한 
 
 <!-- page-navigation:bottom -->
 <p>
-  <a href="usb4-pam3.md" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
-  <a href="../../../README.md" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
+  <a href="usb4-pam3.md#page-top" title="USB PAM-3 연구로 돌아가기"><img src="../../../assets/readme/nav-back-usb.svg" alt="USB PAM-3 연구로 돌아가기" width="122" height="30"></a>
+  <a href="https://github.com/yunjuhyeong0916-glitch/jhyun#page-top" title="홈으로 돌아가기"><img src="../../../assets/readme/nav-home.svg" alt="홈으로 돌아가기" width="70" height="30"></a>
   <a href="#page-top" title="페이지 맨 위로 이동"><img src="../../../assets/readme/nav-top.svg" alt="페이지 맨 위로 이동" width="100" height="30"></a>
 </p>
 <!-- /page-navigation:bottom -->
