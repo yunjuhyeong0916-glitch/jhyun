@@ -15,7 +15,7 @@
 
 LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다릅니다. 이 연구는 세대별 클록·위상 조정 회로를 각각 구현할 때 늘어나는 면적을 줄이기 위해, **클록·위상 조정 자원을 공유하고 모드에 따라 신호 경로를 바꾸는 Combo Controller PHY**를 구현했습니다.
 
-제가 맡은 부분은 **DQ TX 회로 설계·검증과 TX Verilog 동작 모델링**입니다. 병렬 입력이 직렬 데이터와 pre-emphasis 출력으로 이어지는 경로를 확인하고, 측정용 PCB 설계·HFSS 분석과 제작 칩의 TX Eye·RX Shmoo 평가에 참여했습니다.
+제가 맡은 부분은 **TX 회로 설계·검증과 DQ TX Verilog 동작 모델링**입니다. 병렬 입력이 직렬 데이터와 pre-emphasis 출력으로 이어지는 경로를 확인하고, 측정용 PCB 설계·HFSS 분석과 제작 칩의 TX Eye·RX Shmoo 평가에 참여했습니다.
 
 <a id="lpddr-combo-result"></a>
 
@@ -33,11 +33,11 @@ LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다�
 
 ### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_dq_tx.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="../assets/lpddr_combo_top_architecture_dq_tx.png" alt="LPDDR4X와 LPDDR5/5X의 클록 경로를 공유하며 네 DQ TRX와 CA·CK·WCK·DQS 경로를 연결한 Combo Controller PHY 전체 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_tx_scope.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="../assets/lpddr_combo_top_architecture_tx_scope.png" alt="담당한 DQ·CA·CK·WCK·DQS TX 9개 블록을 주황색으로 강조한 LPDDR Combo PHY 전체 구조" width="715"></a>
 
-[A-SSCC 2026 논문 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141). 빨간색은 LPDDR4X, 보라색은 LPDDR5/5X, 하늘색은 공통 클록 경로입니다. **주황색 테두리의 DQ0–DQ3 TX는 담당한 회로 설계·TX Verilog 모델링 범위입니다.**
+[A-SSCC 2026 논문 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141). 빨간색은 LPDDR4X, 보라색은 LPDDR5/5X, 하늘색은 공통 클록 경로입니다. 주황색 테두리는 DQ0–DQ3·CA0/1·CK·WCK·(R)DQS의 **TX 9개 블록**입니다. TX 회로 설계·검증과 DQ TX Verilog 모델링을 담당했습니다.
 
-PHY에는 **4개의 DQ TRX, 2개의 CA TX, CK TX, DQS TRX, WCK TX와 ZQ 보정 블록**이 들어갑니다. 같은 위상 조정 자원을 LPDDR4X에서는 DQS, LPDDR5/5X에서는 WCK에 사용하고, DQ와 strobe의 상대 타이밍은 phase interpolator·delay line으로 조정합니다. 제가 담당한 TX는 각 DQ 경로에서 병렬 데이터를 직렬화하고 출력 보상을 적용하는 부분입니다.
+PHY에는 **4개의 DQ TRX, 2개의 CA TX, CK TX, DQS TRX, WCK TX와 ZQ 보정 블록**이 들어갑니다. 같은 위상 조정 자원을 LPDDR4X에서는 DQS, LPDDR5/5X에서는 WCK에 사용하고, DQ와 strobe의 상대 타이밍은 phase interpolator·delay line으로 조정합니다. DQ TX 모델에서는 병렬 데이터를 직렬화하고 출력 보상을 적용하는 경로를 검증했습니다.
 
 ### TX Eye·RX Shmoo
 

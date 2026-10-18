@@ -8,15 +8,15 @@
 
 The LPDDR4X/5/5X Combo Controller PHY shares clock-generation and phase-alignment resources and switches signal paths by operating mode.
 
-**My role:** DQ TX circuit design and TX Verilog behavioral modeling, measurement PCB design/HFSS analysis and participation in silicon evaluation. **A-SSCC 2026 · Co-author · Accepted.**
+**My role:** TX circuit design and DQ TX Verilog behavioral modeling, measurement PCB design/HFSS analysis and participation in silicon evaluation. **A-SSCC 2026 · Co-author · Accepted.**
 
 <a id="combo-top-architecture"></a>
 
 ## Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_dq_tx.png" title="View full-size LPDDR Combo PHY architecture"><img src="../assets/lpddr_combo_top_architecture_dq_tx.png" alt="LPDDR Combo PHY top architecture with shared clock paths and four DQ TX/RX lanes" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_tx_scope.png" title="View full-size LPDDR Combo PHY architecture"><img src="../assets/lpddr_combo_top_architecture_tx_scope.png" alt="LPDDR Combo PHY architecture with nine contributed TX blocks highlighted in orange" width="715"></a>
 
-The red, purple and light-blue paths represent LPDDR4X, LPDDR5/5X and common clock paths, respectively. The orange outlines mark my DQ0–DQ3 TX circuit-design and TX Verilog-modeling contribution. [A-SSCC 2026 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+The red, purple and light-blue paths represent LPDDR4X, LPDDR5/5X and common clock paths, respectively. Orange outlines mark all **nine TX blocks**: DQ0–DQ3, CA0/1, CK, WCK and (R)DQS. My work covers TX circuit design/verification and DQ TX Verilog modeling. [A-SSCC 2026 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
 <a id="lpddr-combo-result"></a>
 

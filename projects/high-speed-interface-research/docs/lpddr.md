@@ -38,11 +38,11 @@ LPDDR 연구에서는 **15.6 Gb/s 저전압 TX 회로 설계**와 LPDDR4X/5/5X�
 
 **TX 회로·Verilog 모델링과 28 nm 칩 검증**
 
-LPDDR4X와 LPDDR5/5X의 클록·위상 조정 자원을 공유하는 Combo Controller PHY입니다. **DQ TX 회로 설계·검증과 TX Verilog 동작 모델링**을 담당했습니다. 세대별 신호 경로를 통합한 환경에서 직렬화·위상 정렬·pre-emphasis 출력과 네 DQ의 동작을 확인했습니다.
+LPDDR4X와 LPDDR5/5X의 클록·위상 조정 자원을 공유하는 Combo Controller PHY입니다. **TX 회로 설계·검증과 DQ TX Verilog 동작 모델링**을 담당했습니다. 세대별 신호 경로를 통합한 환경에서 직렬화·위상 정렬·pre-emphasis 출력과 네 DQ의 동작을 확인했습니다.
 
-<a href="lpddr-combo.md#page-top"><img src="../assets/lpddr_combo_top_architecture_dq_tx.png" alt="LPDDR4X와 LPDDR5/5X의 클록 경로 및 DQ TX를 포함한 Combo Controller PHY 구조" width="640"></a>
+<a href="lpddr-combo.md#page-top"><img src="../assets/lpddr_combo_top_architecture_tx_scope.png" alt="담당한 DQ·CA·CK·WCK·DQS TX 9개 블록을 주황색으로 강조한 LPDDR Combo PHY 전체 구조" width="640"></a>
 
-빨간색은 LPDDR4X, 보라색은 LPDDR5/5X, 하늘색은 공통 클록 경로입니다. **주황색 테두리의 DQ0–DQ3 TX는 담당한 회로 설계·TX Verilog 모델링 범위입니다.** [논문 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+빨간색은 LPDDR4X, 보라색은 LPDDR5/5X, 하늘색은 공통 클록 경로입니다. 주황색 테두리는 DQ0–DQ3·CA0/1·CK·WCK·(R)DQS의 **TX 9개 블록**입니다. TX 회로 설계·검증과 DQ TX Verilog 모델링을 담당했습니다. [논문 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
 측정용 PCB 설계·HFSS 분석으로 보드의 전달 특성을 검토하고, 설계한 TX가 적용된 **28-nm Combo PHY의 TX Eye·RX Shmoo 측정에 참여**했습니다. 14 Gb/s/pin·4-DQ 활성 조건에서 출력 Eye와 수신 타이밍·전압 마진을 평가했습니다.
 

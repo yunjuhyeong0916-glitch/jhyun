@@ -78,9 +78,9 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 #### TX top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="LPDDR 15.6 Gb/s TX 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" alt="LPDDR 15.6 Gb/s TX의 PRBS·직렬화·main/FFE 드라이버·클록·ZQ 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture_contribution.png" title="LPDDR 15.6 Gb/s TX 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture_contribution.png" alt="LPDDR 15.6 Gb/s TX의 PRBS·직렬화·main/FFE 드라이버·클록·ZQ 구조" width="715"></a>
 
-64-bit PRBS를 직렬화하고 main·1-UI 지연 경로를 드라이버에 연결한 TX 구조입니다. [구조·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#lpddr-tx-top-architecture)
+주황색의 MAIN·FFE 드라이버가 담당한 TX 회로 설계·검증 범위입니다. 64-bit PRBS를 직렬화하고 main·1-UI 지연 경로로 구동합니다. [구조·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#lpddr-tx-top-architecture)
 
 <table width="715">
 <thead><tr><th align="center">FFE OFF</th><th align="center">FFE ON</th></tr></thead>
@@ -104,9 +104,9 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 #### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_dq_tx.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_dq_tx.png" alt="LPDDR4X/5/5X의 공통 클록 경로와 DQ TX/RX를 포함한 Combo PHY 전체 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_tx_scope.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_tx_scope.png" alt="담당한 DQ·CA·CK·WCK·DQS TX 9개 블록을 주황색으로 강조한 LPDDR Combo PHY 전체 구조" width="715"></a>
 
-LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. 주황색으로 표시한 DQ0–DQ3 TX가 담당한 회로 설계·TX Verilog 모델링 범위입니다. [구조 설명](projects/high-speed-interface-research/docs/lpddr-combo.md#combo-top-architecture)
+LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. 주황색 테두리는 DQ0–DQ3·CA0/1·CK·WCK·(R)DQS의 **TX 9개 블록**입니다. TX 회로 설계·검증과 DQ TX Verilog 모델링을 담당했습니다. [구조 설명](projects/high-speed-interface-research/docs/lpddr-combo.md#combo-top-architecture)
 
 <table width="715">
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
@@ -118,7 +118,7 @@ LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. �
 
 <blockquote>
 <strong>14&nbsp;Gb/s/pin · 4-DQ 활성 · TX Eye 0.41&nbsp;UI / 65.3&nbsp;mV</strong><br>
-<strong>담당:</strong> DQ TX 회로·Verilog 모델, 측정용 PCB 설계·HFSS 분석. 칩 측정 참여.<br>
+<strong>담당:</strong> TX 회로·DQ TX Verilog 모델, 측정용 PCB 설계·HFSS 분석. 칩 측정 참여.<br>
 28&nbsp;nm 제작 칩 측정 · A-SSCC 2026 <strong>공&#8288;동&#8288;저&#8288;자 · 채택</strong>
 </blockquote>
 
@@ -132,9 +132,9 @@ LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. �
 
 #### TX top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" title="USB PAM-3 TX 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" alt="11B7S 인코더·스크램블러·직렬화·4-tap FFE 드라이버를 포함한 USB PAM-3 TX 전체 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_top_architecture_contribution.png" title="USB PAM-3 TX 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/usb_pam3_top_architecture_contribution.png" alt="11B7S 인코더·스크램블러·직렬화·4-tap FFE 드라이버를 포함한 USB PAM-3 TX 전체 구조" width="715"></a>
 
-11B7S 인코더·스크램블러에서 직렬화·4-tap FFE 드라이버로 이어지는 TX 구조입니다. [구조·담당 범위](projects/high-speed-interface-research/docs/usb4-pam3.md#usb-tx-top-architecture)
+주황색의 11B7S 인코더·스크램블러가 담당한 TX RTL입니다. 직렬화·4-tap FFE 드라이버와 연결됩니다. [구조·담당 범위](projects/high-speed-interface-research/docs/usb4-pam3.md#usb-tx-top-architecture)
 
 <p>
 <a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result"><img src="projects/high-speed-interface-research/assets/pam3_measured_ffe_eye.png" alt="같은 CH#3의 FFE off/on 실측 PAM-3 Eye 비교" width="715"></a>

@@ -12,9 +12,9 @@ I modeled and verified the **TX logic path and RX CTLE**, connected them to the 
 
 ## TX top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" title="View full-size USB PAM-3 TX architecture"><img src="../assets/usb_pam3_paper_top_architecture.png" alt="USB PAM-3 TX top architecture including logic, serialization, retimer, UI delays, four-tap FFE and clock path" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_top_architecture_contribution.png" title="View full-size USB PAM-3 TX architecture"><img src="../assets/usb_pam3_top_architecture_contribution.png" alt="USB PAM-3 TX top architecture including logic, serialization, retimer, UI delays, four-tap FFE and clock path" width="715"></a>
 
-My contribution covers the **11B7S encoder/scrambler RTL and electrical-layer integration**. The TX routes serialized data through a retimer and UI-delay paths to the main/four-tap FFE drivers. The gray RS-FEC and pre-coder blocks are omitted in this implementation. [IEEE TVLSI Fig. 1](https://doi.org/10.1109/TVLSI.2026.3701343)
+Orange outlines mark my **11B7S encoder/scrambler RTL and electrical-layer integration** work. The TX routes serialized data through a retimer and UI-delay paths to the main/four-tap FFE drivers. The gray RS-FEC and pre-coder blocks are omitted in this implementation. [IEEE TVLSI Fig. 1](https://doi.org/10.1109/TVLSI.2026.3701343)
 
 | Evaluation | Result |
 |---|---|

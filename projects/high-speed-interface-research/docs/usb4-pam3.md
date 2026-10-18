@@ -19,9 +19,9 @@ TX 논리계층·RX CTLE 모델링과 송수신 통합 검증을 맡았습니다
 
 ## TX top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" title="USB PAM-3 TX 전체 구조 확대 보기"><img src="../assets/usb_pam3_paper_top_architecture.png" alt="논리계층·직렬화·Retimer·UI 지연·4-tap FFE 및 클록 경로를 포함한 USB PAM-3 TX 전체 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_top_architecture_contribution.png" title="USB PAM-3 TX 전체 구조 확대 보기"><img src="../assets/usb_pam3_top_architecture_contribution.png" alt="논리계층·직렬화·Retimer·UI 지연·4-tap FFE 및 클록 경로를 포함한 USB PAM-3 TX 전체 구조" width="715"></a>
 
-논리계층의 **11B7S 인코더·스크램블러 RTL과 전기 계층 연결**을 담당했습니다. 그림은 직렬화·Retimer·UI 지연을 거쳐 main/4-tap FFE 드라이버로 이어지는 TX 구조입니다. 회색의 RS-FEC·Pre-coder는 이 구현에 포함하지 않았습니다. [IEEE TVLSI 논문 Fig. 1](https://doi.org/10.1109/TVLSI.2026.3701343)
+주황색 테두리의 **11B7S 인코더·스크램블러 RTL과 전기 계층 연결**을 담당했습니다. 그림은 직렬화·Retimer·UI 지연을 거쳐 main/4-tap FFE 드라이버로 이어지는 TX 구조입니다. 회색의 RS-FEC·Pre-coder는 이 구현에 포함하지 않았습니다. [IEEE TVLSI 논문 Fig. 1](https://doi.org/10.1109/TVLSI.2026.3701343)
 
 ## 모델로 논리·전기 계층의 동작을 연결
 
