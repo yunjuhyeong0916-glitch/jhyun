@@ -19,8 +19,8 @@ I research **high-speed interfaces** based on JEDEC [LPDDR](projects/high-speed-
 </p>
 
 <p>
-<a href="docs/README.en.md#dsp-research" title="Explore DSP transceiver research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
-<a href="projects/high-speed-interface-research/README.en.md#page-top" title="Explore LPDDR and USB interface research"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits, TX/RX models and silicon measurements" width="410"></a>
+<a href="#dsp-research" title="Expand DSP transceiver research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
+<a href="#interface-research" title="Expand LPDDR and USB interface research"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits, TX/RX models and silicon measurements" width="410"></a>
 </p>
 
 ## Key results
@@ -31,9 +31,10 @@ I research **high-speed interfaces** based on JEDEC [LPDDR](projects/high-speed-
 
 In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md#page-top) to assist with RTL, testbenches and automation code for repeatable verification and measurements.
 
-<a id="dsp-research"></a>
+<details>
+<summary><h2 id="dsp-transceiver-research">DSP transceiver research</h2></summary>
 
-## DSP transceiver research
+<a id="dsp-research"></a>
 
 ### [A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP](projects/zcu208-pam4-dsp-portfolio/README.en.md#page-top)
 
@@ -76,10 +77,13 @@ My [master’s thesis](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-resea
 
 [AI, MATLAB MCP and measurement automation](docs/ai-assisted-dsp-workflow.en.md#page-top) · [MLSD worked example](docs/concepts/mlsd.en.md#page-top)
 
+</details>
+
+<details>
+<summary><h2 id="lpddr--usb-interface-research">LPDDR / USB interface research</h2></summary>
+
 <a id="lpddr--usb-research"></a>
 <a id="interface-research"></a>
-
-## LPDDR / USB interface research
 
 <p>
 <a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#page-top" title="LPDDR 15.6 Gb/s TX circuit design and verification"><img src="assets/readme/nav-lpddr-15p6.svg" alt="LPDDR 15.6 Gb/s TX circuit design and verification" width="147" height="30"></a>
@@ -167,6 +171,8 @@ IEEE TVLSI 2026 <strong>Co-first author</strong>
 <summary>Measurement conditions</summary>
 
 CH3: 17.3-dB loss at 10.24&nbsp;GHz · PRBS15 · scrambler on. Upper and lower eyes are compared with FFE off/on on the same channel. [Setup and comparison](projects/high-speed-interface-research/docs/pam3-differential-measurement.en.md#page-top)
+
+</details>
 
 </details>
 

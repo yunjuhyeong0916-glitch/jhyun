@@ -19,8 +19,8 @@
 </p>
 
 <p>
-<a href="projects/README.md#dsp-transceiver-research" title="DSP 기반 송수신기 연구 소개"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
-<a href="projects/high-speed-interface-research/README.md#page-top" title="LPDDR·USB 인터페이스 연구 소개"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로·TX/RX 모델·실리콘 측정" width="410"></a>
+<a href="#dsp-research" title="DSP 기반 송수신기 연구 펼쳐보기"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
+<a href="#interface-research" title="LPDDR·USB 인터페이스 연구 펼쳐보기"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로·TX/RX 모델·실리콘 측정" width="410"></a>
 </p>
 
 ## 대표 성과
@@ -31,9 +31,10 @@
 
 최근 설계 트렌드에 맞게 [AI](docs/ai-assisted-dsp-workflow.md#page-top)를 RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 활용합니다.
 
-<a id="dsp-research"></a>
+<details>
+<summary><h2 id="dsp-기반-송수신기-연구">DSP 기반 송수신기 연구</h2></summary>
 
-## DSP 기반 송수신기 연구
+<a id="dsp-research"></a>
 
 ### [A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP](projects/zcu208-pam4-dsp-portfolio/README.md#page-top)
 
@@ -76,10 +77,13 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 [AI 활용·MATLAB MCP·측정 자동화 harness](docs/ai-assisted-dsp-workflow.md#page-top) · [MLSD를 예제로 이해하기](docs/concepts/mlsd.md#page-top)
 
+</details>
+
+<details>
+<summary><h2 id="lpddrusb-인터페이스-연구">LPDDR·USB 인터페이스 연구</h2></summary>
+
 <a id="lpddrusb-연구"></a>
 <a id="interface-research"></a>
-
-## LPDDR·USB 인터페이스 연구
 
 <p>
 <a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#page-top" title="LPDDR 15.6 Gb/s TX 회로 설계·검증"><img src="assets/readme/nav-lpddr-15p6.svg" alt="LPDDR 15.6 Gb/s TX 회로 설계·검증" width="147" height="30"></a>
@@ -167,6 +171,8 @@ IEEE TVLSI 2026 <strong>공동 제1저자</strong>
 <summary>측정 조건 보기</summary>
 
 CH#3 손실 17.3&nbsp;dB @ 10.24&nbsp;GHz · PRBS15 · scrambler on. 같은 채널에서 FFE off/on의 상·하단 Eye를 비교했습니다. [측정 구성·조건별 비교](projects/high-speed-interface-research/docs/pam3-differential-measurement.md#page-top)
+
+</details>
 
 </details>
 
