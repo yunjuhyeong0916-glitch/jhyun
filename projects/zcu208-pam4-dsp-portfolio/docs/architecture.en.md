@@ -6,7 +6,11 @@
 
 [Home](https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/README.en.md#page-top) · [Project](../README.en.md#page-top) · [Detailed notes (Korean)](architecture.md#page-top)
 
-![A-SSCC top-level architecture and TX/RX DSP blocks](../assets/mlsd_paper_top_architecture.jpg)
+<a id="asscc-top-architecture"></a>
+
+## Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="View full-size A-SSCC PAM4 transceiver architecture"><img src="../assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC top-level architecture and TX/RX DSP blocks" width="715"></a>
 
 The signal path is **PRBS/PAM4 generation → 8-tap TX FFE → DAC → ISI board → ADC → 21-tap RX FFE → 3-tap PR filter → DS-SBM → PRBS checker**. The PS configures the PL and the converters. [A-SSCC Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 

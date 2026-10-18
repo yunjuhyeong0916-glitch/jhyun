@@ -10,13 +10,21 @@ I implemented the transceiver DSP, detector RTL and RFSoC control path to evalua
 
 **My role:** TX/RX filter and DS-SBM detector RTL design, RFSoC integration, board control and validation.
 
-[Results](docs/validation.en.md#page-top) · [Architecture](docs/architecture.en.md#page-top) · [Vitis bring-up](docs/vitis-bringup.en.md#page-top) · [AI-assisted workflow](../../docs/ai-assisted-dsp-workflow.en.md#page-top)
+[Results](docs/validation.en.md#page-top) · [Top architecture](#asscc-top-architecture) · [Architecture](docs/architecture.en.md#page-top) · [Vitis bring-up](docs/vitis-bringup.en.md#page-top) · [AI-assisted workflow](../../docs/ai-assisted-dsp-workflow.en.md#page-top)
+
+<a id="asscc-top-architecture"></a>
+
+## Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="View full-size A-SSCC PAM4 transceiver architecture"><img src="assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC top-level architecture with PS control, PL TX/RX DSP, RF Data Converter, ISI board and TX/RX DSP blocks" width="715"></a>
+
+The upper panel connects PS control and PL TX/RX DSP to the DAC → ISI board → ADC path. The lower panel shows **PRBS7/15/PAM4 encoding → 8-tap TX FFE** and **21-tap RX FFE → 3-tap PR → DS-SBM**. [Block roles and parallel processing](docs/architecture.en.md#asscc-top-architecture)
 
 <a id="asscc-result"></a>
 
 ## Board measurements and FPGA results
 
-![ZCU208, XM655 and the ISI board used for the DAC-to-ADC physical-channel evaluation](assets/mlsd_paper_isi_measurement_setup.png)
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_isi_measurement_setup.png" title="View full-size ZCU208 and ISI-board measurement setup"><img src="assets/mlsd_paper_isi_measurement_setup.png" alt="ZCU208, XM655 and the ISI board used for the DAC-to-ADC physical-channel evaluation" width="715"></a>
 
 **Setup:** 4 GS/s, uncoded PAM4 8 Gb/s. The estimated total DAC–ISI-board–ADC path loss is about 41 dB at 2 GHz. At the selected PR response for each pattern, the reported BER is **< 10⁻⁷ for PRBS7** and **< 2×10⁻⁶ for PRBS15**.
 

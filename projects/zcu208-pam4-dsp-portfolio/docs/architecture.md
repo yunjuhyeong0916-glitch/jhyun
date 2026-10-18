@@ -13,9 +13,12 @@
 
 [MLSD 개념](../../../docs/concepts/mlsd.md#page-top) · [MLSD 설계 판단](design-decisions.md#page-top) · [Vitis·FPGA 구동](vitis-bringup.md#page-top) · [측정·검증 결과](validation.md#page-top)
 
-## 논문 전체 구조
+<a id="논문-전체-구조"></a>
+<a id="asscc-top-architecture"></a>
 
-![A-SSCC 논문의 FPGA 기반 PAM4 송수신기 전체 구조와 TX·RX DSP 블록](../assets/mlsd_paper_top_architecture.jpg)
+## Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="A-SSCC PAM4 송수신기 전체 구조 확대 보기"><img src="../assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC 논문의 FPGA 기반 PAM4 송수신기 전체 구조와 TX·RX DSP 블록" width="715"></a>
 
 A-SSCC 2026, p. 2 Fig. 2. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 

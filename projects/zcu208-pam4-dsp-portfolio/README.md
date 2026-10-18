@@ -11,7 +11,7 @@
 </p>
 <!-- /page-navigation:top -->
 
-[대표 결과](#asscc-result) · [MLSD 개념](../../docs/concepts/mlsd.md#page-top) · [설계 구조](docs/architecture.md#page-top) · [MLSD 설계 판단](docs/design-decisions.md#page-top) · [Vitis·FPGA 구동](docs/vitis-bringup.md#page-top) · [측정·구현 결과](docs/validation.md#page-top) · [AI 활용·자동화](#ai-활용검증-자동화)
+[대표 결과](#asscc-result) · [Top architecture](#asscc-top-architecture) · [MLSD 개념](../../docs/concepts/mlsd.md#page-top) · [설계 구조](docs/architecture.md#page-top) · [MLSD 설계 판단](docs/design-decisions.md#page-top) · [Vitis·FPGA 구동](docs/vitis-bringup.md#page-top) · [측정·구현 결과](docs/validation.md#page-top) · [AI 활용·자동화](#ai-활용검증-자동화)
 
 PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위해 **송수신 DSP·검출기 RTL과 RFSoC 제어·오류 검사 경로**를 구현했습니다. ISI 보드를 통한 송수신 평가 결과를 정리한 [A-SSCC 2026 논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)이 채택됐습니다.
 
@@ -19,11 +19,19 @@ PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위�
 
 [학위논문](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/pam4-mlsd-thesis/README.md#page-top)은 DS-SBM의 분기 선택·구간 행렬·PM 갱신과 RFSoC 검증을 상세히 설명합니다. 후속 DP-SMM 설계와 두 구조의 비교는 [Journal 준비 프로젝트](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-research/blob/main/projects/dp-smm-journal/README.md#page-top)에서 다룹니다.
 
+<a id="asscc-top-architecture"></a>
+
+## Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="A-SSCC PAM4 송수신기 전체 구조 확대 보기"><img src="assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC 논문의 PS 제어·PL TX/RX DSP·RF Data Converter·ISI 보드와 TX/RX DSP 전체 구조" width="715"></a>
+
+상단은 PS 제어와 PL의 TX/RX DSP, DAC → ISI 보드 → ADC 연결입니다. 하단은 **PRBS7/15·PAM4 인코더 → 8-tap TX FFE**와 **21-tap RX FFE → 3-tap PR → DS-SBM**을 보여줍니다. [블록별 역할·병렬 처리 구조](docs/architecture.md#asscc-top-architecture)
+
 <a id="asscc-result"></a>
 
 ## 시스템 측정·FPGA 구현 결과
 
-![ZCU208·XM655와 ISI 보드를 연결한 실제 측정 구성과 채널 응답](assets/mlsd_paper_isi_measurement_setup.png)
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_isi_measurement_setup.png" title="ZCU208·ISI 보드 측정 구성 확대 보기"><img src="assets/mlsd_paper_isi_measurement_setup.png" alt="ZCU208·XM655와 ISI 보드를 연결한 실제 측정 구성과 채널 응답" width="715"></a>
 
 **평가 구성:** ZCU208 DAC → ISI 보드 → ADC. 왼쪽은 보드 연결 사진, 오른쪽은 DAC–ADC 경로를 포함한 약 41-dB 손실 조건입니다.
 
