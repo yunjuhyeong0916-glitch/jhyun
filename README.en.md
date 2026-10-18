@@ -76,7 +76,13 @@ My [master’s thesis](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-resea
 
 ### [LPDDR 15.6&nbsp;Gb/s | Low-voltage TX circuit design](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#page-top)
 
-<table>
+#### TX top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="View full-size LPDDR 15.6 Gb/s TX architecture"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" alt="LPDDR 15.6 Gb/s TX architecture: PRBS, serializers, main/FFE drivers, clock and ZQ" width="715"></a>
+
+The TX serializes 64-bit PRBS data and drives the output through main and one-UI-delayed paths. [Architecture and verification](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#lpddr-tx-top-architecture)
+
+<table width="715">
 <thead><tr><th align="center">FFE OFF</th><th align="center">FFE ON</th></tr></thead>
 <tbody><tr>
 <td align="center"><a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#ffe-comparison"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png" alt="15.6-Gb/s low-voltage TX circuit-simulation eye with FFE disabled: width 37 ps, height 56.5 mV" width="330"></a></td>
@@ -98,9 +104,9 @@ Circuit simulation · 8.7-dB channel loss · ICEIC 2025 <strong>Co-first author<
 
 #### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="View full-size LPDDR Combo PHY architecture"><img src="projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR Combo PHY top architecture with shared clock paths and DQ TX/RX lanes" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_dq_tx.png" title="View full-size LPDDR Combo PHY architecture"><img src="projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_dq_tx.png" alt="LPDDR Combo PHY top architecture with shared clock paths and DQ TX/RX lanes" width="715"></a>
 
-The PHY shares clock and phase-alignment resources across LPDDR4X/5/5X modes. The DQ TX blocks I designed are in the DQ0–DQ3 paths on the right. [Architecture details](projects/high-speed-interface-research/docs/lpddr-combo.en.md#combo-top-architecture)
+The PHY shares clock and phase-alignment resources across LPDDR4X/5/5X modes. The orange DQ0–DQ3 TX blocks mark my circuit-design and TX Verilog-modeling contribution. [Architecture details](projects/high-speed-interface-research/docs/lpddr-combo.en.md#combo-top-architecture)
 
 <table width="715">
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
@@ -124,8 +130,14 @@ The PHY shares clock and phase-alignment resources across LPDDR4X/5/5X modes. Th
 
 ### [USB&nbsp;PAM&#8209;3 | TX/RX modeling and TX silicon evaluation](projects/high-speed-interface-research/docs/usb4-pam3.en.md#page-top)
 
+#### TX top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" title="View full-size USB PAM-3 TX architecture"><img src="projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" alt="USB PAM-3 TX architecture: 11B7S encoder, scrambler, serializers and four-tap FFE driver" width="715"></a>
+
+The TX connects 11B7S encoding and scrambling to serialization and a four-tap FFE driver. [Architecture and contribution](projects/high-speed-interface-research/docs/usb4-pam3.en.md#usb-tx-top-architecture)
+
 <p>
-<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.en.md#pam3-ffe-result"><img src="projects/high-speed-interface-research/assets/pam3_measured_ffe_eye.png" alt="Measured PAM-3 eyes before and after FFE on the same CH3 channel" width="660"></a>
+<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.en.md#pam3-ffe-result"><img src="projects/high-speed-interface-research/assets/pam3_measured_ffe_eye.png" alt="Measured PAM-3 eyes before and after FFE on the same CH3 channel" width="715"></a>
 </p>
 
 <blockquote>

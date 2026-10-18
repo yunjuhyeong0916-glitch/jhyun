@@ -15,6 +15,14 @@
 
 TX 논리계층·RX CTLE 모델링과 송수신 통합 검증을 맡았습니다. 11B7S 인코더·스크램블러 RTL을 합성·P&R해 전기 계층과 연결했으며, TX 칩 평가에서는 PCB·채널 분석과 차동 PAM-3 측정에 참여했습니다.
 
+<a id="usb-tx-top-architecture"></a>
+
+## TX top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" title="USB PAM-3 TX 전체 구조 확대 보기"><img src="../assets/usb_pam3_paper_top_architecture.png" alt="논리계층·직렬화·Retimer·UI 지연·4-tap FFE 및 클록 경로를 포함한 USB PAM-3 TX 전체 구조" width="715"></a>
+
+논리계층의 **11B7S 인코더·스크램블러 RTL과 전기 계층 연결**을 담당했습니다. 그림은 직렬화·Retimer·UI 지연을 거쳐 main/4-tap FFE 드라이버로 이어지는 TX 구조입니다. 회색의 RS-FEC·Pre-coder는 이 구현에 포함하지 않았습니다. [IEEE TVLSI 논문 Fig. 1](https://doi.org/10.1109/TVLSI.2026.3701343)
+
 ## 모델로 논리·전기 계층의 동작을 연결
 
 SystemVerilog·XMODEL로 TX 논리계층과 RX CTLE를 모델링하고, 송수신 모델을 통합해 인코딩·스크램블링과 수신 데이터 복원을 검증했습니다.

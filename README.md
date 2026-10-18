@@ -76,7 +76,13 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 ### [LPDDR 15.6&nbsp;Gb/s | 저전압 TX 설계](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#page-top)
 
-<table>
+#### TX top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="LPDDR 15.6 Gb/s TX 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" alt="LPDDR 15.6 Gb/s TX의 PRBS·직렬화·main/FFE 드라이버·클록·ZQ 구조" width="715"></a>
+
+64-bit PRBS를 직렬화하고 main·1-UI 지연 경로를 드라이버에 연결한 TX 구조입니다. [구조·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#lpddr-tx-top-architecture)
+
+<table width="715">
 <thead><tr><th align="center">FFE OFF</th><th align="center">FFE ON</th></tr></thead>
 <tbody><tr>
 <td align="center"><a href="projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#2-ffe-적용-전후의-eye로-보상-효과-확인"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_eye_ffe_off.png" alt="15.6 Gb/s 저전압 TX의 FFE 적용 전 회로 시뮬레이션 Eye: 폭 37 ps, 높이 56.5 mV" width="330"></a></td>
@@ -98,9 +104,9 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 #### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR4X/5/5X의 공통 클록 경로와 DQ TX/RX를 포함한 Combo PHY 전체 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_dq_tx.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_combo_top_architecture_dq_tx.png" alt="LPDDR4X/5/5X의 공통 클록 경로와 DQ TX/RX를 포함한 Combo PHY 전체 구조" width="715"></a>
 
-LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. 담당한 DQ TX는 그림 오른쪽 DQ0–DQ3 경로에 있습니다. [구조 설명](projects/high-speed-interface-research/docs/lpddr-combo.md#combo-top-architecture)
+LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. 주황색으로 표시한 DQ0–DQ3 TX가 담당한 회로 설계·TX Verilog 모델링 범위입니다. [구조 설명](projects/high-speed-interface-research/docs/lpddr-combo.md#combo-top-architecture)
 
 <table width="715">
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
@@ -124,8 +130,14 @@ LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. �
 
 ### [USB&nbsp;PAM&#8209;3 | TX·RX 모델링과 TX 칩 평가](projects/high-speed-interface-research/docs/usb4-pam3.md#page-top)
 
+#### TX top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" title="USB PAM-3 TX 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/usb_pam3_paper_top_architecture.png" alt="11B7S 인코더·스크램블러·직렬화·4-tap FFE 드라이버를 포함한 USB PAM-3 TX 전체 구조" width="715"></a>
+
+11B7S 인코더·스크램블러에서 직렬화·4-tap FFE 드라이버로 이어지는 TX 구조입니다. [구조·담당 범위](projects/high-speed-interface-research/docs/usb4-pam3.md#usb-tx-top-architecture)
+
 <p>
-<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result"><img src="projects/high-speed-interface-research/assets/pam3_measured_ffe_eye.png" alt="같은 CH#3의 FFE off/on 실측 PAM-3 Eye 비교" width="660"></a>
+<a href="projects/high-speed-interface-research/docs/pam3-differential-measurement.md#pam3-ffe-result"><img src="projects/high-speed-interface-research/assets/pam3_measured_ffe_eye.png" alt="같은 CH#3의 FFE off/on 실측 PAM-3 Eye 비교" width="715"></a>
 </p>
 
 <blockquote>

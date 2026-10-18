@@ -10,11 +10,19 @@ To compensate channel loss at a **0.5-V driver supply**, I designed the TX circu
 
 **My role:** 28-nm CMOS TX circuit design and schematic/post-layout verification. **ICEIC 2025 · Co-first author.**
 
+<a id="lpddr-tx-top-architecture"></a>
+
+## Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="View full-size LPDDR TX architecture"><img src="../assets/lpddr_tx_circuit_architecture.jpg" alt="LPDDR TX top architecture with 64-bit PRBS, serializers, main/FFE drivers, clocks and ZQ calibration" width="715"></a>
+
+The 64-bit PRBS stream passes through 64:4 and 4:1 serializers. Main and one-UI-delayed data feed the main/FFE drivers; the clock path and ZQ block support the TX. [ICEIC 2025 Fig. 2](https://doi.org/10.1109/ICEIC64972.2025.10879746)
+
 <a id="ffe-comparison"></a>
 
 ## FFE comparison
 
-<table>
+<table width="715">
 <thead><tr><th align="center" width="50%">FFE OFF</th><th align="center" width="50%">FFE ON</th></tr></thead>
 <tbody><tr>
 <td align="center" valign="top"><a href="../assets/lpddr_tx_circuit_eye_ffe_off.png"><img src="../assets/lpddr_tx_circuit_eye_ffe_off.png" alt="TX simulated eye before FFE: 37 ps, 56.5 mV" width="330"></a></td>

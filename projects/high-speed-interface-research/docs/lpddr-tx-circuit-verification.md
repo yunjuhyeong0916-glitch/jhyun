@@ -21,14 +21,13 @@
 
 PI-LVSTL TX에 main·1-UI 지연 경로를 두고 드라이버 세그먼트와 FFE 계수를 제어해 de-emphasis를 적용했습니다. [ICEIC 2025](https://doi.org/10.1109/ICEIC64972.2025.10879746)
 
-<details>
-<summary>TX 데이터·클록·ZQ 경로 구조도 보기</summary>
+<a id="lpddr-tx-top-architecture"></a>
 
-![64비트 PRBS와 직렬화 및 main과 1UI 지연 FFE 경로, 클록과 ZQ 보정 블록으로 구성된 TX](../assets/lpddr_tx_circuit_architecture.jpg)
+### Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="LPDDR TX 전체 구조 확대 보기"><img src="../assets/lpddr_tx_circuit_architecture.jpg" alt="64-bit PRBS, 직렬화, main/1-UI 지연 FFE 경로와 클록·ZQ를 포함한 LPDDR TX 전체 구조" width="715"></a>
 
 **회로 구성:** 64-bit PRBS → 64:4 → 4:1 직렬화 → main/1-UI 지연 FFE.
-
-</details>
 
 **ZQ 시험 설정:** 외부 지정 코드를 선택해 출력 임피던스를 제어했습니다.
 
