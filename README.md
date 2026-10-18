@@ -78,9 +78,9 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 #### TX top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture_contribution.png" title="LPDDR 15.6 Gb/s TX 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture_contribution.png" alt="LPDDR 15.6 Gb/s TX의 PRBS·직렬화·main/FFE 드라이버·클록·ZQ 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="LPDDR 15.6 Gb/s TX 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" alt="LPDDR 15.6 Gb/s TX의 PRBS·직렬화·main/FFE 드라이버·클록·ZQ 구조" width="715"></a>
 
-주황색의 MAIN·FFE 드라이버가 담당한 TX 회로 설계·검증 범위입니다. 64-bit PRBS를 직렬화하고 main·1-UI 지연 경로로 구동합니다. [구조·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#lpddr-tx-top-architecture)
+64-bit PRBS를 직렬화하고 main·1-UI 지연 경로를 드라이버에 연결한 TX 구조입니다. [구조·검증](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.md#lpddr-tx-top-architecture)
 
 <table width="715">
 <thead><tr><th align="center">FFE OFF</th><th align="center">FFE ON</th></tr></thead>

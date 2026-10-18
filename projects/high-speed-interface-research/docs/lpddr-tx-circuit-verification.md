@@ -25,11 +25,9 @@ PI-LVSTL TX에 main·1-UI 지연 경로를 두고 드라이버 세그먼트와 F
 
 ### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture_contribution.png" title="LPDDR TX 전체 구조 확대 보기"><img src="../assets/lpddr_tx_circuit_architecture_contribution.png" alt="64-bit PRBS, 직렬화, main/1-UI 지연 FFE 경로와 클록·ZQ를 포함한 LPDDR TX 전체 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="LPDDR TX 전체 구조 확대 보기"><img src="../assets/lpddr_tx_circuit_architecture.jpg" alt="64-bit PRBS, 직렬화, main/1-UI 지연 FFE 경로와 클록·ZQ를 포함한 LPDDR TX 전체 구조" width="715"></a>
 
 **회로 구성:** 64-bit PRBS → 64:4 → 4:1 직렬화 → main/1-UI 지연 FFE.
-
-**주황색 표시:** 담당한 MAIN·FFE 드라이버 회로 설계와 Schematic·Post-Layout 검증 범위입니다.
 
 **ZQ 시험 설정:** 외부 지정 코드를 선택해 출력 임피던스를 제어했습니다.
 

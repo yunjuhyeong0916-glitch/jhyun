@@ -14,9 +14,9 @@ To compensate channel loss at a **0.5-V driver supply**, I designed the TX circu
 
 ## Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture_contribution.png" title="View full-size LPDDR TX architecture"><img src="../assets/lpddr_tx_circuit_architecture_contribution.png" alt="LPDDR TX top architecture with 64-bit PRBS, serializers, main/FFE drivers, clocks and ZQ calibration" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="View full-size LPDDR TX architecture"><img src="../assets/lpddr_tx_circuit_architecture.jpg" alt="LPDDR TX top architecture with 64-bit PRBS, serializers, main/FFE drivers, clocks and ZQ calibration" width="715"></a>
 
-Orange outlines mark my main/FFE driver circuit-design and schematic/post-layout verification work. The 64-bit PRBS stream passes through 64:4 and 4:1 serializers. Main and one-UI-delayed data feed the main/FFE drivers; the clock path and ZQ block support the TX. [ICEIC 2025 Fig. 2](https://doi.org/10.1109/ICEIC64972.2025.10879746)
+The 64-bit PRBS stream passes through 64:4 and 4:1 serializers. Main and one-UI-delayed data feed the main/FFE drivers; the clock path and ZQ block support the TX. [ICEIC 2025 Fig. 2](https://doi.org/10.1109/ICEIC64972.2025.10879746)
 
 <a id="ffe-comparison"></a>
 

@@ -78,9 +78,9 @@ My [master’s thesis](https://github.com/yunjuhyeong0916-glitch/pam4-mlsd-resea
 
 #### TX top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture_contribution.png" title="View full-size LPDDR 15.6 Gb/s TX architecture"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture_contribution.png" alt="LPDDR 15.6 Gb/s TX architecture: PRBS, serializers, main/FFE drivers, clock and ZQ" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" title="View full-size LPDDR 15.6 Gb/s TX architecture"><img src="projects/high-speed-interface-research/assets/lpddr_tx_circuit_architecture.jpg" alt="LPDDR 15.6 Gb/s TX architecture: PRBS, serializers, main/FFE drivers, clock and ZQ" width="715"></a>
 
-Orange outlines mark my main/FFE driver circuit-design and verification work. The TX serializes 64-bit PRBS data into main and one-UI-delayed paths. [Architecture and verification](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#lpddr-tx-top-architecture)
+The TX serializes 64-bit PRBS data into main and one-UI-delayed paths. [Architecture and verification](projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#lpddr-tx-top-architecture)
 
 <table width="715">
 <thead><tr><th align="center">FFE OFF</th><th align="center">FFE ON</th></tr></thead>
