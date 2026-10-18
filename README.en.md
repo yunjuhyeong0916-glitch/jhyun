@@ -98,11 +98,11 @@ Circuit simulation · 8.7-dB channel loss · ICEIC 2025 <strong>Co-first author<
 
 #### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="View full-size LPDDR Combo PHY architecture"><img src="projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR Combo PHY top architecture with shared clock paths and DQ TX/RX lanes" width="660"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="View full-size LPDDR Combo PHY architecture"><img src="projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR Combo PHY top architecture with shared clock paths and DQ TX/RX lanes" width="715"></a>
 
 The PHY shares clock and phase-alignment resources across LPDDR4X/5/5X modes. The DQ TX blocks I designed are in the DQ0–DQ3 paths on the right. [Architecture details](projects/high-speed-interface-research/docs/lpddr-combo.en.md#combo-top-architecture)
 
-<table>
+<table width="715">
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
 <tbody><tr>
 <td align="center" valign="top"><a href="projects/high-speed-interface-research/docs/lpddr-combo.en.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_tx_eye.svg?v=2" alt="LPDDR Combo TX eye at 14 Gb/s/pin with four DQs active: 0.41 UI, 65.3 mV" width="330"></a></td>

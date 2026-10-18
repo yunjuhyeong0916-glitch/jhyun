@@ -98,11 +98,11 @@ A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 
 #### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR4X/5/5X의 공통 클록 경로와 DQ TX/RX를 포함한 Combo PHY 전체 구조" width="660"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR4X/5/5X의 공통 클록 경로와 DQ TX/RX를 포함한 Combo PHY 전체 구조" width="715"></a>
 
 LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. 담당한 DQ TX는 그림 오른쪽 DQ0–DQ3 경로에 있습니다. [구조 설명](projects/high-speed-interface-research/docs/lpddr-combo.md#combo-top-architecture)
 
-<table>
+<table width="715">
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
 <tbody><tr>
 <td align="center" valign="top"><a href="projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result"><img src="projects/high-speed-interface-research/assets/lpddr_combo_measured_tx_eye.svg?v=2" alt="14 Gb/s/pin·4-DQ 활성 조건의 LPDDR Combo TX Eye: 0.41 UI, 65.3 mV" width="330"></a></td>

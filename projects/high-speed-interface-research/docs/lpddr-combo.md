@@ -33,7 +33,7 @@ LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다�
 
 ### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="../assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR4X와 LPDDR5/5X의 클록 경로를 공유하며 네 DQ TRX와 CA·CK·WCK·DQS 경로를 연결한 Combo Controller PHY 전체 구조" width="720"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="../assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR4X와 LPDDR5/5X의 클록 경로를 공유하며 네 DQ TRX와 CA·CK·WCK·DQS 경로를 연결한 Combo Controller PHY 전체 구조" width="715"></a>
 
 [A-SSCC 2026 논문 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141). 빨간색은 LPDDR4X, 보라색은 LPDDR5/5X, 하늘색은 공통 클록 경로입니다.
 

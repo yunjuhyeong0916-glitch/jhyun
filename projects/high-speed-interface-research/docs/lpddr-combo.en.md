@@ -14,7 +14,7 @@ The LPDDR4X/5/5X Combo Controller PHY shares clock-generation and phase-alignmen
 
 ## Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="View full-size LPDDR Combo PHY architecture"><img src="../assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR Combo PHY top architecture with shared clock paths and four DQ TX/RX lanes" width="720"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="View full-size LPDDR Combo PHY architecture"><img src="../assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR Combo PHY top architecture with shared clock paths and four DQ TX/RX lanes" width="715"></a>
 
 The red, purple and light-blue paths represent LPDDR4X, LPDDR5/5X and common clock paths, respectively. The DQ TX blocks I designed are in the DQ0–DQ3 paths on the right. [A-SSCC 2026 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 
@@ -22,7 +22,7 @@ The red, purple and light-blue paths represent LPDDR4X, LPDDR5/5X and common clo
 
 ## Silicon results
 
-<table>
+<table width="715">
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
 <tbody><tr>
 <td align="center" valign="top"><a href="../assets/lpddr_combo_measured_eye_shmoo.png"><img src="../assets/lpddr_combo_measured_tx_eye.svg?v=2" alt="Measured Combo TX eye: 0.41 UI, 65.3 mV" width="330"></a></td>
