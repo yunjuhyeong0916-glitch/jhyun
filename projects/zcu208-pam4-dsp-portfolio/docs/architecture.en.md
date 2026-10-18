@@ -10,9 +10,9 @@
 
 ## Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="View full-size A-SSCC PAM4 transceiver architecture"><img src="../assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC top-level architecture and TX/RX DSP blocks" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_system_architecture.svg" title="View full-size A-SSCC PAM4 transceiver architecture"><img src="../assets/mlsd_paper_system_architecture.svg" alt="A-SSCC system architecture showing PS, PL, RF Data Converter and ISI-board connections" width="715"></a>
 
-The signal path is **PRBS/PAM4 generation → 8-tap TX FFE → DAC → ISI board → ADC → 21-tap RX FFE → 3-tap PR filter → DS-SBM → PRBS checker**. The PS configures the PL and the converters. [A-SSCC Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+The system connects PS control, the PL TX/RX data paths, the RF Data Converter and the ISI board. The PS applies settings through GPIO and BRAM; the PL processes DAC transmit and ADC receive data. [A-SSCC Fig. 2, system panel](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 <a id="parallel-datapath"></a>
 

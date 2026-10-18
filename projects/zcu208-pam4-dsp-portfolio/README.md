@@ -23,9 +23,9 @@ PAM4 신호의 채널 보상과 수신 판정을 보드에서 검증하기 위�
 
 ## Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="A-SSCC PAM4 송수신기 전체 구조 확대 보기"><img src="assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC 논문의 PS 제어·PL TX/RX DSP·RF Data Converter·ISI 보드와 TX/RX DSP 전체 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_system_architecture.svg" title="A-SSCC PAM4 송수신기 전체 구조 확대 보기"><img src="assets/mlsd_paper_system_architecture.svg" alt="A-SSCC 논문의 PS 제어·PL TX/RX 데이터 경로·RF Data Converter·ISI 보드 연결 구조" width="715"></a>
 
-상단은 PS 제어와 PL의 TX/RX DSP, DAC → ISI 보드 → ADC 연결입니다. 하단은 **PRBS7/15·PAM4 인코더 → 8-tap TX FFE**와 **21-tap RX FFE → 3-tap PR → DS-SBM**을 보여줍니다. [블록별 역할·병렬 처리 구조](docs/architecture.md#asscc-top-architecture)
+PS에서 TX/RX 설정을 제어하고, PL의 데이터 경로가 RF Data Converter를 통해 DAC → ISI 보드 → ADC로 이어지는 전체 시스템 구조입니다. [블록별 역할·병렬 처리 구조](docs/architecture.md#asscc-top-architecture)
 
 <a id="asscc-result"></a>
 

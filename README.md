@@ -36,9 +36,9 @@
 
 #### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="A-SSCC PAM4 송수신기 전체 구조 확대 보기"><img src="projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC 논문의 PS 제어·PL TX/RX DSP·DAC–ISI 보드–ADC 연결과 TX/RX 필터·DS-SBM 구조" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_system_architecture.svg" title="A-SSCC PAM4 송수신기 전체 구조 확대 보기"><img src="projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_system_architecture.svg" alt="A-SSCC 논문의 PS 제어·PL TX/RX 데이터 경로·DAC–ISI 보드–ADC 연결 구조" width="715"></a>
 
-PS 제어·TX/RX DSP와 DAC → ISI 보드 → ADC 경로를 연결한 구조입니다. RX는 **21-tap FFE → 3-tap PR → DS-SBM**으로 구성됩니다. [설계 구조](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#asscc-top-architecture)
+PS 제어와 PL의 TX/RX 데이터 경로, DAC → ISI 보드 → ADC 연결을 보여줍니다. [설계 구조](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#asscc-top-architecture)
 
 #### 보드 측정 구성
 

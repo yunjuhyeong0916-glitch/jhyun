@@ -18,11 +18,11 @@
 
 ## Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="A-SSCC PAM4 송수신기 전체 구조 확대 보기"><img src="../assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC 논문의 FPGA 기반 PAM4 송수신기 전체 구조와 TX·RX DSP 블록" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_system_architecture.svg" title="A-SSCC PAM4 송수신기 전체 구조 확대 보기"><img src="../assets/mlsd_paper_system_architecture.svg" alt="A-SSCC 논문의 FPGA 기반 PAM4 송수신기 PS·PL·RF Data Converter와 ISI 보드 연결 구조" width="715"></a>
 
-A-SSCC 2026, p. 2 Fig. 2. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+A-SSCC 2026, Fig. 2의 전체 시스템 구조. [논문 정보](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
-상단은 PS 제어, PL의 TX·RX 데이터 경로, RF Data Converter와 ISI 보드의 연결을 보여줍니다. 하단의 송신 DSP는 PRBS7/15·PAM4 인코더와 8-tap TX FFE로 구성됩니다. 수신 DSP는 21-tap RX FFE → 3-tap partial response → DS-SBM RS-MLSD 순서로 채널 왜곡을 보상하고 심볼을 복원합니다.
+PS 제어, PL의 TX·RX 데이터 경로, RF Data Converter와 ISI 보드의 연결을 보여줍니다. PS는 GPIO·BRAM 경로로 설정을 적용하고, PL은 DAC 송신과 ADC 수신 데이터를 처리합니다.
 
 ## 병렬 데이터 경로
 

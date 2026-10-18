@@ -16,9 +16,9 @@ I implemented the transceiver DSP, detector RTL and RFSoC control path to evalua
 
 ## Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="View full-size A-SSCC PAM4 transceiver architecture"><img src="assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC top-level architecture with PS control, PL TX/RX DSP, RF Data Converter, ISI board and TX/RX DSP blocks" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_system_architecture.svg" title="View full-size A-SSCC PAM4 transceiver architecture"><img src="assets/mlsd_paper_system_architecture.svg" alt="A-SSCC system architecture with PS control, PL TX/RX data paths, RF Data Converter and ISI board" width="715"></a>
 
-The upper panel connects PS control and PL TX/RX DSP to the DAC → ISI board → ADC path. The lower panel shows **PRBS7/15/PAM4 encoding → 8-tap TX FFE** and **21-tap RX FFE → 3-tap PR → DS-SBM**. [Block roles and parallel processing](docs/architecture.en.md#asscc-top-architecture)
+The PS controls TX/RX settings, while the PL data paths connect through the RF Data Converter to the DAC → ISI board → ADC path. [Block roles and parallel processing](docs/architecture.en.md#asscc-top-architecture)
 
 <a id="asscc-result"></a>
 

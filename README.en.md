@@ -36,9 +36,9 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 
 #### Top architecture
 
-<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" title="View full-size A-SSCC PAM4 transceiver architecture"><img src="projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_top_architecture.jpg" alt="A-SSCC architecture showing PS control, PL TX/RX DSP, the DAC–ISI-board–ADC path, filters and DS-SBM" width="715"></a>
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_system_architecture.svg" title="View full-size A-SSCC PAM4 transceiver architecture"><img src="projects/zcu208-pam4-dsp-portfolio/assets/mlsd_paper_system_architecture.svg" alt="A-SSCC system architecture showing PS control, PL TX/RX data paths and the DAC–ISI-board–ADC connection" width="715"></a>
 
-The architecture connects PS control and TX/RX DSP to the DAC → ISI board → ADC path. The RX chain is **21-tap FFE → 3-tap PR → DS-SBM**. [Architecture details](projects/zcu208-pam4-dsp-portfolio/docs/architecture.en.md#asscc-top-architecture)
+The architecture shows PS control, the PL TX/RX data paths and the DAC → ISI board → ADC connection. [Architecture details](projects/zcu208-pam4-dsp-portfolio/docs/architecture.en.md#asscc-top-architecture)
 
 #### Board measurement setup
 
