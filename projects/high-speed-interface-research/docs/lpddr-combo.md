@@ -29,6 +29,18 @@ LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다�
 
 **평가 구성:** 측정용 PCB와 COB·와이어 본딩으로 칩의 신호·전원 경로를 연결했습니다. [PCB 설계·HFSS 전달 특성](pcb-hfss-verification.md#page-top)
 
+<a id="combo-top-architecture"></a>
+
+### Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="LPDDR Combo PHY 전체 구조 확대 보기"><img src="../assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR4X와 LPDDR5/5X의 클록 경로를 공유하며 네 DQ TRX와 CA·CK·WCK·DQS 경로를 연결한 Combo Controller PHY 전체 구조" width="720"></a>
+
+[A-SSCC 2026 논문 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141). 빨간색은 LPDDR4X, 보라색은 LPDDR5/5X, 하늘색은 공통 클록 경로입니다.
+
+PHY에는 **4개의 DQ TRX, 2개의 CA TX, CK TX, DQS TRX, WCK TX와 ZQ 보정 블록**이 들어갑니다. 같은 위상 조정 자원을 LPDDR4X에서는 DQS, LPDDR5/5X에서는 WCK에 사용하고, DQ와 strobe의 상대 타이밍은 phase interpolator·delay line으로 조정합니다. 제가 담당한 TX는 각 DQ 경로에서 병렬 데이터를 직렬화하고 출력 보상을 적용하는 부분입니다.
+
+### TX Eye·RX Shmoo
+
 ![14 Gb/s/pin·4-DQ 활성 조건의 Combo PHY TX Eye와 RX Shmoo](../assets/lpddr_combo_measured_eye_shmoo.png)
 
 **측정 조건:** 28-nm CMOS 제작 칩, 14 Gb/s/pin, 4-DQ 활성. 위는 TX Eye, 아래는 TX–RX 연결 조건의 RX Shmoo입니다. [논문 Fig. 5](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) · [Eye·Shmoo 읽는 방법](../../../docs/concepts/measurements.md#page-top)
@@ -59,12 +71,6 @@ LPDDR4X와 LPDDR5/5X는 데이터를 주고받는 클록·strobe 구성이 다�
 | CA와 CK의 관계 | SDR CA | DDR CA |
 | Write leveling 대상 | DQS와 CK | WCK와 CK |
 | WCK:CK 주파수 비 | 해당 없음 | 2:1 또는 4:1 |
-
-![LPDDR4X와 LPDDR5/5X의 클록 경로를 공유하며 네 DQ TRX와 CA·CK·WCK·DQS 경로를 연결한 Combo Controller PHY 전체 구조](../assets/lpddr_combo_paper_top_architecture.png)
-
-[A-SSCC 2026 논문 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141). 빨간색은 LPDDR4X, 보라색은 LPDDR5/5X, 하늘색은 공통 클록 경로입니다.
-
-PHY에는 **4개의 DQ TRX, 2개의 CA TX, CK TX, DQS TRX, WCK TX와 ZQ 보정 블록**이 들어갑니다. 같은 위상 조정 자원을 LPDDR4X에서는 DQS, LPDDR5/5X에서는 WCK에 사용하고, DQ와 strobe의 상대 타이밍은 phase interpolator·delay line으로 조정합니다. 제가 담당한 TX는 각 DQ 경로에서 병렬 데이터를 직렬화하고 출력 보상을 적용하는 부분입니다.
 
 ## TX 모델에서 데이터 순서·위상·출력 보상을 연결
 

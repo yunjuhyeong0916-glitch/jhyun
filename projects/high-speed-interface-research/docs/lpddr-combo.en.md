@@ -10,6 +10,14 @@ The LPDDR4X/5/5X Combo Controller PHY shares clock-generation and phase-alignmen
 
 **My role:** DQ TX circuit design and TX Verilog behavioral modeling, measurement PCB design/HFSS analysis and participation in silicon evaluation. **A-SSCC 2026 · Co-author · Accepted.**
 
+<a id="combo-top-architecture"></a>
+
+## Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="View full-size LPDDR Combo PHY architecture"><img src="../assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR Combo PHY top architecture with shared clock paths and four DQ TX/RX lanes" width="720"></a>
+
+The red, purple and light-blue paths represent LPDDR4X, LPDDR5/5X and common clock paths, respectively. The DQ TX blocks I designed are in the DQ0–DQ3 paths on the right. [A-SSCC 2026 Fig. 2](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+
 <a id="lpddr-combo-result"></a>
 
 ## Silicon results
@@ -33,8 +41,6 @@ The TX model connects 32-bit input serialization, phase alignment and main/one-U
 ## PCB and HFSS
 
 I designed the measurement PCB’s circuit, placement and routing, and modeled the pad-to-connector signal/ground/via structure in HFSS. Power/GND and COB connections support the chip evaluation. [Board design, images and transmission results](pcb-hfss-verification.en.md#page-top)
-
-![Shared clock paths and DQ TX placement in the LPDDR Combo PHY](../assets/lpddr_combo_paper_top_architecture.png)
 
 [A-SSCC paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141) · [Low-voltage TX circuit](lpddr-tx-circuit-verification.en.md#page-top)
 

@@ -96,6 +96,12 @@ Circuit simulation · 8.7-dB channel loss · ICEIC 2025 <strong>Co-first author<
 
 ### [LPDDR Combo | TX design, modeling and 28-nm silicon evaluation](projects/high-speed-interface-research/docs/lpddr-combo.en.md#page-top)
 
+#### Top architecture
+
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" title="View full-size LPDDR Combo PHY architecture"><img src="projects/high-speed-interface-research/assets/lpddr_combo_paper_top_architecture.png" alt="LPDDR Combo PHY top architecture with shared clock paths and DQ TX/RX lanes" width="660"></a>
+
+The PHY shares clock and phase-alignment resources across LPDDR4X/5/5X modes. The DQ TX blocks I designed are in the DQ0–DQ3 paths on the right. [Architecture details](projects/high-speed-interface-research/docs/lpddr-combo.en.md#combo-top-architecture)
+
 <table>
 <thead><tr><th align="center" width="50%">TX Eye</th><th align="center" width="50%">RX Shmoo</th></tr></thead>
 <tbody><tr>
