@@ -18,6 +18,11 @@ I research **high-speed interfaces** based on JEDEC [LPDDR](projects/high-speed-
 <a href="#research-publications" title="Papers"><img src="assets/readme/nav-papers-en.svg" alt="Papers" width="90" height="30"></a>
 </p>
 
+<p>
+<a href="docs/README.en.md#dsp-research" title="Explore DSP transceiver research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
+<a href="projects/high-speed-interface-research/README.en.md#page-top" title="Explore LPDDR and USB interface research"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits, TX/RX models and silicon measurements" width="410"></a>
+</p>
+
 ## Key results
 
 - **[DSP / FPGA](#dsp-research): 8-Gb/s PAM4** physical-channel validation; **[35.7% fewer detector LUTs](projects/zcu208-pam4-dsp-portfolio/docs/validation.en.md#detector-resources)** than RS-ACS

@@ -18,6 +18,11 @@
 <a href="#연구-성과-논문" title="논문"><img src="assets/readme/nav-papers.svg" alt="논문" width="76" height="30"></a>
 </p>
 
+<p>
+<a href="projects/README.md#dsp-transceiver-research" title="DSP 기반 송수신기 연구 소개"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
+<a href="projects/high-speed-interface-research/README.md#page-top" title="LPDDR·USB 인터페이스 연구 소개"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로·TX/RX 모델·실리콘 측정" width="410"></a>
+</p>
+
 ## 대표 성과
 
 - **[DSP·FPGA](#dsp-research): PAM4 8&nbsp;Gb/s** 물리채널 검증, RS-ACS 대비 검출기 **[LUT 35.7% 감소](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#detector-resources)**
