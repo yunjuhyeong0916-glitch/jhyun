@@ -12,22 +12,22 @@
 
 <p>
 <a href="docs/profile.md#page-top" title="연구 이력"><img src="assets/readme/nav-cv.svg" alt="연구 이력" width="110" height="30"></a>
-<a href="#dsp-research" title="DSP / FPGA"><img src="assets/readme/nav-dsp.svg" alt="DSP / FPGA" width="115" height="30"></a>
-<a href="#interface-research" title="LPDDR / USB"><img src="assets/readme/nav-interface.svg" alt="LPDDR / USB" width="125" height="30"></a>
+<a href="#user-content-dsp-research" title="DSP / FPGA"><img src="assets/readme/nav-dsp.svg" alt="DSP / FPGA" width="115" height="30"></a>
+<a href="#user-content-interface-research" title="LPDDR / USB"><img src="assets/readme/nav-interface.svg" alt="LPDDR / USB" width="125" height="30"></a>
 <a href="#측정검증" title="측정·검증"><img src="assets/readme/nav-measurement.svg" alt="측정·검증" width="113" height="30"></a>
 <a href="#연구-성과-논문" title="논문"><img src="assets/readme/nav-papers.svg" alt="논문" width="76" height="30"></a>
 </p>
 
 <p>
-<a href="#dsp-research" title="DSP 기반 송수신기 연구 펼쳐보기"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
-<a href="#interface-research" title="LPDDR·USB 인터페이스 연구 펼쳐보기"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로·TX/RX 모델·실리콘 측정" width="410"></a>
+<a href="#user-content-dsp-research" title="DSP 기반 송수신기 연구 펼쳐보기"><img src="assets/readme/research-dsp.svg" alt="DSP 기반 송수신기 연구 — 검출기 RTL 설계·RFSoC 보드 검증" width="410"></a>
+<a href="#user-content-interface-research" title="LPDDR·USB 인터페이스 연구 펼쳐보기"><img src="assets/readme/research-interface.svg" alt="LPDDR·USB 인터페이스 연구 — TX 회로·TX/RX 모델·실리콘 측정" width="410"></a>
 </p>
 
 ## 대표 성과
 
-- **[DSP·FPGA](#dsp-research): PAM4 8&nbsp;Gb/s** 물리채널 검증, RS-ACS 대비 검출기 **[LUT 35.7% 감소](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#detector-resources)**
-- **[LPDDR](#interface-research): 15.6&nbsp;Gb/s TX 회로 설계**, 14&nbsp;Gb/s/pin Combo PHY 칩 측정 참여
-- **[USB&nbsp;PAM&#8209;3](#usb-research): TX RTL·RX CTLE 모델링**, 32&nbsp;Gb/s TX 칩 측정 참여
+- **[DSP·FPGA](#user-content-dsp-research): PAM4 8&nbsp;Gb/s** 물리채널 검증, RS-ACS 대비 검출기 **[LUT 35.7% 감소](projects/zcu208-pam4-dsp-portfolio/docs/validation.md#detector-resources)**
+- **[LPDDR](#user-content-interface-research): 15.6&nbsp;Gb/s TX 회로 설계**, 14&nbsp;Gb/s/pin Combo PHY 칩 측정 참여
+- **[USB&nbsp;PAM&#8209;3](#user-content-usb-research): TX RTL·RX CTLE 모델링**, 32&nbsp;Gb/s TX 칩 측정 참여
 
 최근 설계 트렌드에 맞게 [AI](docs/ai-assisted-dsp-workflow.md#page-top)를 RTL·테스트벤치 작성과 반복 검증·측정 자동화 코드 구성에 활용합니다.
 

@@ -12,22 +12,22 @@ I research **high-speed interfaces** based on JEDEC [LPDDR](projects/high-speed-
 
 <p>
 <a href="docs/profile.en.md#page-top" title="Research CV"><img src="assets/readme/nav-cv-en.svg" alt="Research CV" width="122" height="30"></a>
-<a href="#dsp-research" title="DSP / FPGA"><img src="assets/readme/nav-dsp.svg" alt="DSP / FPGA" width="115" height="30"></a>
-<a href="#interface-research" title="LPDDR / USB"><img src="assets/readme/nav-interface.svg" alt="LPDDR / USB" width="125" height="30"></a>
+<a href="#user-content-dsp-research" title="DSP / FPGA"><img src="assets/readme/nav-dsp.svg" alt="DSP / FPGA" width="115" height="30"></a>
+<a href="#user-content-interface-research" title="LPDDR / USB"><img src="assets/readme/nav-interface.svg" alt="LPDDR / USB" width="125" height="30"></a>
 <a href="#measurement--verification" title="Verification"><img src="assets/readme/nav-measurement-en.svg" alt="Verification" width="119" height="30"></a>
 <a href="#research-publications" title="Papers"><img src="assets/readme/nav-papers-en.svg" alt="Papers" width="90" height="30"></a>
 </p>
 
 <p>
-<a href="#dsp-research" title="Expand DSP transceiver research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
-<a href="#interface-research" title="Expand LPDDR and USB interface research"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits, TX/RX models and silicon measurements" width="410"></a>
+<a href="#user-content-dsp-research" title="Expand DSP transceiver research"><img src="assets/readme/research-dsp-en.svg" alt="DSP transceiver research — Detector RTL design and RFSoC board validation" width="410"></a>
+<a href="#user-content-interface-research" title="Expand LPDDR and USB interface research"><img src="assets/readme/research-interface-en.svg" alt="LPDDR / USB interfaces — TX circuits, TX/RX models and silicon measurements" width="410"></a>
 </p>
 
 ## Key results
 
-- **[DSP / FPGA](#dsp-research): 8-Gb/s PAM4** physical-channel validation; **[35.7% fewer detector LUTs](projects/zcu208-pam4-dsp-portfolio/docs/validation.en.md#detector-resources)** than RS-ACS
-- **[LPDDR](#interface-research): 15.6-Gb/s TX design**; 14-Gb/s/pin Combo PHY measurement participation
-- **[USB&nbsp;PAM&#8209;3](#usb-research): TX RTL / RX CTLE models**; 32-Gb/s TX chip measurement participation
+- **[DSP / FPGA](#user-content-dsp-research): 8-Gb/s PAM4** physical-channel validation; **[35.7% fewer detector LUTs](projects/zcu208-pam4-dsp-portfolio/docs/validation.en.md#detector-resources)** than RS-ACS
+- **[LPDDR](#user-content-interface-research): 15.6-Gb/s TX design**; 14-Gb/s/pin Combo PHY measurement participation
+- **[USB&nbsp;PAM&#8209;3](#user-content-usb-research): TX RTL / RX CTLE models**; 32-Gb/s TX chip measurement participation
 
 In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.md#page-top) to assist with RTL, testbenches and automation code for repeatable verification and measurements.
 
