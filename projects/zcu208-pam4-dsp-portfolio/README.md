@@ -64,15 +64,15 @@ ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-S
 
 ```mermaid
 flowchart LR
-    P[PRBS / PAM4 생성] --> T[TX FIR]
+    P["PRBS /<br/>PAM4 생성"] --> T[TX FIR]
     T --> D[RFDC DAC]
     D --> I[ISI 보드]
     I --> A[RFDC ADC]
-    A --> R[RX FIR 등화]
+    A --> R["RX FIR<br/>등화"]
     R --> Q[3-tap PR FIR]
-    Q --> M[DS-SBM RS-MLSD 검출]
-    M --> C[PRBS 검사 / ILA 캡처]
-    G[런타임 계수 설정] -.-> R
+    Q --> M["DS-SBM<br/>RS-MLSD 검출"]
+    M --> C["PRBS 검사 /<br/>ILA 캡처"]
+    G["런타임 계수<br/>설정"] -.-> R
     G -.-> M
 ```
 

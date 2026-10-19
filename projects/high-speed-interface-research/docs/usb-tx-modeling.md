@@ -51,12 +51,12 @@
 
 ```mermaid
 flowchart LR
-    A["176-bit 입력"] --> B["16 × 11B7S 인코더<br/>각 11 bit → 7 심볼 / 14 bit"]
-    B --> C["224-bit 버스<br/>112개의 2-bit 심볼"]
-    C --> D["112 × Scrambler"]
+    A["176-bit 입력"] --> B["16 × 11B7S<br/>인코더<br/>각 11 bit →<br/>7 심볼 / 14 bit"]
+    B --> C["224-bit 버스<br/>112개의<br/>2-bit 심볼"]
+    C --> D["112 ×<br/>Scrambler"]
     F["PRTS19 · PRBS11<br/>F 함수"] --> D
     D --> E["MSB / LSB 분리<br/>각 112 bit"]
-    E --> G["전기 계층 모델·구현"]
+    E --> G["전기 계층<br/>모델·구현"]
 ```
 
 인코더 출력 순서·Scrambler 심볼 코드·드라이버 비트 순서를 각 모델의 코드 매핑에 맞췄습니다. [논리 구현 블록](usb4-pam3.md#논리-경로를-제작-tx에-연결)

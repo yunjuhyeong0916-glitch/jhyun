@@ -19,15 +19,15 @@ PL에 구현한 송수신 DSP를 제어하기 위해 Cortex-A53 Standalone 앱�
 
 ```mermaid
 flowchart LR
-    S["Cortex-A53 · Standalone 앱"] --> G["AXI GPIO · 모드 제어"]
-    S --> B["AXI BRAM · 계수 쓰기 / commit"]
-    G --> P["PL 송수신 DSP"]
+    S["Cortex-A53 ·<br/>Standalone 앱"] --> G["AXI GPIO ·<br/>모드 제어"]
+    S --> B["AXI BRAM ·<br/>계수 쓰기 /<br/>commit"]
+    G --> P["PL 송수신<br/>DSP"]
     B --> P
     S --> K["CLK104 설정"]
     S --> R["RFDC 초기화"]
     K --> R
     P <--> R
-    C["RX 캡처 BRAM"] --> S
+    C["RX 캡처<br/>BRAM"] --> S
     P --> C
     S --> U["UART CSV"]
 ```

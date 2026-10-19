@@ -98,11 +98,11 @@ AC 테스트에서는 수신 부하를 CL=50 fF로 가정하고 다음 설정을
 
 ```mermaid
 flowchart LR
-    A["TX · 채널 출력"] --> B["CTLE"]
-    B --> C["Data Sampler · DFE"]
-    C --> D["역직렬화 · 논리 복원"]
+    A["TX · 채널<br/>출력"] --> B["CTLE"]
+    B --> C["Data Sampler ·<br/>DFE"]
+    C --> D["역직렬화 ·<br/>논리 복원"]
     B --> E["Edge Sampler"]
-    E --> F["CDR · 복구 클록"]
+    E --> F["CDR ·<br/>복구 클록"]
     F -->|샘플링 클록| C
 ```
 
