@@ -62,19 +62,7 @@ ZCU208 RFSoC의 ADC·DAC를 4 GS/s로 설정하고, TX FIR·RX 21-tap FIR·[DS-S
 
 ## 송수신 경로
 
-```mermaid
-flowchart LR
-    P["PRBS /<br/>PAM4 생성"] --> T[TX FIR]
-    T --> D[RFDC DAC]
-    D --> I[ISI 보드]
-    I --> A[RFDC ADC]
-    A --> R["RX FIR<br/>등화"]
-    R --> Q[3-tap PR FIR]
-    Q --> M["DS-SBM<br/>RS-MLSD 검출"]
-    M --> C["PRBS 검사 /<br/>ILA 캡처"]
-    G["런타임 계수<br/>설정"] -.-> R
-    G -.-> M
-```
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/pam4_signal_path.svg" title="PAM4 송수신 경로와 런타임 계수 제어 확대 보기"><img src="assets/pam4_signal_path.svg" alt="PAM4 송수신 경로와 런타임 계수 제어" width="1000"></a>
 
 ISI 보드를 통과한 수신 신호를 ADC로 캡처했습니다. [캡처 파형·재생·통계 분석](docs/capture-analysis.md#page-top)
 

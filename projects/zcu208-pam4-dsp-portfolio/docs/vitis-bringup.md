@@ -17,20 +17,7 @@ PL에 구현한 송수신 DSP를 제어하기 위해 Cortex-A53 Standalone 앱�
 
 ## PS 제어와 PL 데이터 경로
 
-```mermaid
-flowchart LR
-    S["Cortex-A53 ·<br/>Standalone 앱"] --> G["AXI GPIO ·<br/>모드 제어"]
-    S --> B["AXI BRAM ·<br/>계수 쓰기 /<br/>commit"]
-    G --> P["PL 송수신<br/>DSP"]
-    B --> P
-    S --> K["CLK104 설정"]
-    S --> R["RFDC 초기화"]
-    K --> R
-    P <--> R
-    C["RX 캡처<br/>BRAM"] --> S
-    P --> C
-    S --> U["UART CSV"]
-```
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/zcu208-pam4-dsp-portfolio/assets/vitis_ps_pl_control.svg" title="PS 제어와 PL 데이터 경로 확대 보기"><img src="../assets/vitis_ps_pl_control.svg" alt="PS 제어와 PL 데이터 경로" width="1000"></a>
 
 PS가 GPIO·BRAM으로 모드와 계수를 설정하고, PL이 병렬 송수신 연산을 수행합니다. 수신 디버그 데이터는 별도 캡처 BRAM을 통해 PS로 전달합니다.
 

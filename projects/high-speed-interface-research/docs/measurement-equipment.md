@@ -34,16 +34,7 @@ LPDDR·USB 평가에서 파형 관측, 입력 공급, 전원 설정과 오류 �
 
 ## 입력 공급·파형 관측·오류 평가의 관계
 
-```mermaid
-flowchart LR
-    A["AWG 또는<br/>패턴 발생기"] --> D["평가 대상과<br/>전송 경로"]
-    D --> S["오실로스코프:<br/>파형과 Eye"]
-    D --> E["오류 검출:<br/>BER와 관측량"]
-    P[전원공급기] --> D
-    C["Python과<br/>I2C 제어"] -. 조건 설정 .-> D
-    C -.->|"장비 설정과<br/>결과 수집"| A
-    C -.->|"장비 설정과<br/>결과 수집"| E
-```
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/measurement_signal_control_path.svg" title="입력 공급·파형 관측·오류 평가와 장비 제어 확대 보기"><img src="../assets/measurement_signal_control_path.svg" alt="입력 공급·파형 관측·오류 평가와 장비 제어" width="1000"></a>
 
 ## 전원 변화와 오류 판정 조건을 함께 관리
 

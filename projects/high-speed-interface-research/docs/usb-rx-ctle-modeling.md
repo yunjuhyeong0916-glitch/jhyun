@@ -96,15 +96,7 @@ AC 테스트에서는 수신 부하를 CL=50 fF로 가정하고 다음 설정을
 
 단품 AC 시험의 입력 common-mode 850 mV를 RX 통합 시 약 700 mV로 변경했습니다. Sampler의 동작·부하에 맞춰 동작점과 보상 설정을 조정했습니다.
 
-```mermaid
-flowchart LR
-    A["TX · 채널<br/>출력"] --> B["CTLE"]
-    B --> C["Data Sampler ·<br/>DFE"]
-    C --> D["역직렬화 ·<br/>논리 복원"]
-    B --> E["Edge Sampler"]
-    E --> F["CDR ·<br/>복구 클록"]
-    F -->|샘플링 클록| C
-```
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_rx_ctle_integration_path.svg" title="USB RX의 CTLE·Sampler·DFE·CDR 연결 확대 보기"><img src="../assets/usb_rx_ctle_integration_path.svg" alt="USB RX의 CTLE·Sampler·DFE·CDR 연결" width="1000"></a>
 
 **통합 구조:** CDR는 샘플링 클록을 제어합니다. 전체 RX 모델에서 PLL은 실제 PLL 회로 대신 등가 모델로 가정했습니다.
 

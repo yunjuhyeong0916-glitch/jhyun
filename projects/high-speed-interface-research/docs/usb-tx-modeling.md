@@ -49,15 +49,7 @@
 
 11B7S 인코더는 11-bit 입력을 7개의 PAM-3 심볼로 바꿉니다. 이 구현에서는 심볼 하나를 2-bit 코드로 표현하므로, 인코더 한 개의 출력은 14 bit입니다. 16개 인코더의 224-bit 출력은 112개 심볼에 해당하며, 스크램블링 이후 MSB·LSB를 각각 112 bit로 분리해 전기 계층에 전달합니다. **모델 내부 표현: 112심볼 × 2 bit = 224 bit.**
 
-```mermaid
-flowchart LR
-    A["176-bit 입력"] --> B["16 × 11B7S<br/>인코더<br/>각 11 bit →<br/>7 심볼 / 14 bit"]
-    B --> C["224-bit 버스<br/>112개의<br/>2-bit 심볼"]
-    C --> D["112 ×<br/>Scrambler"]
-    F["PRTS19 · PRBS11<br/>F 함수"] --> D
-    D --> E["MSB / LSB 분리<br/>각 112 bit"]
-    E --> G["전기 계층<br/>모델·구현"]
-```
+<a href="https://github.com/yunjuhyeong0916-glitch/jhyun/blob/main/projects/high-speed-interface-research/assets/usb_tx_logic_model_path.svg" title="USB TX의 인코더·스크램블러·MSB/LSB 데이터 경로 확대 보기"><img src="../assets/usb_tx_logic_model_path.svg" alt="USB TX의 인코더·스크램블러·MSB/LSB 데이터 경로" width="1000"></a>
 
 인코더 출력 순서·Scrambler 심볼 코드·드라이버 비트 순서를 각 모델의 코드 매핑에 맞췄습니다. [논리 구현 블록](usb4-pam3.md#논리-경로를-제작-tx에-연결)
 
