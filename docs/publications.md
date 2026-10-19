@@ -17,7 +17,7 @@
 
 ## DSP 기반 송수신기
 
-- **A-SSCC 2026 · 제1저자 · 채택·발표 예정**
+- **IEEE A-SSCC 2026 · 제1저자 · 채택·발표 예정**
 
   [An FPGA-Verified DAC/ADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
@@ -25,7 +25,7 @@
 
 ## LPDDR 인터페이스
 
-- **A-SSCC 2026 · 공동저자 · 채택·발표 예정**
+- **IEEE A-SSCC 2026 · 공동저자 · 채택·발표 예정**
 
   [A 14-Gb/s/pin LPDDR4X/5/5X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 

@@ -36,7 +36,7 @@
 
 <a id="dsp-research"></a>
 
-### [A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP](projects/zcu208-pam4-dsp-portfolio/README.md#page-top)
+### [IEEE A-SSCC 2026 | DS-SBM 기반 PAM4 송수신 DSP](projects/zcu208-pam4-dsp-portfolio/README.md#page-top)
 
 <a id="asscc-top-architecture"></a>
 
@@ -56,7 +56,7 @@ PS 제어와 PL의 TX/RX 데이터 경로, DAC → ISI 보드 → ADC 연결을 
 <strong>PAM4 8&nbsp;Gb/s 물리채널 검증 · <a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.md#detector-resources">검출기 LUT 35.7% 감소</a></strong><br>
 LUT 감소율: RS-ACS 대비, 검출기 단독 집계.<br>
 <strong>담당:</strong> TX·RX 필터와 DS-SBM 검출기 RTL 설계, RFSoC 통합·제어·보드 검증.<br>
-A-SSCC 2026 · <strong>제1저자 · 채택</strong>
+IEEE A-SSCC 2026 · <strong>제1저자 · 채택</strong>
 </blockquote>
 
 [측정·구현 결과](projects/zcu208-pam4-dsp-portfolio/README.md#asscc-result) · [설계 구조](projects/zcu208-pam4-dsp-portfolio/docs/architecture.md#page-top) · [Vitis 구동](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.md#page-top) · [논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
@@ -138,7 +138,7 @@ LPDDR4X·5/5X의 클록·위상 조정 자원을 공유하는 구조입니다. �
 <blockquote>
 <strong>14&nbsp;Gb/s/pin · 4-DQ 활성 · TX Eye 0.41&nbsp;UI / 65.3&nbsp;mV</strong><br>
 <strong>담당:</strong> TX 회로·DQ TX Verilog 모델, 측정용 PCB 설계·HFSS 분석. 칩 측정 참여.<br>
-28&nbsp;nm 제작 칩 측정 · A-SSCC 2026 <strong>공&#8288;동&#8288;저&#8288;자 · 채택</strong>
+28&nbsp;nm 제작 칩 측정 · IEEE A-SSCC 2026 <strong>공&#8288;동&#8288;저&#8288;자 · 채택</strong>
 </blockquote>
 
 [TX 모델·측정 결과](projects/high-speed-interface-research/docs/lpddr-combo.md#lpddr-combo-result) · [PCB·HFSS](projects/high-speed-interface-research/docs/lpddr-combo-si-pi.md#page-top) · [논문](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
@@ -221,11 +221,11 @@ CH#3 손실 17.3&nbsp;dB @ 10.24&nbsp;GHz · PRBS15 · scrambler on. 같은 채�
 
 ### DSP 기반 송수신기
 
-- **A-SSCC 2026 · 제1저자 · 채택:** [DS-SBM 기반 RFSoC PAM4 송수신기](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+- **IEEE A-SSCC 2026 · 제1저자 · 채택:** [DS-SBM 기반 RFSoC PAM4 송수신기](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 ### LPDDR 인터페이스
 
-- **A-SSCC 2026 · 공동저자 · 채택:** [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+- **IEEE A-SSCC 2026 · 공동저자 · 채택:** [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 - **ICEIC 2025 · 공동 제1저자:** [15.6-Gb/s 저전압 NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746)
 
 ### USB 인터페이스
@@ -234,7 +234,7 @@ CH#3 손실 17.3&nbsp;dB @ 10.24&nbsp;GHz · PRBS15 · scrambler on. 같은 채�
 - **SMACD 2025 · 공동 제1저자:** [USB4 Gen4 PAM&#8209;3 TX 모델](https://doi.org/10.1109/SMACD65553.2025.11092283)
 - **SMACD 2025 · 공동 제1저자:** [PAM&#8209;3 RX 모델](https://doi.org/10.1109/SMACD65553.2025.11092233)
 
-A-SSCC 2026 두 편: 채택·발표 예정(2026-10-07 기준). [전체 논문 목록](docs/publications.md#page-top)
+IEEE A-SSCC 2026 두 편: 채택·발표 예정(2026-10-07 기준). [전체 논문 목록](docs/publications.md#page-top)
 
 </details>
 

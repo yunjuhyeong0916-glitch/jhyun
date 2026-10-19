@@ -10,11 +10,11 @@
 
 ## DSP transceivers
 
-- **A-SSCC 2026 · First author · Accepted:** [An FPGA-Verified DAC/ADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351). [Project and results](../projects/zcu208-pam4-dsp-portfolio/README.en.md#page-top)
+- **IEEE A-SSCC 2026 · First author · Accepted:** [An FPGA-Verified DAC/ADC-DSP-Based PAM4 Transceiver with Dual-Survivor Segmented Branch Metric-Matrix-Based Reduced-State MLSD](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351). [Project and results](../projects/zcu208-pam4-dsp-portfolio/README.en.md#page-top)
 
 ## LPDDR interfaces
 
-- **A-SSCC 2026 · Co-author · Accepted:** [A 14-Gb/s/pin LPDDR4X/5/5X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141). [TX role and silicon evaluation](../projects/high-speed-interface-research/docs/lpddr-combo.en.md#page-top)
+- **IEEE A-SSCC 2026 · Co-author · Accepted:** [A 14-Gb/s/pin LPDDR4X/5/5X Backward-Compatible Combo Controller PHY with Pipelined Sub-LSB ZQ Calibration and Preamble-Aware Fast-Settling Phase Interpolator](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141). [TX role and silicon evaluation](../projects/high-speed-interface-research/docs/lpddr-combo.en.md#page-top)
 - **ICEIC 2025 · Co-first author:** [A 1.05-V/0.5-V 15.6-Gb/s NRZ Transmitter Achieving 0.76-pJ/bit Energy Efficiency for Low-Power Memory Interfaces](https://doi.org/10.1109/ICEIC64972.2025.10879746). [Circuit simulation](../projects/high-speed-interface-research/docs/lpddr-tx-circuit-verification.en.md#page-top)
 
 ## USB interfaces

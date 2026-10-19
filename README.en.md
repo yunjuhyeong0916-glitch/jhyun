@@ -36,7 +36,7 @@ In line with current design trends, I use [AI](docs/ai-assisted-dsp-workflow.en.
 
 <a id="dsp-research"></a>
 
-### [A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP](projects/zcu208-pam4-dsp-portfolio/README.en.md#page-top)
+### [IEEE A-SSCC 2026 | DS-SBM-based PAM4 transceiver DSP](projects/zcu208-pam4-dsp-portfolio/README.en.md#page-top)
 
 <a id="asscc-top-architecture"></a>
 
@@ -56,7 +56,7 @@ The architecture shows PS control, the PL TX/RX data paths and the DAC → ISI b
 <strong>8-Gb/s PAM4 physical-channel validation · <a href="projects/zcu208-pam4-dsp-portfolio/docs/validation.en.md#detector-resources">35.7% fewer detector LUTs</a></strong><br>
 LUT comparison: detector only, relative to RS-ACS.<br>
 <strong>My role:</strong> TX/RX filter and DS-SBM detector RTL, RFSoC integration, control and board validation.<br>
-A-SSCC 2026 · <strong>First author · Accepted</strong>
+IEEE A-SSCC 2026 · <strong>First author · Accepted</strong>
 </blockquote>
 
 [Results](projects/zcu208-pam4-dsp-portfolio/README.en.md#asscc-result) · [Architecture](projects/zcu208-pam4-dsp-portfolio/docs/architecture.en.md#page-top) · [Vitis bring-up](projects/zcu208-pam4-dsp-portfolio/docs/vitis-bringup.en.md#page-top) · [Paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
@@ -138,7 +138,7 @@ The PHY shares clock and phase-alignment resources across LPDDR4X/5/5X modes. Or
 <blockquote>
 <strong>14&nbsp;Gb/s/pin · Four DQs active · TX eye 0.41&nbsp;UI / 65.3&nbsp;mV</strong><br>
 <strong>My role:</strong> TX circuit/model design, measurement PCB design and HFSS analysis; participation in chip measurements.<br>
-28-nm silicon measurements · A-SSCC 2026 <strong>Co-author · Accepted</strong>
+28-nm silicon measurements · IEEE A-SSCC 2026 <strong>Co-author · Accepted</strong>
 </blockquote>
 
 [TX model and measurements](projects/high-speed-interface-research/docs/lpddr-combo.en.md#lpddr-combo-result) · [PCB/HFSS](projects/high-speed-interface-research/docs/lpddr-combo.en.md#si-pi-board-design) · [Paper](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
@@ -221,11 +221,11 @@ CH3: 17.3-dB loss at 10.24&nbsp;GHz · PRBS15 · scrambler on. Upper and lower e
 
 ### DSP-based transceivers
 
-- **A-SSCC 2026 · First author · Accepted:** [DS-SBM RFSoC PAM4 transceiver](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
+- **IEEE A-SSCC 2026 · First author · Accepted:** [DS-SBM RFSoC PAM4 transceiver](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1351)
 
 ### LPDDR interfaces
 
-- **A-SSCC 2026 · Co-author · Accepted:** [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
+- **IEEE A-SSCC 2026 · Co-author · Accepted:** [LPDDR4X/5/5X Combo PHY](https://epapers2.org/asscc2026/ESR/paper_details.php?paper_id=1141)
 - **ICEIC 2025 · Co-first author:** [15.6-Gb/s low-voltage NRZ TX](https://doi.org/10.1109/ICEIC64972.2025.10879746)
 
 ### USB interfaces
@@ -234,7 +234,7 @@ CH3: 17.3-dB loss at 10.24&nbsp;GHz · PRBS15 · scrambler on. Upper and lower e
 - **SMACD 2025 · Co-first author:** [USB4 Gen4 PAM&#8209;3 TX model](https://doi.org/10.1109/SMACD65553.2025.11092283)
 - **SMACD 2025 · Co-first author:** [PAM&#8209;3 RX model](https://doi.org/10.1109/SMACD65553.2025.11092233)
 
-Both A-SSCC 2026 papers are accepted, with presentations forthcoming as of 2026-10-07. [Full publication list](docs/publications.en.md#page-top)
+Both IEEE A-SSCC 2026 papers are accepted, with presentations forthcoming as of 2026-10-07. [Full publication list](docs/publications.en.md#page-top)
 
 </details>
 
